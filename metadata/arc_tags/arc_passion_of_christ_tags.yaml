@@ -1,6 +1,8 @@
 arc_id: passion_of_christ
 title: "The Passion of Christ - Events and Interior Sufferings"
-day_range: "186–195"
+day_range:
+  start: 186
+  end: 195
 tags:
   thematic:
   - redemptive suffering

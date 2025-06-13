@@ -1,6 +1,8 @@
 arc_id: sacred_heart
 title: Litany of the Sacred Heart
-day_range: "170–185"
+day_range:
+  start: 170
+  end: 185
 tags:
   thematic:
   - love of Jesus
