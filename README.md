@@ -1,64 +1,125 @@
-# spiritual_formation_project
+# 🕯️ Spiritual Formation Project – Catholic Mental Prayer Journey
 
-## 📁 `spiritual_formation_project/` – Master Directory Structure
+This repository contains a longform, deeply-structured spiritual formation journey grounded in the tradition of **Catholic mental prayer**, using a format inspired by **St. Ignatius**, **St. Teresa of Avila**, and the **saints of the Church**. It blends **Scripture**, **magisterial texts**, **Church Fathers**, and **Catholic theology** into daily meditations that follow a thematic arc-based structure.
 
-This is the official structure for your spiritual formation project, optimized for meditation, reading, tagging, and future web deployment.
-
----
-
-### 📂 Root Structure
-
-```text
-spiritual_formation_project/
-├── meditations/                          # ✅ All finalized SMPF-formatted arcs
-│   ├── arc_litany_sacred_heart.md
-│   ├── arc_passion_of_christ.md
-│   └── arc_<topic_name>.md
-│
-├── roadmap/                              # ✅ Master structure, arc metadata, rhythm mapping
-│   ├── mental_prayer_theme_roadmap.md    # Source of truth for arc order + structure
-│   ├── arc_metadata.json                 # (optional future format for dev use)
-│   └── rhythm_map.md                     # (optional: “symphony”/spacing notes)
-│
-├── metadata/                             # ✅ Tags, schemas, classification logic
-│   └── tag_bank.yaml                     # Master list of structured tags by category
-│
-├── reading_plan/                         # 📚 Full spiritual reading journey
-│   ├── reading_plan_master_list.md       # Tiered must-read list + natural flow
-│   ├── reading_plan_map.md               # Theme-tagged companion to roadmap
-│   ├── reading_visual_tracker.png        # (Optional: progress image)
-│   ├── tag_bank_reading.yaml             # (Optional: reading-specific tags)
-│   └── sources/                          # Supporting material
-│       ├── book_bundles_by_theme.md
-│       └── resource_links.json
-│
-├── documents/                            # 🔍 Embedded PDF readings and fallback sources
-│   ├── readings/                         # PDFs of key secondary readings used in meditations
-│   │   ├── st_augustine_city_of_god_xvii.pdf
-│   │   ├── st_john_chrysostom_homily_on_baptism.pdf
-│   │   └── ...
-│   ├── encyclicals/                      # Papal encyclicals for use in reading or prayer
-│   └── patristic_sources/                # Church Fathers PDFs or excerpts
-│
-├── source_plan/                          # 🗂️ Full raw archive of every daily entry
-│   └── working_mental_prayer_plan.md     # All meditations, past and current
-│
-├── archive/                              # 🗔️ Non-final or temporary files
-│   └── Partials - Waiting to Combine/    # In-progress meditations or drafts
-│
-├── config/                               # ⚙️ Dev + formatting tools
-```
+> “Speak, Lord, for Your servant is listening.” (1 Samuel 3:10)
 
 ---
 
-### ✅ Notes
+## 📂 Repository Structure
 
-- **`meditations/`** – Each file is one complete arc, SMPF-formatted, tagged, and named `arc_<theme>.md`.
-- **`roadmap/`** – The planning and rhythm space; never store meditation content here.
-- **`metadata/`** – Central source of truth for tags, schemas, or future relational logic.
-- **`reading_plan/`** – Parallel formation path with book lists, flow, and resources.
-- **`source_plan/`** – Master archive of every meditation ever created.
-- **`archive/`** – Non-final drafts or in-progress files to keep workspace clean.
-- **`config/`** – Editor settings, linters, and future dev configs.
+| Folder | Description |
+|--------|-------------|
+| `/meditations/` | All completed and in-progress meditation arcs in canonical SMPF format |
+| `/roadmap/` | Master theme roadmap tracking arc sequence, status, and planning |
+| `/reading/` | The Catholic reading plan and future site integrations |
+| `/metadata/` | YAML files for tag references, metadata schemas, and indexing |
+| `/website/` | Placeholder for future front-end rendering and design assets |
 
-This structure is designed to last for 1000+ days of content and full modular site export in the future.
+---
+
+## ✍️ Format Reference – SMPF Standard
+
+Every meditation in this project follows the **Structured Mental Prayer Format (SMPF)**:
+
+- **Anchor Image** – Rooted composition to guide imaginative prayer  
+- **Primary Reading** – Fixed per arc (Scripture or magisterial text)  
+- **Secondary Reading** – Varies per day (CCC, Saints, Papal texts, etc.)  
+- **1–3 Meditative Points** – Narrow focus drawn from readings  
+- **Colloquy** – Personal prayer with Jesus, Mary, or the Father  
+- **Ejaculatory Prayer** – Short aspiration (optional)  
+- **Resolution** – Specific, practical action for the day  
+
+See the following canonical arcs as structural examples:
+
+- [`arc_litany_sacred_heart.md`](meditations/arc_litany_sacred_heart.md)
+- [`arc_passion_of_christ.md`](meditations/arc_passion_of_christ.md)
+
+---
+
+## 📚 Catholic Reading Plan
+
+This repository also contains a **long-term Catholic reading plan** to accompany and enrich the mental prayer journey.
+
+Books are organized not by date, but by:
+
+- **Spiritual importance** (must-read → advanced)
+- **Thematic alignment** (Eucharist, Suffering, Mary, etc.)
+- **Spiritual rhythm** (narrative, theology, prayer)
+
+Each book is tagged with:
+
+- Spiritual themes (e.g., holiness, trust, sacrifice)  
+- Genre (e.g., Scripture, Doctrine, Biography, Mystical Theology)  
+- Depth level (Introductory, Intermediate, Advanced)
+
+Planned files:
+
+- `reading_plan_master.md` – Full reading flow with tiered sections
+- `reading_plan_metadata.yaml` – Tag mappings for integration with meditation themes and future site filters
+
+---
+
+## 🏷️ Tagging & Metadata
+
+All arcs and readings are gradually being tagged with structured YAML metadata to support:
+
+- 🔍 Website filtering and search  
+- 📖 Theme-linked reading suggestions  
+- 🧠 Tag-aware recommendations
+
+See [`tag_bank_reference.yaml`](metadata/tag_bank_reference.yaml) for the living tag list.
+
+Tag categories include:
+
+- **Emotional** – hope, sorrow, trust  
+- **Doctrinal** – Eucharist, Cross, Church  
+- **Virtue-based** – humility, courage, purity  
+- **Mystical** – dryness, union, longing  
+- **Seasonal** – Lent, Easter, Feast days  
+- **Structural** – litany, typology, ecclesiology
+
+---
+
+## 🛠️ Current Status
+
+| Area | Status |
+|------|--------|
+| SMPF Format | ✅ Canonical format finalized |
+| Tag System | ✅ Categorized + integrated |
+| Arc Roadmap | ✅ Deep structure confirmed |
+| Metadata Schema | ⏳ In progress (`metadata_schema.yaml`) |
+| Reading Plan | ⏳ First pass underway |
+| Reformatting Days 1–169 | ⏳ Ongoing |
+
+---
+
+## 🔮 Future Features
+
+This project is designed for future integration into a website with:
+
+- 📅 Thematic journeys (e.g., Marian path, Redemptive Suffering path)  
+- 🔍 Metadata filtering by theme, emotion, structure, or Scripture  
+- 📚 Suggested book pairings per meditation arc  
+- 🕊️ Daily interactive mental prayer experiences  
+
+---
+
+## 🙏 Purpose
+
+> This project exists to form **souls who burn with love for Christ** — through daily, structured intimacy with Him in prayer.
+
+It is freely offered for the sanctification of the Church and the greater glory of God.
+
+---
+
+## ✉️ Contact
+
+For questions, collaboration, or to follow this journey:
+
+GitHub: [vaultman765](https://github.com/vaultman765)  
+ChatGPT: project companion
+
+---
+
+**Come, Holy Spirit. Make us saints.**
