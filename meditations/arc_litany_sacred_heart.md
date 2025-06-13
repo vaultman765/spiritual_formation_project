@@ -8,7 +8,7 @@
 
 | Day | Anchor Image | Primary Reading |
 |-----|--------------|-----------------|
-| **1** | **Christ Revealing His Sacred Heart in Glory** You kneel before the risen Christ. His eyes are like fire and mercy. His hands are extended in blessing, and His robe gleams like light. But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love. It is not a wound of shame, but a throne of glory. He says nothing. He simply shows you the place where divine love became visible. Each title of the Litany is real here. You gaze at the Heart… and see eternity. | *Litany of the Sacred Heart of Jesus* (recited slowly, in full) |
+| **1-16** | **Christ Revealing His Sacred Heart in Glory** You kneel before the risen Christ. His eyes are like fire and mercy. His hands are extended in blessing, and His robe gleams like light. But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love. It is not a wound of shame, but a throne of glory. He says nothing. He simply shows you the place where divine love became visible. Each title of the Litany is real here. You gaze at the Heart… and see eternity. | *Litany of the Sacred Heart of Jesus* (recited slowly, in full) |
 
 ---
 
