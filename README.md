@@ -47,7 +47,6 @@ spiritual_formation_project/
 │   └── Partials - Waiting to Combine/    # In-progress meditations or drafts
 │
 ├── config/                               # ⚙️ Dev + formatting tools
-│   └── .markdownlint.json                # (Editor config, linter rules, etc.)
 ```
 
 ---
