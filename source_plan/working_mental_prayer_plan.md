@@ -1,92 +1,193 @@
 
 # Catholic Mental Prayer Plan
 
-## Theme: Love of God (Days 1–7)
+## Love of God – Foundation of All (7 Days)
 
-### Day 1: Theme – Love of God  
+---
 
-**Reading for the Day:**  
-> 1 John 4:7–12  
-> CCC 219–221
+### 📜 Anchor Images and Primary Readings
 
-**Excerpts/Points to Meditate On:**  
+| Day | Anchor Image | Primary Reading |
+|-----|--------------|-----------------|
+| 1–7 | **The Crucified Christ (Face)** You gaze upon the face of Christ crucified. His eyes are closed, His head bowed beneath the crown of thorns. From this suffering Face shines infinite love. Every wound speaks the truth of God’s heart. | 1 John 4:7–21 |
 
-1. "Beloved, let us love one another, for love is from God, and whoever loves has been born of God and knows God." (1 John 4:7)  
-2. "God is love: his very being is love." (CCC 221)  
-3. How does the understanding that “God is love” shape your response to His will?
+---
 
-### Day 2: Theme – Love of God  
+### 🕯️ Day 1: God Is Love – Love’s Divine Origin
 
-**Reading for the Day:**  
-> Psalm 63:1–8  
-> St. Bernard of Clairvaux, *On Loving God*, Ch. I
+**Secondary Reading:**
 
-**Excerpts/Points to Meditate On:**  
+- [CCC 219–221](https://www.vatican.va/archive/ENG0015/__P16.HTM)
+- [St. John Paul II, *Novo Millennio Ineunte*, §33](https://www.vatican.va/content/john-paul-ii/en/apost_letters/2001/documents/hf_jp-ii_apl_20010106_novo-millennio-ineunte.html)
 
-1. "My soul thirsts for you; my flesh faints for you, as in a dry and weary land." (Ps 63:1)  
-2. "The measure of our love for God is to love Him without measure." – St. Bernard  
-3. What kind of thirst does your soul have for God today?
+#### 🎯 Meditative Points
 
-### Day 3: Theme – Love of God  
+1. “God is love: His very being is love.” (CCC 221)  
+2. “Whoever loves has been born of God and knows God.” (1 Jn 4:7)  
+3. The origin of love is not our effort, but God’s essence.
 
-**Reading for the Day:**  
-> Deuteronomy 6:4–9  
-> CCC 231–233
+#### 🗣️ Colloquy
 
-**Excerpts/Points to Meditate On:**  
+Father, I believe You are love. But I forget this when I feel unworthy. Remind me that love does not begin with me — it begins with You.
 
-1. "You shall love the LORD your God with all your heart and with all your soul and with all your might." (Deut 6:5)  
-2. "God is the first origin of everything and transcendent authority; and He is at the same time goodness and loving care for all His children." (CCC 239)  
-3. In what ways can you grow to love God more wholly today?
+#### 💬 Ejaculatory Prayer
 
-### Day 4: Theme – Love of God  
+**God of love, let me receive You before I try to respond.**
 
-**Reading for the Day:**  
-> Romans 5:5–11  
-> **Longer Option:** St. Catherine of Siena, *The Dialogue*, Treatise on Divine Providence
-> **Shorter Option:** Sections 1–4 only (through the first major discourse on the soul’s creation and desire for God)
+#### 🔨 Resolution (Optional)
 
-**Excerpts/Points to Meditate On:**  
+*Today, I will pause before I act — and receive love from God in silence before I offer it to anyone else.*
 
-1. "God’s love has been poured into our hearts through the Holy Spirit who has been given to us." (Rom 5:5)  
-2. “You, eternal Trinity, are a deep sea: the more I enter you, the more I discover, and the more I discover, the more I seek you.” – St. Catherine  
-3. Reflect on how God's love enters into suffering and redemption.
+---
 
-### Day 5: Theme – Love of God  
+### 🕯️ Day 2: Thirsting for God – Love as Desire
 
-**Reading for the Day:**  
-> John 15:9–17  
-> CCC 1822–1825
+**Secondary Reading:**
 
-**Excerpts/Points to Meditate On:**  
+- Psalm 63:1–8
+- St. Bernard of Clairvaux, [*On Loving God*](/documents/readings/St_Bernard_of_Clairvaux_On_Loving_God.pdf), Ch. 1
 
-1. "As the Father has loved me, so have I loved you. Abide in my love." (John 15:9)  
-2. "Charity is the theological virtue by which we love God above all things for his own sake, and our neighbor as ourselves for the love of God." (CCC 1822)  
-3. How can you abide more deeply in Christ’s love today?
+#### 🎯 Meditative Points
 
-### Day 6: Theme – Love of God  
+1. “My soul thirsts for You… as in a dry and weary land.” (Ps 63:1)  
+2. “The measure of our love for God is to love Him without measure.” – St. Bernard  
+3. Love is not mere duty — it is longing, hunger, ache for God.
 
-**Reading for the Day:**  
-> Hosea 11:1–9  
-> St. Augustine, *Confessions*, Book I
+#### 🗣️ Colloquy
 
-**Excerpts/Points to Meditate On:**  
+Lord, stir in me a holy longing. Let my thirst for You grow deeper than my thirst for approval, comfort, or control.
 
-1. "I led them with cords of kindness, with the bands of love." (Hos 11:4)  
-2. “You have made us for yourself, O Lord, and our heart is restless until it rests in you.” – St. Augustine  
-3. What is God’s love like when you wander?
+#### 💬 Ejaculatory Prayer
 
-### Day 7: Theme – Love of God  
+**O God, my soul thirsts for You alone.**
 
-**Reading for the Day:**  
-> Matthew 22:34–40  
-> CCC 2083–2086
+#### 🔨 Resolution (Optional)
 
-**Excerpts/Points to Meditate On:**  
+*Today, I will offer every moment of restlessness as a prayer — letting it become desire for God, not distraction.*
 
-1. "You shall love the Lord your God with all your heart and with all your soul and with all your mind." (Matt 22:37)  
-2. "Faith in God leads us to turn to Him alone as our first origin and our ultimate goal." (CCC 2084)  
-3. What does it mean for you to love God with your whole self?
+---
+
+### 🕯️ Day 3: Loving with All Your Heart – The Call to Total Love
+
+**Secondary Reading:**
+
+- Deuteronomy 6:4–9
+- [CCC 231–233](https://www.vatican.va/archive/ENG0015/__P16.HTM)
+
+#### 🎯 Meditative Points
+
+1. “You shall love the Lord your God with all your heart…” (Deut 6:5)  
+2. “God is… at the same time goodness and loving care for all His children.” (CCC 239)  
+3. God asks for *all* not to burden us — but because He gives *all*.
+
+#### 🗣️ Colloquy
+
+Jesus, I want to love You fully, but I hold back. Break open the hidden places of my heart so that nothing is left outside Your love.
+
+#### 💬 Ejaculatory Prayer
+
+**Jesus, take all — my heart, soul, and strength.**
+
+#### 🔨 Resolution (Optional)
+
+*Today, I will consciously invite God into one part of my life I usually keep separate — a task, a worry, a relationship.*
+
+---
+
+### Day 4 – God Is Love
+
+**Secondary Reading:**
+
+- [Catechism of the Catholic Church, 218–221](https://www.vatican.va/archive/ENG0015/__P16.HTM)
+
+**Points for Meditation:**
+
+1. “God is love.”
+2. He loved us first.
+3. Love casts out fear.
+
+**Colloquy:**  
+> Lord Jesus, let me not merely speak of love, but live in the reality that You *are* love — and You love me first. Remove all fear from my heart, and help me rest in Your perfect love.
+
+**Ejaculatory Prayer:**  
+> “God is love — and He loves me.”
+
+**Resolution:**  
+> I will spend 5 minutes today simply receiving God’s love in silence, not trying to earn or understand it — only receive.
+
+---
+
+### Day 5 – The Father Runs to Meet Us
+
+**Secondary Reading:**
+
+- Luke 15:11–32 – The Prodigal Son
+- [St. John Paul II, *Dives in Misericordia*](https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_30111980_dives-in-misericordia.html)  
+  (Suggested excerpt: §§6–7)
+
+**Points for Meditation:**
+
+1. The love of the Father never hesitates.
+2. The Father runs to meet him.
+3. A robe for shame. A feast for failure.
+
+**Colloquy:**  
+> Father, I have wandered. And even when I stayed, I did not always love. But You have run to me. You are love. Help me enter Your embrace and never leave it again.
+
+**Ejaculatory Prayer:**  
+> “Father, run to me — and I will run to You.”
+
+**Resolution:**  
+> I will confess any area where I’ve doubted the Father’s love, and ask Him to run to me today.
+
+---
+
+### Day 6 – While We Were Still Sinners
+
+**Secondary Reading:**
+
+- Romans 5:6–11
+- [St. Catherine of Siena, *The Dialogue* – “You are a mad lover!” (PDF)](/documents/readings/st_catherine_mad_lover_excerpt.pdf)
+
+**Points for Meditation:**
+
+1. “While we were still sinners...”
+2. The Blood was poured before we repented.
+3. “You are a mad lover.”
+
+**Colloquy:**  
+> Jesus, You died for me while I was still far away. You didn’t wait. You didn’t hesitate. I don’t deserve this — and that is why it is love. Help me receive it with awe.
+
+**Ejaculatory Prayer:**  
+> “Jesus, You loved me first.”
+
+**Resolution:**  
+> I will meditate before a crucifix or tabernacle today and say: “You died for me — and I accept Your love.”
+
+---
+
+### Day 7 – Abide in My Love
+
+**Secondary Reading:**
+
+- John 15:9–17
+- [Pope Benedict XVI, *Deus Caritas Est*](https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20051225_deus-caritas-est.html)  
+  (Suggested excerpt: paragraphs 1–18)
+
+**Points for Meditation:**
+
+1. “Abide in My love.”
+2. Love lays down its life.
+3. Love keeps the command.
+
+**Colloquy:**  
+> Lord Jesus, I want to remain in Your love — not drift in and out. Help me stay, help me dwell, help me abide. Let Your joy be in me, and my joy be full.
+
+**Ejaculatory Prayer:**  
+> “Let me abide in Your love.”
+
+**Resolution:**  
+> I will choose one act of sacrificial love today and offer it for someone difficult to love.
 
 ## Theme: Love of Neighbor (Days 8–14)
 
