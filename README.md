@@ -12,7 +12,7 @@ This repository contains a longform, deeply-structured spiritual formation journ
 |--------|-------------|
 | `/meditations/` | All completed and in-progress meditation arcs in canonical SMPF format |
 | `/roadmap/` | Master theme roadmap tracking arc sequence, status, and planning |
-| `/reading/` | The Catholic reading plan and future site integrations |
+| `/reading_plan/` | The Catholic reading plan and future site integrations |
 | `/metadata/` | YAML files for tag references, metadata schemas, and indexing |
 | `/website/` | Placeholder for future front-end rendering and design assets |
 
