@@ -1,0 +1,90 @@
+- arc_id: arc_litany_sacred_heart
+  title: Litany of the Sacred Heart
+  day_range:
+    start: 170
+    end: 185
+  smpf_compliant: true
+  status: canonical
+  anchor_image: Sacred Heart, enthroned and radiant, surrounded by thorns and flames
+  primary_reading: Litany of the Sacred Heart
+  tags:
+    thematic:
+    - love of Jesus
+    - tenderness
+    - reparation
+    - invitation to trust
+    - desire for union with Christ
+    doctrinal:
+    - Sacred Heart
+    - Incarnation
+    - Mercy
+    - Reparation
+    - Devotion to the Heart of Jesus
+    virtue:
+    - love
+    - humility
+    - obedience
+    - meekness
+    - mercy
+    mystical:
+    - union with Christ
+    - pierced heart
+    - wounded love
+    liturgical:
+    - June
+    - First Fridays
+    - Feast of the Sacred Heart
+    typological:
+    - Temple veil torn
+    - "blood and water from Christ's side"
+    structural:
+    - litany
+    - line-by-line meditation
+    - unified anchor image
+- arc_id: arc_passion_of_christ
+  title: "The Passion of Christ - Events and Interior Sufferings"
+  day_range:
+    start: 186
+    end: 195
+  smpf_compliant: true
+  status: canonical
+  anchor_image: 'Various Passion scenes: Gethsemane, Scourging, Crucifixion'
+  primary_reading: Rotating Passion Gospel texts (Matthew, Mark, Luke, John)
+  tags:
+    thematic:
+    - redemptive suffering
+    - sacrificial love
+    - obedience unto death
+    - interior agony
+    - betrayal and fidelity
+    - abandonment
+    - silence of God
+    - mercy in suffering
+    doctrinal:
+    - Atonement
+    - "Christ's humanity and divinity"
+    - Paschal Mystery
+    - Suffering Servant
+    - Salvation through the Cross
+    virtue:
+    - obedience
+    - fortitude
+    - humility
+    - compassion
+    - patience
+    mystical:
+    - union with the suffering Christ
+    - spiritual darkness
+    - mystery of redemptive silence
+    liturgical:
+    - Holy Week
+    - Good Friday
+    - Stations of the Cross
+    typological:
+    - Isaac carrying the wood
+    - Paschal lamb
+    - Bronze serpent lifted up
+    structural:
+    - narrative Gospel meditation
+    - rotating anchor images
+    - multi-day sequence
