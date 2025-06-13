@@ -1,0 +1,4 @@
+*.md text
+*.py text linguist-language=Python
+*.yaml text linguist-language=YAML
+*.json text linguist-language=JSON
