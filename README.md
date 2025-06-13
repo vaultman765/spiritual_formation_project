@@ -27,8 +27,8 @@ Every meditation in this project follows the **Structured Mental Prayer Format (
 - **Secondary Reading** – Varies per day (CCC, Saints, Papal texts, etc.)  
 - **1–3 Meditative Points** – Narrow focus drawn from readings  
 - **Colloquy** – Personal prayer with Jesus, Mary, or the Father  
-- **Ejaculatory Prayer** – Short aspiration (optional)  
-- **Resolution** – Specific, practical action for the day  
+- **Ejaculatory Prayer** – Short aspiration
+- **Resolution** – Specific, practical action for the day (optional - or make your own)
 
 See the following canonical arcs as structural examples:
 
