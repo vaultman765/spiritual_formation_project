@@ -1,9 +1,9 @@
-- arc_id: arc_name_here
+- arc_id: [arc_name_here]
   title: [Insert arc title here]
   day_range:
     start: XX
     end: YY
-  smpf_compliant: false
+  smpf_compliant: [true or false]
   status: draft
   anchor_image: [Short descriptor of anchor image]
   primary_reading: [Name of primary reading source]
