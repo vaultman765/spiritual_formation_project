@@ -26,13 +26,13 @@
 2. **The Heart of Jesus is the Heart of God**  
 3. **The Love of the Father revealed**
 
-#### 🗣️ Colloquy
-
-Lord Jesus, Eternal Word of the Father, You are not an idea. You are the Son, and You have a Heart. Let me enter into the silence of Your divine origin. Let me adore not only what You have done — but who You are.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, radiance of the Eternal Father, draw me into the love You have known forever.**
+
+#### 🗣️ Colloquy
+
+Lord Jesus, Eternal Word of the Father, You are not an idea. You are the Son, and You have a Heart. Let me enter into the silence of Your divine origin. Let me adore not only what You have done — but who You are.
 
 #### 🔨 Resolution (Optional)  
 
@@ -54,13 +54,13 @@ Lord Jesus, Eternal Word of the Father, You are not an idea. You are the Son, an
 2. **The Sacred Heart formed by the Virgin’s own body**  
 3. **The Holy Spirit’s silent craftsmanship in the hidden life**
 
-#### 🗣️ Colloquy  
-
-Holy Spirit, gentle Lord and Life-Giver, You overshadowed Mary and knit the Word into flesh. Mary, my Mother, you gave Him a Heart — let mine be shaped by yours.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, formed in Mary’s womb, shape my heart to resemble Yours.**
+
+#### 🗣️ Colloquy  
+
+Holy Spirit, gentle Lord and Life-Giver, You overshadowed Mary and knit the Word into flesh. Mary, my Mother, you gave Him a Heart — let mine be shaped by yours.
 
 #### 🔨 Resolution (Optional)  
 
@@ -82,13 +82,13 @@ Holy Spirit, gentle Lord and Life-Giver, You overshadowed Mary and knit the Word
 2. **The Sacred Heart as both finite and infinite — beating with divine majesty**  
 3. **The Word took on flesh to be pierced — for me**
 
-#### 🗣️ Colloquy  
-
-Jesus, Word made flesh, I cannot grasp the mystery — but I can kneel. May Your divine and human love pierce through my resistance. Let my poor heart be drawn into Yours.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, one with the Eternal Word, possess me wholly.**
+
+#### 🗣️ Colloquy  
+
+Jesus, Word made flesh, I cannot grasp the mystery — but I can kneel. May Your divine and human love pierce through my resistance. Let my poor heart be drawn into Yours.
 
 #### 🔨 Resolution (Optional)  
 
@@ -110,13 +110,13 @@ Jesus, Word made flesh, I cannot grasp the mystery — but I can kneel. May Your
 2. **The Love of His Heart as benevolence — willing my good**  
 3. **The contrast between my self-love and His divine charity**
 
-#### 🗣️ Colloquy  
-
-Heart of Jesus, so full of goodness — and I, so full of myself. Break me open where I’m closed, and make me long to do good to others without repayment, just as You do to me.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, teach me to love with goodness, not pride.**
+
+#### 🗣️ Colloquy  
+
+Heart of Jesus, so full of goodness — and I, so full of myself. Break me open where I’m closed, and make me long to do good to others without repayment, just as You do to me.
 
 #### 🔨 Resolution (Optional)  
 
@@ -138,13 +138,13 @@ Heart of Jesus, so full of goodness — and I, so full of myself. Break me open 
 2. **Humility, meekness, patience — not as tactics, but as His own Heart’s texture**  
 3. **The abyss of His virtue reveals the shallowness of mine**
 
-#### 🗣️ Colloquy  
-
-Jesus, teach me to stop imitating You superficially and to begin desiring Your virtues to be born in me — not to impress, but to love. Show me how much I need You just to be gentle.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, abyss of all virtue, deepen my poverty and purify my desire.**
+
+#### 🗣️ Colloquy  
+
+Jesus, teach me to stop imitating You superficially and to begin desiring Your virtues to be born in me — not to impress, but to love. Show me how much I need You just to be gentle.
 
 ### 🔨 Resolution (Optional)  
 
@@ -165,13 +165,13 @@ Jesus, teach me to stop imitating You superficially and to begin desiring Your v
 1. **The Lamb standing as though slain — praised by all creation**  
 2. **The Sacred Heart as the center of heaven’s liturgy**  
 
-### 🗣️ Colloquy  
-
-Heart of Jesus, You are not praised because You need it — but because You deserve it. Let every fiber of my being join the saints and angels in declaring: You alone are worthy.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, slain and glorified, receive my praise with the worship of heaven.**
+
+### 🗣️ Colloquy  
+
+Heart of Jesus, You are not praised because You need it — but because You deserve it. Let every fiber of my being join the saints and angels in declaring: You alone are worthy.
 
 #### 🔨 Resolution (Optional)  
 
@@ -192,13 +192,13 @@ Heart of Jesus, You are not praised because You need it — but because You dese
 1. **The Heart of Jesus overflows with life that sanctifies**  
 2. **Holiness is not separation, but communion — flowing from His Heart**
 
-#### 🗣️ Colloquy  
-
-Jesus, You are the fountain I thirst for. Make me holy not by removing me from the world, but by filling me with Your life within it.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, fountain of life, flood my dryness.**
+
+#### 🗣️ Colloquy  
+
+Jesus, You are the fountain I thirst for. Make me holy not by removing me from the world, but by filling me with Your life within it.
 
 #### 🔨 Resolution (Optional)  
 
@@ -219,13 +219,13 @@ Jesus, You are the fountain I thirst for. Make me holy not by removing me from t
 1. **Jesus doesn’t just forgive — He atones**  
 2. **The Sacred Heart bears my sin and answers it with mercy**
 
-#### 🗣️ Colloquy  
-
-Lord, how can I measure the cost of Your reparation? Teach me not to hide my sin but to expose it to the fire of Your mercy.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, my reparation, I return to You.**
+
+#### 🗣️ Colloquy  
+
+Lord, how can I measure the cost of Your reparation? Teach me not to hide my sin but to expose it to the fire of Your mercy.
 
 ### 🔨 Resolution (Optional)  
 
@@ -246,13 +246,13 @@ Lord, how can I measure the cost of Your reparation? Teach me not to hide my sin
 1. **The King wears a crown of insult**  
 2. **The Sacred Heart bears humiliation that I fear to face**
 
-#### 🗣️ Colloquy  
-
-Jesus, You were shamed so I could be healed. Let me not turn away from Your crown of thorns. Let me kneel where the world mocked — and adore.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, mocked and majestic, I adore You in Your abasement.**
+
+#### 🗣️ Colloquy  
+
+Jesus, You were shamed so I could be healed. Let me not turn away from Your crown of thorns. Let me kneel where the world mocked — and adore.
 
 ### 🔨 Resolution (Optional)  
 
@@ -273,13 +273,13 @@ Jesus, You were shamed so I could be healed. Let me not turn away from Your crow
 1. **Christ’s Heart reigns not through domination, but through self-offering**  
 2. **To enthrone His Heart is to open mine without defense**
 
-#### 🗣️ Colloquy  
-
-Jesus, be King not just of my thoughts, but of the places I hide. Rule over my resentment, my fears, my hunger to control. You gave me Your Heart — here is mine.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, King of hearts, reign in me.**
+
+#### 🗣️ Colloquy  
+
+Jesus, be King not just of my thoughts, but of the places I hide. Rule over my resentment, my fears, my hunger to control. You gave me Your Heart — here is mine.
 
 #### 🔨 Resolution (Optional)  
 
@@ -298,13 +298,13 @@ Jesus, be King not just of my thoughts, but of the places I hide. Rule over my r
 1. **The Father’s voice — declaring love before Christ’s mission begins**  
 2. **The Sacred Heart as the place where the Father’s pleasure dwells**
 
-#### 🗣️ Colloquy  
-
-Father, You were well pleased with the Heart of Your Son. Let me see in Him the love You have for me. Let me stop trying to earn what You already offer.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, beloved of the Father, delight in me through mercy.**
+
+#### 🗣️ Colloquy  
+
+Father, You were well pleased with the Heart of Your Son. Let me see in Him the love You have for me. Let me stop trying to earn what You already offer.
 
 #### 🔨 Resolution (Optional)  
 
@@ -325,13 +325,13 @@ Father, You were well pleased with the Heart of Your Son. Let me see in Him the 
 1. **Justice flows from a Heart that never separates it from love**  
 2. **The Cross reveals justice satisfied — and mercy overflowing**
 
-#### 🗣️ Colloquy  
-
-Jesus, when I try to separate justice from love, I wound others. Let me drink from Your Heart where justice is not a sword, but a wellspring.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, just and loving, teach me how to repair and to heal.**
+
+#### 🗣️ Colloquy  
+
+Jesus, when I try to separate justice from love, I wound others. Let me drink from Your Heart where justice is not a sword, but a wellspring.
 
 #### 🔨 Resolution (Optional)  
 
@@ -353,13 +353,13 @@ Jesus, when I try to separate justice from love, I wound others. Let me drink fr
 2. **The love of Christ does not calculate — it gives**  
 3. **He saw the widow — and was moved**
 
-#### 🗣️ Colloquy  
-
-Lord Jesus, help me to see with Your eyes. To be moved with Your gut. Let me not pass the suffering by, but carry them in my own heart.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, kind and tender, move me to compassion.**
+
+#### 🗣️ Colloquy  
+
+Lord Jesus, help me to see with Your eyes. To be moved with Your gut. Let me not pass the suffering by, but carry them in my own heart.
 
 #### 🔨 Resolution (Optional)  
 
@@ -381,13 +381,13 @@ Lord Jesus, help me to see with Your eyes. To be moved with Your gut. Let me not
 2. **He was silent — and He was slain**  
 3. **He did not defend Himself, because He was defending us**
 
-#### 🗣️ Colloquy  
-
-Jesus, Victim and Priest, how can I ever repay what You gave? Let me not rush past Your wounds — but rest in the silence of Your offering.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, pierced and surrendered, I adore You.**
+
+#### 🗣️ Colloquy  
+
+Jesus, Victim and Priest, how can I ever repay what You gave? Let me not rush past Your wounds — but rest in the silence of Your offering.
 
 #### 🔨 Resolution (Optional)  
 
@@ -409,13 +409,13 @@ Jesus, Victim and Priest, how can I ever repay what You gave? Let me not rush pa
 2. **Trust is not passivity — it is courageous surrender**  
 3. **Little souls reach Heaven not by effort, but by confidence**
 
-#### 🗣️ Colloquy  
-
-Jesus, give me the boldness of Thérèse — not to be perfect, but to trust. Let me believe that Your Heart will carry me, even when I fall.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, salvation of those who trust, I surrender again.**
+
+#### 🗣️ Colloquy  
+
+Jesus, give me the boldness of Thérèse — not to be perfect, but to trust. Let me believe that Your Heart will carry me, even when I fall.
 
 #### 🔨 Resolution (Optional)  
 
@@ -437,13 +437,13 @@ Jesus, give me the boldness of Thérèse — not to be perfect, but to trust. Le
 2. **The patience of Jesus with me is longer than my longest failure**  
 3. **He delays not to punish, but to save**
 
-#### 🗣️ Colloquy  
-
-Jesus, patient and merciful, I praise You not because I deserve You — but because You never gave up on me. Let me now return to You without fear.
-
 #### 💬 Ejaculatory Prayer  
 
 **Heart of Jesus, patient and merciful, wait for me. I’m coming.**
+
+#### 🗣️ Colloquy  
+
+Jesus, patient and merciful, I praise You not because I deserve You — but because You never gave up on me. Let me now return to You without fear.
 
 #### 🔨 Resolution (Optional)  
 

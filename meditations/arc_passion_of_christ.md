@@ -34,15 +34,15 @@
 2. He asks the Father if it may pass — but surrenders.  
 3. He finds His disciples asleep — and prays alone.
 
-#### 🗣️ Colloquy  
-
-Jesus, I have fled from hard things too quickly. But You did not flee the Garden... Make my fear a prayer — and my surrender a love song.
-
 #### 💬 Ejaculatory Prayer  
 
 **Jesus in Gethsemane, strengthen my weak will with Your agony.**
 
-#### 🔨 Resolution  
+#### 🗣️ Colloquy  
+
+Jesus, I have fled from hard things too quickly. But You did not flee the Garden... Make my fear a prayer — and my surrender a love song.
+
+#### 🔨 Resolution (Optional)
 
 Today I will offer one hidden act of surrender — unspoken, quiet, and done for love — saying interiorly: “Not my will, but Yours be done.”
 
@@ -62,15 +62,15 @@ Today I will offer one hidden act of surrender — unspoken, quiet, and done for
 2. False witnesses rise — and He speaks not a word in defense.  
 3. Peter denies Him — and He turns and looks at him with love.
 
-#### 🗣️ Colloquy  
-
-Jesus, You endured every insult, lie, and abandonment — without retaliation. Teach me to bear small wrongs without lashing out. Let me stay close by the fire and not deny You.
-
 #### 💬 Ejaculatory Prayer  
 
 **Jesus, silent before Your accusers, speak peace into my unrest.**
 
-#### 🔨 Resolution  
+#### 🗣️ Colloquy  
+
+Jesus, You endured every insult, lie, and abandonment — without retaliation. Teach me to bear small wrongs without lashing out. Let me stay close by the fire and not deny You.
+
+#### 🔨 Resolution (Optional)
 
 Today I will choose not to defend myself in one moment of misunderstanding — and instead offer it in reparation for betrayal.
 
@@ -90,15 +90,15 @@ Today I will choose not to defend myself in one moment of misunderstanding — a
 2. His silence was more powerful than protest.  
 3. By His wounds, I am healed — but do I let those wounds touch me?
 
-#### 🗣️ Colloquy  
-
-Jesus, the blood at the pillar was mine — and You offered it freely. Let me not run from sacrifice, but find healing where You were torn.
-
 #### 💬 Ejaculatory Prayer  
 
 **O Jesus, scourged and silent, cleanse my heart in Your blood.**
 
-#### 🔨 Resolution  
+#### 🗣️ Colloquy  
+
+Jesus, the blood at the pillar was mine — and You offered it freely. Let me not run from sacrifice, but find healing where You were torn.
+
+#### 🔨 Resolution (Optional)
 
 Today I will resist one temptation to self-indulgence — and unite it to Your suffering.
 
@@ -121,15 +121,15 @@ St. Bernard of Clairvaux, *Song of Songs*, Sermon 61 (excerpt below)
 2. The King of Heaven is mocked with earthly symbols of power.
 3. Every insult He received purifies the pride in my own heart.
 
-#### 🗣️ Colloquy  
-
-Jesus, mocked King, I often seek crowns of comfort and control. Teach me to wear the crown of thorns with You — not to be honored, but to love.
-
 #### 💬 Ejaculatory Prayer  
 
 **Jesus, King crowned in thorns, rule in my heart.**
 
-#### 🔨 Resolution  
+#### 🗣️ Colloquy  
+
+Jesus, mocked King, I often seek crowns of comfort and control. Teach me to wear the crown of thorns with You — not to be honored, but to love.
+
+#### 🔨 Resolution (Optional) 
 
 Today I will resist one urge to seek praise — and silently offer it as a crown of thorns.
 
@@ -148,15 +148,15 @@ Today I will resist one urge to seek praise — and silently offer it as a crown
 2. Veronica’s act was small, hidden, and deeply personal.
 3. Christ gave her His image — what do I offer Him?
 
-#### 🗣️ Colloquy  
-
-Jesus, I want to be like Veronica — not solving, not preaching, but present. Let me offer a veil, a silence, a prayer… and receive Your Face in return.
-
 #### 💬 Ejaculatory Prayer  
 
 **O Christ bearing the Cross, impress Your image on my heart.**
 
-#### 🔨 Resolution  
+#### 🗣️ Colloquy  
+
+Jesus, I want to be like Veronica — not solving, not preaching, but present. Let me offer a veil, a silence, a prayer… and receive Your Face in return.
+
+#### 🔨 Resolution (Optional)
 
 Today I will console Christ by offering one quiet act of compassion — unseen, unpraised, but full of love.
 
@@ -175,15 +175,15 @@ Today I will console Christ by offering one quiet act of compassion — unseen, 
 2. “I thirst” is not just physical — it is the thirst for souls.
 3. His death is not a tragedy — it is a gift freely given.
 
-#### 🗣️ Colloquy  
-
-Jesus, You were lifted up so that I might rise. Teach me not just to mourn You, but to receive the love You poured out at Calvary.
-
 #### 💬 Ejaculatory Prayer  
 
 **Crucified Jesus, remember me in Your mercy.**
 
-#### 🔨 Resolution  
+#### 🗣️ Colloquy  
+
+Jesus, You were lifted up so that I might rise. Teach me not just to mourn You, but to receive the love You poured out at Calvary.
+
+#### 🔨 Resolution (Optional)
 
 Today I will meditate for five minutes in silence before a crucifix — not speaking, only receiving.
 
@@ -204,15 +204,15 @@ Today I will meditate for five minutes in silence before a crucifix — not spea
 2. He did not cling to life — He gave it back to the Father.
 3. His surrender is the key to my freedom.
 
-#### 🗣️ Colloquy  
-
-Jesus, You gave everything — even Your last breath — in love. Help me to die to self today, and to trust that in surrender, I find life.
-
 #### 💬 Ejaculatory Prayer  
 
 **Into Your hands, O Lord, I commend my spirit.**
 
-#### 🔨 Resolution  
+#### 🗣️ Colloquy  
+
+Jesus, You gave everything — even Your last breath — in love. Help me to die to self today, and to trust that in surrender, I find life.
+
+#### 🔨 Resolution (Optional) 
 
 Today I will surrender one attachment, fear, or distraction — and make it a prayer of trust.
 
@@ -231,15 +231,15 @@ Today I will surrender one attachment, fear, or distraction — and make it a pr
 2. Her motherhood expands to include the Church at the Cross.
 3. She suffers with Christ — not passively, but as co-sufferer in faith.
 
-#### 🗣️ Colloquy  
-
-Mother, I stand with you beneath the Cross. Teach me to suffer without resisting love. Let me receive the Church into my heart as you did.
-
 #### 💬 Ejaculatory Prayer  
 
 **O Mary, Mother of Sorrows, form Christ in me.**
 
-#### 🔨 Resolution  
+#### 🗣️ Colloquy  
+
+Mother, I stand with you beneath the Cross. Teach me to suffer without resisting love. Let me receive the Church into my heart as you did.
+
+#### 🔨 Resolution (Optional)
 
 Today I will embrace one sorrow silently — offering it with Mary for the Church.
 
@@ -259,15 +259,15 @@ Today I will embrace one sorrow silently — offering it with Mary for the Churc
 2. Blood and water — Baptism and Eucharist — flow from love.
 3. Even in death, Christ gives everything.
 
-#### 🗣️ Colloquy  
-
-Jesus, from Your pierced Heart flowed the Church, my Baptism, my salvation. Let me never forget that the Church was born in suffering, silence, and mercy.
-
 #### 💬 Ejaculatory Prayer  
 
 **Sacred Heart of Jesus, pierced for me, make me Yours.**
 
-#### 🔨 Resolution  
+#### 🗣️ Colloquy  
+
+Jesus, from Your pierced Heart flowed the Church, my Baptism, my salvation. Let me never forget that the Church was born in suffering, silence, and mercy.
+
+#### 🔨 Resolution (Otional) 
 
 Today I will reverence the Church as Christ’s Bride — by guarding my speech and praying for her sanctity.
 
@@ -286,14 +286,14 @@ Today I will reverence the Church as Christ’s Bride — by guarding my speech 
 2. Holy Saturday is not absence, but hidden fruitfulness.
 3. Even in death, the Word is at work.
 
-#### 🗣️ Colloquy  
-
-Jesus, as You rested in the tomb, teach me to wait in trust. Let me not rush Your timing, but abide with You in stillness.
-
 #### 💬 Ejaculatory Prayer  
 
 **Lord, even in silence, I believe You are working.**
 
-#### 🔨 Resolution  
+#### 🗣️ Colloquy  
+
+Jesus, as You rested in the tomb, teach me to wait in trust. Let me not rush Your timing, but abide with You in stillness.
+
+#### 🔨 Resolution (Otional)
 
 Today I will embrace a moment of quiet — trusting that God acts in the hidden places of my heart.

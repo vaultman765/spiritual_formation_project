@@ -8,7 +8,7 @@
 
 | Day | Anchor Image | Primary Reading |
 |-----|--------------|-----------------|
-| 1–7 | **The Crucified Christ (Face)** You gaze upon the face of Christ crucified. His eyes are closed, His head bowed beneath the crown of thorns. From this suffering Face shines infinite love. Every wound speaks the truth of God’s heart. | 1 John 4:7–21 |
+| **1–7** | **The Crucified Christ (Face)** You gaze upon the face of Christ crucified. His eyes are closed, His head bowed beneath the crown of thorns. From this suffering Face shines infinite love. Every wound speaks the truth of God’s heart. | 1 John 4:7–21 |
 
 ---
 
@@ -25,13 +25,13 @@
 2. “Whoever loves has been born of God and knows God.” (1 Jn 4:7)  
 3. The origin of love is not our effort, but God’s essence.
 
-#### 🗣️ Colloquy
-
-Father, I believe You are love. But I forget this when I feel unworthy. Remind me that love does not begin with me — it begins with You.
-
 #### 💬 Ejaculatory Prayer
 
 **God of love, let me receive You before I try to respond.**
+
+#### 🗣️ Colloquy
+
+Father, I believe You are love. But I forget this when I feel unworthy. Remind me that love does not begin with me — it begins with You.
 
 #### 🔨 Resolution (Optional)
 
@@ -52,13 +52,13 @@ Father, I believe You are love. But I forget this when I feel unworthy. Remind m
 2. “The measure of our love for God is to love Him without measure.” – St. Bernard  
 3. Love is not mere duty — it is longing, hunger, ache for God.
 
-#### 🗣️ Colloquy
-
-Lord, stir in me a holy longing. Let my thirst for You grow deeper than my thirst for approval, comfort, or control.
-
 #### 💬 Ejaculatory Prayer
 
 **O God, my soul thirsts for You alone.**
+
+#### 🗣️ Colloquy
+
+Lord, stir in me a holy longing. Let my thirst for You grow deeper than my thirst for approval, comfort, or control.
 
 #### 🔨 Resolution (Optional)
 
@@ -79,13 +79,13 @@ Lord, stir in me a holy longing. Let my thirst for You grow deeper than my thirs
 2. “God is… at the same time goodness and loving care for all His children.” (CCC 239)  
 3. God asks for *all* not to burden us — but because He gives *all*.
 
-#### 🗣️ Colloquy
-
-Jesus, I want to love You fully, but I hold back. Break open the hidden places of my heart so that nothing is left outside Your love.
-
 #### 💬 Ejaculatory Prayer
 
 **Jesus, take all — my heart, soul, and strength.**
+
+#### 🗣️ Colloquy
+
+Jesus, I want to love You fully, but I hold back. Break open the hidden places of my heart so that nothing is left outside Your love.
 
 #### 🔨 Resolution (Optional)
 
@@ -93,30 +93,33 @@ Jesus, I want to love You fully, but I hold back. Break open the hidden places o
 
 ---
 
-### Day 4 – God Is Love
+### 🕯️ Day 4: God Is Love
 
 **Secondary Reading:**
 
 - [Catechism of the Catholic Church, 218–221](https://www.vatican.va/archive/ENG0015/__P16.HTM)
 
-**Points for Meditation:**
+#### 🎯 Meditative Points
 
 1. “God is love.”
 2. He loved us first.
 3. Love casts out fear.
 
-**Colloquy:**  
-> Lord Jesus, let me not merely speak of love, but live in the reality that You *are* love — and You love me first. Remove all fear from my heart, and help me rest in Your perfect love.
+#### 💬 Ejaculatory Prayer
 
-**Ejaculatory Prayer:**  
 > “God is love — and He loves me.”
 
-**Resolution:**  
+#### 🗣️ Colloquy
+
+> Lord Jesus, let me not merely speak of love, but live in the reality that You *are* love — and You love me first. Remove all fear from my heart, and help me rest in Your perfect love.
+
+#### 🔨 Resolution (Optional)
+
 > I will spend 5 minutes today simply receiving God’s love in silence, not trying to earn or understand it — only receive.
 
 ---
 
-### Day 5 – The Father Runs to Meet Us
+### 🕯️ Day 5: The Father Runs to Meet Us
 
 **Secondary Reading:**
 
@@ -124,48 +127,54 @@ Jesus, I want to love You fully, but I hold back. Break open the hidden places o
 - [St. John Paul II, *Dives in Misericordia*](https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_30111980_dives-in-misericordia.html)  
   (Suggested excerpt: §§6–7)
 
-**Points for Meditation:**
+#### 🎯 Meditative Points
 
 1. The love of the Father never hesitates.
 2. The Father runs to meet him.
 3. A robe for shame. A feast for failure.
 
-**Colloquy:**  
-> Father, I have wandered. And even when I stayed, I did not always love. But You have run to me. You are love. Help me enter Your embrace and never leave it again.
+#### 💬 Ejaculatory Prayer
 
-**Ejaculatory Prayer:**  
 > “Father, run to me — and I will run to You.”
 
-**Resolution:**  
+#### 🗣️ Colloquy
+
+> Father, I have wandered. And even when I stayed, I did not always love. But You have run to me. You are love. Help me enter Your embrace and never leave it again.
+
+#### 🔨 Resolution (Optional)
+
 > I will confess any area where I’ve doubted the Father’s love, and ask Him to run to me today.
 
 ---
 
-### Day 6 – While We Were Still Sinners
+### 🕯️ Day 6: While We Were Still Sinners
 
 **Secondary Reading:**
 
 - Romans 5:6–11
 - [St. Catherine of Siena, *The Dialogue* – “You are a mad lover!” (PDF)](/documents/readings/st_catherine_mad_lover_excerpt.pdf)
 
-**Points for Meditation:**
+#### 🎯 Meditative Points
 
 1. “While we were still sinners...”
 2. The Blood was poured before we repented.
 3. “You are a mad lover.”
 
-**Colloquy:**  
-> Jesus, You died for me while I was still far away. You didn’t wait. You didn’t hesitate. I don’t deserve this — and that is why it is love. Help me receive it with awe.
+#### 💬 Ejaculatory Prayer
 
-**Ejaculatory Prayer:**  
 > “Jesus, You loved me first.”
 
-**Resolution:**  
+#### 🗣️ Colloquy
+
+> Jesus, You died for me while I was still far away. You didn’t wait. You didn’t hesitate. I don’t deserve this — and that is why it is love. Help me receive it with awe.
+
+#### 🔨 Resolution (Optional)
+
 > I will meditate before a crucifix or tabernacle today and say: “You died for me — and I accept Your love.”
 
 ---
 
-### Day 7 – Abide in My Love
+### 🕯️ Day 7: Abide in My Love
 
 **Secondary Reading:**
 
@@ -173,17 +182,20 @@ Jesus, I want to love You fully, but I hold back. Break open the hidden places o
 - [Pope Benedict XVI, *Deus Caritas Est*](https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20051225_deus-caritas-est.html)  
   (Suggested excerpt: paragraphs 1–18)
 
-**Points for Meditation:**
+#### 🎯 Meditative Points
 
 1. “Abide in My love.”
 2. Love lays down its life.
 3. Love keeps the command.
 
-**Colloquy:**  
-> Lord Jesus, I want to remain in Your love — not drift in and out. Help me stay, help me dwell, help me abide. Let Your joy be in me, and my joy be full.
+#### 💬 Ejaculatory Prayer
 
-**Ejaculatory Prayer:**  
 > “Let me abide in Your love.”
 
-**Resolution:**  
+#### 🗣️ Colloquy
+
+> Lord Jesus, I want to remain in Your love — not drift in and out. Help me stay, help me dwell, help me abide. Let Your joy be in me, and my joy be full.
+
+#### 🔨 Resolution (Optional)
+  
 > I will choose one act of sacrificial love today and offer it for someone difficult to love.
