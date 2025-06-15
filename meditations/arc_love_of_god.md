@@ -12,6 +12,8 @@
 
 ---
 
+<!-- tags: love, transformation, desire, mercy, identity -->
+
 ### 🕯️ Day 1: God Is Love – Love’s Divine Origin
 
 **Secondary Reading:**
@@ -38,6 +40,8 @@ Father, I believe You are love. But I forget this when I feel unworthy. Remind m
 *Today, I will pause before I act — and receive love from God in silence before I offer it to anyone else.*
 
 ---
+
+<!-- tags: love, transformation, desire, mercy, identity -->
 
 ### 🕯️ Day 2: Thirsting for God – Love as Desire
 
@@ -66,6 +70,8 @@ Lord, stir in me a holy longing. Let my thirst for You grow deeper than my thirs
 
 ---
 
+<!-- tags: love, transformation, desire, mercy, identity -->
+
 ### 🕯️ Day 3: Loving with All Your Heart – The Call to Total Love
 
 **Secondary Reading:**
@@ -93,6 +99,8 @@ Jesus, I want to love You fully, but I hold back. Break open the hidden places o
 
 ---
 
+<!-- tags: love, transformation, desire, mercy, identity -->
+
 ### 🕯️ Day 4: God Is Love
 
 **Secondary Reading:**
@@ -118,6 +126,8 @@ Jesus, I want to love You fully, but I hold back. Break open the hidden places o
 > I will spend 5 minutes today simply receiving God’s love in silence, not trying to earn or understand it — only receive.
 
 ---
+
+<!-- tags: love, transformation, desire, mercy, identity -->
 
 ### 🕯️ Day 5: The Father Runs to Meet Us
 
@@ -147,6 +157,8 @@ Jesus, I want to love You fully, but I hold back. Break open the hidden places o
 
 ---
 
+<!-- tags: love, transformation, desire, mercy, identity -->
+
 ### 🕯️ Day 6: While We Were Still Sinners
 
 **Secondary Reading:**
@@ -174,6 +186,8 @@ Jesus, I want to love You fully, but I hold back. Break open the hidden places o
 
 ---
 
+<!-- tags: love, transformation, desire, mercy, identity -->
+
 ### 🕯️ Day 7: Abide in My Love
 
 **Secondary Reading:**
@@ -199,3 +213,5 @@ Jesus, I want to love You fully, but I hold back. Break open the hidden places o
 #### 🔨 Resolution (Optional)
   
 > I will choose one act of sacrificial love today and offer it for someone difficult to love.
+
+<!-- tags: love, transformation, desire, mercy, identity -->

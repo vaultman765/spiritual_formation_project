@@ -1,4 +1,4 @@
-# the_passion.md
+# arc_passion_of_christ.md
 
 ## Passion of Christ – Events and Interior Sufferings (10 Days)
 
@@ -26,7 +26,7 @@
 **Secondary Readings:**  
 [CCC 612–613](https://www.vatican.va/archive/ENG0015/__P1O.HTM)
 
-**Tags:** Passion, obedience, trust, suffering, Lent, silence
+<!-- tags: Passion, obedience, trust, suffering, Lent, silence -->
 
 #### 🎯 Meditative Points
 
@@ -54,7 +54,7 @@ Today I will offer one hidden act of surrender — unspoken, quiet, and done for
 [St. Augustine, *Tractate on John - 112*](https://www.newadvent.org/fathers/1701112.htm)  
 [CCC 595–598](https://www.vatican.va/archive/ENG0015/__P1O.HTM)
 
-**Tags:** betrayal, silence, injustice, patience, mercy, Lent
+<!-- tags: betrayal, silence, injustice, patience, mercy, Lent -->
 
 #### 🎯 Meditative Points
 
@@ -82,7 +82,7 @@ Today I will choose not to defend myself in one moment of misunderstanding — a
 [St. Alphonsus Liguori, *The Passion and Death of Jesus Christ*, Ch. 2](https://www.saintsbooks.net/books/St.%20Alphonsus%20Maria%20de%20Liguori%20-%20The%20Passion%20and%20the%20Death%20of%20Jesus%20Christ.pdf)  
 [CCC 572–574](https://www.vatican.va/archive/ENG0015/__P1M.HTM)
 
-**Tags:** suffering, purity, mercy, sacrifice, Lent, Passion
+<!-- tags: suffering, purity, mercy, sacrifice, Lent, Passion -->
 
 #### 🎯 Meditative Points
 
@@ -113,7 +113,7 @@ St. Bernard of Clairvaux, *Song of Songs*, Sermon 61 (excerpt below)
 
 [CCC 440](https://www.vatican.va/archive/ENG0015/__P1F.HTM)
 
-**Tags:** suffering, humiliation, kingship, mockery, silence, Lent
+<!-- tags: suffering, humiliation, kingship, mockery, silence, Lent -->
 
 #### 🎯 Meditative Points
 
@@ -129,7 +129,7 @@ St. Bernard of Clairvaux, *Song of Songs*, Sermon 61 (excerpt below)
 
 Jesus, mocked King, I often seek crowns of comfort and control. Teach me to wear the crown of thorns with You — not to be honored, but to love.
 
-#### 🔨 Resolution (Optional) 
+#### 🔨 Resolution (Optional)
 
 Today I will resist one urge to seek praise — and silently offer it as a crown of thorns.
 
@@ -140,7 +140,7 @@ Today I will resist one urge to seek praise — and silently offer it as a crown
 **Secondary Readings:**  
 [St. John Paul II, *Stations of the Cross* (SIXTH STATION)](https://www.vatican.va/news_services/liturgy/2003/documents/ns_lit_doc_20030418_viacrucis_en.html)
 
-**Tags:** mercy, presence, love, suffering, hidden acts, Lent
+<!-- tags: mercy, presence, love, suffering, hidden acts, Lent -->
 
 #### 🎯 Meditative Points
 
@@ -167,7 +167,7 @@ Today I will console Christ by offering one quiet act of compassion — unseen, 
 **Secondary Readings:**  
 [CCC 619–623](https://www.vatican.va/archive/ENG0015/__P1O.HTM)
 
-**Tags:** sacrifice, mercy, redemption, silence, atonement, Lent
+<!-- tags: sacrifice, mercy, redemption, silence, atonement, Lent -->
 
 #### 🎯 Meditative Points
 
@@ -196,7 +196,7 @@ Today I will meditate for five minutes in silence before a crucifix — not spea
 [CCC 2606](https://www.vatican.va/archive/ENG0015/__P93.HTM)  
 [CCC 2842](https://www.vatican.va/archive/ENG0015/__PAB.HTM)
 
-**Tags:** trust, surrender, last things, death, obedience, Lent
+<!-- tags: trust, surrender, last things, death, obedience, Lent -->
 
 #### 🎯 Meditative Points
 
@@ -212,7 +212,7 @@ Today I will meditate for five minutes in silence before a crucifix — not spea
 
 Jesus, You gave everything — even Your last breath — in love. Help me to die to self today, and to trust that in surrender, I find life.
 
-#### 🔨 Resolution (Optional) 
+#### 🔨 Resolution (Optional)
 
 Today I will surrender one attachment, fear, or distraction — and make it a prayer of trust.
 
@@ -223,7 +223,7 @@ Today I will surrender one attachment, fear, or distraction — and make it a pr
 **Secondary Readings:**  
 [CCC 964, 968–970](https://www.vatican.va/archive/ENG0015/__P2C.HTM)
 
-**Tags:** Mary, suffering, motherhood, compassion, Church, Lent
+<!-- tags: Mary, suffering, motherhood, compassion, Church, Lent -->
 
 #### 🎯 Meditative Points
 
@@ -251,7 +251,7 @@ Today I will embrace one sorrow silently — offering it with Mary for the Churc
 [CCC 766](https://www.vatican.va/archive/ENG0015/__P27.HTM)  
 [CCC 478](https://www.vatican.va/archive/ENG0015/__P1J.HTM)
 
-**Tags:** Church, Heart of Christ, blood and water, Eucharist, baptism, Lent
+<!-- tags: Church, Heart of Christ, blood and water, Eucharist, baptism, Lent -->
 
 #### 🎯 Meditative Points
 
@@ -267,7 +267,7 @@ Today I will embrace one sorrow silently — offering it with Mary for the Churc
 
 Jesus, from Your pierced Heart flowed the Church, my Baptism, my salvation. Let me never forget that the Church was born in suffering, silence, and mercy.
 
-#### 🔨 Resolution (Otional) 
+#### 🔨 Resolution (Optional)
 
 Today I will reverence the Church as Christ’s Bride — by guarding my speech and praying for her sanctity.
 
@@ -278,7 +278,7 @@ Today I will reverence the Church as Christ’s Bride — by guarding my speech 
 **Secondary Readings:**  
 [CCC 630](https://www.vatican.va/archive/ENG0015/__P1P.HTM)
 
-**Tags:** silence, waiting, Holy Saturday, burial, hope, mystery
+<!-- tags: silence, waiting, Holy Saturday, burial, hope, mystery -->
 
 #### 🎯 Meditative Points
 
@@ -294,6 +294,6 @@ Today I will reverence the Church as Christ’s Bride — by guarding my speech 
 
 Jesus, as You rested in the tomb, teach me to wait in trust. Let me not rush Your timing, but abide with You in stillness.
 
-#### 🔨 Resolution (Otional)
+#### 🔨 Resolution (Optional)
 
 Today I will embrace a moment of quiet — trusting that God acts in the hidden places of my heart.

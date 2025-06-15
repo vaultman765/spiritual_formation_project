@@ -12,6 +12,8 @@
 
 ---
 
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
+
 ### 🕯️ Day 1: *Heart of Jesus, Son of the Eternal Father*
 
 **Secondary Reading:**
@@ -39,6 +41,8 @@ Lord Jesus, Eternal Word of the Father, You are not an idea. You are the Son, an
 *Today, I will take one quiet moment to adore Jesus silently — not asking, not thanking, just gazing — and remember that He is the Eternal Son.*
 
 ---
+
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
 
 ### 🕯️ Day 2: *Heart of Jesus, Formed by the Holy Spirit in the Womb of the Virgin Mother*
 
@@ -68,6 +72,8 @@ Holy Spirit, gentle Lord and Life-Giver, You overshadowed Mary and knit the Word
 
 ---
 
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
+
 ### 🕯️ Day 3: *Heart of Jesus, United Substantially with the Word of God*
 
 **Secondary Reading:**  
@@ -95,6 +101,8 @@ Jesus, Word made flesh, I cannot grasp the mystery — but I can kneel. May Your
 *Today, I will repeat this truth throughout the day in wonder: \"The Word became flesh — and loved me with a human heart.\"*
 
 ---
+
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
 
 ### 🕯️ Day 4: *Heart of Jesus, Full of Goodness and Love*
 
@@ -124,6 +132,8 @@ Heart of Jesus, so full of goodness — and I, so full of myself. Break me open 
 
 ---
 
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
+
 ### 🕯️ Day 5: *Heart of Jesus, Abyss of All Virtues*
 
 **Secondary Reading:**  
@@ -152,6 +162,8 @@ Jesus, teach me to stop imitating You superficially and to begin desiring Your v
 
 ---
 
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
+
 ### 🕯️ Day 6: *Heart of Jesus, Most Worthy of All Praise*
 
 **Secondary Reading:**  
@@ -178,6 +190,8 @@ Heart of Jesus, You are not praised because You need it — but because You dese
 *Today I will pause at least once and praise Jesus aloud — even if no one sees — simply because He is worthy.*
 
 ---
+
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
 
 ### 🕯️ Day 7: *Heart of Jesus, Fountain of Life and Holiness*
 
@@ -206,6 +220,8 @@ Jesus, You are the fountain I thirst for. Make me holy not by removing me from t
 
 ---
 
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
+
 ### 🕯️ Day 8: *Heart of Jesus, Propitiation for Our Sins*
 
 **Secondary Reading:**  
@@ -232,6 +248,8 @@ Lord, how can I measure the cost of Your reparation? Teach me not to hide my sin
 *Today I will confess one fault aloud — to God or a trusted soul — and let His Heart begin to heal it.*
 
 ---
+
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
 
 ### 🕯️ Day 9: *Heart of Jesus, Loaded Down with Opprobrium*
 
@@ -260,6 +278,8 @@ Jesus, You were shamed so I could be healed. Let me not turn away from Your crow
 
 ---
 
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
+
 ### 🕯️ Day 10: *Heart of Jesus, King and Center of All Hearts*
 
 **Secondary Reading:**  
@@ -284,6 +304,8 @@ Jesus, be King not just of my thoughts, but of the places I hide. Rule over my r
 #### 🔨 Resolution (Optional)  
 
 *Today I will let go of control in one small area — and repeat: \"Jesus, reign here.\"*
+
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
 
 ### 🕯️ Day 11: *Heart of Jesus, In Whom the Father is Well Pleased*
 
@@ -312,6 +334,8 @@ Father, You were well pleased with the Heart of Your Son. Let me see in Him the 
 
 ---
 
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
+
 ### 🕯️ Day 12: *Heart of Jesus, Source of Justice and Love*
 
 **Secondary Reading:**  
@@ -338,6 +362,8 @@ Jesus, when I try to separate justice from love, I wound others. Let me drink fr
 *Today, I will seek justice without anger — and charity without compromise.*
 
 ---
+
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
 
 ### 🕯️ Day 13: *Heart of Jesus, Full of Kindness and Love*
 
@@ -367,6 +393,8 @@ Lord Jesus, help me to see with Your eyes. To be moved with Your gut. Let me not
 
 ---
 
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
+
 ### 🕯️ Day 14: *Heart of Jesus, Victim for Our Sins*
 
 **Secondary Reading:**  
@@ -394,6 +422,8 @@ Jesus, Victim and Priest, how can I ever repay what You gave? Let me not rush pa
 *Today, I will accept one small suffering without complaint — in union with the Lamb.*
 
 ---
+
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
 
 ### 🕯️ Day 15: *Heart of Jesus, Salvation of Those Who Trust in You*
 
@@ -423,6 +453,8 @@ Jesus, give me the boldness of Thérèse — not to be perfect, but to trust. Le
 
 ---
 
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
+
 ### 🕯️ Day 16: *Heart of Jesus, Patient and Abounding in Mercy*
 
 **Secondary Reading:**  
@@ -448,3 +480,5 @@ Jesus, patient and merciful, I praise You not because I deserve You — but beca
 #### 🔨 Resolution (Optional)  
 
 *Today, I will practice mercy with someone I’m tempted to lose patience with — and offer it in Jesus’ name.*
+
+<!-- tags: Sacred Heart, mercy, reparation, trust, love -->
