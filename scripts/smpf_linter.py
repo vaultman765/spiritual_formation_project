@@ -2,8 +2,7 @@ import os
 import sys
 
 REQUIRED_SECTIONS = [
-    "Anchor Image",
-    "Primary Reading",
+    "Anchor Images and Primary Readings",
     "Meditative Points",
     "Colloquy",
     "Resolution"
