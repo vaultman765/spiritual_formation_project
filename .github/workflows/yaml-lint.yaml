@@ -1,0 +1,32 @@
+name: YAML Syntax Check
+
+on:
+  push:
+    paths:
+      - 'metadata/**/*.yaml'
+  pull_request:
+    paths:
+      - 'metadata/**/*.yaml'
+
+jobs:
+  yaml-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Check all YAML files in metadata/
+        run: |
+          echo "Checking YAML files for syntax..."
+          find metadata -name "*.yaml" -print0 | while IFS= read -r -d '' file; do
+            echo "Checking $file"
+            python -c "import yaml, sys; yaml.safe_load(open('$file'))"
+          done
