@@ -6,7 +6,7 @@ def validate_tag_file(filepath):
     with open(filepath) as f:
         data = yaml.safe_load(f)
 
-    expected_top_keys = ["title", "day_range", "tags"]
+    expected_top_keys = ["arc_id", "title", "day_range", "tags"]
     expected_tag_keys = ["thematic", "doctrinal", "virtue", "mystical", "liturgical", "typological", "structural"]
 
     actual_keys = list(data.keys())
