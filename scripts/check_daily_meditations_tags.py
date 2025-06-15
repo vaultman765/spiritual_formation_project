@@ -4,7 +4,7 @@ import re
 import yaml
 import sys
 
-TAG_BANK_PATH = "/metadata/tag_bank.yaml"
+TAG_BANK_PATH = "metadata/tag_bank.yaml"
 TARGET_DIR = "meditations"
 
 def load_tag_bank(path):
