@@ -25,7 +25,7 @@ def check_smpf_format(filepath):
         return True
 
 def main():
-    base_dirs = ["meditations", "archive"]
+    base_dirs = ["meditations"]
     success = True
 
     for base_dir in base_dirs:
