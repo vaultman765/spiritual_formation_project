@@ -26,4 +26,4 @@ jobs:
         run: pip install pyyaml
 
       - name: Run tag format checker
-        run: python tag_checker.py
+        run: python scripts/tag_checker.py
