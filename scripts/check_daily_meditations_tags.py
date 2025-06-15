@@ -10,17 +10,23 @@ TARGET_DIR = "meditations"
 def load_tag_bank(path):
     with open(path, "r") as f:
         data = yaml.safe_load(f)
-    all_tags = set()
-    for category in data.get("tags", {}).values():
-        if isinstance(category, list):
-            all_tags.update(category)
-    return all_tags
+
+    # Flatten all tag values into a single lowercase set
+    tag_bank = set()
+    if "tags" in data:
+        data = data["tags"]  # Support tags: {} format
+
+    for category, values in data.items():
+        if isinstance(values, list):
+            tag_bank.update(tag.strip().lower() for tag in values)
+
+    return tag_bank
 
 def extract_tags_from_md(content):
     tag_lines = re.findall(r'<!--\s*tags:\s*(.*?)\s*-->', content)
     tags = []
     for line in tag_lines:
-        tags.extend(tag.strip() for tag in line.split(","))
+        tags.extend(tag.strip().lower() for tag in line.split(","))
     return tags
 
 def scan_meditations(tag_bank):
