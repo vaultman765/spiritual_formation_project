@@ -1,0 +1,319 @@
+- id: ccc_life_of_man
+  title: The life of man - to know and love God
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1
+    end: 3
+  url: https://www.vatican.va/archive/ENG0015/__P2.HTM
+  tags: []
+  notes: 
+
+- id: ccc_handling_of_faith
+  title: "Handing on the Faith: Catechesis"
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 4
+    end: 10
+  url: https://www.vatican.va/archive/ENG0015/__P3.HTM
+  tags: []
+  notes: 
+
+- id: ccc_readership
+  title: The Aim and Intended Readership of the Catechism
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 11
+    end: 12
+  url: https://www.vatican.va/archive/ENG0015/__P4.HTM
+  tags: []
+  notes: 
+
+- id: ccc__structure
+  title: Structure of this Catechism
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 13
+    end: 17
+  url: https://www.vatican.va/archive/ENG0015/__P5.HTM
+  tags: []
+  notes: 
+
+- id: ccc_practical_directions
+  title: Practical Directions for Using this Catechism
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 18
+    end: 22
+  url: https://www.vatican.va/archive/ENG0015/__P6.HTM
+  tags: []
+  notes: 
+
+- id: ccc_necessary_adaptations
+  title: Necessary Adaptations
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 23
+    end: 25
+  url: https://www.vatican.va/archive/ENG0015/__P7.HTM
+  tags: []
+  notes:  
+
+- id: ccc_i_believe_we_believe
+  title: "Section One - I BELIEVE - WE BELIEVE"
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 26
+    end: 26
+  url: https://www.vatican.va/archive/ENG0015/__P8.HTM
+  tags: []
+  notes: 
+
+- id: ccc_desire_for_god
+  title: The Desire for God
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 27
+    end: 30
+  url: https://www.vatican.va/archive/ENG0015/__P9.HTM
+  tags: []
+  notes: 
+
+- id: ccc_coming_to_know_god
+  title: Ways of Coming to Know God
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 31
+    end: 35
+  url: https://www.vatican.va/archive/ENG0015/__PA.HTM
+  tags: []
+  notes: 
+
+- id: ccc_knowledge_of_god
+  title: The Knowledge of God According to the Church
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 36
+    end: 38
+  url: https://www.vatican.va/archive/ENG0015/__PB.HTM
+  tags: []
+  notes:
+
+- id: ccc_speak_about_god
+  title: How Can We Speak about God?
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 39
+    end: 43
+  url: https://www.vatican.va/archive/ENG0015/__PC.HTM
+  tags: []
+  notes:
+
+- id: ccc_p1s1c1_in_brief
+  title: P1 S1 C1 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 44
+    end: 49
+  url: https://www.vatican.va/archive/ENG0015/__PD.HTM
+  tags: []
+  notes:
+
+- id: ccc_god_comes_to_meet_man
+  title: GOD COMES TO MEET MAN
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 50
+    end: 50
+  url: https://www.vatican.va/archive/ENG0015/__PE.HTM
+  tags: []
+  notes:
+
+- id: ccc_plan_of_loving_goodness
+  title: God Reveals His "Plan of Loving Goodness"
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 51
+    end: 53
+  url: https://www.vatican.va/archive/ENG0015/__PF.HTM
+  tags: []
+  notes:
+
+- id: ccc_stages_of_revelation
+  title: The Stages of Revelation
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 54
+    end: 64
+  url: https://www.vatican.va/archive/ENG0015/__PG.HTM
+  tags: []
+  notes:
+
+- id: ccc_christ_jesus_mediator
+  title: Christ Jesus -- "Mediator and Fullness of All Revelation"
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 65
+    end: 67
+  url: https://www.vatican.va/archive/ENG0015/__PH.HTM
+  tags: []
+  notes:
+
+- id: ccc_p1s1c2a1_in_brief
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 68
+    end: 73
+  url: https://www.vatican.va/archive/ENG0015/__PI.HTM
+  tags: []
+  notes:
+
+- id: ccc_divine_revelation
+  title: The Transmission of Divine Revelation
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 74
+    end: 74
+  url: https://www.vatican.va/archive/ENG0015/__PJ.HTM
+  tags: []
+  notes:
+
+- id: ccc_apostolic_tradition
+  title: The Apostolic Tradition
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 75
+    end: 79
+  url: https://www.vatican.va/archive/ENG0015/__PK.HTM
+  tags: []
+  notes:
+
+- id: ccc_tradition_and_sacred_scripture
+  title: The Relationship Between Tradition and Sacred Scripture
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 80
+    end: 83
+  url: https://www.vatican.va/archive/ENG0015/__PL.HTM
+  tags: []
+  notes:
+
+- id: ccc_interpretation_of_heritage_of_faith
+  title: The Interpretation of the Heritage of Faith
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 84
+    end: 95
+  url: https://www.vatican.va/archive/ENG0015/__PM.HTM
+  tags: []
+  notes:
+
+- id: ccc_p1s1c2a2_in_brief
+  title: P1 S1 C2 A2 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 96
+    end: 100
+  url: https://www.vatican.va/archive/ENG0015/__PN.HTM 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_love_of_god
+  title: Love of God as First Commandment
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 2083
+    end: 2086
+  url: https://www.vatican.va/archive/ENG0015/__P7Z.HTM
+  tags: [commandment, love, charity, God]
+  notes: Used in the Love of God arc (Day 7); discusses total love for God and its doctrinal basis.
+
+- id: ccc_mercy
+  title: Mercy and the Poor
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 2443
+    end: 2449
+  url: https://www.vatican.va/archive/ENG0015/__P8F.HTM
+  tags: [mercy, justice, solidarity]
+  notes: Covers the Church’s teaching on mercy and justice toward the poor; used in multiple arcs.
+
+- id: ccc_suffering
+  title: Christian Meaning of Suffering and Death
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1010
+    end: 1014
+  url: https://www.vatican.va/archive/ENG0015/__P2A.HTM
+  tags: [suffering, death, redemption, Paschal mystery]
+  notes: Provides theological grounding for redemptive suffering; central to the Cross and Suffering arc.
