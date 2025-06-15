@@ -1,0 +1,27 @@
+name: Arc Tag Format Check
+
+on:
+  push:
+    paths:
+      - 'metadata/arc_tags/*.yaml'
+  pull_request:
+    paths:
+      - 'metadata/arc_tags/*.yaml'
+
+jobs:
+  check-tag-format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Run tag format checker
+        run: python tag_checker.py
