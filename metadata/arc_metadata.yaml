@@ -1,47 +1,40 @@
 - arc_id: arc_love_of_god
-  title: "Love of God - Foundation of All"
+  title: Love of God - Foundation of All
   day_range:
     start: 1
     end: 7
   smpf_compliant: true
   status: canonical
-  anchor_image: "The Crucified Christ (Face) - bowed, thorn-crowned, radiating love"
-  primary_reading: "1 John 4:7-21"
+  anchor_image: The Crucified Christ (Face) - bowed, thorn-crowned, radiating love
+  primary_reading: 1 John 4:7-21
   tags:
-    thematic:
-      - divine love
-      - gift of self
-      - transforming grace
-      - loving response
-      - origin of charity
-    doctrinal:
-      - Trinity
-      - Redemption
-      - Divine Initiative
-      - Love of God
-      - Catechism
-    virtue:
-      - charity
-      - surrender
-      - desire for God
-      - humility
-      - joy
-    mystical:
-      - longing for union
-      - divine indwelling
-      - abiding in love
-    liturgical:
-      - Ordinary Time
-    typological:
-      - the face of the Crucified
-      - the Father running to meet the prodigal
-      - the pierced Heart
-    structural:
-      - fixed anchor image
-      - meditations on divine charity
-      - theological + affective blend
+  - Catechism
+  - Divine Initiative
+  - Love of God
+  - Ordinary Time
+  - Redemption
+  - Trinity
+  - abiding in love
+  - charity
+  - desire for God
+  - divine indwelling
+  - divine love
+  - fixed anchor image
+  - gift of self
+  - humility
+  - joy
+  - longing for union
+  - loving response
+  - meditations on divine charity
+  - origin of charity
+  - surrender
+  - the Father running to meet the prodigal
+  - the face of the Crucified
+  - the pierced Heart
+  - theological + affective blend
+  - transforming grace
 - arc_id: arc_love_of_neighbor
-  title: "Love of Neighbor - Living Charity"
+  title: Love of Neighbor - Living Charity
   day_range:
     start: 8
     end: 14
@@ -50,31 +43,18 @@
   anchor_image: Jesus washing the feet of His disciples
   primary_reading: John 13
   tags:
-    thematic:
-    - Christian fraternity
-    - communion
-    - love in action
-    - imitation of Christ
-    doctrinal:
-    - charity
-    - mystical body
-    - new commandment
-    virtue:
-    - humility
-    - service
-    - forgiveness
-    - simplicity
-    mystical:
-    - washing of feet
-    - unity in Christ
-    liturgical:
-    - Ordinary Time
-    typological:
-    - Christ the Servant
-    structural:
-    - fixed anchor image
-    - seven-day charity arc
-    - communal and affective lens
+  - charity
+  - fidelity
+  - forgiveness
+  - humility
+  - mercy
+  - mystical body
+  - new commandment
+  - ordinary time
+  - service
+  - spiritual childhood
+  - union
+  - washing of feet
 - arc_id: arc_litany_sacred_heart
   title: Litany of the Sacred Heart
   day_range:
@@ -85,41 +65,34 @@
   anchor_image: Sacred Heart, enthroned and radiant, surrounded by thorns and flames
   primary_reading: Litany of the Sacred Heart
   tags:
-    thematic:
-    - love of Jesus
-    - tenderness
-    - reparation
-    - invitation to trust
-    - desire for union with Christ
-    doctrinal:
-    - Sacred Heart
-    - Incarnation
-    - Mercy
-    - Reparation
-    - Devotion to the Heart of Jesus
-    virtue:
-    - love
-    - humility
-    - obedience
-    - meekness
-    - mercy
-    mystical:
-    - union with Christ
-    - pierced heart
-    - wounded love
-    liturgical:
-    - June
-    - First Fridays
-    - Feast of the Sacred Heart
-    typological:
-    - Temple veil torn
-    - "blood and water from Christ's side"
-    structural:
-    - litany
-    - line-by-line meditation
-    - unified anchor image
+  - Devotion to the Heart of Jesus
+  - Feast of the Sacred Heart
+  - First Fridays
+  - Incarnation
+  - June
+  - Mercy
+  - Reparation
+  - Sacred Heart
+  - Temple veil torn
+  - blood and water from Christ's side
+  - desire for union with Christ
+  - humility
+  - invitation to trust
+  - line-by-line meditation
+  - litany
+  - love
+  - love of Jesus
+  - meekness
+  - mercy
+  - obedience
+  - pierced heart
+  - reparation
+  - tenderness
+  - unified anchor image
+  - union with Christ
+  - wounded love
 - arc_id: arc_passion_of_christ
-  title: "The Passion of Christ - Events and Interior Sufferings"
+  title: The Passion of Christ - Events and Interior Sufferings
   day_range:
     start: 186
     end: 195
@@ -128,40 +101,33 @@
   anchor_image: 'Various Passion scenes: Gethsemane, Scourging, Crucifixion'
   primary_reading: Rotating Passion Gospel texts (Matthew, Mark, Luke, John)
   tags:
-    thematic:
-    - redemptive suffering
-    - sacrificial love
-    - obedience unto death
-    - interior agony
-    - betrayal and fidelity
-    - abandonment
-    - silence of God
-    - mercy in suffering
-    doctrinal:
-    - Atonement
-    - "Christ's humanity and divinity"
-    - Paschal Mystery
-    - Suffering Servant
-    - Salvation through the Cross
-    virtue:
-    - obedience
-    - fortitude
-    - humility
-    - compassion
-    - patience
-    mystical:
-    - union with the suffering Christ
-    - spiritual darkness
-    - mystery of redemptive silence
-    liturgical:
-    - Holy Week
-    - Good Friday
-    - Stations of the Cross
-    typological:
-    - Isaac carrying the wood
-    - Paschal lamb
-    - Bronze serpent lifted up
-    structural:
-    - narrative Gospel meditation
-    - rotating anchor images
-    - multi-day sequence
+  - Atonement
+  - Bronze serpent lifted up
+  - Christ's humanity and divinity
+  - Good Friday
+  - Holy Week
+  - Isaac carrying the wood
+  - Paschal Mystery
+  - Paschal lamb
+  - Salvation through the Cross
+  - Stations of the Cross
+  - Suffering Servant
+  - abandonment
+  - betrayal and fidelity
+  - compassion
+  - fortitude
+  - humility
+  - interior agony
+  - mercy in suffering
+  - multi-day sequence
+  - mystery of redemptive silence
+  - narrative Gospel meditation
+  - obedience
+  - obedience unto death
+  - patience
+  - redemptive suffering
+  - rotating anchor images
+  - sacrificial love
+  - silence of God
+  - spiritual darkness
+  - union with the suffering Christ
