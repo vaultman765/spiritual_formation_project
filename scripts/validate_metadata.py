@@ -64,16 +64,14 @@ def main():
         with open(file, "r", encoding="utf-8") as f:
             contents = f.read()
 
-        match = re.search(r"<!--\s*tags:\s*\[([^\]]*)\]\s*-->", contents, re.IGNORECASE)
-        if not match:
-            errors.append(f"❌ Missing or malformed tag block in {file.name}")
-            continue
+        tag_lines = re.findall(r'<!--\s*tags:\s*(.*?)\s*-->', contents)
+        tags = []
+        for line in tag_lines:
+            tags.extend(tag.strip().lower() for tag in line.split(","))
 
-        tag_block = match.group(1)
-        tags = [t.strip().lower() for t in tag_block.split(",") if t.strip()]
         for tag in tags:
             if not validate_tag(tag, canonical_tags):
-                errors.append(f"❌ Invalid tag in {file.name}: '{tag}'")
+                errors.append(f"[{file.name}] Invalid tag: '{tag}'")
 
     # Report results
     if errors:
