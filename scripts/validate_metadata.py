@@ -24,10 +24,11 @@ def main():
     canonical_tags = {tag.lower() for tags in tag_bank.values() for tag in tags}
 
     arc_metadata = load_yaml(metadata_path)
-    arc_tag_files = {f for f in arc_tags_dir.glob("*.yaml")}
+    arc_tag_files = {f.stem.replace("_tags", ""): f for f in arc_tags_dir.glob("*.yaml")}
+    print(f"arc_tag files: {arc_tag_files}")
 
     errors = []
-    # Validate arc_metadata ↔ arc_tags link and tag validity
+    # Validate arc_metadata ↔ arc_tags link and tag validitys
     for arc in arc_metadata:
         arc_id = arc.get("arc_id")
         tags = arc.get("tags", [])
