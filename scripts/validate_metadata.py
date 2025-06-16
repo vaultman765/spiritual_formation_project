@@ -1,4 +1,3 @@
-import os
 import sys
 import yaml
 from pathlib import Path
@@ -16,10 +15,10 @@ def validate_tag(tag, canonical_tags):
 
 def main():
     root = Path(".")
-    metadata_path = "metadata/arc_metadata.yaml"
-    tag_bank_path = "metadata/tag_bank.yaml"
-    arc_tags_dir = "metadata/arc_tags"
-    meditations_dir = "meditations"
+    metadata_path = root / "metadata/arc_metadata.yaml"
+    tag_bank_path = root / "metadata/tag_bank.yaml"
+    arc_tags_dir = root / "metadata/arc_tags"
+    meditations_dir = root / "meditations"
 
     tag_bank = load_yaml(tag_bank_path)
     canonical_tags = {tag.lower() for tags in tag_bank.values() for tag in tags}
