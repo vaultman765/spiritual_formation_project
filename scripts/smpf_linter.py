@@ -2,10 +2,11 @@ import os
 import sys
 
 REQUIRED_SECTIONS = [
-    "Anchor Images and Primary Readings",
-    "Meditative Points",
-    "Colloquy",
-    "Resolution"
+    "📜 Anchor Images and Primary Readings",
+    "🎯 Meditative Points",
+    "💬 Ejaculatory Prayer",
+    "🗣️ Colloquy",
+    "🔨 Resolution (Optional)"
 ]
 
 def check_smpf_format(filepath):
