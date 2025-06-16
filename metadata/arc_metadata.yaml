@@ -40,6 +40,41 @@
       - fixed anchor image
       - meditations on divine charity
       - theological + affective blend
+- arc_id: arc_love_of_neighbor
+  title: "Love of Neighbor - Living Charity"
+  day_range:
+    start: 8
+    end: 14
+  smpf_compliant: true
+  status: canonical
+  anchor_image: Jesus washing the feet of His disciples
+  primary_reading: John 13
+  tags:
+    thematic:
+    - Christian fraternity
+    - communion
+    - love in action
+    - imitation of Christ
+    doctrinal:
+    - charity
+    - mystical body
+    - new commandment
+    virtue:
+    - humility
+    - service
+    - forgiveness
+    - simplicity
+    mystical:
+    - washing of feet
+    - unity in Christ
+    liturgical:
+    - Ordinary Time
+    typological:
+    - Christ the Servant
+    structural:
+    - fixed anchor image
+    - seven-day charity arc
+    - communal and affective lens
 - arc_id: arc_litany_sacred_heart
   title: Litany of the Sacred Heart
   day_range:
