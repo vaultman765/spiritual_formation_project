@@ -368,16 +368,6 @@
   tags: []
   notes:
 
-- id: ccc_
-  title: 
-  source: Catechism of the Catholic Church
-  paragraph_range:
-    start: 
-    end: 
-  url: 
-  tags: []
-  notes:
-
 - id: ccc_creeds
   title: The Creeds
   source: Catechism of the Catholic Church
@@ -485,6 +475,296 @@
     start: 430
     end: 435
   url: https://www.vatican.va/archive/ENG0015/__P1E.HTM
+  tags: []
+  notes:
+
+- id: ccc_christ
+  title: Christ
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 436
+    end: 440
+  url: https://www.vatican.va/archive/ENG0015/__P1F.HTM
+  tags: []
+  notes:
+
+- id: ccc_only_son_of_god
+  title: The Only Son of God
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 441
+    end: 445
+  url: https://www.vatican.va/archive/ENG0015/__P1G.HTM
+  tags: []
+  notes:
+
+- id: ccc_lord
+  title: Lord
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 446
+    end: 451
+  url: https://www.vatican.va/archive/ENG0015/__P1H.HTM
+  tags: []
+  notes:
+
+- id: ccc_p1s2c2a2_in_brief
+  title: P1 S2 C2 A2 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 452
+    end: 455
+  url: https://www.vatican.va/archive/ENG0015/__P1I.HTM
+  tags: []
+  notes:
+
+- id: ccc_son_of_god_became_man
+  title: The Son of God Became Man
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 456
+    end: 483
+  url: https://www.vatican.va/archive/ENG0015/__P1J.HTM
+  tags: []
+  notes:
+
+- id: ccc_conceived_by_the_power_of_the_holy_spirit
+  title: Conceived by the Power of the Holy Spirit
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 484
+    end: 511
+  url: https://www.vatican.va/archive/ENG0015/__P1K.HTM
+  tags: []
+  notes:
+
+- id: ccc_mysteries_of_christs_life
+  title: The Mysteries of Christ's Life
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 512
+    end: 570
+  url: https://www.vatican.va/archive/ENG0015/__P1L.HTM
+  tags: []
+  notes:
+
+- id: ccc_suffered_under_pontius_pilate
+  title: Jesus Christ Suffered Under Pontius Pilate
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 572
+    end: 573
+  url: https://www.vatican.va/archive/ENG0015/__P1M.HTM
+  tags: []
+  notes:
+
+- id: ccc_jesus_and_israel
+  title: Jesus and Israel
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 574
+    end: 594
+  url: https://www.vatican.va/archive/ENG0015/__P1N.HTM
+  tags: []
+  notes:
+
+- id: ccc_crucified
+  title: Jesus Died Crucified
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 595
+    end: 623
+  url: https://www.vatican.va/archive/ENG0015/__P1O.HTM
+  tags: []
+  notes:
+
+- id: ccc_was_buried
+  title: Jesus Christ Was Buried
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 624
+    end: 630
+  url: https://www.vatican.va/archive/ENG0015/__P1P.HTM
+  tags: []
+  notes:
+
+- id: ccc_he_descended_into_hell
+  title: He Descended into Hell On the Third Day He Rose Again
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 631
+    end: 631
+  url: https://www.vatican.va/archive/ENG0015/__P1Q.HTM
+  tags: []
+  notes:
+
+- id: ccc_descended_into_hell
+  title: Christ Descended into Hell
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 632
+    end: 637
+  url: https://www.vatican.va/archive/ENG0015/__P1R.HTM
+  tags: []
+  notes:
+
+- id: ccc_he_rose_from_the_dead
+  title: On the Third Day He Rose from the Dead
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 638
+    end: 658
+  url: https://www.vatican.va/archive/ENG0015/__P1S.HTM
+  tags: []
+  notes:
+
+- id: ccc_he_ascended_into_heaven
+  title: He Ascended into Heaven and is Seated at the Right Hand of the Father
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 659
+    end: 664
+  url: https://www.vatican.va/archive/ENG0015/__P1T.HTM
+  tags: []
+  notes:
+
+- id: ccc_p1s2c2a6_in_brief
+  title: P1 S2 C2 A6 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 665
+    end: 667
+  url: https://www.vatican.va/archive/ENG0015/__P1U.HTM
+  tags: []
+  notes:
+
+- id: ccc_will_come_again_in_glory
+  title: He Will Come Again in Glory
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 668
+    end: 677
+  url: https://www.vatican.va/archive/ENG0015/__P1V.HTM
+  tags: []
+  notes:
+
+- id: ccc_judge_living_and_dead
+  title: To Judge the Living and the Dead
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 678
+    end: 679
+  url: https://www.vatican.va/archive/ENG0015/__P1W.HTM
+  tags: []
+  notes:
+
+- id: ccc_p1s2c2a7_in_brief
+  title: P1 S2 C2 A7 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 680
+    end: 682
+  url: https://www.vatican.va/archive/ENG0015/__P1X.HTM
+  tags: []
+  notes:
+
+- id: ccc_i_believe_in_the_holy_spirit
+  title: I Believe in the Holy Spirit
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 683
+    end: 686
+  url: https://www.vatican.va/archive/ENG0015/__P1Y.HTM
+  tags: []
+  notes:
+
+- id: ccc_believe_in_the_holy_spirit
+  title: Believe in the Holy Spirit
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 687
+    end: 688
+  url: https://www.vatican.va/archive/ENG0015/__P1Z.HTM
+  tags: []
+  notes:
+
+- id: ccc_joint_mission
+  title: The Joint Mission of the Son and the Spirit
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 689
+    end: 690
+  url: https://www.vatican.va/archive/ENG0015/__P20.HTM
+  tags: []
+  notes:
+
+- id: ccc_name_titles_symbols
+  title: The Name, Titles, and Symbols of the Holy Spirit
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 691
+    end: 701
+  url: https://www.vatican.va/archive/ENG0015/__P21.HTM
+  tags: []
+  notes:
+
+- id: ccc_god_spirit_word_promises
+  title: God's Spirit and Word in the Time of the Promises
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 702
+    end: 716
+  url: https://www.vatican.va/archive/ENG0015/__P22.HTM
+  tags: []
+  notes:
+
+- id: ccc_spirit_of_christ
+  title: The Spirit of Christ in the Fullness of Time
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 717
+    end: 730
+  url: https://www.vatican.va/archive/ENG0015/__P23.HTM
+  tags: []
+  notes:
+
+- id: ccc_spirit_and_the_church
+  title: The Spirit and the Church In the Last Days
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 731
+    end: 741
+  url: https://www.vatican.va/archive/ENG0015/__P24.HTM
+  tags: []
+  notes:
+
+- id: ccc_p1s2c3a8_in_brief
+  title: P1 S2 C3 A8 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 742
+    end: 747
+  url: https://www.vatican.va/archive/ENG0015/__P25.HTM
+  tags: []
+  notes:
+
+- id: ccc_the_holy_catholic_church
+  title: I Believe in the Holy Catholic Church
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 748
+    end: 750
+  url: https://www.vatican.va/archive/ENG0015/__P26.HTM
+  tags: []
+  notes:
+
+- id: ccc_church_in_gods_plan
+  title: The Church in God's Plan
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 751
+    end: 780
+  url: https://www.vatican.va/archive/ENG0015/__P27.HTM
   tags: []
   notes:
 
