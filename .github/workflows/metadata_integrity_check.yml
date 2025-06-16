@@ -1,0 +1,39 @@
+name: Metadata Integrity Check
+
+on:
+  workflow_dispatch:
+    
+  push:
+    paths:
+      - 'arc_metadata.yaml'
+      - 'tag_bank.yaml'
+      - 'arc_tags/*.yaml'
+      - 'meditations/*.md'
+      - '.github/workflows/metadata_integrity_check.yml'
+      - 'scripts/validate_metadata.py'
+  pull_request:
+    paths:
+      - 'arc_metadata.yaml'
+      - 'tag_bank.yaml'
+      - 'arc_tags/*.yaml'
+      - 'meditations/*.md'
+      - '.github/workflows/metadata_integrity_check.yml'
+      - 'scripts/validate_metadata.py'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Run Metadata Validator
+        run: python scripts/validate_metadata.py
