@@ -12,16 +12,10 @@ on:
       - '.github/workflows/metadata_integrity_check.yml'
       - 'scripts/validate_metadata.py'
   pull_request:
-    paths:
-      - 'arc_metadata.yaml'
-      - 'tag_bank.yaml'
-      - 'arc_tags/*.yaml'
-      - 'meditations/*.md'
-      - '.github/workflows/metadata_integrity_check.yml'
-      - 'scripts/validate_metadata.py'
 
 jobs:
-  validate: 
+  validate:
+    name: Metadata Integrity Check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
