@@ -2,7 +2,7 @@ name: Metadata Integrity Check
 
 on:
   workflow_dispatch:
-    
+
   push:
     paths:
       - 'arc_metadata.yaml'
@@ -21,7 +21,7 @@ on:
       - 'scripts/validate_metadata.py'
 
 jobs:
-  validate:
+  validate: 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
