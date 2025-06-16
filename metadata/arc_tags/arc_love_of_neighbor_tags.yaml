@@ -9,12 +9,11 @@ tags:
   - charity
   - mystical body
   - new commandment
-  emotional:
-  - humility
-  - fidelity
   virtue:
+  - humility
   - service
   - mercy
+  - fidelity
   - forgiveness
   - spiritual childhood
   mystical:
@@ -23,5 +22,6 @@ tags:
   liturgical: 
   - ordinary time
   typological: []
+  structural: []
 
 
