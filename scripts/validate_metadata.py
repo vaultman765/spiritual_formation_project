@@ -1,5 +1,5 @@
-import os
 import sys
+import re
 import yaml
 from pathlib import Path
 
@@ -16,20 +16,19 @@ def validate_tag(tag, canonical_tags):
 
 def main():
     root = Path(".")
-    metadata_path = root / "arc_metadata.yaml"
-    tag_bank_path = root / "tag_bank.yaml"
-    arc_tags_dir = root / "arc_tags"
+    metadata_path = root / "metadata/arc_metadata.yaml"
+    tag_bank_path = root / "metadata/tag_bank.yaml"
+    arc_tags_dir = root / "metadata/arc_tags"
     meditations_dir = root / "meditations"
 
     tag_bank = load_yaml(tag_bank_path)
     canonical_tags = {tag.lower() for tags in tag_bank.values() for tag in tags}
 
     arc_metadata = load_yaml(metadata_path)
-    arc_tag_files = {f.stem.replace("arc_", ""): f for f in arc_tags_dir.glob("*.yaml")}
+    arc_tag_files = {f.stem.replace("_tags", ""): f for f in arc_tags_dir.glob("*.yaml")}
 
     errors = []
-
-    # Validate arc_metadata ↔ arc_tags link and tag validity
+    # Validate arc_metadata ↔ arc_tags link and tag validitys
     for arc in arc_metadata:
         arc_id = arc.get("arc_id")
         tags = arc.get("tags", [])
@@ -49,32 +48,35 @@ def main():
     # Validate arc_tags structure and tag values
     for arc_id, file_path in arc_tag_files.items():
         arc_data = load_yaml(file_path)
+
         if arc_data.get("arc_id") != arc_id:
             errors.append(f"❌ arc_id mismatch in {file_path.name} (expected '{arc_id}')")
         tag_blocks = arc_data.get("tags", {})
+
         for category, tags in tag_blocks.items():
+
             if not isinstance(tags, list):
                 errors.append(f"❌ Invalid tag list for category '{category}' in {file_path.name}")
                 continue
+
             for tag in tags:
+
                 if not validate_tag(tag, canonical_tags):
                     errors.append(f"❌ Invalid tag in {file_path.name}: '{tag}'")
 
     # Validate meditation files
     for file in meditations_dir.glob("*.md"):
         with open(file, "r", encoding="utf-8") as f:
-            content = f.read()
+            contents = f.read()
 
-        if "tags:" not in content:
-            errors.append(f"❌ Missing tag block in {file.name}")
-            continue
+        tag_lines = re.findall(r'<!--\s*tags:\s*(.*?)\s*-->', contents)
+        tags = []
+        for line in tag_lines:
+            tags.extend(tag.strip().lower() for tag in line.split(","))
 
-        lines = content.splitlines()
-        tag_lines = [line.strip() for line in lines if line.strip().startswith("-")]
-        for tag in tag_lines:
-            tag_clean = tag.strip("- ").lower()
-            if not validate_tag(tag_clean, canonical_tags):
-                errors.append(f"❌ Invalid tag in {file.name}: '{tag_clean}'")
+        for tag in tags:
+            if not validate_tag(tag, canonical_tags):
+                errors.append(f"[{file.name}] Invalid tag: '{tag}'")
 
     # Report results
     if errors:
