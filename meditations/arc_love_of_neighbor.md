@@ -4,7 +4,7 @@
 
 ---
 
-### 📜 Anchor Images and Primary Reading
+### 📜 Anchor Images and Primary Readings
 
 | Days     | Anchor Image Description                            | Primary Reading Source |
 |----------|-----------------------------------------------------|------------------------|
