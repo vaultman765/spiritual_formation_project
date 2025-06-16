@@ -1,4 +1,5 @@
 import sys
+import re
 import yaml
 from pathlib import Path
 
@@ -25,7 +26,6 @@ def main():
 
     arc_metadata = load_yaml(metadata_path)
     arc_tag_files = {f.stem.replace("_tags", ""): f for f in arc_tags_dir.glob("*.yaml")}
-    print(f"arc_tag files: {arc_tag_files}")
 
     errors = []
     # Validate arc_metadata ↔ arc_tags link and tag validitys
@@ -62,18 +62,18 @@ def main():
     # Validate meditation files
     for file in meditations_dir.glob("*.md"):
         with open(file, "r", encoding="utf-8") as f:
-            content = f.read()
+            contents = f.read()
 
-        if "tags:" not in content:
-            errors.append(f"❌ Missing tag block in {file.name}")
+        match = re.search(r"<!--\s*tags:\s*\[([^\]]*)\]\s*-->", contents, re.IGNORECASE)
+        if not match:
+            errors.append(f"❌ Missing or malformed tag block in {file.name}")
             continue
 
-        lines = content.splitlines()
-        tag_lines = [line.strip() for line in lines if line.strip().startswith("-")]
-        for tag in tag_lines:
-            tag_clean = tag.strip("- ").lower()
-            if not validate_tag(tag_clean, canonical_tags):
-                errors.append(f"❌ Invalid tag in {file.name}: '{tag_clean}'")
+        tag_block = match.group(1)
+        tags = [t.strip().lower() for t in tag_block.split(",") if t.strip()]
+        for tag in tags:
+            if not validate_tag(tag, canonical_tags):
+                errors.append(f"❌ Invalid tag in {file.name}: '{tag}'")
 
     # Report results
     if errors:
