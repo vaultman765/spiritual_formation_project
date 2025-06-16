@@ -1,6 +1,6 @@
-# arc_NAME_HERE.md
+# arc_[theme_id].md
 
-## TITLE OF ARC (X Days)
+## [Theme Title] ([Total Days] Days)
 
 ### 📜 Anchor Images and Primary Readings
 
@@ -35,7 +35,7 @@
 <!-- SMPF:EjaculatoryPrayer -->
 #### 💬 Ejaculatory Prayer
 
-> [Insert a short aspiration — may vary day-to-day - brings to mind briefly the entire meditation]
+**[Insert a short aspiration — may vary day-to-day - brings to mind briefly the entire meditation]**
 
 <!-- SMPF:Colloquy -->
 #### 🗣️ Colloquy
