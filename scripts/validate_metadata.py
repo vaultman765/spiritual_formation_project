@@ -48,14 +48,19 @@ def main():
     # Validate arc_tags structure and tag values
     for arc_id, file_path in arc_tag_files.items():
         arc_data = load_yaml(file_path)
+
         if arc_data.get("arc_id") != arc_id:
             errors.append(f"❌ arc_id mismatch in {file_path.name} (expected '{arc_id}')")
         tag_blocks = arc_data.get("tags", {})
+
         for category, tags in tag_blocks.items():
+
             if not isinstance(tags, list):
                 errors.append(f"❌ Invalid tag list for category '{category}' in {file_path.name}")
                 continue
+
             for tag in tags:
+
                 if not validate_tag(tag, canonical_tags):
                     errors.append(f"❌ Invalid tag in {file_path.name}: '{tag}'")
 
