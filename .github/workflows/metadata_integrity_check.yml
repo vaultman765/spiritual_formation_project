@@ -3,14 +3,6 @@ name: Metadata Integrity Check
 on:
   workflow_dispatch:
 
-  push:
-    paths:
-      - 'arc_metadata.yaml'
-      - 'tag_bank.yaml'
-      - 'arc_tags/*.yaml'
-      - 'meditations/*.md'
-      - '.github/workflows/metadata_integrity_check.yml'
-      - 'scripts/validate_metadata.py'
   pull_request:
 
 jobs:
