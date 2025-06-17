@@ -229,5 +229,4 @@ def test_metadata_integrity_checker_report(monkeypatch):
 def test_main_exit(monkeypatch):
     monkeypatch.setattr(cmi, "MetadataIntegrityChecker", lambda: MagicMock(run_all=lambda: ["err"], report=lambda: None))
     with pytest.raises(SystemExit):
-        cmi.__name__ = "__main__"
-        exec(open(cmi.__file__, encoding="utf-8").read(), cmi.__dict__)
+        cmi.main()
