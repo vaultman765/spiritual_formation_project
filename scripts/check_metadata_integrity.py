@@ -136,9 +136,12 @@ class MetadataIntegrityChecker:
         else:
             print("✅ All metadata and tag checks passed.")
 
-if __name__ == "__main__":
+def main():
     checker = MetadataIntegrityChecker()
     errors = checker.run_all()
     checker.report()
     if errors:
         sys.exit(1)
+
+if __name__ == "__main__":
+    main()
