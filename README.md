@@ -68,15 +68,14 @@ All arcs and readings are gradually being tagged with structured YAML metadata t
 - 📖 Theme-linked reading suggestions  
 - 🧠 Tag-aware recommendations
 
-See [`tag_bank_reference.yaml`](metadata/tag_bank_reference.yaml) for the living tag list.
+See [`tag_bank.yaml`](metadata/tag_bank.yaml) for the living tag list.
 
 Tag categories include:
 
-- **Emotional** – hope, sorrow, trust  
 - **Doctrinal** – Eucharist, Cross, Church  
-- **Virtue-based** – humility, courage, purity  
+- **Virtue** – humility, courage, purity  
 - **Mystical** – dryness, union, longing  
-- **Seasonal** – Lent, Easter, Feast days  
+- **Liturgical** – Lent, Easter, Feast days  
 - **Structural** – litany, typology, ecclesiology
 
 ---
@@ -86,7 +85,7 @@ Tag categories include:
 | Area | Status |
 |------|--------|
 | SMPF Format | ✅ Canonical format finalized |
-| Tag System | ✅ Categorized + integrated |
+| Tag System | ✅ Categorized + CLI-integrated |
 | Arc Roadmap | ✅ Deep structure confirmed |
 | Metadata Schema | ⏳ In progress (`metadata_schema.yaml`) |
 | Reading Plan | ⏳ First pass underway |
@@ -110,6 +109,38 @@ This project is designed for future integration into a website with:
 > This project exists to form **souls who burn with love for Christ** — through daily, structured intimacy with Him in prayer.
 
 It is freely offered for the sanctification of the Church and the greater glory of God.
+
+---
+
+## 🖥️ Tag Management CLI
+
+A command-line tool is available to manage tags across all project files using the centralized tag logic in `tag_tools.py`.
+
+### 🔧 Usage
+
+Run from the project root:
+
+```bash
+python manage_tags.py [command] [options]
+```
+
+### 🛠 Available Commands
+
+| Command     | Description                                                  |
+|-------------|--------------------------------------------------------------|
+| `add`       | Add a new tag to the `tag_bank.yaml` under a given category |
+| `rename`    | Rename a tag across tag bank, metadata, and meditations     |
+| `delete`    | Remove a tag from all files and metadata                    |
+| `validate`  | Check that all tags used are valid and canonical            |
+
+### 🧪 Examples
+
+```bash
+python manage_tags.py add --tag "perseverance" --category "virtue"
+python manage_tags.py rename --old "god’s love" --new "love of god"
+python manage_tags.py delete --tag "suffering servant"
+python manage_tags.py validate
+```
 
 ---
 
