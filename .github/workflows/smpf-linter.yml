@@ -3,8 +3,6 @@ name: SMPF Markdown Linter
 on:
   workflow_dispatch:
   pull_request:
-    paths:
-      - 'meditations/**/*.md'
 
 jobs:
   check-smpf:

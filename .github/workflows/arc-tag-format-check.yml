@@ -2,10 +2,7 @@ name: Arc Tag Format Check
 
 on:
   workflow_dispatch:
-
   pull_request:
-    paths:
-      - 'metadata/arc_tags/*.yaml'
 
 jobs:
   check-arc-tag-format:
