@@ -768,82 +768,1416 @@
   tags: []
   notes:
 
-- id: ccc_
-  title: 
+- id: ccc_the_church_people_of_god
+  title: "The Church - People of God, Body of Christ, Temple of the Holy Spirit"
   source: Catechism of the Catholic Church
   paragraph_range:
-    start: 
-    end: 
-  url: 
+    start: 781
+    end: 810
+  url: https://www.vatican.va/archive/ENG0015/__P28.HTM
   tags: []
   notes:
 
-- id: ccc_
-  title: 
+- id: ccc_the_church_is_one
+  title: The Church is One, Holy, Catholic, and Apostolic
   source: Catechism of the Catholic Church
   paragraph_range:
-    start: 
-    end: 
-  url: 
+    start: 811
+    end: 870
+  url: https://www.vatican.va/archive/ENG0015/__P29.HTM
   tags: []
   notes:
 
-- id: ccc_
-  title: 
+- id: ccc_christ_faithful
+  title: Christ's Faithful - Hierarchy, Laity, Consecrated Life
   source: Catechism of the Catholic Church
   paragraph_range:
-    start: 
-    end: 
-  url: 
-  tags: []
-  notes:
-
-- id: ccc_
-  title: 
-  source: Catechism of the Catholic Church
-  paragraph_range:
-    start: 
-    end: 
-  url: 
-  tags: []
-  notes:
-
-- id: ccc_
-  title: 
-  source: Catechism of the Catholic Church
-  paragraph_range:
-    start: 
-    end: 
-  url: 
-  tags: []
-  notes:
-
-- id: ccc_love_of_god
-  title: Love of God as First Commandment
-  source: Catechism of the Catholic Church
-  paragraph_range:
-    start: 2083
-    end: 2086
-  url: https://www.vatican.va/archive/ENG0015/__P7Z.HTM
-  tags: [commandment, love, charity, God]
-  notes: Used in the Love of God arc (Day 7); discusses total love for God and its doctrinal basis.
-
-- id: ccc_mercy
-  title: Mercy and the Poor
-  source: Catechism of the Catholic Church
-  paragraph_range:
-    start: 2443
-    end: 2449
-  url: https://www.vatican.va/archive/ENG0015/__P8F.HTM
-  tags: [mercy, justice, solidarity]
-  notes: Covers the Church’s teaching on mercy and justice toward the poor; used in multiple arcs.
-
-- id: ccc_suffering
-  title: Christian Meaning of Suffering and Death
-  source: Catechism of the Catholic Church
-  paragraph_range:
-    start: 1010
-    end: 1014
+    start: 871
+    end: 945
   url: https://www.vatican.va/archive/ENG0015/__P2A.HTM
-  tags: [suffering, death, redemption, Paschal mystery]
-  notes: Provides theological grounding for redemptive suffering; central to the Cross and Suffering arc.
+  tags: []
+  notes:
+
+- id: ccc_communion_of_saints
+  title: The Communion of Saints
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 946
+    end: 962
+  url: https://www.vatican.va/archive/ENG0015/__P2B.HTM
+  tags: []
+  notes:
+
+- id: ccc_mary
+  title: Mary - Mother of Christ, Mother of the Church
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 963
+    end: 975
+  url: https://www.vatican.va/archive/ENG0015/__P2C.HTM
+  tags: []
+  notes:
+
+- id: ccc_forgiveness_of_sins
+  title: I Believe in the Forgiveness of Sins
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 976
+    end: 976
+  url: https://www.vatican.va/archive/ENG0015/__P2D.HTM
+  tags: []
+  notes:
+
+- id: ccc_one_baptism
+  title: One Baptism for the Forgiveness of Sins
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 977
+    end: 980
+  url: https://www.vatican.va/archive/ENG0015/__P2E.HTM
+  tags: []
+  notes:
+
+- id: ccc_power_of_the_keys
+  title: The Power of the Keys
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 981
+    end: 987
+  url: https://www.vatican.va/archive/ENG0015/__P2F.HTM
+  tags: []
+  notes:
+
+- id: ccc_resurrection_of_the_body
+  title: I Believe in the Resurrection of the Body
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 988
+    end: 991
+  url: https://www.vatican.va/archive/ENG0015/__P2G.HTM
+  tags: []
+  notes:
+
+- id: ccc_christ_resurrection_and_ours
+  title: Christ's Resurrection and Ours
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 992
+    end: 1004
+  url: https://www.vatican.va/archive/ENG0015/__P2H.HTM
+  tags: []
+  notes:
+
+- id: ccc_dying_in_christ_jesus
+  title: Dying in Christ Jesus
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1005
+    end: 1014
+  url: https://www.vatican.va/archive/ENG0015/__P2I.HTM
+  tags: []
+  notes:
+
+- id: ccc_p1s2c3a11_in_brief
+  title: P1 S2 C3 A11 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1015
+    end: 1019
+  url: https://www.vatican.va/archive/ENG0015/__P2J.HTM
+  tags: []
+  notes:
+
+- id: ccc_life_everlasting
+  title: I Believe in Life Everlasting
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1020
+    end: 1020
+  url: https://www.vatican.va/archive/ENG0015/__P2K.HTM
+  tags: []
+  notes:
+
+- id: ccc_particular_judgment
+  title: The Particular Judgment
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1021
+    end: 1022
+  url: https://www.vatican.va/archive/ENG0015/__P2L.HTM
+  tags: []
+  notes:
+
+- id: ccc_heaven
+  title: Heaven
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1023
+    end: 1029
+  url: https://www.vatican.va/archive/ENG0015/__P2M.HTM
+  tags: []
+  notes:
+
+- id: ccc_final_purification
+  title: The Final Purification, or Purgatory
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1030
+    end: 1032
+  url: https://www.vatican.va/archive/ENG0015/__P2N.HTM
+  tags: []
+  notes:
+
+- id: ccc_hell
+  title: Hell
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1033
+    end: 1037
+  url: https://www.vatican.va/archive/ENG0015/__P2O.HTM
+  tags: []
+  notes:
+
+
+- id: ccc_last_judgment
+  title: The Last Judgment
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1038
+    end: 1041
+  url: https://www.vatican.va/archive/ENG0015/__P2P.HTM
+  tags: []
+  notes:
+
+- id: ccc_hope_of_the_new_heaven_and_the_new_earth
+  title: Hope of the New Heaven and the New Earth
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1042
+    end: 1050
+  url: https://www.vatican.va/archive/ENG0015/__P2Q.HTM
+  tags: []
+  notes:
+
+- id: ccc_p1s2c3a12_in_brief
+  title: P1 S2 C3 A12 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1051
+    end: 1060
+  url: https://www.vatican.va/archive/ENG0015/__P2R.HTM
+  tags: []
+  notes:
+
+- id: ccc_amen
+  title: Amen
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1061
+    end: 1065
+  url: https://www.vatican.va/archive/ENG0015/__P2S.HTM
+  tags: []
+  notes:
+
+- id: ccc_celebration_of_the_christian_mystery
+  title: The Celebration of the Christian Mystery
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1066
+    end: 1075
+  url: https://www.vatican.va/archive/ENG0015/__P2T.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacramental_economy
+  title: The Sacramental Economy
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1076
+    end: 1076
+  url:  https://www.vatican.va/archive/ENG0015/__P2U.HTM
+  tags: []
+  notes:
+
+- id: ccc_father_source_and_goal_of_the_liturgy
+  title: The Father-Source and Goal of the Liturgy
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1077
+    end: 1083
+  url: https://www.vatican.va/archive/ENG0015/__P2V.HTM
+  tags: []
+  notes:
+
+- id: ccc_christ_work_in_the_liturgy
+  title: Christ's Work in the Liturgy
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1084
+    end: 1090
+  url: https://www.vatican.va/archive/ENG0015/__P2W.HTM
+  tags: []
+  notes:
+
+- id: ccc_holy_spirit_and_the_church_in_the_liturgy
+  title: The Holy Spirit and the Church in the Liturgy
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1091
+    end: 1109
+  url: https://www.vatican.va/archive/ENG0015/__P2X.HTM
+  tags: []
+  notes:
+
+- id: ccc_p2s1c1a1_in_brief
+  title: P2 S1 C1 A1 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1110
+    end: 1112
+  url: https://www.vatican.va/archive/ENG0015/__P2Y.HTM
+  tags: []
+  notes:
+
+- id: ccc_paschal_mystery_in_the_churchs_sacraments
+  title: The Paschal Mystery in the Church's Sacraments
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1113
+    end: 1113
+  url: https://www.vatican.va/archive/ENG0015/__P2Z.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacraments_of_christ
+  title: The Sacraments of Christ
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1114
+    end: 1116
+  url: https://www.vatican.va/archive/ENG0015/__P30.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacraments_of_the_church
+  title: The Sacraments of the Church
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1117
+    end: 1121
+  url: https://www.vatican.va/archive/ENG0015/__P31.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacraments_of_faith
+  title: The Sacraments of Faith
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1122
+    end: 1126
+  url: https://www.vatican.va/archive/ENG0015/__P32.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacraments_of_salvation
+  title: The Sacraments of Salvation
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1127
+    end: 1129
+  url: https://www.vatican.va/archive/ENG0015/__P33.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacraments_of_eternal_life
+  title: The Sacraments of Eternal Life
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1130
+    end: 1130
+  url: https://www.vatican.va/archive/ENG0015/__P34.HTM
+  tags: []
+  notes:
+
+- id: ccc_p2s1c1a2_in_brief
+  title: P2 S1 C1 A2 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1131
+    end: 1134
+  url: https://www.vatican.va/archive/ENG0015/__P35.HTM
+  tags: []
+  notes:
+
+- id: ccc_celebration_of_paschal_mystery
+  title: The Sacramental Celebration of the Paschal Mystery
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1135
+    end: 1135
+  url: https://www.vatican.va/archive/ENG0015/__P36.HTM
+  tags: []
+  notes:
+
+- id: ccc_who_celebrates
+  title: Who Celebrates?
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1136
+    end: 1144
+  url: https://www.vatican.va/archive/ENG0015/__P37.HTM
+  tags: []
+  notes:
+
+- id: ccc_how_is_the_liturgy_celebrated
+  title: How is the Liturgy Celebrated?
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1145
+    end: 1162
+  url: https://www.vatican.va/archive/ENG0015/__P38.HTM
+  tags: []
+  notes:
+
+- id: ccc_when_is_the_liturgy_celebrated
+  title: When is the Liturgy Celebrated?
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1163
+    end: 1178
+  url: https://www.vatican.va/archive/ENG0015/__P39.HTM
+  tags: []
+  notes:
+
+- id: ccc_where_is_the_liturgy_celebrated
+  title: Where is the Liturgy Celebrated?
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1179
+    end: 1186
+  url: https://www.vatican.va/archive/ENG0015/__P3A.HTM
+  tags: []
+  notes:
+
+- id: ccc_p2s1c2a1_in_brief
+  title: P2 S1 C2 A1 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1187
+    end: 1199
+  url: https://www.vatican.va/archive/ENG0015/__P3B.HTM
+  tags: []
+  notes:
+
+- id: ccc_liturgical_diversity
+  title: Liturgical Diversity and the Unity of the Mystery
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1200
+    end: 1206
+  url: https://www.vatican.va/archive/ENG0015/__P3C.HTM
+  tags: []
+  notes:
+
+- id: ccc_p2s1c2a2_in_brief
+  title: P2 S1 C2 A2 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1207
+    end: 1209
+  url: https://www.vatican.va/archive/ENG0015/__P3D.HTM
+  tags: []
+  notes:
+
+- id: ccc_seven_sacraments
+  title: The Seven Sacraments of the Church
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1210
+    end: 1211
+  url: https://www.vatican.va/archive/ENG0015/__P3E.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacraments_of_christian_initiation
+  title: The Sacraments of Christian Initiation
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1212
+    end: 1212
+  url: https://www.vatican.va/archive/ENG0015/__P3F.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacrament_of_baptism
+  title: The Sacrament of Baptism
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1213
+    end: 1213
+  url: https://www.vatican.va/archive/ENG0015/__P3G.HTM
+  tags: []
+  notes:
+
+- id: ccc_what_is_this_sacrament_called_baptism
+  title: What is This Sacrament Called? Baptism
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1214
+    end: 1216
+  url: https://www.vatican.va/archive/ENG0015/__P3H.HTM
+  tags: []
+  notes:
+
+- id: ccc_baptism_in_the_economy_of_salvation
+  title: Baptism in the Economy of Salvation
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1217
+    end: 1228
+  url: https://www.vatican.va/archive/ENG0015/__P3I.HTM
+  tags: []
+  notes:
+
+- id: ccc_how_is_the_sacrament_of_baptism_celebrated
+  title: How is the Sacrament of Baptism Celebrated?
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1229
+    end: 1245
+  url: https://www.vatican.va/archive/ENG0015/__P3J.HTM
+  tags: []
+  notes:
+
+- id: ccc_who_can_receive_baptism
+  title: Who can Receive Baptism?
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1246
+    end: 1255
+  url: https://www.vatican.va/archive/ENG0015/__P3K.HTM
+  tags: []
+  notes:
+
+- id: ccc_who_can_baptize
+  title: Who can Baptize?
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1256
+    end: 1256
+  url: https://www.vatican.va/archive/ENG0015/__P3L.HTM
+  tags: []
+  notes:
+
+- id: ccc_the_necessity_of_baptism
+  title: The Necessity of Baptism
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1257
+    end: 1261
+  url: https://www.vatican.va/archive/ENG0015/__P3M.HTM
+  tags: []
+  notes:
+
+- id: ccc_the_grace_of_baptism
+  title: The Grace of Baptism
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1262
+    end: 1274
+  url: https://www.vatican.va/archive/ENG0015/__P3N.HTM
+  tags: []
+  notes:
+
+
+- id: ccc_p2s2c1a1_in_brief
+  title: P2 S2 C1 A1 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1275
+    end: 1284
+  url: https://www.vatican.va/archive/ENG0015/__P3O.HTM
+  tags: []
+  notes:
+
+- id: ccc_confirmation
+  title: The Sacrament of Confirmation
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1285
+    end: 1285
+  url: https://www.vatican.va/archive/ENG0015/__P3P.HTM
+  tags: []
+  notes:
+
+- id: ccc_confirmation_in_the_economy_of_salvation
+  title: Confirmation in the Economy of Salvation
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1286
+    end: 1292
+  url: https://www.vatican.va/archive/ENG0015/__P3Q.HTM
+  tags: []
+  notes:
+
+- id: ccc_signs_and_rite_of_confirmation
+  title: The Signs and the Rite of Confirmation
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1293
+    end: 1301
+  url: https://www.vatican.va/archive/ENG0015/__P3R.HTM
+  tags: []
+  notes:
+
+- id: ccc_effects_of_confirmation
+  title: The Effects of Confirmation
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1302
+    end: 1305
+  url: https://www.vatican.va/archive/ENG0015/__P3S.HTM
+  tags: []
+  notes:
+
+- id: ccc_who_can_receive_confirmation
+  title: Who can Receive This Sacrament?
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1306
+    end: 1311
+  url: https://www.vatican.va/archive/ENG0015/__P3T.HTM
+  tags: []
+  notes:
+
+- id: ccc_minister_of_confirmation
+  title: The Minister of Confirmation
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1312
+    end: 1314
+  url: https://www.vatican.va/archive/ENG0015/__P3U.HTM
+  tags: []
+  notes:
+
+- id: ccc_p2s2c1a2_in_brief
+  title: P2 S2 C1 A2 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1315
+    end: 1321
+  url: https://www.vatican.va/archive/ENG0015/__P3V.HTM
+  tags: []
+  notes:
+
+- id: ccc_eucharist
+  title: The Sacrament of the Eucharist
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1322
+    end: 1323
+  url: https://www.vatican.va/archive/ENG0015/__P3W.HTM
+  tags: []
+  notes:
+
+- id: ccc_eucharist_source_and_summit
+  title: The Eucharist - Source and Summit of Ecclesial Life
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1324
+    end: 1327
+  url: https://www.vatican.va/archive/ENG0015/__P3X.HTM
+  tags: []
+  notes:
+
+- id: ccc_eucharist_what_is_this_sacrament_called
+  title: What is This Sacrament Called? Eucharist
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1328
+    end: 1332
+  url: https://www.vatican.va/archive/ENG0015/__P3Y.HTM
+  tags: []
+  notes:
+
+- id: ccc_eucharist_in_the_economy_of_salvation
+  title: The Eucharist in the Economy of Salvation
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1333
+    end: 1344
+  url: https://www.vatican.va/archive/ENG0015/__P3Z.HTM
+  tags: []
+  notes:
+
+- id: ccc_liturgical_celebration_of_the_eucharist
+  title: The Liturgical Celebration of the Eucharist
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1345
+    end: 1355
+  url: https://www.vatican.va/archive/ENG0015/__P40.HTM
+  tags: []
+  notes:
+
+
+- id: ccc_sacramental_sacrifice
+  title: The Sacramental Sacrifice Thanksgiving, Memorial, Presence
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1356
+    end: 1381
+  url: https://www.vatican.va/archive/ENG0015/__P41.HTM
+  tags: []
+  notes:
+
+- id: ccc_paschal_banquet
+  title: The Paschal Banquet
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1382
+    end: 1401
+  url: https://www.vatican.va/archive/ENG0015/__P42.HTM
+  tags: []
+  notes:
+
+- id: ccc_eucharist_pledge_of_glory
+  title: The Eucharist - "Pledge of the Glory To Come"
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1402
+    end: 1405
+  url: https://www.vatican.va/archive/ENG0015/__P43.HTM
+  tags: []
+  notes:
+
+- id: ccc_p2s2c1a3_in_brief
+  title: P2 S2 C1 A3 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1406
+    end: 1419
+  url: https://www.vatican.va/archive/ENG0015/__P44.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacraments_of_healing
+  title: The Sacraments of Healing
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1420
+    end: 1421
+  url: https://www.vatican.va/archive/ENG0015/__P45.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacrament_of_penance
+  title: The Sacrament of Penance and Reconciliation
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1422
+    end: 1422
+  url: https://www.vatican.va/archive/ENG0015/__P46.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacrament_of_conversion
+  title: What is This Sacrament Called? The Sacrament of Penance
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1423
+    end: 1424
+  url: https://www.vatican.va/archive/ENG0015/__P47.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacrament_of_reconciliation_after_baptism
+  title: Why a Sacrament of Reconciliation after Baptism?
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1425
+    end: 1426
+  url: https://www.vatican.va/archive/ENG0015/__P48.HTM
+  tags: []
+  notes:
+
+- id: ccc_conversion_of_the_baptized
+  title: The Conversion of the Baptized
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1427
+    end: 1429
+  url: https://www.vatican.va/archive/ENG0015/__P49.HTM
+  tags: []
+  notes:
+
+- id: ccc_interior_penance
+  title: Interior Penance
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1430
+    end: 1433
+  url: https://www.vatican.va/archive/ENG0015/__P4A.HTM
+  tags: []
+  notes:
+
+- id: ccc_many_forms_of_penance
+  title: The Many Forms of Penance in Christian Life
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1434
+    end: 1439
+  url: https://www.vatican.va/archive/ENG0015/__P4B.HTM
+  tags: []
+  notes:
+
+- id: ccc_penance_and_reconciliation
+  title: Penance and Reconciliation
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1440
+    end: 1449
+  url: https://www.vatican.va/archive/ENG0015/__P4C.HTM
+  tags: []
+  notes:
+
+- id: ccc_acts_of_the_penitent
+  title: The Acts of the Penitent
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1450
+    end: 1460
+  url: https://www.vatican.va/archive/ENG0015/__P4D.HTM
+  tags: []
+  notes:
+
+- id: ccc_minister_of_this_sacrament
+  title: The Minister of This Sacrament
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1461
+    end: 1467
+  url: https://www.vatican.va/archive/ENG0015/__P4E.HTM
+  tags: []
+  notes:
+
+- id: ccc_effects_of_this_sacrament
+  title: The Effects of This Sacrament
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1468
+    end: 1470
+  url: https://www.vatican.va/archive/ENG0015/__P4F.HTM
+  tags: []
+  notes:
+
+- id: ccc_indulgences
+  title: Indulgences
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1471
+    end: 1479
+  url: https://www.vatican.va/archive/ENG0015/__P4G.HTM
+  tags: []
+  notes:
+
+- id: ccc_celebration_of_the_sacrament_of_penance
+  title: The Celebration of the Sacrament of Penance
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1480
+    end: 1484
+  url: https://www.vatican.va/archive/ENG0015/__P4H.HTM
+  tags: []
+  notes:
+
+- id: ccc_p2s2c2a4_in_brief
+  title: P2 S2 C2 A4 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1485
+    end: 1498
+  url: https://www.vatican.va/archive/ENG0015/__P4I.HTM
+  tags: []
+  notes:
+
+- id: ccc_anointing_of_the_sick
+  title: The Anointing of the Sick
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1499
+    end: 1499
+  url: https://www.vatican.va/archive/ENG0015/__P4J.HTM
+  tags: []
+  notes:
+
+- id: ccc_foundations_in_the_economy_of_salvation
+  title: Its Foundations in the Economy of Salvation
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1500
+    end: 1513
+  url: https://www.vatican.va/archive/ENG0015/__P4K.HTM
+  tags: []
+  notes:
+
+- id: ccc_who_receives_and_who_administers_this_sacrament
+  title: Who Receives and Who Administers This Sacrament? Anointing of the Sick
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1514
+    end: 1516
+  url: https://www.vatican.va/archive/ENG0015/__P4L.HTM
+  tags: []
+  notes:
+
+- id: ccc_how_is_this_sacrament_celebrated_anointing_of_the_sick
+  title: How is This Sacrament Celebrated? Anointing of the Sick
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1517
+    end: 1519
+  url: https://www.vatican.va/archive/ENG0015/__P4M.HTM
+  tags: []
+  notes:
+
+- id: ccc_effects_of_the_celebration_of_this_sacrament_anointing_of_the_sick
+  title: The Effects of the Celebration of This Sacrament. Anointing of the Sick
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1520
+    end: 1523
+  url: https://www.vatican.va/archive/ENG0015/__P4N.HTM
+  tags: []
+  notes:
+
+- id: ccc_viaticum
+  title: Viaticum, the Last Sacrament of the Christian
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1524
+    end: 1525
+  url: https://www.vatican.va/archive/ENG0015/__P4O.HTM
+  tags: []
+  notes:
+
+- id: ccc_p2s2c2a5_in_brief
+  title: P2 S2 C2 A5 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1526
+    end: 1532
+  url: https://www.vatican.va/archive/ENG0015/__P4P.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacraments_at_the_service_of_communion
+  title: The Sacraments at the Service of Communion
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1533
+    end: 1535
+  url: https://www.vatican.va/archive/ENG0015/__P4Q.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacrament_of_holy_orders
+  title: The Sacrament of Holy Orders
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1536
+    end: 1536
+  url: https://www.vatican.va/archive/ENG0015/__P4R.HTM
+  tags: []
+  notes:
+
+- id: ccc_why_is_this_sacrament_called_orders
+  title: Why Is This Sacrament Called "Orders"?
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1537
+    end: 1538
+  url: https://www.vatican.va/archive/ENG0015/__P4S.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacrament_of_holy_orders_in_the_economy_of_salvation
+  title: The Sacrament of Holy Orders in the Economy of Salvation
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1539
+    end: 1553
+  url: https://www.vatican.va/archive/ENG0015/__P4T.HTM
+  tags: []
+  notes:
+
+- id: ccc_three_degrees_of_holy_orders
+  title: The Three Degrees of the Sacrament of Holy Orders
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1554
+    end: 1571
+  url: https://www.vatican.va/archive/ENG0015/__P4U.HTM
+  tags: []
+  notes:
+
+- id: ccc_celebration_of_this_sacrament_holy_orders
+  title: The Celebration of This Sacrament - Holy Orders
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1572
+    end: 1574
+  url: https://www.vatican.va/archive/ENG0015/__P4V.HTM
+  tags: []
+  notes:
+
+- id: ccc_who_can_confer_this_sacrament_holy_orders
+  title: Who Can Confer This Sacrament? Holy Orders
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1575
+    end: 1576
+  url: https://www.vatican.va/archive/ENG0015/__P4W.HTM
+  tags: []
+  notes:
+
+- id: ccc_who_can_receive_this_sacrament_holy_orders
+  title: Who Can Receive This Sacrament? Holy Orders
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1577
+    end: 1580
+  url: https://www.vatican.va/archive/ENG0015/__P4X.HTM
+  tags: []
+  notes:
+
+- id: ccc_effects_of_the_sacrament_of_holy_orders
+  title: The Effects of the Sacrament of Holy Orders
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1581
+    end: 1589
+  url: https://www.vatican.va/archive/ENG0015/__P4Y.HTM
+  tags: []
+  notes:
+
+- id: ccc_p2s2c3a6_in_brief
+  title: P2 S2 C3 A6 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1590
+    end: 1600
+  url: https://www.vatican.va/archive/ENG0015/__P4Z.HTM
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_sacrament_of_matrimony
+  title: The Sacrament of Matrimony
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1601
+    end: 1601
+  url: https://www.vatican.va/archive/ENG0015/__P50.HTM
+  tags: []
+  notes:
+
+- id: ccc_marriage_in_gods_plan
+  title: Marriage in God's Plan
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1602
+    end: 1620
+  url: https://www.vatican.va/archive/ENG0015/__P51.HTM
+  tags: []
+  notes:
+
+- id: ccc_celebration_of_marriage
+  title: The Celebration of Marriage
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1621
+    end: 1624
+  url: https://www.vatican.va/archive/ENG0015/__P52.HTM
+  tags: []
+  notes:
+
+- id: ccc_matrimonial_consent
+  title: Matrimonial Consent
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1625
+    end: 1637
+  url: https://www.vatican.va/archive/ENG0015/__P53.HTM
+  tags: []
+  notes:
+
+- id: ccc_effects_of_the_sacrament_of_matrimony
+  title: The Effects of the Sacrament of Matrimony
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1638
+    end: 1642
+  url: https://www.vatican.va/archive/ENG0015/__P54.HTM
+  tags: []
+  notes:
+
+- id: ccc_goods_and_requirements_of_conjugal_love
+  title: The Goods and Requirements of Conjugal Love
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1643
+    end: 1654
+  url: https://www.vatican.va/archive/ENG0015/__P55.HTM
+  tags: []
+  notes:
+
+- id: ccc_domestic_church
+  title: The Domestic Church
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1655
+    end: 1658
+  url: https://www.vatican.va/archive/ENG0015/__P56.HTM
+  tags: []
+  notes:
+
+- id: ccc_p2s2c3a7_in_brief
+  title: P2 S2 C3 A7 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1659
+    end: 1666
+  url: https://www.vatican.va/archive/ENG0015/__P57.HTM
+  tags: []
+  notes:
+
+- id: ccc_sacramentals
+  title: Sacramentals
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1667
+    end: 1676
+  url: https://www.vatican.va/archive/ENG0015/__P58.HTM
+  tags: []
+  notes:
+
+- id: ccc_p2s2c4a1_in_brief
+  title: P2 S2 C4 A1 In Brief
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1677
+    end: 1679
+  url: https://www.vatican.va/archive/ENG0015/__P59.HTM
+  tags: []
+  notes:
+
+- id: ccc_christian_funerals
+  title: Christian Funerals
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1680
+    end: 1680
+  url: https://www.vatican.va/archive/ENG0015/__P5A.HTM
+  tags: []
+  notes:
+
+- id: ccc_christians_last_passover
+  title: The Christian's Last Passover
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1681
+    end: 1683
+  url: https://www.vatican.va/archive/ENG0015/__P5B.HTM
+  tags: []
+  notes:
+
+- id: ccc_celebration_of_funerals
+  title: The Celebration of Funerals
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1684
+    end: 1690
+  url: https://www.vatican.va/archive/ENG0015/__P5C.HTM
+  tags: []
+  notes:
+
+- id: ccc_life_in_christ
+  title: Life in Christ
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 1691
+    end: 1698
+  url: https://www.vatican.va/archive/ENG0015/__P5D.HTM
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
+
+- id: ccc_
+  title: 
+  source: Catechism of the Catholic Church
+  paragraph_range:
+    start: 
+    end: 
+  url: 
+  tags: []
+  notes:
