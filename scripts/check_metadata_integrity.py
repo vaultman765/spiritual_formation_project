@@ -80,8 +80,7 @@ class ArcTagsChecker(MetadataChecker):
     def check(self, errors: List[str]):
         arc_meta = self.loader.load_yaml(ARC_METADATA_PATH)
         arc_ids = {arc['arc_id'] for arc in arc_meta}
-        tag_files = {f.stem for f in ARC_TAGS_DIR.glob("*.yaml")}
-        print(f"Arc IDs: {tag_files}")
+        tag_files = {f.stem.replace('_tags', '') for f in ARC_TAGS_DIR.glob("*.yaml")}
         missing = arc_ids - tag_files
         if missing:
             for arc_id in missing:
