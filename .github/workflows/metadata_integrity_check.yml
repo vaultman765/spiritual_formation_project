@@ -1,25 +1,36 @@
+
 name: Metadata Integrity Check
 
 on:
   workflow_dispatch:
-
   pull_request:
+    paths:
+      - 'meditations/**'
+      - 'metadata/**'
+      - '.github/workflows/metadata_integrity_check.yml'
+      - 'scripts/check_metadata_integrity.py'
+  push:
+    branches: [ main ]
 
 jobs:
   validate:
-    name: Metadata Integrity Check
+    name: Validate Metadata Consistency
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    - name: 🧾 Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
 
-      - name: Install dependencies
-        run: pip install pyyaml
+    - name: 📦 Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml
 
-      - name: Run Metadata Validator
-        run: python scripts/validate_metadata.py
+    - name: ✅ Run metadata integrity check
+      run: |
+        python scripts/check_metadata_integrity.py
