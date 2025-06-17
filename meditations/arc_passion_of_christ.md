@@ -26,7 +26,7 @@
 **Secondary Readings:**  
 [CCC 612–613](https://www.vatican.va/archive/ENG0015/__P1O.HTM)
 
-<!-- tags: Passion, obedience, trust, suffering, Lent, silence -->
+<!-- tags: passion, obedience, trust, suffering, lent, silence -->
 
 #### 🎯 Meditative Points
 
@@ -54,7 +54,7 @@ Today I will offer one hidden act of surrender — unspoken, quiet, and done for
 [St. Augustine, *Tractate on John - 112*](https://www.newadvent.org/fathers/1701112.htm)  
 [CCC 595–598](https://www.vatican.va/archive/ENG0015/__P1O.HTM)
 
-<!-- tags: betrayal, silence, injustice, patience, mercy, Lent -->
+<!-- tags: betrayal, silence, injustice, patience, mercy, lent -->
 
 #### 🎯 Meditative Points
 
@@ -82,7 +82,7 @@ Today I will choose not to defend myself in one moment of misunderstanding — a
 [St. Alphonsus Liguori, *The Passion and Death of Jesus Christ*, Ch. 2](https://www.saintsbooks.net/books/St.%20Alphonsus%20Maria%20de%20Liguori%20-%20The%20Passion%20and%20the%20Death%20of%20Jesus%20Christ.pdf)  
 [CCC 572–574](https://www.vatican.va/archive/ENG0015/__P1M.HTM)
 
-<!-- tags: suffering, purity, mercy, sacrifice, Lent, Passion -->
+<!-- tags: suffering, purity, mercy, sacrifice, lent, passion -->
 
 #### 🎯 Meditative Points
 
@@ -113,7 +113,7 @@ St. Bernard of Clairvaux, *Song of Songs*, Sermon 61 (excerpt below)
 
 [CCC 440](https://www.vatican.va/archive/ENG0015/__P1F.HTM)
 
-<!-- tags: suffering, humiliation, kingship, mockery, silence, Lent -->
+<!-- tags: suffering, humiliation, kingship, mockery, silence, lent -->
 
 #### 🎯 Meditative Points
 
@@ -140,7 +140,7 @@ Today I will resist one urge to seek praise — and silently offer it as a crown
 **Secondary Readings:**  
 [St. John Paul II, *Stations of the Cross* (SIXTH STATION)](https://www.vatican.va/news_services/liturgy/2003/documents/ns_lit_doc_20030418_viacrucis_en.html)
 
-<!-- tags: mercy, presence, love, suffering, hidden acts, Lent -->
+<!-- tags: mercy, presence, love, suffering, hidden acts, lent -->
 
 #### 🎯 Meditative Points
 
@@ -167,7 +167,7 @@ Today I will console Christ by offering one quiet act of compassion — unseen, 
 **Secondary Readings:**  
 [CCC 619–623](https://www.vatican.va/archive/ENG0015/__P1O.HTM)
 
-<!-- tags: sacrifice, mercy, redemption, silence, atonement, Lent -->
+<!-- tags: sacrifice, mercy, redemption, silence, atonement, lent -->
 
 #### 🎯 Meditative Points
 
@@ -196,7 +196,7 @@ Today I will meditate for five minutes in silence before a crucifix — not spea
 [CCC 2606](https://www.vatican.va/archive/ENG0015/__P93.HTM)  
 [CCC 2842](https://www.vatican.va/archive/ENG0015/__PAB.HTM)
 
-<!-- tags: trust, surrender, last things, death, obedience, Lent -->
+<!-- tags: trust, surrender, last things, death, obedience, lent -->
 
 #### 🎯 Meditative Points
 
@@ -223,7 +223,7 @@ Today I will surrender one attachment, fear, or distraction — and make it a pr
 **Secondary Readings:**  
 [CCC 964, 968–970](https://www.vatican.va/archive/ENG0015/__P2C.HTM)
 
-<!-- tags: Mary, suffering, motherhood, compassion, Church, Lent -->
+<!-- tags: Mary, suffering, motherhood, compassion, Church, lent -->
 
 #### 🎯 Meditative Points
 
@@ -251,7 +251,7 @@ Today I will embrace one sorrow silently — offering it with Mary for the Churc
 [CCC 766](https://www.vatican.va/archive/ENG0015/__P27.HTM)  
 [CCC 478](https://www.vatican.va/archive/ENG0015/__P1J.HTM)
 
-<!-- tags: Church, Heart of Christ, blood and water, Eucharist, baptism, Lent -->
+<!-- tags: Church, Heart of Christ, blood and water, Eucharist, baptism, lent -->
 
 #### 🎯 Meditative Points
 
