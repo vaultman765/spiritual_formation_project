@@ -1,0 +1,14 @@
+[requires]
+python_version = "3.*"
+
+[packages]
+pyyaml = "*"
+
+[dev-packages]
+pytest = "*"
+black = "*"
+flake8 = "*"
+
+[scripts]
+lint = "flake8 ."
+make = "C:\\ProgramData\\chocolatey\\bin\\make.exe -f Makefile"
