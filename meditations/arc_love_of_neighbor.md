@@ -8,7 +8,7 @@
 
 | Days     | Anchor Image Description                            | Primary Reading Source |
 |----------|-----------------------------------------------------|------------------------|
-| 1-7      | Jesus washing the feet of His disciples             | John 13                |
+| **1-7**      | Jesus washing the feet of His disciples             | John 13                |
 
 ---
 
