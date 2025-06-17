@@ -4,6 +4,7 @@ day_range:
     start: 15
     end: 21
 tags:
+  thematic: []
   doctrinal:
   - fear of the Lord
   - judgment
@@ -16,3 +17,6 @@ tags:
   - divine presence
   - purification
   - awe
+  liturgical: []
+  typological: []
+  structural: []
