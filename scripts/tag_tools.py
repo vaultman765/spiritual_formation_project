@@ -151,7 +151,7 @@ class YamlTagFileHandler(TagFileHandler):
                     yaml.safe_dump(data, f, sort_keys=False)
                 changed = True
 
-            return changed
+        return changed
 
     def delete_tag(self, tag: str) -> bool:
         tag = tag.strip().lower()
