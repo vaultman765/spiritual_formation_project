@@ -4,14 +4,7 @@ name: Metadata Integrity Check
 on:
   workflow_dispatch:
   pull_request:
-    paths:
-      - 'meditations/**'
-      - 'metadata/**'
-      - '.github/workflows/metadata_integrity_check.yml'
-      - 'scripts/check_metadata_integrity.py'
-  push:
-    branches: [ main ]
-
+    
 jobs:
   validate:
     name: Validate Metadata Consistency
