@@ -1,13 +1,12 @@
 name: SMPF Markdown Linter
 
 on:
-  push:
-    paths:
-      - 'meditations/**/*.md'
   workflow_dispatch:
+  pull_request:
 
 jobs:
   check-smpf:
+    name: Check SMPF Markdown Format
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

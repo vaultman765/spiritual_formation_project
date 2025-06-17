@@ -551,3 +551,89 @@
   - lent
   filename: arc_passion_of_christ.md
   smpf_compliant: true
+- arc_id: arc_holy_fear_of_the_lord
+  arc_title: The Holy Fear of the Lord (7 Days)
+  primary_reading: "Proverbs 9:10; Exodus 20:18-21"
+  anchor_image: The lightning at Mt. Sinai
+  filename: arc_holy_fear_of_the_lord.md
+  smpf_compliant: true
+  day_within_arc: 1
+  day_title: The Beginning of Wisdom
+  tags:
+  - fear of the Lord
+  - humility
+  - reverence
+- arc_id: arc_holy_fear_of_the_lord
+  arc_title: The Holy Fear of the Lord (7 Days)
+  primary_reading: "Proverbs 9:10; Exodus 20:18-21"
+  anchor_image: The lightning at Mt. Sinai
+  filename: arc_holy_fear_of_the_lord.md
+  smpf_compliant: true
+  day_within_arc: 2
+  day_title: Trembling Before the Holy
+  tags:
+  - awe
+  - divine presence
+  - fear of the Lord
+- arc_id: arc_holy_fear_of_the_lord
+  arc_title: The Holy Fear of the Lord (7 Days)
+  primary_reading: "Proverbs 9:10; Exodus 20:18-21"
+  anchor_image: The lightning at Mt. Sinai
+  filename: arc_holy_fear_of_the_lord.md
+  smpf_compliant: true
+  day_within_arc: 3
+  day_title: The Gift of Fear and the Spirit
+  tags:
+  - fear of the Lord
+  - obedience
+  - purification
+- arc_id: arc_holy_fear_of_the_lord
+  arc_title: The Holy Fear of the Lord (7 Days)
+  primary_reading: "Proverbs 9:10; Exodus 20:18-21"
+  anchor_image: The lightning at Mt. Sinai
+  filename: arc_holy_fear_of_the_lord.md
+  smpf_compliant: true
+  day_within_arc: 4
+  day_title: Servile, Mercenary, and Filial Fear
+  tags:
+  - fear of the Lord
+  - humility
+  - reverence
+- arc_id: arc_holy_fear_of_the_lord
+  arc_title: The Holy Fear of the Lord (7 Days)
+  primary_reading: "Proverbs 9:10; Exodus 20:18-21"
+  anchor_image: The lightning at Mt. Sinai
+  filename: arc_holy_fear_of_the_lord.md
+  smpf_compliant: true
+  day_within_arc: 5
+  day_title: Fear and the Hidden God (*Deus Absconditus*)
+  tags:
+  - awe
+  - divine presence
+  - fear of the Lord
+  - purification
+- arc_id: arc_holy_fear_of_the_lord
+  arc_title: The Holy Fear of the Lord (7 Days)
+  primary_reading: "Proverbs 9:10; Exodus 20:18-21"
+  anchor_image: The lightning at Mt. Sinai
+  filename: arc_holy_fear_of_the_lord.md
+  smpf_compliant: true
+  day_within_arc: 6
+  day_title: Judgment and Reverence
+  tags:
+  - judgment
+  - reverence
+  - vigilance
+- arc_id: arc_holy_fear_of_the_lord
+  arc_title: The Holy Fear of the Lord (7 Days)
+  primary_reading: "Proverbs 9:10; Exodus 20:18-21"
+  anchor_image: The lightning at Mt. Sinai
+  filename: arc_holy_fear_of_the_lord.md
+  smpf_compliant: true
+  day_within_arc: 7
+  day_title: The Fear that Leads to Union
+  tags:
+  - awe
+  - fear of the Lord
+  - reverence
+
