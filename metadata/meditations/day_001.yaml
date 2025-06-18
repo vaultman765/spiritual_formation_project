@@ -1,51 +1,50 @@
 master_day_number: 1
 arc_day_number: 1
-arc_id: arc_love_of_neighbor
-arc_title: The Love of Neighbor
-arc_number: 2
-day_title: The Command to Love
-meditation_filename: arc_love_of_neighbor.md
-anchor_image: Jesus washing the feet of the disciples
+arc_id: arc_love_of_god
+arc_title: Love of God – Foundation of All
+arc_number: 1
+day_title: God Is Love – Love’s Divine Origin
+meditation_filename: arc_love_of_god.md
+anchor_image: The Crucified Christ (Face) — You gaze upon the face of Christ crucified.
+  His eyes are closed, His head bowed beneath the crown of thorns. From this suffering
+  Face shines infinite love. Every wound speaks the truth of God’s heart.
 primary_reading:
-  title: John 13:1–17
-  reference: John 13:1–17
+  title: 1 John 4:7–21
+  reference: 1 John 4:7–21
   url: ''
 secondary_reading:
 - title: Catechism of the Catholic Church
-  reference: CCC 1822–1829
-  url: https://www.vatican.va/archive/ENG0015/__P6Z.HTM
+  reference: CCC 219–221
+  url: https://www.vatican.va/archive/ENG0015/__P16.HTM
+- title: St. John Paul II, Novo Millennio Ineunte
+  reference: §33
+  url: https://www.vatican.va/content/john-paul-ii/en/apost_letters/2001/documents/hf_jp-ii_apl_20010106_novo-millennio-ineunte.html
 meditative_points:
-- Jesus stoops to wash the feet of His disciples — even of Judas.
-- 'Love is not a sentiment but a command: ''You also ought to wash one another’s feet.'''
-- The measure of our love for God is revealed by how we serve the least of our brothers.
-ejaculatory_prayer: Lord, teach me to love as You love.
-colloquy: 'Jesus, my Master and Lord, You humbled Yourself to wash the feet of sinful
-  men.
-
-  Teach me not to seek honor but to serve. Let me love not in word only, but in deed.
-
-  Transform my pride into humility, my comfort-seeking into generosity.
-
-  Help me to see You in those around me — and to kneel, like You, in love.'
-resolution: Today I will do one hidden act of service for someone I find difficult
-  to love.
+- '“God is love: His very being is love.” (CCC 221)'
+- “Whoever loves has been born of God and knows God.” (1 Jn 4:7)
+- The origin of love is not our effort, but God’s essence.
+ejaculatory_prayer: God of love, let me receive You before I try to respond.
+colloquy: Father, I believe You are love. But I forget this when I feel unworthy.
+  Remind me that love does not begin with me — it begins with You.
+resolution: Today, I will pause before I act — and receive love from God in silence
+  before I offer it to anyone else.
 tags:
   thematic:
-  - Love of Neighbor
-  doctrinal:
-  - Charity
+    - Love of God
+  doctrinal: []
   virtue:
-  - Humility
-  - Mercy
+    - Mercy
   mystical:
-  - Union with Christ
+    - Transformation
+    - Desire for God
+    - Divine Image
   liturgical: []
   typological: []
-  structural:
-  - SMPF
-estimated_read_time: 10
-summary_sentence: Christ commands us to love as He has loved — through humble service.
+  structural: []
+estimated_read_time: 8
+summary_sentence: Love does not begin with us — it begins with the God who is Love.
 audio_available: false
 quotes_used:
-- CCC 1822–1829
-- John 13:1–17
+- CCC 219–221
+- 1 John 4:7–21
+- NMI §33
