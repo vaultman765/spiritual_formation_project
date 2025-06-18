@@ -1,6 +1,46 @@
 {
-  "MD013": false,
-  "MD024": false,
-  "MD025": false,
-  "MD026": false
+  "MD001": true,    // Heading levels should only increment by one level at a time
+  "MD002": "atx",   // Use atx style headings (e.g., # Heading)
+  "MD003": "atx",   // Use atx style headings (e.g., # Heading)
+  "MD004": "consistent", // Use consistent unordered list style (asterisk, plus, or dash)
+  "MD007": {
+      "indent": 2  // Unordered list items should be indented by 2 spaces
+  },
+  "MD013": {         // Line length
+      "line_length": 120,
+      "code_block_line_length": 120,
+      "tables": false // Ignore line length for tables
+  },
+  "MD024": {        // No duplicate headers
+        "siblings_only": true
+  },
+  "MD025": false, // No multiple top level headings
+  "MD026": false, // Trailing punctuation in heading
+  "MD029": {        // Ordered list item prefix
+        "style": "ordered"
+  },
+  "MD033": false,   // Allow inline HTML
+  "MD041": false,    // First line in file should be a top level heading
+  "MD042": false,   // No empty links
+  "MD046": "consistent", // Consistent code block style (fenced code blocks or indented code blocks)
+  "MD047": true,    // Files should end with a single newline character
+  "MD048": {
+      "style": "consistent"
+  },
+  "MD049": {
+      "style": "consistent"
+  },
+  "MD050": {
+      "style": "consistent"
+  },
+  "MD051": false, // Disable link fragments linting
+  "MD054": {
+    "style": "consistent" // Use consistent link and image styles (reference, inline, or shortcut)
+  },
+  "MD055": { // Table pipe style
+      "style": "leading_and_trailing"
+  },
+  "MD056": false, // Disable table column count
+  "MD058": true, // Surrounding blank lines for tables
+  "MD059": false // Link text should be descriptive
 }

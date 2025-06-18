@@ -1,0 +1,8 @@
+- arc_id: arc_example_id  # REQUIRED: ID used in arc_metadata.yaml and arc_tags/
+  meditation_filename: example_theme_day_1.md   # REQUIRED: The filename for the meditation markdown file. This is the same as the filename in the metadata/meditations/ directory, excluding the .yaml extension. Matches the [Theme Filename] from arc_smpf_template.yaml
+  title: Example Title  # REQUIRED: Human-readable title with count of days in arc in parentheses. Matches ## [Theme Title] from the meditation file corresponding to arc_smpf_template.yaml exluding the ([Total Days] Days)
+  day_within_arc: 1 # REQUIRED: Day number within the arc (integer). This is not the same as the global day number. This matches the X from  ### 🕯️ Day X: [Daily Title Here] in daily_smpf_template.md
+  day_title: Example Day Title  # REQUIRED: Human-readable title for the day. Matches the[Daily Title Here] part of the ### 🕯️ Day X: [Daily Title Here] from daily_smpf_template.md
+  primary_reading: Book Chapter:Verse or Title   # REQUIRED: The primary scriptural/liturgical source for the day. Matches the primary reading for the specific day_within_arc found in the ### 📜 Anchor Images and Primary Readings table in arc_smpf_template.yaml
+  anchor_image: Short description of fixed visual used in this arc   # REQUIRED: The anchor image for the day. Matches the anchor image for the specific day_within_arc found in the ### 📜 Anchor Images and Primary Readings table in arc_smpf_template.yaml
+  tags: [canonical_tag1, canonical_tag2, ...]  # These match the tags for the specific day_within_arc under the correct ### 🕯️ Day X: [Daily Title Here] in the <!-- tags: betrayal, silence, injustice, patience, mercy, lent --> section

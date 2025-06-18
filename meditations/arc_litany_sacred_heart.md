@@ -6,13 +6,11 @@
 
 ### 📜 Anchor Images and Primary Readings
 
-| Day | Anchor Image | Primary Reading |
+| Day | Anchor Image Description | Primary Reading Source |
 |-----|--------------|-----------------|
 | **1-16** | **Christ Revealing His Sacred Heart in Glory** You kneel before the risen Christ. His eyes are like fire and mercy. His hands are extended in blessing, and His robe gleams like light. But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love. It is not a wound of shame, but a throne of glory. He says nothing. He simply shows you the place where divine love became visible. Each title of the Litany is real here. You gaze at the Heart… and see eternity. | *Litany of the Sacred Heart of Jesus* (recited slowly, in full) |
 
 ---
-
-<!-- tags: sacred heart, mercy, reparation, trust, love -->
 
 ### 🕯️ Day 1: *Heart of Jesus, Son of the Eternal Father*
 
@@ -20,7 +18,8 @@
 
 - John 1:1–18  
 - [CCC 422–429](https://www.vatican.va/archive/ENG0015/__P1D.HTM)  
-- [*Deus Caritas Est*](https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20051225_deus-caritas-est.html), Pope Benedict XVI *(Optional shorter reading: Part I, §§1–6)*
+- [*Deus Caritas Est*](https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20051225_deus-caritas-est.html),
+Pope Benedict XVI *(Optional shorter reading: Part I, §§1–6)*
 
 #### 🎯 Meditative Points
 
@@ -34,15 +33,17 @@
 
 #### 🗣️ Colloquy
 
-Lord Jesus, Eternal Word of the Father, You are not an idea. You are the Son, and You have a Heart. Let me enter into the silence of Your divine origin. Let me adore not only what You have done — but who You are.
+Lord Jesus, Eternal Word of the Father, You are not an idea. You are the Son, and You have a Heart. Let me enter into
+the silence of Your divine origin. Let me adore not only what You have done — but who You are.
 
 #### 🔨 Resolution (Optional)  
 
-*Today, I will take one quiet moment to adore Jesus silently — not asking, not thanking, just gazing — and remember that He is the Eternal Son.*
-
----
+*Today, I will take one quiet moment to adore Jesus silently — not asking, not thanking, just gazing — and remember that
+He is the Eternal Son.*
 
 <!-- tags: sacred heart, mercy, reparation, trust, love -->
+
+---
 
 ### 🕯️ Day 2: *Heart of Jesus, Formed by the Holy Spirit in the Womb of the Virgin Mother*
 
@@ -64,15 +65,17 @@ Lord Jesus, Eternal Word of the Father, You are not an idea. You are the Son, an
 
 #### 🗣️ Colloquy  
 
-Holy Spirit, gentle Lord and Life-Giver, You overshadowed Mary and knit the Word into flesh. Mary, my Mother, you gave Him a Heart — let mine be shaped by yours.
+Holy Spirit, gentle Lord and Life-Giver, You overshadowed Mary and knit the Word into flesh. Mary, my Mother, you gave
+Him a Heart — let mine be shaped by yours.
 
 #### 🔨 Resolution (Optional)  
 
-*Today I will invoke the Holy Spirit quietly before each decision — asking Him to form my intentions gently, as He formed Christ in Mary.*
-
----
+*Today I will invoke the Holy Spirit quietly before each decision — asking Him to form my intentions gently, as He
+formed Christ in Mary.*
 
 <!-- tags: sacred heart, mercy, reparation, trust, love -->
+
+---
 
 ### 🕯️ Day 3: *Heart of Jesus, United Substantially with the Word of God*
 
@@ -80,7 +83,8 @@ Holy Spirit, gentle Lord and Life-Giver, You overshadowed Mary and knit the Word
 
 - Hebrews 1:1–4; 2:14–18  
 - [CCC 470–483](https://www.vatican.va/archive/ENG0015/__P1J.HTM#:~:text=IV.%20HOW%20IS%20THE%20SON%20OF%20GOD%20MAN%3F)  
-- [*Summa Theologiae*, III, Q.2–3](https://www.newadvent.org/summa/1003.htm#article2:~:text=of%20local%20motion.-,Article%202,-.%20Whether%20God%20is) *(Optional: Q.2, a.1–2)*
+- [*Summa Theologiae*, III, Q.2–3](https://www.newadvent.org/summa/1003.htm#article2:~:text=of%20local%20motion.-,Article%202,-.%20Whether%20God%20is)
+*(Optional: Q.2, a.1–2)*
 
 #### 🎯 Meditative Points
 
@@ -94,15 +98,16 @@ Holy Spirit, gentle Lord and Life-Giver, You overshadowed Mary and knit the Word
 
 #### 🗣️ Colloquy  
 
-Jesus, Word made flesh, I cannot grasp the mystery — but I can kneel. May Your divine and human love pierce through my resistance. Let my poor heart be drawn into Yours.
+Jesus, Word made flesh, I cannot grasp the mystery — but I can kneel. May Your divine and human love pierce through my
+resistance. Let my poor heart be drawn into Yours.
 
 #### 🔨 Resolution (Optional)  
 
 *Today, I will repeat this truth throughout the day in wonder: \"The Word became flesh — and loved me with a human heart.\"*
 
----
-
 <!-- tags: sacred heart, mercy, reparation, trust, love -->
+
+---
 
 ### 🕯️ Day 4: *Heart of Jesus, Full of Goodness and Love*
 
@@ -110,7 +115,8 @@ Jesus, Word made flesh, I cannot grasp the mystery — but I can kneel. May Your
 
 - Titus 3:3–7  
 - [CCC 1822–1829](https://www.vatican.va/archive/ENG0015/__P66.HTM#:~:text=never%20end.95-,Charity,-1822%20Charity%20is)  
-- St. Bernard of Clairvaux, [*On Loving God*](https://www.saintsbooks.net/books/St.%20Bernard%20of%20Clairvaux%20-%20On%20Loving%20God.pdf) (Optional: §§1–8)
+- St. Bernard of Clairvaux, [*On Loving God*](https://www.saintsbooks.net/books/St.%20Bernard%20of%20Clairvaux%20-%20On%20Loving%20God.pdf)
+(Optional: §§1–8)
 
 #### 🎯 Meditative Points
 
@@ -124,15 +130,16 @@ Jesus, Word made flesh, I cannot grasp the mystery — but I can kneel. May Your
 
 #### 🗣️ Colloquy  
 
-Heart of Jesus, so full of goodness — and I, so full of myself. Break me open where I’m closed, and make me long to do good to others without repayment, just as You do to me.
+Heart of Jesus, so full of goodness — and I, so full of myself. Break me open where I’m closed, and make me long to do
+good to others without repayment, just as You do to me.
 
 #### 🔨 Resolution (Optional)  
 
 *Today I will seek one chance to show pure, unselfish goodness — especially toward someone I find hard to love.*
 
----
-
 <!-- tags: sacred heart, mercy, reparation, trust, love -->
+
+---
 
 ### 🕯️ Day 5: *Heart of Jesus, Abyss of All Virtues*
 
@@ -154,15 +161,16 @@ Heart of Jesus, so full of goodness — and I, so full of myself. Break me open 
 
 #### 🗣️ Colloquy  
 
-Jesus, teach me to stop imitating You superficially and to begin desiring Your virtues to be born in me — not to impress, but to love. Show me how much I need You just to be gentle.
+Jesus, teach me to stop imitating You superficially and to begin desiring Your virtues to be born in me — not to
+impress, but to love. Show me how much I need You just to be gentle.
 
 ### 🔨 Resolution (Optional)  
 
 *Today, I will choose one virtue I usually avoid — and ask Jesus to live it in me rather than perform it myself.*
 
----
-
 <!-- tags: sacred heart, mercy, reparation, trust, love -->
+
+---
 
 ### 🕯️ Day 6: *Heart of Jesus, Most Worthy of All Praise*
 
@@ -183,22 +191,24 @@ Jesus, teach me to stop imitating You superficially and to begin desiring Your v
 
 ### 🗣️ Colloquy  
 
-Heart of Jesus, You are not praised because You need it — but because You deserve it. Let every fiber of my being join the saints and angels in declaring: You alone are worthy.
+Heart of Jesus, You are not praised because You need it — but because You deserve it. Let every fiber of my being join
+the saints and angels in declaring: You alone are worthy.
 
 #### 🔨 Resolution (Optional)  
 
 *Today I will pause at least once and praise Jesus aloud — even if no one sees — simply because He is worthy.*
 
----
-
 <!-- tags: sacred heart, mercy, reparation, trust, love -->
+
+---
 
 ### 🕯️ Day 7: *Heart of Jesus, Fountain of Life and Holiness*
 
 **Secondary Reading:**  
 
 - John 4:10–14 (Living Water)  
-- [CCC 2011](https://www.vatican.va/archive/ENG0015/__P70.HTM#:~:text=for%20meritorious%20actions.-,2011,-The%20charity%20of), [2846–2849](https://www.vatican.va/archive/ENG0015/__PAC.HTM#:~:text=Previous%20%2D%20Next-,VI.%20%22And%20Lead%20Us%20not%20into%20Temptation%22,-2846%20This%20petition)  
+- [CCC 2011](https://www.vatican.va/archive/ENG0015/__P70.HTM#:~:text=for%20meritorious%20actions.-,2011,-The%20charity%20of),
+[2846–2849](https://www.vatican.va/archive/ENG0015/__PAC.HTM#:~:text=Previous%20%2D%20Next-,VI.%20%22And%20Lead%20Us%20not%20into%20Temptation%22,-2846%20This%20petition)  
 - St. Teresa Benedicta of the Cross (Edith Stein), *The Hidden Life*, Reflection 7
 
 #### 🎯 Meditative Points
@@ -212,15 +222,16 @@ Heart of Jesus, You are not praised because You need it — but because You dese
 
 #### 🗣️ Colloquy  
 
-Jesus, You are the fountain I thirst for. Make me holy not by removing me from the world, but by filling me with Your life within it.
+Jesus, You are the fountain I thirst for. Make me holy not by removing me from the world, but by filling me with Your
+life within it.
 
 #### 🔨 Resolution (Optional)  
 
 *Today I will seek five minutes of silence to let His life fill me instead of seeking distraction.*
 
----
-
 <!-- tags: sacred heart, mercy, reparation, trust, love -->
+
+---
 
 ### 🕯️ Day 8: *Heart of Jesus, Propitiation for Our Sins*
 
@@ -228,7 +239,8 @@ Jesus, You are the fountain I thirst for. Make me holy not by removing me from t
 
 - 1 John 2:1–2  
 - [CCC 615–617](https://www.vatican.va/archive/ENG0015/__P1O.HTM#:~:text=Jesus%20substitutes%20his%20obedience%20for%20our%20disobedience)
-- St. Alphonsus Liguori, [*The Passion and Death of Jesus Christ*](https://www.saintsbooks.net/books/St.%20Alphonsus%20Maria%20de%20Liguori%20-%20The%20Passion%20and%20the%20Death%20of%20Jesus%20Christ.pdf), Ch. 1 *(Optional shorter: selected paragraph on reparation)*
+- St. Alphonsus Liguori, [*The Passion and Death of Jesus Christ*](https://www.saintsbooks.net/books/St.%20Alphonsus%20Maria%20de%20Liguori%20-%20The%20Passion%20and%20the%20Death%20of%20Jesus%20Christ.pdf),
+Ch. 1 *(Optional shorter: selected paragraph on reparation)*
 
 #### 🎯 Meditative Points
 
@@ -243,20 +255,22 @@ Jesus, You are the fountain I thirst for. Make me holy not by removing me from t
 
 Lord, how can I measure the cost of Your reparation? Teach me not to hide my sin but to expose it to the fire of Your mercy.
 
-### 🔨 Resolution (Optional)  
+#### 🔨 Resolution (Optional)  
 
 *Today I will confess one fault aloud — to God or a trusted soul — and let His Heart begin to heal it.*
 
----
-
 <!-- tags: sacred heart, mercy, reparation, trust, love -->
+
+---
 
 ### 🕯️ Day 9: *Heart of Jesus, Loaded Down with Opprobrium*
 
 **Secondary Reading:**  
 
 - Matthew 27:27–31 (Mockery of Christ)  
-- [CCC 272](https://www.vatican.va/archive/ENG0015/__P18.HTM#:~:text=God%27s%20apparent%20powerlessness-,272,-Faith%20in%20God), [440](https://www.vatican.va/archive/ENG0015/__P1F.HTM#:~:text=essentially%20political.39-,440,-Jesus%20accepted%20Peter%27s), [601](https://www.vatican.va/archive/ENG0015/__P1O.HTM#:~:text=with%20the%20Scriptures%22-,601,-The%20Scriptures%20had)  
+- [CCC 272](https://www.vatican.va/archive/ENG0015/__P18.HTM#:~:text=God%27s%20apparent%20powerlessness-,272,-Faith%20in%20God),
+[440](https://www.vatican.va/archive/ENG0015/__P1F.HTM#:~:text=essentially%20political.39-,440,-Jesus%20accepted%20Peter%27s),
+[601](https://www.vatican.va/archive/ENG0015/__P1O.HTM#:~:text=with%20the%20Scriptures%22-,601,-The%20Scriptures%20had)  
 - St. John Henry Newman, [*Litany of the Passion*](https://mothersforpriests.org/wp-content/uploads/2020/02/litany-of-the-passion.pdf)
 
 #### 🎯 Meditative Points
@@ -270,23 +284,27 @@ Lord, how can I measure the cost of Your reparation? Teach me not to hide my sin
 
 #### 🗣️ Colloquy  
 
-Jesus, You were shamed so I could be healed. Let me not turn away from Your crown of thorns. Let me kneel where the world mocked — and adore.
+Jesus, You were shamed so I could be healed. Let me not turn away from Your crown of thorns. Let me kneel where the
+world mocked — and adore.
 
-### 🔨 Resolution (Optional)  
+#### 🔨 Resolution (Optional)  
 
 *Today I will accept one moment of misunderstanding or mockery for His sake — without defending myself.*
 
----
-
 <!-- tags: sacred heart, mercy, reparation, trust, love -->
+
+---
 
 ### 🕯️ Day 10: *Heart of Jesus, King and Center of All Hearts*
 
 **Secondary Reading:**  
 
 - Luke 2:25–35 (Prophecy of Simeon)  
-- [CCC 478](https://www.vatican.va/archive/ENG0015/__P1K.HTM#:~:text=THE%20VIRGIN%20MARY-,487,-What%20the%20Catholic), [766](https://www.vatican.va/archive/ENG0015/__P27.HTM#:~:text=builds%20his%20Church.-,766,-The%20Church%20is), [2669](https://www.vatican.va/archive/ENG0015/__P9F.HTM#:~:text=in%20Christ%20Jesus.-,2669,-The%20prayer%20of)  
-- Pope Pius XII, [*Haurietis Aquas*, §87–95](https://www.vatican.va/content/pius-xii/en/encyclicals/documents/hf_p-xii_enc_15051956_haurietis-aquas.html#:~:text=without%20blemish.%22(87)-,87,-.%20Just%20as%20Christ) *(Optional shorter: §87–90)*
+- [CCC 478](https://www.vatican.va/archive/ENG0015/__P1K.HTM#:~:text=THE%20VIRGIN%20MARY-,487,-What%20the%20Catholic),
+[766](https://www.vatican.va/archive/ENG0015/__P27.HTM#:~:text=builds%20his%20Church.-,766,-The%20Church%20is),
+[2669](https://www.vatican.va/archive/ENG0015/__P9F.HTM#:~:text=in%20Christ%20Jesus.-,2669,-The%20prayer%20of)  
+- Pope Pius XII, [*Haurietis Aquas*, §87–95](https://www.vatican.va/content/pius-xii/en/encyclicals/documents/hf_p-xii_enc_15051956_haurietis-aquas.html#:~:text=without%20blemish.%22(87)-,87,-.%20Just%20as%20Christ)
+*(Optional shorter: §87–90)*
 
 #### 🎯 Meditative Points
 
@@ -299,7 +317,8 @@ Jesus, You were shamed so I could be healed. Let me not turn away from Your crow
 
 #### 🗣️ Colloquy  
 
-Jesus, be King not just of my thoughts, but of the places I hide. Rule over my resentment, my fears, my hunger to control. You gave me Your Heart — here is mine.
+Jesus, be King not just of my thoughts, but of the places I hide. Rule over my resentment, my fears, my hunger to
+control. You gave me Your Heart — here is mine.
 
 #### 🔨 Resolution (Optional)  
 
@@ -326,15 +345,16 @@ Jesus, be King not just of my thoughts, but of the places I hide. Rule over my r
 
 #### 🗣️ Colloquy  
 
-Father, You were well pleased with the Heart of Your Son. Let me see in Him the love You have for me. Let me stop trying to earn what You already offer.
+Father, You were well pleased with the Heart of Your Son. Let me see in Him the love You have for me. Let me stop
+trying to earn what You already offer.
 
 #### 🔨 Resolution (Optional)  
 
 *Today, I will pause to remember that I am loved before I act — not because of how I perform.*
 
----
-
 <!-- tags: sacred heart, mercy, reparation, trust, love -->
+
+---
 
 ### 🕯️ Day 12: *Heart of Jesus, Source of Justice and Love*
 
@@ -342,7 +362,8 @@ Father, You were well pleased with the Heart of Your Son. Let me see in Him the 
 
 - Romans 3:21–26  
 - [CCC 1999–2002](https://www.vatican.va/archive/ENG0015/__P6Z.HTM#:~:text=other%20creature.47-,1999,-The%20grace%20of)  
-- Pope Benedict XVI, [*Deus Caritas Est*, §10–13](https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20051225_deus-caritas-est.html#:~:text=72%5D%3A25%2C%2028).-,10,-.%20We%20have%20seen) *(Optional: §10–11 only)*
+- Pope Benedict XVI, [*Deus Caritas Est*, §10–13](https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20051225_deus-caritas-est.html)
+*(Optional: §10–11 only)*
 
 #### 🎯 Meditative Points
 
@@ -355,15 +376,16 @@ Father, You were well pleased with the Heart of Your Son. Let me see in Him the 
 
 #### 🗣️ Colloquy  
 
-Jesus, when I try to separate justice from love, I wound others. Let me drink from Your Heart where justice is not a sword, but a wellspring.
+Jesus, when I try to separate justice from love, I wound others. Let me drink from Your Heart where justice is not a
+sword, but a wellspring.
 
 #### 🔨 Resolution (Optional)  
 
 *Today, I will seek justice without anger — and charity without compromise.*
 
----
-
 <!-- tags: sacred heart, mercy, reparation, trust, love -->
+
+---
 
 ### 🕯️ Day 13: *Heart of Jesus, Full of Kindness and Love*
 
@@ -371,7 +393,8 @@ Jesus, when I try to separate justice from love, I wound others. Let me drink fr
 
 - Luke 7:11–17 (Raising the widow’s son)  
 - [CCC 478](https://www.vatican.va/archive/ENG0015/__P1J.HTM#:~:text=the%20Incarnate%20Word-,478,-Jesus%20knew%20and)  
-- St. Bernard, [*On the Love of God*](https://www.saintsbooks.net/books/St.%20Bernard%20of%20Clairvaux%20-%20On%20Loving%20God.pdf), Sermon II *(Optional shorter: §§1–4)*
+- St. Bernard, [*On the Love of God*](https://www.saintsbooks.net/books/St.%20Bernard%20of%20Clairvaux%20-%20On%20Loving%20God.pdf),
+Sermon II *(Optional shorter: §§1–4)*
 
 #### 🎯 Meditative Points
 
@@ -385,15 +408,16 @@ Jesus, when I try to separate justice from love, I wound others. Let me drink fr
 
 #### 🗣️ Colloquy  
 
-Lord Jesus, help me to see with Your eyes. To be moved with Your gut. Let me not pass the suffering by, but carry them in my own heart.
+Lord Jesus, help me to see with Your eyes. To be moved with Your gut. Let me not pass the suffering by, but carry them
+in my own heart.
 
 #### 🔨 Resolution (Optional)  
 
 *Today, I will perform one act of kindness not because it is deserved — but because He deserves to love through me.*
 
----
-
 <!-- tags: sacred heart, mercy, reparation, trust, love -->
+
+---
 
 ### 🕯️ Day 14: *Heart of Jesus, Victim for Our Sins*
 
@@ -415,15 +439,16 @@ Lord Jesus, help me to see with Your eyes. To be moved with Your gut. Let me not
 
 #### 🗣️ Colloquy  
 
-Jesus, Victim and Priest, how can I ever repay what You gave? Let me not rush past Your wounds — but rest in the silence of Your offering.
+Jesus, Victim and Priest, how can I ever repay what You gave? Let me not rush past Your wounds — but rest in the
+silence of Your offering.
 
 #### 🔨 Resolution (Optional)  
 
 *Today, I will accept one small suffering without complaint — in union with the Lamb.*
 
----
-
 <!-- tags: sacred heart, mercy, reparation, trust, love -->
+
+---
 
 ### 🕯️ Day 15: *Heart of Jesus, Salvation of Those Who Trust in You*
 
@@ -445,23 +470,26 @@ Jesus, Victim and Priest, how can I ever repay what You gave? Let me not rush pa
 
 #### 🗣️ Colloquy  
 
-Jesus, give me the boldness of Thérèse — not to be perfect, but to trust. Let me believe that Your Heart will carry me, even when I fall.
+Jesus, give me the boldness of Thérèse — not to be perfect, but to trust. Let me believe that Your Heart will carry me,
+even when I fall.
 
 #### 🔨 Resolution (Optional)  
 
 *Today, I will repeat often: “Jesus, I trust in You,” especially when tempted to despair or self-reliance.*
 
----
-
 <!-- tags: sacred heart, mercy, reparation, trust, love -->
+
+---
 
 ### 🕯️ Day 16: *Heart of Jesus, Patient and Abounding in Mercy*
 
 **Secondary Reading:**  
 
 - Psalm 103  
-- [CCC 210–211](https://www.vatican.va/archive/ENG0015/__P16.HTM#:~:text=%22A%20God%20merciful%20and%20gracious%22), [2840](https://www.vatican.va/archive/ENG0015/__PAB.HTM#:~:text=his%20Church.135-,2840,-Now%20%2D%20and%20this)  
-- Pope Francis, [*Misericordiae Vultus*, §1–3](https://www.vatican.va/content/francesco/en/bulls/documents/papa-francesco_bolla_20150411_misericordiae-vultus.html) *(Optional shorter: §1 only)*
+- [CCC 210–211](https://www.vatican.va/archive/ENG0015/__P16.HTM#:~:text=%22A%20God%20merciful%20and%20gracious%22),
+[2840](https://www.vatican.va/archive/ENG0015/__PAB.HTM#:~:text=his%20Church.135-,2840,-Now%20%2D%20and%20this)  
+- Pope Francis, [*Misericordiae Vultus*, §1–3](https://www.vatican.va/content/francesco/en/bulls/documents/papa-francesco_bolla_20150411_misericordiae-vultus.html)
+*(Optional shorter: §1 only)*
 
 #### 🎯 Meditative Points
 
@@ -475,7 +503,8 @@ Jesus, give me the boldness of Thérèse — not to be perfect, but to trust. Le
 
 #### 🗣️ Colloquy  
 
-Jesus, patient and merciful, I praise You not because I deserve You — but because You never gave up on me. Let me now return to You without fear.
+Jesus, patient and merciful, I praise You not because I deserve You — but because You never gave up on me. Let me now
+return to You without fear.
 
 #### 🔨 Resolution (Optional)  
 

@@ -6,7 +6,7 @@
 
 ### 📜 Anchor Images and Primary Readings
 
-| Days     | Anchor Image Description                            | Primary Reading Source |
+| Day     | Anchor Image Description                            | Primary Reading Source |
 |----------|-----------------------------------------------------|------------------------|
 | **1-7**      | Jesus washing the feet of His disciples             | John 13                |
 
@@ -29,7 +29,8 @@
 
 #### 🗣️ Colloquy
 
-Jesus, You bend lower than I deserve. Let me not hesitate to kneel for others. Let me become someone who sees, stoops, and loves.
+Jesus, You bend lower than I deserve. Let me not hesitate to kneel for others. Let me become someone who sees, stoops,
+and loves.
 
 #### 💬 Ejaculatory Prayer
 
@@ -90,7 +91,8 @@ Jesus, let my vocation not be success or recognition — but to love as You have
 
 #### 🗣️ Colloquy
 
-Jesus, You knew Judas would betray You — yet You served him with tenderness. Teach me how to kneel before those I fear. Teach me how to pray for those who wound.
+Jesus, You knew Judas would betray You — yet You served him with tenderness. Teach me how to kneel before those I fear.
+Teach me how to pray for those who wound.
 
 #### 💬 Ejaculatory Prayer
 
@@ -117,7 +119,8 @@ Jesus, You knew Judas would betray You — yet You served him with tenderness. T
 
 #### 🗣️ Colloquy
 
-Lord Jesus, You did not establish a club or a cause, but a communion. Teach me to love not in isolation, but as one who belongs to Your Body.
+Lord Jesus, You did not establish a club or a cause, but a communion. Teach me to love not in isolation, but as one who
+belongs to Your Body.
 
 #### 💬 Ejaculatory Prayer
 
@@ -148,7 +151,8 @@ Lord Jesus, You did not establish a club or a cause, but a communion. Teach me t
 
 #### 🗣️ Colloquy
 
-Jesus, let my love stop being abstract. Make it physical, specific, real — as Yours was. Teach me to love in the dust, not just in ideas.
+Jesus, let my love stop being abstract. Make it physical, specific, real — as Yours was. Teach me to love in the dust,
+not just in ideas.
 
 #### 💬 Ejaculatory Prayer
 
@@ -177,7 +181,8 @@ Jesus, let my love stop being abstract. Make it physical, specific, real — as 
 
 #### 🗣️ Colloquy
 
-Jesus, I want to follow You — but I fear the basin and the towel. Give me the joy of sacrificial love, not in words but in humble acts.
+Jesus, I want to follow You — but I fear the basin and the towel. Give me the joy of sacrificial love, not in words but
+in humble acts.
 
 #### 💬 Ejaculatory Prayer
 

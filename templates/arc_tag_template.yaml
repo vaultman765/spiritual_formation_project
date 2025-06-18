@@ -1,13 +1,22 @@
-arc_id: arc_name_here
-title: [Insert arc title]
+# TEMPLATE_TYPE: arc_tag_block
+# This template defines the structure for arc-level tag files in metadata/arc_tags/
+# File must be named arc_<arc_id>_tags.yaml (e.g. arc_love_of_god_tags.yaml)
+# Each arc tag file must correspond exactly to an arc_id in arc_metadata.yaml
+
+arc_id: arc_example_id  # REQUIRED: Must exactly match the arc_id used in arc_metadata.yaml
+title: Example Title  # REQUIRED: Human-readable title with count of days in arc in parentheses. Matches ## [Theme Title]  from arc_smpf_template.yaml exluding the ([Total Days] Days)
 day_range:
-  start: XX
-  end: YY
+  start: 8  # REQUIRED: Must match the day_range.start in arc_metadata.yaml. Start of this arc in the global/master day list (integer only)
+  end: 14   # REQUIRED: Must match the day_range.end in arc_metadata.yaml. End of this arc in the global/master day list (inclusive)
+# Notes:
+# All five tag categories must be present, even if empty.
+# Tags should generally be chosen from tag_bank.yaml, but new tags may be introduced when spiritually or thematically appropriate.
+# There is no required number of tags per category — use only what fits the arc's content.
 tags:
-  thematic: []
-  doctrinal: []
-  virtue: []
-  mystical: []
-  liturgical: []
-  typological: []
-  structural: []
+  thematic: [canonical_tag1, canonical_tag2]  # Use only canonical tags from tag_bank.yaml thematic category unless justified. New tags must be approved by the tag bank. Empty list allowed if justified.
+  doctrinal: [canonical_tag3] # Use only canonical tags from tag_bank.yaml doctrinal category unless justified. New tags must be approved by the tag bank. Empty list allowed if justified.
+  virtue: [canonical_tag4] # Use only canonical tags from tag_bank.yaml virtue category unless justified. New tags must be approved by the tag bank. Empty list allowed if justified.
+  mystical: []  # Use only canonical tags from tag_bank.yaml mystical category unless justified. New tags must be approved by the tag bank. Empty list allowed if justified.
+  liturgical: [canonical_tag5, canonical_tag6, canonical_tag7]  # Use only canonical tags from tag_bank.yaml liturgical category unless justified. New tags must be approved by the tag bank. Empty list allowed if justified.
+  typological: []  # Use only canonical tags from tag_bank.yaml typological category unless justified. New tags must be approved by the tag bank. Empty list allowed if justified.
+  structural: [canonical_tag8]  # Use only canonical tags from tag_bank.yaml structural category unless justified. New tags must be approved by the tag bank. Empty list allowed if justified.
