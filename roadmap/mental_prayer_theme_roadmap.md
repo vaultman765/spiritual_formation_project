@@ -1,7 +1,5 @@
 # 🕯️ Mental Prayer Theme Roadmap – Deep Structure Edition
 
----
-
 ## 📦 Roadmap Rebuild: Section 1 – Ordered Arc Journey
 
 | Arc Order | Day Range | Arc Title                                              | Day Count | SMPF | Anchor Image (High Level)                  | Primary Reading                     | Liturgical                 | Status        |
@@ -36,126 +34,101 @@
 | 28        | 186–193   | Interior Trials and Spiritual Darkness                 | 8         | 🕓    | The Cry of Christ on the Cross             | Psalm 22; Matthew 27:46             | Lent / Good Friday         | 🕓 Planned     |
 | 29        | 194       | The Resurrection and the Promise of Glory (Standalone) | 1         | 🕓    | The Risen Christ                           | John 20:11–18                       | Easter Sunday              | 🕓 Planned     |
 
----
+## 📚 Roadmap – Section 2: Thematic Arc Library (Unplaced Arcs)
 
-## 🗺️ SECTION 2: Planned Arcs
+These arcs are not yet part of the main symphonic sequence (Section 1), but remain vital for eventual inclusion.
+Many are seasonal, topical, or under development. Some are brand new additions designed to carry the project toward 1000+
+days.
 
-### Christological Arcs
+### ✨ Christological & Doctrinal Arcs
 
-| Arc Title                | Est. Days | Anchor Image                         | Primary Source                 | Tags                                                              | Notes |
-|-------------------------|-----------|--------------------------------------|--------------------------------|-------------------------------------------------------------------|-------|
-| Seven Last Words        | 7–10      | Crucified Face of Christ             | Gospel Passages from the Cross | Passion, words of Christ, forgiveness, abandonment, surrender     | Could immediately follow Passion |
-| Resurrection & Easter Joy | 7–10    | Empty Tomb, Risen Christ             | Gospels + Acts                 | resurrection, joy, hope, mission, glory                           | Easter |
-| The Lamb Who Was Slain  | 4–7       | Lamb standing as if slain (Rev 5)    | Revelation 5                   | meekness, triumph, paradox, sacrifice, glory                      | Can follow Resurrection |
-| The Holy Spirit         | 7–14      | Pentecost, Dove, Upper Room          | Acts 2, John 14–16             | Spirit, fire, courage, gifts, Church                              | Pentecost |
-| The Last Supper         | 7–10      | Institution of the Eucharist         | Synoptics + John 13            | Eucharist, priesthood, betrayal, love                             | Maundy Thursday |
-| Christ our High Priest | 10–14 | Christ in liturgical vestments | Hebrews, CCC 1544–1553 | priesthood, covenant, sacrifice, intercession, Eucharist, reverence, liturgy, heavenly worship | Follows Cross and Redemptive Suffering |
+The Hidden Years of Christ
+The Parables of Christ
+The Miracles of Christ
+The Transfiguration
+The Kingship of Christ (Christ the King)
+The Name of Jesus (Holy Name Devotion)
+The Sacred Humanity of Christ
+The Ascension
+The Descent of the Holy Spirit
+The Indwelling of the Trinity
+The Church as the Mystical Body
+The Four Last Things – Traditional Breakdown (Death, Judgment, Heaven, Hell)
+The Reality of Hell
+The Divine Attributes
+The Councils of the Church
+The Catechism Journey (Select Doctrinal Segments)
 
----
+### 🌿 Virtue, Vice, and Moral Formation
 
-### Marian Arcs
+The Seven Deadly Sins
+The Seven Contrary Virtues
+Detachment and Poverty of Spirit
+Meekness and Temperance
+Fortitude and Endurance
+Modesty, Chastity, and Purity
+The Examination of Conscience
+Temptation and Resistance
+Mortification and the Interior Cross
+Resentment, Forgiveness, and Healing
+Righteous Anger and Zeal
+The Holy Use of Time
 
-| Arc Title                | Est. Days | Anchor Image                         | Primary Source               | Tags                                                              | Notes |
-|-------------------------|-----------|--------------------------------------|------------------------------|-------------------------------------------------------------------|-------|
-| The Rosary              | 75–100    | Mystery-specific per day             | Scriptures per mystery       | Mary, Rosary, contemplation, Scripture, Marian dogmas             | Master arc with subgroups |
-| Marian Dogmas           | 7–14      | Assumption, Immaculate Conception    | Magisterial texts            | Mary, doctrine, grace, tradition                                  | Can integrate into Saturdays |
-| Apparitions & Devotion  | 5–10      | Lourdes, Fatima, Guadalupe           | Papal writings, diary texts  | signs, repentance, prayer, protection                             | Can be optional feast add-on |
+### 🗓 Liturgical & Seasonal Arcs
 
----
+Advent (Full Cycle)
+Lent (Full Cycle)
+Holy Week (Individual Days: Palm Sunday → Holy Saturday)
+Eastertide (Resurrection Themes)
+Corpus Christi
+Sacred Heart Feast Focus
+Christ the King
+First Fridays Devotion
+First Saturdays Devotion
+Ember Days
+Novena of Pentecost
+Liturgical Colors and Symbolism
 
-### Ecclesial and Virtue Arcs
+### 💙 Marian Arcs
 
-| Arc Title                | Est. Days | Anchor Image                         | Primary Source               | Tags                                                              | Notes |
-|-------------------------|-----------|--------------------------------------|------------------------------|-------------------------------------------------------------------|-------|
-| Redemptive Suffering     | 10–21     | Crucified Christ                     | Salvifici Doloris + Saints    | suffering, Cross, love, silence, offering, grace                 | Deep arc |
-| Trust in Divine Providence | 7–14    | Hand reaching through clouds         | CCC, Scripture, Saints       | trust, surrender, guidance, faith                                | Could follow Redemptive Suffering |
-| Humility and Detachment | 7–10      | Jesus before Pilate                  | Saints’ writings              | humility, freedom, detachment, poverty                           | |
-| Hope in Darkness         | 7–10      | Starry sky over Calvary              | Psalms, Job, Saints           | hope, trial, darkness, waiting                                   | Quiet interior arc |
+Marian Apparitions (Fatima, Lourdes, Guadalupe)
+The Seven Sorrows of Mary
+The Dogmas of Mary (Immaculate Conception, Assumption, etc.)
+Mary, Mother of the Church
+Mary and the Apocalypse (Revelation 12)
+Mary and the Holy Spirit
+Marian Titles in the Litany of Loreto
+The Magnificat
+Mary's Fiat as Model of Obedience
+Marian Consecration (Short Series or Companion Series)
 
----
+### 🔥 Mystical & Contemplative Life
 
-### Prayer-Based Arcs: Our Father, Hail Mary, Litanies
+The Three Ages of the Interior Life (Garrigou-Lagrange)
+The Dark Night of the Soul (John of the Cross)
+Union with the Divine Will
+Mystical Theology of Teresa of Ávila
+The Interior Castle (Selected Mansions)
+Desert Fathers – Sayings and Themes
+Spiritual Combat (Scupoli, Lorenzo Scupoli)
+The Fire of Divine Love
+Visions of the Saints (St. Faustina, St. Catherine, Bl. Emmerich)
+Holy Indifference and Abandonment
+Discerning Spirits (Ignatian Principles)
 
-| Arc Title                | Est. Days | Anchor Image                         | Primary Source               | Tags                                                              | Notes |
-|-------------------------|-----------|--------------------------------------|------------------------------|-------------------------------------------------------------------|-------|
-| The Our Father          | 7–14      | Praying hands with light             | Matthew 6, CCC 2759–2865     | prayer, petition, trust, providence, forgiveness, adoration       | One day per phrase of the prayer |
-| The Hail Mary           | 7–10      | Mary surrounded by Ave inscriptions  | Luke 1, CCC 2676–2677        | Mary, grace, incarnation, intercession, praise                    | Can follow Marian Dogmas arc |
-| Litany of Humility      | 7–10      | Cross and bowed head                 | Litany text (Cardinal Merry del Val) | humility, detachment, surrender, hiddenness              | Each invocation unpacked |
-| Litany of Trust         | 7–10      | Heart with rays of light             | Sr. Faustina Maria Pia’s prayer | trust, fear, mercy, providence, surrender                     | Pairs well with Divine Providence arc |
-| Anima Christi           | 7–10      | Crucified Christ with radiant wounds | Prayer of St. Ignatius       | union, suffering, Eucharist, sanctification                      | Mystical and Eucharistic path |
+### 📿 Devotional Arcs and Prayers
 
----
-
-## ✝️ SECTION 3: Liturgical & Optional Arcs
-
-| Arc Title                    | Est. Days | Notes |
-|-----------------------------|-----------|-------|
-| Advent – Waiting with Hope  | 7–28      | Calendar-timed |
-| Lent – Journey to the Cross | 40        | Calendar-timed |
-| Holy Week – Day by Day      | 7         | Calendar-timed |
-| Easter Octave Reflections   | 8         | Calendar-timed |
-| Marian Saturdays            | Flexible  | Can pull from Marian Arcs |
-| Feast Day Meditations       | Flexible  | Include Solemnities, Saints (these need to be broken out) |
-| Corpus Christi              | 1–3       | Eucharist-focused meditations - Calendar-timed |
-| Sacred Heart (June)         | 7–16      | Includes canonical Litany arc - Calendar-timed  |
-| Immaculate Conception       | 1         | Dogmatic + Marian meditation - Calendar-timed  |
-| Assumption of Mary          | 1–2       | Optional short arc or feast meditation - Calendar-timed  |
-| Christ the King             | 1         | Christological feast meditation - Calendar-timed  |
-| All Saints & All Souls      | 2–3       | Heavenly glory, communion of saints - Calendar-timed  |
-| Pentecost Meditations       | 1–3       | May overlap with Holy Spirit arc - Calendar-timed  |
-
----
-
-## 🎼 SECTION 4: Symphony Flow & Reordering Considerations
-
-### Foundational Entry Arcs:
-
-- Love of God → Love of Neighbor → Holy Fear → Mystery of the Church
-- These form the bedrock: divine charity, moral responsibility, reverence, and ecclesial belonging
-
-### Liturgical and Doctrinal Core:
-
-- Word → Liturgy → Eucharist → Christ our High Priest
-- Sequence supports deepening participation in the Church's worship and sacramental life
-
-### Purification and Moral Interior Life:
-
-- Sin & Mercy → Forgiveness → Simplicity → Beatitudes → Hidden Life → Redemptive Suffering
-- Followed by: Trust → Hope → Desert → Humility arcs
-
-### Gifts and Illumination:
-
-- Holy Spirit → Filled with Christ → Communion of Saints → Fatherhood → Name of Jesus → Devotion arcs
-
-### Eschatological Horizon:
-
-- Desire for Heaven → Heaven and Judgment → All Saints/All Souls meditations
-
-### Canonical Liturgical Clusters:
-
-- Sacred Heart → Passion → Seven Last Words → Resurrection → Easter Joy
-- Marian feasts, Rosary, and dogmas rotate throughout (Saturdays and solemnities)
-
-### Breathing and Balancing Notes:
-
-- Breathing arcs (e.g., Hope in Darkness, Simplicity, Hidden Life) are strategically placed after intense purification arcs
-- Interweaving doctrinal with affective themes maintains emotional engagement without spiritual overload
-
-### Future Considerations:
-
-- Layer thematic bundles (e.g., “Suffering and Trust”, “Liturgical Year”, “Marian Path”)
-- Build metadata-backed navigation based on emotional tone, virtue focus, and mystical intensity
-
----
-
-## 🏷️ SECTION 5: Metadata Standards & Tag System
-
-### SMPF Compliance Checklist:
-
-- [x] Anchor Image (visual + fixed per arc or shifting if justified)
-- [x] Primary Reading per arc
-- [x] Secondary Reading per day
-- [x] 1–3 Meditative Points
-- [x] Colloquy
-- [x] Ejaculatory Prayer
-- [x] Resolution
+The Stations of the Cross
+The Seven Last Words
+The Chaplet of Divine Mercy
+The Angelus
+The Regina Caeli
+The Memorare
+Morning Offering and Night Prayer
+The Surrender Novena
+The Litany of Trust
+The Holy Wounds Devotion
+The Golden Arrow (Holy Face Devotion)
+The Breastplate of St. Patrick
+The Te Deum and Gloria
+Psalms of Contrition (Psalms 6, 32, 38, 51, 102, 130, 143)
