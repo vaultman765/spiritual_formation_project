@@ -7,8 +7,8 @@
   day_count: 7  # Total number of meditation days in this arc  # REQUIRED: Matches the [Total Days] in ## [Theme Title] from arc_smpf_template.yaml
   master_list_order: 1  # REQUIRED: Order in the global/master day list (integer only). This currently comes from the mental_prayer_theme_roadmap.yaml file. It is used to determine the order of arcs in the master list.
   day_range:
-    start: 8  # REQUIRED: Start of this arc in the global/master day list (integer only). This currently commes from the mental_prayer_theme_roadmap.yaml file
-    end: 14   # REQUIRED: End of this arc in the global/master day list (inclusive). This currently commes from the mental_prayer_theme_roadmap.yaml file
+    start: 8  # REQUIRED: Start of this arc in the global/master day list (integer only). This currently comes from the mental_prayer_theme_roadmap.yaml file
+    end: 14   # REQUIRED: End of this arc in the global/master day list (inclusive). This currently comes from the mental_prayer_theme_roadmap.yaml file
   anchor_image: Short description of fixed visual used in this arc  # REQUIRED Can be a list if multiple. Derived from the anchor image(s) in the corresponding meditation (### 📜 Anchor Images and Primary Readings table from arc_smpf_template.yaml.)
   primary_reading: Book Chapter:Verse or Title  # REQUIRED: Short citation of the primary scriptural/liturgical source. Can be a list if multiple. Matches the primary reading(s) in the corresponding meditation (### 📜 Anchor Images and Primary Readings table from arc_smpf_template.yaml.)
   # All five tag categories must be present, even if empty.
