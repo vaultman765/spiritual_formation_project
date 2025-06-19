@@ -1,156 +1,146 @@
 # 🕯️ Mental Prayer Theme Roadmap – Deep Structure Edition
 
----
+## 📦 Roadmap Rebuild: Section 1 – Ordered Arc Journey
 
-## 🗂️ SECTION 1: Completed Arcs (Expanded)
+| Arc Order | Day Range | Arc Title                                              | Day Count | SMPF | Anchor Image (High Level)                  | Primary Reading                     | Liturgical                 | Status        |
+| --------- | --------- | ------------------------------------------------------ | --------- | ---- | ------------------------------------------ | ----------------------------------- | -------------------------- | ------------- |
+| 1         | 1–7       | Love of God                                            | 7         | ✅    | The Crucified Christ (Face)                | 1 John 4:7–21                       | Ordinary Time              | ✅ Complete    |
+| 2         | 8–14      | Love of Neighbor                                       | 7         | ✅    | Jesus washing the feet of His disciples    | John 13                             | Ordinary Time              | ✅ Complete    |
+| 3         | 15–21     | The Holy Fear of the Lord                              | 7         | ✅    | The lightning at Mt. Sinai                 | Proverbs 9:10; Exodus 20:18–21      | Ordinary Time              | ✅ Complete    |
+| 4         | 22–28     | Sin, Mercy, and Conversion                             | 7         | ⏳    | Peter weeping in the courtyard             | Luke 22:54–62                       | Lent                       | ⏳ In Progress |
+| 5         | 29–38     | The Passion of Christ – Events and Interior Sufferings | 10        | ✅    | Various Scenes from The Passion            | Passion Readings from each Gospel   | Holy Week                  | ✅ Complete    |
+| 6         | 39–45     | Litany of the Sacred Heart                             | 7         | ✅    | Christ Revealing His Sacred Heart in Glory | Litany of the Sacred Heart of Jesus | June                       | ✅ Complete    |
+| 7         | 46–52     | Christ our High Priest                                 | 7         | 🕓    | Christ offering the chalice                | Hebrews 4:14–16; 9:11–15            | Ordinary Time              | 🕓 Planned     |
+| 8         | 53–59     | Heaven and Judgment                                    | 7         | 🕓    | Christ in Majesty                          | Matthew 25:31–46                    | Ordinary Time              | 🕓 Planned     |
+| 9         | 60–66     | The Immaculate Heart of Mary                           | 7         | 🕓    | The Immaculate Heart of Mary               | Luke 2:19                           | Ordinary Time / Aug 15     | 🕓 Planned     |
+| 10        | 67–73     | The Rosary – Joyful Mysteries                          | 7         | 🕓    | Annunciation                               | Luke 1:26–38                        | Advent                     | 🕓 Planned     |
+| 11        | 74–80     | The Rosary – Sorrowful Mysteries                       | 7         | 🕓    | Christ in Gethsemane                       | Luke 22:39–53                       | Lent                       | 🕓 Planned     |
+| 12        | 81–87     | The Rosary – Glorious Mysteries                        | 7         | 🕓    | The Empty Tomb                             | John 20:1–18                        | Eastertide                 | 🕓 Planned     |
+| 13        | 88–94     | The Rosary – Luminous Mysteries                        | 7         | 🕓    | The Baptism of Christ                      | Matthew 3:13–17                     | Ordinary Time              | 🕓 Planned     |
+| 14        | 95–101    | The Litany of Humility                                 | 7         | 🕓    | Christ washing the disciples’ feet         | Litany of Humility                  | Ordinary Time              | 🕓 Planned     |
+| 15        | 102–104   | The Anima Christi                                      | 3         | 🕓    | The Crucified Christ                       | Anima Christi Prayer                | Lent / Corpus Christi      | 🕓 Planned     |
+| 16        | 105–111   | The Creed (Apostles’)                                  | 7         | 🕓    | Christ seated in glory                     | Apostles’ Creed                     | Ordinary Time              | 🕓 Planned     |
+| 17        | 112–118   | The Our Father                                         | 7         | 🕓    | Christ teaching the disciples              | Matthew 6:9–13                      | Ordinary Time              | 🕓 Planned     |
+| 18        | 119–125   | The Hail Mary                                          | 7         | 🕓    | The Annunciation                           | Luke 1:28–38                        | Advent / Marian Feasts     | 🕓 Planned     |
+| 19        | 126–132   | The Beatitudes                                         | 7         | 🕓    | Christ teaching on the mount               | Matthew 5:1–12                      | Ordinary Time / All Saints | 🕓 Planned     |
+| 20        | 133–139   | The Works of Mercy                                     | 7         | 🕓    | The sheep and the goats                    | Matthew 25:31–46                    | Ordinary Time / Lent       | 🕓 Planned     |
+| 21        | 140–146   | The Gifts of the Holy Spirit                           | 7         | 🕓    | Pentecost                                  | Isaiah 11:1–3; Acts 2:1–4           | Pentecost / Confirmation   | 🕓 Planned     |
+| 22        | 147–153   | The Fruits of the Holy Spirit                          | 7         | 🕓    | The vine and the branches                  | Galatians 5:22–23; John 15:1–11     | Ordinary Time              | 🕓 Planned     |
+| 23        | 154–157   | The Theological Virtues                                | 4         | 🕓    | The cross, anchor, and flame icons         | 1 Corinthians 13:13                 | Ordinary Time              | 🕓 Planned     |
+| 24        | 158–164   | The Cardinal Virtues                                   | 7         | 🕓    | Wisdom enthroned                           | Wisdom 8:7                          | Ordinary Time              | 🕓 Planned     |
+| 25        | 165–171   | Pride and Humility                                     | 7         | 🕓    | The Pharisee and the Publican              | Luke 18:9–14                        | Lent / Ordinary Time       | 🕓 Planned     |
+| 26        | 172–178   | Obedience                                              | 7         | 🕓    | Christ in Gethsemane                       | Philippians 2:5–11; Luke 22:42      | Holy Week / Lent           | 🕓 Planned     |
+| 27        | 179–185   | Vigilance                                              | 7         | 🕓    | The Watchful Servants                      | Luke 12:35–40                       | Advent / Ordinary Time     | 🕓 Planned     |
+| 28        | 186–193   | Interior Trials and Spiritual Darkness                 | 8         | 🕓    | The Cry of Christ on the Cross             | Psalm 22; Matthew 27:46             | Lent / Good Friday         | 🕓 Planned     |
+| 29        | 194       | The Resurrection and the Promise of Glory (Standalone) | 1         | 🕓    | The Risen Christ                           | John 20:11–18                       | Easter Sunday              | 🕓 Planned     |
 
-| Arc Title                               | Days     | Count | SMPF | Metadata | Anchor Image                            | Primary Reading                        | Tags                                                         | Liturgical | Notes |
-|----------------------------------------|----------|-------|------|----------|-----------------------------------------|----------------------------------------|--------------------------------------------------------------|------------|-------|
-| Love of God – Foundation of All        | 1–7      | 7     | ✅    | ✅        | Crucified Christ (Face)                 | 1 John 4:7–21                          | love, mercy, divine initiative, transformation              | Ordinary   | SMPF complete with revised structure |
-| Love of Neighbor                       | 8–14     | 7     | ✅    | ✅        | Jesus washing the disciples’ feet       | John 13                                | charity, humility, forgiveness, service, vocation, unity, perseverance, mystical body, spiritual childhood, spiritual warfare | Ordinary   | SMPF updated and reformatted |
-| The Holy Fear of the Lord              | 15–21    | 7     | ⏳    | ⏳        | The lightning at Mt. Sinai              | Proverbs 9:10, Exodus 20               | fear of the Lord, reverence, awe, obedience                 | Ordinary   | Title polished |
-| The Mystery of the Church              | 22–28    | 7     | ⏳    | ⏳        | Church as Bride + Body                  | CCC 748–870                            | Church, unity, mystery, holiness                            | Ecclesial  | Title polished |
-| The Word of God                        | 29–35    | 7     | ⏳    | ⏳        | Open Gospel with light                  | Hebrews 4:12, Dei Verbum               | Scripture, truth, revelation                                | Ordinary   |  |
-| The Sacred Liturgy                     | 36–42    | 7     | ⏳    | ⏳        | Chalice, Lectionary, Incense rising     | Sacrosanctum Concilium, CCC 1066–1209  | liturgy, worship, Mass, heaven                              | Ordinary   |  |
-| The Eucharist: Source and Summit       | 43–49    | 7     | ⏳    | ⏳        | Host on the paten in Adoration          | John 6, CCC 1322–1419                  | Eucharist, presence, communion, sacrifice                   | Liturgical | Title polished |
-| Sin, Mercy, and Conversion             | 50–56    | 7     | ⏳    | ⏳        | The Prodigal Son kneeling               | Luke 15                                | sin, mercy, confession, repentance                          | Lent-prep  | Title polished |
-| Forgiveness and Mercy                  | 57–63    | 7     | ⏳    | ⏳        | Cross + Forgiving hand                  | Matthew 18, Luke 6                     | forgiveness, mercy, humility                                | Ordinary   |  |
-| Simplicity of Heart                    | 64–70    | 7     | ⏳    | ⏳        | Childlike figure looking up             | Matthew 18:1–4                         | simplicity, detachment, spiritual childhood                 | Ordinary   |  |
-| The Beatitudes                         | 71–77    | 7     | ⏳    | ⏳        | Christ teaching on mountain             | Matthew 5                              | Beatitudes, Kingdom, holiness, paradox                      | Ordinary   |  |
-| The Hidden Life of Nazareth            | 78–84    | 7     | ⏳    | ⏳        | Holy Family at home                     | Luke 2                                 | hiddenness, work, family, holiness                          | Ordinary   |  |
-| The Cross and Redemptive Suffering     | 85–105   | 21+   | ⏳    | ⏳        | Christ carrying the Cross               | Salvifici Doloris                      | suffering, redemptive, Cross, offering, abandonment, obedience, fortitude, providence, purification, spiritual combat, participation in Christ | Lent       | Arc expanding to 3–4+ weeks |
-| Trust in Divine Providence             | 106–112  | 7     | ⏳    | ⏳        | Hand reaching through clouds            | Matthew 6:25–34                        | trust, surrender, guidance, faith                           | Ordinary   |  |
-| Hope in the Desert                     | 113–119  | 7     | ⏳    | ⏳        | Desert road with sunrise                | Isaiah 35, CCC 1817–1821               | hope, dryness, waiting, endurance                           | Lent       |  |
-| The Holy Spirit and His Gifts          | 120–126  | 7     | ⏳    | ⏳        | Dove over disciples                     | Acts 2, John 14–16                     | Spirit, gifts, Pentecost, courage                           | Pentecost  |  |
-| To Be Filled with Christ               | 127–133  | 7     | ⏳    | ⏳        | Light shining through broken clay jar   | Galatians 2:20, 2 Cor 4:7              | Christ in us, transformation, holiness                      | Mystical   |  |
-| The Communion of Saints                | 134–140  | 7     | ⏳    | ⏳        | Heavenly procession                     | CCC 946–962                            | saints, heaven, Church, unity                               | All Saints |  |
-| The Fatherhood of God                  | 141–147  | 7     | ⏳    | ⏳        | Father and child silhouetted            | Luke 15, CCC 239–242                   | Fatherhood, love, identity, belonging                       | Ordinary   |  |
-| The Name of Jesus                      | 148–154  | 7     | ⏳    | ⏳        | Holy Name in gold letters               | Phil 2:6–11, Luke 1:31                 | Jesus, name, reverence, glory                               | Christological |  |
-| Devotion to the Holy Name              | 155–161  | 8     | ⏳    | ⏳        | Monogram IHS                            | Litany of the Holy Name                | devotion, reverence, power, protection                      | Ordinary   |  |
-| Desire for Heaven                      | 162–168  | 7     | ⏳    | ⏳        | Light above mountains                   | Revelation 21–22                       | heaven, longing, union, hope                                | Eschatological |  |
-| Litany of the Sacred Heart             | 169–184  | 16    | ✅    | ✅        | Sacred Heart (enthroned, radiant)       | Litany of the Sacred Heart             | love, mercy, reparation, Sacred Heart                       | June       | Canonical |
-| Passion of Christ – Events & Sufferings| 185–194  | 10    | ✅    | ✅        | Gethsemane → Cross (shifting)           | Passion Narratives (John/Matthew)     | suffering, abandonment, redemption, love                   | Holy Week  | Canonical |
+## 📚 Roadmap – Section 2: Thematic Arc Library (Expanded)
 
----
+These arcs are not yet part of the main symphonic sequence but are essential to the long-term growth of the project.
+Each entry below includes a proposed day length, liturgical placement (if applicable),
+placement within the spiritual stages (Purification, Illumination, Union), and development notes.
 
-## 🗺️ SECTION 2: Planned Arcs
+### ✨ Christological & Doctrinal Arcs
 
-### Christological Arcs
+| Arc Title                                             | Est. Length | Liturgical Season                      | Journey Stage                     | Notes                                                                                                                                                   |
+| ----------------------------------------------------- | ----------- | -------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **The Hidden Years of Christ**                        | 5–7 days    | Christmas / Ordinary Time              | Illumination                      | Focus on humility, obscurity, obedience, and the domestic life of Nazareth. Pairs well with growth in interiority and silent virtue.                    |
+| **The Parables of Christ**                            | 10–14 days  | Ordinary Time                          | Illumination                      | Spiritual treasures of Christ’s teaching. May be broken into sub-themes (mercy, vigilance, Kingdom, etc.). Use as a source of deep personal engagement. |
+| **The Miracles of Christ**                            | 7–10 days   | Ordinary Time / Lent                   | Illumination                      | Exploration of Christ’s divine power and compassion. Reflects the sacramental and healing dimensions of His mission.                                    |
+| **The Transfiguration**                               | 1–3 days    | Lent / August 6                        | Transition (Illumination → Union) | Can be a powerful mini-arc or tied into preparation for deeper contemplation. Highlights glory hidden in suffering.                                     |
+| **The Kingship of Christ (Christ the King)**          | 3–5 days    | Christ the King Sunday                 | Union                             | Short but rich arc affirming Christ’s rule over hearts, nations, and eternity. Possible bridge into eschatological themes.                              |
+| **The Name of Jesus (Holy Name Devotion)**            | 3–5 days    | January                                | Purification → Illumination       | Meditative repetition on the saving and sanctifying power of His Name. Excellent arc for deepening affective prayer.                                    |
+| **The Sacred Humanity of Christ**                     | 7 days      | Ordinary Time                          | Illumination                      | Focused on Christ’s emotions, physicality, gestures, weariness, joy, and love — inviting intimacy and reverence.                                        |
+| **The Ascension**                                     | 1–3 days    | Ascension Thursday                     | Union                             | Liturgical arc of longing and glorification. Can precede Pentecost or link to Christ’s High Priesthood.                                                 |
+| **The Descent of the Holy Spirit**                    | 3–7 days    | Pentecost / Novena of Pentecost        | Transition                        | Ties into gifts and fruits of the Spirit. Can stand alone or lead into Holy Spirit arcs.                                                                |
+| **The Indwelling of the Trinity**                     | 5–7 days    | Ordinary Time                          | Union                             | Advanced contemplative theme. Best placed later in the journey. Rooted in the Divine Indwelling of the baptized soul.                                   |
+| **The Church as the Mystical Body**                   | 5–7 days    | Ordinary Time / Feasts of the Apostles | Illumination                      | Ecclesiological arc connecting individual prayer to the Body of Christ, communion of saints, sacraments.                                                |
+| **The Four Last Things**                              | 4–6 days    | November / Lent                        | Purification                      | Classic sequence: Death, Judgment, Heaven, Hell. Can be paired with “Heaven and Judgment” arc already placed.                                           |
+| **The Reality of Hell**                               | 3–5 days    | Lent                                   | Purification                      | Can serve as an extension of the Four Last Things or stand alone. Meant for sobering reflection, not despair.                                           |
+| **The Divine Attributes**                             | 7 days      | Ordinary Time                          | Illumination                      | Exploration of God’s omnipotence, justice, mercy, immutability, etc. Pairs well with deeper doctrinal arcs.                                             |
+| **The Councils of the Church**                        | 7–10 days   | Ordinary Time                          | Purification → Illumination       | A catechetical arc — each day exploring a major council and its doctrinal fruit (e.g., Nicaea, Trent, Vatican II).                                      |
+| **The Catechism Journey (Select Doctrinal Segments)** | 14–30 days  | Any                                    | Purification → Illumination       | Can be shaped into thematic modules — Creed, Sacraments, Life in Christ, Prayer — as a parallel formation tool.                                         |
 
-| Arc Title                | Est. Days | Anchor Image                         | Primary Source                 | Tags                                                              | Notes |
-|-------------------------|-----------|--------------------------------------|--------------------------------|-------------------------------------------------------------------|-------|
-| Seven Last Words        | 7–10      | Crucified Face of Christ             | Gospel Passages from the Cross | Passion, words of Christ, forgiveness, abandonment, surrender     | Could immediately follow Passion |
-| Resurrection & Easter Joy | 7–10    | Empty Tomb, Risen Christ             | Gospels + Acts                 | resurrection, joy, hope, mission, glory                           | Easter |
-| The Lamb Who Was Slain  | 4–7       | Lamb standing as if slain (Rev 5)    | Revelation 5                   | meekness, triumph, paradox, sacrifice, glory                      | Can follow Resurrection |
-| The Holy Spirit         | 7–14      | Pentecost, Dove, Upper Room          | Acts 2, John 14–16             | Spirit, fire, courage, gifts, Church                              | Pentecost |
-| The Last Supper         | 7–10      | Institution of the Eucharist         | Synoptics + John 13            | Eucharist, priesthood, betrayal, love                             | Maundy Thursday |
-| Christ our High Priest | 10–14 | Christ in liturgical vestments | Hebrews, CCC 1544–1553 | priesthood, covenant, sacrifice, intercession, Eucharist, reverence, liturgy, heavenly worship | Follows Cross and Redemptive Suffering |
+### 🌿 Virtue, Vice, and Moral Formation
 
----
+| Arc Title                                | Est. Length | Liturgical Season               | Journey Stage               | Notes                                                                                                                                                   |
+| ---------------------------------------- | ----------- | ------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **The Seven Deadly Sins**                | 7 days      | Lent                            | Purification                | Each day focuses on one capital sin: Pride, Envy, Wrath, Sloth, Greed, Gluttony, Lust. Designed for personal examination and interior combat.           |
+| **The Seven Contrary Virtues**           | 7 days      | Lent / Ordinary Time            | Purification → Illumination | Complements the deadly sins arc — humility, kindness, patience, diligence, generosity, temperance, chastity. Encourages virtue-building and conversion. |
+| **Detachment and Poverty of Spirit**     | 5–7 days    | Ordinary Time / Lent            | Purification                | Emphasizes renunciation of worldly attachments and interior freedom. Especially fruitful in early formation or in times of spiritual dryness.           |
+| **Meekness and Temperance**              | 3–5 days    | Ordinary Time                   | Illumination                | Focused on balance of passion and peace. Draws from Christ’s own gentleness and strength under pressure.                                                |
+| **Fortitude and Endurance**              | 3–5 days    | Lent / Ordinary Time            | Purification                | Ideal for periods of trial. Meditation on perseverance, suffering, and fidelity.                                                                        |
+| **Modesty, Chastity, and Purity**        | 5–7 days    | Lent / Marian Feasts            | Purification                | Anchored in bodily reverence and integrity. Pairs well with Marian reflection and the theology of the body.                                             |
+| **The Examination of Conscience**        | 3–5 days    | Lent / Retreat                  | Purification                | A method arc — guides the soul in practical daily or weekly examen. Pairs naturally with confession-focused arcs.                                       |
+| **Temptation and Resistance**            | 3–5 days    | Lent / Spiritual Warfare Season | Purification                | Scriptural focus (e.g., Christ in the desert). Guides battle-ready virtue. Links to Ignatian discernment.                                               |
+| **Mortification and the Interior Cross** | 5–7 days    | Lent / Ember Days               | Purification                | Emphasizes penance, fasting, interior death, and mystical detachment. May draw from saints like St. John of the Cross.                                  |
+| **Resentment, Forgiveness, and Healing** | 5–7 days    | Ordinary Time / Year of Mercy   | Purification → Illumination | Focus on the will to forgive, emotional wounds, and divine healing. Deeply practical and affective.                                                     |
+| **Righteous Anger and Zeal**             | 3–5 days    | Ordinary Time                   | Illumination                | Proper ordering of passion to justice and mission. Can draw from Christ cleansing the Temple or prophetic witness.                                      |
+| **The Holy Use of Time**                 | 3–5 days    | New Year / Ordinary Time        | Illumination                | Guides the soul to sanctify time, live intentionally, and see the eternal in the present moment.                                                        |
 
-### Marian Arcs
+### 🗓 Liturgical & Seasonal Arcs
 
-| Arc Title                | Est. Days | Anchor Image                         | Primary Source               | Tags                                                              | Notes |
-|-------------------------|-----------|--------------------------------------|------------------------------|-------------------------------------------------------------------|-------|
-| The Rosary              | 75–100    | Mystery-specific per day             | Scriptures per mystery       | Mary, Rosary, contemplation, Scripture, Marian dogmas             | Master arc with subgroups |
-| Marian Dogmas           | 7–14      | Assumption, Immaculate Conception    | Magisterial texts            | Mary, doctrine, grace, tradition                                  | Can integrate into Saturdays |
-| Apparitions & Devotion  | 5–10      | Lourdes, Fatima, Guadalupe           | Papal writings, diary texts  | signs, repentance, prayer, protection                             | Can be optional feast add-on |
+| Arc Title                                   | Est. Length | Liturgical Season            | Journey Stage                     | Notes                                                                                                                                          |
+| ------------------------------------------- | ----------- | ---------------------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Advent (Full Cycle)**                     | 7–14 days   | Advent                       | Purification → Illumination       | Themes: longing, preparation, silence, expectation. Could follow the O Antiphons or prophetic promises. Strong Marian tie-in.                  |
+| **Lent (Full Cycle)**                       | 14–40 days  | Lent                         | Purification                      | Can include ashes, fasting, penance, temptation, sin, and mercy. May pull from existing shorter arcs or become a composite arc.                |
+| **Holy Week (Palm Sunday → Holy Saturday)** | 7–8 days    | Holy Week                    | Transition (Purification → Union) | Each day focuses on a distinct liturgical moment. Possible overlap with Passion arc. Very affective and solemn.                                |
+| **Eastertide (Resurrection Themes)**        | 7–10 days   | Easter Season                | Union                             | Glorified Christ, peace, joy, transformation. May overlap with Glorious Mysteries and Ascension arc. Useful follow-up to Lent arcs.            |
+| **Corpus Christi**                          | 3–5 days    | Corpus Christi               | Union                             | Focus on the Eucharist, Real Presence, Eucharistic procession, and adoration. Pairs well with High Priest arc or Anima Christi.                |
+| **Sacred Heart Feast Focus**                | 3–5 days    | June / Sacred Heart Friday   | Union                             | Devotional and affective, especially for reparation. Can supplement or deepen the existing Litany of the Sacred Heart arc.                     |
+| **Christ the King**                         | 1–3 days    | Solemnity of Christ the King | Union                             | Final Sunday of the liturgical year. Meditate on Christ’s eternal kingship and judgment. Can serve as bridge to eschatological themes.         |
+| **First Fridays Devotion**                  | 9 days      | Any                          | Purification → Union              | Based on the 9 First Fridays promise. Each day could unpack one promise and corresponding virtue. Can overlap with Sacred Heart.               |
+| **First Saturdays Devotion**                | 5–7 days    | Any                          | Illumination → Union              | Marian-focused devotion for reparation. Each day can explore one of the 5 blasphemies against Mary and virtues of devotion.                    |
+| **Ember Days**                              | 3–4 days    | Quarterly                    | Purification                      | Penance, fasting, harvest, and vocations. Traditional liturgical discipline. Can be tied to seasonal gratitude and conversion.                 |
+| **Novena of Pentecost**                     | 9 days      | Pentecost                    | Transition (Illumination → Union) | Each day can unpack a gift of the Spirit or scriptural anticipation of the Spirit. Perfect preparation arc.                                    |
+| **Liturgical Colors and Symbolism**         | 3–5 days    | Ordinary Time                | Illumination                      | Rich symbolic arc. Each day can reflect on a liturgical color (violet, white, red, green, rose, gold) and its meaning in the life of the soul. |
 
----
+### 💙 Marian Arcs
 
-### Ecclesial and Virtue Arcs
+| Arc Title                                                        | Est. Length | Liturgical Season                | Journey Stage               | Notes                                                                                                                                                                               |
+| ---------------------------------------------------------------- | ----------- | -------------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Marian Apparitions (Fatima, Lourdes, Guadalupe)**              | 7–10 days   | Marian Feasts / Ordinary Time    | Illumination → Union        | Each day could explore one apparition: its message, miracle, and Marian invitation to repentance, prayer, and hope. Strong tie to modern spirituality and global Catholic identity. |
+| **The Seven Sorrows of Mary**                                    | 7 days      | September 15 / Lent              | Purification → Illumination | Each day meditates on one of the traditional Sorrows. Deeply affective and unitive. Encourages co-suffering with Mary and devotion to her pierced heart.                            |
+| **The Dogmas of Mary (Immaculate Conception, Assumption, etc.)** | 4–6 days    | Marian Feasts                    | Illumination                | Exploration of defined Marian dogmas: her divine maternity, perpetual virginity, Immaculate Conception, and Assumption. Excellent doctrinal arc with affective fruit.               |
+| **Mary, Mother of the Church**                                   | 3–5 days    | Pentecost Monday / Ordinary Time | Union                       | Focuses on Mary’s maternal mediation and spiritual motherhood of all the faithful. Can pair with Ecclesiology and Trinity arcs.                                                     |
+| **Mary and the Apocalypse (Revelation 12)**                      | 3–5 days    | Advent / Marian Feasts           | Purification → Illumination | Mystical vision of Mary’s role in salvation history. Links biblical typology and eschatological hope.                                                                               |
+| **Mary and the Holy Spirit**                                     | 3–5 days    | Pentecost / Annunciation         | Illumination                | Explores Mary’s role as Spouse of the Holy Spirit, her docility, and her example of interior receptivity.                                                                           |
+| **Marian Titles in the Litany of Loreto**                        | 7–10 days   | Any                              | Illumination                | Each day could reflect on a cluster of titles (e.g., Mother, Virgin, Queen). Beautiful devotional arc with doctrinal roots.                                                         |
+| **The Magnificat**                                               | 1–3 days    | Advent / Visitation              | Union                       | Purely scriptural and affective meditation on Mary's canticle of praise. Suitable as a short arc or deep supplement.                                                                |
+| **Mary’s Fiat as Model of Obedience**                            | 3–5 days    | Annunciation / Lent              | Purification → Illumination | Focused arc on total surrender to God. Ties into humility, discernment, and the Incarnation.                                                                                        |
+| **Marian Consecration (Short Series or Companion)**              | 5–7 days    | May / November                   | Transition                  | Simplified version of Marian consecration for mental prayer. Could accompany a longer St. Louis de Montfort path or stand alone as a preparatory series.                            |
 
-| Arc Title                | Est. Days | Anchor Image                         | Primary Source               | Tags                                                              | Notes |
-|-------------------------|-----------|--------------------------------------|------------------------------|-------------------------------------------------------------------|-------|
-| Redemptive Suffering     | 10–21     | Crucified Christ                     | Salvifici Doloris + Saints    | suffering, Cross, love, silence, offering, grace                 | Deep arc |
-| Trust in Divine Providence | 7–14    | Hand reaching through clouds         | CCC, Scripture, Saints       | trust, surrender, guidance, faith                                | Could follow Redemptive Suffering |
-| Humility and Detachment | 7–10      | Jesus before Pilate                  | Saints’ writings              | humility, freedom, detachment, poverty                           | |
-| Hope in Darkness         | 7–10      | Starry sky over Calvary              | Psalms, Job, Saints           | hope, trial, darkness, waiting                                   | Quiet interior arc |
+### 🔥 Mystical & Contemplative Life
 
----
+| Arc Title                                                             | Est. Length | Liturgical Season             | Journey Stage                     | Notes                                                                                                                                                                                 |
+| --------------------------------------------------------------------- | ----------- | ----------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **The Three Ages of the Interior Life (Garrigou-Lagrange)**           | 7–10 days   | Any                           | Meta-Arc: All Stages              | Foundational framework for the full journey: Purification, Illumination, Union. Each day could explore one age or transition. Best placed for advanced users or as a map at midpoint. |
+| **The Dark Night of the Soul (St. John of the Cross)**                | 5–7 days    | Lent / Desolation             | Transition (Illumination → Union) | Introduces the passive purification of the senses and spirit. Should be treated reverently and framed to avoid confusion or discouragement.                                           |
+| **Union with the Divine Will**                                        | 3–5 days    | Ordinary Time / Marian Feasts | Union                             | Anchored in Christ’s prayer: “Thy will be done.” Emphasizes abandonment, trust, and joy in divine providence.                                                                         |
+| **Mystical Theology of Teresa of Ávila**                              | 5–7 days    | Any                           | Union                             | Focused on recollection, interior prayer, and the soul’s growth toward spiritual marriage. Can supplement or blend with Interior Castle arc.                                          |
+| **The Interior Castle (Selected Mansions)**                           | 7–10 days   | Ordinary Time                 | Transition → Union                | Each day could explore one or two “mansions” — spiritual stages of development. Especially fruitful for long-term practitioners.                                                      |
+| **Desert Fathers – Sayings and Themes**                               | 5–7 days    | Lent / Retreat                | Purification → Illumination       | Wisdom of the early ascetics. Pithy sayings, radical detachment, spiritual warfare. Strong source of both humor and challenge.                                                        |
+| **Spiritual Combat (Scupoli)**                                        | 5–7 days    | Lent                          | Purification                      | A manual for the interior battle. Extremely practical: humility, distrust of self, trust in God, vigilance.                                                                           |
+| **The Fire of Divine Love**                                           | 3–5 days    | Pentecost / Any               | Union                             | Explores the soul’s inflaming with charity and desire for God. Especially affective and poetic.                                                                                       |
+| **Visions of the Saints (St. Faustina, St. Catherine, Bl. Emmerich)** | 5–7 days    | Ordinary Time / Lent          | Transition → Union                | Selected mystical visions that align with sound doctrine and foster affective prayer. Emphasis on union, intercession, and redemptive suffering.                                      |
+| **Holy Indifference and Abandonment**                                 | 3–5 days    | Ordinary Time                 | Union                             | Rooted in St. Ignatius and Fr. de Caussade. Theme: complete trust and indifference to health, success, or suffering — only God's will.                                                |
+| **Discerning Spirits (Ignatian Principles)**                          | 5–7 days    | Retreat / Lent                | Purification → Illumination       | Daily principles for identifying spiritual movements. Clear, helpful, and widely usable. Great primer for retreats.                                                                   |
 
-### Prayer-Based Arcs: Our Father, Hail Mary, Litanies
+### 📿 Devotional Arcs and Prayers
 
-| Arc Title                | Est. Days | Anchor Image                         | Primary Source               | Tags                                                              | Notes |
-|-------------------------|-----------|--------------------------------------|------------------------------|-------------------------------------------------------------------|-------|
-| The Our Father          | 7–14      | Praying hands with light             | Matthew 6, CCC 2759–2865     | prayer, petition, trust, providence, forgiveness, adoration       | One day per phrase of the prayer |
-| The Hail Mary           | 7–10      | Mary surrounded by Ave inscriptions  | Luke 1, CCC 2676–2677        | Mary, grace, incarnation, intercession, praise                    | Can follow Marian Dogmas arc |
-| Litany of Humility      | 7–10      | Cross and bowed head                 | Litany text (Cardinal Merry del Val) | humility, detachment, surrender, hiddenness              | Each invocation unpacked |
-| Litany of Trust         | 7–10      | Heart with rays of light             | Sr. Faustina Maria Pia’s prayer | trust, fear, mercy, providence, surrender                     | Pairs well with Divine Providence arc |
-| Anima Christi           | 7–10      | Crucified Christ with radiant wounds | Prayer of St. Ignatius       | union, suffering, Eucharist, sanctification                      | Mystical and Eucharistic path |
-
----
-
-## ✝️ SECTION 3: Liturgical & Optional Arcs
-
-| Arc Title                    | Est. Days | Notes |
-|-----------------------------|-----------|-------|
-| Advent – Waiting with Hope  | 7–28      | Calendar-timed |
-| Lent – Journey to the Cross | 40        | Calendar-timed |
-| Holy Week – Day by Day      | 7         | Calendar-timed |
-| Easter Octave Reflections   | 8         | Calendar-timed |
-| Marian Saturdays            | Flexible  | Can pull from Marian Arcs |
-| Feast Day Meditations       | Flexible  | Include Solemnities, Saints (these need to be broken out) |
-| Corpus Christi              | 1–3       | Eucharist-focused meditations - Calendar-timed |
-| Sacred Heart (June)         | 7–16      | Includes canonical Litany arc - Calendar-timed  |
-| Immaculate Conception       | 1         | Dogmatic + Marian meditation - Calendar-timed  |
-| Assumption of Mary          | 1–2       | Optional short arc or feast meditation - Calendar-timed  |
-| Christ the King             | 1         | Christological feast meditation - Calendar-timed  |
-| All Saints & All Souls      | 2–3       | Heavenly glory, communion of saints - Calendar-timed  |
-| Pentecost Meditations       | 1–3       | May overlap with Holy Spirit arc - Calendar-timed  |
-
----
-
-## 🎼 SECTION 4: Symphony Flow & Reordering Considerations
-
-### Foundational Entry Arcs:
-
-- Love of God → Love of Neighbor → Holy Fear → Mystery of the Church
-- These form the bedrock: divine charity, moral responsibility, reverence, and ecclesial belonging
-
-### Liturgical and Doctrinal Core:
-
-- Word → Liturgy → Eucharist → Christ our High Priest
-- Sequence supports deepening participation in the Church's worship and sacramental life
-
-### Purification and Moral Interior Life:
-
-- Sin & Mercy → Forgiveness → Simplicity → Beatitudes → Hidden Life → Redemptive Suffering
-- Followed by: Trust → Hope → Desert → Humility arcs
-
-### Gifts and Illumination:
-
-- Holy Spirit → Filled with Christ → Communion of Saints → Fatherhood → Name of Jesus → Devotion arcs
-
-### Eschatological Horizon:
-
-- Desire for Heaven → Heaven and Judgment → All Saints/All Souls meditations
-
-### Canonical Liturgical Clusters:
-
-- Sacred Heart → Passion → Seven Last Words → Resurrection → Easter Joy
-- Marian feasts, Rosary, and dogmas rotate throughout (Saturdays and solemnities)
-
-### Breathing and Balancing Notes:
-
-- Breathing arcs (e.g., Hope in Darkness, Simplicity, Hidden Life) are strategically placed after intense purification arcs
-- Interweaving doctrinal with affective themes maintains emotional engagement without spiritual overload
-
-### Future Considerations:
-
-- Layer thematic bundles (e.g., “Suffering and Trust”, “Liturgical Year”, “Marian Path”)
-- Build metadata-backed navigation based on emotional tone, virtue focus, and mystical intensity
-
----
-
-## 🏷️ SECTION 5: Metadata Standards & Tag System
-
-### SMPF Compliance Checklist:
-
-- [x] Anchor Image (visual + fixed per arc or shifting if justified)
-- [x] Primary Reading per arc
-- [x] Secondary Reading per day
-- [x] 1–3 Meditative Points
-- [x] Colloquy
-- [x] Ejaculatory Prayer
-- [x] Resolution
+| Arc Title                                 | Est. Length | Liturgical Season                    | Journey Stage                     | Notes                                                                                                                                                       |
+| ----------------------------------------- | ----------- | ------------------------------------ | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **The Stations of the Cross**             | 14 days     | Lent / Fridays                       | Purification                      | One station per day. Ideal for Lent or Fridays year-round. Affective, bodily, and richly meditative. Can also be adapted to 7 key stations for shorter arc. |
+| **The Seven Last Words**                  | 7 days      | Good Friday                          | Transition (Purification → Union) | Each word of Christ on the Cross becomes a day of reflection. Profoundly personal and theological. Great for Holy Week.                                     |
+| **The Chaplet of Divine Mercy**           | 3–5 days    | Easter Octave / Divine Mercy Sunday  | Illumination → Union              | Could break into segments: mercy, trust, reparation. Anchored in Christ’s revelations to St. Faustina.                                                      |
+| **The Angelus**                           | 3–5 days    | Ordinary Time / Advent               | Illumination                      | Each day could focus on one line of the Angelus. Good for Marian reflection and Incarnation theology.                                                       |
+| **The Regina Caeli**                      | 3 days      | Easter Season                        | Union                             | Joyful antiphon of resurrection. Can serve as a mini-arc or supplement to Glorious Mysteries arc.                                                           |
+| **The Memorare**                          | 1–3 days    | Any                                  | Illumination                      | A short and beautiful Marian arc — rich in trust, intercession, and motherly closeness.                                                                     |
+| **Morning Offering and Night Prayer**     | 3–5 days    | Ordinary Time / Retreat              | Purification → Illumination       | Helps sanctify the structure of the day. Can include spiritual practices for start and end of each day. Practical and unifying.                             |
+| **The Surrender Novena**                  | 9 days      | Retreat / Lent / Any                 | Purification → Union              | Each day corresponds to one of the novena’s daily reflections. Emphasis on abandonment to God’s will.                                                       |
+| **The Litany of Trust**                   | 7 days      | Ordinary Time / Year of Mercy        | Illumination                      | Follows the format used in the Litany of the Sacred Heart arc. Each day unpacks a few invocations. Very affective.                                          |
+| **The Holy Wounds Devotion**              | 5–7 days    | Lent / Fridays                       | Purification                      | Meditations on the five wounds of Christ. Includes reparation, gratitude, and intercession for sinners.                                                     |
+| **The Golden Arrow (Holy Face Devotion)** | 3–5 days    | Lent / Any                           | Illumination                      | Explores themes of reparation, blasphemy, the face of Christ, and Eucharistic intimacy.                                                                     |
+| **The Breastplate of St. Patrick**        | 3–5 days    | March 17 / Spiritual Warfare         | Purification → Illumination       | Daily lines of the prayer become meditation points. Armor of faith arc — trust, protection, Christ at every side.                                           |
+| **The Te Deum and Gloria**                | 3–5 days    | Christmastide / Easter / Solemnities | Union                             | Focused on praise, awe, and glory. Explores themes of heaven, worship, and liturgy. Ends Section 2 with joyful praise.                                      |
+| **Psalms of Contrition (Psalms 6, 32, 38, 51, 102, 130, 143)** | 7 days      | Lent / Confession Preparation | Purification  | Each day focuses on one of the traditional penitential psalms. Deeply affective arc of sorrow, hope, and trust in God’s mercy. Ideal during Lent, retreat, or spiritual renewal. |

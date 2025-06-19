@@ -6,13 +6,11 @@
 
 ### 📜 Anchor Images and Primary Readings
 
-| Day | Anchor Image | Primary Reading |
+| Day | Anchor Image Description | Primary Reading Source |
 |-----|--------------|-----------------|
 | **1–7** | **The Crucified Christ (Face)** You gaze upon the face of Christ crucified. His eyes are closed, His head bowed beneath the crown of thorns. From this suffering Face shines infinite love. Every wound speaks the truth of God’s heart. | 1 John 4:7–21 |
 
 ---
-
-<!-- tags: love, transformation, desire, mercy, identity -->
 
 ### 🕯️ Day 1: God Is Love – Love’s Divine Origin
 
@@ -33,15 +31,16 @@
 
 #### 🗣️ Colloquy
 
-Father, I believe You are love. But I forget this when I feel unworthy. Remind me that love does not begin with me — it begins with You.
+Father, I believe You are love. But I forget this when I feel unworthy. Remind me that love does not begin with me —
+it begins with You.
 
 #### 🔨 Resolution (Optional)
 
 *Today, I will pause before I act — and receive love from God in silence before I offer it to anyone else.*
 
----
-
 <!-- tags: love, transformation, desire, mercy, identity -->
+
+---
 
 ### 🕯️ Day 2: Thirsting for God – Love as Desire
 
@@ -68,9 +67,9 @@ Lord, stir in me a holy longing. Let my thirst for You grow deeper than my thirs
 
 *Today, I will offer every moment of restlessness as a prayer — letting it become desire for God, not distraction.*
 
----
-
 <!-- tags: love, transformation, desire, mercy, identity -->
+
+---
 
 ### 🕯️ Day 3: Loving with All Your Heart – The Call to Total Love
 
@@ -91,15 +90,16 @@ Lord, stir in me a holy longing. Let my thirst for You grow deeper than my thirs
 
 #### 🗣️ Colloquy
 
-Jesus, I want to love You fully, but I hold back. Break open the hidden places of my heart so that nothing is left outside Your love.
+Jesus, I want to love You fully, but I hold back. Break open the hidden places of my heart so that nothing is left
+outside Your love.
 
 #### 🔨 Resolution (Optional)
 
 *Today, I will consciously invite God into one part of my life I usually keep separate — a task, a worry, a relationship.*
 
----
-
 <!-- tags: love, transformation, desire, mercy, identity -->
+
+---
 
 ### 🕯️ Day 4: God Is Love
 
@@ -119,15 +119,16 @@ Jesus, I want to love You fully, but I hold back. Break open the hidden places o
 
 #### 🗣️ Colloquy
 
-> Lord Jesus, let me not merely speak of love, but live in the reality that You *are* love — and You love me first. Remove all fear from my heart, and help me rest in Your perfect love.
+> Lord Jesus, let me not merely speak of love, but live in the reality that You *are* love — and You love me first.
+Remove all fear from my heart, and help me rest in Your perfect love.
 
 #### 🔨 Resolution (Optional)
 
 > I will spend 5 minutes today simply receiving God’s love in silence, not trying to earn or understand it — only receive.
 
----
-
 <!-- tags: love, transformation, desire, mercy, identity -->
+
+---
 
 ### 🕯️ Day 5: The Father Runs to Meet Us
 
@@ -149,15 +150,16 @@ Jesus, I want to love You fully, but I hold back. Break open the hidden places o
 
 #### 🗣️ Colloquy
 
-> Father, I have wandered. And even when I stayed, I did not always love. But You have run to me. You are love. Help me enter Your embrace and never leave it again.
+> Father, I have wandered. And even when I stayed, I did not always love. But You have run to me. You are love. Help me
+enter Your embrace and never leave it again.
 
 #### 🔨 Resolution (Optional)
 
 > I will confess any area where I’ve doubted the Father’s love, and ask Him to run to me today.
 
----
-
 <!-- tags: love, transformation, desire, mercy, identity -->
+
+---
 
 ### 🕯️ Day 6: While We Were Still Sinners
 
@@ -178,15 +180,16 @@ Jesus, I want to love You fully, but I hold back. Break open the hidden places o
 
 #### 🗣️ Colloquy
 
-> Jesus, You died for me while I was still far away. You didn’t wait. You didn’t hesitate. I don’t deserve this — and that is why it is love. Help me receive it with awe.
+> Jesus, You died for me while I was still far away. You didn’t wait. You didn’t hesitate. I don’t deserve this — and
+that is why it is love. Help me receive it with awe.
 
 #### 🔨 Resolution (Optional)
 
 > I will meditate before a crucifix or tabernacle today and say: “You died for me — and I accept Your love.”
 
----
-
 <!-- tags: love, transformation, desire, mercy, identity -->
+
+---
 
 ### 🕯️ Day 7: Abide in My Love
 
@@ -208,7 +211,8 @@ Jesus, I want to love You fully, but I hold back. Break open the hidden places o
 
 #### 🗣️ Colloquy
 
-> Lord Jesus, I want to remain in Your love — not drift in and out. Help me stay, help me dwell, help me abide. Let Your joy be in me, and my joy be full.
+> Lord Jesus, I want to remain in Your love — not drift in and out. Help me stay, help me dwell, help me abide. Let Your
+joy be in me, and my joy be full.
 
 #### 🔨 Resolution (Optional)
   

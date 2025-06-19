@@ -1,0 +1,15 @@
+arc_love_of_god:
+  start_day: 1
+  end_day: 7
+arc_love_of_neighbor:
+  start_day: 8
+  end_day: 14
+arc_holy_fear_of_the_lord:
+  start_day: 15
+  end_day: 21
+arc_passion_of_christ:
+  start_day: 29
+  end_day: 38
+arc_litany_sacred_heart:
+  start_day: 39
+  end_day: 45

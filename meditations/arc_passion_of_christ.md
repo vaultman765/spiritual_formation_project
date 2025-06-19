@@ -6,7 +6,7 @@
 
 ### 📜 Anchor Images and Primary Readings
 
-| Day | Anchor Image | Primary Reading |
+| Day | Anchor Image Description | Primary Reading Source |
 |-----|--------------|-----------------|
 | **1** | **Christ in Gethsemane** Christ kneels beneath twisted olive trees. His face is pressed to the earth, streaked with sweat and blood. The chalice of suffering looms before Him. The disciples sleep nearby. The moonlight casts long shadows as He whispers, “Not My will, but Yours be done.” | Luke 22:39–46 |
 | **2** | **Christ Bound and Tried** Judas kisses Him in the garden. Guards seize Him. He is dragged before the high priest. You see false witnesses, spittle, blows. Peter warms himself by the fire outside. A rooster crows. Jesus remains silent. | Matthew 26:47–68 |
@@ -26,8 +26,6 @@
 **Secondary Readings:**  
 [CCC 612–613](https://www.vatican.va/archive/ENG0015/__P1O.HTM)
 
-<!-- tags: passion, obedience, trust, suffering, lent, silence -->
-
 #### 🎯 Meditative Points
 
 1. He sees every sin — and chooses to drink the cup anyway.  
@@ -40,11 +38,15 @@
 
 #### 🗣️ Colloquy  
 
-Jesus, I have fled from hard things too quickly. But You did not flee the Garden... Make my fear a prayer — and my surrender a love song.
+Jesus, I have fled from hard things too quickly. But You did not flee the Garden... Make my fear a prayer —
+and my surrender a love song.
 
 #### 🔨 Resolution (Optional)
 
-Today I will offer one hidden act of surrender — unspoken, quiet, and done for love — saying interiorly: “Not my will, but Yours be done.”
+Today I will offer one hidden act of surrender — unspoken, quiet, and done for love —
+saying interiorly: “Not my will, but Yours be done.”
+
+<!-- tags: passion, obedience, trust, suffering, lent, silence -->
 
 ---
 
@@ -53,8 +55,6 @@ Today I will offer one hidden act of surrender — unspoken, quiet, and done for
 **Secondary Readings:**  
 [St. Augustine, *Tractate on John - 112*](https://www.newadvent.org/fathers/1701112.htm)  
 [CCC 595–598](https://www.vatican.va/archive/ENG0015/__P1O.HTM)
-
-<!-- tags: betrayal, silence, injustice, patience, mercy, lent -->
 
 #### 🎯 Meditative Points
 
@@ -68,11 +68,14 @@ Today I will offer one hidden act of surrender — unspoken, quiet, and done for
 
 #### 🗣️ Colloquy  
 
-Jesus, You endured every insult, lie, and abandonment — without retaliation. Teach me to bear small wrongs without lashing out. Let me stay close by the fire and not deny You.
+Jesus, You endured every insult, lie, and abandonment — without retaliation. Teach me to bear small wrongs without
+lashing out. Let me stay close by the fire and not deny You.
 
 #### 🔨 Resolution (Optional)
 
 Today I will choose not to defend myself in one moment of misunderstanding — and instead offer it in reparation for betrayal.
+
+<!-- tags: betrayal, silence, injustice, patience, mercy, lent -->
 
 ---
 
@@ -81,8 +84,6 @@ Today I will choose not to defend myself in one moment of misunderstanding — a
 **Secondary Readings:**  
 [St. Alphonsus Liguori, *The Passion and Death of Jesus Christ*, Ch. 2](https://www.saintsbooks.net/books/St.%20Alphonsus%20Maria%20de%20Liguori%20-%20The%20Passion%20and%20the%20Death%20of%20Jesus%20Christ.pdf)  
 [CCC 572–574](https://www.vatican.va/archive/ENG0015/__P1M.HTM)
-
-<!-- tags: suffering, purity, mercy, sacrifice, lent, passion -->
 
 #### 🎯 Meditative Points
 
@@ -96,11 +97,14 @@ Today I will choose not to defend myself in one moment of misunderstanding — a
 
 #### 🗣️ Colloquy  
 
-Jesus, the blood at the pillar was mine — and You offered it freely. Let me not run from sacrifice, but find healing where You were torn.
+Jesus, the blood at the pillar was mine — and You offered it freely. Let me not run from sacrifice,
+but find healing where You were torn.
 
 #### 🔨 Resolution (Optional)
 
 Today I will resist one temptation to self-indulgence — and unite it to Your suffering.
+
+<!-- tags: suffering, purity, mercy, sacrifice, lent, passion -->
 
 ---
 
@@ -112,8 +116,6 @@ St. Bernard of Clairvaux, *Song of Songs*, Sermon 61 (excerpt below)
 - “The crown of thorns is the diadem of mercy. What others intended as mockery, He wore as glory.”
 
 [CCC 440](https://www.vatican.va/archive/ENG0015/__P1F.HTM)
-
-<!-- tags: suffering, humiliation, kingship, mockery, silence, lent -->
 
 #### 🎯 Meditative Points
 
@@ -127,11 +129,14 @@ St. Bernard of Clairvaux, *Song of Songs*, Sermon 61 (excerpt below)
 
 #### 🗣️ Colloquy  
 
-Jesus, mocked King, I often seek crowns of comfort and control. Teach me to wear the crown of thorns with You — not to be honored, but to love.
+Jesus, mocked King, I often seek crowns of comfort and control. Teach me to wear the crown of thorns with You — not to
+be honored, but to love.
 
 #### 🔨 Resolution (Optional)
 
 Today I will resist one urge to seek praise — and silently offer it as a crown of thorns.
+
+<!-- tags: suffering, humiliation, kingship, mockery, silence, lent -->
 
 ---
 
@@ -139,8 +144,6 @@ Today I will resist one urge to seek praise — and silently offer it as a crown
 
 **Secondary Readings:**  
 [St. John Paul II, *Stations of the Cross* (SIXTH STATION)](https://www.vatican.va/news_services/liturgy/2003/documents/ns_lit_doc_20030418_viacrucis_en.html)
-
-<!-- tags: mercy, presence, love, suffering, hidden acts, lent -->
 
 #### 🎯 Meditative Points
 
@@ -154,11 +157,14 @@ Today I will resist one urge to seek praise — and silently offer it as a crown
 
 #### 🗣️ Colloquy  
 
-Jesus, I want to be like Veronica — not solving, not preaching, but present. Let me offer a veil, a silence, a prayer… and receive Your Face in return.
+Jesus, I want to be like Veronica — not solving, not preaching, but present. Let me offer a veil, a silence, a prayer…
+and receive Your Face in return.
 
 #### 🔨 Resolution (Optional)
 
 Today I will console Christ by offering one quiet act of compassion — unseen, unpraised, but full of love.
+
+<!-- tags: mercy, presence, love, suffering, hidden acts, lent -->
 
 ---
 
@@ -166,8 +172,6 @@ Today I will console Christ by offering one quiet act of compassion — unseen, 
 
 **Secondary Readings:**  
 [CCC 619–623](https://www.vatican.va/archive/ENG0015/__P1O.HTM)
-
-<!-- tags: sacrifice, mercy, redemption, silence, atonement, lent -->
 
 #### 🎯 Meditative Points
 
@@ -181,11 +185,14 @@ Today I will console Christ by offering one quiet act of compassion — unseen, 
 
 #### 🗣️ Colloquy  
 
-Jesus, You were lifted up so that I might rise. Teach me not just to mourn You, but to receive the love You poured out at Calvary.
+Jesus, You were lifted up so that I might rise. Teach me not just to mourn You, but to receive the love You poured out
+at Calvary.
 
 #### 🔨 Resolution (Optional)
 
 Today I will meditate for five minutes in silence before a crucifix — not speaking, only receiving.
+
+<!-- tags: sacrifice, mercy, redemption, silence, atonement, lent -->
 
 ---
 
@@ -195,8 +202,6 @@ Today I will meditate for five minutes in silence before a crucifix — not spea
 [CCC 614](https://www.vatican.va/archive/ENG0015/__P1O.HTM)  
 [CCC 2606](https://www.vatican.va/archive/ENG0015/__P93.HTM)  
 [CCC 2842](https://www.vatican.va/archive/ENG0015/__PAB.HTM)
-
-<!-- tags: trust, surrender, last things, death, obedience, lent -->
 
 #### 🎯 Meditative Points
 
@@ -210,11 +215,14 @@ Today I will meditate for five minutes in silence before a crucifix — not spea
 
 #### 🗣️ Colloquy  
 
-Jesus, You gave everything — even Your last breath — in love. Help me to die to self today, and to trust that in surrender, I find life.
+Jesus, You gave everything — even Your last breath — in love. Help me to die to self today, and to trust that in
+surrender, I find life.
 
 #### 🔨 Resolution (Optional)
 
 Today I will surrender one attachment, fear, or distraction — and make it a prayer of trust.
+
+<!-- tags: trust, surrender, last things, death, obedience, lent -->
 
 ---
 
@@ -222,8 +230,6 @@ Today I will surrender one attachment, fear, or distraction — and make it a pr
 
 **Secondary Readings:**  
 [CCC 964, 968–970](https://www.vatican.va/archive/ENG0015/__P2C.HTM)
-
-<!-- tags: Mary, suffering, motherhood, compassion, Church, lent -->
 
 #### 🎯 Meditative Points
 
@@ -237,11 +243,14 @@ Today I will surrender one attachment, fear, or distraction — and make it a pr
 
 #### 🗣️ Colloquy  
 
-Mother, I stand with you beneath the Cross. Teach me to suffer without resisting love. Let me receive the Church into my heart as you did.
+Mother, I stand with you beneath the Cross. Teach me to suffer without resisting love. Let me receive the Church into my
+heart as you did.
 
 #### 🔨 Resolution (Optional)
 
 Today I will embrace one sorrow silently — offering it with Mary for the Church.
+
+<!-- tags: Mary, suffering, motherhood, compassion, Church, lent -->
 
 ---
 
@@ -250,8 +259,6 @@ Today I will embrace one sorrow silently — offering it with Mary for the Churc
 **Secondary Readings:**  
 [CCC 766](https://www.vatican.va/archive/ENG0015/__P27.HTM)  
 [CCC 478](https://www.vatican.va/archive/ENG0015/__P1J.HTM)
-
-<!-- tags: Church, Heart of Christ, blood and water, Eucharist, baptism, lent -->
 
 #### 🎯 Meditative Points
 
@@ -265,11 +272,14 @@ Today I will embrace one sorrow silently — offering it with Mary for the Churc
 
 #### 🗣️ Colloquy  
 
-Jesus, from Your pierced Heart flowed the Church, my Baptism, my salvation. Let me never forget that the Church was born in suffering, silence, and mercy.
+Jesus, from Your pierced Heart flowed the Church, my Baptism, my salvation. Let me never forget that the Church was born
+in suffering, silence, and mercy.
 
 #### 🔨 Resolution (Optional)
 
 Today I will reverence the Church as Christ’s Bride — by guarding my speech and praying for her sanctity.
+
+<!-- tags: Church, Heart of Christ, blood and water, Eucharist, baptism, lent -->
 
 ---
 
@@ -277,8 +287,6 @@ Today I will reverence the Church as Christ’s Bride — by guarding my speech 
 
 **Secondary Readings:**  
 [CCC 630](https://www.vatican.va/archive/ENG0015/__P1P.HTM)
-
-<!-- tags: silence, waiting, Holy Saturday, burial, hope, mystery -->
 
 #### 🎯 Meditative Points
 
@@ -297,3 +305,5 @@ Jesus, as You rested in the tomb, teach me to wait in trust. Let me not rush You
 #### 🔨 Resolution (Optional)
 
 Today I will embrace a moment of quiet — trusting that God acts in the hidden places of my heart.
+
+<!-- tags: silence, waiting, Holy Saturday, burial, hope, mystery -->
