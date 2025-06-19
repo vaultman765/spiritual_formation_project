@@ -34,101 +34,113 @@
 | 28        | 186–193   | Interior Trials and Spiritual Darkness                 | 8         | 🕓    | The Cry of Christ on the Cross             | Psalm 22; Matthew 27:46             | Lent / Good Friday         | 🕓 Planned     |
 | 29        | 194       | The Resurrection and the Promise of Glory (Standalone) | 1         | 🕓    | The Risen Christ                           | John 20:11–18                       | Easter Sunday              | 🕓 Planned     |
 
-## 📚 Roadmap – Section 2: Thematic Arc Library (Unplaced Arcs)
+## 📚 Roadmap – Section 2: Thematic Arc Library (Expanded)
 
-These arcs are not yet part of the main symphonic sequence (Section 1), but remain vital for eventual inclusion.
-Many are seasonal, topical, or under development. Some are brand new additions designed to carry the project toward 1000+
-days.
+These arcs are not yet part of the main symphonic sequence but are essential to the long-term growth of the project.
+Each entry below includes a proposed day length, liturgical placement (if applicable),
+placement within the spiritual stages (Purification, Illumination, Union), and development notes.
 
 ### ✨ Christological & Doctrinal Arcs
 
-The Hidden Years of Christ
-The Parables of Christ
-The Miracles of Christ
-The Transfiguration
-The Kingship of Christ (Christ the King)
-The Name of Jesus (Holy Name Devotion)
-The Sacred Humanity of Christ
-The Ascension
-The Descent of the Holy Spirit
-The Indwelling of the Trinity
-The Church as the Mystical Body
-The Four Last Things – Traditional Breakdown (Death, Judgment, Heaven, Hell)
-The Reality of Hell
-The Divine Attributes
-The Councils of the Church
-The Catechism Journey (Select Doctrinal Segments)
+| Arc Title                                             | Est. Length | Liturgical Season                      | Journey Stage                     | Notes                                                                                                                                                   |
+| ----------------------------------------------------- | ----------- | -------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **The Hidden Years of Christ**                        | 5–7 days    | Christmas / Ordinary Time              | Illumination                      | Focus on humility, obscurity, obedience, and the domestic life of Nazareth. Pairs well with growth in interiority and silent virtue.                    |
+| **The Parables of Christ**                            | 10–14 days  | Ordinary Time                          | Illumination                      | Spiritual treasures of Christ’s teaching. May be broken into sub-themes (mercy, vigilance, Kingdom, etc.). Use as a source of deep personal engagement. |
+| **The Miracles of Christ**                            | 7–10 days   | Ordinary Time / Lent                   | Illumination                      | Exploration of Christ’s divine power and compassion. Reflects the sacramental and healing dimensions of His mission.                                    |
+| **The Transfiguration**                               | 1–3 days    | Lent / August 6                        | Transition (Illumination → Union) | Can be a powerful mini-arc or tied into preparation for deeper contemplation. Highlights glory hidden in suffering.                                     |
+| **The Kingship of Christ (Christ the King)**          | 3–5 days    | Christ the King Sunday                 | Union                             | Short but rich arc affirming Christ’s rule over hearts, nations, and eternity. Possible bridge into eschatological themes.                              |
+| **The Name of Jesus (Holy Name Devotion)**            | 3–5 days    | January                                | Purification → Illumination       | Meditative repetition on the saving and sanctifying power of His Name. Excellent arc for deepening affective prayer.                                    |
+| **The Sacred Humanity of Christ**                     | 7 days      | Ordinary Time                          | Illumination                      | Focused on Christ’s emotions, physicality, gestures, weariness, joy, and love — inviting intimacy and reverence.                                        |
+| **The Ascension**                                     | 1–3 days    | Ascension Thursday                     | Union                             | Liturgical arc of longing and glorification. Can precede Pentecost or link to Christ’s High Priesthood.                                                 |
+| **The Descent of the Holy Spirit**                    | 3–7 days    | Pentecost / Novena of Pentecost        | Transition                        | Ties into gifts and fruits of the Spirit. Can stand alone or lead into Holy Spirit arcs.                                                                |
+| **The Indwelling of the Trinity**                     | 5–7 days    | Ordinary Time                          | Union                             | Advanced contemplative theme. Best placed later in the journey. Rooted in the Divine Indwelling of the baptized soul.                                   |
+| **The Church as the Mystical Body**                   | 5–7 days    | Ordinary Time / Feasts of the Apostles | Illumination                      | Ecclesiological arc connecting individual prayer to the Body of Christ, communion of saints, sacraments.                                                |
+| **The Four Last Things**                              | 4–6 days    | November / Lent                        | Purification                      | Classic sequence: Death, Judgment, Heaven, Hell. Can be paired with “Heaven and Judgment” arc already placed.                                           |
+| **The Reality of Hell**                               | 3–5 days    | Lent                                   | Purification                      | Can serve as an extension of the Four Last Things or stand alone. Meant for sobering reflection, not despair.                                           |
+| **The Divine Attributes**                             | 7 days      | Ordinary Time                          | Illumination                      | Exploration of God’s omnipotence, justice, mercy, immutability, etc. Pairs well with deeper doctrinal arcs.                                             |
+| **The Councils of the Church**                        | 7–10 days   | Ordinary Time                          | Purification → Illumination       | A catechetical arc — each day exploring a major council and its doctrinal fruit (e.g., Nicaea, Trent, Vatican II).                                      |
+| **The Catechism Journey (Select Doctrinal Segments)** | 14–30 days  | Any                                    | Purification → Illumination       | Can be shaped into thematic modules — Creed, Sacraments, Life in Christ, Prayer — as a parallel formation tool.                                         |
 
 ### 🌿 Virtue, Vice, and Moral Formation
 
-The Seven Deadly Sins
-The Seven Contrary Virtues
-Detachment and Poverty of Spirit
-Meekness and Temperance
-Fortitude and Endurance
-Modesty, Chastity, and Purity
-The Examination of Conscience
-Temptation and Resistance
-Mortification and the Interior Cross
-Resentment, Forgiveness, and Healing
-Righteous Anger and Zeal
-The Holy Use of Time
+| Arc Title                                | Est. Length | Liturgical Season               | Journey Stage               | Notes                                                                                                                                                   |
+| ---------------------------------------- | ----------- | ------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **The Seven Deadly Sins**                | 7 days      | Lent                            | Purification                | Each day focuses on one capital sin: Pride, Envy, Wrath, Sloth, Greed, Gluttony, Lust. Designed for personal examination and interior combat.           |
+| **The Seven Contrary Virtues**           | 7 days      | Lent / Ordinary Time            | Purification → Illumination | Complements the deadly sins arc — humility, kindness, patience, diligence, generosity, temperance, chastity. Encourages virtue-building and conversion. |
+| **Detachment and Poverty of Spirit**     | 5–7 days    | Ordinary Time / Lent            | Purification                | Emphasizes renunciation of worldly attachments and interior freedom. Especially fruitful in early formation or in times of spiritual dryness.           |
+| **Meekness and Temperance**              | 3–5 days    | Ordinary Time                   | Illumination                | Focused on balance of passion and peace. Draws from Christ’s own gentleness and strength under pressure.                                                |
+| **Fortitude and Endurance**              | 3–5 days    | Lent / Ordinary Time            | Purification                | Ideal for periods of trial. Meditation on perseverance, suffering, and fidelity.                                                                        |
+| **Modesty, Chastity, and Purity**        | 5–7 days    | Lent / Marian Feasts            | Purification                | Anchored in bodily reverence and integrity. Pairs well with Marian reflection and the theology of the body.                                             |
+| **The Examination of Conscience**        | 3–5 days    | Lent / Retreat                  | Purification                | A method arc — guides the soul in practical daily or weekly examen. Pairs naturally with confession-focused arcs.                                       |
+| **Temptation and Resistance**            | 3–5 days    | Lent / Spiritual Warfare Season | Purification                | Scriptural focus (e.g., Christ in the desert). Guides battle-ready virtue. Links to Ignatian discernment.                                               |
+| **Mortification and the Interior Cross** | 5–7 days    | Lent / Ember Days               | Purification                | Emphasizes penance, fasting, interior death, and mystical detachment. May draw from saints like St. John of the Cross.                                  |
+| **Resentment, Forgiveness, and Healing** | 5–7 days    | Ordinary Time / Year of Mercy   | Purification → Illumination | Focus on the will to forgive, emotional wounds, and divine healing. Deeply practical and affective.                                                     |
+| **Righteous Anger and Zeal**             | 3–5 days    | Ordinary Time                   | Illumination                | Proper ordering of passion to justice and mission. Can draw from Christ cleansing the Temple or prophetic witness.                                      |
+| **The Holy Use of Time**                 | 3–5 days    | New Year / Ordinary Time        | Illumination                | Guides the soul to sanctify time, live intentionally, and see the eternal in the present moment.                                                        |
 
 ### 🗓 Liturgical & Seasonal Arcs
 
-Advent (Full Cycle)
-Lent (Full Cycle)
-Holy Week (Individual Days: Palm Sunday → Holy Saturday)
-Eastertide (Resurrection Themes)
-Corpus Christi
-Sacred Heart Feast Focus
-Christ the King
-First Fridays Devotion
-First Saturdays Devotion
-Ember Days
-Novena of Pentecost
-Liturgical Colors and Symbolism
+| Arc Title                                   | Est. Length | Liturgical Season            | Journey Stage                     | Notes                                                                                                                                          |
+| ------------------------------------------- | ----------- | ---------------------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Advent (Full Cycle)**                     | 7–14 days   | Advent                       | Purification → Illumination       | Themes: longing, preparation, silence, expectation. Could follow the O Antiphons or prophetic promises. Strong Marian tie-in.                  |
+| **Lent (Full Cycle)**                       | 14–40 days  | Lent                         | Purification                      | Can include ashes, fasting, penance, temptation, sin, and mercy. May pull from existing shorter arcs or become a composite arc.                |
+| **Holy Week (Palm Sunday → Holy Saturday)** | 7–8 days    | Holy Week                    | Transition (Purification → Union) | Each day focuses on a distinct liturgical moment. Possible overlap with Passion arc. Very affective and solemn.                                |
+| **Eastertide (Resurrection Themes)**        | 7–10 days   | Easter Season                | Union                             | Glorified Christ, peace, joy, transformation. May overlap with Glorious Mysteries and Ascension arc. Useful follow-up to Lent arcs.            |
+| **Corpus Christi**                          | 3–5 days    | Corpus Christi               | Union                             | Focus on the Eucharist, Real Presence, Eucharistic procession, and adoration. Pairs well with High Priest arc or Anima Christi.                |
+| **Sacred Heart Feast Focus**                | 3–5 days    | June / Sacred Heart Friday   | Union                             | Devotional and affective, especially for reparation. Can supplement or deepen the existing Litany of the Sacred Heart arc.                     |
+| **Christ the King**                         | 1–3 days    | Solemnity of Christ the King | Union                             | Final Sunday of the liturgical year. Meditate on Christ’s eternal kingship and judgment. Can serve as bridge to eschatological themes.         |
+| **First Fridays Devotion**                  | 9 days      | Any                          | Purification → Union              | Based on the 9 First Fridays promise. Each day could unpack one promise and corresponding virtue. Can overlap with Sacred Heart.               |
+| **First Saturdays Devotion**                | 5–7 days    | Any                          | Illumination → Union              | Marian-focused devotion for reparation. Each day can explore one of the 5 blasphemies against Mary and virtues of devotion.                    |
+| **Ember Days**                              | 3–4 days    | Quarterly                    | Purification                      | Penance, fasting, harvest, and vocations. Traditional liturgical discipline. Can be tied to seasonal gratitude and conversion.                 |
+| **Novena of Pentecost**                     | 9 days      | Pentecost                    | Transition (Illumination → Union) | Each day can unpack a gift of the Spirit or scriptural anticipation of the Spirit. Perfect preparation arc.                                    |
+| **Liturgical Colors and Symbolism**         | 3–5 days    | Ordinary Time                | Illumination                      | Rich symbolic arc. Each day can reflect on a liturgical color (violet, white, red, green, rose, gold) and its meaning in the life of the soul. |
 
 ### 💙 Marian Arcs
 
-Marian Apparitions (Fatima, Lourdes, Guadalupe)
-The Seven Sorrows of Mary
-The Dogmas of Mary (Immaculate Conception, Assumption, etc.)
-Mary, Mother of the Church
-Mary and the Apocalypse (Revelation 12)
-Mary and the Holy Spirit
-Marian Titles in the Litany of Loreto
-The Magnificat
-Mary's Fiat as Model of Obedience
-Marian Consecration (Short Series or Companion Series)
+| Arc Title                                                        | Est. Length | Liturgical Season                | Journey Stage               | Notes                                                                                                                                                                               |
+| ---------------------------------------------------------------- | ----------- | -------------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Marian Apparitions (Fatima, Lourdes, Guadalupe)**              | 7–10 days   | Marian Feasts / Ordinary Time    | Illumination → Union        | Each day could explore one apparition: its message, miracle, and Marian invitation to repentance, prayer, and hope. Strong tie to modern spirituality and global Catholic identity. |
+| **The Seven Sorrows of Mary**                                    | 7 days      | September 15 / Lent              | Purification → Illumination | Each day meditates on one of the traditional Sorrows. Deeply affective and unitive. Encourages co-suffering with Mary and devotion to her pierced heart.                            |
+| **The Dogmas of Mary (Immaculate Conception, Assumption, etc.)** | 4–6 days    | Marian Feasts                    | Illumination                | Exploration of defined Marian dogmas: her divine maternity, perpetual virginity, Immaculate Conception, and Assumption. Excellent doctrinal arc with affective fruit.               |
+| **Mary, Mother of the Church**                                   | 3–5 days    | Pentecost Monday / Ordinary Time | Union                       | Focuses on Mary’s maternal mediation and spiritual motherhood of all the faithful. Can pair with Ecclesiology and Trinity arcs.                                                     |
+| **Mary and the Apocalypse (Revelation 12)**                      | 3–5 days    | Advent / Marian Feasts           | Purification → Illumination | Mystical vision of Mary’s role in salvation history. Links biblical typology and eschatological hope.                                                                               |
+| **Mary and the Holy Spirit**                                     | 3–5 days    | Pentecost / Annunciation         | Illumination                | Explores Mary’s role as Spouse of the Holy Spirit, her docility, and her example of interior receptivity.                                                                           |
+| **Marian Titles in the Litany of Loreto**                        | 7–10 days   | Any                              | Illumination                | Each day could reflect on a cluster of titles (e.g., Mother, Virgin, Queen). Beautiful devotional arc with doctrinal roots.                                                         |
+| **The Magnificat**                                               | 1–3 days    | Advent / Visitation              | Union                       | Purely scriptural and affective meditation on Mary's canticle of praise. Suitable as a short arc or deep supplement.                                                                |
+| **Mary’s Fiat as Model of Obedience**                            | 3–5 days    | Annunciation / Lent              | Purification → Illumination | Focused arc on total surrender to God. Ties into humility, discernment, and the Incarnation.                                                                                        |
+| **Marian Consecration (Short Series or Companion)**              | 5–7 days    | May / November                   | Transition                  | Simplified version of Marian consecration for mental prayer. Could accompany a longer St. Louis de Montfort path or stand alone as a preparatory series.                            |
 
 ### 🔥 Mystical & Contemplative Life
 
-The Three Ages of the Interior Life (Garrigou-Lagrange)
-The Dark Night of the Soul (John of the Cross)
-Union with the Divine Will
-Mystical Theology of Teresa of Ávila
-The Interior Castle (Selected Mansions)
-Desert Fathers – Sayings and Themes
-Spiritual Combat (Scupoli, Lorenzo Scupoli)
-The Fire of Divine Love
-Visions of the Saints (St. Faustina, St. Catherine, Bl. Emmerich)
-Holy Indifference and Abandonment
-Discerning Spirits (Ignatian Principles)
+| Arc Title                                                             | Est. Length | Liturgical Season             | Journey Stage                     | Notes                                                                                                                                                                                 |
+| --------------------------------------------------------------------- | ----------- | ----------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **The Three Ages of the Interior Life (Garrigou-Lagrange)**           | 7–10 days   | Any                           | Meta-Arc: All Stages              | Foundational framework for the full journey: Purification, Illumination, Union. Each day could explore one age or transition. Best placed for advanced users or as a map at midpoint. |
+| **The Dark Night of the Soul (St. John of the Cross)**                | 5–7 days    | Lent / Desolation             | Transition (Illumination → Union) | Introduces the passive purification of the senses and spirit. Should be treated reverently and framed to avoid confusion or discouragement.                                           |
+| **Union with the Divine Will**                                        | 3–5 days    | Ordinary Time / Marian Feasts | Union                             | Anchored in Christ’s prayer: “Thy will be done.” Emphasizes abandonment, trust, and joy in divine providence.                                                                         |
+| **Mystical Theology of Teresa of Ávila**                              | 5–7 days    | Any                           | Union                             | Focused on recollection, interior prayer, and the soul’s growth toward spiritual marriage. Can supplement or blend with Interior Castle arc.                                          |
+| **The Interior Castle (Selected Mansions)**                           | 7–10 days   | Ordinary Time                 | Transition → Union                | Each day could explore one or two “mansions” — spiritual stages of development. Especially fruitful for long-term practitioners.                                                      |
+| **Desert Fathers – Sayings and Themes**                               | 5–7 days    | Lent / Retreat                | Purification → Illumination       | Wisdom of the early ascetics. Pithy sayings, radical detachment, spiritual warfare. Strong source of both humor and challenge.                                                        |
+| **Spiritual Combat (Scupoli)**                                        | 5–7 days    | Lent                          | Purification                      | A manual for the interior battle. Extremely practical: humility, distrust of self, trust in God, vigilance.                                                                           |
+| **The Fire of Divine Love**                                           | 3–5 days    | Pentecost / Any               | Union                             | Explores the soul’s inflaming with charity and desire for God. Especially affective and poetic.                                                                                       |
+| **Visions of the Saints (St. Faustina, St. Catherine, Bl. Emmerich)** | 5–7 days    | Ordinary Time / Lent          | Transition → Union                | Selected mystical visions that align with sound doctrine and foster affective prayer. Emphasis on union, intercession, and redemptive suffering.                                      |
+| **Holy Indifference and Abandonment**                                 | 3–5 days    | Ordinary Time                 | Union                             | Rooted in St. Ignatius and Fr. de Caussade. Theme: complete trust and indifference to health, success, or suffering — only God's will.                                                |
+| **Discerning Spirits (Ignatian Principles)**                          | 5–7 days    | Retreat / Lent                | Purification → Illumination       | Daily principles for identifying spiritual movements. Clear, helpful, and widely usable. Great primer for retreats.                                                                   |
 
 ### 📿 Devotional Arcs and Prayers
 
-The Stations of the Cross
-The Seven Last Words
-The Chaplet of Divine Mercy
-The Angelus
-The Regina Caeli
-The Memorare
-Morning Offering and Night Prayer
-The Surrender Novena
-The Litany of Trust
-The Holy Wounds Devotion
-The Golden Arrow (Holy Face Devotion)
-The Breastplate of St. Patrick
-The Te Deum and Gloria
-Psalms of Contrition (Psalms 6, 32, 38, 51, 102, 130, 143)
+| Arc Title                                 | Est. Length | Liturgical Season                    | Journey Stage                     | Notes                                                                                                                                                       |
+| ----------------------------------------- | ----------- | ------------------------------------ | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **The Stations of the Cross**             | 14 days     | Lent / Fridays                       | Purification                      | One station per day. Ideal for Lent or Fridays year-round. Affective, bodily, and richly meditative. Can also be adapted to 7 key stations for shorter arc. |
+| **The Seven Last Words**                  | 7 days      | Good Friday                          | Transition (Purification → Union) | Each word of Christ on the Cross becomes a day of reflection. Profoundly personal and theological. Great for Holy Week.                                     |
+| **The Chaplet of Divine Mercy**           | 3–5 days    | Easter Octave / Divine Mercy Sunday  | Illumination → Union              | Could break into segments: mercy, trust, reparation. Anchored in Christ’s revelations to St. Faustina.                                                      |
+| **The Angelus**                           | 3–5 days    | Ordinary Time / Advent               | Illumination                      | Each day could focus on one line of the Angelus. Good for Marian reflection and Incarnation theology.                                                       |
+| **The Regina Caeli**                      | 3 days      | Easter Season                        | Union                             | Joyful antiphon of resurrection. Can serve as a mini-arc or supplement to Glorious Mysteries arc.                                                           |
+| **The Memorare**                          | 1–3 days    | Any                                  | Illumination                      | A short and beautiful Marian arc — rich in trust, intercession, and motherly closeness.                                                                     |
+| **Morning Offering and Night Prayer**     | 3–5 days    | Ordinary Time / Retreat              | Purification → Illumination       | Helps sanctify the structure of the day. Can include spiritual practices for start and end of each day. Practical and unifying.                             |
+| **The Surrender Novena**                  | 9 days      | Retreat / Lent / Any                 | Purification → Union              | Each day corresponds to one of the novena’s daily reflections. Emphasis on abandonment to God’s will.                                                       |
+| **The Litany of Trust**                   | 7 days      | Ordinary Time / Year of Mercy        | Illumination                      | Follows the format used in the Litany of the Sacred Heart arc. Each day unpacks a few invocations. Very affective.                                          |
+| **The Holy Wounds Devotion**              | 5–7 days    | Lent / Fridays                       | Purification                      | Meditations on the five wounds of Christ. Includes reparation, gratitude, and intercession for sinners.                                                     |
+| **The Golden Arrow (Holy Face Devotion)** | 3–5 days    | Lent / Any                           | Illumination                      | Explores themes of reparation, blasphemy, the face of Christ, and Eucharistic intimacy.                                                                     |
+| **The Breastplate of St. Patrick**        | 3–5 days    | March 17 / Spiritual Warfare         | Purification → Illumination       | Daily lines of the prayer become meditation points. Armor of faith arc — trust, protection, Christ at every side.                                           |
+| **The Te Deum and Gloria**                | 3–5 days    | Christmastide / Easter / Solemnities | Union                             | Focused on praise, awe, and glory. Explores themes of heaven, worship, and liturgy. Ends Section 2 with joyful praise.                                      |
+| **Psalms of Contrition (Psalms 6, 32, 38, 51, 102, 130, 143)** | 7 days      | Lent / Confession Preparation | Purification  | Each day focuses on one of the traditional penitential psalms. Deeply affective arc of sorrow, hope, and trust in God’s mercy. Ideal during Lent, retreat, or spiritual renewal. |
