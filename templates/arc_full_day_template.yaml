@@ -1,6 +1,7 @@
 # === Canonical Meditation Day Template ===
-# Use for each file in /metadata/meditations/day_XXX.yaml
+# Use for each file in /metadata/meditations/day_XXXX.yaml
 # This serves as the full source of truth for both metadata and content
+# All yaml keys must be in this order with the exact same names. No assumptions or other keys are allowed.
 
 master_day_number: "" # Global day number from the journey (not arc-internal). This will come from the roadmap file and populate the _index_by_arc.yaml file. Used if taking master meditaion journey.
 arc_day_number: "" # Day number within the arc
