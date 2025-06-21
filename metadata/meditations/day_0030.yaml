@@ -1,0 +1,43 @@
+master_day_number: 30
+arc_day_number: 2
+arc_id: arc_passion_of_christ
+arc_title: The Passion of Christ – Events and Interior Sufferings
+arc_number: 5
+day_title: Christ Bound and Tried – The Silent Lamb
+meditation_filename: arc_passion_of_christ.md
+anchor_image: "**Christ Bound and Tried** Judas kisses Him in the garden. Guards seize Him. He is dragged before the high priest. You see false witnesses, spittle, blows. Peter warms himself by the fire outside. A rooster crows. Jesus remains silent."
+primary_reading:
+  title: Matthew 26:47–68
+  reference: ""
+  url: ""
+secondary_reading:
+  - title: St. Augustine on the Gospel of John
+    reference: Tractate 112
+    url: https://www.newadvent.org/fathers/1701112.htm
+  - title: Catechism of the Catholic Church
+    reference: 595–598
+    url: https://www.vatican.va/archive/ENG0015/__P1O.HTM
+meditative_points:
+  - Judas betrays Him with a kiss — and Christ still calls him "friend."
+  - False witnesses rise — and He speaks not a word in defense.
+  - Peter denies Him — and He turns and looks at him with love.
+ejaculatory_prayer: Jesus, silent before Your accusers, speak peace into my unrest.
+colloquy: Jesus, You endured every insult, lie, and abandonment — without retaliation. Teach me to bear small wrongs without lashing out. Let me stay close by the fire and not deny You.
+resolution: Today I will choose not to defend myself in one moment of misunderstanding — and instead offer it in reparation for betrayal.
+tags:
+  thematic:
+    - passion of christ
+    - betrayal
+  doctrinal:
+    - sin
+  virtue:
+    - patience
+    - humility
+    - meekness
+  mystical:
+    - silence
+  liturgical:
+    - lent
+    - holy week
+  typological: []
+  structural: []

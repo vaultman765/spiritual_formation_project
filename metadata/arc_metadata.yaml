@@ -8,31 +8,31 @@
   anchor_image: Crucified Christ (Face)
   primary_reading: "1 John 4:7\u201321"
   tags:
-  - abiding in love
-  - catechism
-  - charity
-  - desire for god
-  - divine indwelling
-  - divine initiative
-  - divine love
-  - fixed anchor image
-  - gift of self
-  - humility
-  - joy
-  - longing for union
-  - love of god
-  - loving response
-  - meditations on divine charity
-  - ordinary time
-  - origin of charity
-  - redemption
-  - surrender
-  - the face of the crucified
-  - the father running to meet the prodigal
-  - the pierced heart
-  - theological + affective blend
-  - transforming grace
-  - trinity
+    - abiding in love
+    - catechism
+    - charity
+    - desire for god
+    - divine indwelling
+    - divine initiative
+    - divine love
+    - fixed anchor image
+    - gift of self
+    - humility
+    - joy
+    - longing for union
+    - love of god
+    - loving response
+    - meditations on divine charity
+    - ordinary time
+    - origin of charity
+    - redemption
+    - surrender
+    - the face of the crucified
+    - the father running to meet the prodigal
+    - the pierced heart
+    - theological + affective blend
+    - transforming grace
+    - trinity
 - arc_id: arc_love_of_neighbor
   title: Love of Neighbor
   day_count: 7
@@ -43,18 +43,18 @@
   anchor_image: "Jesus washing the disciples\u2019 feet"
   primary_reading: John 13
   tags:
-  - charity
-  - fidelity
-  - forgiveness
-  - humility
-  - mercy
-  - mystical body
-  - new commandment
-  - ordinary time
-  - service
-  - spiritual childhood
-  - union
-  - washing of feet
+    - charity
+    - fidelity
+    - forgiveness
+    - humility
+    - mercy
+    - mystical body
+    - new commandment
+    - ordinary time
+    - service
+    - spiritual childhood
+    - union
+    - washing of feet
 - arc_id: arc_holy_fear_of_the_lord
   title: The Holy Fear of the Lord
   day_count: 7
@@ -65,15 +65,15 @@
   anchor_image: The lightning at Mt. Sinai
   primary_reading: Proverbs 9:10, Exodus 20
   tags:
-  - awe
-  - divine presence
-  - fear of the Lord
-  - humility
-  - judgment
-  - obedience
-  - purification
-  - reverence
-  - vigilance
+    - awe
+    - divine presence
+    - fear of the Lord
+    - humility
+    - judgment
+    - obedience
+    - purification
+    - reverence
+    - vigilance
 - arc_id: arc_litany_sacred_heart
   title: Litany of the Sacred Heart
   day_count: 16
@@ -84,30 +84,30 @@
   anchor_image: Sacred Heart (enthroned, radiant)
   primary_reading: Litany of the Sacred Heart
   tags:
-  - blood and water from christ's side
-  - desire for union with christ
-  - devotion to the heart of jesus
-  - feast of the sacred heart
-  - first fridays
-  - humility
-  - incarnation
-  - invitation to trust
-  - june
-  - line-by-line meditation
-  - litany
-  - love
-  - love of jesus
-  - meekness
-  - mercy
-  - obedience
-  - pierced heart
-  - reparation
-  - sacred heart
-  - temple veil torn
-  - tenderness
-  - unified anchor image
-  - union with christ
-  - wounded love
+    - blood and water from christ's side
+    - desire for union with christ
+    - devotion to the heart of jesus
+    - feast of the sacred heart
+    - first fridays
+    - humility
+    - incarnation
+    - invitation to trust
+    - june
+    - line-by-line meditation
+    - litany
+    - love
+    - love of jesus
+    - meekness
+    - mercy
+    - obedience
+    - pierced heart
+    - reparation
+    - sacred heart
+    - temple veil torn
+    - tenderness
+    - unified anchor image
+    - union with christ
+    - wounded love
 - arc_id: arc_passion_of_christ
   title: "Passion of Christ \u2013 Events & Sufferings"
   day_count: 10
@@ -118,33 +118,33 @@
   anchor_image: "Gethsemane \u2192 Cross (shifting)"
   primary_reading: Passion Narratives (John/Matthew)
   tags:
-  - abandonment
-  - atonement
-  - betrayal and fidelity
-  - bronze serpent lifted up
-  - christ's humanity and divinity
-  - compassion
-  - fortitude
-  - good friday
-  - holy week
-  - humility
-  - interior agony
-  - isaac carrying the wood
-  - mercy in suffering
-  - multi-day sequence
-  - mystery of redemptive silence
-  - narrative gospel meditation
-  - obedience
-  - obedience unto death
-  - paschal lamb
-  - paschal mystery
-  - patience
-  - redemptive suffering
-  - rotating anchor images
-  - sacrificial love
-  - salvation through the cross
-  - silence of god
-  - spiritual darkness
-  - stations of the cross
-  - suffering servant
-  - union with christ
+    - abandonment
+    - atonement
+    - betrayal and fidelity
+    - bronze serpent lifted up
+    - christ's humanity and divinity
+    - compassion
+    - fortitude
+    - good friday
+    - holy week
+    - humility
+    - interior agony
+    - isaac carrying the wood
+    - mercy in suffering
+    - multi-day sequence
+    - mystery of redemptive silence
+    - narrative gospel meditation
+    - obedience
+    - obedience unto death
+    - paschal lamb
+    - paschal mystery
+    - patience
+    - redemptive suffering
+    - rotating anchor images
+    - sacrificial love
+    - salvation through the cross
+    - silence of god
+    - spiritual darkness
+    - stations of the cross
+    - suffering servant
+    - union with christ
