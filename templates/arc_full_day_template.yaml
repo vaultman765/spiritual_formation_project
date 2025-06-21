@@ -3,6 +3,8 @@
 # This serves as the full source of truth for both metadata and content
 # All yaml keys must be in this order with the exact same names. No assumptions or other keys are allowed.
 
+# RULE: Do NOT reconstruct content. Always re-open the uploaded .md file for source material. If file is missing, ASK — do not guess.
+
 master_day_number: "" # Global day number from the journey (not arc-internal). This will come from the roadmap file and populate the _index_by_arc.yaml file. Used if taking master meditaion journey.
 arc_day_number: "" # Day number within the arc
 arc_id: "" # Must match arc_metadata.yaml + arc_tags/*.yaml
