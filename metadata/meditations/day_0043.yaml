@@ -1,0 +1,51 @@
+master_day_number: 43
+arc_day_number: 5
+arc_id: arc_litany_sacred_heart
+arc_title: Litany of the Sacred Heart
+arc_number: 6
+day_title: Heart of Jesus, Abyss of All Virtues
+meditation_filename: arc_litany_sacred_heart.md
+anchor_image: "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy. His hands are extended in blessing, and His robe gleams like light. But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love. It is not a wound of shame, but a throne of glory. He says nothing. He simply shows you the place where divine love became visible. Each title of the Litany is real here. You gaze at the Heart… and see eternity."
+primary_reading:
+  title: Litany of the Sacred Heart of Jesus
+  reference:
+  url:
+secondary_reading:
+  - title: Matthew 5:1–12
+    reference:
+    url:
+  - title: Catechism of the Catholic Church
+    reference: 1803–1832
+    url: https://www.vatican.va/archive/ENG0015/__P64.HTM
+  - title: St. Francis de Sales, *Introduction to the Devout Life*
+    reference: Part III Ch. 1–2
+    url: /documents/readings/St_Francis_de_Sales_Introduction_to_the_Devout_Life.pdf
+meditative_points:
+  - The Heart of Jesus as the wellspring of all the virtues
+  - Humility, meekness, patience — not as tactics, but as His own Heart’s texture
+  - The abyss of His virtue reveals the shallowness of mine
+ejaculatory_prayer: Heart of Jesus, abyss of all virtue, deepen my poverty and purify my desire.
+colloquy: Jesus, teach me to stop imitating You superficially and to begin desiring Your virtues to be born in me — not to impress, but to love. Show me how much I need You just to be gentle.
+resolution: Today, I will choose one virtue I usually avoid — and ask Jesus to live it in me rather than perform it myself.
+tags:
+  thematic:
+    - sacred heart
+    - transformation
+  doctrinal:
+    - virtues
+  virtue:
+    - charity
+    - faith
+    - fortitude
+    - hope
+    - justice
+    - prudence
+    - temperance
+  mystical: []
+  liturgical:
+    - june
+    - ordinary time
+    - feast of the sacred heart
+  typological: []
+  structural:
+    - litany meditation

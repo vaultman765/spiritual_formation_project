@@ -1,6 +1,7 @@
 thematic:
   - abandonment
   - action
+  - adoration
   - betrayal
   - betrayal and fidelity
   - birth of the church
@@ -43,6 +44,7 @@ thematic:
   - redemptive suffering
   - reparation
   - return to the father
+  - sacred heart
   - sacrifice
   - sacrificial love
   - salvation through the cross
@@ -62,6 +64,7 @@ doctrinal:
   - catechism
   - christ's humanity and divinity
   - confession
+  - christology
   - church
   - commandments
   - communion
@@ -72,6 +75,7 @@ doctrinal:
   - devotion to the heart of jesus
   - eucharist
   - grace
+  - hypostatic union
   - incarnation
   - judgment
   - kingship of christ
@@ -92,10 +96,12 @@ doctrinal:
   - salvation
   - sanctifying grace
   - sin
+  - sonship of christ
   - spiritual rest
   - suffering servant
   - trinity
   - truth
+  - virtues
   - vocation
   - works of mercy
   - worship
@@ -110,16 +116,19 @@ virtue:
   - honesty
   - humility
   - joy
+  - justice
   - love
   - meekness
   - mercy
   - obedience
   - patience
   - perseverance
+  - prudence
   - purity
   - service
   - solidarity
   - surrender
+  - temperance
   - trust
   - vigilance
 mystical:
@@ -137,6 +146,7 @@ mystical:
   - divine presence
   - divine silence
   - divine will
+  - docility
   - healing
   - hidden acts
   - inner watchfulness
