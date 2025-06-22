@@ -1,51 +1,47 @@
 # === Canonical Meditation Day Template ===
-# Use for each file in /metadata/meditations/day_XXX.yaml
+# Use for each file in /metadata/meditations/day_XXXX.yaml
 # This serves as the full source of truth for both metadata and content
+# All yaml keys must be in this order with the exact same names. No assumptions or other keys are allowed.
 
-master_day_number: ""  # Global day number from the journey (not arc-internal). This will come from the roadmap file and populate the _index_by_arc.yaml file. Used if taking master meditaion journey.
-arc_day_number: ""  # Day number within the arc
-arc_id: ""  # Must match arc_metadata.yaml + arc_tags/*.yaml
-arc_title: ""  # Full title of the arc, e.g. "The Love of God" or "Litany of the Sacred Heart"
-arc_number: ""  # Arc number from the roadmap file, used to populate the _index_by_arc.yaml file.
-day_title: ""  # Title of the meditation day, e.g. "The Love of God"
-meditation_filename: ""  # The arc .md file this day will/does correspond to (e.g. arc_love_of_neighbor.md)
+# RULE: If formatting a yaml file from markdown, DO NOT reconstruct content. Always re-open the uploaded .md file for source material. If file is missing, ASK — do not guess.
 
-anchor_image: ""  # A vivid image (mental composition) tied directly to the primary reading. Generally a single image across whole arc, but not always.
-
+master_day_number: "" # Global day number from the journey (not arc-internal). This will come from the roadmap file and populate the _index_by_arc.yaml file. Used if taking master meditaion journey.
+arc_day_number: "" # Day number within the arc
+arc_id: "" # Must match arc_metadata.yaml + arc_tags/*.yaml
+arc_title: "" # Full title of the arc, e.g. "The Love of God" or "Litany of the Sacred Heart"
+arc_number: "" # Arc number from the roadmap file, used to populate the _index_by_arc.yaml file.
+day_title: "" # Title of the meditation day, e.g. "The Love of God"
+meditation_filename: "" # The arc .md file this day will/does correspond to (e.g. arc_love_of_neighbor.md)
+anchor_image: "" # A vivid image (mental composition) tied directly to the primary reading. Generally a single image across whole arc, but not always.
 primary_reading:
-  title: ""  # Full label for display (e.g. "John 13:1–17")
-  reference: ""   # Optional: Unless the title and reference differ (E.g. "CCC 2842–2845")
-  url: ""  # Only used for non-Bible sources (e.g. CCC, encyclicals)
-
-secondary_reading: # May be one or many readings (from saints, CCC, etc.)
-  - title:  # E.g. "Catechism of the Catholic Church"
-    reference: # Optional: Unless the title and reference differ (E.g. "CCC 2842–2845")
-    url:   # Only used for non-Bible sources (e.g. CCC, encyclicals) - URL or PDF link
-
+  title: "" # Full label for display (e.g. "John 13:1–17")
+  reference: "" # Optional: Use for if the reading is a subset of the title (E.g. title: Catechism of the Catholic Church. reference: "2842–2845")
+  url: "" # Only used for non-Bible sources (e.g. CCC, encyclicals)
+secondary_reading: # May be one or many readings (from Bible, saints, CCC, church documents etc.)
+  - title: "" # E.g. "Catechism of the Catholic Church"
+    reference: "" # Optional: Use for if the reading is a subset of the title (E.g. title: Catechism of the Catholic Church. reference: "2842–2845")
+    url: "" # Only used for non-Bible sources (e.g. CCC, encyclicals, etc) - URL or PDF link
 meditative_points:
-  - ""  # 1–3 narrow points that flow directly from the primary reading + image. Generally a quote or phrase from the primary reading.
-  - ""  # Avoid vague or abstract reflections
-  - ""  # Lead the soul toward affective engagement
-
-ejaculatory_prayer: ""  # Required short prayer which is to serve during the day to briefly bring to mind the entire meditation
+  - "" # 1–3 narrow points that flow directly from the primary reading + image. Generally a quote or phrase from the primary reading.
+  - "" # Avoid vague or abstract reflections
+  - "" # Lead the soul toward affective engagement
+ejaculatory_prayer:
+  "" # Required short prayer which is to serve during the day to briefly bring to mind the entire meditation
   # E.g. "Jesus, I trust in you." or "Lord, teach me to love as you love."
-
 colloquy: |
   # A personal, heartfelt prayer addressed to Jesus Christ, the Blessed Virgin Mary, or the some other saint.
   # This is a free-form prayer that flows from the meditative points above.
-
-
 resolution: "" # Practical or spiritual action arising from the day’s meditation
-
 tags: # These are tags that are used to categorize the meditation day. They will flow from the day's content.
-      # They generally match the tags in metadata/tag_bank.yaml. In some cases new tags can be created, but they must be added to the tag bank for consistency.
-  thematic: []      # e.g., ["Love of God", "Love of Neighbor"]
-  doctrinal: []     # e.g., ["Redemptive Suffering"]
-  virtue: []        # e.g., ["Obedience"]
-  mystical: []      # e.g., ["Union with Christ"]
-  liturgical: []    # e.g., ["Lent", "Holy Week"]
-  typological: []   # e.g., ["Isaac as type of Christ"]
-  structural: []    # e.g., ["Litany Meditation"]
+  # They generally match the tags in metadata/tag_bank.yaml. In some cases new tags can be created, but they must be added to the tag bank for consistency.
+  # Keep all lowercase
+  thematic: [] # e.g., ["Love of God", "Love of Neighbor"]
+  doctrinal: [] # e.g., ["Redemptive Suffering"]
+  virtue: [] # e.g., ["Obedience"]
+  mystical: [] # e.g., ["Union with Christ"]
+  liturgical: [] # e.g., ["Lent", "Holy Week"]
+  typological: [] # e.g., ["Isaac as type of Christ"]
+  structural: [] # e.g., ["Litany Meditation"]
 
 # === Optional future fields (for UI, automation, voice tools, etc.) ===
 
