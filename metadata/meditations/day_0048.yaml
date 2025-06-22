@@ -1,0 +1,52 @@
+master_day_number: 48
+arc_day_number: 10
+arc_id: arc_litany_sacred_heart
+arc_title: Litany of the Sacred Heart
+arc_number: 6
+day_title: Heart of Jesus, King and Center of All Hearts
+meditation_filename: arc_litany_sacred_heart.md
+anchor_image: "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy. His hands are extended in blessing, and His robe gleams like light. But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love. It is not a wound of shame, but a throne of glory. He says nothing. He simply shows you the place where divine love became visible. Each title of the Litany is real here. You gaze at the Heart… and see eternity."
+primary_reading:
+  title: Litany of the Sacred Heart of Jesus
+  reference:
+  url:
+secondary_reading:
+  - title: Luke 2:25–35
+    reference:
+    url:
+  - title: Catechism of the Catholic Church
+    reference: 478
+    url: https://www.vatican.va/archive/ENG0015/__P1J.HTM
+  - title: Catechism of the Catholic Church
+    reference: 766
+    url: https://www.vatican.va/archive/ENG0015/__P27.HTM
+  - title: Catechism of the Catholic Church
+    reference: 2669
+    url: https://www.vatican.va/archive/ENG0015/__P9F.HTM
+  - title: Pope Pius XII, *Haurietis Aquas*
+    reference: 87–95
+    url: https://www.vatican.va/content/pius-xii/en/encyclicals/documents/hf_p-xii_enc_15051956_haurietis-aquas.html
+meditative_points:
+  - Christ’s Heart reigns not through domination, but through self-offering
+  - To enthrone His Heart is to open mine without defense
+ejaculatory_prayer: Heart of Jesus, King of hearts, reign in me.
+colloquy: Jesus, be King not just of my thoughts, but of the places I hide. Rule over my resentment, my fears, my hunger to control. You gave me Your Heart — here is mine.
+resolution: 'Today I will let go of control in one small area — and repeat: "Jesus, reign here."'
+tags:
+  thematic:
+    - sacred heart
+  doctrinal:
+    - kingship of christ
+  virtue:
+    - surrender
+    - trust
+  mystical:
+    - spiritual enthronement
+  liturgical:
+    - presentation
+    - june
+    - ordinary time
+    - feast of the sacred heart
+  typological: []
+  structural:
+    - litany meditation
