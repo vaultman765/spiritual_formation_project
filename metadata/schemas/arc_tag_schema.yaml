@@ -1,0 +1,53 @@
+# === Arc Tag Schema ===
+# This schema defines the structure for arc tags in a YAML file.
+# It is not JSON Schema — it’s a documentation + developer schema for our team and tooling
+arc_id: str (required) - Unique ID for the arc, must match arc_id in corresponding day_wxyx.yaml and arc_tags/*.yaml files. Generally in snake_case format with form arc_<arc_name>. For example, arc_love_of_neighbor.
+arc_title: str (required) - Full title of the arc (e.g., "The Love of God" or "Litany of the Sacred Heart").
+arc_number: int (required) - Arc number from the roadmap, used to populate the _index_by_arc.yaml.
+day_count: int (required) - Total number of days in the arc.
+master_day_range: # dict (required) - Range of days in the arc, with start and end keys.
+  start: int (required) - Starting day number of the arc.
+  end: int (required) - Ending day number of the arc.
+tags:
+  thematic: # array (required) - List of thematic tags for the arc.
+    type: array
+    description: List of thematic tags for the arc.
+    items:
+      type: string
+    minItems: 0
+  doctrinal: # array (required) - List of doctrinal tags for the arc.
+    type: array
+    description: List of doctrinal tags for the arc.
+    items:
+      type: string
+    minItems: 0
+  virtue: # array (required) - List of virtue tags for the arc.
+    type: array
+    description: List of virtue tags for the arc.
+    items:
+      type: string
+    minItems: 0
+  mystical: # array (required) - List of mystical tags for the arc.
+    type: array
+    description: List of mystical tags for the arc.
+    items:
+      type: string
+    minItems: 0
+  liturgical: # array (required) - List of liturgical tags for the arc.
+    type: array
+    description: List of liturgical tags for the arc.
+    items:
+      type: string
+    minItems: 0
+  typological: # array (required) - List of typological tags for the arc.
+    type: array
+    description: List of typological tags for the arc.
+    items:
+      type: string
+    minItems: 0
+  structural: # array (required) - List of structural tags for the arc.
+    type: array
+    description: List of structural tags for the arc.
+    items:
+      type: string
+    minItems: 0

@@ -1,0 +1,28 @@
+# === Arc Metadata Schema ===
+# This schema defines the structure for arc metadata in a YAML file.
+# It is not JSON Schema — it’s a documentation + developer schema for our team and tooling
+- arc_id: str (required) - Unique ID for the arc, must match arc_id in corresponding day_wxyx.yaml and arc_tags/*.yaml files. Generally in snake_case format with form arc_<arc_name>. For example, arc_love_of_neighbor.
+  arc_title: str (required) - Full title of the arc (e.g., "The Love of God" or "Litany of the Sacred Heart").
+  arc_number: int (required) - Arc number from the roadmap, used to populate the _index_by_arc.yaml.
+  day_count: int (required) - Total number of days in the arc.
+  master_day_range: # dict (required) - Range of days in the arc, with start and end keys.
+    start: int (required) - Starting day number of the arc.
+    end: int (required) - Ending day number of the arc.
+  anchor_image: # array (required)
+    type: array
+    description: A vivid image (mental composition) tied directly to the primary reading. Generally a single image across the whole arc, but not always. Use list format to allow for multiple images.
+    items:
+      type: string
+    minItems: 1
+  primary_reading: # array (required)
+    type: array
+    description: Primary source for the meditation. Generally a single reading across the whole arc, but not always. Use list format to allow for multiple readings.
+    items:
+      type: string
+    minItems: 1
+  tags: # array (required)
+    type: array
+    description: List of tags that describe the arc. These are the combination of all the tags used in the meditation days of the arc, in alphabetical order, lowercase, and without duplicates. The will match tags in metadata/tag_bank.yaml. Generally, there will be many.
+    items:
+      type: string
+    minItems: 1
