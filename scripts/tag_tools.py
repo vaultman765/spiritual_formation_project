@@ -23,6 +23,7 @@ ARC_METADATA_PATH = PROJECT_ROOT / "metadata" / "arc_metadata.yaml"
 ARC_TAGS_DIR = PROJECT_ROOT / "metadata" / "arc_tags"
 MEDITATIONS_DIR = PROJECT_ROOT / "meditations"
 
+
 class TagBank:
     """
     Manages the canonical tag bank YAML file, including loading, saving,
@@ -93,6 +94,7 @@ class TagBank:
         if tag not in self.tags.get(category, []):
             self.tags.setdefault(category, []).append(tag)
 
+
 class TagFileHandler(ABC):
     """
     Abstract base class for tag file operations.
@@ -107,6 +109,7 @@ class TagFileHandler(ABC):
 
     def delete_tag(self, tag: str) -> None:
         pass
+
 
 class YamlTagFileHandler(TagFileHandler):
     """
@@ -185,6 +188,7 @@ class YamlTagFileHandler(TagFileHandler):
 
         return changed
 
+
 class MarkdownTagFileHandler(TagFileHandler):
     """
     Handles updating tags in Markdown files using HTML comment tag blocks.
@@ -206,12 +210,13 @@ class MarkdownTagFileHandler(TagFileHandler):
             updated = re.sub(rf"(<!-- tags:.*?){safe_old}", rf"\1{safe_new}", text)
             if updated != text:
                 file_path.write_text(updated)
-        
+
     def delete_tag(self, tag: str) -> None:
         """
         Delete a tag by replacing it with an empty string.
         """
         self.update_tag(tag, "")
+
 
 class TagSynchronizer:
     """
@@ -236,6 +241,7 @@ class TagSynchronizer:
         """
         for handler in self.handlers:
             handler.delete_tag(tag)
+
 
 class TagScanner:
     """

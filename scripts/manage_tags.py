@@ -8,11 +8,13 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 ARC_TAGS_DIR = PROJECT_ROOT / "metadata" / "arc_tags"
 MEDITATIONS_DIR = PROJECT_ROOT / "meditations"
 
+
 def add_tag(tag, category):
     tagbank = TagBank()
     tagbank.add_tag(tag, category)
     tagbank.save()
     print(f"✅ Added tag '{tag}' to category '{category}'")
+
 
 def rename_tag(old, new):
     tagbank = TagBank()
@@ -32,6 +34,7 @@ def rename_tag(old, new):
     TagSynchronizer(handlers).update_tag(old, new)
     print("✅ Renamed tag across all files")
 
+
 def delete_tag(tag):
     tagbank = TagBank()
     tagbank.delete_tag(tag)
@@ -48,6 +51,7 @@ def delete_tag(tag):
     TagSynchronizer(handlers).delete_tag(tag)
     print("✅ Deleted tag from all files")
 
+
 def validate_tags():
     tagbank = TagBank()
     scanner = TagScanner(tagbank)
@@ -61,6 +65,7 @@ def validate_tags():
             print(f" - {tag}")
     else:
         print("✅ All tags used are valid")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Tag CLI using tag_tools.py")

@@ -2,6 +2,7 @@ import yaml
 from pathlib import Path
 from typing import Any
 
+
 def load_yaml(file_path: Path) -> Any:
     try:
         with open(file_path, "r", encoding="utf-8") as f:
@@ -12,6 +13,7 @@ def load_yaml(file_path: Path) -> Any:
     except yaml.YAMLError as e:
         print(f"YAML error in {file_path}: {e}")
         return None
+
 
 def write_yaml(file_path: Path, data: Any, mode: str = 'w') -> None:
     with open(file_path, mode, encoding="utf-8") as f:

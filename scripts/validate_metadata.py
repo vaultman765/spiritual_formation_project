@@ -2,7 +2,7 @@
 
 import sys
 from pathlib import Path
-from typing import List, Dict, Any, Set
+from typing import List, Dict, Any
 import jsonschema
 from collections import defaultdict
 
@@ -52,7 +52,6 @@ class CrossValidator:
         self.arc_metadata = arc_metadata
         self.arc_tag_data = {p.stem.replace("_tags", ""): load_yaml(p) for p in arc_tag_files}
         self.day_data = {f.name: load_yaml(f) for f in day_files}
-
 
     def validate(self) -> List[str]:
         errors = []
@@ -122,7 +121,7 @@ class IntegrityValidator:
 
         for num, data in self.day_data.items():
             if num != data.get("master_day_number"):
-                errors.append(f"❌ File day_{num:04d}.yaml has mismatched master_day_number: {data.get('master_day_number')}")
+                errors.append(f"❌ day_{num:04d}.yaml has mismatched master_day_number: {data.get('master_day_number')}")
             if num in seen_master:
                 errors.append(f"❌ Duplicate master_day_number {num}")
             seen_master.add(num)
@@ -147,7 +146,9 @@ class IntegrityValidator:
 
             # Optional: check anchor_image and primary_reading consistency if only one expected
             anchor_images = set(
-                d.get("anchor_image")[0] if isinstance(d.get("anchor_image"), list) and d.get("anchor_image") else d.get("anchor_image")
+                d.get("anchor_image")[0]
+                if isinstance(d.get("anchor_image"), list) and d.get("anchor_image")
+                else d.get("anchor_image")
                 for d in arc_days
             )
             if len(anchor_images) == 1 and list(anchor_images)[0] != arc["anchor_image"][0]:
@@ -174,6 +175,7 @@ class IntegrityValidator:
 
         return errors
 
+
 class MetadataValidator:
     def __init__(self):
         self.schema_validator = SchemaValidator()
@@ -187,7 +189,9 @@ class MetadataValidator:
         day_files = list(DAY_FILES_DIR.glob("day_*.yaml"))
 
         for i, arc in enumerate(arc_metadata):
-            errors.extend(self.schema_validator.validate(arc, self.schema_validator.arc_metadata_schema, f"arc_metadata.yaml [{i}]"))
+            errors.extend(self.schema_validator.validate(arc,
+                                                         self.schema_validator.arc_metadata_schema,
+                                                         f"arc_metadata.yaml [{i}]"))
         for tag_file in arc_tag_files:
             data = load_yaml(tag_file)
             if data:
@@ -198,17 +202,20 @@ class MetadataValidator:
                 errors.extend(self.schema_validator.validate(data, self.schema_validator.day_schema, day_file.name))
 
         for arc in arc_metadata:
-            errors.extend(self.tag_validator.validate_tags(arc.get("tags", []), f"arc_metadata.yaml [{arc.get('arc_id')}]"))
+            errors.extend(self.tag_validator.validate_tags(arc.get("tags", []),
+                                                           f"arc_metadata.yaml [{arc.get('arc_id')}]"))
         for tag_file in arc_tag_files:
             data = load_yaml(tag_file)
             if data:
                 for category in TAG_CATEGORIES:
-                    errors.extend(self.tag_validator.validate_tags(data.get("tags", {}).get(category) or [], tag_file.name))
+                    errors.extend(self.tag_validator.validate_tags(data.get("tags", {}).get(category)
+                                                                   or [], tag_file.name))
         for day_file in day_files:
             data = load_yaml(day_file)
             if data:
                 for category in TAG_CATEGORIES:
-                    errors.extend(self.tag_validator.validate_tags(data.get("tags", {}).get(category) or [], day_file.name))
+                    errors.extend(self.tag_validator.validate_tags(data.get("tags", {}).get(category)
+                                                                   or [], day_file.name))
 
         cross = CrossValidator(arc_metadata, arc_tag_files, day_files)
         errors.extend(cross.validate())
@@ -222,6 +229,7 @@ class MetadataValidator:
             sys.exit(1)
         else:
             print("✅ All metadata passed schema, tag, and integrity validation.")
+
 
 if __name__ == "__main__":
     MetadataValidator().run()

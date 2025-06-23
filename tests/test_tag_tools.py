@@ -1,12 +1,12 @@
 import pytest
 from unittest.mock import MagicMock
-from pathlib import Path
 from scripts.tag_tools import (
     TagBank, YamlTagFileHandler, MarkdownTagFileHandler,
-    TagSynchronizer, TagScanner
+    TagSynchronizer
 )
 
 # --- TagBank Tests ---
+
 
 def test_tagbank_load_and_save(tmp_path):
     yaml_content = "virtue:\n  - patience\nvice:\n  - pride\n"
@@ -19,10 +19,12 @@ def test_tagbank_load_and_save(tmp_path):
     loaded = file_path.read_text()
     assert "humility" in loaded
 
+
 def test_tagbank_return_all_tags():
     tb = TagBank()
     tb.tags = {"virtue": ["patience"], "vice": ["pride"]}
     assert tb.return_all_tags() == {"patience", "pride"}
+
 
 def test_tagbank_move_tag():
     tb = TagBank()
@@ -31,11 +33,13 @@ def test_tagbank_move_tag():
     assert "patience" in tb.tags["vice"]
     assert "patience" not in tb.tags["virtue"]
 
+
 def test_tagbank_delete_tag():
     tb = TagBank()
     tb.tags = {"virtue": ["patience"], "vice": ["pride"]}
     tb.delete_tag("patience")
     assert "patience" not in tb.tags["virtue"]
+
 
 def test_tagbank_add_tag():
     tb = TagBank()
@@ -47,6 +51,7 @@ def test_tagbank_add_tag():
 
 # --- YamlTagFileHandler Tests ---
 
+
 def test_yaml_tag_file_handler_update_tag_flat(tmp_path):
     file_path = tmp_path / "arc.yaml"
     file_path.write_text("tags:\n  - patience\n  - humility\n")
@@ -56,6 +61,7 @@ def test_yaml_tag_file_handler_update_tag_flat(tmp_path):
     data = file_path.read_text()
     assert "fortitude" in data
     assert "patience" not in data
+
 
 def test_yaml_tag_file_handler_update_tag_nested(tmp_path):
     file_path = tmp_path / "arc.yaml"
@@ -67,6 +73,7 @@ def test_yaml_tag_file_handler_update_tag_nested(tmp_path):
     assert "fortitude" in data
     assert "patience" not in data
 
+
 def test_yaml_tag_file_handler_delete_tag_flat(tmp_path):
     file_path = tmp_path / "arc.yaml"
     file_path.write_text("tags:\n  - patience\n  - humility\n")
@@ -75,6 +82,7 @@ def test_yaml_tag_file_handler_delete_tag_flat(tmp_path):
     handler.delete_tag("patience")
     data = file_path.read_text()
     assert "patience" not in data
+
 
 def test_yaml_tag_file_handler_delete_tag_nested(tmp_path):
     file_path = tmp_path / "arc.yaml"
@@ -87,6 +95,7 @@ def test_yaml_tag_file_handler_delete_tag_nested(tmp_path):
 
 # --- MarkdownTagFileHandler Tests ---
 
+
 def test_markdown_tag_file_handler_update_tag(tmp_path):
     file_path = tmp_path / "med.md"
     file_path.write_text("<!-- tags: patience, humility -->")
@@ -95,6 +104,7 @@ def test_markdown_tag_file_handler_update_tag(tmp_path):
     data = file_path.read_text()
     assert "fortitude" in data
     assert "patience" not in data
+
 
 def test_markdown_tag_file_handler_delete_tag(tmp_path):
     file_path = tmp_path / "med.md"
@@ -105,6 +115,7 @@ def test_markdown_tag_file_handler_delete_tag(tmp_path):
     assert "patience" not in data
 
 # --- TagSynchronizer Tests ---
+
 
 def test_tag_synchronizer_update_and_delete():
     handler1 = MagicMock()
@@ -119,11 +130,13 @@ def test_tag_synchronizer_update_and_delete():
 
 # --- TagScanner Tests ---
 
+
 @pytest.fixture
 def fake_tagbank():
     tb = TagBank()
     tb.tags = {"virtue": ["patience", "humility"], "vice": ["pride"]}
     return tb
+
 
 def test_tag_scanner_get_all_used_tags(tmp_path, fake_tagbank):
     # Setup fake arc_tags (nested)
@@ -150,6 +163,7 @@ def test_tag_scanner_get_all_used_tags(tmp_path, fake_tagbank):
     assert "humility" in used
     assert "pride" in used
 
+
 def test_tag_scanner_find_unused_tags(tmp_path, fake_tagbank):
     # Setup so only "patience" is used
     arc_tags_dir = tmp_path / "arc_tags"
@@ -172,6 +186,7 @@ def test_tag_scanner_find_unused_tags(tmp_path, fake_tagbank):
     assert "humility" in unused_tags
     assert "pride" in unused_tags
     assert "patience" not in unused_tags
+
 
 def test_tag_scanner_generate_usage_report(tmp_path, fake_tagbank):
     arc_tags_dir = tmp_path / "arc_tags"

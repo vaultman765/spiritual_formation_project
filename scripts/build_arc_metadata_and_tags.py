@@ -11,13 +11,13 @@ Usage:
 """
 
 import argparse
-from pathlib import Path
 from utils.paths import DAY_FILES_DIR, ARC_TAGS_DIR, INDEX_FILE, TAG_BANK_FILE, ARC_METADATA_FILE
 from utils.constants import TAG_CATEGORIES
 from utils.io import load_yaml, write_yaml
 from typing import Any, Dict, List, Optional
 
 # === Shared Data Loader ===
+
 
 class ArcDataLoader:
     """Loads day data for arcs from index."""
@@ -40,8 +40,9 @@ class ArcDataLoader:
 
 # === Core Generators ===
 
+
 class ArcMetadataGenerator:
-    """Generates arc_metadata.yaml, updating or overwriting as needed."""    
+    """Generates arc_metadata.yaml, updating or overwriting as needed."""
     def __init__(self, index_data: Dict[str, Any]):
         self.index_data = index_data
 
@@ -86,6 +87,7 @@ class ArcMetadataGenerator:
         # Write the updated metadata to file
         write_yaml(ARC_METADATA_FILE, arc_metadata, mode='w')
 
+
 class ArcTagGenerator:
     """Generates arc_tags/*.yaml files for each arc."""
     def __init__(self, index_data: Dict[str, Any], tag_bank: Dict[str, Any]):
@@ -129,12 +131,13 @@ class ArcTagGenerator:
 
 # === CLI Entrypoint ===
 
+
 class ArcMetadataCLI:
     """Command-line interface for generating arc metadata and tags."""
     def __init__(self):
         self.index_data = load_yaml(INDEX_FILE) or {}
         self.tag_bank = load_yaml(TAG_BANK_FILE) or {}
-        
+
         # Ensure directories exist
         ARC_TAGS_DIR.mkdir(parents=True, exist_ok=True)
         DAY_FILES_DIR.mkdir(parents=True, exist_ok=True)
@@ -144,7 +147,7 @@ class ArcMetadataCLI:
         parser.add_argument("mode", choices=["metadata", "tags", "both"], help="What to generate.")
         parser.add_argument("--arc", nargs="+", help="Limit to specific arc_ids")
         args = parser.parse_args()
-        
+
         # Validate arc_ids
         arc_ids = None
         if args.arc:
@@ -161,6 +164,7 @@ class ArcMetadataCLI:
         if args.mode in ["tags", "both"]:
             print("Generating arc_tags/*.yaml...")
             ArcTagGenerator(self.index_data, self.tag_bank).generate(arc_ids=arc_ids)
+
 
 if __name__ == "__main__":
     ArcMetadataCLI().run()
