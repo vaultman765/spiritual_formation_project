@@ -11,9 +11,9 @@ Usage:
 """
 
 import argparse
-from utils.paths import DAY_FILES_DIR, ARC_TAGS_DIR, INDEX_FILE, TAG_BANK_FILE, ARC_METADATA_FILE
-from utils.constants import TAG_CATEGORIES
-from utils.io import load_yaml, write_yaml
+from scripts.utils.paths import DAY_FILES_DIR, ARC_TAGS_DIR, INDEX_FILE, TAG_BANK_FILE, ARC_METADATA_FILE
+from scripts.utils.constants import TAG_CATEGORIES
+from scripts.utils.io import load_yaml, write_yaml
 from typing import Any, Dict, List, Optional
 
 # === Shared Data Loader ===

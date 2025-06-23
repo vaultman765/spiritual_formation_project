@@ -6,11 +6,13 @@ master_day_range:
   start: 15
   end: 21
 tags:
-  thematic: []
+  thematic:
+  - fear of the lord
   doctrinal:
   - deus absconditus
   - judgment
   - reverence
+  - wisdom
   - worship
   virtue:
   - faith
