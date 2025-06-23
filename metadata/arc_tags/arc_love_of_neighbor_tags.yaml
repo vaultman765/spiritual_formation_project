@@ -1,27 +1,42 @@
 arc_id: arc_love_of_neighbor
-title: "Love of Neighbor - Living Charity"
-day_range:
+arc_title: Love of Neighbor – Living Charity
+arc_number: 2
+day_count: 7
+master_day_range:
   start: 8
   end: 14
 tags:
-  thematic: []
+  thematic:
+  - action
+  - love of neighbor
+  - sacrifice
+  - unity
   doctrinal:
-  - charity
+  - commandments
+  - communion
+  - dignity of the human person
+  - grace
   - mystical body
-  - new commandment
+  - vocation
+  - works of mercy
   virtue:
-  - humility
-  - service
-  - mercy
-  - fidelity
+  - charity
   - forgiveness
-  - spiritual childhood
+  - humility
+  - meekness
+  - mercy
+  - obedience
+  - perseverance
+  - solidarity
   mystical:
-  - washing of feet
-  - union
-  liturgical: 
+  - body of christ
+  - intercession
+  - spiritual childhood
+  - spiritual warfare
+  liturgical:
   - ordinary time
-  typological: []
+  typological:
+  - foot washing
+  - good samaritan
+  - judas
   structural: []
-
-

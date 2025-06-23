@@ -1,38 +1,40 @@
 arc_id: arc_love_of_god
-title: "Love of God - Foundation of All"
-day_range:
+arc_title: Love of God – Foundation of All
+arc_number: 1
+day_count: 7
+master_day_range:
   start: 1
   end: 7
 tags:
   thematic:
-    - divine love
-    - desire for god
-    - gift of self
-    - transforming grace
-    - loving response
-    - origin of charity
+  - contrition
+  - desire for god
+  - identity
+  - love of god
+  - transformation
   doctrinal:
-    - trinity
-    - redemption
-    - divine initiative
-    - love of god
-    - catechism
+  - grace
+  - love of god
+  - redemption
   virtue:
-    - charity
-    - surrender
-    - humility
-    - joy
+  - charity
+  - faith
+  - fidelity
+  - hope
+  - humility
+  - mercy
+  - obedience
+  - trust
   mystical:
-    - longing for union
-    - divine indwelling
-    - abiding in love
+  - abiding in love
+  - divine charity
+  - divine image
+  - divine love
+  - divine mercy
+  - union
   liturgical:
-    - ordinary time
+  - ordinary time
   typological:
-    - the face of the crucified
-    - the father running to meet the prodigal
-    - the pierced heart
-  structural:
-    - fixed anchor image
-    - meditations on divine charity
-    - theological + affective blend
+  - prodigal son
+  - vine and branches
+  structural: []

@@ -3,6 +3,7 @@ python_version = "3.*"
 
 [packages]
 pyyaml = "*"
+jsonschema = "*"
 
 [dev-packages]
 pytest = "*"

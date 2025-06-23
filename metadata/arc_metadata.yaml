@@ -1,150 +1,399 @@
 - arc_id: arc_love_of_god
-  title: "Love of God \u2013 Foundation of All"
+  arc_title: Love of God – Foundation of All
+  arc_number: 1
   day_count: 7
-  master_list_order: 1
-  day_range:
+  master_day_range:
     start: 1
     end: 7
-  anchor_image: Crucified Christ (Face)
-  primary_reading: "1 John 4:7\u201321"
+  anchor_image:
+  - The Crucified Christ (Face) — You gaze upon the face of Christ crucified. His
+    eyes are closed, His head bowed beneath the crown of thorns. From this suffering
+    Face shines infinite love. Every wound speaks the truth of God’s heart.
+  primary_reading:
+  - 1 John 4:7–21
   tags:
-    - abiding in love
-    - catechism
-    - charity
-    - desire for god
-    - divine indwelling
-    - divine initiative
-    - divine love
-    - fixed anchor image
-    - gift of self
-    - humility
-    - joy
-    - longing for union
-    - love of god
-    - loving response
-    - meditations on divine charity
-    - ordinary time
-    - origin of charity
-    - redemption
-    - surrender
-    - the face of the crucified
-    - the father running to meet the prodigal
-    - the pierced heart
-    - theological + affective blend
-    - transforming grace
-    - trinity
+  - abiding in love
+  - charity
+  - contrition
+  - desire for god
+  - divine charity
+  - divine image
+  - divine love
+  - divine mercy
+  - faith
+  - fidelity
+  - grace
+  - hope
+  - humility
+  - identity
+  - love of god
+  - mercy
+  - obedience
+  - ordinary time
+  - prodigal son
+  - redemption
+  - sacrifice
+  - transformation
+  - trust
+  - union
+  - vine and branches
 - arc_id: arc_love_of_neighbor
-  title: Love of Neighbor
+  arc_title: Love of Neighbor – Living Charity
+  arc_number: 2
   day_count: 7
-  master_list_order: 2
-  day_range:
+  master_day_range:
     start: 8
     end: 14
-  anchor_image: "Jesus washing the disciples\u2019 feet"
-  primary_reading: John 13
+  anchor_image:
+  - Christ washing the disciples’ feet — The Son of God kneels in the dust. He touches
+    dirt and fatigue, pouring water not only onto their feet, but into their shame.
+    This is love made visible in humility.
+  primary_reading:
+  - John 13:1–17
   tags:
-    - charity
-    - fidelity
-    - forgiveness
-    - humility
-    - mercy
-    - mystical body
-    - new commandment
-    - ordinary time
-    - service
-    - spiritual childhood
-    - union
-    - washing of feet
+  - action
+  - body of christ
+  - charity
+  - commandments
+  - communion
+  - dignity of the human person
+  - foot washing
+  - forgiveness
+  - good samaritan
+  - grace
+  - humility
+  - intercession
+  - judas
+  - love of neighbor
+  - meekness
+  - mercy
+  - mystical body
+  - obedience
+  - ordinary time
+  - perseverance
+  - sacrifice
+  - solidarity
+  - spiritual childhood
+  - spiritual warfare
+  - unity
+  - vocation
+  - works of mercy
 - arc_id: arc_holy_fear_of_the_lord
-  title: The Holy Fear of the Lord
+  arc_title: The Holy Fear of the Lord
+  arc_number: 3
   day_count: 7
-  master_list_order: 3
-  day_range:
+  master_day_range:
     start: 15
     end: 21
-  anchor_image: The lightning at Mt. Sinai
-  primary_reading: Proverbs 9:10, Exodus 20
+  anchor_image:
+  - Sinai thunder and cloud — The mountain shakes, clothed in fire and smoke. Lightning
+    flashes. A trumpet sounds. The people tremble as the voice of God roars from the
+    cloud.
+  primary_reading:
+  - Proverbs 9:10; Exodus 20:18–21
   tags:
-    - awe
-    - divine presence
-    - fear of the Lord
-    - humility
-    - judgment
-    - obedience
-    - purification
-    - reverence
-    - vigilance
-- arc_id: arc_litany_sacred_heart
-  title: Litany of the Sacred Heart
-  day_count: 16
-  master_list_order: 23
-  day_range:
-    start: 169
-    end: 184
-  anchor_image: Sacred Heart (enthroned, radiant)
-  primary_reading: Litany of the Sacred Heart
+  - adoration
+  - awe
+  - deus absconditus
+  - divine hiddenness
+  - divine presence
+  - faith
+  - fear of the lord
+  - humility
+  - judgment
+  - obedience
+  - ordinary time
+  - purification
+  - reverence
+  - salvation
+  - sinai
+  - trust
+  - union
+  - vigilance
+  - wisdom
+  - worship
+- arc_id: arc_sin_mercy_conversion
+  arc_title: Sin, Mercy, and Conversion
+  arc_number: 4
+  day_count: 7
+  master_day_range:
+    start: 22
+    end: 28
+  anchor_image:
+  - '**The Divine Physician Finds the Lost Sheep** — You see yourself wounded and
+    alone, far from the flock. Christ appears—not with reproach, but with urgency.
+    He kneels beside you, binding your wounds with gentleness. He lifts you onto His
+    shoulders. You feel the weight of your sin, but also the warmth of His mercy.'
+  - '**The Embrace of Peace** — You are held in the Father’s arms. There is no accusation,
+    no shame, only stillness. His breath is gentle against your shoulder. You do not
+    speak. You simply rest, forgiven and beloved.'
+  - '**The Interior Battle** — You are in a dark room with two voices speaking from
+    either side: one of accusation, the other of hope. Your hands are bound, but your
+    heart stirs. You cry out for freedom, even as the chains tighten. Christ stands
+    silently before you, holding the key. He waits for your plea.'
+  - '**The Kneeling Soul** — You kneel in a dimly lit confessional. A curtain veils
+    the priest, but through it speaks the mercy of Christ. You whisper your sins into
+    the silence, and from beyond the veil comes a voice: ''Go in peace.'''
+  - '**The Light That Reveals** — You are in a room lit only by candlelight. Christ
+    opens the door, and radiant light floods in. You see the dust, the stains, the
+    wounds — things hidden in the half-light are now exposed. But He does not turn
+    away. He looks with truth and love, not accusation.'
+  - '**The Path Beyond the Gate** — You walk through a field where the confessional
+    once stood. The breeze is gentle, the sky clear. Yet behind you lies shadow, and
+    ahead the road bends sharply. You know now what must be guarded.'
+  - '**The Road Home** — You walk a long dirt path alone, torn and stained by your
+    sins. In the distance, the Father waits — not seated, but running. His arms are
+    open before you even speak. He throws His cloak over your shame and calls for
+    a feast.'
+  primary_reading:
+  - John 20:19–23
+  - John 3:16–21
+  - John 5:14
+  - Luke 15:11–24
+  - Luke 15:1–7
+  - Psalm 32:1–7
+  - Romans 7:14–25
   tags:
-    - blood and water from christ's side
-    - desire for union with christ
-    - devotion to the heart of jesus
-    - feast of the sacred heart
-    - first fridays
-    - humility
-    - incarnation
-    - invitation to trust
-    - june
-    - line-by-line meditation
-    - litany
-    - love
-    - love of jesus
-    - meekness
-    - mercy
-    - obedience
-    - pierced heart
-    - reparation
-    - sacred heart
-    - temple veil torn
-    - tenderness
-    - unified anchor image
-    - union with christ
-    - wounded love
+  - absolution
+  - apostolic authority
+  - bondage and freedom
+  - captivity of sin
+  - compassion
+  - concupiscence
+  - contrition
+  - conversion
+  - conviction
+  - courage to repent
+  - darkness
+  - divine embrace
+  - divine initiative
+  - divine mercy
+  - divine physician
+  - forgiveness
+  - gospel discourse
+  - grace
+  - healing
+  - honesty
+  - humility
+  - inner watchfulness
+  - interior battle
+  - interior cleansing
+  - lent
+  - light
+  - light and darkness
+  - light from above
+  - lost sheep
+  - mercy
+  - moral formation
+  - ordinary time
+  - parable
+  - pauline theology
+  - peace
+  - perseverance
+  - prodigal son
+  - reconciliation
+  - repentance
+  - rescue
+  - return to the father
+  - sacramental theology
+  - sacraments
+  - sanctifying grace
+  - silence of God
+  - sin
+  - spiritual captivity
+  - spiritual homecoming
+  - spiritual rest
+  - the father running to meet the prodigal
+  - the return from exile
+  - trust
+  - truth
+  - veil of the temple
+  - vigilance
+  - wound of sin
 - arc_id: arc_passion_of_christ
-  title: "Passion of Christ \u2013 Events & Sufferings"
+  arc_title: The Passion of Christ – Events and Interior Sufferings
+  arc_number: 5
   day_count: 10
-  master_list_order: 24
-  day_range:
-    start: 185
-    end: 194
-  anchor_image: "Gethsemane \u2192 Cross (shifting)"
-  primary_reading: Passion Narratives (John/Matthew)
+  master_day_range:
+    start: 29
+    end: 38
+  anchor_image:
+  - '**Christ Bound and Tried** Judas kisses Him in the garden. Guards seize Him.
+    He is dragged before the high priest. You see false witnesses, spittle, blows.
+    Peter warms himself by the fire outside. A rooster crows. Jesus remains silent.'
+  - '**Christ Crowned with Thorns** Jesus is seated, hands bound, draped in a purple
+    robe. A crown of twisted thorns is pressed onto His head. Blood trickles down
+    His face. A reed is shoved into His hand like a mock scepter. Soldiers jeer and
+    bow in sarcasm. Yet He radiates quiet majesty in their mockery.'
+  - '**Christ in Gethsemane** Christ kneels beneath twisted olive trees. His face
+    is pressed to the earth, streaked with sweat and blood. The chalice of suffering
+    looms before Him. The disciples sleep nearby. The moonlight casts long shadows
+    as He whispers, "Not My will, but Yours be done."'
+  - '**Mary at the Foot of the Cross** Mary stands beneath the Cross, silent. Her
+    Son hangs above her. She does not cry aloud — her sorrow is still, total, unresisting.
+    John is beside her. Christ says, "Behold your mother." She receives the Church
+    into her heart.'
+  - '**The Burial of Christ** The body of Jesus is taken down. Nicodemus and Joseph
+    of Arimathea wrap Him in linen, anoint Him with myrrh. Mary touches His face one
+    last time. The tomb is near. They roll the stone across the entrance. Stillness
+    covers everything.'
+  - '**The Crucifixion** Jesus is nailed to the wood. The Cross is raised. He hangs
+    in silence between earth and heaven. “Father, forgive them,” He says. The sky
+    darkens. He thirsts. He gives His mother to John. Love is poured out as blood.'
+  - '**The Final Surrender** Jesus breathes His last. "Father, into Your hands I commend
+    My spirit." The veil of the Temple is torn. The earth trembles. Those who stood
+    near beat their breasts. The centurion says, "Truly this man was the Son of God."'
+  - '**The Piercing of His Side** The sky has gone still. Christ’s body hangs lifeless.
+    A soldier steps forward and thrusts a spear into His side. Blood and water pour
+    out — not just fluid, but the birth of the Church. Mary sees it all. The silence
+    deepens.'
+  - '**The Scourging at the Pillar** Stripped and bound, Jesus stands at the pillar.
+    The whip cracks. His back tears open. Blood runs down the stone floor. The guards
+    mock, but He does not resist. The Lamb is prepared for sacrifice.'
+  - Christ Carries the Cross – The Meeting with Veronica
+  primary_reading:
+  - John 19:1
+  - John 19:17–30
+  - John 19:25–27
+  - John 19:31–37
+  - John 19:38–42
+  - Luke 22:39–46
+  - Luke 23:26–31
+  - Luke 23:44–46
+  - Matthew 26:47–68
+  - Matthew 27:27–31
   tags:
-    - abandonment
-    - atonement
-    - betrayal and fidelity
-    - bronze serpent lifted up
-    - christ's humanity and divinity
-    - compassion
-    - fortitude
-    - good friday
-    - holy week
-    - humility
-    - interior agony
-    - isaac carrying the wood
-    - mercy in suffering
-    - multi-day sequence
-    - mystery of redemptive silence
-    - narrative gospel meditation
-    - obedience
-    - obedience unto death
-    - paschal lamb
-    - paschal mystery
-    - patience
-    - redemptive suffering
-    - rotating anchor images
-    - sacrificial love
-    - salvation through the cross
-    - silence of god
-    - spiritual darkness
-    - stations of the cross
-    - suffering servant
-    - union with christ
+  - abandonment
+  - atonement
+  - baptism
+  - betrayal
+  - birth of the church
+  - blood and water
+  - blood and water from christ's side
+  - compassion
+  - divine mercy
+  - divine silence
+  - divine will
+  - eucharist
+  - faith
+  - fortitude
+  - gratitude
+  - healing
+  - holy saturday
+  - holy week
+  - humiliation
+  - humility
+  - intercession
+  - kingship of christ
+  - lent
+  - mary as co-redemptrix
+  - meekness
+  - mercy
+  - mockery
+  - mortification
+  - mother of the church
+  - obedience
+  - paschal mystery
+  - passion of christ
+  - patience
+  - perseverance
+  - purity
+  - redemptive suffering
+  - reverence
+  - sacred heart
+  - sacrifice
+  - salvation
+  - salvation through the cross
+  - silence
+  - sin
+  - spiritual darkness
+  - spiritual maternity
+  - suffering
+  - surrender
+  - temple veil torn
+  - the pierced heart
+  - trust
+  - union with christ
+  - vigilance
+- arc_id: arc_litany_sacred_heart
+  arc_title: Litany of the Sacred Heart
+  arc_number: 6
+  day_count: 16
+  master_day_range:
+    start: 39
+    end: 54
+  anchor_image:
+  - '**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ.
+    His eyes are like fire and mercy. His hands are extended in blessing, and His
+    robe gleams like light. But what draws your soul is His Heart — visible, radiant,
+    pierced, encircled with thorns, and burning with love. It is not a wound of shame,
+    but a throne of glory. He says nothing. He simply shows you the place where divine
+    love became visible. Each title of the Litany is real here. You gaze at the Heart…
+    and see eternity.'
+  primary_reading:
+  - Litany of the Sacred Heart of Jesus
+  tags:
+  - adoration
+  - annunciation
+  - atonement
+  - baptism of the lord
+  - charity
+  - christology
+  - contemplation
+  - contrition
+  - desire
+  - divine image
+  - divine indwelling
+  - divine love
+  - divine mercy
+  - divine presence
+  - divine will
+  - docility
+  - faith
+  - feast of the sacred heart
+  - fortitude
+  - good friday
+  - grace
+  - holiness
+  - hope
+  - humiliation
+  - humility
+  - hypostatic union
+  - incarnation
+  - june
+  - justice
+  - kingship of christ
+  - lent
+  - litany meditation
+  - love
+  - love of god
+  - mary
+  - mercy
+  - merit
+  - mockery
+  - ordinary time
+  - overshadowing
+  - patience
+  - pierced heart
+  - praise
+  - presentation
+  - prudence
+  - reparation
+  - repentance
+  - reverence
+  - sacred heart
+  - sanctification
+  - silence
+  - sin
+  - sonship of christ
+  - spiritual enthronement
+  - spiritual identity
+  - suffering
+  - surrender
+  - temperance
+  - thirst
+  - transformation
+  - trinity
+  - trust
+  - unity
+  - virtues
