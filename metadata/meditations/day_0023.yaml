@@ -4,8 +4,10 @@ arc_id: arc_sin_mercy_conversion
 arc_title: Sin, Mercy, and Conversion
 arc_number: 4
 day_title: Conviction of Sin
-meditation_filename: arc_sin_mercy_conversion.md
-anchor_image: "**The Light That Reveals** — You are in a room lit only by candlelight. Christ opens the door, and radiant light floods in. You see the dust, the stains, the wounds — things hidden in the half-light are now exposed. But He does not turn away. He looks with truth and love, not accusation."
+anchor_image:
+  "**The Light That Reveals** — You are in a room lit only by candlelight. Christ opens the door, and radiant light floods in.
+  You see the dust, the stains, the wounds — things hidden in the half-light are now exposed. But He does not turn away.
+  He looks with truth and love, not accusation."
 primary_reading:
   title: John 3:16–21
   reference: ""
@@ -18,16 +20,21 @@ secondary_reading:
     reference: §13
     url: https://www.newadvent.org/fathers/1701012.htm
 meditative_points:
-  - "'But whoever does what is true comes to the light…' (v. 21) — The closer we draw to Christ, the more clearly we see our sin. The light is not to condemn, but to heal."
+  - "'But whoever does what is true comes to the light…' (v. 21) — The closer we draw to Christ, the more clearly we see our sin.
+    The light is not to condemn, but to heal."
   - "St. Augustine says the sinner flees the light because he fears being exposed. But you must not run. The exposure is part of the cure."
-  - "The Lord reveals your darkness only so He may shine into it. He uncovers what you hide — not to shame you, but to cleanse you and make you whole."
+  - "The Lord reveals your darkness only so He may shine into it.
+    He uncovers what you hide — not to shame you, but to cleanse you and make you whole."
 ejaculatory_prayer: Lord Jesus, shine Your light into my heart and do not let me flee from You.
-colloquy: Speak to the Lord as one who is afraid to be known. Tell Him the truths you would rather keep in shadow. Ask for courage to come to the light, and for the grace not to turn away when conviction burns.
-resolution: Tonight, examine your conscience in the light of Christ’s gaze. Let Him show you what you fear to face — and do not argue. Just remain with Him.
+colloquy:
+  Speak to the Lord as one who is afraid to be known. Tell Him the truths you would rather keep in shadow.
+  Ask for courage to come to the light, and for the grace not to turn away when conviction burns.
+resolution:
+  Tonight, examine your conscience in the light of Christ’s gaze. Let Him show you what you fear to face — and do not argue.
+  Just remain with Him.
 tags:
   thematic:
     - light and darkness
-    - courage to repent
   doctrinal:
     - grace
     - sin

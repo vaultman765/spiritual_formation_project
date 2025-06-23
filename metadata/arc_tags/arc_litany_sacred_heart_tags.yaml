@@ -1,37 +1,77 @@
 arc_id: arc_litany_sacred_heart
-title: Litany of the Sacred Heart
-day_range:
-  start: 170
-  end: 185
+arc_title: Litany of the Sacred Heart
+arc_number: 6
+day_count: 16
+master_day_range:
+  start: 39
+  end: 54
 tags:
   thematic:
-  - love of jesus
-  - tenderness
-  - reparation
-  - invitation to trust
-  - desire for union with christ
+    - adoration
+    - contrition
+    - desire
+    - humiliation
+    - mercy
+    - mockery
+    - reparation
+    - sacred heart
+    - transformation
+    - unity
   doctrinal:
-  - sacred heart
-  - incarnation
-  - devotion to the heart of jesus
+    - atonement
+    - christology
+    - grace
+    - hypostatic union
+    - incarnation
+    - kingship of christ
+    - love of god
+    - mary
+    - merit
+    - repentance
+    - reverence
+    - sanctification
+    - sonship of christ
+    - trinity
+    - virtues
   virtue:
-  - love
-  - humility
-  - obedience
-  - meekness
-  - mercy
+    - charity
+    - faith
+    - fortitude
+    - holiness
+    - hope
+    - humility
+    - justice
+    - love
+    - mercy
+    - patience
+    - prudence
+    - surrender
+    - temperance
+    - trust
   mystical:
-  - union with christ
-  - pierced heart
-  - wounded love
+    - contemplation
+    - divine image
+    - divine indwelling
+    - divine love
+    - divine mercy
+    - divine presence
+    - divine will
+    - overshadowing
+    - pierced heart
+    - praise
+    - silence
+    - spiritual enthronement
+    - spiritual identity
+    - thirst
   liturgical:
-  - june
-  - first fridays
-  - feast of the sacred heart
-  typological:
-  - temple veil torn
-  - "blood and water from christ's side"
+    - annunciation
+    - baptism of the lord
+    - feast of the sacred heart
+    - good friday
+    - june
+    - lent
+    - ordinary time
+    - presentation
+  typological: []
   structural:
-  - litany
-  - line-by-line meditation
-  - unified anchor image
+    - litany

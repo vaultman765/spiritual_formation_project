@@ -4,8 +4,13 @@ arc_id: arc_litany_sacred_heart
 arc_title: Litany of the Sacred Heart
 arc_number: 6
 day_title: Heart of Jesus, formed by the Holy Spirit in the womb of the Virgin Mother
-meditation_filename: arc_litany_sacred_heart.md
-anchor_image: "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy. His hands are extended in blessing, and His robe gleams like light. But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love. It is not a wound of shame, but a throne of glory. He says nothing. He simply shows you the place where divine love became visible. Each title of the Litany is real here. You gaze at the Heart… and see eternity."
+anchor_image:
+  "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
+  His hands are extended in blessing, and His robe gleams like light.
+  But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love.
+  It is not a wound of shame, but a throne of glory. He says nothing.
+  He simply shows you the place where divine love became visible. Each title of the Litany is real here.
+  You gaze at the Heart… and see eternity."
 primary_reading:
   title: Litany of the Sacred Heart of Jesus
   reference:
@@ -25,8 +30,12 @@ meditative_points:
   - The Sacred Heart formed by the Virgin’s own body.
   - The Holy Spirit’s silent craftsmanship in the hidden life.
 ejaculatory_prayer: Heart of Jesus, formed in Mary’s womb, shape my heart to resemble Yours.
-colloquy: Holy Spirit, gentle Lord and Life-Giver, You overshadowed Mary and knit the Word into flesh. Mary, my Mother, you gave Him a Heart — let mine be shaped by yours.
-resolution: Today I will invoke the Holy Spirit quietly before each decision — asking Him to form my intentions gently, as He formed Christ in Mary.
+colloquy:
+  Holy Spirit, gentle Lord and Life-Giver, You overshadowed Mary and knit the Word into flesh.
+  Mary, my Mother,you gave Him a Heart — let mine be shaped by yours.
+resolution:
+  Today I will invoke the Holy Spirit quietly before each decision — asking Him to form my intentions gently,
+  as He formed Christ in Mary.
 tags:
   thematic:
     - sacred heart
@@ -46,4 +55,4 @@ tags:
     - feast of the sacred heart
   typological: []
   structural:
-    - litany meditation
+    - litany

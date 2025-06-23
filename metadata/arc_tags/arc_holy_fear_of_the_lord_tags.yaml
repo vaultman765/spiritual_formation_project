@@ -1,22 +1,33 @@
 arc_id: arc_holy_fear_of_the_lord
-title: The Holy Fear of the Lord
-day_range:
+arc_title: The Holy Fear of the Lord
+arc_number: 3
+day_count: 7
+master_day_range:
   start: 15
   end: 21
 tags:
   thematic:
-    - fear of the Lord
+    - fear of the lord
   doctrinal:
+    - deus absconditus
     - judgment
     - reverence
+    - wisdom
+    - worship
   virtue:
-    - obedience
+    - faith
     - humility
+    - obedience
+    - trust
     - vigilance
   mystical:
+    - awe
+    - divine hiddenness
     - divine presence
     - purification
-    - awe
-  liturgical: []
-  typological: []
+    - union
+  liturgical:
+    - ordinary time
+  typological:
+    - sinai
   structural: []

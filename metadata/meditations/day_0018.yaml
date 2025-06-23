@@ -4,7 +4,6 @@ arc_id: arc_holy_fear_of_the_lord
 arc_title: The Holy Fear of the Lord
 arc_number: 3
 day_title: Servile, Mercenary, and Filial Fear
-meditation_filename: arc_holy_fear_of_the_lord.md
 anchor_image:
   Sinai thunder and cloud — The mountain shakes, clothed in fire and smoke.
   Lightning flashes. A trumpet sounds. The people tremble as the voice of God roars
@@ -19,7 +18,8 @@ secondary_reading:
     url: /documents/readings/St_Catherine_Dialogue.pdf
 meditative_points:
   - Only filial fear endures - it is born of love. It doesn't run from God, it kneels before Him.
-  - "St. Catherine distinguishes three types of fear: servile (fear of punishment), mercenary (hope of reward), and filial (fear of offending God)."
+  - "St. Catherine distinguishes three types of fear: servile (fear of punishment), mercenary (hope of reward),
+    and filial (fear of offending God)."
   - Growth in prayer often means being purified from lower fears and led into true, holy reverence.
 ejaculatory_prayer: Jesus, let me fear only offending You
 colloquy: Father, purify my fear. I do not want to obey You for gain or out of dread, but because I love You.
@@ -40,11 +40,3 @@ tags:
   typological: []
   structural:
     - sinai
-estimated_read_time: 7
-summary_sentence:
-  Fear of the Lord is not the end of joy — it is its gateway, and
-  its guardian.
-audio_available: false
-quotes_used:
-  - Psalm 2:11
-  - Revelation 14:7

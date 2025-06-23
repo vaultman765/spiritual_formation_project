@@ -3,9 +3,13 @@ python_version = "3.*"
 
 [packages]
 pyyaml = "*"
+jsonschema = "*"
+yamllint = "*"
 
 [dev-packages]
 pytest = "*"
+pytest-cov = "*"
+coverage = "*"
 black = "*"
 flake8 = "*"
 

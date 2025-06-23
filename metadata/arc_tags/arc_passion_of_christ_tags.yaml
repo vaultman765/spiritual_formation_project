@@ -1,43 +1,66 @@
 arc_id: arc_passion_of_christ
-title: "The Passion of Christ - Events and Interior Sufferings"
-day_range:
-  start: 186
-  end: 195
+arc_title: The Passion of Christ – Events and Interior Sufferings
+arc_number: 5
+day_count: 10
+master_day_range:
+  start: 29
+  end: 38
 tags:
   thematic:
-  - redemptive suffering
-  - sacrificial love
-  - obedience unto death
-  - interior agony
-  - betrayal and fidelity
-  - abandonment
-  - silence of god
-  - mercy in suffering
+    - abandonment
+    - betrayal
+    - birth of the church
+    - humiliation
+    - mockery
+    - passion of christ
+    - redemptive suffering
+    - sacrifice
+    - salvation through the cross
+    - suffering
   doctrinal:
-  - atonement
-  - "christ's humanity and divinity"
-  - paschal mystery
-  - suffering servant
-  - salvation through the cross
+    - atonement
+    - baptism
+    - eucharist
+    - kingship of christ
+    - mary as co-redemptrix
+    - mother of the church
+    - paschal mystery
+    - reverence
+    - sacred heart
+    - salvation
+    - sin
   virtue:
-  - obedience
-  - fortitude
-  - humility
-  - compassion
-  - patience
+    - compassion
+    - faith
+    - fortitude
+    - humility
+    - meekness
+    - mercy
+    - obedience
+    - patience
+    - perseverance
+    - purity
+    - surrender
+    - trust
+    - vigilance
   mystical:
-  - union with christ
-  - spiritual darkness
-  - mystery of redemptive silence
+    - divine mercy
+    - divine silence
+    - divine will
+    - healing
+    - intercession
+    - mortification
+    - silence
+    - spiritual darkness
+    - spiritual maternity
+    - union with christ
   liturgical:
-  - holy week
-  - good friday
-  - stations of the cross
+    - holy saturday
+    - holy week
+    - lent
   typological:
-  - isaac carrying the wood
-  - paschal lamb
-  - bronze serpent lifted up
-  structural:
-  - narrative gospel meditation
-  - rotating anchor images
-  - multi-day sequence
+    - blood and water
+    - blood and water from christ's side
+    - temple veil torn
+    - the pierced heart
+  structural: []

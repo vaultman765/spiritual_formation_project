@@ -1,0 +1,95 @@
+# === Arc Tag Schema ===
+# This schema defines the structure for arc tags in a YAML file.
+# It is not JSON Schema — it’s a documentation + developer schema for our team and tooling
+type: object
+additionalProperties: false
+required:
+  - arc_id
+  - arc_title
+  - arc_number
+  - day_count
+  - master_day_range
+  - tags
+properties:
+  arc_id:
+    type: string
+    description:
+      Unique ID for the arc, must match arc_id in corresponding day_wxyx.yaml and arc_tags/*.yaml files.
+      Generally in snake_case format with form arc_<arc_name>. For example, arc_love_of_neighbor.
+  arc_title:
+    type: string
+    description: Full title of the arc (e.g., "The Love of God" or "Litany of the Sacred Heart").
+  arc_number:
+    type: integer
+    description: Arc number from the roadmap, used to populate the _index_by_arc.yaml.
+  day_count:
+    type: integer
+    description: Total number of days in the arc.
+  master_day_range:
+    type: object
+    description: Range of days in the arc, with start and end keys.
+    required:
+      - start
+      - end
+    additionalProperties: false
+    properties:
+      start:
+        type: integer
+        description: Starting day number of the arc.
+      end:
+        type: integer
+        description: Ending day number of the arc.
+  tags:
+    type: object
+    additionalProperties: false
+    properties:
+      thematic:
+        type: array
+        description: List of thematic tags for the arc.
+        items:
+          type: string
+        minItems: 0
+      doctrinal:
+        type: array
+        description: List of doctrinal tags for the arc.
+        items:
+          type: string
+        minItems: 0
+      virtue:
+        type: array
+        description: List of virtue tags for the arc.
+        items:
+          type: string
+        minItems: 0
+      mystical:
+        type: array
+        description: List of mystical tags for the arc.
+        items:
+          type: string
+        minItems: 0
+      liturgical:
+        type: array
+        description: List of liturgical tags for the arc.
+        items:
+          type: string
+        minItems: 0
+      typological:
+        type: array
+        description: List of typological tags for the arc.
+        items:
+          type: string
+        minItems: 0
+      structural:
+        type: array
+        description: List of structural tags for the arc.
+        items:
+          type: string
+        minItems: 0
+    required:
+      - thematic
+      - doctrinal
+      - virtue
+      - mystical
+      - liturgical
+      - typological
+      - structural

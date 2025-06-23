@@ -4,8 +4,13 @@ arc_id: arc_litany_sacred_heart
 arc_title: Litany of the Sacred Heart
 arc_number: 6
 day_title: Heart of Jesus, In Whom the Father is Well Pleased
-meditation_filename: arc_litany_sacred_heart.md
-anchor_image: "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy. His hands are extended in blessing, and His robe gleams like light. But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love. It is not a wound of shame, but a throne of glory. He says nothing. He simply shows you the place where divine love became visible. Each title of the Litany is real here. You gaze at the Heart… and see eternity."
+anchor_image:
+  "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
+  His hands are extended in blessing, and His robe gleams like light.
+  But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love.
+  It is not a wound of shame, but a throne of glory. He says nothing.
+  He simply shows you the place where divine love became visible. Each title of the Litany is real here.
+  You gaze at the Heart… and see eternity."
 primary_reading:
   title: Litany of the Sacred Heart of Jesus
   reference: ""
@@ -27,7 +32,9 @@ meditative_points:
   - The Father's voice - declaring love before Christ's mission begins
   - The Sacred Heart as the place where the Father's pleasure dwells
 ejaculatory_prayer: Heart of Jesus, beloved of the Father, delight in me through mercy.
-colloquy: Father, You were well pleased with the Heart of Your Son. Let me see in Him the love You have for me. Let me stop trying to earn what You already offer.
+colloquy:
+  Father, You were well pleased with the Heart of Your Son. Let me see in Him the love You have for me.
+  Let me stop trying to earn what You already offer.
 resolution: "Today, I will pause to remember that I am loved before I act - not because of how I perform."
 tags:
   thematic:
@@ -46,4 +53,4 @@ tags:
     - feast of the sacred heart
   typological: []
   structural:
-    - litany meditation
+    - litany

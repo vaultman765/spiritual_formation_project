@@ -4,8 +4,11 @@ arc_id: arc_passion_of_christ
 arc_title: The Passion of Christ – Events and Interior Sufferings
 arc_number: 5
 day_title: Christ Crowned with Thorns – Majesty in Mockery
-meditation_filename: arc_passion_of_christ.md
-anchor_image: "**Christ Crowned with Thorns** Jesus is seated, hands bound, draped in a purple robe. A crown of twisted thorns is pressed onto His head. Blood trickles down His face. A reed is shoved into His hand like a mock scepter. Soldiers jeer and bow in sarcasm. Yet He radiates quiet majesty in their mockery."
+anchor_image:
+  "**Christ Crowned with Thorns** Jesus is seated, hands bound, draped in a purple robe.
+  A crown of twisted thorns is pressed onto His head. Blood trickles down His face.
+  A reed is shoved into His hand like a mock scepter. Soldiers jeer and bow in sarcasm.
+  Yet He radiates quiet majesty in their mockery."
 primary_reading:
   title: Matthew 27:27–31
   reference: ""
@@ -19,7 +22,8 @@ meditative_points:
   - The King of Heaven is mocked with earthly symbols of power.
   - Every insult He received purifies the pride in my own heart.
 ejaculatory_prayer: Jesus, King crowned in thorns, rule in my heart.
-colloquy: "Jesus, mocked King, I often seek crowns of comfort and control. Teach me to wear the crown of thorns with You — not to be honored, but to love."
+colloquy: "Jesus, mocked King, I often seek crowns of comfort and control.
+  Teach me to wear the crown of thorns with You — not to be honored, but to love."
 resolution: Today I will resist one urge to seek praise — and silently offer it as a crown of thorns.
 tags:
   thematic:

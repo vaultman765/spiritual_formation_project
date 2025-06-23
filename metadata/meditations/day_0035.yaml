@@ -4,8 +4,10 @@ arc_id: arc_passion_of_christ
 arc_title: The Passion of Christ – Events and Interior Sufferings
 arc_number: 5
 day_title: Mary at the Foot of the Cross – The Silent Fiat
-meditation_filename: arc_passion_of_christ.md
-anchor_image: '**Mary at the Foot of the Cross** Mary stands beneath the Cross, silent. Her Son hangs above her. She does not cry aloud — her sorrow is still, total, unresisting. John is beside her. Christ says, "Behold your mother." She receives the Church into her heart.'
+anchor_image:
+  '**Mary at the Foot of the Cross** Mary stands beneath the Cross, silent. Her Son hangs above her.
+  She does not cry aloud — her sorrow is still, total, unresisting. John is beside her. Christ says, "Behold your mother."
+  She receives the Church into her heart.'
 primary_reading:
   title: John 19:25–27
   reference: ""
@@ -19,7 +21,9 @@ meditative_points:
   - Her motherhood expands to include the Church at the Cross.
   - She suffers with Christ — not passively, but as co-sufferer in faith.
 ejaculatory_prayer: O Mary, Mother of Sorrows, form Christ in me.
-colloquy: Mother, I stand with you beneath the Cross. Teach me to suffer without resisting love. Let me receive the Church into my heart as you did.
+colloquy:
+  Mother, I stand with you beneath the Cross. Teach me to suffer without resisting love.
+  Let me receive the Church into my heart as you did.
 resolution: Today I will embrace one sorrow silently — offering it with Mary for the Church.
 tags:
   thematic:

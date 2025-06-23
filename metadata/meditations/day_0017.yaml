@@ -4,7 +4,6 @@ arc_id: arc_holy_fear_of_the_lord
 arc_title: The Holy Fear of the Lord
 arc_number: 3
 day_title: The Gift of Fear and the Spirit
-meditation_filename: arc_holy_fear_of_the_lord.md
 anchor_image:
   Sinai thunder and cloud — The mountain shakes, clothed in fire and smoke.
   Lightning flashes. A trumpet sounds. The people tremble as the voice of God roars
@@ -18,7 +17,8 @@ secondary_reading:
     reference: 1830–1831
     url: https://www.vatican.va/archive/ENG0015/__P67.HTM
 meditative_points:
-  - The fear of the Lord is not only a disposition—it is a **gift of the Holy Spirit**. It is infused, not achieved, and grows as we draw closer to God.
+  - The fear of the Lord is not only a disposition—it is a **gift of the Holy Spirit**. It is infused, not achieved,
+    and grows as we draw closer to God.
   - This fear keeps us from sin—not only because of punishment, but because we dread offending the One we love.
   - The saints feared sin more than suffering. This fear purifies love.
 ejaculatory_prayer: Spirit of God, give me the gift of holy fear
@@ -41,11 +41,3 @@ tags:
   typological:
     - sinai
   structural: []
-estimated_read_time: 8
-summary_sentence:
-  Fear of the Lord is not dread — it is the fire that makes sin impossible
-  to ignore.
-audio_available: false
-quotes_used:
-  - Exodus 20:20
-  - Hebrews 12:28–29

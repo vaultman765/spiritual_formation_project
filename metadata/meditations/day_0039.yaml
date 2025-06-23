@@ -4,8 +4,13 @@ arc_id: arc_litany_sacred_heart
 arc_title: Litany of the Sacred Heart
 arc_number: 6
 day_title: Heart of Jesus, Son of the Eternal Father
-meditation_filename: arc_litany_sacred_heart.md
-anchor_image: "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy. His hands are extended in blessing, and His robe gleams like light. But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love. It is not a wound of shame, but a throne of glory. He says nothing. He simply shows you the place where divine love became visible. Each title of the Litany is real here. You gaze at the Heart… and see eternity."
+anchor_image:
+  "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
+  His hands are extended in blessing, and His robe gleams like light.
+  But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love.
+  It is not a wound of shame, but a throne of glory. He says nothing.
+  He simply shows you the place where divine love became visible. Each title of the Litany is real here.
+  You gaze at the Heart… and see eternity."
 primary_reading:
   title: Litany of the Sacred Heart of Jesus
   reference:
@@ -25,8 +30,12 @@ meditative_points:
   - The Heart of Jesus is the Heart of God
   - The Love of the Father revealed
 ejaculatory_prayer: Heart of Jesus, radiance of the Eternal Father, draw me into the love You have known forever.
-colloquy: Lord Jesus, Eternal Word of the Father, You are not an idea. You are the Son, and You have a Heart. Let me enter into the silence of Your divine origin. Let me adore not only what You have done — but who You are.
-resolution: Today, I will take one quiet moment to adore Jesus silently — not asking, not thanking, just gazing — and remember that He is the Eternal Son.
+colloquy:
+  Lord Jesus, Eternal Word of the Father, You are not an idea. You are the Son, and You have a Heart.
+  Let me enter into the silence of Your divine origin. Let me adore not only what You have done — but who You are.
+resolution:
+  Today, I will take one quiet moment to adore Jesus silently — not asking, not thanking, just gazing — and remember that
+  He is the Eternal Son.
 tags:
   thematic:
     - adoration
@@ -43,4 +52,4 @@ tags:
     - feast of the sacred heart
   typological: []
   structural:
-    - litany meditation
+    - litany

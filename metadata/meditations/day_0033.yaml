@@ -3,8 +3,10 @@ arc_day_number: 5
 arc_id: arc_passion_of_christ
 arc_title: The Passion of Christ – Events and Interior Sufferings
 arc_number: 5
-day_title: "**Christ Carries the Cross** Bruised and bleeding, Jesus takes up the heavy beam. The road is uneven. He stumbles. Simon of Cyrene is pulled from the crowd to help. Veronica emerges and presses a cloth to His face. He looks at her — the cloth bears His image. He continues forward, one step at a time."
-meditation_filename: arc_passion_of_christ.md
+day_title:
+  "**Christ Carries the Cross** Bruised and bleeding, Jesus takes up the heavy beam. The road is uneven.
+  He stumbles. Simon of Cyrene is pulled from the crowd to help. Veronica emerges and presses a cloth to His face.
+  He looks at her — the cloth bears His image. He continues forward, one step at a time."
 anchor_image: Christ Carries the Cross – The Meeting with Veronica
 primary_reading:
   title: Luke 23:26–31
@@ -19,7 +21,9 @@ meditative_points:
   - Veronica’s act was small, hidden, and deeply personal.
   - Christ gave her His image — what do I offer Him?
 ejaculatory_prayer: O Christ bearing the Cross, impress Your image on my heart.
-colloquy: "Jesus, I want to be like Veronica — not solving, not preaching, but present. Let me offer a veil, a silence, a prayer… and receive Your Face in return."
+colloquy:
+  "Jesus, I want to be like Veronica — not solving, not preaching, but present.
+  Let me offer a veil, a silence, a prayer… and receive Your Face in return."
 resolution: Today I will console Christ by offering one quiet act of compassion — unseen, unpraised, but full of love.
 tags:
   thematic:

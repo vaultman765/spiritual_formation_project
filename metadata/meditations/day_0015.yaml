@@ -4,7 +4,6 @@ arc_id: arc_holy_fear_of_the_lord
 arc_title: The Holy Fear of the Lord
 arc_number: 3
 day_title: The Beginning of Wisdom
-meditation_filename: arc_holy_fear_of_the_lord.md
 anchor_image:
   Sinai thunder and cloud — The mountain shakes, clothed in fire and smoke.
   Lightning flashes. A trumpet sounds. The people tremble as the voice of God roars
@@ -25,7 +24,9 @@ meditative_points:
   - Prayer begins not with comfort, but awe. Reverence is the gate into the presence
     of the living God.
 ejaculatory_prayer: Teach me to begin every prayer with awe, O Lord.
-colloquy: Lord, give me holy fear—not the fear that hides, but the awe that bows and adores. Let this fear strip me of arrogance and teach me wisdom.
+colloquy:
+  Lord, give me holy fear—not the fear that hides, but the awe that bows and adores.
+  Let this fear strip me of arrogance and teach me wisdom.
 resolution:
   Today I will examine whether I begin my prayer with reverence — and I
   will ask for the grace to fear rightly.
@@ -45,11 +46,3 @@ tags:
   typological:
     - sinai
   structural: []
-estimated_read_time: 7
-summary_sentence:
-  The fear of the Lord is not terror, but the reverent beginning of
-  all wisdom.
-audio_available: false
-quotes_used:
-  - Proverbs 9:10
-  - Sirach 1:12–20

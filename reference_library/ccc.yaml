@@ -6,7 +6,7 @@
     end: 3
   url: https://www.vatican.va/archive/ENG0015/__P2.HTM
   tags: []
-  notes: 
+  notes:
 
 - id: ccc_handling_of_faith
   title: "Handing on the Faith: Catechesis"
@@ -16,7 +16,7 @@
     end: 10
   url: https://www.vatican.va/archive/ENG0015/__P3.HTM
   tags: []
-  notes: 
+  notes:
 
 - id: ccc_readership
   title: The Aim and Intended Readership of the Catechism
@@ -26,7 +26,7 @@
     end: 12
   url: https://www.vatican.va/archive/ENG0015/__P4.HTM
   tags: []
-  notes: 
+  notes:
 
 - id: ccc__structure
   title: Structure of this Catechism
@@ -36,7 +36,7 @@
     end: 17
   url: https://www.vatican.va/archive/ENG0015/__P5.HTM
   tags: []
-  notes: 
+  notes:
 
 - id: ccc_practical_directions
   title: Practical Directions for Using this Catechism
@@ -46,7 +46,7 @@
     end: 22
   url: https://www.vatican.va/archive/ENG0015/__P6.HTM
   tags: []
-  notes: 
+  notes:
 
 - id: ccc_necessary_adaptations
   title: Necessary Adaptations
@@ -56,7 +56,7 @@
     end: 25
   url: https://www.vatican.va/archive/ENG0015/__P7.HTM
   tags: []
-  notes:  
+  notes:
 
 - id: ccc_i_believe_we_believe
   title: "Section One - I BELIEVE - WE BELIEVE"
@@ -66,7 +66,7 @@
     end: 26
   url: https://www.vatican.va/archive/ENG0015/__P8.HTM
   tags: []
-  notes: 
+  notes:
 
 - id: ccc_desire_for_god
   title: The Desire for God
@@ -76,7 +76,7 @@
     end: 30
   url: https://www.vatican.va/archive/ENG0015/__P9.HTM
   tags: []
-  notes: 
+  notes:
 
 - id: ccc_coming_to_know_god
   title: Ways of Coming to Know God
@@ -86,7 +86,7 @@
     end: 35
   url: https://www.vatican.va/archive/ENG0015/__PA.HTM
   tags: []
-  notes: 
+  notes:
 
 - id: ccc_knowledge_of_god
   title: The Knowledge of God According to the Church
@@ -159,7 +159,7 @@
   notes:
 
 - id: ccc_p1s1c2a1_in_brief
-  title: 
+  title:
   source: Catechism of the Catholic Church
   paragraph_range:
     start: 68
@@ -214,7 +214,7 @@
   paragraph_range:
     start: 96
     end: 100
-  url: https://www.vatican.va/archive/ENG0015/__PN.HTM 
+  url: https://www.vatican.va/archive/ENG0015/__PN.HTM
   tags: []
   notes:
 
@@ -769,52 +769,52 @@
   notes:
 
 - id: ccc_
-  title: 
+  title:
   source: Catechism of the Catholic Church
   paragraph_range:
-    start: 
-    end: 
-  url: 
+    start:
+    end:
+  url:
   tags: []
   notes:
 
 - id: ccc_
-  title: 
+  title:
   source: Catechism of the Catholic Church
   paragraph_range:
-    start: 
-    end: 
-  url: 
+    start:
+    end:
+  url:
   tags: []
   notes:
 
 - id: ccc_
-  title: 
+  title:
   source: Catechism of the Catholic Church
   paragraph_range:
-    start: 
-    end: 
-  url: 
+    start:
+    end:
+  url:
   tags: []
   notes:
 
 - id: ccc_
-  title: 
+  title:
   source: Catechism of the Catholic Church
   paragraph_range:
-    start: 
-    end: 
-  url: 
+    start:
+    end:
+  url:
   tags: []
   notes:
 
 - id: ccc_
-  title: 
+  title:
   source: Catechism of the Catholic Church
   paragraph_range:
-    start: 
-    end: 
-  url: 
+    start:
+    end:
+  url:
   tags: []
   notes:
 
