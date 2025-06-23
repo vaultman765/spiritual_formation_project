@@ -17,7 +17,7 @@ thematic:
   - desire for god
   - desire for union with christ
   - discipleship
-  - fear of the Lord
+  - fear of the lord
   - gift of self
   - heart of christ
   - humiliation
@@ -46,6 +46,7 @@ thematic:
   - reparation
   - return to the father
   - sacred heart
+  - sacraments
   - sacrifice
   - sacrificial love
   - salvation through the cross
@@ -106,6 +107,7 @@ doctrinal:
   - truth
   - virtues
   - vocation
+  - wisdom
   - works of mercy
   - worship
 virtue:
@@ -148,6 +150,7 @@ mystical:
   - divine initiative
   - divine love
   - divine mercy
+  - divine physician
   - divine presence
   - divine silence
   - divine will
@@ -162,6 +165,7 @@ mystical:
   - mortification
   - mystery
   - mystery of redemptive silence
+  - overshadowing
   - pierced heart
   - praise
   - purification
@@ -180,6 +184,7 @@ mystical:
   - washing of feet
   - wounded love
 liturgical:
+  - annunciation
   - baptism of the lord
   - easter
   - feast of the sacred heart
@@ -190,6 +195,7 @@ liturgical:
   - june
   - lent
   - ordinary time
+  - presentation
   - stations of the cross
 typological:
   - blood and water

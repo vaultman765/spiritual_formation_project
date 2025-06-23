@@ -1,25 +1,11 @@
 #!/usr/bin/env python3
 
 import yaml
+from utils.paths import ARC_METADATA_FILE, ARC_TAGS_DIR, ARC_METADATA_SCHEMA, ARC_TAG_SCHEMA
 import jsonschema
+from utils.io import load_yaml
 from pathlib import Path
 
-# === Paths ===
-METADATA_DIR = Path("metadata")
-SCHEMA_DIR = Path("schema")
-
-ARC_METADATA_PATH = METADATA_DIR / "arc_metadata.yaml"
-ARC_METADATA_SCHEMA_PATH = SCHEMA_DIR / "arc_metadata_schema.yaml"
-ARC_TAGS_DIR = METADATA_DIR / "arc_tags"
-ARC_TAG_SCHEMA_PATH = SCHEMA_DIR / "arc_tag_schema.yaml"
-
-def load_yaml(path: Path):
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            return yaml.safe_load(f)
-    except Exception as e:
-        print(f"❌ Failed to load YAML from {path}: {e}")
-        return None
 
 def validate_file(data, schema, source):
     try:
@@ -31,14 +17,14 @@ def validate_file(data, schema, source):
 def validate_metadata():
     errors = []
 
-    arc_metadata_schema = load_yaml(ARC_METADATA_SCHEMA_PATH)
-    arc_tag_schema = load_yaml(ARC_TAG_SCHEMA_PATH)
+    arc_metadata_schema = load_yaml(ARC_METADATA_SCHEMA)
+    arc_tag_schema = load_yaml(ARC_TAG_SCHEMA)
 
     # Validate arc_metadata.yaml
-    arc_metadata = load_yaml(ARC_METADATA_PATH)
+    arc_metadata = load_yaml(ARC_METADATA_FILE)
     if arc_metadata:
         for i, entry in enumerate(arc_metadata):
-            errs = validate_file(entry, arc_metadata_schema[0], f"arc_metadata.yaml [{i}]")
+            errs = validate_file(entry, arc_metadata_schema, f"arc_metadata.yaml [{entry.get('arc_id', 'unknown')}]")
             errors.extend(errs)
 
     # Validate each arc_tag YAML

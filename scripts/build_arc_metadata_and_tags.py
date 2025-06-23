@@ -11,38 +11,11 @@ Usage:
 """
 
 import argparse
-import yaml
 from pathlib import Path
+from utils.paths import DAY_FILES_DIR, ARC_TAGS_DIR, INDEX_FILE, TAG_BANK_FILE, ARC_METADATA_FILE
+from utils.constants import TAG_CATEGORIES
+from utils.io import load_yaml, write_yaml
 from typing import Any, Dict, List, Optional
-
-# === Constants ===
-METADATA_DIR = Path("metadata")
-DAY_FILES_DIR = METADATA_DIR / "meditations"
-TAGS_DIR = METADATA_DIR / "arc_tags"
-INDEX_FILE = METADATA_DIR / "_index_by_arc.yaml"
-TAG_BANK_FILE = METADATA_DIR / "tag_bank.yaml"
-ARC_METADATA_FILE = METADATA_DIR / "arc_metadata.yaml"
-
-TAG_CATEGORIES = [
-    "thematic", "doctrinal", "virtue", "mystical", "liturgical", "typological", "structural"
-]
-
-# === Utilities ===
-
-def load_yaml(file_path: Path) -> Any:
-    try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            return yaml.safe_load(f)
-    except FileNotFoundError:
-        print(f"File not found: {file_path}")
-        return None
-    except yaml.YAMLError as e:
-        print(f"YAML error in {file_path}: {e}")
-        return None
-
-def write_yaml(file_path: Path, data: Any, mode: str = 'w') -> None:
-    with open(file_path, mode, encoding="utf-8") as f:
-        yaml.dump(data, f, sort_keys=False, allow_unicode=True)
 
 # === Shared Data Loader ===
 
@@ -110,6 +83,7 @@ class ArcMetadataGenerator:
             }
             arc_metadata.append(metadata_entry)
 
+        # Write the updated metadata to file
         write_yaml(ARC_METADATA_FILE, arc_metadata, mode='w')
 
 class ArcTagGenerator:
@@ -122,7 +96,7 @@ class ArcTagGenerator:
         loader = ArcDataLoader(self.index_data)
         arc_data = loader.load_arc_day_data(arc_ids=arc_ids)
 
-        TAGS_DIR.mkdir(parents=True, exist_ok=True)
+        ARC_TAGS_DIR.mkdir(parents=True, exist_ok=True)
 
         for arc_id, arc_days in arc_data.items():
             if not arc_days:
@@ -139,7 +113,7 @@ class ArcTagGenerator:
                             if tag in self.tag_bank[category]:
                                 tag_dict[category].add(tag)
 
-            tag_file = TAGS_DIR / f"{arc_id}_tags.yaml"
+            tag_file = ARC_TAGS_DIR / f"{arc_id}_tags.yaml"
             tag_yaml = {
                 "arc_id": arc_id,
                 "arc_title": first_day.get("arc_title", ""),
@@ -160,6 +134,10 @@ class ArcMetadataCLI:
     def __init__(self):
         self.index_data = load_yaml(INDEX_FILE) or {}
         self.tag_bank = load_yaml(TAG_BANK_FILE) or {}
+        
+        # Ensure directories exist
+        ARC_TAGS_DIR.mkdir(parents=True, exist_ok=True)
+        DAY_FILES_DIR.mkdir(parents=True, exist_ok=True)
 
     def run(self) -> None:
         parser = argparse.ArgumentParser(description="Generate arc_metadata and arc_tags from day files.")

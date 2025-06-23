@@ -1,6 +1,6 @@
 master_day_number: 45
 arc_day_number: 7
-arc_id: litany_sacred_heart
+arc_id: arc_litany_sacred_heart
 arc_title: Litany of the Sacred Heart
 arc_number: 6
 day_title: Heart of Jesus, Fountain of Life and Holiness
@@ -43,4 +43,4 @@ tags:
     - feast of the sacred heart
   typological: []
   structural:
-    - litany meditation
+    - litany
