@@ -51,9 +51,12 @@ properties:
         type:
           - string
           - integer
+          - "null"
         description: "Use for if the reading is a subset of the title (E.g. title: Catechism of the Catholic Church. reference: 2842–2845)"
       url:
-        type: string
+        type:
+          - string
+          - "null"
         description: "Only used for non-Bible sources (e.g. CCC, encyclicals) - URL or PDF link to the reading."
         anyOf:
           - format: uri
@@ -69,15 +72,19 @@ properties:
       additionalProperties: false
       properties:
         title:
-          type: string
+          type:
+            - string
           description: Full label for display (e.g., Catechism of the Catholic Church).
         reference:
           type:
             - string
             - integer
+            - "null"
           description: "Use for if the reading is a subset of the title (E.g. title: Catechism of the Catholic Church. reference: 2842–2845)"
         url:
-          type: string
+          type:
+            - string
+            - "null"
           description: "Only used for non-Bible sources (e.g. CCC, encyclicals) - URL or PDF link to the reading."
           anyOf:
             - format: uri
