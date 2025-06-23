@@ -13,7 +13,9 @@ required:
 properties:
   arc_id:
     type: string
-    description: Unique ID for the arc, must match arc_id in corresponding day_wxyx.yaml and arc_tags/*.yaml files. Generally in snake_case format with form arc_<arc_name>. For example, arc_love_of_neighbor.
+    description:
+      Unique ID for the arc, must match arc_id in corresponding day_wxyx.yaml and arc_tags/*.yaml files.
+      Generally in snake_case format with form arc_<arc_name>. For example, arc_love_of_neighbor.
   arc_title:
     type: string
     description: Full title of the arc (e.g., "The Love of God" or "Litany of the Sacred Heart").

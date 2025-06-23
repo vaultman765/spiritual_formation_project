@@ -7,27 +7,27 @@ master_day_range:
   end: 21
 tags:
   thematic:
-  - fear of the lord
+    - fear of the lord
   doctrinal:
-  - deus absconditus
-  - judgment
-  - reverence
-  - wisdom
-  - worship
+    - deus absconditus
+    - judgment
+    - reverence
+    - wisdom
+    - worship
   virtue:
-  - faith
-  - humility
-  - obedience
-  - trust
-  - vigilance
+    - faith
+    - humility
+    - obedience
+    - trust
+    - vigilance
   mystical:
-  - awe
-  - divine hiddenness
-  - divine presence
-  - purification
-  - union
+    - awe
+    - divine hiddenness
+    - divine presence
+    - purification
+    - union
   liturgical:
-  - ordinary time
+    - ordinary time
   typological:
-  - sinai
+    - sinai
   structural: []

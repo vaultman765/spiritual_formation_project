@@ -4,7 +4,10 @@ arc_id: arc_sin_mercy_conversion
 arc_title: Sin, Mercy, and Conversion
 arc_number: 4
 day_title: Turning Back to the Father
-anchor_image: "**The Road Home** — You walk a long dirt path alone, torn and stained by your sins. In the distance, the Father waits — not seated, but running. His arms are open before you even speak. He throws His cloak over your shame and calls for a feast."
+anchor_image:
+  "**The Road Home** — You walk a long dirt path alone, torn and stained by your sins.
+  In the distance, the Father waits — not seated, but running. His arms are open before you even speak.
+  He throws His cloak over your shame and calls for a feast."
 primary_reading:
   title: Luke 15:11–24
   reference: ""
@@ -17,12 +20,17 @@ secondary_reading:
     reference: §§5–6
     url: https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_30111980_dives-in-misericordia.html
 meditative_points:
-  - "'While he was still a long way off, his father saw him and had compassion…' (v. 20) — God’s mercy does not wait for perfection. The turn itself awakens His compassion."
+  - "'While he was still a long way off, his father saw him and had compassion…' (v. 20) — God’s mercy does not wait for perfection.
+    The turn itself awakens His compassion."
   - "The prodigal prepares a speech — but the Father interrupts with an embrace. Conversion is not about eloquence; it is about return."
   - "The robe, the ring, the feast — these are not rewards for holiness. They are gifts for the one who comes home hungry."
 ejaculatory_prayer: Father, I am not worthy to be called Your child — but I come to You.
-colloquy: Speak to the Father not as a stranger, but as one returning from exile. Let the words of your confession be simple and honest. Do not defend yourself. Just walk to Him. He is already running.
-resolution: Today, recall a time when you felt far from God — and how He welcomed you back. Let that memory stir a return to confession or prayer.
+colloquy:
+  Speak to the Father not as a stranger, but as one returning from exile. Let the words of your confession be simple and honest.
+  Do not defend yourself. Just walk to Him. He is already running.
+resolution:
+  Today, recall a time when you felt far from God — and how He welcomed you back.
+  Let that memory stir a return to confession or prayer.
 tags:
   thematic:
     - contrition

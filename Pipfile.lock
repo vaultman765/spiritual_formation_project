@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "94d05c9033740e6993279a79d5f30f1b0342cc9df2ee502fcd4d5fbbee0933c7"
+            "sha256": "3fab545586886da3959b5eedd565dd9a59ea3182e1cdfcc1e22c5450c733e729"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -40,6 +40,14 @@
             ],
             "markers": "python_version >= '3.9'",
             "version": "==2025.4.1"
+        },
+        "pathspec": {
+            "hashes": [
+                "sha256:a0d503e138a4c123b27490a4f7beda6a01c6f288df0e4a8b79c7eb0dc7b4cc08",
+                "sha256:a482d51503a1ab33b1c67a6c3813a26953dbdc71c31dacaef9a838c4e29f5712"
+            ],
+            "markers": "python_version >= '3.8'",
+            "version": "==0.12.1"
         },
         "pyyaml": {
             "hashes": [
@@ -239,6 +247,15 @@
             ],
             "markers": "python_version >= '3.9'",
             "version": "==4.14.0"
+        },
+        "yamllint": {
+            "hashes": [
+                "sha256:364f0d79e81409f591e323725e6a9f4504c8699ddf2d7263d8d2b539cd66a583",
+                "sha256:81f7c0c5559becc8049470d86046b36e96113637bcbe4753ecef06977c00245d"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.9'",
+            "version": "==1.37.1"
         }
     },
     "develop": {

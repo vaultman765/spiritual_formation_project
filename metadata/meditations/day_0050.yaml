@@ -4,7 +4,13 @@ arc_id: arc_litany_sacred_heart
 arc_title: Litany of the Sacred Heart
 arc_number: 6
 day_title: Heart of Jesus, Source of Justice and Love
-anchor_image: "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy. His hands are extended in blessing, and His robe gleams like light. But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love. It is not a wound of shame, but a throne of glory. He says nothing. He simply shows you the place where divine love became visible. Each title of the Litany is real here. You gaze at the Heart… and see eternity."
+anchor_image:
+  "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
+  His hands are extended in blessing, and His robe gleams like light.
+  But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love.
+  It is not a wound of shame, but a throne of glory. He says nothing.
+  He simply shows you the place where divine love became visible. Each title of the Litany is real here.
+  You gaze at the Heart… and see eternity."
 primary_reading:
   title: Litany of the Sacred Heart of Jesus
   reference:
@@ -23,7 +29,9 @@ meditative_points:
   - Justice flows from a Heart that never separates it from love
   - The Cross reveals justice satisfied — and mercy overflowing
 ejaculatory_prayer: Heart of Jesus, fountain of true justice, order my loves according to Your righteousness.
-colloquy: Lord Jesus, You are meek and humble, but never unjust. In Your Heart, love and truth embrace. Teach me never to separate them. Let me seek justice that springs from Your mercy and never ends in coldness or pride.
+colloquy:
+  Lord Jesus, You are meek and humble, but never unjust. In Your Heart, love and truth embrace. Teach me never to separate them.
+  Let me seek justice that springs from Your mercy and never ends in coldness or pride.
 resolution: I will practice justice today in a hidden way — returning good for wrong or giving silently to someone in need.
 tags:
   thematic:

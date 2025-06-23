@@ -7,60 +7,60 @@ master_day_range:
   end: 38
 tags:
   thematic:
-  - abandonment
-  - betrayal
-  - birth of the church
-  - humiliation
-  - mockery
-  - passion of christ
-  - redemptive suffering
-  - sacrifice
-  - salvation through the cross
-  - suffering
+    - abandonment
+    - betrayal
+    - birth of the church
+    - humiliation
+    - mockery
+    - passion of christ
+    - redemptive suffering
+    - sacrifice
+    - salvation through the cross
+    - suffering
   doctrinal:
-  - atonement
-  - baptism
-  - eucharist
-  - kingship of christ
-  - mary as co-redemptrix
-  - mother of the church
-  - paschal mystery
-  - reverence
-  - sacred heart
-  - salvation
-  - sin
+    - atonement
+    - baptism
+    - eucharist
+    - kingship of christ
+    - mary as co-redemptrix
+    - mother of the church
+    - paschal mystery
+    - reverence
+    - sacred heart
+    - salvation
+    - sin
   virtue:
-  - compassion
-  - faith
-  - fortitude
-  - humility
-  - meekness
-  - mercy
-  - obedience
-  - patience
-  - perseverance
-  - purity
-  - surrender
-  - trust
-  - vigilance
+    - compassion
+    - faith
+    - fortitude
+    - humility
+    - meekness
+    - mercy
+    - obedience
+    - patience
+    - perseverance
+    - purity
+    - surrender
+    - trust
+    - vigilance
   mystical:
-  - divine mercy
-  - divine silence
-  - divine will
-  - healing
-  - intercession
-  - mortification
-  - silence
-  - spiritual darkness
-  - spiritual maternity
-  - union with christ
+    - divine mercy
+    - divine silence
+    - divine will
+    - healing
+    - intercession
+    - mortification
+    - silence
+    - spiritual darkness
+    - spiritual maternity
+    - union with christ
   liturgical:
-  - holy saturday
-  - holy week
-  - lent
+    - holy saturday
+    - holy week
+    - lent
   typological:
-  - blood and water
-  - blood and water from christ's side
-  - temple veil torn
-  - the pierced heart
+    - blood and water
+    - blood and water from christ's side
+    - temple veil torn
+    - the pierced heart
   structural: []

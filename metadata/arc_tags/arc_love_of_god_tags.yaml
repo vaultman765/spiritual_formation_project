@@ -7,34 +7,34 @@ master_day_range:
   end: 7
 tags:
   thematic:
-  - contrition
-  - desire for god
-  - identity
-  - love of god
-  - transformation
+    - contrition
+    - desire for god
+    - identity
+    - love of god
+    - transformation
   doctrinal:
-  - grace
-  - love of god
-  - redemption
+    - grace
+    - love of god
+    - redemption
   virtue:
-  - charity
-  - faith
-  - fidelity
-  - hope
-  - humility
-  - mercy
-  - obedience
-  - trust
+    - charity
+    - faith
+    - fidelity
+    - hope
+    - humility
+    - mercy
+    - obedience
+    - trust
   mystical:
-  - abiding in love
-  - divine charity
-  - divine image
-  - divine love
-  - divine mercy
-  - union
+    - abiding in love
+    - divine charity
+    - divine image
+    - divine love
+    - divine mercy
+    - union
   liturgical:
-  - ordinary time
+    - ordinary time
   typological:
-  - prodigal son
-  - vine and branches
+    - prodigal son
+    - vine and branches
   structural: []

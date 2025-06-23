@@ -7,36 +7,36 @@ master_day_range:
   end: 14
 tags:
   thematic:
-  - action
-  - love of neighbor
-  - sacrifice
-  - unity
+    - action
+    - love of neighbor
+    - sacrifice
+    - unity
   doctrinal:
-  - commandments
-  - communion
-  - dignity of the human person
-  - grace
-  - mystical body
-  - vocation
-  - works of mercy
+    - commandments
+    - communion
+    - dignity of the human person
+    - grace
+    - mystical body
+    - vocation
+    - works of mercy
   virtue:
-  - charity
-  - forgiveness
-  - humility
-  - meekness
-  - mercy
-  - obedience
-  - perseverance
-  - solidarity
+    - charity
+    - forgiveness
+    - humility
+    - meekness
+    - mercy
+    - obedience
+    - perseverance
+    - solidarity
   mystical:
-  - body of christ
-  - intercession
-  - spiritual childhood
-  - spiritual warfare
+    - body of christ
+    - intercession
+    - spiritual childhood
+    - spiritual warfare
   liturgical:
-  - ordinary time
+    - ordinary time
   typological:
-  - foot washing
-  - good samaritan
-  - judas
+    - foot washing
+    - good samaritan
+    - judas
   structural: []

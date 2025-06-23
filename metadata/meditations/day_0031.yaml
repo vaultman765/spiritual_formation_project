@@ -4,7 +4,10 @@ arc_id: arc_passion_of_christ
 arc_title: The Passion of Christ – Events and Interior Sufferings
 arc_number: 5
 day_title: The Scourging – Wounded for Our Healing
-anchor_image: "**The Scourging at the Pillar** Stripped and bound, Jesus stands at the pillar. The whip cracks. His back tears open. Blood runs down the stone floor. The guards mock, but He does not resist. The Lamb is prepared for sacrifice."
+anchor_image:
+  "**The Scourging at the Pillar** Stripped and bound, Jesus stands at the pillar. The whip cracks.
+  His back tears open. Blood runs down the stone floor. The guards mock, but He does not resist.
+  The Lamb is prepared for sacrifice."
 primary_reading:
   title: John 19:1
   reference: ""
@@ -21,7 +24,8 @@ meditative_points:
   - His silence was more powerful than protest.
   - By His wounds, I am healed — but do I let those wounds touch me?
 ejaculatory_prayer: O Jesus, scourged and silent, cleanse my heart in Your blood.
-colloquy: Jesus, the blood at the pillar was mine — and You offered it freely. Let me not run from sacrifice, but find healing where You were torn.
+colloquy: Jesus, the blood at the pillar was mine — and You offered it freely.
+  Let me not run from sacrifice, but find healing where You were torn.
 resolution: Today I will resist one temptation to self-indulgence — and unite it to Your suffering.
 tags:
   thematic:

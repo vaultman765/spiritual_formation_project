@@ -7,71 +7,71 @@ master_day_range:
   end: 54
 tags:
   thematic:
-  - adoration
-  - contrition
-  - desire
-  - humiliation
-  - mercy
-  - mockery
-  - reparation
-  - sacred heart
-  - transformation
-  - unity
+    - adoration
+    - contrition
+    - desire
+    - humiliation
+    - mercy
+    - mockery
+    - reparation
+    - sacred heart
+    - transformation
+    - unity
   doctrinal:
-  - atonement
-  - christology
-  - grace
-  - hypostatic union
-  - incarnation
-  - kingship of christ
-  - love of god
-  - mary
-  - merit
-  - repentance
-  - reverence
-  - sanctification
-  - sonship of christ
-  - trinity
-  - virtues
+    - atonement
+    - christology
+    - grace
+    - hypostatic union
+    - incarnation
+    - kingship of christ
+    - love of god
+    - mary
+    - merit
+    - repentance
+    - reverence
+    - sanctification
+    - sonship of christ
+    - trinity
+    - virtues
   virtue:
-  - charity
-  - faith
-  - fortitude
-  - holiness
-  - hope
-  - humility
-  - justice
-  - love
-  - mercy
-  - patience
-  - prudence
-  - surrender
-  - temperance
-  - trust
+    - charity
+    - faith
+    - fortitude
+    - holiness
+    - hope
+    - humility
+    - justice
+    - love
+    - mercy
+    - patience
+    - prudence
+    - surrender
+    - temperance
+    - trust
   mystical:
-  - contemplation
-  - divine image
-  - divine indwelling
-  - divine love
-  - divine mercy
-  - divine presence
-  - divine will
-  - overshadowing
-  - pierced heart
-  - praise
-  - silence
-  - spiritual enthronement
-  - spiritual identity
-  - thirst
+    - contemplation
+    - divine image
+    - divine indwelling
+    - divine love
+    - divine mercy
+    - divine presence
+    - divine will
+    - overshadowing
+    - pierced heart
+    - praise
+    - silence
+    - spiritual enthronement
+    - spiritual identity
+    - thirst
   liturgical:
-  - annunciation
-  - baptism of the lord
-  - feast of the sacred heart
-  - good friday
-  - june
-  - lent
-  - ordinary time
-  - presentation
+    - annunciation
+    - baptism of the lord
+    - feast of the sacred heart
+    - good friday
+    - june
+    - lent
+    - ordinary time
+    - presentation
   typological: []
   structural:
-  - litany
+    - litany
