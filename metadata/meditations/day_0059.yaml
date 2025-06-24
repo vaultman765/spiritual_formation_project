@@ -1,0 +1,52 @@
+master_day_number: 59
+arc_day_number: 5
+arc_id: arc_christ_our_high_priest
+arc_title: Christ Our High Priest
+arc_number: 7
+day_title: Interceding for Us
+anchor_image:
+  Christ at the right hand of the Father, hands raised in intercession,
+  gazing with love upon the world.
+primary_reading:
+  title: Romans 8:33–34
+  reference: null
+  url: null
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§2634–2636
+    url: https://www.vatican.va/archive/ENG0015/__P98.HTM
+meditative_points:
+  - Christ is seated at the right hand of the Father
+  - He intercedes for us
+  - No charge can stand against the one Christ defends
+ejaculatory_prayer: Jesus, pray for me even now, as You stand before the Father.
+colloquy:
+  Lord, You are my defender. You do not accuse me — You intercede. You speak
+  on my behalf. Let me never forget that Your Blood pleads for me. In my weakness
+  and sin, give me the humility to entrust myself to You completely.
+resolution:
+  I will pray today in confidence, trusting that Christ intercedes for me
+  even in my failures.
+tags:
+  thematic:
+    - christ the high priest
+    - confidence in prayer
+  doctrinal:
+    - atonement
+    - christology
+    - grace
+    - salvation
+  virtue:
+    - humility
+    - hope
+  mystical:
+    - divine advocacy
+    - intercession
+    - union with christ
+  liturgical:
+    - easter
+    - ordinary time
+  typological:
+    - high priest
+  structural:
+    - rotating anchor images
