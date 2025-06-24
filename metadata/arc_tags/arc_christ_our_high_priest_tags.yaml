@@ -7,71 +7,71 @@ master_day_range:
   end: 63
 tags:
   thematic:
-  - adoration
-  - baptismal identity
-  - blood of Christ
-  - christ the high priest
-  - confidence in prayer
-  - cross
-  - eternal worship
-  - lamb of god
-  - sacrifice
-  - sanctuary
+    - adoration
+    - baptismal identity
+    - blood of Christ
+    - christ the high priest
+    - confidence in prayer
+    - cross
+    - eternal worship
+    - lamb of god
+    - sacrifice
+    - sanctuary
   doctrinal:
-  - atonement
-  - christology
-  - ecclesiology
-  - eschatology
-  - eucharist
-  - grace
-  - mediation
-  - redemption
-  - reverence
-  - salvation
-  - soteriology
-  - worship
+    - atonement
+    - christology
+    - ecclesiology
+    - eschatology
+    - eucharist
+    - grace
+    - mediation
+    - redemption
+    - reverence
+    - salvation
+    - soteriology
+    - worship
   virtue:
-  - faith
-  - fidelity
-  - hope
-  - humility
-  - obedience
-  - trust
+    - faith
+    - fidelity
+    - hope
+    - humility
+    - obedience
+    - trust
   mystical:
-  - awe
-  - beatific vision
-  - divine adoption
-  - divine advocacy
-  - divine nourishment
-  - heaven
-  - heavenly consummation
-  - heavenly liturgy
-  - heavenly mediation
-  - holy of holies
-  - intercession
-  - mystery
-  - purification
-  - royal priesthood
-  - union with christ
+    - awe
+    - beatific vision
+    - divine adoption
+    - divine advocacy
+    - divine nourishment
+    - heaven
+    - heavenly consummation
+    - heavenly liturgy
+    - heavenly mediation
+    - holy of holies
+    - intercession
+    - mystery
+    - purification
+    - royal priesthood
+    - union with christ
   liturgical:
-  - easter
-  - good friday
-  - holy week
-  - ordinary time
-  - presentation
-  - solemnities
+    - easter
+    - good friday
+    - holy week
+    - ordinary time
+    - presentation
+    - solemnities
   typological:
-  - blood of the covenant
-  - bread and wine
-  - covenant
-  - high priest
-  - levitical priesthood
-  - melchizedek
-  - moses
-  - paschal lamb
-  - temple
-  - temple in heaven
-  - temple veil torn
-  - veil of the temple
+    - blood of the covenant
+    - bread and wine
+    - covenant
+    - high priest
+    - levitical priesthood
+    - melchizedek
+    - moses
+    - paschal lamb
+    - temple
+    - temple in heaven
+    - temple veil torn
+    - veil of the temple
   structural:
-  - rotating anchor images
+    - rotating anchor images
