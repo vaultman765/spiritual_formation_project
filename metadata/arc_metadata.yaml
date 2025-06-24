@@ -234,9 +234,9 @@
       of Arimathea wrap Him in linen, anoint Him with myrrh. Mary touches His face one
       last time. The tomb is near. They roll the stone across the entrance. Stillness
       covers everything."
-    - "**The Crucifixion** Jesus is nailed to the wood. The Cross is raised. He hangs
-      in silence between earth and heaven. “Father, forgive them,” He says. The sky
-      darkens. He thirsts. He gives His mother to John. Love is poured out as blood."
+    - '**The Crucifixion** Jesus is nailed to the wood. The Cross is raised. He hangs
+      in silence between earth and heaven. "Father, forgive them," He says. The sky
+      darkens. He thirsts. He gives His mother to John. Love is poured out as blood.'
     - '**The Final Surrender** Jesus breathes His last. "Father, into Your hands I commend
       My spirit." The veil of the Temple is torn. The earth trembles. Those who stood
       near beat their breasts. The centurion says, "Truly this man was the Son of God."'
@@ -393,3 +393,106 @@
     - trust
     - unity
     - virtues
+- arc_id: arc_christ_our_high_priest
+  arc_title: Christ Our High Priest
+  arc_number: 7
+  day_count: 9
+  master_day_range:
+    start: 55
+    end: 63
+  anchor_image:
+    - Christ ascending into the heavenly sanctuary, holding the chalice of His own Blood,
+      entering before the Father as Eternal High Priest.
+    - Christ at the right hand of the Father, hands raised in intercession, gazing with
+      love upon the world.
+    - Christ laying His wounded hand on a soul kneeling before Him, clothing it with
+      a white garment and pressing it close to His Heart.
+    - Christ standing between God and man, one hand extended upward to the Father, the
+      other downward to humanity, His Blood flowing from His side as the bond of the
+      New Covenant.
+    - Melchizedek offering bread and wine, with Christ behind him, extending His own
+      hands over the offering as the eternal fulfillment.
+    - The Lamb enthroned in the heavenly sanctuary, surrounded by angels and saints,
+      the wounds still visible, offering eternal praise to the Father.
+    - The Risen Christ seated at the right hand of the Father, still bearing His wounds,
+      clothed in priestly robes, hands raised in eternal intercession.
+    - The crucified Christ suspended between heaven and earth, the moment of death,
+      with His blood flowing down to earth and upward toward heaven.
+    - The torn veil of the Temple at the moment of Christ’s death, revealing the Holy
+      of Holies, with the Cross standing visible behind it.
+  primary_reading:
+    - 1 Peter 2:9
+    - Hebrews 4:14-16
+    - Hebrews 7:23–27
+    - Hebrews 8:6–13
+    - Hebrews 9:11–14
+    - Matthew 27:50–51
+    - Psalm 110:1–4
+    - Revelation 5:6–10
+    - Romans 8:33–34
+  tags:
+    - adoration
+    - atonement
+    - awe
+    - baptismal identity
+    - beatific vision
+    - blood of Christ
+    - blood of the covenant
+    - bread and wine
+    - christ the high priest
+    - christology
+    - confidence in prayer
+    - covenant
+    - cross
+    - divine adoption
+    - divine advocacy
+    - divine nourishment
+    - easter
+    - ecclesiology
+    - eschatology
+    - eternal worship
+    - eucharist
+    - faith
+    - fidelity
+    - good friday
+    - grace
+    - heaven
+    - heavenly consummation
+    - heavenly liturgy
+    - heavenly mediation
+    - high priest
+    - holy of holies
+    - holy week
+    - hope
+    - humility
+    - intercession
+    - lamb of god
+    - levitical priesthood
+    - mediation
+    - melchizedek
+    - moses
+    - mystery
+    - obedience
+    - ordinary time
+    - paschal lamb
+    - passion
+    - presentation
+    - priesthood of the faithful
+    - purification
+    - redemption
+    - reverence
+    - rotating anchor images
+    - royal priesthood
+    - sacrifice
+    - salvation
+    - sanctuary
+    - solemnities
+    - soteriology
+    - spiritual priesthood
+    - temple
+    - temple in heaven
+    - temple veil torn
+    - trust
+    - union with christ
+    - veil of the temple
+    - worship
