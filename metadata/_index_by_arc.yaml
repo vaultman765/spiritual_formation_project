@@ -16,3 +16,6 @@ arc_passion_of_christ:
 arc_litany_sacred_heart:
   start_day: 39
   end_day: 54
+arc_christ_our_high_priest:
+  start_day: 55
+  end_day: 63

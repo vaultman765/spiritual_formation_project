@@ -1,0 +1,54 @@
+master_day_number: 57
+arc_day_number: 3
+arc_id: arc_christ_our_high_priest
+arc_title: Christ Our High Priest
+arc_number: 7
+day_title: The Sacrifice Once for All
+anchor_image:
+  The crucified Christ suspended between heaven and earth, the moment
+  of death, with His blood flowing down to earth and upward toward heaven.
+primary_reading:
+  title: Hebrews 9:11–14
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §613–614
+    url: https://www.vatican.va/archive/ENG0015/__P1O.HTM
+meditative_points:
+  - Christ enters the sanctuary with His own Blood
+  - His sacrifice is offered once for all, not repeatedly
+  - This Blood purifies the conscience to serve the living God
+ejaculatory_prayer:
+  Jesus, You offered Yourself once for all — purify my heart by
+  Your Blood.
+colloquy:
+  Lord Jesus, what the high priests could never accomplish year after year,
+  You have done once and forever. You did not bring the blood of animals, but Your
+  own — for me. I adore You for this final offering. Let my life be a continual act
+  of thanksgiving for Your one eternal sacrifice.
+resolution:
+  I will spend time in silent gratitude today, recalling that I am redeemed
+  not by effort or repetition, but by the one perfect offering of Christ on the Cross.
+tags:
+  thematic:
+    - adoration
+    - blood of christ
+    - sacrifice
+  doctrinal:
+    - christology
+    - redemption
+  virtue:
+    - humility
+  mystical:
+    - heavenly mediation
+    - purification
+  liturgical:
+    - good friday
+    - holy week
+    - ordinary time
+  typological:
+    - temple
+    - blood of the covenant
+  structural:
+    - rotating anchor images

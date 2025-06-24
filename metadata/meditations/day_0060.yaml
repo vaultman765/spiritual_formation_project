@@ -1,0 +1,50 @@
+master_day_number: 60
+arc_day_number: 6
+arc_id: arc_christ_our_high_priest
+arc_title: Christ Our High Priest
+arc_number: 7
+day_title: A Priest Like Melchizedek
+anchor_image:
+  Melchizedek offering bread and wine, with Christ behind him, extending
+  His own hands over the offering as the eternal fulfillment.
+primary_reading:
+  title: Psalm 110:1–4
+  reference:
+  url:
+secondary_reading:
+  - title: St. Thomas Aquinas, Commentary on Hebrews
+    reference: "Chapter 7-1: On the Priesthood of Melchizedek"
+    url: https://isidore.co/aquinas/SSHebrews.htm#71
+meditative_points:
+  - You are a priest forever according to the order of Melchizedek
+  - Melchizedek offers bread and wine, prefiguring Christ
+  - The priesthood of Christ is eternal, royal, and mysterious
+ejaculatory_prayer: Jesus, true Priest and King, nourish me with Your eternal sacrifice.
+colloquy:
+  O Christ, the mystery of Melchizedek is fulfilled in You. You offer not
+  animal sacrifice, but Bread and Wine — Your own Body and Blood. Let me recognize
+  the glory of Your priesthood in every Mass, and honor the mystery You fulfill forever.
+resolution:
+  At Mass today, or in spiritual communion, I will consciously unite myself
+  to Christ’s eternal priesthood made present on the altar.
+tags:
+  thematic:
+    - adoration
+    - christ the high priest
+    - sacrifice
+  doctrinal:
+    - eucharist
+    - reverence
+  virtue:
+    - faith
+  mystical:
+    - mystery
+    - divine nourishment
+    - royal priesthood
+  liturgical:
+    - ordinary time
+  typological:
+    - bread and wine
+    - melchizedek
+  structural:
+    - rotating anchor images
