@@ -23,6 +23,10 @@ These tools are complete and in daily use:
 ## 🧱 COMPLETED MILESTONES
 
 - ✅ Arc YAML migration for:
+  - Christ our High Priest
+  - Heaven and Judgment
+
+- ✅ Arc YAML migration for:
   - Love of God
   - Love of Neighbor
   - Holy Fear of the Lord
@@ -36,19 +40,31 @@ These tools are complete and in daily use:
 
 ---
 
-## 🔥 HIGH PRIORITY NEXT STEPS
 
-### ✅ Metadata & Infrastructure
+## 🔥 HIGH PRIORITY NEXT STEPS (Updated June 2025)
 
-- [ ] Enhance validator with deeper cross-checks (WIP)
-- [ ] Add support for `companion_arcs` (if/when added to schema)
-- [ ] Future: `pyproject.toml` consolidation of lint/CI tools
+### ✅ Active Focus Areas
 
-### 📦 YAML Source of Truth
+- [ ] 📘 **Arc 9 YAMLs: Immaculate Heart of Mary (Days 71–77)**
+  - SMPF format with full tag + metadata validation
+  - Ongoing: `day_0071.yaml` through `day_0077.yaml`
 
-- [ ] 🔥 **Add `.yaml` version of full meditation files** for **all planned and future meditations**
-- [ ] [CLI] Tag fixer (map + sync)
-- [ ] [CLI] Metadata + tag generator with subcommands (`--all`, `--arc`, `--dry-run`)
+- [ ] 🧭 **Section 3 Planning (Arcs 46–55)**
+  - Continue thematic flow from existing roadmap
+  - Prioritize spiritual and liturgical transitions
+
+- [ ] 💻 **Begin Django Website Scaffold**
+  - Models: Arc, Day, Tag, Book
+  - Sync YAML into dev DB
+  - CLI + admin bootstrap
+
+### 🛠️ Additional Technical Priorities
+
+- [ ] [CLI] Tag fixer + metadata generator (`--arc`, `--fix`, `--dry-run`)
+- [ ] Enhance validator with cross-checks
+- [ ] Add future support for `companion_arcs` (if schema expanded)
+- [ ] Prepare `pyproject.toml` to consolidate lint/CI tools
+
 
 ---
 
