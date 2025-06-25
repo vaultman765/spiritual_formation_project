@@ -1,0 +1,50 @@
+master_day_number: 73
+arc_day_number: 3
+arc_id: arc_immaculate_heart_mary
+arc_number: 9
+arc_title: The Immaculate Heart of Mary
+day_title: The Presentation in the Temple
+anchor_image:
+  Mary holding the Christ Child in silence, her Heart burning with love
+  and suffering — from Bethlehem to the Temple
+primary_reading:
+  title: Luke 2:15–35
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §529
+    url: https://www.vatican.va/archive/ENG0015/__P1L.HTM
+  - title: Pope John Paul II, *Redemptoris Mater*
+    reference: §16
+    url: /documents/readings/St_Pope_JP2_Redemptoris_Mater.pdf
+meditative_points:
+  - Mary carrying the Child into the Temple — the Mother presenting the Son
+  - 'The offering is total: flesh of her flesh, now given back to God'
+  - She says nothing — her yes was already spoken at the Annunciation
+ejaculatory_prayer: Immaculate Heart of Mary, offer me with your Son.
+colloquy:
+  'O Mary, teach me to offer what I love to the Lord. Let me not cling to
+  gifts, but present them with trust. Let your silence in the Temple become my own:
+  a yes without words.'
+resolution:
+  Today I will make a small personal offering in secret, asking Mary to
+  join it to her own.
+tags:
+  thematic:
+    - immaculate heart
+    - mary
+  doctrinal:
+    - maternal sacrifice
+  virtue:
+    - obedience
+  mystical: []
+  liturgical:
+    - feast of the immaculate heart of mary
+    - feast of the presentation
+    - ordinary time
+  typological:
+    - temple
+  structural:
+    - scripture
+    - luke

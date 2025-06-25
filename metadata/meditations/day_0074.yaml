@@ -1,0 +1,51 @@
+master_day_number: 74
+arc_day_number: 4
+arc_id: arc_immaculate_heart_mary
+arc_number: 9
+arc_title: The Immaculate Heart of Mary
+day_title: The Prophecy of Simeon
+anchor_image:
+  Mary holding the Christ Child in silence, her Heart burning with love
+  and suffering — from Bethlehem to the Temple
+primary_reading:
+  title: Luke 2:15–35
+  reference:
+  url:
+secondary_reading:
+  - title: Pope Pius X, Ad Diem Illum Laetissimum
+    reference: §16
+    url: /documents/readings/St_Pope_Pius_X_Ad_Diem_Illum_Laetissimum.pdf
+  - title: Catechism of the Catholic Church
+    reference: §529
+    url: https://www.vatican.va/archive/ENG0015/__P1L.HTM
+meditative_points:
+  - "Simeon’s voice: 'A sword shall pierce your own soul also'"
+  - Her Heart receives the wound before the Passion has begun
+  - Mary suffers with Christ — not in body, but in perfect union of love
+ejaculatory_prayer: Immaculate Heart of Mary, pierced for love, strengthen mine.
+colloquy:
+  O Mary, pierced by the Word, let me not flee the sword of love. Make me
+  brave to stand with you, wounded but faithful, at every cross I encounter. I place
+  my heart beside yours.
+resolution:
+  I will embrace today’s suffering quietly, joining it to Mary's pierced
+  Heart.
+tags:
+  thematic:
+    - immaculate heart
+    - mary
+    - suffering
+  doctrinal:
+    - mary as co-redemptrix
+  virtue: []
+  mystical:
+    - sorrow
+  liturgical:
+    - feast of the immaculate heart of mary
+    - feast of the presentation
+    - ordinary time
+  typological:
+    - temple
+  structural:
+    - scripture
+    - luke
