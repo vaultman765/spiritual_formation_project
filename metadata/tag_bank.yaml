@@ -16,21 +16,28 @@ thematic:
   - contrition
   - cross
   - crucifixion
+  - damnation
   - death
   - desire
   - desire for god
   - desire for union with christ
   - discipleship
+  - eternal reward
   - eternal worship
   - fear of the lord
+  - final judgment
   - gift of self
+  - glory of christ
   - heart of christ
+  - heaven
+  - hell
   - humiliation
   - identity
   - injustice
   - interior agony
   - interior battle
   - invitation to trust
+  - judgment
   - kingship
   - lamb of god
   - last things
@@ -42,6 +49,7 @@ thematic:
   - mercy
   - mercy in suffering
   - mockery
+  - mortal sin
   - motherhood
   - obedience unto death
   - origin of charity
@@ -80,6 +88,8 @@ doctrinal:
   - communion
   - concupiscence
   - conviction
+  - corporal works
+  - damnation
   - deus absconditus
   - dignity of the human person
   - devotion to the heart of jesus
@@ -87,9 +97,12 @@ doctrinal:
   - eschatology
   - eucharist
   - grace
+  - general judgment
+  - hell
   - hypostatic union
   - incarnation
   - judgment
+  - justice of God
   - kingship of christ
   - love of god
   - mary
@@ -110,6 +123,7 @@ doctrinal:
   - salvation
   - sanctification
   - sanctifying grace
+  - second coming
   - sin
   - sonship of christ
   - soteriology
@@ -154,16 +168,19 @@ mystical:
   - awe
   - beatific vision
   - body of christ
+  - christ in the poor
   - contemplation
   - darkness
   - divine adoption
   - divine advocacy
   - divine charity
+  - divine discernment
   - divine hiddenness
   - divine image
   - divine indwelling
   - divine initiative
   - divine love
+  - divine majesty
   - divine mercy
   - divine nourishment
   - divine physician
@@ -179,6 +196,7 @@ mystical:
   - heavenly worship
   - hidden acts
   - holy of holies
+  - inheritance
   - inner watchfulness
   - intercession
   - interior cleansing
@@ -192,6 +210,7 @@ mystical:
   - praise
   - purification
   - royal priesthood
+  - separation from God
   - silence
   - spiritual childhood
   - spiritual darkness
@@ -201,6 +220,7 @@ mystical:
   - spiritual maternity
   - spiritual priesthood
   - spiritual warfare
+  - sorrow
   - thirst
   - union
   - union with christ
@@ -208,8 +228,10 @@ mystical:
   - washing of feet
   - wounded love
 liturgical:
+  - advent
   - annunciation
   - baptism of the lord
+  - corporal works of mercy
   - easter
   - feast of the sacred heart
   - first fridays
@@ -218,6 +240,7 @@ liturgical:
   - holy week
   - june
   - lent
+  - november
   - ordinary time
   - presentation
   - solemnities
@@ -229,19 +252,28 @@ typological:
   - blood of the covenant
   - bronze serpent lifted up
   - covenant
+  - daniel 7
   - foot washing
+  - gehenna
   - good samaritan
   - high priest
   - isaac carrying the wood
+  - joseph feeding egypt
   - judas
+  - lake of fire
   - levitical priesthood
   - light from above
   - lost sheep
+  - marriage feast of the Lamb
   - melchizedek
   - moses
   - paschal lamb
   - prodigal son
+  - promised land
+  - rejected cornerstone
+  - sheep and goats
   - sinai
+  - son of man
   - spiritual captivity
   - temple
   - temple in heaven
@@ -251,6 +283,7 @@ typological:
   - the pierced heart
   - the return from exile
   - veil of the temple
+  - veil of veronica
   - vine and branches
 structural:
   - fixed anchor image

@@ -1,0 +1,53 @@
+master_day_number: 64
+arc_day_number: 1
+arc_id: arc_heaven_and_judgment
+arc_title: Heaven and Judgment
+arc_number: 8
+day_title: Christ in Majesty
+anchor_image:
+  Christ enthroned in glory at the Last Judgment, the nations gathered
+  before Him, His hands raised in both welcome and judgment.
+primary_reading:
+  title: Matthew 25:31-46
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§678-679
+    url: https://www.vatican.va/archive/ENG0015/__P1W.HTM
+meditative_points:
+  - The Son of Man comes in glory with His angels
+  - All nations are gathered before Him
+  - He sits on His throne — the Judge of all
+ejaculatory_prayer: Come, Lord Jesus, and rule over all.
+colloquy:
+  Lord, I tremble at Your majesty and yet I long for Your return. Let me never
+  lose sight of the glory of Your kingship. Prepare my soul even now to stand before
+  You in confidence and hope.
+resolution:
+  I will make a brief examination of conscience tonight, aware that I will
+  one day stand before the Judge of all.
+tags:
+  thematic:
+    - final judgment
+    - glory of christ
+    - last things
+  doctrinal:
+    - eschatology
+    - second coming
+    - general judgment
+  virtue:
+    - hope
+    - vigilance
+  mystical:
+    - awe
+    - beatific vision
+    - divine majesty
+  liturgical:
+    - ordinary time
+    - advent
+    - november
+  typological:
+    - daniel 7
+    - son of man
+  structural: []
