@@ -1,0 +1,47 @@
+master_day_number: 75
+arc_day_number: 5
+arc_id: arc_immaculate_heart_mary
+arc_number: 9
+arc_title: The Immaculate Heart of Mary
+day_title: The Hidden Suffering of Mary
+anchor_image:
+  Mary holding the Christ Child in silence, her Heart burning with love
+  and suffering — from Bethlehem to the Temple
+primary_reading:
+  title: Luke 2:15–35
+  reference:
+  url:
+secondary_reading:
+  - title: Pope Pius XII, Mystici Corporis Christi
+    reference: §110
+    url: /documents/readings/St_Pope_Pius_XII_Mystici_Corporis_Christi.pdf
+  - title: St. John Eudes, The Admirable Heart of Mary
+    reference: Chapter V
+    url: /documents/readings/St_John_Eudes_Admirable_Heart_of_Mary.pdf
+meditative_points:
+  - She lived every day with the knowledge of the coming Passion
+  - Her Heart offered daily what her arms once held
+  - Her suffering was hidden — but constant, total, and united to Christ
+ejaculatory_prayer: Immaculate Heart of Mary, teach me to suffer with Christ.
+colloquy:
+  O Mary, hidden flame of suffering, teach me to suffer silently and with
+  love. Let me not waste pain but offer it with you. May I live in union with the
+  pierced Heart that loved perfectly.
+resolution:
+  Today I will offer a hidden sorrow for someone else’s good, asking Mary
+  to make it fruitful.
+tags:
+  thematic:
+    - immaculate heart
+    - mary
+    - suffering
+  doctrinal:
+    - maternal sacrifice
+  virtue: []
+  mystical:
+    - union
+  liturgical: []
+  typological: []
+  structural:
+    - scripture
+    - luke

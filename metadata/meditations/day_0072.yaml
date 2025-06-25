@@ -1,0 +1,52 @@
+master_day_number: 72
+arc_day_number: 2
+arc_id: arc_immaculate_heart_mary
+arc_number: 9
+arc_title: The Immaculate Heart of Mary
+day_title: Adoration with the Shepherds
+anchor_image:
+  Mary holding the Christ Child in silence, her Heart burning with love
+  and suffering — from Bethlehem to the Temple
+primary_reading:
+  title: Luke 2:15–35
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§525-526
+    url: https://www.vatican.va/archive/ENG0015/__P1L.HTM
+  - title: Pope Benedict XVI, Jesus of Nazareth – The Infancy Narratives
+    reference: pp. 66–67 (if owned)
+    url:
+meditative_points:
+  - The shepherds kneeling in silence before the Christ Child
+  - Mary watching their adoration, her Heart echoing their wonder
+  - The poverty of the stable as the dwelling place of divine glory
+ejaculatory_prayer: Immaculate Heart of Mary, lead me to adore your Son.
+colloquy:
+  O Mary, draw me close to the manger. Let me kneel beside you and the shepherds
+  in silent adoration. Teach me to love the hidden Christ — poor, small, and humble
+  — with a heart that burns like yours.
+resolution:
+  I will offer a moment of silent adoration today, imagining myself beside
+  Mary and the shepherds at the manger.
+tags:
+  thematic:
+    - adoration
+    - immaculate heart
+    - mary
+  doctrinal:
+    - poverty of christ
+  virtue:
+    - humility
+  mystical:
+    - divine condescension
+    - marian companionship
+  liturgical:
+    - feast of the immaculate heart of mary
+    - ordinary time
+  typological:
+    - shepherds
+  structural:
+    - scripture
+    - luke

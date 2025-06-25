@@ -46,6 +46,8 @@ thematic:
   - love of jesus
   - love of neighbor
   - loving response
+  - magnificat
+  - mary
   - mercy
   - mercy in suffering
   - mockery
@@ -100,13 +102,16 @@ doctrinal:
   - general judgment
   - hell
   - hypostatic union
+  - immaculate heart
   - incarnation
+  - joy in suffering
   - judgment
   - justice of God
   - kingship of christ
   - love of god
   - mary
   - mary as co-redemptrix
+  - maternal sacrifice
   - mediation
   - merit
   - mother of the church
@@ -114,6 +119,7 @@ doctrinal:
   - new commandment
   - paschal mystery
   - passion
+  - poverty of christ
   - reconciliation
   - redemption
   - repentance
@@ -174,6 +180,7 @@ mystical:
   - divine adoption
   - divine advocacy
   - divine charity
+  - divine condescension
   - divine discernment
   - divine hiddenness
   - divine image
@@ -202,6 +209,7 @@ mystical:
   - interior cleansing
   - light
   - longing for union
+  - marian companionship
   - mortification
   - mystery
   - mystery of redemptive silence
@@ -224,6 +232,7 @@ mystical:
   - thirst
   - union
   - union with christ
+  - union with mary
   - waiting
   - washing of feet
   - wounded love
@@ -233,6 +242,8 @@ liturgical:
   - baptism of the lord
   - corporal works of mercy
   - easter
+  - feast of the immaculate heart of mary
+  - feast of the presentation
   - feast of the sacred heart
   - first fridays
   - good friday
@@ -272,6 +283,7 @@ typological:
   - promised land
   - rejected cornerstone
   - sheep and goats
+  - shepherds
   - sinai
   - son of man
   - spiritual captivity
@@ -286,10 +298,12 @@ typological:
   - veil of veronica
   - vine and branches
 structural:
+  - consecration
   - fixed anchor image
   - gospel discourse
   - line-by-line meditation
   - litany
+  - luke
   - meditations on divine charity
   - moral formation
   - multi-day sequence
@@ -298,5 +312,6 @@ structural:
   - pauline theology
   - rotating anchor images
   - sacramental theology
+  - scripture
   - theological + affective blend
   - unified anchor image
