@@ -1,21 +1,32 @@
 arc_love_of_god:
+  arc_number: 1
   start_day: 1
   end_day: 7
 arc_love_of_neighbor:
+  arc_number: 2
   start_day: 8
   end_day: 14
 arc_holy_fear_of_the_lord:
+  arc_number: 3
   start_day: 15
   end_day: 21
 arc_sin_mercy_conversion:
+  arc_number: 4
   start_day: 22
   end_day: 28
 arc_passion_of_christ:
+  arc_number: 5
   start_day: 29
   end_day: 38
 arc_litany_sacred_heart:
+  arc_number: 6
   start_day: 39
   end_day: 54
 arc_christ_our_high_priest:
+  arc_number: 7
   start_day: 55
   end_day: 63
+arc_heaven_and_judgment:
+  arc_number: 8
+  start_day: 64
+  end_day: 70

@@ -131,9 +131,9 @@
       either side: one of accusation, the other of hope. Your hands are bound, but
       your heart stirs. You cry out for freedom, even as the chains tighten. Christ
       stands silently before you, holding the key. He waits for your plea.'
-    - '**The Kneeling Soul** — You kneel in a dimly lit confessional. A curtain veils
+    - "**The Kneeling Soul** — You kneel in a dimly lit confessional. A curtain veils
       the priest, but through it speaks the mercy of Christ. You whisper your sins
-      into the silence, and from beyond the veil comes a voice: ''Go in peace.'''
+      into the silence, and from beyond the veil comes a voice: 'Go in peace.'"
     - '**The Light That Reveals** — You are in a room lit only by candlelight. Christ
       opens the door, and radiant light floods in. You see the dust, the stains, the
       wounds — things hidden in the half-light are now exposed. But He does not turn
@@ -497,3 +497,81 @@
     - union with christ
     - veil of the temple
     - worship
+- arc_id: arc_heaven_and_judgment
+  arc_title: Heaven and Judgment
+  arc_number: 8
+  day_count: 7
+  master_day_range:
+    start: 64
+    end: 70
+  anchor_image:
+    - Christ enthroned in glory at the Last Judgment, the nations gathered before
+      Him, His hands raised in both welcome and judgment.
+    - Christ the King turns to those on His right hand, radiant, and says, 'Come,
+      you blessed of My Father...' as they fall to their knees in awe.
+    - Christ turns to the left and says to those on His left, 'Depart from me, you
+      accursed…' as sorrow and terror fall upon the rejected.
+    - Christ turns toward the sheep on His right hand and the goats on His left, the
+      faces of the souls marked by peace or confusion.
+    - "The King addressing the righteous: 'I was hungry, and you gave me food; I
+      was thirsty, and you gave me drink; I was a stranger, and you welcomed me...'"
+    - The Son of Man opens His arms, and the works of mercy rise up from the lives
+      of the just and the damned alike, revealing what each soul chose.
+    - The souls cast out walk toward a valley of fire, while angels weep and the righteous
+      look on with sorrowful reverence.
+  primary_reading:
+    - Matthew 25:31-46
+  tags:
+    - advent
+    - awe
+    - beatific vision
+    - charity
+    - christ in the poor
+    - compassion
+    - contrition
+    - conversion
+    - corporal works
+    - corporal works of mercy
+    - damnation
+    - daniel 7
+    - divine discernment
+    - divine majesty
+    - eschatology
+    - eternal reward
+    - final judgment
+    - gehenna
+    - general judgment
+    - glory of christ
+    - heaven
+    - hell
+    - hope
+    - humility
+    - inheritance
+    - joseph feeding egypt
+    - joy
+    - judgment
+    - justice
+    - justice of God
+    - lake of fire
+    - last things
+    - lent
+    - love of neighbor
+    - marriage feast of the Lamb
+    - mercy
+    - merit
+    - mortal sin
+    - november
+    - ordinary time
+    - promised land
+    - rejected cornerstone
+    - repentance
+    - salvation
+    - second coming
+    - separation from God
+    - sheep and goats
+    - son of man
+    - sorrow
+    - union with christ
+    - veil of veronica
+    - vigilance
+    - works of mercy

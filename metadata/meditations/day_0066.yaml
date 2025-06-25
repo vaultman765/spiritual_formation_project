@@ -1,0 +1,44 @@
+master_day_number: 66
+arc_day_number: 3
+arc_id: arc_heaven_and_judgment
+arc_title: Heaven and Judgment
+arc_number: 8
+day_title: Works of Mercy
+anchor_image:
+  "The King addressing the righteous: 'I was hungry, and you gave me food;
+  I was thirsty, and you gave me drink; I was a stranger, and you welcomed me...'"
+primary_reading:
+  title: 'Matthew 25:31-46'
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §2447
+    url: https://www.vatican.va/archive/ENG0015/__P8F.HTM
+meditative_points:
+  - Whatever you did for the least of these, you did for Me
+  - 'The judgment is not abstract — it is love lived'
+  - Mercy to the poor is mercy to Christ Himself
+ejaculatory_prayer: Lord Jesus, help me to see You in the poor.
+colloquy:
+  Jesus, You make Yourself present in the lowly. Open my eyes and my heart.
+  Let me not pass You by in the hungry, the thirsty, the stranger. Show me how to
+  love You truly.
+resolution: I will perform one hidden work of mercy today, in silence and love.
+tags:
+  thematic:
+    - mercy
+    - love of neighbor
+  doctrinal:
+    - corporal works
+    - judgment
+  virtue:
+    - charity
+    - compassion
+  mystical:
+    - christ in the poor
+  liturgical:
+    - ordinary time
+    - lent
+  typological: []
+  structural: []
