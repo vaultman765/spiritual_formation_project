@@ -243,6 +243,7 @@ liturgical:
   - corporal works of mercy
   - easter
   - feast of the immaculate heart of mary
+  - feast of the presentation
   - feast of the sacred heart
   - first fridays
   - good friday
@@ -302,6 +303,7 @@ structural:
   - gospel discourse
   - line-by-line meditation
   - litany
+  - luke
   - meditations on divine charity
   - moral formation
   - multi-day sequence
@@ -310,5 +312,6 @@ structural:
   - pauline theology
   - rotating anchor images
   - sacramental theology
+  - scripture
   - theological + affective blend
   - unified anchor image
