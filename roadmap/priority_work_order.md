@@ -33,6 +33,8 @@ These tools are complete and in daily use:
   - Passion of Christ
   - Litany of the Sacred Heart
   - Sin, Mercy, and Conversion
+  - Immaculate Heart of Mary
+  - Rosary – Joyful Mysteries
 - ✅ `tag_bank.yaml` canonicalized
 - ✅ Tier 1 Reading Plan written
 - ✅ Theme Roadmap finalized (Section 1–3 aligned)
@@ -40,23 +42,25 @@ These tools are complete and in daily use:
 
 ---
 
-
 ## 🔥 HIGH PRIORITY NEXT STEPS (Updated June 2025)
 
 ### ✅ Active Focus Areas
 
-- [ ] 📘 **Arc 9 YAMLs: Immaculate Heart of Mary (Days 71–77)**
+- [x] 📘 **Arc 9 YAMLs: Immaculate Heart of Mary (Days 71–77)**
   - SMPF format with full tag + metadata validation
-  - Ongoing: `day_0071.yaml` through `day_0077.yaml`
 
 - [ ] 🧭 **Section 3 Planning (Arcs 46–55)**
-  - Continue thematic flow from existing roadmap
-  - Prioritize spiritual and liturgical transitions
+  - Completed initial structure and flow
+  - Monitor future arc insertions or reorder needs
 
 - [ ] 💻 **Begin Django Website Scaffold**
-  - Models: Arc, Day, Tag, Book
-  - Sync YAML into dev DB
-  - CLI + admin bootstrap
+  - ✅ Models: Arc, Day, Tag, SecondaryReading
+  - [x] Project scaffolded with `manage.py` and `config/settings.py`
+  - [x] App created: `website/`
+  - [x] Models registered
+  - [ ] Admin interface scaffold
+  - [ ] YAML sync tools
+  - [ ] ER diagram
 
 ### 🛠️ Additional Technical Priorities
 
@@ -65,13 +69,13 @@ These tools are complete and in daily use:
 - [ ] Add future support for `companion_arcs` (if schema expanded)
 - [ ] Prepare `pyproject.toml` to consolidate lint/CI tools
 
-
 ---
 
 ## 🧘 MEDITATION CONTENT PROGRESS
 
-- [ ] Continue SMPF-format meditations for Section 1 of `mental_prayer_theme_roadmap.md`
-- [ ] Start next arc in roadmap automatically after each arc is completed
+- [x] Completed Arc 9 (Days 71–77)
+- [x] Completed Arc 10 (Days 78–84)
+- [ ] Begin YAML generation for next arc in roadmap automatically
 - [ ] Ensure every YAML meditation is validated + indexed on creation
 
 ---
