@@ -617,3 +617,61 @@
     - temple
     - union
     - union with mary
+- arc_id: arc_rosary_joyful_mysteries
+  arc_title: The Rosary – Joyful Mysteries
+  arc_number: 10
+  day_count: 7
+  master_day_range:
+    start: 78
+    end: 84
+  anchor_image:
+    - Mary embracing Elizabeth as the Magnificat rises in her heart
+    - Mary finding the Boy Jesus in the Temple, teaching the elders
+    - Mary in silent contemplation, her Heart storing all these mysteries
+    - Mary kneeling before Gabriel at the moment of her Fiat
+    - Mary offering Jesus in the Temple, while Simeon prophesies
+    - Mary walking beside us, as we live the Joyful Mysteries with her
+    - The Christ Child in the manger, Mary adoring in silence and awe
+  primary_reading:
+    - Luke 1:26–38
+    - Luke 1:39–56
+    - Luke 2:19, 2:51
+    - Luke 2:1–20
+    - Luke 2:22–38
+    - Luke 2:41–52
+    - Philippians 4:4–9
+  tags:
+    - adoration
+    - advent
+    - annunciation
+    - awe
+    - charity
+    - christmas
+    - contemplation
+    - divine condescension
+    - divine mysteries
+    - docility
+    - faith
+    - fidelity
+    - finding in the temple
+    - humility
+    - incarnation
+    - joy
+    - joyful mysteries
+    - luke
+    - magnificat
+    - marian companionship
+    - mary
+    - obedience
+    - ordinary time
+    - pierced heart
+    - presentation
+    - rosary
+    - rotating anchor images
+    - sacrifice
+    - service
+    - silence
+    - sorrow
+    - temple
+    - the pierced heart
+    - trust

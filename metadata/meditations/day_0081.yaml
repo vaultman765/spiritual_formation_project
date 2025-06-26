@@ -1,0 +1,50 @@
+master_day_number: 81
+arc_day_number: 4
+arc_id: arc_rosary_joyful_mysteries
+arc_number: 10
+arc_title: The Rosary – Joyful Mysteries
+day_title: The Presentation
+anchor_image: Mary offering Jesus in the Temple, while Simeon prophesies
+primary_reading:
+  title: Luke 2:22–38
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §529
+    url: https://www.vatican.va/archive/ENG0015/__P1L.HTM
+  - title: St. Pope Pius X, *Ad Diem Illum Laetissimum*
+    reference: §16
+    url: /documents/readings/St_Pope_Pius_X_Ad_Diem_Illum_Laetissimum.pdf
+meditative_points:
+  - Mary offers Jesus — and herself — completely to God
+  - Simeon's joy is tinged with a sword of sorrow
+  - The light of the nations is placed in the arms of the poor
+ejaculatory_prayer: O Mary, offer me with your Son
+colloquy:
+  O Mary, help me to offer all I am to God. Let me not hold back anything
+  from Him, even when sorrow follows joy.
+resolution: Offer your day to God today through Mary’s Heart — every joy and sorrow.
+tags:
+  thematic:
+    - mary
+    - presentation
+    - rosary
+    - sacrifice
+  doctrinal: []
+  virtue: []
+  mystical:
+    - contemplation
+    - pierced heart
+    - sorrow
+  liturgical:
+    - presentation
+    - ordinary time
+  typological:
+    - temple
+    - the pierced heart
+  structural:
+    - luke
+    - joyful mysteries
+    - rosary
+    - rotating anchor images

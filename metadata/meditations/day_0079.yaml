@@ -1,0 +1,49 @@
+master_day_number: 79
+arc_day_number: 2
+arc_id: arc_rosary_joyful_mysteries
+arc_number: 10
+arc_title: The Rosary – Joyful Mysteries
+day_title: The Visitation
+anchor_image: Mary embracing Elizabeth as the Magnificat rises in her heart
+primary_reading:
+  title: Luke 1:39–56
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§717–720
+    url: https://www.vatican.va/archive/ENG0015/__P23.HTM
+  - title: Rosarium Virginis Mariae
+    reference: §20
+    url: /documents/readings/St_Pope_JP2_Rosarium_Virginis_Mariae.pdf
+meditative_points:
+  - Mary hastens in charity — interior joy drives her outward
+  - Elizabeth recognizes the presence of her Lord in Mary
+  - The Magnificat is not just a song — it is Mary's very Heart
+ejaculatory_prayer: My soul magnifies the Lord!
+colloquy:
+  Mother of God, teach me to serve with joy and carry Christ to others in
+  silence and love. Let my soul, like yours, magnify the Lord.
+resolution: Today I will serve someone quietly, joyfully, and without expecting recognition.
+tags:
+  thematic:
+    - magnificat
+    - rosary
+  doctrinal: []
+  virtue:
+    - charity
+    - joy
+    - humility
+    - service
+  mystical: []
+  liturgical:
+    - annunciation
+    - advent
+    - christmas
+    - ordinary time
+  typological: []
+  structural:
+    - luke
+    - joyful mysteries
+    - rosary
+    - rotating anchor images

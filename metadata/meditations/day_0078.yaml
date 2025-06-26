@@ -1,0 +1,48 @@
+master_day_number: 78
+arc_day_number: 1
+arc_id: arc_rosary_joyful_mysteries
+arc_number: 10
+arc_title: The Rosary – Joyful Mysteries
+day_title: The Annunciation
+anchor_image: Mary kneeling before Gabriel at the moment of her Fiat
+primary_reading:
+  title: Luke 1:26–38
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§484–494
+    url: https://www.vatican.va/archive/ENG0015/__P1K.HTM
+  - title: St. Pope John Paul II, *Redemptoris Mater*
+    reference: §12
+    url: /documents/readings/St_Pope_John_Paul_II_Redemptoris_Mater.pdf
+meditative_points:
+  - Gabriel speaks; Mary listens with holy fear and trust
+  - The Holy Spirit shall overshadow her — and she consents
+  - Her 'Fiat' echoes through every generation
+ejaculatory_prayer: Be it done to me according to thy word.
+colloquy:
+  O Mary, help me to say yes to God with the same trust you had. When I do
+  not understand, help me surrender. When I fear, teach me to believe.
+resolution: Today I will say yes to God's will in one small hidden moment.
+tags:
+  thematic:
+    - rosary
+  doctrinal:
+    - incarnation
+  virtue:
+    - obedience
+    - trust
+  mystical:
+    - docility
+  liturgical:
+    - annunciation
+    - advent
+    - christmas
+    - ordinary time
+  typological: []
+  structural:
+    - luke
+    - joyful mysteries
+    - rosary
+    - rotating anchor images

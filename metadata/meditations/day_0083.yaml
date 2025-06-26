@@ -1,0 +1,48 @@
+master_day_number: 83
+arc_day_number: 6
+arc_id: arc_rosary_joyful_mysteries
+arc_number: 10
+arc_title: The Rosary – Joyful Mysteries
+day_title: Mary Pondered All These Things
+anchor_image: Mary in silent contemplation, her Heart storing all these mysteries
+primary_reading:
+  title: Luke 2:19, 2:51
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §2715
+    url: https://www.vatican.va/archive/ENG0015/__P9M.HTM
+  - title: St. Pope John Paul II, *Rosarium Virginis Mariae*
+    reference: §13
+    url: /documents/readings/St_Pope_John_Paul_II_Rosarium_Virginis_Mariae.pdf
+meditative_points:
+  - Mary’s Heart is a treasury of mysteries
+  - Her contemplation is not passive — it is the fire of love in silence
+  - To pray the Rosary is to enter her memory
+ejaculatory_prayer: Immaculate Heart of Mary, teach me to ponder.
+colloquy:
+  Mother, let me ponder as you do. Keep every word of Christ alive in me.
+  Teach me interior stillness.
+resolution: Spend time today in quiet reflection on one mystery of Christ’s life.
+tags:
+  thematic:
+    - rosary
+    - contemplation
+  doctrinal:
+    - divine mysteries
+  virtue:
+    - faith
+    - fidelity
+    - trust
+  mystical:
+    - contemplation
+    - silence
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - luke
+    - joyful mysteries
+    - rosary
+    - rotating anchor images

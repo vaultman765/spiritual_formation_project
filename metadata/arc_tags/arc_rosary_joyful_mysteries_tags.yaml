@@ -1,0 +1,48 @@
+arc_id: arc_rosary_joyful_mysteries
+arc_title: The Rosary – Joyful Mysteries
+arc_number: 10
+day_count: 7
+master_day_range:
+  start: 78
+  end: 84
+tags:
+  thematic:
+    - adoration
+    - magnificat
+    - mary
+    - rosary
+    - sacrifice
+  doctrinal:
+    - divine mysteries
+    - incarnation
+  virtue:
+    - charity
+    - faith
+    - fidelity
+    - humility
+    - joy
+    - obedience
+    - service
+    - trust
+  mystical:
+    - awe
+    - contemplation
+    - docility
+    - marian companionship
+    - pierced heart
+    - silence
+    - sorrow
+  liturgical:
+    - advent
+    - annunciation
+    - christmas
+    - ordinary time
+    - presentation
+  typological:
+    - temple
+    - the pierced heart
+  structural:
+    - joyful mysteries
+    - luke
+    - rosary
+    - rotating anchor images

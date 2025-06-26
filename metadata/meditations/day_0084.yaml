@@ -1,0 +1,40 @@
+master_day_number: 84
+arc_day_number: 7
+arc_id: arc_rosary_joyful_mysteries
+arc_number: 10
+arc_title: The Rosary – Joyful Mysteries
+day_title: Living the Joyful Mysteries
+anchor_image: Mary walking beside us, as we live the Joyful Mysteries with her
+primary_reading:
+  title: Philippians 4:4–9
+  reference:
+  url:
+secondary_reading:
+  - title: St. Pope John Paul II, *Rosarium Virginis Mariae*
+    reference: §40–41
+    url: /documents/readings/St_Pope_John_Paul_II_Rosarium_Virginis_Mariae.pdf
+meditative_points:
+  - The Joyful Mysteries are not memories — they are a path
+  - Mary walks with us in our daily joys and struggles
+  - To pray with her is to learn joy rooted in God
+ejaculatory_prayer: Jesus, joy of my soul!
+colloquy:
+  Mary, help me live these mysteries. Walk with me through ordinary days and
+  remind me that joy is found in God alone.
+resolution: Choose one Joyful Mystery to live intentionally today.
+tags:
+  thematic:
+    - rosary
+  doctrinal:
+    - divine condescension
+  virtue:
+    - joy
+  mystical:
+    - marian companionship
+  liturgical: []
+  typological: []
+  structural:
+    - luke
+    - joyful mysteries
+    - rosary
+    - rotating anchor images

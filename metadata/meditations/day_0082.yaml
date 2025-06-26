@@ -1,0 +1,46 @@
+master_day_number: 82
+arc_day_number: 5
+arc_id: arc_rosary_joyful_mysteries
+arc_number: 10
+arc_title: The Rosary – Joyful Mysteries
+day_title: The Finding in the Temple
+anchor_image: Mary finding the Boy Jesus in the Temple, teaching the elders
+primary_reading:
+  title: Luke 2:41–52
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§531-534
+    url: https://www.vatican.va/archive/ENG0015/__P1L.HTM
+meditative_points:
+  - Mary’s sorrow was deep — but her faith remained
+  - Jesus is found in His Father’s house — and yet He returns obediently
+  - Mary keeps all these things in her Heart
+ejaculatory_prayer: I must be in my Father’s house.
+colloquy:
+  Jesus, when I feel lost or distant from You, help me seek You with Mary’s
+  trust. Let me find You in the Father’s will.
+resolution:
+  Seek God today with special attention — in prayer, in Scripture, or in
+  silence.
+tags:
+  thematic:
+    - mary
+    - rosary
+  doctrinal:
+    - finding in the temple
+  virtue:
+    - joy
+    - obedience
+  mystical:
+    - sorrow
+  liturgical:
+    - ordinary time
+  typological:
+    - temple
+  structural:
+    - luke
+    - joyful mysteries
+    - rosary
+    - rotating anchor images
