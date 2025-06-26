@@ -5,6 +5,8 @@ python_version = "3.*"
 pyyaml = "*"
 jsonschema = "*"
 yamllint = "*"
+django = "*"
+djangorestframework = "*"
 
 [dev-packages]
 pytest = "*"

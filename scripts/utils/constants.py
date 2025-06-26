@@ -1,3 +1,9 @@
 TAG_CATEGORIES = [
-    "thematic", "doctrinal", "virtue", "mystical", "liturgical", "typological", "structural"
+    "thematic",
+    "doctrinal",
+    "virtue",
+    "mystical",
+    "liturgical",
+    "typological",
+    "structural",
 ]

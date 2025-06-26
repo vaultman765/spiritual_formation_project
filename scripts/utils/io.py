@@ -20,8 +20,8 @@ def load_yaml(file_path: Path) -> Any:
         return None
 
 
-def write_yaml(filepath, data, mode='w'):
-    with open(filepath, mode, encoding='utf-8') as f:
+def write_yaml(filepath, data, mode="w"):
+    with open(filepath, mode, encoding="utf-8") as f:
         yaml.dump(
             data,
             f,
@@ -29,5 +29,5 @@ def write_yaml(filepath, data, mode='w'):
             sort_keys=False,
             default_flow_style=False,
             indent=2,
-            Dumper=IndentDumper
+            Dumper=IndentDumper,
         )

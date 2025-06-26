@@ -11,7 +11,13 @@ Usage:
 """
 
 import argparse
-from scripts.utils.paths import DAY_FILES_DIR, ARC_TAGS_DIR, INDEX_FILE, TAG_BANK_FILE, ARC_METADATA_FILE
+from scripts.utils.paths import (
+    DAY_FILES_DIR,
+    ARC_TAGS_DIR,
+    INDEX_FILE,
+    TAG_BANK_FILE,
+    ARC_METADATA_FILE,
+)
 from scripts.utils.constants import TAG_CATEGORIES
 from scripts.utils.io import load_yaml, write_yaml
 from typing import Any, Dict, List, Optional
@@ -21,10 +27,13 @@ from typing import Any, Dict, List, Optional
 
 class ArcDataLoader:
     """Loads day data for arcs from index."""
+
     def __init__(self, index_data: Dict[str, Any]):
         self.index_data = index_data
 
-    def load_arc_day_data(self, arc_ids: Optional[List[str]] = None) -> Dict[str, List[Dict[str, Any]]]:
+    def load_arc_day_data(
+        self, arc_ids: Optional[List[str]] = None
+    ) -> Dict[str, List[Dict[str, Any]]]:
         arc_to_days = {}
         for arc_id, arc_info in self.index_data.items():
             if arc_ids and arc_id not in arc_ids:
@@ -38,11 +47,13 @@ class ArcDataLoader:
             arc_to_days[arc_id] = arc_days
         return arc_to_days
 
+
 # === Core Generators ===
 
 
 class ArcMetadataGenerator:
     """Generates arc_metadata.yaml, updating or overwriting as needed."""
+
     def __init__(self, index_data: Dict[str, Any]):
         self.index_data = index_data
 
@@ -56,7 +67,9 @@ class ArcMetadataGenerator:
         else:
             # Load existing metadata and filter out arcs being updated
             arc_metadata = load_yaml(ARC_METADATA_FILE) or []
-            arc_metadata = [entry for entry in arc_metadata if entry["arc_id"] not in arc_data]
+            arc_metadata = [
+                entry for entry in arc_metadata if entry["arc_id"] not in arc_data
+            ]
 
         # Add/replace metadata for selected arcs
         for arc_id, arc_days in arc_data.items():
@@ -70,26 +83,36 @@ class ArcMetadataGenerator:
                 "day_count": len(arc_days),
                 "master_day_range": {
                     "start": first_day.get("master_day_number"),
-                    "end": arc_days[-1].get("master_day_number")
+                    "end": arc_days[-1].get("master_day_number"),
                 },
-                "anchor_image": sorted({day.get("anchor_image", "") for day in arc_days}),
-                "primary_reading": sorted({day.get("primary_reading", {}).get("title", "") for day in arc_days}),
-                "tags": sorted({
-                    tag
-                    for day in arc_days
-                    for category in (day.get("tags") or {}).values()
-                    if category
-                    for tag in category
-                })
+                "anchor_image": sorted(
+                    {day.get("anchor_image", "") for day in arc_days}
+                ),
+                "primary_reading": sorted(
+                    {
+                        day.get("primary_reading", {}).get("title", "")
+                        for day in arc_days
+                    }
+                ),
+                "tags": sorted(
+                    {
+                        tag
+                        for day in arc_days
+                        for category in (day.get("tags") or {}).values()
+                        if category
+                        for tag in category
+                    }
+                ),
             }
             arc_metadata.append(metadata_entry)
 
         # Write the updated metadata to file
-        write_yaml(ARC_METADATA_FILE, arc_metadata, mode='w')
+        write_yaml(ARC_METADATA_FILE, arc_metadata, mode="w")
 
 
 class ArcTagGenerator:
     """Generates arc_tags/*.yaml files for each arc."""
+
     def __init__(self, index_data: Dict[str, Any], tag_bank: Dict[str, Any]):
         self.index_data = index_data
         self.tag_bank = tag_bank
@@ -123,17 +146,19 @@ class ArcTagGenerator:
                 "day_count": len(arc_days),
                 "master_day_range": {
                     "start": first_day.get("master_day_number"),
-                    "end": arc_days[-1].get("master_day_number")
+                    "end": arc_days[-1].get("master_day_number"),
                 },
-                "tags": {k: sorted(list(tag_dict[k])) for k in TAG_CATEGORIES}
+                "tags": {k: sorted(list(tag_dict[k])) for k in TAG_CATEGORIES},
             }
             write_yaml(tag_file, tag_yaml)
+
 
 # === CLI Entrypoint ===
 
 
 class ArcMetadataCLI:
     """Command-line interface for generating arc metadata and tags."""
+
     def __init__(self):
         self.index_data = load_yaml(INDEX_FILE) or {}
         self.tag_bank = load_yaml(TAG_BANK_FILE) or {}
@@ -143,8 +168,12 @@ class ArcMetadataCLI:
         DAY_FILES_DIR.mkdir(parents=True, exist_ok=True)
 
     def run(self) -> None:
-        parser = argparse.ArgumentParser(description="Generate arc_metadata and arc_tags from day files.")
-        parser.add_argument("mode", choices=["metadata", "tags", "both"], help="What to generate.")
+        parser = argparse.ArgumentParser(
+            description="Generate arc_metadata and arc_tags from day files."
+        )
+        parser.add_argument(
+            "mode", choices=["metadata", "tags", "both"], help="What to generate."
+        )
         parser.add_argument("--arc", nargs="+", help="Limit to specific arc_ids")
         args = parser.parse_args()
 
