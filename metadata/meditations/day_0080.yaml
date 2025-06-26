@@ -1,0 +1,45 @@
+master_day_number: 80
+arc_day_number: 3
+arc_id: arc_rosary_joyful_mysteries
+arc_number: 10
+arc_title: The Rosary – Joyful Mysteries
+day_title: The Nativity
+anchor_image: The Christ Child in the manger, Mary adoring in silence and awe
+primary_reading:
+  title: Luke 2:1–20
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§525–530
+    url: https://www.vatican.va/archive/ENG0015/__P1L.HTM
+meditative_points:
+  - He came in silence, poverty, and vulnerability
+  - Mary adores with a gaze that understands the cost of love
+  - The night is made radiant by His birth
+ejaculatory_prayer: Glory to God in the highest!
+colloquy:
+  O Virgin Mother, help me adore Him as you did. Let me kneel before His littleness
+  and offer Him my heart.
+resolution:
+  I will spend a moment today in silent adoration, letting my heart be a
+  manger.
+tags:
+  thematic:
+    - adoration
+    - rosary
+  doctrinal:
+    - incarnation
+  virtue: []
+  mystical:
+    - awe
+    - contemplation
+    - silence
+  liturgical:
+    - christmas
+  typological: []
+  structural:
+    - luke
+    - joyful mysteries
+    - rosary
+    - rotating anchor images
