@@ -18,6 +18,7 @@ from scripts.utils.paths import (
 )
 from scripts.utils.constants import TAG_CATEGORIES
 
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 class SchemaValidator:
     def __init__(self):

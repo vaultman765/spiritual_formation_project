@@ -1,3 +1,4 @@
+# Last imported into DB: 2025-06-26
 master_day_number: 18
 arc_day_number: 4
 arc_id: arc_holy_fear_of_the_lord
@@ -26,12 +27,12 @@ colloquy: Father, purify my fear. I do not want to obey You for gain or out of d
 resolution: I will reject anxious, servile thoughts today, and instead offer each fear to God in trust.
 tags:
   thematic:
+    - adoration
     - fear of the lord
   doctrinal:
     - worship
   virtue:
     - reverence
-    - adoration
   mystical:
     - awe
     - divine presence

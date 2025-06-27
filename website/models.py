@@ -2,21 +2,71 @@ from django.db import models
 
 
 # --- Core Arc Model ---
+
 class Arc(models.Model):
     arc_id = models.CharField(max_length=100, unique=True)
-    title = models.CharField(max_length=255)
+    arc_title = models.TextField()
+    arc_number = models.PositiveIntegerField()
     day_count = models.PositiveIntegerField()
-    liturgical_fit = models.CharField(max_length=255, blank=True)
-    journey_stage = models.CharField(max_length=255, blank=True)
-    anchor_image = models.TextField(blank=True)
-    primary_reading_title = models.CharField(max_length=255, blank=True)
-    primary_reading_reference = models.CharField(max_length=255, blank=True)
-    primary_reading_url = models.URLField(blank=True)
+    # from master_day_range: {start, end}
+    master_day_start = models.PositiveIntegerField()
+    master_day_end = models.PositiveIntegerField()
+
+    # from arc_metadata.yaml (can be multiline string)
+    anchor_image = models.TextField()
+    primary_reading = models.TextField()
+
+    class Meta:
+        ordering = ["arc_number"]
+
+    # note: arc-level tags are handled via ArcTag below
+    def __str__(self):
+        return f"{self.arc_number}\n{self.arc_title}\n({self.arc_id})"
+
+
+# --- Meditation Day Model ---
+class MeditationDay(models.Model):
+    master_day_number = models.PositiveIntegerField(unique=True)
+    arc = models.ForeignKey("Arc", on_delete=models.CASCADE)
+    arc_day_number = models.PositiveIntegerField()
+
+    arc_title = models.TextField()
+    arc_number = models.PositiveIntegerField()
+    day_title = models.TextField()
+
+    anchor_image = models.TextField()
+
+    # From nested primary_reading
+    primary_reading_title = models.TextField()
+    primary_reading_reference = models.TextField(null=True, blank=True)
+    primary_reading_url = models.URLField(null=True, blank=True)
+
+    # 1–3 meditative points
+    meditative_point_1 = models.TextField()
+    meditative_point_2 = models.TextField(null=True, blank=True)
+    meditative_point_3 = models.TextField(null=True, blank=True)
+
+    ejaculatory_prayer = models.TextField()
+    colloquy = models.TextField()
+    resolution = models.TextField(blank=True)
+
+    class Meta:
+        ordering = ["master_day_number"]
 
     def __str__(self):
-        debug_str = f"Arc __str__ called: {self.arc_id} – {self.title}"
-        print(debug_str)
-        return f"{self.arc_id} – {self.title}"
+        return f"Day {self.master_day_number} (Arc: {self.arc_title} #{self.arc_number})"
+
+
+# --- Secondary Readings ---
+class SecondaryReading(models.Model):
+    meditation_day = models.ForeignKey("MeditationDay", on_delete=models.CASCADE, related_name="secondary_readings")
+
+    title = models.TextField()  # Required
+    reference = models.TextField(blank=True, null=True)  # Optional
+    url = models.URLField(blank=True, null=True)  # Optional – PDF or web
+
+    def __str__(self):
+        return f"{self.title} ({self.reference or 'no reference'})"
 
 
 # --- Tag Model ---
@@ -30,71 +80,33 @@ class Tag(models.Model):
         ("thematic", "Thematic"),
         ("structural", "Structural"),
     ]
+
     name = models.CharField(max_length=100, unique=True)
     category = models.CharField(max_length=50, choices=CATEGORY_CHOICES)
-    description = models.TextField(blank=True)
 
     def __str__(self):
-        print(f"Tag __str__ called: {self.name} ({self.category})")
-        return self.name
+        return f"{self.name} ({self.category})"
 
 
 # --- Arc Tags Many-to-Many ---
 class ArcTag(models.Model):
-    arc = models.ForeignKey(Arc, on_delete=models.CASCADE)
-    tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
+    arc = models.ForeignKey("Arc", on_delete=models.CASCADE)
+    tag = models.ForeignKey("Tag", on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = ("arc", "tag")
 
     def __str__(self):
-        debug_str = f"ArcTag __str__ called: Arc={self.arc.arc_id}, Tag={self.tag.name}"
-        print(debug_str)
-        return debug_str
-
-
-# --- Meditation Day Model ---
-class MeditationDay(models.Model):
-    day_number = models.PositiveIntegerField(unique=True)
-    arc = models.ForeignKey(Arc, on_delete=models.CASCADE)
-    arc_day = models.PositiveIntegerField()
-    anchor_image = models.TextField(blank=True)
-    primary_reading_title = models.CharField(max_length=255, blank=True)
-    primary_reading_reference = models.CharField(max_length=255, blank=True)
-    primary_reading_url = models.URLField(blank=True)
-    meditative_point_1 = models.TextField()
-    meditative_point_2 = models.TextField(blank=True)
-    meditative_point_3 = models.TextField(blank=True)
-    ejaculatory_prayer = models.TextField()
-    colloquy = models.TextField()
-    resolution = models.TextField(blank=True)
-
-    def __str__(self):
-        debug_str = f"MeditationDay __str__ called: Day {self.day_number} (Arc {self.arc.arc_id} – Day {self.arc_day})"
-        print(debug_str)
-        return f"Day {self.day_number} (Arc {self.arc.arc_id} – Day {self.arc_day})"
+        return f"Arc {self.arc.arc_id}: {self.tag.name} [{self.tag.category}]"
 
 
 # --- Day Tags Many-to-Many ---
 class DayTag(models.Model):
-    day = models.ForeignKey(MeditationDay, on_delete=models.CASCADE)
-    tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
+    meditation_day = models.ForeignKey("MeditationDay", on_delete=models.CASCADE)
+    tag = models.ForeignKey("Tag", on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = ("meditation_day", "tag")
 
     def __str__(self):
-        debug_str = (
-            f"DayTag __str__ called: Day={self.day.day_number}, Tag={self.tag.name}"
-        )
-        print(debug_str)
-        return debug_str
-
-
-# --- Secondary Readings ---
-class SecondaryReading(models.Model):
-    day = models.ForeignKey(
-        MeditationDay, on_delete=models.CASCADE, related_name="secondary_readings"
-    )
-    title = models.CharField(max_length=255)
-    reference = models.CharField(max_length=255, blank=True)
-    url = models.URLField(blank=True)
-
-    def __str__(self):
-        debug_str = f"SecondaryReading __str__ called: {self.title}"
-        print(debug_str)
-        return self.title
+        return f"Day {self.meditation_day.master_day_number}: {self.tag.name} [{self.tag.category}]"

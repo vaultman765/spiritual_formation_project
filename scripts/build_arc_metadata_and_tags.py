@@ -10,7 +10,9 @@ Usage:
     python build_arc_metadata_and_tags.py metadata --arc arc_love_of_god arc_passion_of_christ
 """
 
+import sys
 import argparse
+from pathlib import Path
 from scripts.utils.paths import (
     DAY_FILES_DIR,
     ARC_TAGS_DIR,
@@ -22,6 +24,7 @@ from scripts.utils.constants import TAG_CATEGORIES
 from scripts.utils.io import load_yaml, write_yaml
 from typing import Any, Dict, List, Optional
 
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 # === Shared Data Loader ===
 
 
@@ -174,17 +177,17 @@ class ArcMetadataCLI:
         parser.add_argument(
             "mode", choices=["metadata", "tags", "both"], help="What to generate."
         )
-        parser.add_argument("--arc", nargs="+", help="Limit to specific arc_ids")
+        parser.add_argument("--arc-id", nargs="+", help="Limit to specific arc_ids")
         args = parser.parse_args()
 
         # Validate arc_ids
         arc_ids = None
-        if args.arc:
-            invalid = [arc for arc in args.arc if arc not in self.index_data]
+        if args.arc_id:
+            invalid = [arc for arc in args.arc_id if arc not in self.index_data]
             if invalid:
                 print(f"Invalid arc_ids: {invalid}")
                 return
-            arc_ids = args.arc
+            arc_ids = args.arc_id
 
         if args.mode in ["metadata", "both"]:
             print("Generating arc_metadata.yaml...")
