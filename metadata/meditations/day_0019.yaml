@@ -1,3 +1,4 @@
+# Last imported into DB: 2025-06-26
 master_day_number: 19
 arc_day_number: 5
 arc_id: arc_holy_fear_of_the_lord
@@ -10,12 +11,12 @@ anchor_image:
   from the cloud.
 primary_reading:
   title: Proverbs 9:10; Exodus 20:18–21
-  reference: ""
-  url: ""
+  reference: ''
+  url: ''
 secondary_reading:
   - title: St. John Paul II, *Dominum et Vivificantem*
     reference: §28–30
-    url: /documents/readings/St_Pope_JP2_Dominum_et_Vivificantem.pdf
+    url: /docs/readings/St_Pope_JP2_Dominum_et_Vivificantem.pdf
 meditative_points:
   - God hides Himself—partly to purify us, partly to reveal our dependence. This hiddenness can increase fear—but it is
     a fear of mystery, not absence.

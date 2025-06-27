@@ -1,3 +1,4 @@
+# Last imported into DB: 2025-06-26
 master_day_number: 68
 arc_day_number: 5
 arc_id: arc_heaven_and_judgment
@@ -14,7 +15,7 @@ primary_reading:
 secondary_reading:
   - title: St. Catherine of Siena, Dialogue
     reference: Treatise on Discretion - Page 64
-    url: /documents/readings/St_Catherine_of_Siena_Dialogue.pdf
+    url: /docs/readings/St_Catherine_of_Siena_Dialogue.pdf
 meditative_points:
   - 'The fire was prepared for the devil - not for man'
   - Man goes there only by refusal of love and mercy

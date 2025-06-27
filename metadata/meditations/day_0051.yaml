@@ -1,3 +1,4 @@
+# Last imported into DB: 2025-06-26
 master_day_number: 51
 arc_day_number: 13
 arc_id: arc_litany_sacred_heart
@@ -5,12 +6,12 @@ arc_title: Litany of the Sacred Heart
 arc_number: 6
 day_title: Heart of Jesus, Full of Kindness and Love
 anchor_image:
-  "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
+  '**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
   His hands are extended in blessing, and His robe gleams like light.
   But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love.
   It is not a wound of shame, but a throne of glory. He says nothing.
   He simply shows you the place where divine love became visible. Each title of the Litany is real here.
-  You gaze at the Heart… and see eternity."
+  You gaze at the Heart… and see eternity.'
 primary_reading:
   title: Litany of the Sacred Heart of Jesus
   reference:
@@ -24,11 +25,11 @@ secondary_reading:
     url: https://www.vatican.va/archive/ENG0015/__P1J.HTM
   - title: St. Bernard, *On Loving God*
     reference: Chapter 2
-    url: /documents/readings/St_Bernard_On_Loving_God.pdf
+    url: /docs/readings/St_Bernard_On_Loving_God.pdf
 meditative_points:
   - Kindness flows from a Heart moved by compassion
   - All justice flows from the pierced Heart of Christ — the innocent who bears the punishment of the guilty.
-  - "The Sacred Heart repairs what human justice cannot restore: right order between man and God."
+  - 'The Sacred Heart repairs what human justice cannot restore: right order between man and God.'
 ejaculatory_prayer: Heart of Jesus, kind and tender, move me to compassion.
 colloquy: Lord Jesus, help me to see with Your eyes. To be moved with Your gut.
   Let me not pass the suffering by, but carry them in my own heart.

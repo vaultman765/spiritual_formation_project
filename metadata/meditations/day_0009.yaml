@@ -1,3 +1,4 @@
+# Last imported into DB: 2025-06-26
 master_day_number: 9
 arc_day_number: 2
 arc_id: arc_love_of_neighbor
@@ -10,14 +11,14 @@ anchor_image:
   shame. This is love made visible in humility.
 primary_reading:
   title: John 13:1–17
-  reference: ""
-  url: ""
+  reference: ''
+  url: ''
 secondary_reading:
   - title: 1 Corinthians 13:1–13
-    reference: ""
+    reference: ''
   - title: St. Thérèse of Lisieux, Story of a Soul
     reference: Manuscript C, p. 224
-    url: /documents/readings/saint-therese-of-lisieux-story-of-a-soul.pdf
+    url: /docs/readings/saint-therese-of-lisieux-story-of-a-soul.pdf
 meditative_points:
   - “Having loved His own who were in the world, He loved them to the end.” (Jn 13:1)
   - “The greatest of these is love.” (1 Cor 13:13)
@@ -25,8 +26,8 @@ meditative_points:
     things.
 ejaculatory_prayer: Let me become love in the heart of the Church.
 colloquy:
-  "Jesus, let my vocation not be success or recognition — but to love as You
-  have loved me: fully, quietly, and to the end."
+  'Jesus, let my vocation not be success or recognition — but to love as You
+  have loved me: fully, quietly, and to the end.'
 resolution: Today I will choose to remain faithful in one small, hidden act of love.
 tags:
   thematic:

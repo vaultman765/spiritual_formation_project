@@ -1,3 +1,4 @@
+# Last imported into DB: 2025-06-26
 master_day_number: 74
 arc_day_number: 4
 arc_id: arc_immaculate_heart_mary
@@ -14,7 +15,7 @@ primary_reading:
 secondary_reading:
   - title: Pope Pius X, Ad Diem Illum Laetissimum
     reference: §16
-    url: /documents/readings/St_Pope_Pius_X_Ad_Diem_Illum_Laetissimum.pdf
+    url: /docs/readings/St_Pope_Pius_X_Ad_Diem_Illum_Laetissimum.pdf
   - title: Catechism of the Catholic Church
     reference: §529
     url: https://www.vatican.va/archive/ENG0015/__P1L.HTM

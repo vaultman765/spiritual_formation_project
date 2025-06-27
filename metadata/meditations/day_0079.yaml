@@ -1,3 +1,4 @@
+# Last imported into DB: 2025-06-26
 master_day_number: 79
 arc_day_number: 2
 arc_id: arc_rosary_joyful_mysteries
@@ -15,7 +16,7 @@ secondary_reading:
     url: https://www.vatican.va/archive/ENG0015/__P23.HTM
   - title: Rosarium Virginis Mariae
     reference: §20
-    url: /documents/readings/St_Pope_JP2_Rosarium_Virginis_Mariae.pdf
+    url: /docs/readings/St_Pope_JP2_Rosarium_Virginis_Mariae.pdf
 meditative_points:
   - Mary hastens in charity — interior joy drives her outward
   - Elizabeth recognizes the presence of her Lord in Mary

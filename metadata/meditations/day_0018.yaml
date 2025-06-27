@@ -1,3 +1,4 @@
+# Last imported into DB: 2025-06-26
 master_day_number: 18
 arc_day_number: 4
 arc_id: arc_holy_fear_of_the_lord
@@ -10,28 +11,28 @@ anchor_image:
   from the cloud.
 primary_reading:
   title: Proverbs 9:10; Exodus 20:18–21
-  reference: ""
-  url: ""
+  reference: ''
+  url: ''
 secondary_reading:
   - title: Dialogue of St. Catherine of Siena
     reference: p. 89-90
-    url: /documents/readings/St_Catherine_Dialogue.pdf
+    url: /docs/readings/St_Catherine_Dialogue.pdf
 meditative_points:
   - Only filial fear endures - it is born of love. It doesn't run from God, it kneels before Him.
-  - "St. Catherine distinguishes three types of fear: servile (fear of punishment), mercenary (hope of reward),
-    and filial (fear of offending God)."
+  - 'St. Catherine distinguishes three types of fear: servile (fear of punishment), mercenary (hope of reward),
+    and filial (fear of offending God).'
   - Growth in prayer often means being purified from lower fears and led into true, holy reverence.
 ejaculatory_prayer: Jesus, let me fear only offending You
 colloquy: Father, purify my fear. I do not want to obey You for gain or out of dread, but because I love You.
 resolution: I will reject anxious, servile thoughts today, and instead offer each fear to God in trust.
 tags:
   thematic:
+    - adoration
     - fear of the lord
   doctrinal:
     - worship
   virtue:
     - reverence
-    - adoration
   mystical:
     - awe
     - divine presence

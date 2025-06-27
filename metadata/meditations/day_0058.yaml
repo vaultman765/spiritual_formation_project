@@ -1,3 +1,4 @@
+# Last imported into DB: 2025-06-26
 master_day_number: 58
 arc_day_number: 4
 arc_id: arc_christ_our_high_priest
@@ -14,9 +15,9 @@ primary_reading:
 secondary_reading:
   - title: St. John Paul II, *Ecclesia de Eucharistia*
     reference: §§11–13
-    url: /documents/readings/St_John_Paul_II_Ecclesia_de_Eucharistia.pdf
-  - title: "Pope Benedict XVI, *Jesus of Nazareth: Holy Week*"
-    reference: "Chapter 5: The High-Priestly Prayer of Jesus (if owned)"
+    url: /docs/readings/St_John_Paul_II_Ecclesia_de_Eucharistia.pdf
+  - title: 'Pope Benedict XVI, *Jesus of Nazareth: Holy Week*'
+    reference: 'Chapter 5: The High-Priestly Prayer of Jesus (if owned)'
     url:
 meditative_points:
   - Christ holds His priesthood permanently because He remains forever
@@ -24,10 +25,10 @@ meditative_points:
   - His one offering was perfect and final — now He reigns as eternal mediator
 ejaculatory_prayer: Jesus, my Eternal High Priest, intercede for me now and forever.
 colloquy:
-  "Lord Jesus, no other priest remains forever — but You do. Yours is not
+  'Lord Jesus, no other priest remains forever — but You do. Yours is not
   a passing role, but a permanent mission: to intercede for me before the Father.
   Let this truth awaken my trust. When I feel forgotten, remind me that You are speaking
-  my name eternally in heaven."
+  my name eternally in heaven.'
 resolution:
   I will renew my confidence in prayer today, remembering that Christ always
   intercedes for me, not just in history but in this very moment.

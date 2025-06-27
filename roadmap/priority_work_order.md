@@ -80,6 +80,32 @@ These tools are complete and in daily use:
 
 ---
 
+## 🖼️ DESIGN + UX WORKFLOWS
+
+- [ ] **Front-End Styling Plan**
+  - Define aesthetic principles (monastic, clean, timeless)
+  - Implement Tailwind-based layout
+  - Use shadcn/ui and lucide-react for consistent UI components
+  - Establish page structure (journey navigation, arc cards, tag filters, etc.)
+
+- [ ] **User Navigation Planning**
+  - Support Thematic, Liturgical, and Tag-based navigation
+  - Link arcs ↔ books
+  - Include visual symphonic roadmap (interactive, expandable)
+
+- [ ] **Page Templates**
+  - Arc overview page (title, image, tags, day list)
+  - Day meditation page (anchor image, readings, meditative points, etc.)
+  - Tag browse page
+  - Reading plan landing page
+  - Admin-only upload and sync pages (optional)
+
+- [ ] **Design Iteration Workspace**
+  - Create `mockups/` folder for wireframes or screenshots
+  - Optionally use `Figma`, `Excalidraw`, or `Tailwind Play` for prototypes
+
+---
+
 ## 🧭 LONG-TERM + WEBSITE ROADMAP
 
 - [ ] `meditations_index.yaml` generator (per-day index)

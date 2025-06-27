@@ -1,8 +1,10 @@
 import pytest
 from unittest.mock import MagicMock
 from scripts.tag_tools import (
-    TagBank, YamlTagFileHandler, MarkdownTagFileHandler,
-    TagSynchronizer
+    TagBank,
+    YamlTagFileHandler,
+    MarkdownTagFileHandler,
+    TagSynchronizer,
 )
 
 # --- TagBank Tests ---
@@ -49,6 +51,7 @@ def test_tagbank_add_tag():
     tb.add_tag("patience", "virtue")  # Should not duplicate
     assert tb.tags["virtue"].count("patience") == 1
 
+
 # --- YamlTagFileHandler Tests ---
 
 
@@ -65,7 +68,9 @@ def test_yaml_tag_file_handler_update_tag_flat(tmp_path):
 
 def test_yaml_tag_file_handler_update_tag_nested(tmp_path):
     file_path = tmp_path / "arc.yaml"
-    file_path.write_text("tags:\n  virtue:\n    - patience\n    - humility\n  vice:\n    - pride\n")
+    file_path.write_text(
+        "tags:\n  virtue:\n    - patience\n    - humility\n  vice:\n    - pride\n"
+    )
     handler = YamlTagFileHandler([str(file_path)])
     handler.file_paths = [str(file_path)]
     handler.update_tag("patience", "fortitude")
@@ -86,12 +91,15 @@ def test_yaml_tag_file_handler_delete_tag_flat(tmp_path):
 
 def test_yaml_tag_file_handler_delete_tag_nested(tmp_path):
     file_path = tmp_path / "arc.yaml"
-    file_path.write_text("tags:\n  virtue:\n    - patience\n    - humility\n  vice:\n    - pride\n")
+    file_path.write_text(
+        "tags:\n  virtue:\n    - patience\n    - humility\n  vice:\n    - pride\n"
+    )
     handler = YamlTagFileHandler([str(file_path)])
     handler.file_paths = [str(file_path)]
     handler.delete_tag("patience")
     data = file_path.read_text()
     assert "patience" not in data
+
 
 # --- MarkdownTagFileHandler Tests ---
 
@@ -114,6 +122,7 @@ def test_markdown_tag_file_handler_delete_tag(tmp_path):
     data = file_path.read_text()
     assert "patience" not in data
 
+
 # --- TagSynchronizer Tests ---
 
 
@@ -127,6 +136,7 @@ def test_tag_synchronizer_update_and_delete():
     sync.delete_tag("a")
     handler1.delete_tag.assert_called_with("a")
     handler2.delete_tag.assert_called_with("a")
+
 
 # --- TagScanner Tests ---
 
@@ -142,7 +152,9 @@ def test_tag_scanner_get_all_used_tags(tmp_path, fake_tagbank):
     # Setup fake arc_tags (nested)
     arc_tags_dir = tmp_path / "arc_tags"
     arc_tags_dir.mkdir()
-    (arc_tags_dir / "arc1.yaml").write_text("tags:\n  virtue:\n    - patience\n  vice:\n    - pride\n")
+    (arc_tags_dir / "arc1.yaml").write_text(
+        "tags:\n  virtue:\n    - patience\n  vice:\n    - pride\n"
+    )
     # Setup fake arc_metadata
     arc_metadata = tmp_path / "arc_metadata.yaml"
     arc_metadata.write_text("- tags:\n    - humility\n")
@@ -153,6 +165,7 @@ def test_tag_scanner_get_all_used_tags(tmp_path, fake_tagbank):
 
     # Patch global paths
     import scripts.tag_tools as tt
+
     tt.ARC_TAGS_DIR = arc_tags_dir
     tt.ARC_METADATA_PATH = arc_metadata
     tt.MEDITATIONS_DIR = med_dir
@@ -176,6 +189,7 @@ def test_tag_scanner_find_unused_tags(tmp_path, fake_tagbank):
     (med_dir / "med1.md").write_text("<!-- tags: [patience] -->")
 
     import scripts.tag_tools as tt
+
     tt.ARC_TAGS_DIR = arc_tags_dir
     tt.ARC_METADATA_PATH = arc_metadata
     tt.MEDITATIONS_DIR = med_dir
@@ -191,7 +205,9 @@ def test_tag_scanner_find_unused_tags(tmp_path, fake_tagbank):
 def test_tag_scanner_generate_usage_report(tmp_path, fake_tagbank):
     arc_tags_dir = tmp_path / "arc_tags"
     arc_tags_dir.mkdir()
-    (arc_tags_dir / "arc1.yaml").write_text("tags:\n  virtue:\n    - patience\n  vice:\n    - pride\n")
+    (arc_tags_dir / "arc1.yaml").write_text(
+        "tags:\n  virtue:\n    - patience\n  vice:\n    - pride\n"
+    )
     arc_metadata = tmp_path / "arc_metadata.yaml"
     arc_metadata.write_text("- tags:\n    - humility\n")
     med_dir = tmp_path / "meditations"
@@ -199,6 +215,7 @@ def test_tag_scanner_generate_usage_report(tmp_path, fake_tagbank):
     (med_dir / "med1.md").write_text("<!-- tags: [patience, humility] -->")
 
     import scripts.tag_tools as tt
+
     tt.ARC_TAGS_DIR = arc_tags_dir
     tt.ARC_METADATA_PATH = arc_metadata
     tt.MEDITATIONS_DIR = med_dir

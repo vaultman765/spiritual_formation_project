@@ -1,3 +1,4 @@
+# Last imported into DB: 2025-06-26
 master_day_number: 75
 arc_day_number: 5
 arc_id: arc_immaculate_heart_mary
@@ -14,10 +15,10 @@ primary_reading:
 secondary_reading:
   - title: Pope Pius XII, Mystici Corporis Christi
     reference: §110
-    url: /documents/readings/St_Pope_Pius_XII_Mystici_Corporis_Christi.pdf
+    url: /docs/readings/St_Pope_Pius_XII_Mystici_Corporis_Christi.pdf
   - title: St. John Eudes, The Admirable Heart of Mary
     reference: Chapter V
-    url: /documents/readings/St_John_Eudes_Admirable_Heart_of_Mary.pdf
+    url: /docs/readings/St_John_Eudes_Admirable_Heart_of_Mary.pdf
 meditative_points:
   - She lived every day with the knowledge of the coming Passion
   - Her Heart offered daily what her arms once held

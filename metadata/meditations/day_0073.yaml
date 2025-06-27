@@ -1,3 +1,4 @@
+# Last imported into DB: 2025-06-26
 master_day_number: 73
 arc_day_number: 3
 arc_id: arc_immaculate_heart_mary
@@ -17,7 +18,7 @@ secondary_reading:
     url: https://www.vatican.va/archive/ENG0015/__P1L.HTM
   - title: Pope John Paul II, *Redemptoris Mater*
     reference: §16
-    url: /documents/readings/St_Pope_JP2_Redemptoris_Mater.pdf
+    url: /docs/readings/St_Pope_JP2_Redemptoris_Mater.pdf
 meditative_points:
   - Mary carrying the Child into the Temple — the Mother presenting the Son
   - 'The offering is total: flesh of her flesh, now given back to God'

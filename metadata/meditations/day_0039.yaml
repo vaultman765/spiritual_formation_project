@@ -1,3 +1,4 @@
+# Last imported into DB: 2025-06-26
 master_day_number: 39
 arc_day_number: 1
 arc_id: arc_litany_sacred_heart
@@ -5,12 +6,12 @@ arc_title: Litany of the Sacred Heart
 arc_number: 6
 day_title: Heart of Jesus, Son of the Eternal Father
 anchor_image:
-  "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
+  '**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
   His hands are extended in blessing, and His robe gleams like light.
   But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love.
   It is not a wound of shame, but a throne of glory. He says nothing.
   He simply shows you the place where divine love became visible. Each title of the Litany is real here.
-  You gaze at the Heart… and see eternity."
+  You gaze at the Heart… and see eternity.'
 primary_reading:
   title: Litany of the Sacred Heart of Jesus
   reference:
@@ -24,7 +25,7 @@ secondary_reading:
     url: https://www.vatican.va/archive/ENG0015/__P1D.HTM
   - title: Pope Benedict XVI, *Deus Caritas Est*
     reference: Part I, §§1–6
-    url: /documents/readings/Pope_Benedict_XVI_Deus-Caritas-Est.pdf
+    url: /docs/readings/Pope_Benedict_XVI_Deus-Caritas-Est.pdf
 meditative_points:
   - The Eternal Son begotten of the Father
   - The Heart of Jesus is the Heart of God

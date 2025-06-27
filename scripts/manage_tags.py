@@ -1,6 +1,11 @@
-
 import argparse
-from tag_tools import TagBank, TagScanner, YamlTagFileHandler, MarkdownTagFileHandler, TagSynchronizer
+from tag_tools import (
+    TagBank,
+    TagScanner,
+    YamlTagFileHandler,
+    MarkdownTagFileHandler,
+    TagSynchronizer,
+)
 from pathlib import Path
 
 # Set up paths
@@ -24,13 +29,12 @@ def rename_tag(old, new):
     print(f"🔁 Renamed tag in tag_bank: '{old}' → '{new}'")
 
     # Update in all files
-    yaml_files = list(ARC_TAGS_DIR.glob("*.yaml")) + [PROJECT_ROOT / "metadata" / "arc_metadata.yaml"]
+    yaml_files = list(ARC_TAGS_DIR.glob("*.yaml")) + [
+        PROJECT_ROOT / "metadata" / "arc_metadata.yaml"
+    ]
     md_files = list(MEDITATIONS_DIR.glob("*.md"))
 
-    handlers = [
-        YamlTagFileHandler(yaml_files),
-        MarkdownTagFileHandler(md_files)
-    ]
+    handlers = [YamlTagFileHandler(yaml_files), MarkdownTagFileHandler(md_files)]
     TagSynchronizer(handlers).update_tag(old, new)
     print("✅ Renamed tag across all files")
 
@@ -41,13 +45,12 @@ def delete_tag(tag):
     tagbank.save()
     print(f"🗑 Deleted tag '{tag}' from tag_bank")
 
-    yaml_files = list(ARC_TAGS_DIR.glob("*.yaml")) + [PROJECT_ROOT / "metadata" / "arc_metadata.yaml"]
+    yaml_files = list(ARC_TAGS_DIR.glob("*.yaml")) + [
+        PROJECT_ROOT / "metadata" / "arc_metadata.yaml"
+    ]
     md_files = list(MEDITATIONS_DIR.glob("*.md"))
 
-    handlers = [
-        YamlTagFileHandler(yaml_files),
-        MarkdownTagFileHandler(md_files)
-    ]
+    handlers = [YamlTagFileHandler(yaml_files), MarkdownTagFileHandler(md_files)]
     TagSynchronizer(handlers).delete_tag(tag)
     print("✅ Deleted tag from all files")
 

@@ -1,3 +1,4 @@
+# Last imported into DB: 2025-06-26
 master_day_number: 78
 arc_day_number: 1
 arc_id: arc_rosary_joyful_mysteries
@@ -15,7 +16,7 @@ secondary_reading:
     url: https://www.vatican.va/archive/ENG0015/__P1K.HTM
   - title: St. Pope John Paul II, *Redemptoris Mater*
     reference: §12
-    url: /documents/readings/St_Pope_John_Paul_II_Redemptoris_Mater.pdf
+    url: /docs/readings/St_Pope_John_Paul_II_Redemptoris_Mater.pdf
 meditative_points:
   - Gabriel speaks; Mary listens with holy fear and trust
   - The Holy Spirit shall overshadow her — and she consents

@@ -29,6 +29,7 @@ class TagBank:
     Manages the canonical tag bank YAML file, including loading, saving,
     and operations such as moving, deleting, and adding tags to categories.
     """
+
     def __init__(self, path: Path = TAG_BANK_PATH) -> None:
         """
         Initialize the TagBank and load tags from the YAML file.
@@ -49,7 +50,9 @@ class TagBank:
                     raise ValueError(f"Tag bank YAML at {self.path} is not a dict.")
                 self.tags = data
         except FileNotFoundError:
-            print(f"Warning: Tag bank file {self.path} not found. Starting with empty tags.")
+            print(
+                f"Warning: Tag bank file {self.path} not found. Starting with empty tags."
+            )
             self.tags = {}
         except Exception as e:
             print(f"Error loading tag bank: {e}")
@@ -100,6 +103,7 @@ class TagFileHandler(ABC):
     Abstract base class for tag file operations.
     Subclasses must implement update_tag for their file type.
     """
+
     @abstractmethod
     def update_tag(self, old: str, new: str) -> None:
         """
@@ -115,6 +119,7 @@ class YamlTagFileHandler(TagFileHandler):
     """
     Handles updating tags in YAML files (e.g., arc_tags).
     """
+
     def __init__(self, files: list[Path]):
         """
         Initialize with a list of YAML file paths.
@@ -193,6 +198,7 @@ class MarkdownTagFileHandler(TagFileHandler):
     """
     Handles updating tags in Markdown files using HTML comment tag blocks.
     """
+
     def __init__(self, files):
         """
         Initialize with a list of Markdown file paths.
@@ -222,6 +228,7 @@ class TagSynchronizer:
     """
     Coordinates tag updates and deletions across multiple file handlers.
     """
+
     def __init__(self, handlers):
         """
         Initialize with a list of TagFileHandler instances.
@@ -247,6 +254,7 @@ class TagScanner:
     """
     Scans project files to find used tags, unused tags, and generate usage reports.
     """
+
     def __init__(self, tagbank):
         """
         Initialize with a TagBank instance.

@@ -1,3 +1,4 @@
+# Last imported into DB: 2025-06-26
 master_day_number: 56
 arc_day_number: 2
 arc_id: arc_christ_our_high_priest
@@ -14,7 +15,7 @@ primary_reading:
 secondary_reading:
   - title: Pope Pius XII, *Mediator Dei*
     reference: §§3–5
-    url: /documents/readings/Pope_Pius_XII_Mediator_Dei.pdf
+    url: /docs/readings/Pope_Pius_XII_Mediator_Dei.pdf
 meditative_points:
   - The veil of the Temple is torn from top to bottom
   - Christ’s death opens the true Holy of Holies to mankind
