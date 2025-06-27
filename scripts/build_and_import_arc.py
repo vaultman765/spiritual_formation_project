@@ -2,7 +2,6 @@ import argparse
 import subprocess
 import sys
 import yaml
-import logging
 from pathlib import Path
 from scripts.utils.paths import INDEX_FILE
 from scripts.utils.log import configure_logging, get_logger
@@ -22,6 +21,7 @@ def run(command: list[str], description: str):
     else:
         logger.info(result.stdout)
 
+
 def arc_id_in_index(arc_id):
     with open(INDEX_FILE, "r", encoding="utf-8") as f:
         index = yaml.safe_load(f)
@@ -29,9 +29,11 @@ def arc_id_in_index(arc_id):
         return all(aid in index for aid in arc_id)
     return arc_id in index
 
+
 def main():
     parser = argparse.ArgumentParser(description="Full build + import pipeline for an arc")
-    parser.add_argument("--arc-id", required=True, help="Arc ID to process (e.g. arc_love_of_god). Use --arc-id all to do all arcs")
+    parser.add_argument("--arc-id", required=True,
+                        help="Arc ID to process (e.g. arc_love_of_god). Use --arc-id all to do all arcs")
     parser.add_argument("--skip-days", action="store_true", help="Skip importing meditation days")
     parser.add_argument("--skip-tags", action="store_true", help="Skip importing arc tags")
     args = parser.parse_args()
@@ -67,6 +69,7 @@ def main():
             run(["python", "-m", "scripts.import_arc_tags", "--arc-id", aid], f"Import arc tags for {aid}")
 
     logger.info("\n✅ All steps complete.")
+
 
 if __name__ == "__main__":
     main()

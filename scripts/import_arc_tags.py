@@ -4,9 +4,7 @@ import django
 import logging
 import yaml
 import argparse
-
-from pathlib import Path
-from scripts.utils.paths import  PROJECT_ROOT, DJANGO_SETTINGS_MODULE, ARC_TAGS_DIR
+from scripts.utils.paths import PROJECT_ROOT, DJANGO_SETTINGS_MODULE, ARC_TAGS_DIR
 
 # Setup Django
 sys.path.append(str(PROJECT_ROOT))
@@ -23,6 +21,7 @@ from website.models import Arc, Tag, ArcTag  # noqa: E402
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
 
 def import_arc_tags(arc_id: str = None):
     count = 0
@@ -57,13 +56,15 @@ def import_arc_tags(arc_id: str = None):
                 if tag is None:
                     tag = Tag.objects.create(name=tag_name, category=category)
                 elif tag.category != category:
-                    logger.warning(f"⚠️ Tag '{tag_name}' exists with different category ('{tag.category}') than expected ('{category}')")
+                    logger.warning(f"⚠️ Tag '{tag_name}' exists with different category "
+                                   f"('{tag.category}') than expected ('{category}')")
                 ArcTag.objects.get_or_create(arc=arc, tag=tag)
                 count += 1
 
         logger.info(f"Imported tags for arc: {arc_id_local}")
 
     logger.info(f"✅ Imported total {count} ArcTags.")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

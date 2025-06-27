@@ -13,6 +13,7 @@ from scripts.utils.paths import DAY_SCHEMA, DJANGO_SETTINGS_MODULE, INDEX_FILE, 
 from scripts.utils.log import configure_logging, get_logger  # noqa: E402
 from scripts.utils.arc_loader import load_arc_from_metadata  # noqa: E402
 
+
 def setup_django():
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", DJANGO_SETTINGS_MODULE)
     django.setup()
@@ -60,7 +61,6 @@ class DayImporter:
         self._replace_secondary_readings(meditation_day=day, readings=data.get("secondary_reading", []))
         self._replace_tags(day, data.get("tags", {}))
         return True
-
 
     def _create_or_update_day(self, day_num: int, arc, arc_day: int, data: dict) -> MeditationDay:
         med_points = data.get("meditative_points", [])
@@ -179,7 +179,7 @@ def import_arc(arc_id: str, dry_run: bool = False):
     if arc_id not in index:
         logging.error(f"Arc ID '{arc_id}' not found in index.")
         return
-    
+
     arc_info = index[arc_id]
     start_day = arc_info["start_day"]
     end_day = arc_info["end_day"]

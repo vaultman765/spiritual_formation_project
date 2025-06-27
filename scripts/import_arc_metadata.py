@@ -17,10 +17,10 @@ def setup_django():
 
 setup_django()  # noqa: E402
 
-from website.models import Arc
-import yaml
+from website.models import Arc  # noqa: E402
 
 ARC_METADATA_PATH = Path("metadata") / "arc_metadata.yaml"
+
 
 def main(arc_id: str = None):
     if not ARC_METADATA_PATH.exists():
@@ -44,6 +44,7 @@ def main(arc_id: str = None):
         print("No arcs imported. Check arc_id?")
     else:
         print(f"{count} arcs imported/updated.")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

@@ -1,7 +1,6 @@
-from pathlib import Path
 import yaml
-from django.core.exceptions import ObjectDoesNotExist
 from scripts.utils.paths import ARC_METADATA_FILE
+
 
 def load_arc_from_metadata(arc_id: str, arc_model) -> object:
     """

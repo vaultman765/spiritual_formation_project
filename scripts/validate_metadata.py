@@ -20,6 +20,7 @@ from scripts.utils.constants import TAG_CATEGORIES
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
+
 class SchemaValidator:
     def __init__(self):
         self.arc_metadata_schema = load_yaml(ARC_METADATA_SCHEMA)
