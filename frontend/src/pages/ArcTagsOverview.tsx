@@ -16,7 +16,7 @@ const ArcTagsOverview: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/arc-tags/')
+    fetch('http://localhost:8000/api/arcs-with-tags/')
       .then(res => res.json())
       .then(data => {
         setArcTags(data);
