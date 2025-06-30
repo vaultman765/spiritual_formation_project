@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-06-26
+# Last imported into DB: 2025-06-30
 master_day_number: 4
 arc_day_number: 4
 arc_id: arc_love_of_god
@@ -11,8 +11,8 @@ anchor_image:
   Every wound speaks the truth of God’s heart.
 primary_reading:
   title: 1 John 4:7–21
-  reference: 1 John 4:7–21
-  url: ""
+  reference:
+  url: ''
 secondary_reading:
   - title: Catechism of the Catholic Church
     reference: 218–221
