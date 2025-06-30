@@ -37,9 +37,9 @@ const ArcTagsOverview: React.FC = () => {
         <div key={arc.arc_id} style={{ marginBottom: '2rem' }}>
           <h2>{arc.arc_title}</h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-            {arc.tags.map((tag, idx) => (
+            {arc.tags.map((tag) => (
               <span
-                key={idx}
+                key={tag.name}
                 style={{
                   backgroundColor: '#eee',
                   borderRadius: '6px',
