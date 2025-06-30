@@ -1,5 +1,6 @@
 from django.http import JsonResponse
-from website.models import Arc, Tag, ArcTag
+from website.models import Arc, ArcTag
+
 
 def arc_tags_by_arc(request):
     arcs = Arc.objects.all().order_by("arc_number")

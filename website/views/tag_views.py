@@ -1,6 +1,7 @@
 from django.http import JsonResponse
 from website.models import ArcTag
 
+
 def arcs_grouped_by_tag(request):
     result = {}
     for arc_tag in ArcTag.objects.select_related("tag", "arc"):

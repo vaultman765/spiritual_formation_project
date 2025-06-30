@@ -15,11 +15,11 @@ def run(command: list[str], description: str):
     command = [sys.executable if c == "python" else c for c in command]
     logger.info(f"\n▶ {description}: {' '.join(command)}")
     result = subprocess.run(command, capture_output=True, text=True)
-    
+
     # Always show stdout if there is any
     if result.stdout:
         logger.info(result.stdout)
-    
+
     if result.returncode != 0:
         logger.error(f"Command failed with return code {result.returncode}")
         if result.stderr:

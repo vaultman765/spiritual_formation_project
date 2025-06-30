@@ -3,6 +3,7 @@ from django.shortcuts import get_object_or_404
 from website.models import MeditationDay, DayTag
 from collections import defaultdict
 
+
 def arc_day_list(request, arc_id):
     days = (
         MeditationDay.objects
