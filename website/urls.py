@@ -10,6 +10,6 @@ urlpatterns = [
     path("api/arcs/<str:arc_id>/", arc_metadata_detail, name="arc_metadata_detail"),
     path("api/arcs/<str:arc_id>/days/", arc_day_list, name="arc-day-list"),
     path("api/days/<int:day_number>/", day_metadata_view, name="day_metadata"),
-    path("api/days/summary/", day_summary_view, name="day_summary"),
+    path("api/days/", day_summary_view, name="day_summary"),
     path("api/days/<str:arc_id>/<int:arc_day_number>/", day_detail_by_arc_view, name="day_by_arc"),
 ]
