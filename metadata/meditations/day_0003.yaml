@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-06-26
+# Last imported into DB: 2025-06-30
 master_day_number: 3
 arc_day_number: 3
 arc_id: arc_love_of_god
@@ -11,12 +11,12 @@ anchor_image:
   Face shines infinite love. Every wound speaks the truth of God’s heart.
 primary_reading:
   title: 1 John 4:7–21
-  reference: 1 John 4:7–21
-  url: ""
+  reference:
+  url: ''
 secondary_reading:
   - title: Deuteronomy 6:4–9
-    reference: Deuteronomy 6:4–9
-    url: ""
+    reference:
+    url: ''
   - title: Catechism of the Catholic Church
     reference: 231–233
     url: https://www.vatican.va/archive/ENG0015/__P16.HTM
