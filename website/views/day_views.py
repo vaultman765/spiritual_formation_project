@@ -112,11 +112,11 @@ def day_detail_by_arc_view(request, arc_id, arc_day_number):
                 "url": sr.url
             } for sr in day.secondary_readings.all()
         ],
-        "meditative_points": [
+        "meditative_points": list(filter(None, [
             day.meditative_point_1,
             day.meditative_point_2,
             day.meditative_point_3
-        ],
+        ])),
         "ejaculatory_prayer": day.ejaculatory_prayer,
         "colloquy": day.colloquy,
         "resolution": day.resolution,
