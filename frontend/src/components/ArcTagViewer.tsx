@@ -1,46 +1,42 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import tagDescriptions from "@/utils/tagDescriptions";
+import { categoryColors } from "@/utils/constants";
+import type { ArcTag } from "@/utils/types";
 
-type Tag = {
-  id: number;
-  name: string;
-  category: string;
+type ArcTagViewerProps = {
+  tags: ArcTag[];
+  enableDescriptions?: boolean;
 };
 
-type ArcTag = {
-  arc_id: string;
-  arc_title: string;
-  arc_number: number;
-  tags: Tag[];
-};
-
-export const ArcTagViewer = () => {
-  const [arcTags, setArcTags] = useState<ArcTag[]>([]);
-
-  useEffect(() => {
-    fetch("/api/arc-tags/")  // ← assumes Django serves this JSON endpoint
-      .then((res) => res.json())
-      .then((data) => setArcTags(data))
-      .catch((err) => console.error("Error fetching arc tags", err));
-  }, []);
+/**
+ * ArcTagViewer component displays a list of arcs with their associated tags.
+ * Each arc is displayed with its title and a list of tags, where each tag
+ * is styled according to its category.
+ */
+const ArcTagViewer: React.FC<ArcTagViewerProps> = ({ tags, enableDescriptions }) => {
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Arc Tags Overview</h1>
-      {arcTags.map((arc) => (
-        <div key={arc.arc_id} className="mb-6">
-          <h2 className="text-xl font-semibold">{arc.arc_title}</h2>
-          <ul className="flex flex-wrap gap-2 mt-2">
-            {arc.tags.map((tag) => (
-              <li
-                key={tag.id}
-                className="bg-gray-200 px-3 py-1 rounded-full text-sm"
-              >
-                {tag.name} <span className="text-gray-500">({tag.category})</span>
-              </li>
+    <div className="space-y-8">
+      {tags.map((arc) => (
+        <div key={arc.arc_id} className="border border-gray-600 rounded-lg p-4 shadow">
+          <h2 className="text-xl font-semibold mb-2">{arc.arc_title}</h2>
+          <div className="flex flex-wrap gap-2">
+            {[...arc.tags]
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map((tag) => (
+                <span
+                  key={tag.id}
+                  title={enableDescriptions ? tagDescriptions[tag.name] || "" : undefined}
+                  className={`px-2 py-1 text-sm font-medium rounded-full ${(categoryColors[tag.category] || categoryColors.default)} shadow-sm`}
+                >
+                {tag.name}
+                </span>
             ))}
-          </ul>
+          </div>
         </div>
       ))}
     </div>
   );
 };
+
+export default ArcTagViewer;

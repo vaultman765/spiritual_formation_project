@@ -4,7 +4,8 @@ from website.views.tag_views import arcs_grouped_by_tag
 from website.views.day_views import arc_day_list, day_metadata_view, day_summary_view, day_detail_by_arc_view
 
 urlpatterns = [
-    path("api/arcs-with-tags/", arc_tags_by_arc, name="arcs_with_tags"),
+    path("api/arc-tags/", arc_tags_by_arc, name="arc_tags"),
+    path("api/arcs-with-tags/", arc_tags_by_arc, name="arc_tags_legacy"),
     path("api/arcs-by-tag/", arcs_grouped_by_tag, name="arcs_by_tag"),
     path("api/arcs/", arc_metadata_list, name="arc_metadata_list"),
     path("api/arcs/<str:arc_id>/", arc_metadata_detail, name="arc_metadata_detail"),
