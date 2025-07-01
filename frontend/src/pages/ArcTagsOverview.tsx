@@ -16,10 +16,10 @@ const ArcTagsOverview: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/arcs-with-tags/')
+    fetch('api/arcs-with-tags/')
       .then(res => res.json())
       .then(data => {
-        setArcTags(data);
+        setArcTags(data as ArcTagGroup[]);
         setLoading(false);
       })
       .catch(error => {

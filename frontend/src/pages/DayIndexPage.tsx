@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import DayListViewer from "../components/DayListViewer";
 
 type DaySummary = {
@@ -15,11 +15,11 @@ export default function DayIndexPage() {
   const [days, setDays] = useState<DaySummary[]>([]);
 
 useEffect(() => {
-  fetch("http://localhost:8000/api/days/")
+  fetch("api/days/")
     .then((res) => res.json())
     .then((data) => {
       console.log("Fetched day data:", data); 
-      setDays(data);
+      setDays(data as DaySummary[]);
     })
     .catch((error) => console.error("Error fetching days:", error));
 }, []);
