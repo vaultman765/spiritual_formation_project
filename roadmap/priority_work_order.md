@@ -1,4 +1,4 @@
-# ✅ MENTAL PRAYER PROJECT — MASTER PRIORITY WORK ORDER (2025-06 Update)
+# ✅ MENTAL PRAYER PROJECT — MASTER PRIORITY WORK ORDER (Updated July 2, 2025)
 
 ---
 
@@ -23,6 +23,13 @@ These tools are complete and in daily use:
 
 ## 🧱 COMPLETED MILESTONES
 
+- ✅ Frontend arc pages visually standardized with dark/light neutral override
+- ✅ Tag descriptions fully mapped and integrated with new hover system
+- ✅ TagBlock refactor with category+tag matching
+- ✅ UI spacing, scrolling, layout refactors on ArcTagsOverview + DayDetailsPage
+- ✅ Updated CSS layers for consistent typography (e.g. h1, h2), spacing, and readability
+
+
 - ✅ Arc YAML migration for:
   - Love of God
   - Love of Neighbor
@@ -41,84 +48,88 @@ These tools are complete and in daily use:
 - ✅ Frontend: Arc metadata API working
 - ✅ Tier 1 Reading Plan written
 - ✅ Theme Roadmap finalized (Sections 1–3 aligned)
+- ✅ DayListViewer click routing to DayDetailPage complete
+- ✅ DayDetailPage full layout/styling/polish complete
 
 ---
 
-## 🔥 HIGH PRIORITY NEXT STEPS (Updated June 2025)
+## 🔥 HIGH PRIORITY NEXT STEPS (JULY 2–7)
 
 ### ✅ Active Focus Areas
 
-- [x] 📘 **Arc 10 YAMLs: Rosary – Joyful Mysteries (Days 78–84)**
+- [x] 📘 Arc 10 YAMLs: Rosary – Joyful Mysteries (Days 78–84) — **Complete**
 
-- [ ] 🧭 **Section 3 Planning (Arcs 46–55)**
-  - Planning in progress
-  - Continue expanding roadmap organically
+- [ ] 🧭 Section 3 Planning (Arcs 46–55) — **Resume Sunday**
 
-- [ ] 💻 **Backend + Frontend API Pipeline**
+- [ ] 💻 Backend + Frontend API Pipeline
   - [x] Arc metadata list endpoint (`/api/arcs/`)
   - [x] Arc detail endpoint (`/api/arcs/<arc_id>/`)
   - [x] Arc tag overview endpoint (`/api/arc-tags/overview/`)
-  - [ ] Meditation detail API (`/api/days/<day_number>/`)
-  - [ ] Tag cloud endpoint (`/api/tag-cloud/`)
-  - [ ] Reading Plan metadata API
+  - [x] Meditation detail API (`/api/days/<day_number>/`)
+  - [ ] Tag cloud endpoint (`/api/tag-cloud/`) — **Planned Friday**
+  - [ ] Reading Plan metadata API — **Planned Sunday**
 
-- [ ] 🧱 **Admin + ER Diagram**
+- [ ] 🧱 Admin + ER Diagram
   - Scaffold admin backend
   - Create visual model for project structure
 
-- [ ] 🧩 **React UI Development**
+- [ ] 🧩 React UI Development
   - [x] ArcTagsOverview component live
-  - [ ] ArcTagViewer: filtering, style upgrades
-  - [ ] ArcMetadataOverview: wireframe + build
-  - [ ] Meditation viewer UI (day page)
-  - [ ] Navbar or sidebar scaffold
-  - [ ] React routes for core pages
+  - [x] DayDetailPage fully styled + connected
+  - [x] Day click in DayListViewer routes to detail view
+  - [ ] ArcTagViewer: filtering, style upgrades — **Planned Tuesday**
+  - [ ] ArcMetadataOverview component — **Planned Tuesday**
+  - [ ] Navbar + routing polish — **Planned Friday**
 
 ---
 
 ## 🛠️ TECHNICAL PRIORITIES + TOOLING
 
-- [ ] `--dry-run` flag for `build_and_import_arc.py` ✅ *Planned Wednesday*
-- [ ] Checksum or timestamp skipping logic in import scripts ✅ *Planned Wednesday*
-- [ ] CLI tool: tag fixer + metadata generator (`--arc`, `--fix`, `--dry-run`)
-- [ ] CLI: validate `_index_by_arc.yaml` + tag sync ✅ *Planned Thursday*
+- [ ] `--dry-run` flag for `build_and_import_arc.py` — **Planned Wednesday**
+- [ ] Checksum or timestamp skipping logic — **Planned Wednesday**
+- [ ] CLI: tag fixer / renamer tool — **Planned Tuesday**
+- [ ] CLI: validate `_index_by_arc.yaml` + tag sync — **Planned Thursday**
 - [ ] CLI: delete arc or arc tags from DB (admin only)
-- [ ] Expand test suite to include all major utilities
-- [ ] Consolidate `pyproject.toml` to manage lint/CI/tools
+- [ ] Expand test suite coverage
+- [ ] Refactor CLI modules for better reuse
 
 ---
 
 ## 🧘 MEDITATION CONTENT PROGRESS
 
-- [x] Arc 10 complete (Rosary – Joyful Mysteries)
-- [ ] Arc 11: Rosary – Sorrowful Mysteries (Begin Wednesday)
-- [ ] YAML generation for all future arcs must be validated on creation
-- [ ] Continue planning long-term arcs to reach 1000+ days
+- ✅ Arc 10 complete (Rosary – Joyful Mysteries)
+- [ ] Arc 11: Rosary – Sorrowful Mysteries — **Begin Wednesday**
+- [ ] Continue YAML generation for all planned arcs (target 1000+ days)
+- [ ] Integrate `meditations_index.yaml` auto-updates (Friday or Sunday)
+
+---
+
+## 📚 READING PLAN PROGRESS
+
+- [ ] Add *Jesus of Nazareth* trilogy to plan — **Planned Thursday**
+- [ ] Add *Intro to the Devout Life* with companion arcs — **Planned Thursday**
+- [ ] Start `book_tag_map.yaml` to link books ↔ tags — **Planned Thursday/Friday**
+- [ ] Add CLI: `link_books_to_arcs.py`
 
 ---
 
 ## 🖼️ DESIGN + UX WORKFLOWS
 
-- [ ] Design aesthetic principles (monastic, timeless, clean)
-- [ ] Tailwind styling setup in React
-- [ ] UI Components: shadcn/ui + lucide-react
-- [ ] Page templates:
-  - Arc overview
-  - Day meditation
-  - Tag browse
-  - Reading Plan landing
-- [ ] Create mockups in `mockups/` folder
-- [ ] Explore Figma or Excalidraw for visual drafts
+- ✅ Tailwind working with Vite + TSX layout
+- ✅ DayDetailPage layout + spacing polished
+- ✅ Tags render cleanly in both list + detail views
+- [ ] Responsive tweaks for small screens — **Planned Friday**
+- [ ] Arc metadata + DayList TOC layout — **Planned Friday/Saturday**
 
 ---
 
 ## 🧭 LONG-TERM + WEBSITE ROADMAP
 
-- [ ] `meditations_index.yaml` generator (per-day index)
-- [ ] Auto-link arcs ↔ books
-- [ ] Django model expansion (books, reading plan)
-- [ ] Liturgical calendar + feast support
-- [ ] Full frontend data model: filtering, navigation, linking
+- [ ] `meditations_index.yaml` generator (per-day index) — **Planned Friday**
+- [ ] Auto-link arcs ↔ books — **Planned over weekend**
+- [ ] Liturgical calendar support (seasonal search)
+- [ ] Full frontend data model (tags, arcs, readings, search)
+- [ ] Finalize Django models for long-term site launch
 
 ---
 
@@ -133,55 +144,48 @@ These tools are complete and in daily use:
 
 ---
 
-## 📆 WEEKLY EXECUTION PLAN (JUNE 30 – JULY 5)
+## 📆 WEEKLY EXECUTION PLAN (JULY 2–7)
 
-### 🕊️ Sunday (June 30 – Tonight)
+### ✅ Tuesday (July 2)
 
-- ✅ Confirm Arc YAMLs are fully imported and UI visible
-- ✅ Arc tag overview API + frontend tested
-- ✅ Arc metadata list + detail APIs built
-- ✅ Planning refresh for the week
-
----
-
-### 🧠 Monday (July 1)
-
-- 🧩 Build `api/tag-cloud/` endpoint
-- 🧪 Confirm full arc sync logic is working for all arcs
-- 🛠️ Design folder structure for `website/views/`
-- 🪟 Scaffold basic React navigation bar
-
----
-
-### ✨ Tuesday (July 2)
-
-- 🎨 Refactor `ArcTagViewer` layout + polish tag styling
-- 📊 Build `ArcMetadataOverview` frontend component
-- 📚 Add 2 books to Tier 2 reading plan with metadata + roadmap tags
-
----
+- [x] Tailwind bug fixed, styles working
+- [x] DayDetailPage polish complete
+- [x] DayListViewer → DayDetail click routing
+- [ ] ArcTagViewer UI filtering + hover polish
+- [ ] CLI tool: `rename_tag.py`
+- [ ] Refactor: `check_arc_tags.py`
 
 ### 🔁 Wednesday (July 3)
 
-- 🧪 Add `--dry-run` flag to `build_and_import_arc.py`
-- 🔁 Begin checksum/timestamp skip logic for importers
-- ✍️ Start YAML planning for Arc 11 (Rosary – Sorrowful Mysteries)
+- [ ] YAML generation for Arc 11 (Rosary – Sorrowful Mysteries)
+- [ ] Add 3+ YAML days, validate with schema
+- [ ] Patch `meditations_index.yaml`
+- [ ] Add `--dry-run` and checksum skip to import scripts
 
----
+### 📚 Thursday (July 4)
 
-### 🚀 Thursday (July 4)
+- [ ] Add 2+ books to reading plan with metadata
+- [ ] Add companion arcs + tag map
+- [ ] Create initial `book_tag_map.yaml`
 
-- 🧹 CLI: validate `_index_by_arc.yaml` + arc_tag mappings
-- 🧼 CLI: delete arc or tags from DB
-- 🧵 Confirm Django models cleanly support all planned UI
+### 💻 Friday (July 5)
 
----
+- [ ] `api/tag-cloud/` endpoint
+- [ ] Polish responsive layout for day + list views
+- [ ] Add basic ArcBrowser layout (arc_title, days, tags)
 
-### 🧱 Friday (July 5)
+### 📐 Saturday (July 6)
 
-- 🔐 Plan future frontend auth strategy
-- 🧵 Build early concept UI for meditation list or search
-- 🧪 Run full metadata validation + DB sync sweep for all arcs
+- [ ] Refactor scripts for modular CLI
+- [ ] Add `delete_arc.py` CLI
+- [ ] Start GitHub Action for tag format enforcement
+
+### 🧭 Sunday (July 7)
+
+- [ ] Resume Section 3 planning (Arcs 46–55)
+- [ ] Add missing arcs to roadmap
+- [ ] Add reading → arc links
+- [ ] Begin frontend Arc overview page
 
 ---
 

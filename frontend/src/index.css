@@ -1,13 +1,151 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ====================
+   Root Colors & System
+==================== */
+:root {
+  /* Colors (used in @layer utilities) */
+  --color-foreground: 245 245 245;          /* very soft white */
+  --color-heading-text: 250 250 250;        /* near pure white h1*/
+  --color-second-heading-text: 241 245 249; /* light gray for h2 */
+  --color-text: 230 230 230;                /* soft gray */
+  --color-text-muted: 180 190 200;          /* dimmer slate */
+  --color-card-text: 160 170 180;           /* stone-gray */
+  --color-muted-foreground: 140 160 180;    /* cool steel */
+  --color-muted: 24 32 45;                  /* rich navy blue */
+  --color-border: 48 58 72;                 /* cool gray border */
+  --color-background: 15 23 36;             /* deep navy-black */
+
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ====================
+   Base Elements
+==================== */
+body {
+  @apply bg-[#1e1e2f] text-gray-100 font-sans leading-relaxed antialiased;
+  margin: 0;
+  min-height: 100vh;
 }
+
+a {
+  @apply text-blue-400 underline underline-offset-2 transition-colors;
+}
+a:hover {
+  @apply text-blue-300;
+}
+
+p {
+  @apply leading-relaxed text-base;
+  color: rgb(var(--color-muted-foreground));
+}
+
+h1 {
+  @apply text-4xl font-bold tracking-tight;
+  color: rgb(var(--color-heading-text));
+}
+
+h2 {
+  @apply text-2xl font-semibold mt-1 mb-4;
+  color: rgb(var(--color-second-heading-text));
+}
+
+h3 {
+  @apply text-xl font-medium mt-4 mb-2;
+  color: rgb(var(--color-text-muted));
+}
+
+ul, ol {
+  @apply list-inside leading-relaxed text-base;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Utility Classes for Typography */
+.text-muted {
+  @apply text-gray-400 italic;
+}
+
+.text-highlight {
+  @apply text-yellow-400 font-semibold;
+}
+
+.text-section-label {
+  @apply text-sm text-gray-400 uppercase tracking-wide;
+}
+
+/* Card Padding Consistency */
+.card-content-padding {
+  @apply p-2;
+}
+
+/* ====================
+   Tailwind Utility Layer
+==================== */
+@layer utilities {
+  .text-foreground {
+    color: rgb(var(--color-foreground));
+  }
+
+  .text-muted-foreground {
+    color: rgb(var(--color-muted-foreground));
+  }
+
+  .section-heading {
+    @apply text-xl font-semibold mb-2;
+    color: rgb(var(--color-foreground));
+  }
+
+  .card-base {
+    @apply rounded-2xl shadow-xl p-6 my-6 border backdrop-blur-sm;
+    background-color: rgba(24, 32, 45, 0.75); /* translucent navy */
+    border-color: rgb(var(--color-border));
+    }
+
+  .card-content {
+    @apply text-base;
+    color: rgb(var(--color-muted-foreground));
+  }
+
+  .tag-badge {
+    @apply text-xs px-2 py-1 rounded-full shadow-sm;
+  }
+
+  .link-hover {
+    @apply text-blue-400 hover:text-blue-300 underline transition-colors;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

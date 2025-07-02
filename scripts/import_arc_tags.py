@@ -1,10 +1,10 @@
 import os
 import sys
 import django
-import logging
 import yaml
 import argparse
 from scripts.utils.paths import PROJECT_ROOT, DJANGO_SETTINGS_MODULE, ARC_TAGS_DIR
+from scripts.utils.log import configure_logging, get_logger  # noqa: E402
 
 # Setup Django
 sys.path.append(str(PROJECT_ROOT))
@@ -19,8 +19,9 @@ setup_django()  # noqa: E402
 
 from website.models import Arc, Tag, ArcTag  # noqa: E402
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+configure_logging()  # Call once at the start of your script
+
+logger = get_logger(__name__)
 
 
 def import_arc_tags(arc_id: str = None):

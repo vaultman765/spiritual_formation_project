@@ -71,6 +71,7 @@ def day_summary_view(request):
             tags_by_category[dt.tag.category].append(dt.tag.name)
         data.append({
             "master_day_number": day.master_day_number,
+            "arc_day_number": day.arc_day_number,
             "arc_id": day.arc.arc_id,
             "arc_title": day.arc.arc_title,
             "day_title": day.day_title,
