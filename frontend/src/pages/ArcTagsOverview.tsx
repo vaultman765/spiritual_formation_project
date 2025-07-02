@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ArcTagViewer from "@/components/ArcTagViewer";
 import ArcTagFilterBar from "@/components/ArcTagFilterBar";
 import type { ArcTag } from "@/utils/types";
-// import { Loader } from "@/components/ui/loader";
+// (Line removed)
 
 const ArcTagsOverview: React.FC = () => {
   const [tags, setTags] = useState<ArcTag[]>([]);
