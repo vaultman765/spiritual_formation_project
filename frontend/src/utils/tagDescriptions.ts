@@ -300,6 +300,7 @@ const tagDescriptions: Record<string, Record<string, string>> = {
     "liturgical solemnity": "A high-ranking feast in the Church calendar, often celebrating central mysteries of the faith.",
     "magnificat": "Mary’s canticle of praise to God, expressing her humility and joy in God’s mercy.",
     "mass": "The holy sacrifice instituted by Christ, in which the Eucharist is consecrated and received.",
+    "ordinary time": "The liturgical season focusing on the life and teachings of Christ, outside the major feasts.",
     "our father": "The Lord’s Prayer, taught by Christ and central to all Christian prayer.",
     "pentecost": "The feast of the Holy Spirit’s descent upon the Apostles, marking the birth of the Church.",
     "rosary": "A meditative prayer reflecting on the life of Christ and Mary through the repetition of Hail Marys and mysteries.",
