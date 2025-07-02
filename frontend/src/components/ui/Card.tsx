@@ -6,11 +6,11 @@ interface CardProps {
 }
 
 export const Card = ({ children, className = "" }: CardProps) => (
-  <div className={`bg-white dark:bg-zinc-900 rounded-2xl shadow-md p-4 ${className}`}>
+  <div className={`card-base ${className}`}>
     {children}
   </div>
 );
 
 export const CardContent = ({ children, className = "" }: CardProps) => (
-  <div className={`space-y-4 ${className}`}>{children}</div>
+  <div className={`card-content ${className}`}>{children}</div>
 );

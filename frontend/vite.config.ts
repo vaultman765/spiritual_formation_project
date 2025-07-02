@@ -17,4 +17,8 @@ export default defineConfig({
       '/api': 'http://localhost:8000',
     },
   },
+   css: {
+    // This lets PostCSS (and Tailwind inside it) process index.css properly
+    devSourcemap: true,
+  },
 })
