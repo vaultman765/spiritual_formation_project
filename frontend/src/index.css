@@ -5,8 +5,12 @@
    Root Colors & System
 ==================== */
 :root {
-  /* Colors (used in @layer utilities) */
+  /* Colors (usSed in @layer utilities) */
   --color-foreground: 255 255 255; /* white */
+  --color-heading-text: 243 244 246; /* slate-50 */
+  --color-text: 229 231 235; /* slate-200 */
+  --color-text-muted: 203 213 225;  /* slate-300 */
+  --color-card-text: 148 163 184; /* slate-400 */
   --color-muted-foreground: 156 163 175; /* blue-gray-400 */
   --color-muted: 30 41 59; /* blue-gray-900 */
   --color-border: 51 65 85; /* blue-gray-700 */
@@ -31,22 +35,44 @@
    Base Elements
 ==================== */
 body {
-  @apply bg-[#1e1e2f] text-gray-100;
+  @apply bg-[#1e1e2f] text-gray-100 font-sans leading-relaxed antialiased;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
 }
 
+
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  @apply text-blue-600 transition-colors;
 }
 a:hover {
   color: #535bf2;
 }
+
+h1 {
+  @apply text-4xl font-bold mb-4;
+  color: rgb(var(--color-heading-text));
+}
+
+h2 {
+  @apply text-2xl font-semibold mb-3;
+  color: rgb(var(--color-text));
+}
+
+h3 {
+  @apply text-xl font-medium mt-4 mb-2;
+  color: rgb(var(--color-text-muted));
+}
+
+p {
+  @apply text-base font-semibold leading-relaxed;
+  color: rgb(var(--color-card-text));
+}
+
+ul, ol {
+  @apply list-inside pl-2 space-y-2;
+  color: rgb(var(--color-card-text));
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -66,14 +92,22 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* Light mode override */
-@media (prefers-color-scheme: light) {
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Utility Classes for Typography */
+.text-muted {
+  @apply text-gray-400 italic;
+}
+
+.text-highlight {
+  @apply text-yellow-400 font-semibold;
+}
+
+.text-section-label {
+  @apply text-sm text-gray-400 uppercase tracking-wide;
+}
+
+/* Card Padding Consistency */
+.card-content-padding {
+  @apply p-2;
 }
 
 /* ====================
@@ -88,11 +122,6 @@ button:focus-visible {
     color: rgb(var(--color-muted-foreground));
   }
 
-  .text-title {
-    @apply text-4xl font-bold;
-    color: rgb(var(--color-foreground));
-  }
-
   .section-heading {
     @apply text-xl font-semibold mb-2;
     color: rgb(var(--color-foreground));
@@ -105,18 +134,10 @@ button:focus-visible {
   }
 
   .card-content {
-    @apply text-base p-4;
+    @apply text-base;
     color: rgb(var(--color-muted-foreground));
   }
 
-  .card-title {
-    @apply text-lg font-semibold mb-2 block;
-    color: rgb(var(--color-foreground));
-  }
-  .card-text {
-    @apply text-base font-semibold;
-    color: rgb(var(--color-muted-foreground));
-  }
   .tag-badge {
     @apply text-xs px-2 py-1 rounded-full shadow-sm;
   }

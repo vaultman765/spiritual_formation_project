@@ -12,5 +12,5 @@ export const Card = ({ children, className = "" }: CardProps) => (
 );
 
 export const CardContent = ({ children, className = "" }: CardProps) => (
-  <div className={`card-content ${className}`}>{children}</div>
+  <div className={`card-content card-content-padding ${className}`}>{children}</div>
 );

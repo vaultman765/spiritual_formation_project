@@ -72,9 +72,9 @@ const DayDetailPage: React.FC = () => {
     <div className="w-full max-w-5xl mx-auto min-h-screen px-4 py-10 space-y-6">
       {/* Header */}
       <div className="space-y-2 mb-4">
-        <h1 className="text-title">{dayData.day_title}</h1>
-        <p className="text-sm text-muted-foreground italic">
-          Day {dayData.arc_day_number} of <span className="not-italic font-medium">{dayData.arc_title}</span>
+        <h1>{dayData.day_title}</h1>
+        <p className="!text-sm italic">
+          Day {dayData.arc_day_number} of <span className="not-italic">{dayData.arc_title}</span>
         </p>
       </div>
 
@@ -101,7 +101,7 @@ const DayDetailPage: React.FC = () => {
       {dayData.anchor_image && (
         <Card>
           <CardContent className="">
-            <strong className="card-title">Anchor Image</strong>
+            <h2>Anchor Image</h2>
             <p className="italic">{dayData.anchor_image}</p>
           </CardContent>
         </Card>
@@ -110,8 +110,8 @@ const DayDetailPage: React.FC = () => {
       {/* Primary Reading */}
       <Card>
         <CardContent>
-          <h2 className="card-title">Primary Reading</h2>
-          <p className='card-text'>
+          <h2>Primary Reading</h2>
+          <p>
             {dayData.primary_reading.title}
             {dayData.primary_reading.reference && ` — ${dayData.primary_reading.reference}`}
             {dayData.primary_reading.url && (
@@ -125,8 +125,8 @@ const DayDetailPage: React.FC = () => {
       {dayData.secondary_readings.length > 0 && (
         <Card>
           <CardContent>
-            <h2 className="card-title">Secondary Readings</h2>
-            <ul className="list-disc list-inside text-muted-foreground space-y-1">
+            <h2>Secondary Readings</h2>
+            <ul className="list-disc">
               {dayData.secondary_readings.map((sr, i) => (
               <li key={i} className='card-text'>
                 {sr.title}
@@ -144,10 +144,10 @@ const DayDetailPage: React.FC = () => {
       {/* Meditative Points */}
       <Card>
         <CardContent>
-          <h2 className="card-title">Meditative Points</h2>
-          <ul className="list-decimal list-inside space-y-1 text-muted-foreground">
+          <h2>Meditative Points</h2>
+          <ul className="list-disc">
             {dayData.meditative_points.map((point, i) => (
-              <p className='card-text'>
+              <p>
                 <li key={i}>{point}</li>
               </p>
             ))}
@@ -159,16 +159,16 @@ const DayDetailPage: React.FC = () => {
       <Card>
         <CardContent className="space-y-6">
           <div>
-            <h2 className="card-title">Ejaculatory Prayer</h2>
-            <p className='card-text'>{dayData.ejaculatory_prayer}</p>
+            <h2>Ejaculatory Prayer</h2>
+            <p>{dayData.ejaculatory_prayer}</p>
           </div>
           <div>
-            <h2 className="card-title">Colloquy</h2>
-            <p className='card-text'>{dayData.colloquy}</p>
+            <h2>Colloquy</h2>
+            <p>{dayData.colloquy}</p>
           </div>
           <div>
-            <h2 className="card-title">Resolution</h2>
-            <p className='card-text'>{dayData.resolution}</p>
+            <h2>Resolution</h2>
+            <p>{dayData.resolution}</p>
           </div>
         </CardContent>
       </Card>
@@ -177,7 +177,7 @@ const DayDetailPage: React.FC = () => {
       {dayData.tags && (
         <Card>
           <CardContent>
-            <h2 className="card-title">Tags</h2>
+            <h2>Tags</h2>
             <div className="space-y-4">
               {Object.entries(dayData.tags).map(([category, tags]) => {
                 const sortedTags = [...tags].sort();
@@ -185,7 +185,7 @@ const DayDetailPage: React.FC = () => {
 
                 return (
                   <div key={category}>
-                    <h3 className="card-text capitalize mb-1">{category}</h3>
+                    <h3 className="capitalize">{category}</h3>
                     <div className="flex flex-wrap gap-2">
                       {sortedTags.map((tag, i) => (
                         <span
