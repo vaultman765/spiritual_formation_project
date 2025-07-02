@@ -31,6 +31,7 @@
    Base Elements
 ==================== */
 body {
+  @apply bg-[#1e1e2f] text-gray-100;
   margin: 0;
   display: flex;
   place-items: center;

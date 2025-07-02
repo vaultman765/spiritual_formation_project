@@ -69,7 +69,7 @@ const DayDetailPage: React.FC = () => {
 
   return (
   <div className="w-screen overflow-x-hidden">
-    <div className="w-full max-w-5xl mx-auto min-h-screen px-4 py-10">
+    <div className="w-full max-w-5xl mx-auto min-h-screen px-4 py-10 space-y-6">
       {/* Header */}
       <div className="space-y-2 mb-4">
         <h1 className="text-title">{dayData.day_title}</h1>
@@ -128,15 +128,13 @@ const DayDetailPage: React.FC = () => {
             <h2 className="card-title">Secondary Readings</h2>
             <ul className="list-disc list-inside text-muted-foreground space-y-1">
               {dayData.secondary_readings.map((sr, i) => (
-                <p className='card-text'>
-                  <li key={i}>
-                    {sr.title}
-                    {sr.reference && ` — ${sr.reference}`}
-                    {sr.url && (
-                      <> (<a href={sr.url} target="_blank" rel="noreferrer" className="text-blue-500 hover:text-blue-600 underline">source</a>)</>
-                    )}
-                  </li>
-                </p>
+              <li key={i} className='card-text'>
+                {sr.title}
+                {sr.reference && ` — ${sr.reference}`}
+                {sr.url && (
+                    <> (<a href={sr.url} target="_blank" rel="noreferrer" className="text-blue-500 hover:text-blue-600 underline">source</a>)</>
+                  )}
+                </li>
               ))}
             </ul>
           </CardContent>
@@ -192,7 +190,7 @@ const DayDetailPage: React.FC = () => {
                       {sortedTags.map((tag, i) => (
                         <span
                           key={i}
-                          className={`text-xs px-2 py-1 rounded-full shadow-sm ${categoryClass}`}
+                          className={`tag-badge ${categoryClass}`}
                         >
                           {tag}
                         </span>
