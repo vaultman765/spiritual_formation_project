@@ -14,7 +14,7 @@ export default function DayIndexPage() {
   const [days, setDays] = useState<DaySummary[]>([]);
 
   useEffect(() => {
-    fetch("api/days/")
+    fetch("/api/days/")
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched day data:", data); 
