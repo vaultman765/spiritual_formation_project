@@ -26,7 +26,7 @@ const ArcTagViewer: React.FC<ArcTagViewerProps> = ({ tags, enableDescriptions })
               .map((tag) => (
                 <span
                   key={tag.id}
-                  title={enableDescriptions ? tagDescriptions[tag.name] || "" : undefined}
+                  title={enableDescriptions ? tagDescriptions[tag.category]?.[tag.name] || "" : undefined}
                   className={`px-2 py-1 text-sm font-medium rounded-full ${(categoryColors[tag.category] || categoryColors.default)} shadow-sm`}
                 >
                 {tag.name}
