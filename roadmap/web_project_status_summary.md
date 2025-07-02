@@ -1,10 +1,11 @@
 # 🧱 Mental Prayer Project – Frontend + Backend Web Progress Summary
 
-This file contains a complete snapshot of our recent progress and next actions for the full-stack development of the Mental Prayer Project, focused on Django + React (Vite + TailwindCSS).
+This file contains a complete snapshot of our recent progress and next actions for the full-stack development of the
+Mental Prayer Project, focused on Django + React (Vite + TailwindCSS).
 
 ---
 
-## ✅ COMPLETED TASKS (as of 2025-06-30)
+## ✅ COMPLETED TASKS (as of 2025-07-02)
 
 ### 🔧 Backend (Django)
 
@@ -22,6 +23,16 @@ This file contains a complete snapshot of our recent progress and next actions f
   - `import_arc_tags.py`
 
 ### 💻 Frontend
+
+- Implemented global visual theming override (dark/light consistency) using Tailwind v4 with index.css-based config
+- Standardized layout spacing, scrolling, and sticky headers across pages (ArcTagsOverview, DayListViewer, DayDetailsPage)
+- Completed `TagBlock.tsx` shared component for consistent tag display
+- Refactored `ArcTagViewer.tsx` and connected `tagDescriptions.ts` with hover tooltips
+- Set up dynamic filtering by tag, arc, and keyword
+- Sorted tags and categories alphabetically while preserving YAML order when needed
+- Designed and implemented early typography and color system in Tailwind utility layers
+- Adjusted scroll/overflow to preserve single scrollbars and fix double-scroll issues on key pages
+
 
 - Migrated from `create-react-app` to **Vite** for modern React setup
 - Successfully installed and configured **Tailwind CSS v4**
@@ -74,6 +85,7 @@ This file contains a complete snapshot of our recent progress and next actions f
 Be sure to upload the following key files:
 
 ### 🗂 Backend
+
 - `arc_metadata.yaml`
 - `tag_bank.yaml`
 - All `arc_tags/*.yaml`
@@ -82,6 +94,7 @@ Be sure to upload the following key files:
 - `urls.py`, `arc_views.py`, `tag_views.py`, `day_views.py`
 
 ### 🗂 Frontend
+
 - `vite.config.ts`, `package.json`, `tailwind.config.js`
 - `App.tsx`, `main.tsx`, `index.css`
 - `/pages/ArcTagsOverview.tsx`, `DayIndexPage.tsx`

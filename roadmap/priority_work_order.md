@@ -23,6 +23,13 @@ These tools are complete and in daily use:
 
 ## 🧱 COMPLETED MILESTONES
 
+- ✅ Frontend arc pages visually standardized with dark/light neutral override
+- ✅ Tag descriptions fully mapped and integrated with new hover system
+- ✅ TagBlock refactor with category+tag matching
+- ✅ UI spacing, scrolling, layout refactors on ArcTagsOverview + DayDetailsPage
+- ✅ Updated CSS layers for consistent typography (e.g. h1, h2), spacing, and readability
+
+
 - ✅ Arc YAML migration for:
   - Love of God
   - Love of Neighbor
