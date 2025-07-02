@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/Card';
-import { categoryColors } from '@/utils/constants';
+import TagBlock from "@/components/TagBlock";
 import { Loader2 } from 'lucide-react';
 
 interface Reading {
@@ -128,13 +128,15 @@ const DayDetailPage: React.FC = () => {
             <h2>Secondary Readings</h2>
             <ul className="list-disc">
               {dayData.secondary_readings.map((sr, i) => (
-              <li key={i} className='card-text'>
-                {sr.title}
-                {sr.reference && ` — ${sr.reference}`}
-                {sr.url && (
-                    <> (<a href={sr.url} target="_blank" rel="noreferrer" className="text-blue-500 hover:text-blue-600 underline">source</a>)</>
-                  )}
-                </li>
+                <p>
+                  <li key={i}>
+                    {sr.title}
+                    {sr.reference && ` — ${sr.reference}`}
+                    {sr.url && (
+                        <> (<a href={sr.url} target="_blank" rel="noreferrer" className="text-blue-500 hover:text-blue-600 underline">source</a>)</>
+                      )}
+                  </li>
+                </p>
               ))}
             </ul>
           </CardContent>
@@ -175,31 +177,10 @@ const DayDetailPage: React.FC = () => {
 
       {/* Tags */}
       {dayData.tags && (
-        <Card>
+        <Card className="bg-slate-800/60 border border-slate-600">
           <CardContent>
             <h2>Tags</h2>
-            <div className="space-y-4">
-              {Object.entries(dayData.tags).map(([category, tags]) => {
-                const sortedTags = [...tags].sort();
-                const categoryClass = categoryColors[category] || categoryColors.default;
-
-                return (
-                  <div key={category}>
-                    <h3 className="capitalize">{category}</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {sortedTags.map((tag, i) => (
-                        <span
-                          key={i}
-                          className={`tag-badge ${categoryClass}`}
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+            <TagBlock tagsByCategory={dayData.tags} />
           </CardContent>
         </Card>
       )}

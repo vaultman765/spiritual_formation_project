@@ -5,16 +5,17 @@
    Root Colors & System
 ==================== */
 :root {
-  /* Colors (usSed in @layer utilities) */
-  --color-foreground: 255 255 255; /* white */
-  --color-heading-text: 243 244 246; /* slate-50 */
-  --color-text: 229 231 235; /* slate-200 */
-  --color-text-muted: 203 213 225;  /* slate-300 */
-  --color-card-text: 148 163 184; /* slate-400 */
-  --color-muted-foreground: 156 163 175; /* blue-gray-400 */
-  --color-muted: 30 41 59; /* blue-gray-900 */
-  --color-border: 51 65 85; /* blue-gray-700 */
-  --color-background: 17 24 39; /* blue-gray-950 */
+  /* Colors (used in @layer utilities) */
+  --color-foreground: 245 245 245;          /* very soft white */
+  --color-heading-text: 250 250 250;        /* near pure white h1*/
+  --color-second-heading-text: 241 245 249; /* light gray for h2 */
+  --color-text: 230 230 230;                /* soft gray */
+  --color-text-muted: 180 190 200;          /* dimmer slate */
+  --color-card-text: 160 170 180;           /* stone-gray */
+  --color-muted-foreground: 140 160 180;    /* cool steel */
+  --color-muted: 24 32 45;                  /* rich navy blue */
+  --color-border: 48 58 72;                 /* cool gray border */
+  --color-background: 15 23 36;             /* deep navy-black */
 
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -40,22 +41,26 @@ body {
   min-height: 100vh;
 }
 
-
 a {
-  @apply text-blue-600 transition-colors;
+  @apply text-blue-400 underline underline-offset-2 transition-colors;
 }
 a:hover {
-  color: #535bf2;
+  @apply text-blue-300;
+}
+
+p {
+  @apply leading-relaxed text-base;
+  color: rgb(var(--color-muted-foreground));
 }
 
 h1 {
-  @apply text-4xl font-bold mb-4;
+  @apply text-4xl font-bold tracking-tight;
   color: rgb(var(--color-heading-text));
 }
 
 h2 {
-  @apply text-2xl font-semibold mb-3;
-  color: rgb(var(--color-text));
+  @apply text-2xl font-semibold mt-1 mb-4;
+  color: rgb(var(--color-second-heading-text));
 }
 
 h3 {
@@ -63,14 +68,8 @@ h3 {
   color: rgb(var(--color-text-muted));
 }
 
-p {
-  @apply text-base font-semibold leading-relaxed;
-  color: rgb(var(--color-card-text));
-}
-
 ul, ol {
-  @apply list-inside pl-2 space-y-2;
-  color: rgb(var(--color-card-text));
+  @apply list-inside leading-relaxed text-base;
 }
 
 button {
@@ -128,10 +127,10 @@ button:focus-visible {
   }
 
   .card-base {
-    @apply rounded-xl shadow-md p-4 my-4 border;
-    background-color: rgb(var(--color-muted));
+    @apply rounded-2xl shadow-xl p-6 my-6 border backdrop-blur-sm;
+    background-color: rgba(24, 32, 45, 0.75); /* translucent navy */
     border-color: rgb(var(--color-border));
-  }
+    }
 
   .card-content {
     @apply text-base;

@@ -8,3 +8,13 @@ export const categoryColors: { [key: string]: string } = {
   structural: 'bg-gray-200 text-gray-800',
   default: 'bg-gray-100 text-gray-800',
 };
+
+export const defaultCategoryOrder = [
+  "thematic",
+  "doctrinal",
+  "virtue",
+  "mystical",
+  "liturgical",
+  "typological",
+  "structural",
+];

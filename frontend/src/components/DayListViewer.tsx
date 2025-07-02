@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { categoryColors } from '@/utils/constants';
+import TagBlock from '@/components/TagBlock';
 
 interface DaySummary {
   master_day_number: number;
@@ -23,7 +23,7 @@ const DayListViewer: React.FC<Props> = ({ days }) => {
       <h2 className="text-xl font-bold mb-4">Meditation Day Index</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
         {days.map((day) => (
-          <Link to={`/days/${day.master_day_number}`} key={day.master_day_number}>
+          <Link to={`/days/${day.master_day_number}`} key={day.master_day_number} className="!no-underline">
             <div className="p-4 rounded-lg border border-gray-700 hover:bg-slate-800 transition cursor-pointer h-full">
               <p className="font-semibold text-white">
                 <span className="mr-2">Day {day.master_day_number}:</span>
@@ -35,27 +35,8 @@ const DayListViewer: React.FC<Props> = ({ days }) => {
               <div className="ml-2">
                 {day.tags && (
                   <div className="mt-2">
-                    <h4 className="font-semibold text-gray-300 text-sm mt-3">Tags:</h4>
-                    {Object.entries(day.tags).map(([category, tags]) => {
-                      const sortedTags = [...tags].sort();
-                      const categoryClass = categoryColors[category] || categoryColors.default;
-
-                      return (
-                        <div key={category} className="mb-1">
-                          <h3 className="text-sm text-gray-300 font-medium capitalize mb-1">{category}</h3>
-                          <div className="flex flex-wrap gap-2">
-                            {sortedTags.map((tag, i) => (
-                              <span
-                                key={i}
-                                className={`text-xs px-2 py-1 rounded-full shadow-sm ${categoryClass}`}
-                              >
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      );
-                    })}
+                    <h3 className="font-semibold text-gray-300 text-sm mt-3">Tags</h3>
+                    <TagBlock tagsByCategory={day.tags} />
                   </div>
                 )}
               </div>
