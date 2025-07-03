@@ -1,0 +1,82 @@
+arc_id: arc_rosary_glorious_mysteries
+arc_title: The Rosary - Glorious Mysteries
+arc_number: 12
+day_count: 7
+master_day_range:
+  start: 92
+  end: 98
+tags:
+  thematic:
+    - birth of the church
+    - final union
+    - glory
+    - heaven
+    - joy
+    - last things
+    - mary
+    - mission
+    - resurrection
+    - rosary
+    - unity
+    - victory
+  doctrinal:
+    - ascension
+    - assumption
+    - eschatology
+    - eternal life
+    - grace
+    - holy spirit
+    - marian dogma
+    - marian mediation
+    - paschal mystery
+    - pentecost
+    - resurrection of body
+    - resurrection of christ
+  virtue:
+    - charity
+    - courage
+    - detachment
+    - faith
+    - hope
+    - humility
+    - perseverance
+    - purity
+    - trust
+    - zeal
+  mystical:
+    - beatific vision
+    - coronation
+    - divine indwelling
+    - eternal longing
+    - intercession
+    - light
+    - marian companionship
+    - risen lord
+    - spiritual ascent
+    - spiritual homecoming
+    - transfiguration
+  liturgical:
+    - all saints
+    - ascension
+    - easter
+    - feast of the assumption
+    - feast of the queenship of mary
+    - marian feast
+    - ordinary time
+    - pentecost
+    - rosary feast
+    - sunday
+  typological:
+    - ark of noah
+    - ark of the covenant
+    - jonah
+    - new adam
+    - promised land
+    - psalm 45
+    - queen mother
+    - queenship
+    - tower of babel
+    - woman clothed with sun
+  structural:
+    - glorious mysteries
+    - rosary

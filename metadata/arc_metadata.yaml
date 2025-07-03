@@ -769,3 +769,98 @@
     - watchfulness
     - way of the cross
     - wounded love
+- arc_id: arc_rosary_glorious_mysteries
+  arc_title: The Rosary - Glorious Mysteries
+  arc_number: 12
+  day_count: 7
+  master_day_range:
+    start: 92
+    end: 98
+  anchor_image:
+    - Christ ascending to Heaven before His disciples, hands raised in blessing, as
+      they gaze upward in awe
+    - Christ opens the gates of Heaven, beckoning souls with outstretched arms, light
+      pouring through the open door
+    - Mary is lifted into heaven by angels, radiant and serene, her eyes fixed on
+      the glory of the Trinity
+    - The Blessed Trinity crowns Mary as Queen of Heaven, angels and saints rejoicing
+      around her in eternal light
+    - The Risen Christ stands before the empty tomb in radiant glory, wounds visible,
+      calling Mary Magdalene by name
+    - The faithful rise from the dust in glorified bodies, drawn into the light of
+      Christ’s risen majesty
+    - Tongues of fire descend upon Mary and the apostles in the upper room as they
+      pray in unity and awe
+  primary_reading:
+    - Acts 1:6–11
+    - Acts 2:1–11
+    - John 14:1–6
+    - Matthew 28:1–10
+    - Revelation 12:1; Psalm 45:10–17
+    - Revelation 12:1–6
+    - Romans 8:11; 1 Corinthians 15:42–49
+  tags:
+    - all saints
+    - ark of noah
+    - ark of the covenant
+    - ascension
+    - assumption
+    - beatific vision
+    - birth of the church
+    - charity
+    - coronation
+    - courage
+    - detachment
+    - divine indwelling
+    - easter
+    - eschatology
+    - eternal life
+    - eternal longing
+    - faith
+    - feast of the assumption
+    - feast of the queenship of mary
+    - final union
+    - glorious mysteries
+    - glory
+    - grace
+    - heaven
+    - holy spirit
+    - hope
+    - humility
+    - intercession
+    - jonah
+    - joy
+    - last things
+    - light
+    - marian companionship
+    - marian dogma
+    - marian feast
+    - marian mediation
+    - mary
+    - mission
+    - new adam
+    - ordinary time
+    - paschal mystery
+    - pentecost
+    - perseverance
+    - promised land
+    - psalm 45
+    - purity
+    - queen mother
+    - queenship
+    - resurrection
+    - resurrection of body
+    - resurrection of christ
+    - risen lord
+    - rosary
+    - rosary feast
+    - spiritual ascent
+    - spiritual homecoming
+    - sunday
+    - tower of babel
+    - transfiguration
+    - trust
+    - unity
+    - victory
+    - woman clothed with sun
+    - zeal
