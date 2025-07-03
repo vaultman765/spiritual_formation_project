@@ -1,0 +1,74 @@
+arc_id: arc_rosary_sorrowful_mysteries
+arc_title: The Rosary - Sorrowful Mysteries
+arc_number: 11
+day_count: 7
+master_day_range:
+  start: 85
+  end: 91
+tags:
+  thematic:
+    - abandonment
+    - adoration
+    - birth of the church
+    - burial
+    - contrition
+    - crucifixion
+    - death
+    - heart of christ
+    - humiliation
+    - interior agony
+    - kingship
+    - mercy
+    - mockery
+    - passion of christ
+    - redemptive suffering
+    - reparation
+    - rosary
+    - sacrifice
+    - silence
+    - submission
+    - suffering
+  doctrinal:
+    - atonement
+    - kingship of christ
+    - passion
+    - redemption
+    - sacred heart
+    - salvation
+  virtue:
+    - charity
+    - chastity
+    - detachment
+    - fortitude
+    - hope
+    - humility
+    - love
+    - mercy
+    - obedience
+    - patience
+    - perseverance
+    - trust
+  mystical:
+    - divine mercy
+    - divine silence
+    - divine will
+    - marian companionship
+    - pierced heart
+    - sorrow
+    - watchfulness
+    - way of the cross
+    - wounded love
+  liturgical:
+    - friday
+    - good friday
+    - holy saturday
+    - lent
+  typological:
+    - blood and water
+    - blood and water from christ's side
+    - blood of the covenant
+    - sacrifice
+    - the pierced heart
+  structural:
+    - rosary
+    - sorrowful mysteries

@@ -11,6 +11,7 @@ thematic:
   - burial
   - captivity of sin
   - christ the high priest
+  - companionship
   - confidence in prayer
   - conversion
   - contrition
@@ -71,7 +72,9 @@ thematic:
   - salvation
   - salvation through the cross
   - sanctuary
+  - silence
   - silence of god
+  - submission
   - suffering
   - tenderness
   - transformation
@@ -148,7 +151,9 @@ doctrinal:
   - worship
 virtue:
   - charity
+  - chastity
   - compassion
+  - detachment
   - faith
   - fidelity
   - forgiveness
@@ -239,6 +244,8 @@ mystical:
   - union with mary
   - waiting
   - washing of feet
+  - watchfulness
+  - way of the cross
   - wounded love
 liturgical:
   - advent
@@ -251,6 +258,7 @@ liturgical:
   - feast of the presentation
   - feast of the sacred heart
   - first fridays
+  - friday
   - good friday
   - holy saturday
   - holy week
@@ -321,5 +329,6 @@ structural:
   - rotating anchor images
   - sacramental theology
   - scripture
+  - sorrowful mysteries
   - theological + affective blend
   - unified anchor image

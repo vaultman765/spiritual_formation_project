@@ -1,0 +1,55 @@
+# Last imported into DB: 2025-07-03
+master_day_number: 88
+arc_day_number: 4
+arc_id: arc_rosary_sorrowful_mysteries
+arc_number: 11
+arc_title: The Rosary - Sorrowful Mysteries
+day_title: The Carrying of the Cross
+anchor_image:
+  Christ burdened beneath the Cross, falling under its weight, meeting
+  His Mother and the women of Jerusalem
+primary_reading:
+  title: Luke 23:26-32
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §618
+    url: https://www.vatican.va/archive/ENG0015/__P1O.HTM
+  - title: St. John Henry Newman, *Meditations on the Stations*
+    reference: Station 4
+    url: /docs/readings/St_John_Henry_Newman_Short_Meditation_Stations_of_the_Cross.pdf
+meditative_points:
+  - They laid the Cross upon Him, and He fell under its weight.
+  - On the way, He met His Mother — a silent exchange of suffering and love.
+  - "He turned to the women of Jerusalem: 'Weep not for Me, but for yourselves.'"
+ejaculatory_prayer: Jesus, help me to carry my daily cross with love.
+colloquy:
+  Walk beside Him. Feel the wood, the dust, the sorrow. Offer to carry with
+  Him. Ask to love your cross.
+resolution:
+  Today, I will carry out one difficult duty with conscious love and no
+  complaint.
+tags:
+  thematic:
+    - companionship
+    - passion of christ
+    - suffering
+  doctrinal:
+    - passion
+    - redemption
+  virtue:
+    - charity
+    - perseverance
+  mystical:
+    - compassion
+    - marian companionship
+    - sorrow
+    - way of the cross
+  liturgical:
+    - lent
+    - friday
+  typological: []
+  structural:
+    - rosary
+    - sorrowful mysteries
