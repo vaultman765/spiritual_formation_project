@@ -13,7 +13,7 @@ logger = get_logger(__name__)
 
 
 class ArcMetadataHandler:
-    def __init__(self, index_file: Path) -> None:
+    def __init__(self, index_file: Path):
         self.index_file = index_file
         self.index = self._load_index()
 
@@ -37,111 +37,102 @@ class ArcMetadataHandler:
         return day_files
 
 
-def execute_command(command: list[str], description: str) -> None:
-    """Execute a shell command and handle errors."""
+def run(command: list[str], description: str):
     command = [sys.executable if c == "python" else c for c in command]
-    # logger.info(f"\n▶ {description}: {' '.join(command)}")
+    logger.info(f"\n▶ {description}: {' '.join(command)}")
     result = subprocess.run(command, capture_output=True, text=True, encoding="utf-8")
+
+    # Always show stdout if there is any
+    if result.stdout:
+        logger.info(result.stdout)
+
     if result.returncode != 0:
-        logger.error(f"Command failed: {result.stderr}")
+        logger.error(f"Command failed with return code {result.returncode}")
+        if result.stderr:
+            logger.error(f"STDERR: {result.stderr}")
         raise RuntimeError(f"Step failed: {description}")
-    logger.info(result.stdout)
-
-
-def process_with_checksums(file_path: Path, command, description: str, checksums: dict, skip_unchanged: bool) -> None:
-    """Process a file with checksum validation."""
-    if skip_unchanged and should_skip(file_path, checksums, skip_unchanged):
-        return
-
-    # Handle nested commands (e.g., for day files)
-    if isinstance(command[0], list):  # Check if the first item is a list
-        for sub_command in command:
-            execute_command(sub_command, description)
     else:
-        execute_command(command, description)
-
-    update_checksum(file_path, checksums)
-    logger.info(f"✅ Processed file: {file_path.stem}")
+        logger.info(f"✅ {description} completed successfully")
 
 
-def process_step(file_paths: list[Path], command: callable, description: str, checksums: dict, skip_unchanged: bool) -> None:
-    """Process a single step for one or multiple file paths."""
-    if isinstance(file_paths, list):
-        for file_path in file_paths:
-            process_with_checksums(file_path, command, description, checksums, skip_unchanged)
-    else:
-        # Handle single file path (e.g., arc_metadata or arc_tags)
-        process_with_checksums(file_paths, command, description, checksums, skip_unchanged)
+def run_import_arc_metadata(arc_id):
+    """Import arc metadata for a specific arc ID."""
+    run(["python", "-m", "scripts.import_arc_metadata", "--arc-id", arc_id], f"Import arc metadata for {arc_id}")
 
 
-def process_arc_steps(arc_ids: list[str], steps: list[dict], skip_unchanged: bool) -> None:
-    checksums = load_checksums() if skip_unchanged else None
-    for step in steps:
-        for aid in arc_ids:
-            file_paths = step["file_path"](aid)
-            command = step["command"](aid)
-            description = step["description"](aid)
-            process_step(file_paths, command, description, checksums, skip_unchanged)
-    if checksums:
-        save_checksums(checksums)
-        logger.info("✅ Updated checksums saved.")
-
-
-def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_files_dir: Path) -> None:
+def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_files_dir: Path):
     parser = argparse.ArgumentParser(description="Full build + import pipeline for an arc")
-    parser.add_argument("--arc-id", required=True, help="Arc ID to process (e.g. arc_love_of_god). Use 'all' for all arcs")
+    parser.add_argument("--arc-id", required=True,
+                        help="Arc ID to process (e.g. arc_love_of_god). Use --arc-id all to do all arcs")
     parser.add_argument("--skip-days", action="store_true", help="Skip importing meditation days")
     parser.add_argument("--skip-tags", action="store_true", help="Skip importing arc tags")
     parser.add_argument("--skip-unchanged", action="store_true", help="Skip files with unchanged checksum")
     args = parser.parse_args()
 
-    arc_handler = ArcMetadataHandler(index_file)
+    arc_id = args.arc_id
 
-    if args.arc_id != "all" and not arc_handler.arc_id_in_index([args.arc_id]):
-        logger.error(f"❌ Invalid Arc ID: {args.arc_id}")
-        sys.exit(1)
+    if arc_id == 'all':
+        with open(index_file, "r", encoding="utf-8") as f:
+            index = yaml.safe_load(f)
+        arc_ids = list(index.keys())
+    else:
+        arc_ids = [arc_id]
 
-    arc_ids = list(arc_handler.index.keys()) if args.arc_id == "all" else [args.arc_id]
-
-    # Validate arc IDs
+    # Check arc is registered
+    arc_handler = ArcMetadataHandler(INDEX_FILE)
     if not arc_handler.arc_id_in_index(arc_ids):
-        logger.warning(f"⚠️ Arc ID '{arc_ids}' not found in index")
+        logger.warning(f"⚠️  Arc ID '{arc_ids}' not found in _index_by_arc.yaml — remember to update it!")
 
     # Step 1: Rebuild arc_metadata.yaml and arc_tags (can do all at once)
-    execute_command(["python", "-m", "scripts.build_arc_metadata_and_tags", "both"], "Build arc metadata and tags")
+    run(["python", "-m", "scripts.build_arc_metadata_and_tags", "both"], "Build arc metadata and tags")
 
-    # Define steps
-    steps = [
-        {
-            "file_path": lambda aid: arc_metadata_file,
-            "command": lambda aid: ["python", "-m", "scripts.import_arc_metadata", "--arc-id", aid],
-            "description": lambda aid: f"Import arc metadata for {aid}",
-        },
-        {
-            "file_path": lambda aid: [
-                Path(day_files_dir / f"day_{day:04}.yaml") for day in range(
-                    arc_handler.get_start_end_days(aid)[0],
-                    arc_handler.get_start_end_days(aid)[1] + 1
-                )
-            ],
-            "command": lambda aid: [
-                ["python", "-m", "scripts.import_day_yaml", "--file", str(Path(day_files_dir / f"day_{day:04}.yaml"))]
-                for day in range(
-                    arc_handler.get_start_end_days(aid)[0],
-                    arc_handler.get_start_end_days(aid)[1] + 1
-                )
-            ],
-            "description": lambda aid: f"Import day files for {aid}",
-        },
-        {
-            "file_path": lambda aid: Path(arc_tags_dir / f"{aid}_tags.yaml"),
-            "command": lambda aid: ["python", "-m", "scripts.import_arc_tags", "--arc-id", aid],
-            "description": lambda aid: f"Import arc tags for {aid}",
-        },
-    ]
+    # Step 2: Import arc metadata (one at a time)
+    if args.skip_unchanged:
+        checksums = load_checksums()
+        if not should_skip(arc_metadata_file, checksums, args.skip_unchanged):
+            for aid in arc_ids:
+                run_import_arc_metadata(aid)
+            update_checksum(arc_metadata_file, checksums)
+            save_checksums(checksums)
+        else:
+            logger.info("⏩ Skipping unchanged arc metadata file")
+    else:
+        for aid in arc_ids:
+            run_import_arc_metadata(aid)
 
-    # Process steps
-    process_arc_steps(arc_ids, steps, args.skip_unchanged)
+    # Step 3: Import meditation days (one at a time)
+    day_list = arc_handler.get_day_list(arc_ids)
+    if not args.skip_days:
+        if args.skip_unchanged:
+            checksums = load_checksums()
+            for day_file in day_list:
+                day_file_path = Path(day_files_dir / day_file)
+                if not should_skip(day_file_path, checksums, args.skip_unchanged):
+                    run(["python", "-m", "scripts.import_day_yaml", "--file", str(day_file)], f"Import {day_file}")
+                    update_checksum(day_file_path, checksums)
+                    logger.info(f"✅ Imported updated {day_file}")
+            save_checksums(checksums)
+        else:
+            # If not skipping unchanged, just import all days
+            for aid in arc_ids:
+                run(["python", "-m", "scripts.import_day_yaml", "--arc-id", aid], f"Import arc days for {aid}")
+
+    # Step 4: Import arc-level tags (one at a time)
+    if not args.skip_tags:
+        if args.skip_unchanged:
+            checksums = load_checksums()
+            for aid in arc_ids:
+                tag_file = Path(f"{arc_tags_dir}/{aid}_tags.yaml")
+                if not should_skip(tag_file, checksums, args.skip_unchanged):
+                    run(["python", "-m", "scripts.import_arc_tags", "--arc-id", aid], f"Import arc tags for {aid}")
+                    update_checksum(tag_file, checksums)
+                    logger.info(f"✅ Imported updated tags for {aid}")
+            save_checksums(checksums)
+        else:
+            # If not skipping unchanged, just import all tags
+            for aid in arc_ids:
+                run(["python", "-m", "scripts.import_arc_tags", "--arc-id", aid], f"Import arc tags for {aid}")
+
     logger.info("\n✅ All steps complete.")
 
 
