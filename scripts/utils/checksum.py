@@ -17,9 +17,10 @@ def save_checksums(updated):
 
 def compute_checksum(path: Path):
     hasher = hashlib.sha256()
-    with open(path, "rb") as f:
-        while chunk := f.read(8192):
-            hasher.update(chunk)
+    with open(path, "r", encoding="utf-8") as f:
+        lines = [line for line in f if not line.strip().startswith("#")]
+        content = "".join(lines).encode("utf-8")
+        hasher.update(content)
     return hasher.hexdigest()
 
 
