@@ -38,3 +38,7 @@ arc_rosary_joyful_mysteries:
   arc_number: 10
   start_day: 78
   end_day: 84
+arc_rosary_sorrowful_mysteries:
+  arc_number: 11
+  start_day: 85
+  end_day: 91

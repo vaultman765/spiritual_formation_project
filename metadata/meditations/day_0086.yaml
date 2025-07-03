@@ -1,0 +1,54 @@
+# Last imported into DB: 2025-07-03
+master_day_number: 86
+arc_day_number: 2
+arc_id: arc_rosary_sorrowful_mysteries
+arc_number: 11
+arc_title: The Rosary - Sorrowful Mysteries
+day_title: The Scourging at the Pillar
+anchor_image:
+  Christ bound and scourged at the pillar, His flesh torn by whips, silent
+  in suffering
+primary_reading:
+  title: John 19:1
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §617
+    url: https://www.vatican.va/archive/ENG0015/__P1O.HTM
+  - title: St. Bridget of Sweden, Prophecies and Revelations
+    reference: Book 3, Chapter 70 (pdf pg. 319-321)
+    url: /docs/readings/St_Bridget_of_Sweden_Prophecies_and_Revelations.pdf
+meditative_points:
+  - He was bound and handed over to be scourged.
+  - Each lash tore His flesh, yet He uttered not a word.
+  - The silence of the Lamb — enduring the cruelty of men for our redemption.
+ejaculatory_prayer: Jesus, scourged for my sins, have mercy on me.
+colloquy:
+  Speak to the suffering Christ. Ask Him what He bore for you. Tell Him you
+  wish to make reparation by your love.
+resolution:
+  Today, I will patiently bear a small annoyance or insult in reparation
+  for sins of the flesh.
+tags:
+  thematic:
+    - passion of christ
+    - rosary
+    - reparation
+    - silence
+    - suffering
+  doctrinal:
+    - atonement
+    - passion
+  virtue:
+    - chastity
+    - patience
+  mystical:
+    - sorrow
+  liturgical:
+    - lent
+    - friday
+  typological: []
+  structural:
+    - rosary
+    - sorrowful mysteries

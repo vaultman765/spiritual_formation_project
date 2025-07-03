@@ -678,3 +678,94 @@
     - temple
     - the pierced heart
     - trust
+- arc_id: arc_rosary_sorrowful_mysteries
+  arc_title: The Rosary - Sorrowful Mysteries
+  arc_number: 11
+  day_count: 7
+  master_day_range:
+    start: 85
+    end: 91
+  anchor_image:
+    - Christ bound and scourged at the pillar, His flesh torn by whips, silent in
+      suffering
+    - Christ burdened beneath the Cross, falling under its weight, meeting His Mother
+      and the women of Jerusalem
+    - Christ crucified between two thieves, darkness covering the sky, His head bowed
+      in death
+    - Christ in agony beneath the olive trees, sweating blood under a dark sky, angel
+      beside Him
+    - Christ seated and crowned with thorns by Roman soldiers, mocked and robed in
+      purple
+    - The lifeless body of Christ is wrapped in linen and laid in the tomb, Mary and
+      disciples nearby in mourning
+    - The soldier pierces Christ’s side with a lance — blood and water flow from His
+      Sacred Heart
+  primary_reading:
+    - John 19:1
+    - John 19:31–37
+    - Luke 22:39-46
+    - Luke 23:26-32
+    - Luke 23:33–46
+    - Luke 23:50–56
+    - Matthew 27:27-31
+  tags:
+    - abandonment
+    - adoration
+    - atonement
+    - birth of the church
+    - blood and water
+    - blood and water from christ's side
+    - blood of the covenant
+    - burial
+    - charity
+    - chastity
+    - companionship
+    - compassion
+    - contrition
+    - crucifixion
+    - death
+    - detachment
+    - divine mercy
+    - divine silence
+    - divine will
+    - fortitude
+    - friday
+    - good friday
+    - heart of christ
+    - holy saturday
+    - hope
+    - humiliation
+    - humility
+    - interior agony
+    - kingship
+    - kingship of christ
+    - lent
+    - love
+    - marian companionship
+    - mercy
+    - mockery
+    - obedience
+    - passion
+    - passion of christ
+    - patience
+    - perseverance
+    - pierced heart
+    - redemption
+    - redemptive suffering
+    - reparation
+    - rosary
+    - sacred heart
+    - sacrifice
+    - salvation
+    - salvation through the cross
+    - silence
+    - sorrow
+    - sorrowful mysteries
+    - submission
+    - suffering
+    - suffering servant
+    - the pierced heart
+    - trust
+    - watchfulness
+    - way of the cross
+    - wounded love
