@@ -17,3 +17,5 @@ DAY_SCHEMA = SCHEMA_DIR / "day_full_schema.yaml"
 
 CONFIG_DIR = PROJECT_ROOT / "config"
 DJANGO_SETTINGS_MODULE = "config.settings"
+
+CHECKSUM_FILE = Path.home() / ".mental_prayer_checksums.json"
