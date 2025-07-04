@@ -5,7 +5,7 @@ import logging
 import argparse
 import yaml
 from pathlib import Path
-from datetime import date
+from datetime import datetime
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 from scripts.utils.io import DayYamlValidator, load_yaml  # noqa: E402
@@ -146,9 +146,9 @@ def import_day_file(path: Path, dry_run: bool = False) -> bool:
             with open(path, "r", encoding="utf-8") as f:
                 lines = f.readlines()
             if not lines[0].startswith("# Last imported into DB"):
-                lines.insert(0, f"# Last imported into DB: {date.today()}\n")
+                lines.insert(0, f"# Last imported into DB: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
             else:
-                lines[0] = f"# Last imported into DB: {date.today()}\n"
+                lines[0] = f"# Last imported into DB: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
             with open(path, "w", encoding="utf-8") as f:
                 f.writelines(lines)
         except Exception as e:
