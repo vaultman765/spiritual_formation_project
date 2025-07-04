@@ -1,3 +1,5 @@
+### ✅ Completed
+
 # ✅ MENTAL PRAYER PROJECT — MASTER PRIORITY WORK ORDER (Updated July 2, 2025)
 
 ---
@@ -28,7 +30,6 @@ These tools are complete and in daily use:
 - ✅ TagBlock refactor with category+tag matching
 - ✅ UI spacing, scrolling, layout refactors on ArcTagsOverview + DayDetailsPage
 - ✅ Updated CSS layers for consistent typography (e.g. h1, h2), spacing, and readability
-
 
 - ✅ Arc YAML migration for:
   - Love of God
@@ -86,7 +87,7 @@ These tools are complete and in daily use:
 ## 🛠️ TECHNICAL PRIORITIES + TOOLING
 
 - [ ] `--dry-run` flag for `build_and_import_arc.py` — **Planned Wednesday**
-- [ ] Checksum or timestamp skipping logic — **Planned Wednesday**
+- ✅ Checksum or timestamp skipping logic — **Planned Wednesday**
 - [ ] CLI: tag fixer / renamer tool — **Planned Tuesday**
 - [ ] CLI: validate `_index_by_arc.yaml` + tag sync — **Planned Thursday**
 - [ ] CLI: delete arc or arc tags from DB (admin only)
@@ -97,8 +98,8 @@ These tools are complete and in daily use:
 
 ## 🧘 MEDITATION CONTENT PROGRESS
 
-- ✅ Arc 10 complete (Rosary – Joyful Mysteries)
-- [ ] Arc 11: Rosary – Sorrowful Mysteries — **Begin Wednesday**
+- ✅ Arc 1-12: Rosary complete
+- [ ] Arc 13: Rosary – Luminous Mysteries (Days 99–105) — **Planned Next**
 - [ ] Continue YAML generation for all planned arcs (target 1000+ days)
 - [ ] Integrate `meditations_index.yaml` auto-updates (Friday or Sunday)
 
@@ -151,16 +152,18 @@ These tools are complete and in daily use:
 - [x] Tailwind bug fixed, styles working
 - [x] DayDetailPage polish complete
 - [x] DayListViewer → DayDetail click routing
-- [ ] ArcTagViewer UI filtering + hover polish
+- [x] ArcTagViewer UI filtering + hover polish
 - [ ] CLI tool: `rename_tag.py`
 - [ ] Refactor: `check_arc_tags.py`
 
 ### 🔁 Wednesday (July 3)
 
-- [ ] YAML generation for Arc 11 (Rosary – Sorrowful Mysteries)
+- [x] YAML generation for Arc 11 (Rosary – Sorrowful Mysteries)
 - [ ] Add 3+ YAML days, validate with schema
-- [ ] Patch `meditations_index.yaml`
-- [ ] Add `--dry-run` and checksum skip to import scripts
+- [x] Patch `meditations_index.yaml`
+- [ ] Add `--dry-run`
+- [x] Checksum or timestamp skipping logic for `build_and_import_arc.py`
+- [x] manage.py import_arc command
 
 ### 📚 Thursday (July 4)
 

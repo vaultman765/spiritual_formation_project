@@ -15,7 +15,7 @@
 | 9         | 71–77     | The Immaculate Heart of Mary                           | 7         | ✅   | The Heart of Mary surrounded by lilies and flame | Luke 2:19                                  | June / Saturdays | ✅ Complete    |
 | 10        | 78–84     | The Rosary – Joyful Mysteries                          | 7         | ✅    | Scenes from the Joyful Mysteries                 | Luke 1–2, Matthew 1–2                      | Advent / Ordinary Time | ✅ Complete    |
 | 11        | 85–91     | The Rosary – Sorrowful Mysteries                       | 7         | ✅    | Scenes from the Sorrowful Mysteries              | Scenes from the Sorrowful Mysteries                         | Lent / Fridays  | ✅ Complete    |
-| 12        | 92–98     | The Rosary – Glorious Mysteries                        | 7         | ⏳    | Scenes from the Glorious Mysteries               | Resurrection to Coronation passages        | Easter / Sundays | 🔜 Planned |
+| 12        | 92–98     | The Rosary – Glorious Mysteries                        | 7         | ✅    | Scenes from the Glorious Mysteries               | Resurrection to Coronation passages        | Easter / Sundays | ✅ Complete    |
 | 13        | 99–105    | The Rosary – Luminous Mysteries                        | 7         | ⏳    | Scenes from the Luminous Mysteries               | Public Ministry episodes                   | Ordinary Time  | 🔜 Planned |
 | 14        | 106–112   | The Angelus                                            | 7         | ⏳    | Annunciation / Incarnation scenes                | Luke 1:26–38; John 1:14                    | Ordinary Time / Noon | 🔜 Planned |
 | 15        | 113–115   | Three Evangelical Counsels                             | 3         | ⏳    | Christ speaking in the Sermon on the Mount       | Matthew 5–6                                | Ordinary Time  | 🔜 Planned |
@@ -200,3 +200,4 @@ to build the long symphonic arc of the full journey.
 - Use interior arcs to slow and deepen (e.g., Hidden Life, Simplicity)
 - Close each section with mission, suffering, or eschatological themes
 - Weave in Eucharistic and Christological deepening every 2–3 sections
+1

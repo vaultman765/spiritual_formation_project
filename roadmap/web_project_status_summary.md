@@ -5,7 +5,7 @@ Mental Prayer Project, focused on Django + React (Vite + TailwindCSS).
 
 ---
 
-## ✅ COMPLETED TASKS (as of 2025-07-02)
+## ✅ COMPLETED TASKS (as of 2025-07-03)
 
 ### 🔧 Backend (Django)
 
@@ -21,10 +21,11 @@ Mental Prayer Project, focused on Django + React (Vite + TailwindCSS).
   - `import_arc_metadata.py`
   - `import_day_yaml.py`
   - `import_arc_tags.py`
+  - `manage.py import_arc` command for CLI integration
+  - Checksum or timestamp skipping logic for efficient imports
 
 ### 💻 Frontend
 
-- Implemented global visual theming override (dark/light consistency) using Tailwind v4 with index.css-based config
 - Standardized layout spacing, scrolling, and sticky headers across pages (ArcTagsOverview, DayListViewer, DayDetailsPage)
 - Completed `TagBlock.tsx` shared component for consistent tag display
 - Refactored `ArcTagViewer.tsx` and connected `tagDescriptions.ts` with hover tooltips
@@ -33,13 +34,13 @@ Mental Prayer Project, focused on Django + React (Vite + TailwindCSS).
 - Designed and implemented early typography and color system in Tailwind utility layers
 - Adjusted scroll/overflow to preserve single scrollbars and fix double-scroll issues on key pages
 
-
 - Migrated from `create-react-app` to **Vite** for modern React setup
 - Successfully installed and configured **Tailwind CSS v4**
 - Removed all deprecated `postcss.config` files
 - Set up file structure with:
   - `pages/ArcTagsOverview.tsx`, `DayIndexPage.tsx`
   - `components/ArcTagViewer.tsx`, `DayListViewer.tsx`
+  - `pages/DayDetailPage.tsx`
 - React components fetch and display data from:
   - `/api/arc-tags/overview/`
   - `/api/days/`
@@ -55,18 +56,19 @@ Mental Prayer Project, focused on Django + React (Vite + TailwindCSS).
 
 **Goal:** Show full meditation content per day
 
-- Create `/pages/DayDetailPage.tsx`
-- Add `<Route path="/days/:dayNumber">`
-- Fetch from `/api/days/:day_number/` (or use arc/arc_day format later)
-- Display:
-  - Day title
-  - Anchor image
-  - Primary + Secondary readings
-  - Meditative points
-  - Ejaculatory prayer
-  - Colloquy
-  - Resolution
-- Connect day click from `DayListViewer` → detail view
+✅ Create `/pages/DayDetailPage.tsx`
+✅ Add `<Route path="/days/:dayNumber">`
+✅ Fetch from `/api/days/:day_number/` (or use arc/arc_day format later)
+✅ Display:
+
+- Day title
+- Anchor image
+- Primary + Secondary readings
+- Meditative points
+- Ejaculatory prayer
+- Colloquy
+- Resolution
+✅ Connect day click from `DayListViewer` → detail view
 
 ---
 
