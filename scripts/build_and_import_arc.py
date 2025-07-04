@@ -81,7 +81,8 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
     # Check arc is registered
     arc_handler = ArcMetadataHandler(INDEX_FILE)
     if not arc_handler.arc_id_in_index(arc_ids):
-        logger.warning(f"⚠️  Arc ID '{arc_ids}' not found in _index_by_arc.yaml — remember to update it!")
+        logger.error(f"⚠️  Arc ID '{arc_ids}' not found in _index_by_arc.yaml — update it before running this script.")
+        return
 
     # Step 1: Rebuild arc_metadata.yaml and arc_tags (can do all at once)
     run(["python", "-m", "scripts.build_arc_metadata_and_tags", "both"], "Build arc metadata and tags")
