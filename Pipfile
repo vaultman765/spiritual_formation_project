@@ -19,3 +19,4 @@ flake8 = "*"
 [scripts]
 lint = "flake8 ."
 make = "C:\\ProgramData\\chocolatey\\bin\\make.exe -f Makefile"
+run-server = "python manage.py runserver"

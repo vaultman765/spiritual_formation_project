@@ -1,0 +1,68 @@
+arc_id: arc_rosary_luminous_mysteries
+arc_title: The Rosary - Luminous Mysteries
+arc_number: 13
+day_count: 7
+master_day_range:
+  start: 99
+  end: 105
+tags:
+  thematic:
+    - adoration
+    - baptism
+    - conversion
+    - discipleship
+    - evangelization
+    - glory
+    - glory of christ
+    - kingdom of god
+    - marian intercession
+    - mission
+    - rosary
+    - sacraments
+    - sacrifice
+  doctrinal:
+    - baptism
+    - eucharist
+    - grace
+    - incarnation
+    - kingship of christ
+    - marriage
+    - real presence
+    - repentance
+    - reverence
+    - trinity
+  virtue:
+    - charity
+    - courage
+    - faith
+    - hope
+    - humility
+    - love
+    - obedience
+    - trust
+    - zeal
+  mystical:
+    - anointing
+    - contemplation
+    - divine sonship
+    - light
+    - marian companionship
+    - transfiguration
+    - union with christ
+  liturgical:
+    - baptism of the lord
+    - epiphany
+    - feast of transfiguration
+    - holy thursday
+    - holy week
+    - lent
+    - ordinary time
+  typological:
+    - heavens opening
+    - jordan river
+    - manna
+    - new creation
+    - passover
+  structural:
+    - luminous mysteries
+    - rosary

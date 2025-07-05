@@ -864,3 +864,83 @@
     - victory
     - woman clothed with sun
     - zeal
+- arc_id: arc_rosary_luminous_mysteries
+  arc_title: The Rosary - Luminous Mysteries
+  arc_number: 13
+  day_count: 7
+  master_day_range:
+    start: 99
+    end: 105
+  anchor_image:
+    - A soul illuminated by divine light, walking in Christ's footsteps
+    - Christ holding the Host, radiating Eucharistic light
+    - Christ offering the Bread at the Last Supper
+    - Christ shining in radiant light on the mountaintop, Moses and Elijah beside
+      Him, the disciples in awe
+    - Christ standing before the people, arms open, declaring the Kingdom of God is
+      at hand
+    - Christ standing in the Jordan as the heavens open, the Spirit descending, and
+      the Father's voice resounding
+    - Mary gestures toward Jesus at the wedding feast, the jars waiting, the first
+      miracle about to begin
+  primary_reading:
+    - John 2:1–11
+    - John 6:51–58
+    - Luke 22:14–20
+    - Luke 9:28–36
+    - Mark 1:14–15
+    - Matthew 3:13-17
+    - Matthew 5:14–16
+  tags:
+    - adoration
+    - anointing
+    - awe
+    - baptism
+    - baptism of the lord
+    - charity
+    - contemplation
+    - conversion
+    - courage
+    - discipleship
+    - divine sonship
+    - epiphany
+    - eucharist
+    - evangelization
+    - faith
+    - feast of transfiguration
+    - glory
+    - glory of christ
+    - grace
+    - heavens opening
+    - holy thursday
+    - holy week
+    - hope
+    - humility
+    - incarnation
+    - jordan river
+    - kingdom of god
+    - kingship of christ
+    - lent
+    - light
+    - love
+    - luminous mysteries
+    - manna
+    - marian companionship
+    - marian intercession
+    - marriage
+    - mission
+    - new creation
+    - obedience
+    - ordinary time
+    - passover
+    - real presence
+    - repentance
+    - reverence
+    - rosary
+    - sacraments
+    - sacrifice
+    - transfiguration
+    - trinity
+    - trust
+    - union with christ
+    - zeal

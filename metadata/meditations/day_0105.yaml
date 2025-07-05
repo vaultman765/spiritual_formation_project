@@ -1,0 +1,51 @@
+# Last imported into DB: 2025-07-05 11:19:30
+master_day_number: 105
+arc_day_number: 7
+arc_id: arc_rosary_luminous_mysteries
+arc_title: The Rosary - Luminous Mysteries
+arc_number: 13
+day_title: Living the Luminous Mysteries
+anchor_image: A soul illuminated by divine light, walking in Christ's footsteps
+primary_reading:
+  title: Matthew 5:14–16
+  reference:
+  url:
+secondary_reading:
+  - title: Vatican II, Lumen Gentium
+    reference: §§1–5
+    url: /docs/readings/Vatican_II_Lumen_Gentium.pdf
+  - title: St. Catherine of Siena, Dialogue
+    reference: Treatise on Discretion, Section "How penance and other corporal exercises..." (PDF page 34)
+    url: /docs/readings/St_Catherine_Dialogue.pdf
+meditative_points:
+  - ‘You are the light of the world.’
+  - The Luminous Mysteries call the soul to radiate Christ’s life and truth.
+  - The baptized are candles lit by Christ to dispel darkness around them.
+ejaculatory_prayer: Jesus, light of my soul, shine through me.
+colloquy:
+  O Light of the world, You have filled me with Your presence in the mysteries
+  of Your life. Let me now carry You into the world with boldness, compassion, and
+  joy. Make me a mirror of Your light.
+resolution:
+  Today, I will perform a hidden act of charity as a light-bearing disciple
+  of Christ.
+tags:
+  thematic:
+    - evangelization
+    - discipleship
+    - mission
+    - rosary
+  doctrinal:
+    - baptism
+  virtue:
+    - charity
+    - zeal
+  mystical:
+    - light
+  liturgical:
+    - epiphany
+    - ordinary time
+  typological: []
+  structural:
+    - rosary
+    - luminous mysteries

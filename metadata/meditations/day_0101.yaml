@@ -1,0 +1,52 @@
+# Last imported into DB: 2025-07-05 11:19:26
+master_day_number: 101
+arc_day_number: 3
+arc_id: arc_rosary_luminous_mysteries
+arc_title: The Rosary - Luminous Mysteries
+arc_number: 13
+day_title: The Proclamation of the Kingdom
+anchor_image:
+  Christ standing before the people, arms open, declaring the Kingdom
+  of God is at hand
+primary_reading:
+  title: Mark 1:14–15
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§541–546
+    url: https://www.vatican.va/archive/ENG0015/__P1L.HTM
+  - title: Pope Benedict XVI, Jesus of Nazareth
+    reference: Chapter 4 (If owned)
+    url:
+meditative_points:
+  - The Kingdom of God is at hand.
+  - Repent, and believe in the Gospel.
+  - Christ invites us into His reign not by force, but by mercy and love.
+ejaculatory_prayer: Jesus, reign in me — Your Kingdom come in my soul.
+colloquy:
+  Lord Jesus, proclaim again in my heart the coming of Your Kingdom. Let my
+  life echo Your call to conversion, and may Your truth and mercy rule my thoughts,
+  my desires, my will.
+resolution:
+  I will reflect on one way today I can extend Christ’s reign — through
+  mercy, truth, or charity.
+tags:
+  thematic:
+    - conversion
+    - kingdom of god
+    - rosary
+  doctrinal:
+    - grace
+    - kingship of christ
+    - repentance
+  virtue:
+    - hope
+    - courage
+  mystical: []
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - rosary
+    - luminous mysteries
