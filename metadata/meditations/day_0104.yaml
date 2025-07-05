@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-05 11:19:29
+# Last imported into DB: 2025-07-05 11:27:11
 master_day_number: 104
 arc_day_number: 6
 arc_id: arc_rosary_luminous_mysteries
@@ -41,8 +41,7 @@ tags:
   mystical:
     - contemplation
     - union with christ
-  liturgical:
-    - eucharistic devotion
+  liturgical: []
   typological:
     - manna
   structural:
