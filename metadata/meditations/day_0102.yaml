@@ -1,0 +1,55 @@
+# Last imported into DB: 2025-07-05 11:19:27
+master_day_number: 102
+arc_day_number: 4
+arc_id: arc_rosary_luminous_mysteries
+arc_title: The Rosary – Luminous Mysteries
+arc_number: 13
+day_title: The Transfiguration
+anchor_image:
+  Christ shining in radiant light on the mountaintop, Moses and Elijah
+  beside Him, the disciples in awe
+primary_reading:
+  title: Luke 9:28–36
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§554–556
+    url: https://www.vatican.va/archive/ENG0015/__P1L.HTM
+  - title: St. Leo the Great, Sermon 51
+    reference:
+    url: https://www.newadvent.org/fathers/360351.htm
+meditative_points:
+  - And He was transfigured before them.
+  - This is My beloved Son, listen to Him.
+  - They saw His glory — veiled no more.
+ejaculatory_prayer: Jesus, reveal to me the light of Your glory.
+colloquy:
+  O radiant Christ, You allowed the veil to be lifted for a moment — that
+  we might glimpse Your divinity. Let Your light shine into my darkness. Help me carry
+  Your radiance with reverence and humility.
+resolution:
+  I will pause in silence today to contemplate the glory of Christ — even
+  in small or hidden ways.
+tags:
+  thematic:
+    - glory
+    - glory of christ
+    - rosary
+  doctrinal:
+    - incarnation
+    - trinity
+  virtue:
+    - awe
+    - faith
+    - obedience
+  mystical:
+    - light
+    - transfiguration
+  liturgical:
+    - feast of transfiguration
+    - lent
+  typological: []
+  structural:
+    - rosary
+    - luminous mysteries

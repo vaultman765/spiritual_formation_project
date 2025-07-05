@@ -1,0 +1,58 @@
+# Last imported into DB: 2025-07-05 11:19:25
+master_day_number: 99
+arc_day_number: 1
+arc_id: arc_rosary_luminous_mysteries
+arc_title: 'The Rosary - Luminous Mysteries'
+arc_number: 13
+day_title: The Baptism of Christ in the Jordan
+anchor_image:
+  "Christ standing in the Jordan as the heavens open, the Spirit descending,
+  and the Father's voice resounding"
+primary_reading:
+  title: Matthew 3:13-17
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§535-537
+    url: https://www.vatican.va/archive/ENG0015/__P1L.HTM
+  - title: St. Cyril of Jerusalem, Catechetical Lectures
+    reference: Lecture 3
+    url: https://www.newadvent.org/fathers/310103.htm
+meditative_points:
+  - Jesus descends into the Jordan not for His own sake, but to sanctify the waters
+    for us
+  - 'The heavens open, revealing the Trinity - the voice of the Father, the presence
+    of the Spirit, the beloved Son'
+  - 'Here begins His public mission - with humility, submission, and divine affirmation'
+ejaculatory_prayer: Beloved Son of the Father, immerse me in Your light.
+colloquy:
+  "O Jesus, in Your baptism You identified Yourself with sinners. Wash me
+  anew in the grace of Your humility. May I hear the Father's voice call me
+  His beloved through You, and may the Spirit rest upon me as I begin anew."
+resolution:
+  Today I will renew my baptismal promises in prayer, consciously renouncing
+  sin and choosing to live for God.
+tags:
+  thematic:
+    - baptism
+    - rosary
+    - sacraments
+  doctrinal:
+    - baptism
+    - trinity
+  virtue:
+    - humility
+    - obedience
+  mystical:
+    - divine sonship
+    - anointing
+  liturgical:
+    - epiphany
+    - baptism of the lord
+  typological:
+    - jordan river
+    - heavens opening
+  structural:
+    - rosary
+    - luminous mysteries

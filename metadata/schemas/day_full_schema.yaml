@@ -15,6 +15,9 @@ required:
   - colloquy
   - resolution
   - tags
+# 🔒 Formatting Rule:
+# All strings must use proper UTF-8 punctuation (e.g., “,” “—” “‘”) rather than escaped unicode sequences (e.g., \u2014, \u201c, etc).
+# This includes meditative_points, colloquy, resolution, and prayers.
 properties:
   master_day_number:
     type: integer
@@ -55,13 +58,13 @@ properties:
         type:
           - string
           - integer
-          - "null"
-        description: "Use for if the reading is a subset of the title (E.g. title: Catechism of the Catholic Church. reference: 2842–2845)"
+          - 'null'
+        description: 'Use for if the reading is a subset of the title (E.g. title: Catechism of the Catholic Church. reference: 2842–2845)'
       url:
         type:
           - string
-          - "null"
-        description: "Only used for non-Bible sources (e.g. CCC, encyclicals) - URL or PDF link to the reading."
+          - 'null'
+        description: 'Only used for non-Bible sources (e.g. CCC, encyclicals) - URL or PDF link to the reading.'
         anyOf:
           - format: uri
           - pattern: ".*\\.pdf$"
@@ -85,14 +88,14 @@ properties:
           type:
             - string
             - integer
-            - "null"
-          description: "Use for if the reading is a subset of the title
-            (E.g. title: Catechism of the Catholic Church. reference: 2842–2845)"
+            - 'null'
+          description: 'Use for if the reading is a subset of the title
+            (E.g. title: Catechism of the Catholic Church. reference: 2842–2845)'
         url:
           type:
             - string
-            - "null"
-          description: "Only used for non-Bible sources (e.g. CCC, encyclicals) - URL or PDF link to the reading."
+            - 'null'
+          description: 'Only used for non-Bible sources (e.g. CCC, encyclicals) - URL or PDF link to the reading.'
           anyOf:
             - format: uri
             - pattern: ".*\\.pdf$"

@@ -1,0 +1,51 @@
+# Last imported into DB: 2025-07-05 11:19:28
+master_day_number: 103
+arc_day_number: 5
+arc_id: arc_rosary_luminous_mysteries
+arc_title: The Rosary – Luminous Mysteries
+arc_number: 13
+day_title: The Institution of the Eucharist
+anchor_image: Christ offering the Bread at the Last Supper
+primary_reading:
+  title: Luke 22:14–20
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§1323–1327
+    url: https://www.vatican.va/archive/ENG0015/__P3W.HTM
+  - title: St. John Paul II, Ecclesia de Eucharistia
+    reference: §1–6
+    url: /docs/readings/St_Pope_JP2_Ecclesia_de_Eucharista.pdf
+meditative_points:
+  - Christ says, 'This is my Body, which is given for you.'
+  - 'The mystery of real presence: God under the form of bread and wine.'
+  - The Eucharist as the memorial of Christ’s Passion and the summit of our faith.
+ejaculatory_prayer: Jesus, Bread of Life, nourish me with Your presence.
+colloquy:
+  O Jesus, who humbly gave Yourself in the form of bread and wine, I adore
+  You. Let my soul never stray far from the altar, where You remain with us. May every
+  communion be a deeper union with Your Heart.
+resolution:
+  I will make a reverent visit to the Blessed Sacrament today, kneeling
+  in gratitude for the gift of the Eucharist.
+tags:
+  thematic:
+    - adoration
+    - rosary
+    - sacrifice
+  doctrinal:
+    - eucharist
+    - real presence
+  virtue: []
+  mystical:
+    - union with Christ
+  liturgical:
+    - holy thursday
+    - holy week
+  typological:
+    - manna
+    - passover
+  structural:
+    - rosary
+    - luminous mysteries
