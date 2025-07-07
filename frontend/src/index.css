@@ -1,149 +1,79 @@
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
+@import '@/styles/colors.css';
 
-/* ====================
-   Root Colors & System
-==================== */
 :root {
-  /* Colors (used in @layer utilities) */
-  --color-foreground: 245 245 245;          /* very soft white */
-  --color-heading-text: 250 250 250;        /* near pure white h1*/
-  --color-second-heading-text: 241 245 249; /* light gray for h2 */
-  --color-text: 230 230 230;                /* soft gray */
-  --color-text-muted: 180 190 200;          /* dimmer slate */
-  --color-card-text: 160 170 180;           /* stone-gray */
-  --color-muted-foreground: 140 160 180;    /* cool steel */
-  --color-muted: 24 32 45;                  /* rich navy blue */
-  --color-border: 48 58 72;                 /* cool gray border */
-  --color-background: 15 23 36;             /* deep navy-black */
-
-
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --font-display: 'EB Garamond', Georgia, serif;
 }
 
-/* ====================
-   Base Elements
-==================== */
+
 body {
-  @apply bg-[#1e1e2f] text-gray-100 font-sans leading-relaxed antialiased;
-  margin: 0;
-  min-height: 100vh;
+  @apply antialiased font-sans leading-relaxed;
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-text));
 }
 
 a {
-  @apply text-blue-400 underline underline-offset-2 transition-colors;
+  @apply text-[var(--brand-primary-dark)] underline underline-offset-2 transition-colors;
 }
 a:hover {
-  @apply text-blue-300;
-}
-
-p {
-  @apply leading-relaxed text-base;
-  color: rgb(var(--color-muted-foreground));
-}
-
-h1 {
-  @apply text-4xl font-bold tracking-tight;
-  color: rgb(var(--color-heading-text));
-}
-
-h2 {
-  @apply text-2xl font-semibold mt-1 mb-4;
-  color: rgb(var(--color-second-heading-text));
-}
-
-h3 {
-  @apply text-xl font-medium mt-4 mb-2;
-  color: rgb(var(--color-text-muted));
-}
-
-ul, ol {
-  @apply list-inside leading-relaxed text-base;
+  @apply text-[var(--brand-primary)];
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  @apply font-medium rounded shadow px-4 py-2 transition;
 }
 
-/* Utility Classes for Typography */
-.text-muted {
-  @apply text-gray-400 italic;
+@layer base {
+  h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+  } 
 }
 
-.text-highlight {
-  @apply text-yellow-400 font-semibold;
+.tag-pill-arc {
+  font-size: 0.75rem; /* text-xs */
+  background-color: var(--badge-bg);
+  color: var(--text-main);
+  border: 1px solid var(--badge-border);
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
 }
 
-.text-section-label {
-  @apply text-sm text-gray-400 uppercase tracking-wide;
+.meditation-image {
+  max-height: 400px;
+  max-width: 100%;
+  object-fit: contain;
 }
 
-/* Card Padding Consistency */
-.card-content-padding {
-  @apply p-2;
+.meditation-image-container {
+  max-height: 400px; /* max-h-[400px] */
+  width: 100%; /* w-full */
+  padding: 1rem; /* px-4 */
+  display: flex; /* flex */
+  justify-content: center; /* justify-center */
+  align-items: center; /* items-center */
+  border-radius: 1rem; /* rounded-xl */
+  margin-bottom: 0.75rem; /* mb-3 */
 }
 
-/* ====================
-   Tailwind Utility Layer
-==================== */
-@layer utilities {
-  .text-foreground {
-    color: rgb(var(--color-foreground));
-  }
+.homepage-section-link {
+  text-decoration: none; /* !no-underline */
+  border: var(--brand-primary-dark) 1px solid;
+  padding: 1rem; /* p-4 */
+  box-shadow: var(--shadow-md); /* shadow-md */
+  align-items: center; /* flex items-center */
+  justify-content: center; /* flex justify-center */
+  display: flex; /* flex */
+  flex-direction: column; /* flex-col */
+  text-align: center; /* text-center */
+  @apply block rounded-2xl bg-[var(--bg-card)]/75 shadow-black/20;
+}
 
-  .text-muted-foreground {
-    color: rgb(var(--color-muted-foreground));
-  }
-
-  .section-heading {
-    @apply text-xl font-semibold mb-2;
-    color: rgb(var(--color-foreground));
-  }
-
-  .card-base {
-    @apply rounded-2xl shadow-xl p-6 my-6 border backdrop-blur-sm;
-    background-color: rgba(24, 32, 45, 0.75); /* translucent navy */
-    border-color: rgb(var(--color-border));
-    }
-
-  .card-content {
-    @apply text-base;
-    color: rgb(var(--color-muted-foreground));
-  }
-
-  .tag-badge {
-    @apply text-xs px-2 py-1 rounded-full shadow-sm;
-  }
-
-  .link-hover {
-    @apply text-blue-400 hover:text-blue-300 underline transition-colors;
-  }
+.homepage-section-link:hover {
+  scale: 1.01; /* hover:scale-[1.01] */
+  box-shadow: var(--shadow-lg); /* hover:shadow-lg */
+  transition-duration: 200ms; /* duration-200 */
+  transition-property: all; /* transition-all */
+  @apply shadow-yellow-400/20 ring-2 ring-yellow-400/30;
 }
 
 @tailwind base;

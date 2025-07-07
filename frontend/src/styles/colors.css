@@ -1,0 +1,26 @@
+:root {
+  /* === Brand === */
+  --brand-primary: #f5d7a4;
+  --brand-primary-dark: #e6c776;
+
+  /* === Backgrounds === */
+  --bg-dark: #1c1628;
+  --bg-mid: #2e1a49;
+  --bg-light: #6d3cae;
+  --bg-card: #2a213a;
+
+  /* === Text === */
+  --text-light: #fcf8ef;
+  --text-main: #fff7e6;
+  --text-muted: #e0ccae;
+  --text-subtle-heading: #9ca3af;
+  --tag-bg: #382b5e;
+
+  /* === Badge === */
+  --badge-bg: rgba(245,215,164,0.08);
+  --badge-border: rgba(245,215,164,0.15);
+
+  /* === Effects === */
+  --glow: rgba(255, 217, 130, 0.15);
+  --hover-gold: #f0c676;
+}
