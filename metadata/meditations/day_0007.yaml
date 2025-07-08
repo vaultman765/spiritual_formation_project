@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03 15:45:48
+# Last imported into DB: 2025-07-08 15:24:21
 master_day_number: 7
 arc_day_number: 7
 arc_id: arc_love_of_god
@@ -11,12 +11,12 @@ anchor_image:
   Face shines infinite love. Every wound speaks the truth of God’s heart.
 primary_reading:
   title: 1 John 4:7–21
-  reference: ""
-  url: ""
+  reference: ''
+  url: ''
 secondary_reading:
   - title: John 15:9–17
-    reference: ""
-    url: ""
+    reference: ''
+    url: ''
   - title: Pope Benedict XVI, Deus Caritas Est
     reference: §§1–18
     url: https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20051225_deus-caritas-est.html
@@ -42,8 +42,6 @@ tags:
     - fidelity
     - obedience
   mystical:
-    - abiding in love
-    - divine charity
     - union
   liturgical:
     - ordinary time

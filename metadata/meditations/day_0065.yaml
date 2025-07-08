@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03 15:28:29
+# Last imported into DB: 2025-07-08 15:24:38
 master_day_number: 65
 arc_day_number: 2
 arc_id: arc_heaven_and_judgment
@@ -39,8 +39,7 @@ tags:
     - salvation
   virtue:
     - vigilance
-  mystical:
-    - divine discernment
+  mystical: []
   liturgical:
     - advent
     - ordinary time

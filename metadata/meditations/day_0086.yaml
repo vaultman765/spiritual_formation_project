@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03
+# Last imported into DB: 2025-07-08 15:24:43
 master_day_number: 86
 arc_day_number: 2
 arc_id: arc_rosary_sorrowful_mysteries
@@ -41,13 +41,11 @@ tags:
     - atonement
     - passion
   virtue:
-    - chastity
     - patience
   mystical:
     - sorrow
   liturgical:
     - lent
-    - friday
   typological: []
   structural:
     - rosary

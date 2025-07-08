@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03
+# Last imported into DB: 2025-07-08 15:24:47
 master_day_number: 92
 arc_day_number: 1
 arc_id: arc_rosary_glorious_mysteries
@@ -46,7 +46,6 @@ tags:
     - risen lord
   liturgical:
     - easter
-    - sunday
   typological:
     - jonah
     - new adam

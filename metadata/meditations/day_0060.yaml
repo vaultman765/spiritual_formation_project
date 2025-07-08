@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03
+# Last imported into DB: 2025-07-08 15:24:35
 master_day_number: 60
 arc_day_number: 6
 arc_id: arc_christ_our_high_priest
@@ -14,7 +14,7 @@ primary_reading:
   url:
 secondary_reading:
   - title: St. Thomas Aquinas, Commentary on Hebrews
-    reference: "Chapter 7-1: On the Priesthood of Melchizedek"
+    reference: 'Chapter 7-1: On the Priesthood of Melchizedek'
     url: https://isidore.co/aquinas/SSHebrews.htm#71
 meditative_points:
   - You are a priest forever according to the order of Melchizedek
@@ -40,7 +40,6 @@ tags:
     - faith
   mystical:
     - mystery
-    - divine nourishment
     - royal priesthood
   liturgical:
     - ordinary time

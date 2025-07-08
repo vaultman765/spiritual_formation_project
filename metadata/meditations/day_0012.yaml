@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03
+# Last imported into DB: 2025-07-08 15:24:23
 master_day_number: 12
 arc_day_number: 5
 arc_id: arc_love_of_neighbor
@@ -11,12 +11,12 @@ anchor_image:
   shame. This is love made visible in humility.
 primary_reading:
   title: John 13:1–17
-  reference: ""
-  url: ""
+  reference: ''
+  url: ''
 secondary_reading:
   - title: 1 John 3:11–18
-    reference: ""
-    url: ""
+    reference: ''
+    url: ''
   - title: Catechism of the Catholic Church
     reference: 1939
     url: https://www.vatican.va/archive/ENG0015/__P6Q.HTM
@@ -25,8 +25,8 @@ meditative_points:
     is not measured by intention, but by sacrifice.'
   - '"Even as I have loved you, you also should love one another." (Jn 13:34) — Christ
     loved with His whole body — His hands, His voice, His wounds.'
-  - "The Catechism speaks of structures of solidarity. I must become one: a living witness
-    to love."
+  - 'The Catechism speaks of structures of solidarity. I must become one: a living witness
+    to love.'
 ejaculatory_prayer: Let me love as You have loved me.
 colloquy:
   Jesus, let my love stop being abstract. Make it physical, specific, real
@@ -36,13 +36,11 @@ resolution:
   not later.
 tags:
   thematic:
-    - action
     - love of neighbor
     - sacrifice
   doctrinal: []
   virtue:
     - charity
-    - solidarity
   mystical: []
   liturgical:
     - ordinary time

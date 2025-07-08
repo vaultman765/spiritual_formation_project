@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03 15:29:11
+# Last imported into DB: 2025-07-08 15:24:39
 master_day_number: 72
 arc_day_number: 2
 arc_id: arc_immaculate_heart_mary
@@ -36,8 +36,7 @@ tags:
     - adoration
     - immaculate heart
     - mary
-  doctrinal:
-    - poverty of christ
+  doctrinal: []
   virtue:
     - humility
   mystical:

@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03 15:28:27
+# Last imported into DB: 2025-07-08 15:24:38
 master_day_number: 64
 arc_day_number: 1
 arc_id: arc_heaven_and_judgment
@@ -31,7 +31,7 @@ resolution:
 tags:
   thematic:
     - final judgment
-    - glory of christ
+    - glory
     - last things
   doctrinal:
     - eschatology
@@ -43,7 +43,6 @@ tags:
   mystical:
     - awe
     - beatific vision
-    - divine majesty
   liturgical:
     - ordinary time
     - advent

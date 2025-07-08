@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03
+# Last imported into DB: 2025-07-08 15:24:26
 master_day_number: 27
 arc_day_number: 6
 arc_id: arc_sin_mercy_conversion
@@ -42,7 +42,6 @@ tags:
   virtue: []
   mystical:
     - divine mercy
-    - spiritual rest
   liturgical:
     - lent
     - ordinary time

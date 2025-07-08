@@ -12,11 +12,9 @@
   primary_reading:
     - 1 John 4:7–21
   tags:
-    - abiding in love
     - charity
     - contrition
     - desire for god
-    - divine charity
     - divine image
     - divine love
     - divine mercy
@@ -51,7 +49,6 @@
   primary_reading:
     - John 13:1–17
   tags:
-    - action
     - body of christ
     - charity
     - commandments
@@ -72,9 +69,7 @@
     - ordinary time
     - perseverance
     - sacrifice
-    - solidarity
     - spiritual childhood
-    - spiritual warfare
     - unity
     - vocation
     - works of mercy
@@ -164,11 +159,9 @@
     - conversion
     - conviction
     - darkness
-    - divine initiative
     - divine mercy
     - divine physician
     - forgiveness
-    - gospel discourse
     - grace
     - healing
     - honesty
@@ -182,10 +175,8 @@
     - light from above
     - lost sheep
     - mercy
-    - moral formation
     - ordinary time
     - parable
-    - pauline theology
     - peace
     - perseverance
     - prodigal son
@@ -195,11 +186,9 @@
     - sacramental theology
     - sacraments
     - sanctifying grace
-    - silence of god
     - sin
     - spiritual captivity
     - spiritual homecoming
-    - spiritual rest
     - the father running to meet the prodigal
     - the return from exile
     - trust
@@ -303,11 +292,9 @@
     - sacred heart
     - sacrifice
     - salvation
-    - salvation through the cross
     - silence
     - sin
     - spiritual darkness
-    - spiritual maternity
     - suffering
     - surrender
     - temple veil torn
@@ -341,7 +328,7 @@
     - christology
     - contemplation
     - contrition
-    - desire
+    - desire for god
     - divine image
     - divine indwelling
     - divine love
@@ -354,7 +341,6 @@
     - fortitude
     - good friday
     - grace
-    - holiness
     - hope
     - humiliation
     - humility
@@ -375,7 +361,6 @@
     - overshadowing
     - patience
     - pierced heart
-    - praise
     - presentation
     - prudence
     - reparation
@@ -386,12 +371,9 @@
     - silence
     - sin
     - sonship of christ
-    - spiritual enthronement
-    - spiritual identity
     - suffering
     - surrender
     - temperance
-    - thirst
     - transformation
     - trinity
     - trust
@@ -438,7 +420,7 @@
     - adoration
     - atonement
     - awe
-    - baptismal identity
+    - baptism
     - beatific vision
     - blood of christ
     - blood of the covenant
@@ -447,10 +429,7 @@
     - christology
     - confidence in prayer
     - covenant
-    - cross
     - divine adoption
-    - divine advocacy
-    - divine nourishment
     - easter
     - ecclesiology
     - eschatology
@@ -461,7 +440,6 @@
     - good friday
     - grace
     - heaven
-    - heavenly consummation
     - heavenly liturgy
     - heavenly mediation
     - high priest
@@ -481,7 +459,6 @@
     - paschal lamb
     - passion
     - presentation
-    - priesthood of the faithful
     - purification
     - redemption
     - reverence
@@ -489,10 +466,8 @@
     - royal priesthood
     - sacrifice
     - salvation
-    - sanctuary
     - solemnities
     - soteriology
-    - spiritual priesthood
     - temple
     - temple in heaven
     - temple veil torn
@@ -538,14 +513,12 @@
     - corporal works of mercy
     - damnation
     - daniel 7
-    - divine discernment
-    - divine majesty
     - eschatology
     - eternal reward
     - final judgment
     - gehenna
     - general judgment
-    - glory of christ
+    - glory
     - heaven
     - hell
     - hope
@@ -611,7 +584,6 @@
     - mystery
     - obedience
     - ordinary time
-    - poverty of christ
     - scripture
     - shepherds
     - silence
@@ -656,7 +628,6 @@
     - docility
     - faith
     - fidelity
-    - finding in the temple
     - humility
     - incarnation
     - joy
@@ -672,7 +643,6 @@
     - rosary
     - rotating anchor images
     - sacrifice
-    - service
     - silence
     - sorrow
     - temple
@@ -718,8 +688,6 @@
     - blood of the covenant
     - burial
     - charity
-    - chastity
-    - companionship
     - compassion
     - contrition
     - crucifixion
@@ -729,15 +697,12 @@
     - divine silence
     - divine will
     - fortitude
-    - friday
     - good friday
-    - heart of christ
     - holy saturday
     - hope
     - humiliation
     - humility
     - interior agony
-    - kingship
     - kingship of christ
     - lent
     - love
@@ -757,7 +722,6 @@
     - sacred heart
     - sacrifice
     - salvation
-    - salvation through the cross
     - silence
     - sorrow
     - sorrowful mysteries
@@ -766,9 +730,6 @@
     - suffering servant
     - the pierced heart
     - trust
-    - watchfulness
-    - way of the cross
-    - wounded love
 - arc_id: arc_rosary_glorious_mysteries
   arc_title: The Rosary - Glorious Mysteries
   arc_number: 12
@@ -815,7 +776,6 @@
     - easter
     - eschatology
     - eternal life
-    - eternal longing
     - faith
     - feast of the assumption
     - feast of the queenship of mary
@@ -856,7 +816,6 @@
     - rosary feast
     - spiritual ascent
     - spiritual homecoming
-    - sunday
     - tower of babel
     - transfiguration
     - trust
@@ -893,7 +852,6 @@
     - Matthew 5:14–16
   tags:
     - adoration
-    - anointing
     - awe
     - baptism
     - baptism of the lord
@@ -905,11 +863,9 @@
     - divine sonship
     - epiphany
     - eucharist
-    - evangelization
     - faith
     - feast of transfiguration
     - glory
-    - glory of christ
     - grace
     - heavens opening
     - holy thursday

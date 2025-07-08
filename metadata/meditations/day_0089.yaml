@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03
+# Last imported into DB: 2025-07-08 15:24:45
 master_day_number: 89
 arc_day_number: 5
 arc_id: arc_rosary_sorrowful_mysteries
@@ -42,11 +42,9 @@ tags:
     - passion
     - redemption
     - salvation
-    - salvation through the cross
   virtue:
     - love
-  mystical:
-    - wounded love
+  mystical: []
   liturgical:
     - lent
     - good friday

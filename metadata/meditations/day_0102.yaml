@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-05 11:19:27
+# Last imported into DB: 2025-07-08 15:24:52
 master_day_number: 102
 arc_day_number: 4
 arc_id: arc_rosary_luminous_mysteries
@@ -34,7 +34,7 @@ resolution:
 tags:
   thematic:
     - glory
-    - glory of christ
+    - glory
     - rosary
   doctrinal:
     - incarnation

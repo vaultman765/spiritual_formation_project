@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03 15:29:57
+# Last imported into DB: 2025-07-08 15:24:41
 master_day_number: 82
 arc_day_number: 5
 arc_id: arc_rosary_joyful_mysteries
@@ -29,8 +29,7 @@ tags:
   thematic:
     - mary
     - rosary
-  doctrinal:
-    - finding in the temple
+  doctrinal: []
   virtue:
     - joy
     - obedience

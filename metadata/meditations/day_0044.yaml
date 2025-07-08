@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03
+# Last imported into DB: 2025-07-08 15:24:30
 master_day_number: 44
 arc_day_number: 6
 arc_id: arc_litany_sacred_heart
@@ -42,7 +42,6 @@ tags:
     - reverence
   virtue: []
   mystical:
-    - praise
     - contemplation
   liturgical:
     - june

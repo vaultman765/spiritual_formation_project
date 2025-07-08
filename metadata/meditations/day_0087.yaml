@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03 16:15:16
+# Last imported into DB: 2025-07-08 15:24:44
 master_day_number: 87
 arc_day_number: 3
 arc_id: arc_rosary_sorrowful_mysteries
@@ -34,7 +34,6 @@ tags:
   thematic:
     - adoration
     - humiliation
-    - kingship
     - mockery
     - passion of christ
   doctrinal:
@@ -48,7 +47,6 @@ tags:
     - sorrow
   liturgical:
     - lent
-    - friday
   typological: []
   structural:
     - rosary
