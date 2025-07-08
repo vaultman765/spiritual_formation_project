@@ -4,9 +4,9 @@ import MeditationCard from "@/components/MeditationCard";
 
 export default function HomePage() {
   return (
-    <main className="bg-gradient-to-b from-[var(--bg-light)] via-[var(--bg-mid)] to-[var(--bg-dark)] min-h-screen">
-      {/* Top Section – Header */}
-      <section className="px-6 pt-2 pb-4 text-center">
+    <main className="main-background">
+      {/* Header */}
+      <header className="header">
         <h1 className="text-5xl md:text-6xl font-display font-semibold text-[var(--text-main)]">
           Encounter God through Ignatian Mental Prayer
         </h1>
@@ -21,16 +21,16 @@ export default function HomePage() {
             Start Here
           </button>
         </div>
-      </section>
+      </header>
 
       {/* Bottom Section – Cards */} 
-      <section className="px-6 py-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 max-w-6xl mx-auto ">
+      <section className="px-6 py-2 grid grid-cols-2 gap-12 max-w-6xl mx-auto">
 
         {/* Today’s Meditation */}
         <MeditationCard
           title="The Baptism of Christ in the Jordan"
           subtitle="Today's Meditation"
-          imageSrc="/images/arc_rosary_luminous_mysteries_day_01.jpg"
+          imageSrc="/images/arc_days/arc_rosary_luminous_mysteries_day_01.jpg"
           altText="Baptism of Christ painting"
           link="/days/001"
           tag="Arc: Rosary – Luminous Mysteries Day 1 of 7"
@@ -40,7 +40,7 @@ export default function HomePage() {
         <MeditationCard
           title="The Wedding at Cana"
           subtitle="Tomorrow's Meditation"
-          imageSrc="/images/arc_rosary_luminous_mysteries_day_02.jpg"
+          imageSrc="/images/arc_days/arc_rosary_luminous_mysteries_day_02.jpg"
           altText="Wedding at Cana painting"
           link="/days/002"
           tag="Arc: Rosary – Luminous Mysteries Day 2 of 7"

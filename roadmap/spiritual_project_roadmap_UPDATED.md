@@ -189,4 +189,3 @@ This is the next major stage.
 | 🧠 Theology Depth   | More Thomistic and Mystical arcs with rare saints and Church docs   |
 | 🗂️ Search & Browse  | Smart tag search, reading-source cross-links, Feast Day filter      |
 | 🌐 Public Site UX   | Full-featured frontend for users (web/mobile optimized)             |
-| 🔒 User Accounts    | Login, progress tracking, favorites, email reminders                |

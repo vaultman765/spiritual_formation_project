@@ -47,12 +47,19 @@ button {
 .meditation-image-container {
   max-height: 400px; /* max-h-[400px] */
   width: 100%; /* w-full */
-  padding: 1rem; /* px-4 */
+  padding: .5rem; /* px-4 */
   display: flex; /* flex */
   justify-content: center; /* justify-center */
   align-items: center; /* items-center */
   border-radius: 1rem; /* rounded-xl */
-  margin-bottom: 0.75rem; /* mb-3 */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.homepage-section-link:hover {
+  scale: 1.01; /* hover:scale-[1.01] */
+  transition-duration: 200ms; /* duration-200 */
+  transition-property: all; /* transition-all */
+  @apply shadow-lg shadow-yellow-400/20 ring-2 ring-yellow-400/30;
 }
 
 .homepage-section-link {
@@ -68,12 +75,35 @@ button {
   @apply block rounded-2xl bg-[var(--bg-card)]/75 shadow-black/20;
 }
 
-.homepage-section-link:hover {
-  scale: 1.01; /* hover:scale-[1.01] */
-  box-shadow: var(--shadow-lg); /* hover:shadow-lg */
-  transition-duration: 200ms; /* duration-200 */
-  transition-property: all; /* transition-all */
-  @apply shadow-yellow-400/20 ring-2 ring-yellow-400/30;
+
+.main-background {
+  background: linear-gradient(
+    to bottom,
+    var(--bg-light) 0%,
+    var(--bg-mid) 50%,
+    var(--bg-dark) 100%
+  ); /* bg-gradient-to-b from-[var(--bg-light)] via-[var(--bg-mid)] to-[var(--bg-dark)] */
+  min-height: 100vh; /* min-h-screen */
+}
+
+.header {
+  padding: 1rem;
+  text-align: center; /* text-center */
+}
+
+.section-standard {
+  @apply md:flex-row;
+  display: flex; /* flex */
+  justify-content: center; /* justify-center */
+  align-items: center; /* items-center */
+  margin-bottom: 2.5rem; /* mb-10 */
+  margin-inline: auto; /* mx-auto */
+  max-width: 50%; /* max-w-5xl */
+  gap: 1rem; /* gap-4 */
+}
+
+.section-standard:md {
+  flex-direction: row; /* md:flex-row */
 }
 
 @tailwind base;
