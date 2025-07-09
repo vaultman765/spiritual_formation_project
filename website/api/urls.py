@@ -1,7 +1,7 @@
 from django.urls import path
-from website.views.arc_views import arc_tags_by_arc, arc_metadata_list, arc_metadata_detail
-from website.views.tag_views import arcs_grouped_by_tag
-from website.views.day_views import arc_day_list, day_metadata_view, day_summary_view, day_detail_by_arc_view
+from website.api.views.arc_views import arc_tags_by_arc, arc_metadata_list, arc_metadata_detail
+from website.api.views.tag_views import arcs_grouped_by_tag
+from website.api.views.day_views import arc_day_list, day_metadata_view, day_summary_view, day_detail_by_arc_view
 
 urlpatterns = [
     path("api/arc-tags/", arc_tags_by_arc, name="arc_tags"),

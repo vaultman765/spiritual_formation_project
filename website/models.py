@@ -14,7 +14,11 @@ class Arc(models.Model):
 
     # from arc_metadata.yaml (can be multiline string)
     anchor_image = models.TextField()
+    arc_summary = models.TextField()
+
     primary_reading = models.TextField()
+
+    card_tags = models.TextField(blank=True, help_text="Comma-separated list of tag names")
 
     class Meta:
         ordering = ["arc_number"]

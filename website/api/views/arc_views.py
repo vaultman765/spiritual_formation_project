@@ -32,7 +32,9 @@ def arc_metadata_list(request):
             "master_day_start": arc.master_day_start,
             "master_day_end": arc.master_day_end,
             "anchor_image": arc.anchor_image,
+            "arc_summary": arc.arc_summary,
             "primary_reading": arc.primary_reading,
+            "card_tags": arc.card_tags.split(",") if arc.card_tags else [],
         }
         for arc in arcs
     ]
