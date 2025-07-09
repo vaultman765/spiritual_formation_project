@@ -9,3 +9,6 @@ update-dev:
 
 lint:
 	pipenv run flake8 scripts/
+
+make runserver:
+	pipenv run python manage.py runserver

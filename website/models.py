@@ -18,7 +18,7 @@ class Arc(models.Model):
 
     primary_reading = models.TextField()
 
-    card_tags = models.TextField(blank=True, help_text="Comma-separated list of tag names")
+    card_tags = models.JSONField(default=list, blank=True, null=True)
 
     class Meta:
         ordering = ["arc_number"]
@@ -55,6 +55,7 @@ class MeditationDay(models.Model):
     resolution = models.TextField(blank=True)
 
     class Meta:
+        unique_together = ("arc", "arc_day_number")
         ordering = ["master_day_number"]
 
     def __str__(self):
