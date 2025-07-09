@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03
+# Last imported into DB: 2025-07-08 15:35:01
 master_day_number: 92
 arc_day_number: 1
 arc_id: arc_rosary_glorious_mysteries
@@ -33,7 +33,7 @@ resolution:
 tags:
   thematic:
     - joy
-    - resurrection
+    - glory and heaven
     - rosary
   doctrinal:
     - resurrection of christ
@@ -46,7 +46,6 @@ tags:
     - risen lord
   liturgical:
     - easter
-    - sunday
   typological:
     - jonah
     - new adam

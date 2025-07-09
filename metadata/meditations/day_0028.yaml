@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03
+# Last imported into DB: 2025-07-08 15:24:27
 master_day_number: 28
 arc_day_number: 7
 arc_id: arc_sin_mercy_conversion
@@ -49,5 +49,4 @@ tags:
     - ordinary time
   typological:
     - the return from exile
-  structural:
-    - moral formation
+  structural: []

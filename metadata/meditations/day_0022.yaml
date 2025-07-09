@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03
+# Last imported into DB: 2025-07-08 15:24:24
 master_day_number: 22
 arc_day_number: 1
 arc_id: arc_sin_mercy_conversion
@@ -6,22 +6,22 @@ arc_title: Sin, Mercy, and Conversion
 arc_number: 4
 day_title: Recognizing the Wound
 anchor_image:
-  "**The Divine Physician Finds the Lost Sheep** — You see yourself wounded and alone, far from the flock.
+  '**The Divine Physician Finds the Lost Sheep** — You see yourself wounded and alone, far from the flock.
   Christ appears—not with reproach, but with urgency. He kneels beside you, binding your wounds with gentleness.
-  He lifts you onto His shoulders. You feel the weight of your sin, but also the warmth of His mercy."
+  He lifts you onto His shoulders. You feel the weight of your sin, but also the warmth of His mercy.'
 primary_reading:
   title: Luke 15:1–7
-  reference: ""
-  url: ""
+  reference: ''
+  url: ''
 secondary_reading:
   - title: Catechism of the Catholic Church
     reference: 1846–1848
     url: https://www.vatican.va/archive/ENG0015/__P69.HTM
 meditative_points:
-  - "He finds you lying there — wounded, ashamed, and hidden in the thorns. He does not hesitate.
-    He draws near, bends low, and lifts you onto His shoulders. This is the true image of mercy."
-  - "You were not lost to Him. You were always known, always loved — even in your sin.
-    The Shepherd did not stumble upon you by chance; He came searching."
+  - 'He finds you lying there — wounded, ashamed, and hidden in the thorns. He does not hesitate.
+    He draws near, bends low, and lifts you onto His shoulders. This is the true image of mercy.'
+  - 'You were not lost to Him. You were always known, always loved — even in your sin.
+    The Shepherd did not stumble upon you by chance; He came searching.'
   - "'There will be more joy in heaven over one sinner who repents...' (v. 7) —
     Imagine the celebration in heaven at your return. Do you believe it? Will you let yourself be found?"
 ejaculatory_prayer: Jesus, carry me in Your mercy, and let me never flee Your love again.
@@ -29,8 +29,8 @@ colloquy:
   Speak to the Lord as one who has been found. Confess how far you wandered, but let your sorrow melt into gratitude.
   Let yourself be carried — without resistance — and feel the strength of His shoulders.
 resolution:
-  "Today, reread the parable slowly. Ask yourself: do I believe God rejoices over my return?
-  Let this truth shape your next confession."
+  'Today, reread the parable slowly. Ask yourself: do I believe God rejoices over my return?
+  Let this truth shape your next confession.'
 tags:
   thematic:
     - repentance
@@ -43,7 +43,6 @@ tags:
     - humility
     - mercy
   mystical:
-    - divine initiative
     - divine physician
     - healing
   liturgical:

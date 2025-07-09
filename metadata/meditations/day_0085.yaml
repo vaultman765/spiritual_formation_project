@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03
+# Last imported into DB: 2025-07-08 15:24:42
 master_day_number: 85
 arc_day_number: 1
 arc_id: arc_rosary_sorrowful_mysteries
@@ -47,10 +47,8 @@ tags:
   mystical:
     - divine will
     - sorrow
-    - watchfulness
   liturgical:
     - lent
-    - friday
   typological: []
   structural:
     - rosary

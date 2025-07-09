@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03
+# Last imported into DB: 2025-07-08 15:24:45
 master_day_number: 88
 arc_day_number: 4
 arc_id: arc_rosary_sorrowful_mysteries
@@ -32,7 +32,6 @@ resolution:
   complaint.
 tags:
   thematic:
-    - companionship
     - passion of christ
     - suffering
   doctrinal:
@@ -45,10 +44,8 @@ tags:
     - compassion
     - marian companionship
     - sorrow
-    - way of the cross
   liturgical:
     - lent
-    - friday
   typological: []
   structural:
     - rosary

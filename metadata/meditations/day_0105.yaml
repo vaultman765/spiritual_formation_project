@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-05 11:19:30
+# Last imported into DB: 2025-07-08 15:24:55
 master_day_number: 105
 arc_day_number: 7
 arc_id: arc_rosary_luminous_mysteries
@@ -31,7 +31,6 @@ resolution:
   of Christ.
 tags:
   thematic:
-    - evangelization
     - discipleship
     - mission
     - rosary

@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03
+# Last imported into DB: 2025-07-08 15:24:33
 master_day_number: 56
 arc_day_number: 2
 arc_id: arc_christ_our_high_priest
@@ -33,9 +33,7 @@ resolution:
 tags:
   thematic:
     - christ the high priest
-    - cross
     - passion
-    - sanctuary
   doctrinal:
     - atonement
     - reverence

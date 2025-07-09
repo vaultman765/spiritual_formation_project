@@ -9,14 +9,16 @@
     - The Crucified Christ (Face) — You gaze upon the face of Christ crucified. His
       eyes are closed, His head bowed beneath the crown of thorns. From this suffering
       Face shines infinite love. Every wound speaks the truth of God’s heart.
+  arc_summary: This arc contemplates the infinite love of God revealed in Jesus Christ.
+    Rooted in 1 John 4, it draws the soul into the mystery of divine charity, the
+    outpouring of grace, and the call to return love for love. We gaze upon the Crucified
+    Christ, whose wounds make visible the love that redeems and transforms.
   primary_reading:
     - 1 John 4:7–21
   tags:
-    - abiding in love
     - charity
     - contrition
     - desire for god
-    - divine charity
     - divine image
     - divine love
     - divine mercy
@@ -37,6 +39,10 @@
     - trust
     - union
     - vine and branches
+  card_tags:
+    - charity
+    - scripture
+    - grace
 - arc_id: arc_love_of_neighbor
   arc_title: Love of Neighbor – Living Charity
   arc_number: 2
@@ -48,10 +54,13 @@
     - Christ washing the disciples’ feet — The Son of God kneels in the dust. He touches
       dirt and fatigue, pouring water not only onto their feet, but into their shame.
       This is love made visible in humility.
+  arc_summary: This arc explores the commandment to love our neighbor as ourselves,
+    reflecting on the call to live out charity in our daily lives. Through the example
+    of Christ washing the disciples’ feet, we learn humility, service, and the transformative
+    power of love.
   primary_reading:
     - John 13:1–17
   tags:
-    - action
     - body of christ
     - charity
     - commandments
@@ -72,12 +81,14 @@
     - ordinary time
     - perseverance
     - sacrifice
-    - solidarity
     - spiritual childhood
-    - spiritual warfare
     - unity
     - vocation
     - works of mercy
+  card_tags:
+    - charity
+    - forgiveness
+    - community
 - arc_id: arc_holy_fear_of_the_lord
   arc_title: The Holy Fear of the Lord
   arc_number: 3
@@ -89,6 +100,10 @@
     - Sinai thunder and cloud — The mountain shakes, clothed in fire and smoke. Lightning
       flashes. A trumpet sounds. The people tremble as the voice of God roars from
       the cloud.
+  arc_summary: Standing before the majesty of God, this arc awakens awe and reverence.
+    From Sinai’s thunder to the whisper of grace, it explores the holy fear that purifies
+    the soul, deepens obedience, and anchors trust. The fear of the Lord is the beginning
+    of wisdom, and here it becomes the path to union.
   primary_reading:
     - Proverbs 9:10; Exodus 20:18–21
   tags:
@@ -112,6 +127,10 @@
     - vigilance
     - wisdom
     - worship
+  card_tags:
+    - fear of the lord
+    - awe
+    - obedience
 - arc_id: arc_sin_mercy_conversion
   arc_title: Sin, Mercy, and Conversion
   arc_number: 4
@@ -145,6 +164,10 @@
       sins. In the distance, the Father waits — not seated, but running. His arms
       are open before you even speak. He throws His cloak over your shame and calls
       for a feast.'
+  arc_summary: This arc traces the soul’s journey from the bondage of sin to the embrace
+    of mercy. Guided by the parables of the Lost Sheep and Prodigal Son, and vivid
+    confessional imagery, it reveals Christ as Divine Physician and Merciful Judge.
+    Conversion unfolds as a return to the Father, wrapped in grace and truth.
   primary_reading:
     - John 20:19–23
     - John 3:16–21
@@ -164,11 +187,9 @@
     - conversion
     - conviction
     - darkness
-    - divine initiative
     - divine mercy
     - divine physician
     - forgiveness
-    - gospel discourse
     - grace
     - healing
     - honesty
@@ -182,10 +203,8 @@
     - light from above
     - lost sheep
     - mercy
-    - moral formation
     - ordinary time
     - parable
-    - pauline theology
     - peace
     - perseverance
     - prodigal son
@@ -195,11 +214,9 @@
     - sacramental theology
     - sacraments
     - sanctifying grace
-    - silence of god
     - sin
     - spiritual captivity
     - spiritual homecoming
-    - spiritual rest
     - the father running to meet the prodigal
     - the return from exile
     - trust
@@ -207,6 +224,10 @@
     - veil of the temple
     - vigilance
     - wound of sin
+  card_tags:
+    - mercy
+    - contrition
+    - conversion
 - arc_id: arc_passion_of_christ
   arc_title: The Passion of Christ – Events and Interior Sufferings
   arc_number: 5
@@ -252,6 +273,10 @@
     - '**The Scourging at the Pillar** Stripped and bound, Jesus stands at the pillar.
       The whip cracks. His back tears open. Blood runs down the stone floor. The guards
       mock, but He does not resist. The Lamb is prepared for sacrifice.'
+  arc_summary: Walking with Christ through His Passion, this arc draws us into both
+    the outward events and the interior sufferings of the Savior. From Gethsemane
+    to the Cross, every wound, silence, and surrender becomes a window into redemptive
+    love. Mary stands beside Him — and us — at every step.
   primary_reading:
     - John 19:1
     - John 19:17–30
@@ -303,11 +328,9 @@
     - sacred heart
     - sacrifice
     - salvation
-    - salvation through the cross
     - silence
     - sin
     - spiritual darkness
-    - spiritual maternity
     - suffering
     - surrender
     - temple veil torn
@@ -315,6 +338,10 @@
     - trust
     - union with christ
     - vigilance
+  card_tags:
+    - passion of christ
+    - suffering
+    - sacrifice
 - arc_id: arc_litany_sacred_heart
   arc_title: Litany of the Sacred Heart
   arc_number: 6
@@ -330,6 +357,10 @@
       wound of shame, but a throne of glory. He says nothing. He simply shows you
       the place where divine love became visible. Each title of the Litany is real
       here. You gaze at the Heart… and see eternity.'
+  arc_summary: This arc immerses the soul in the profound mystery of the Sacred Heart
+    of Jesus. Through the Litany, we contemplate His divine love, mercy, and desire
+    for union with humanity. Each invocation becomes a doorway to deeper intimacy
+    with Christ, inviting us to rest in His Heart and be transformed by His love.
   primary_reading:
     - Litany of the Sacred Heart of Jesus
   tags:
@@ -341,7 +372,7 @@
     - christology
     - contemplation
     - contrition
-    - desire
+    - desire for god
     - divine image
     - divine indwelling
     - divine love
@@ -354,7 +385,6 @@
     - fortitude
     - good friday
     - grace
-    - holiness
     - hope
     - humiliation
     - humility
@@ -375,7 +405,6 @@
     - overshadowing
     - patience
     - pierced heart
-    - praise
     - presentation
     - prudence
     - reparation
@@ -386,17 +415,18 @@
     - silence
     - sin
     - sonship of christ
-    - spiritual enthronement
-    - spiritual identity
     - suffering
     - surrender
     - temperance
-    - thirst
     - transformation
     - trinity
     - trust
     - unity
     - virtues
+  card_tags:
+    - sacred heart
+    - adoration
+    - divine mercy
 - arc_id: arc_christ_our_high_priest
   arc_title: Christ Our High Priest
   arc_number: 7
@@ -424,6 +454,11 @@
       with His blood flowing down to earth and upward toward heaven.
     - The torn veil of the Temple at the moment of Christ’s death, revealing the Holy
       of Holies, with the Cross standing visible behind it.
+  arc_summary: This arc contemplates Christ as our Eternal High Priest, the fulfillment
+    of the Levitical priesthood, who enters the Holy of Holies not with the blood
+    of goats, but with His own. This arc meditates on His self-offering, priestly
+    intercession, and the mystery of the Eucharist as sacrifice and presence. The
+    Church, too, is drawn into this priesthood through baptism and suffering.
   primary_reading:
     - 1 Peter 2:9
     - Hebrews 4:14-16
@@ -438,7 +473,7 @@
     - adoration
     - atonement
     - awe
-    - baptismal identity
+    - baptism
     - beatific vision
     - blood of christ
     - blood of the covenant
@@ -447,10 +482,7 @@
     - christology
     - confidence in prayer
     - covenant
-    - cross
     - divine adoption
-    - divine advocacy
-    - divine nourishment
     - easter
     - ecclesiology
     - eschatology
@@ -458,10 +490,9 @@
     - eucharist
     - faith
     - fidelity
+    - glory and heaven
     - good friday
     - grace
-    - heaven
-    - heavenly consummation
     - heavenly liturgy
     - heavenly mediation
     - high priest
@@ -481,7 +512,6 @@
     - paschal lamb
     - passion
     - presentation
-    - priesthood of the faithful
     - purification
     - redemption
     - reverence
@@ -489,10 +519,8 @@
     - royal priesthood
     - sacrifice
     - salvation
-    - sanctuary
     - solemnities
     - soteriology
-    - spiritual priesthood
     - temple
     - temple in heaven
     - temple veil torn
@@ -500,6 +528,10 @@
     - union with christ
     - veil of the temple
     - worship
+  card_tags:
+    - sacrifice
+    - eucharist
+    - union with christ
 - arc_id: arc_heaven_and_judgment
   arc_title: Heaven and Judgment
   arc_number: 8
@@ -522,6 +554,10 @@
       of the just and the damned alike, revealing what each soul chose.
     - The souls cast out walk toward a valley of fire, while angels weep and the righteous
       look on with sorrowful reverence.
+  arc_summary: Set against the final realities, this arc lifts the soul to contemplate
+    heaven, judgment, and the longing for eternal union with God. Through Christ’s
+    parables and eschatological teachings, it awakens vigilance, hope, and holy desire.
+    Death becomes the threshold of beatitude for the faithful soul.
   primary_reading:
     - Matthew 25:31-46
     - Matthew 25:31–46
@@ -538,15 +574,12 @@
     - corporal works of mercy
     - damnation
     - daniel 7
-    - divine discernment
-    - divine majesty
     - eschatology
     - eternal reward
     - final judgment
     - gehenna
     - general judgment
-    - glory of christ
-    - heaven
+    - glory and heaven
     - hell
     - hope
     - humility
@@ -579,6 +612,10 @@
     - veil of veronica
     - vigilance
     - works of mercy
+  card_tags:
+    - heaven
+    - judgment
+    - eternal life
 - arc_id: arc_immaculate_heart_mary
   arc_title: The Immaculate Heart of Mary
   arc_number: 9
@@ -589,6 +626,10 @@
   anchor_image:
     - Mary holding the Christ Child in silence, her Heart burning with love and suffering
       — from Bethlehem to the Temple
+  arc_summary: This arc contemplates the Immaculate Heart of Mary, her role in salvation
+    history, and her maternal companionship with us. Through the mysteries of the
+    Incarnation, Presentation, and the Joyful Mysteries, we enter into her silent
+    adoration, her sorrow, and her union with Christ.
   primary_reading:
     - Luke 2:15–35
   tags:
@@ -611,7 +652,6 @@
     - mystery
     - obedience
     - ordinary time
-    - poverty of christ
     - scripture
     - shepherds
     - silence
@@ -620,6 +660,10 @@
     - temple
     - union
     - union with mary
+  card_tags:
+    - immaculate heart
+    - mary
+    - marian companionship
 - arc_id: arc_rosary_joyful_mysteries
   arc_title: The Rosary – Joyful Mysteries
   arc_number: 10
@@ -635,6 +679,11 @@
     - Mary offering Jesus in the Temple, while Simeon prophesies
     - Mary walking beside us, as we live the Joyful Mysteries with her
     - The Christ Child in the manger, Mary adoring in silence and awe
+  arc_summary: 'The Joyful Mysteries of the Rosary draw us into the hidden and humble
+    life of Christ and Mary. Each day unveils a mystery of divine condescension: the
+    Annunciation, Visitation, Nativity, Presentation, and Finding in the Temple —
+    crowned by Cana and the hidden years. Through Mary, we learn the joy of obedient
+    faith.'
   primary_reading:
     - Luke 1:26–38
     - Luke 1:39–56
@@ -656,7 +705,6 @@
     - docility
     - faith
     - fidelity
-    - finding in the temple
     - humility
     - incarnation
     - joy
@@ -672,12 +720,15 @@
     - rosary
     - rotating anchor images
     - sacrifice
-    - service
     - silence
     - sorrow
     - temple
     - the pierced heart
     - trust
+  card_tags:
+    - rosary
+    - incarnation
+    - obedience
 - arc_id: arc_rosary_sorrowful_mysteries
   arc_title: The Rosary - Sorrowful Mysteries
   arc_number: 11
@@ -700,6 +751,11 @@
       disciples nearby in mourning
     - The soldier pierces Christ’s side with a lance — blood and water flow from His
       Sacred Heart
+  arc_summary: The Sorrowful Mysteries of the Rosary lead us into the depths of Christ’s
+    Passion. Each mystery reveals His silent suffering, His obedience to the Father,
+    and His love for humanity. From the Agony in the Garden to the Crucifixion and
+    Burial, we walk with Mary, sharing in her sorrow and learning to embrace redemptive
+    suffering.
   primary_reading:
     - John 19:1
     - John 19:31–37
@@ -718,8 +774,6 @@
     - blood of the covenant
     - burial
     - charity
-    - chastity
-    - companionship
     - compassion
     - contrition
     - crucifixion
@@ -729,15 +783,12 @@
     - divine silence
     - divine will
     - fortitude
-    - friday
     - good friday
-    - heart of christ
     - holy saturday
     - hope
     - humiliation
     - humility
     - interior agony
-    - kingship
     - kingship of christ
     - lent
     - love
@@ -757,7 +808,6 @@
     - sacred heart
     - sacrifice
     - salvation
-    - salvation through the cross
     - silence
     - sorrow
     - sorrowful mysteries
@@ -766,9 +816,10 @@
     - suffering servant
     - the pierced heart
     - trust
-    - watchfulness
-    - way of the cross
-    - wounded love
+  card_tags:
+    - rosary
+    - passion of christ
+    - suffering
 - arc_id: arc_rosary_glorious_mysteries
   arc_title: The Rosary - Glorious Mysteries
   arc_number: 12
@@ -791,6 +842,11 @@
       Christ’s risen majesty
     - Tongues of fire descend upon Mary and the apostles in the upper room as they
       pray in unity and awe
+  arc_summary: The Glorious Mysteries of the Rosary unveil the triumph of Christ and
+    Mary over sin and death. From the Resurrection to the Assumption and Pentecost,
+    each mystery reveals the glory of God’s plan for salvation. We are invited to
+    share in the joy of the Risen Lord, the glory of Mary’s Assumption, and the power
+    of the Holy Spirit in our lives.
   primary_reading:
     - Acts 1:6–11
     - Acts 2:1–11
@@ -815,15 +871,13 @@
     - easter
     - eschatology
     - eternal life
-    - eternal longing
     - faith
     - feast of the assumption
     - feast of the queenship of mary
     - final union
     - glorious mysteries
-    - glory
+    - glory and heaven
     - grace
-    - heaven
     - holy spirit
     - hope
     - humility
@@ -848,7 +902,6 @@
     - purity
     - queen mother
     - queenship
-    - resurrection
     - resurrection of body
     - resurrection of christ
     - risen lord
@@ -856,7 +909,6 @@
     - rosary feast
     - spiritual ascent
     - spiritual homecoming
-    - sunday
     - tower of babel
     - transfiguration
     - trust
@@ -864,6 +916,10 @@
     - victory
     - woman clothed with sun
     - zeal
+  card_tags:
+    - resurrection
+    - rosary
+    - glory and heaven
 - arc_id: arc_rosary_luminous_mysteries
   arc_title: The Rosary - Luminous Mysteries
   arc_number: 13
@@ -883,6 +939,11 @@
       the Father's voice resounding
     - Mary gestures toward Jesus at the wedding feast, the jars waiting, the first
       miracle about to begin
+  arc_summary: The Luminous Mysteries of the Rosary illuminate the public life of
+    Christ, revealing His mission, His divinity, and His call to discipleship. From
+    the Baptism in the Jordan to the Transfiguration, each mystery unveils a facet
+    of Christ’s light in the world. Through these mysteries, we are invited to walk
+    in His light, share in His mission, and be transformed by His grace.
   primary_reading:
     - John 2:1–11
     - John 6:51–58
@@ -893,7 +954,6 @@
     - Matthew 5:14–16
   tags:
     - adoration
-    - anointing
     - awe
     - baptism
     - baptism of the lord
@@ -905,11 +965,9 @@
     - divine sonship
     - epiphany
     - eucharist
-    - evangelization
     - faith
     - feast of transfiguration
-    - glory
-    - glory of christ
+    - glory and heaven
     - grace
     - heavens opening
     - holy thursday
@@ -944,3 +1002,7 @@
     - trust
     - union with christ
     - zeal
+  card_tags:
+    - sacraments
+    - rosary
+    - glory and heaven

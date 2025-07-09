@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-03
+# Last imported into DB: 2025-07-08 15:24:29
 master_day_number: 35
 arc_day_number: 7
 arc_id: arc_passion_of_christ
@@ -11,8 +11,8 @@ anchor_image:
   She receives the Church into her heart.'
 primary_reading:
   title: John 19:25–27
-  reference: ""
-  url: ""
+  reference: ''
+  url: ''
 secondary_reading:
   - title: Catechism of the Catholic Church
     reference: 964, 968–970
@@ -36,7 +36,6 @@ tags:
     - compassion
     - faith
   mystical:
-    - spiritual maternity
     - intercession
   liturgical:
     - lent
