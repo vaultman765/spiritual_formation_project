@@ -34,9 +34,7 @@ class ArcDataLoader:
     def __init__(self, index_data: Dict[str, Any]):
         self.index_data = index_data
 
-    def load_arc_day_data(
-        self, arc_ids: Optional[List[str]] = None
-    ) -> Dict[str, List[Dict[str, Any]]]:
+    def load_arc_day_data(self, arc_ids: Optional[List[str]] = None) -> Dict[str, List[Dict[str, Any]]]:
         arc_to_days = {}
         for arc_id, arc_info in self.index_data.items():
             if arc_ids and arc_id not in arc_ids:
@@ -64,14 +62,23 @@ class ArcMetadataGenerator:
         loader = ArcDataLoader(self.index_data)
         arc_data = loader.load_arc_day_data(arc_ids=arc_ids)
 
+        # Load existing metadata into a dictionary for quick lookup
+        existing_metadata = load_yaml(ARC_METADATA_FILE) or []
+        existing_metadata_dict = {entry["arc_id"]: entry for entry in existing_metadata}
+
         # If generating for all arcs, overwrite the file
         if arc_ids is None or set(arc_ids) == set(self.index_data.keys()):
             arc_metadata = []
         else:
-            # Load existing metadata and filter out arcs being updated
-            arc_metadata = load_yaml(ARC_METADATA_FILE) or []
+            # Retain metadata for arcs not being updated
             arc_metadata = [
-                entry for entry in arc_metadata if entry["arc_id"] not in arc_data
+                {
+                    **entry,
+                    "card_tags": existing_metadata_dict.get(entry["arc_id"], {}).get("card_tags", entry.get("card_tags", [])),
+                    "arc_summary": existing_metadata_dict.get(entry["arc_id"], {}).get("arc_summary", entry.get("arc_summary", "")),
+                }
+                for entry in existing_metadata
+                if entry["arc_id"] not in arc_data
             ]
 
         # Add/replace metadata for selected arcs
@@ -91,6 +98,8 @@ class ArcMetadataGenerator:
                 "anchor_image": sorted(
                     {day.get("anchor_image", "") for day in arc_days}
                 ),
+                # Retain arc_summary from existing metadata if available
+                "arc_summary": existing_metadata_dict.get(arc_id, {}).get("arc_summary", ""),
                 "primary_reading": sorted(
                     {
                         day.get("primary_reading", {}).get("title", "")
@@ -106,6 +115,8 @@ class ArcMetadataGenerator:
                         for tag in category
                     }
                 ),
+                # Retain card_tags from existing metadata if available
+                "card_tags": existing_metadata_dict.get(arc_id, {}).get("card_tags", []),
             }
             arc_metadata.append(metadata_entry)
 
