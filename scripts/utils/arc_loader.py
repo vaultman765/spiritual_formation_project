@@ -30,7 +30,10 @@ def load_arc_from_metadata(arc_id: str, arc_model) -> object:
             "master_day_start": arc_data["master_day_start"],
             "master_day_end": arc_data["master_day_end"],
             "anchor_image": arc_data["anchor_image"],
-            "primary_reading": arc_data["primary_reading"]
+            "arc_summary": arc_data["arc_summary"],
+            "primary_reading": arc_data["primary_reading"],
+            "card_tags": arc_data["card_tags"],
+            
         }
     )
     return arc_obj
