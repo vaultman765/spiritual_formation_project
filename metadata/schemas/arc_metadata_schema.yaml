@@ -49,6 +49,11 @@ properties:
     items:
       type: string
     minItems: 1
+  arc_summary:
+    type: string
+    description:
+      A brief summary of the arc, used for display in the ArcPage and other contexts.
+      This is not required but is highly recommended to provide context for the arc.
   primary_reading:
     type: array
     description:
@@ -65,3 +70,10 @@ properties:
     items:
       type: string
     minItems: 0
+  card_tags:
+    type: array
+    description: List of tags that describe the arc overall. These will be used as an overview of the arc on the website and other contexts.
+    items:
+      type: string
+    minItems: 3
+    maxItems: 3
