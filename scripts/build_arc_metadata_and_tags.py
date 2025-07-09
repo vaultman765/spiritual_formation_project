@@ -74,8 +74,10 @@ class ArcMetadataGenerator:
             arc_metadata = [
                 {
                     **entry,
-                    "card_tags": existing_metadata_dict.get(entry["arc_id"], {}).get("card_tags", entry.get("card_tags", [])),
-                    "arc_summary": existing_metadata_dict.get(entry["arc_id"], {}).get("arc_summary", entry.get("arc_summary", "")),
+                    "card_tags": existing_metadata_dict.get(entry["arc_id"], {}).get("card_tags",
+                                                                                     entry.get("card_tags", [])),
+                    "arc_summary": existing_metadata_dict.get(entry["arc_id"], {}).get("arc_summary",
+                                                                                       entry.get("arc_summary", "")),
                 }
                 for entry in existing_metadata
                 if entry["arc_id"] not in arc_data
