@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "website",  # Your custom app
     "corsheaders",  # CORS headers for API
+    'rest_framework',  # Django REST Framework
 ]
 
 MIDDLEWARE = [

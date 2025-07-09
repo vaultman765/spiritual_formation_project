@@ -75,5 +75,5 @@ properties:
     description: List of tags that describe the arc overall. These will be used as an overview of the arc on the website and other contexts.
     items:
       type: string
-    minItems: 3
-    maxItems: 3
+    minItems: 2
+    maxItems: 4

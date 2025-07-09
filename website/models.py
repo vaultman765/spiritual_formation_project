@@ -14,7 +14,11 @@ class Arc(models.Model):
 
     # from arc_metadata.yaml (can be multiline string)
     anchor_image = models.TextField()
+    arc_summary = models.TextField()
+
     primary_reading = models.TextField()
+
+    card_tags = models.JSONField(default=list, blank=True, null=True)
 
     class Meta:
         ordering = ["arc_number"]
@@ -51,6 +55,7 @@ class MeditationDay(models.Model):
     resolution = models.TextField(blank=True)
 
     class Meta:
+        unique_together = ("arc", "arc_day_number")
         ordering = ["master_day_number"]
 
     def __str__(self):
