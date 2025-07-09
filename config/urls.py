@@ -22,4 +22,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('website.api.urls')),  # ← this pulls in website.urls
 ]
-    

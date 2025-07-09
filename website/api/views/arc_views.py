@@ -1,4 +1,3 @@
-from django.http import JsonResponse
 from rest_framework.viewsets import ReadOnlyModelViewSet
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -25,14 +24,12 @@ class ArcViewSet(ReadOnlyModelViewSet):
     serializer_class = ArcSerializer
     lookup_field = "arc_id"  # Use arc_id for detail lookups
 
-
     def get_queryset(self):
         queryset = super().get_queryset()
         arc_id = self.request.query_params.get("arc_id")
         if arc_id:
             queryset = queryset.filter(arc_id=arc_id)
         return queryset
-
 
     @action(detail=False, methods=["get"], url_path="with-tags")
     def with_tags(self, request):
@@ -51,7 +48,6 @@ class ArcViewSet(ReadOnlyModelViewSet):
             })
         return Response(data, status=status.HTTP_200_OK)
 
-
     @action(detail=False, methods=["get"], url_path="by-tag")
     def by_tag(self, request):
         result = {}
@@ -60,7 +56,6 @@ class ArcViewSet(ReadOnlyModelViewSet):
             arc_id = arc_tag.arc.arc_id
             result.setdefault(tag_name, []).append(arc_id)
         return Response(result, status=status.HTTP_200_OK)
-
 
     @action(detail=True, url_path="days")
     def list_arc_days(self, request, arc_id=None):
