@@ -1,8 +1,8 @@
-# Last imported into DB: 2025-07-08 23:26:57
+# Last imported into DB: 2025-07-10 15:05:09
 master_day_number: 36
 arc_day_number: 8
 arc_id: arc_passion_of_christ
-arc_title: The Passion of Christ – Events and Interior Sufferings
+arc_title: The Passion of Christ
 arc_number: 5
 day_title: The Final Surrender – Into Your Hands
 anchor_image:
@@ -11,8 +11,8 @@ anchor_image:
   The centurion says, "Truly this man was the Son of God."'
 primary_reading:
   title: Luke 23:44–46
-  reference: ""
-  url: ""
+  reference: ''
+  url: ''
 secondary_reading:
   - title: Catechism of the Catholic Church
     reference: 614

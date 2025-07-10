@@ -1,8 +1,8 @@
-# Last imported into DB: 2025-07-08 23:26:55
+# Last imported into DB: 2025-07-10 15:05:07
 master_day_number: 29
 arc_day_number: 1
 arc_id: arc_passion_of_christ
-arc_title: The Passion of Christ – Events and Interior Sufferings
+arc_title: The Passion of Christ
 arc_number: 5
 day_title: Christ in Gethsemane – Agony of Surrender
 anchor_image:
@@ -11,8 +11,8 @@ anchor_image:
   The disciples sleep nearby. The moonlight casts long shadows as He whispers, "Not My will, but Yours be done."'
 primary_reading:
   title: Luke 22:39–46
-  reference: ""
-  url: ""
+  reference: ''
+  url: ''
 secondary_reading:
   - title: Catechism of the Catholic Church
     reference: 612–613

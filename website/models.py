@@ -13,10 +13,10 @@ class Arc(models.Model):
     master_day_end = models.PositiveIntegerField()
 
     # from arc_metadata.yaml (can be multiline string)
-    anchor_image = models.TextField()
+    anchor_image = models.JSONField(default=list, blank=True, null=True)
     arc_summary = models.TextField()
 
-    primary_reading = models.TextField()
+    primary_reading = models.JSONField(default=list, blank=True, null=True)
 
     card_tags = models.JSONField(default=list, blank=True, null=True)
 

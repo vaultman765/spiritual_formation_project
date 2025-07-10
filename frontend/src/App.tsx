@@ -1,9 +1,8 @@
 // App.tsx
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import ArcTagsOverview from "@/pages/ArcTagsOverview";
 import HomePage from "@/pages/HomePage";
-import JourneyPage from "@/pages/JourneyPage";
+import ExplorePage from "@/pages/ExplorePage";
 import MeditationDayPage from "@/pages/MeditationDayPage";
 import ArcPage from "@/pages/ArcPage";
 
@@ -15,20 +14,20 @@ function App() {
         <div className="space-x-6">
           <Link to="/" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">Home</Link>
           <Link to="#" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">Today</Link>
-          <Link to="/arcs" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">Journey</Link>
+          <Link to="/explore" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">Explore</Link>
           <Link to="#" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">Tags</Link>
-          <Link to="#" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">How to Pray</Link>
+          <Link to="/how-to-pray" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">How to Pray</Link>
         </div>
       </nav>
       
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/arcs" element={<JourneyPage />} />
-        <Route path="/arcs/:arcId" element={<ArcPage />} />
-        <Route path="/arc-tags" element={<ArcTagsOverview />} />
-        <Route path="/days" element="" />
+        <Route path="/home" element={<HomePage />} />
         <Route path="/days/:dayNumber" element={<MeditationDayPage />} />
-        <Route path="/arcs/:arcId/days/:arcDayNumber" element={<MeditationDayPage />} />
+        <Route path="/days/:arcID/:arcDayNumber" element={<MeditationDayPage />} />
+        <Route path="/how-to-pray" element={<div>How to Pray Page (Coming Soon)</div>} />
+        <Route path="/explore" element={<ExplorePage />} />
+        <Route path="/arcs/:arcId" element={<ArcPage />} />
       </Routes>
     </Router>
   );

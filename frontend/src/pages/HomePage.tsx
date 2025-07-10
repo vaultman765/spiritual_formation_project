@@ -1,8 +1,18 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import MeditationCard from "@/components/MeditationCard";
+import type { MeditationData } from "@/utils/types";
+import { fetchTodayMeditation, fetchTomorrowMeditation } from "@/api/homepage";
 
 export default function HomePage() {
+  const [today, setToday] = useState<MeditationData | null>(null);
+  const [tomorrow, setTomorrow] = useState<MeditationData | null>(null);
+
+  useEffect(() => {
+    fetchTodayMeditation().then(setToday).catch(console.error);
+    fetchTomorrowMeditation().then(setTomorrow).catch(console.error);
+  }, []);
+
   return (
     <main className="main-background">
       {/* Header */}
@@ -23,33 +33,33 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Bottom Section – Cards */} 
+      {/* Meditation Cards */}
       <section className="px-6 py-2 grid grid-cols-2 gap-12 max-w-6xl mx-auto">
-
-        {/* Today’s Meditation */}
-        <MeditationCard
-          title="The Baptism of Christ in the Jordan"
-          subtitle="Today's Meditation"
-          imageSrc="/images/arc_days/arc_rosary_luminous_mysteries_day_01.jpg"
-          altText="Baptism of Christ painting"
-          link="/days/001"
-          tag="Arc: Rosary – Luminous Mysteries Day 1 of 7"
-        />
-
-        {/* Tomorrow's Meditation */}
-        <MeditationCard
-          title="The Wedding at Cana"
-          subtitle="Tomorrow's Meditation"
-          imageSrc="/images/arc_days/arc_rosary_luminous_mysteries_day_02.jpg"
-          altText="Wedding at Cana painting"
-          link="/days/002"
-          tag="Arc: Rosary – Luminous Mysteries Day 2 of 7"
-        />
+        {today && (
+          <MeditationCard
+            title={today.day_title}
+            subtitle="Today's Meditation"
+            imageSrc={`/images/arc_days/${String(today.arc_id)}_day_${String(today.arc_day_number).padStart(2, '0')}.jpg`}
+            altText={today.day_title}
+            link={`/days/${today.arc_id}/${today.arc_day_number}`}
+            tag={`Arc: ${today.arc_title} – Day ${today.arc_day_number}`}
+          />
+        )}
+        {tomorrow && (
+          <MeditationCard
+            title={tomorrow.day_title}
+            subtitle="Tomorrow's Meditation"
+            imageSrc={`/images/arc_days/${String(tomorrow.arc_id)}_day_${String(tomorrow.arc_day_number).padStart(2, '0')}.jpg`}
+            altText={tomorrow.day_title}
+            link={`/days/${tomorrow.arc_id}/${tomorrow.arc_day_number}`}
+            tag={`Arc: ${tomorrow.arc_title} – Day ${tomorrow.arc_day_number}`}
+          />
+        )}
       </section>
       
 
+      {/* How to Pray CTA */}
       <section className="px-6 pb-2 pt-4 grid grid-cols-1 gap-6 max-w-6xl mx-auto">
-        {/* How to Pray */}
         <Link to="/how-to-pray" className="homepage-section-link">
           <h2 className="text-xl pb-2 font-display font-semibold text-[var(--text-light)] tracking-wide">📖 How to Pray</h2>
           <p className="text-[var(--text-muted)] font-display">
