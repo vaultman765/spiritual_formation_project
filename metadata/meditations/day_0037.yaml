@@ -1,17 +1,17 @@
-# Last imported into DB: 2025-07-08 23:26:57
+# Last imported into DB: 2025-07-10 15:05:09
 master_day_number: 37
 arc_day_number: 9
 arc_id: arc_passion_of_christ
-arc_title: The Passion of Christ – Events and Interior Sufferings
+arc_title: The Passion of Christ
 arc_number: 5
 day_title: The Piercing of His Side – The Birth of the Church
-anchor_image: "**The Piercing of His Side** The sky has gone still.
+anchor_image: '**The Piercing of His Side** The sky has gone still.
   Christ’s body hangs lifeless. A soldier steps forward and thrusts a spear into His side.
-  Blood and water pour out — not just fluid, but the birth of the Church. Mary sees it all. The silence deepens."
+  Blood and water pour out — not just fluid, but the birth of the Church. Mary sees it all. The silence deepens.'
 primary_reading:
   title: John 19:31–37
-  reference: ""
-  url: ""
+  reference: ''
+  url: ''
 secondary_reading:
   - title: Catechism of the Catholic Church
     reference: 766

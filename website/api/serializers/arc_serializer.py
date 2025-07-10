@@ -4,7 +4,10 @@ from website.models import Arc
 
 
 class ArcSerializer(serializers.ModelSerializer):
-    card_tags = serializers.SerializerMethodField()  # ✅ explicitly declare it
+    card_tags = serializers.SerializerMethodField()
+    primary_reading = serializers.ListField(child=serializers.CharField())
+    anchor_image = serializers.ListField(child=serializers.CharField())
+
 
     class Meta:
         model = Arc
@@ -18,7 +21,7 @@ class ArcSerializer(serializers.ModelSerializer):
             "anchor_image",
             "arc_summary",
             "primary_reading",
-            "card_tags",  # ✅ this now matches the method below
+            "card_tags",
         ]
 
     def get_card_tags(self, obj):
@@ -28,3 +31,5 @@ class ArcSerializer(serializers.ModelSerializer):
             return json.loads(obj.card_tags)
         except Exception:
             return []
+
+

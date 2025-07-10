@@ -53,7 +53,8 @@ class DayViewSet(ReadOnlyModelViewSet):
             MeditationDay.objects
             .filter(arc__arc_id=arc_id)
             .order_by("arc_day_number")
-            .values("arc_day_number", "master_day_number", "day_title")
+            .values("arc_day_number", "master_day_number", "day_title", 
+                    "primary_reading_title", "anchor_image",)
         )
         return Response(list(days))
 
@@ -85,6 +86,7 @@ class DayViewSet(ReadOnlyModelViewSet):
             "arc_id": day.arc.arc_id,
             "arc_title": day.arc_title,
             "arc_number": day.arc.arc_number,
+            "arc_total_days": day.arc.day_count,
             "day_title": day.day_title,
             "anchor_image": day.anchor_image,
             "primary_reading": {

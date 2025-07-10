@@ -10,5 +10,8 @@ update-dev:
 lint:
 	pipenv run flake8 scripts/
 
-make runserver:
+runserver:
 	pipenv run python manage.py runserver
+
+npm-dev:
+	cd frontend && npm run dev -- --host
