@@ -106,6 +106,10 @@ button {
   flex-direction: row; /* md:flex-row */
 }
 
+.input-style {
+  @apply w-full px-4 py-2 rounded bg-white/10 border border-white/20 text-white placeholder-gray-400;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
