@@ -3,6 +3,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from website.models import UserJourney
 from website.api.serializers.user_journey_serializer import UserJourneySerializer
+from django.views.decorators.csrf import csrf_exempt
 
 class UserJourneyView(APIView):
     permission_classes = [IsAuthenticated]
@@ -23,3 +24,8 @@ class UserJourneyView(APIView):
         )
         serializer = UserJourneySerializer(journey)
         return Response(serializer.data)
+    
+    @csrf_exempt
+    def delete(self, request):
+        request.user.journey.delete()
+        return Response({"detail": "Journey deleted."})

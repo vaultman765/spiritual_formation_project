@@ -1,26 +1,10 @@
-// src/context/journeyContext.tsx
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import axios from '@/utils/axios';
 import { useAuth } from './authContext';
-import axios from 'axios';
+import type { ArcProgress, Journey } from '@/utils/types';
+import type { RawJourneyResponse, JourneyContextType } from '@/utils/types';
 
-export interface ArcProgress {
-  arcId: string;
-  arcTitle: string;
-  status: 'completed' | 'in_progress' | 'upcoming';
-  currentDay?: number;
-  dayCount: number;
-}
-
-export interface Journey {
-  title: string;
-  arcProgress: ArcProgress[];
-}
-
-interface JourneyContextType {
-  journey: Journey | null;
-  refreshJourney: () => Promise<void>;
-  createJourney: (title?: string) => Promise<void>;
-}
+const JourneyContext = createContext<JourneyContextType | undefined>(undefined);
 
 function getCSRFToken(): string | null {
   const name = 'csrftoken';
@@ -34,53 +18,71 @@ function getCSRFToken(): string | null {
   return null;
 }
 
-const JourneyContext = createContext<JourneyContextType | undefined>(undefined);
+function normalizeJourney(data: RawJourneyResponse): Journey {
+  return {
+    id: data.id,
+    title: data.title,
+    arcProgress: data.arc_progress.map((arc) => ({
+      arcId: arc.arcId,
+      arcTitle: arc.arcTitle,
+      dayCount: arc.dayCount,
+      status: arc.status,
+      currentDay: arc.currentDay,
+    })),
+  };
+}
 
 export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user } = useAuth();
   const [journey, setJourney] = useState<Journey | null>(null);
+  const [journeyLoading, setJourneyLoading] = useState(true);
 
+  
   const fetchJourney = async () => {
-    if (!user) return;
-
+    setJourneyLoading(true);
     try {
-      const response = await axios.get('/api/user/journey/');
-      setJourney(response.data as Journey);
+      const response = await axios.get<RawJourneyResponse>('/api/user/journey/');
+      setJourney(normalizeJourney(response.data));
     } catch (error: any) {
       if (error.response?.status === 404) {
-        console.warn('No journey found — creating new one...');
-        await createJourney();
+        setJourney(null); // Explicitly set to null if no journey exists
       } else {
-        console.error('Error loading journey:', error);
+        console.error('Error fetching journey:', error);
       }
+    } finally {
+      setJourneyLoading(false);
     }
   };
 
-  // TODO: Replace with journey selector
-  const createJourney = async () => {
+  const createJourney = async (title: string, arcProgress: ArcProgress[]) => {
+    const csrfToken = getCSRFToken();
     try {
-      const defaultPayload = {
-        title: 'My Journey with Ignatian Mental Prayer',
-        arc_progress: [],
-      };
+      if (journey) {
+        await axios.delete('/api/user/journey/', {
+          headers: {
+            'X-CSRFToken': csrfToken || '',
+            'Content-Type': 'application/json',
+        },
+        withCredentials: true
+        });
+      }
 
-      const csrfToken = getCSRFToken();
-
-      const response = await axios.post(
+      const res = await axios.post<RawJourneyResponse>(
         '/api/user/journey/',
-        defaultPayload,
+        { title, arc_progress: arcProgress },
         {
           headers: {
             'X-CSRFToken': csrfToken || '',
             'Content-Type': 'application/json',
           },
-          withCredentials: true, // ← this is crucial if frontend/backend are on different ports
+          withCredentials: true,
         }
       );
 
-      setJourney(response.data as Journey);
-    } catch (error) {
-      console.error('Failed to create default journey:', error);
+      const normalized = normalizeJourney(res.data);
+      setJourney(normalized);
+    } catch (err) {
+      console.error('Failed to create or overwrite journey:', err);
     }
   };
 
@@ -89,7 +91,7 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
   }, [user]);
 
   return (
-    <JourneyContext.Provider value={{ journey, refreshJourney: fetchJourney, createJourney }}>
+    <JourneyContext.Provider value={{ journey, journeyLoading, refreshJourney: fetchJourney, createJourney }}>
       {children}
     </JourneyContext.Provider>
   );

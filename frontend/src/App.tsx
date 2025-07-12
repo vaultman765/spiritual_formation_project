@@ -7,6 +7,8 @@ import MeditationDayPage from "@/pages/MeditationDayPage";
 import ArcPage from "@/pages/ArcPage";
 import JourneyPage from "@/pages/JourneyPage";
 import LoginPage from "@/pages/LoginPage";
+import StartJourneyPage from './pages/StartJourneyPage';
+import CustomJourneyPage from './pages/CustomJourneyPage';
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
         <Route path="/arcs/:arcId" element={<ArcPage />} />
         <Route path="/my-journey" element={<JourneyPage />} />
         <Route path="/auth/login" element={<LoginPage />} />
+        <Route path="/start-journey" element={<StartJourneyPage />} />
+        <Route path="/create-custom-journey" element={<CustomJourneyPage />} />
 
       </Routes>
     </Router>

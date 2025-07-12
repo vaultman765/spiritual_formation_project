@@ -4,48 +4,39 @@ import { useAuth } from '@/context/authContext';
 import { useJourney } from '@/context/journeyContext';
 
 export default function JourneyPage() {
-  const { user } = useAuth();
+  const { journey, journeyLoading } = useJourney();
+  const { user, loading: authLoading } = useAuth();
   const navigate = useNavigate();
-  const { journey, createJourney } = useJourney();
 
   useEffect(() => {
-    if (!user) navigate('/auth/login');
-  }, [user, navigate]);
+    if (authLoading || journeyLoading) return;
 
-  if (journey === null) {
+    // Ensure we only redirect if `journey` is explicitly null (not undefined or still loading)
+    if (!user) {
+      navigate('/auth/login');
+      return;
+    }
+
+    if (journey === null) {
+      navigate('/start-journey');
+    }
+  }, [authLoading, journeyLoading, user, journey, navigate]);
+
+  if (authLoading || journeyLoading) {
     return (
-      <main className="main-background text-center text-white mt-20">
-        <h2 className="text-2xl mb-4">Create Your First Prayer Journey</h2>
-        <form
-          onSubmit={async (e) => {
-            e.preventDefault();
-            const form = e.target as HTMLFormElement;
-            const input = form.elements.namedItem('title') as HTMLInputElement;
-            await createJourney(input.value || 'My Journey with Ignatian Mental Prayer');
-          }}
-          className="flex flex-col items-center gap-4"
-        >
-          <input
-            type="text"
-            name="title"
-            placeholder="Journey Title"
-            className="px-4 py-2 rounded text-black"
-          />
-          <button type="submit" className="bg-yellow-500 hover:bg-yellow-600 px-6 py-2 rounded font-bold">
-            Start Journey
-          </button>
-        </form>
+      <main className="main-background text-white text-center py-20">
+        <p className="text-lg">Loading your journey...</p>
       </main>
     );
   }
 
-  const currentArc = journey.arcProgress?.find(a => a.status === 'in_progress');
+  const currentArc = journey?.arcProgress?.find(a => a.status === 'in_progress');
 
   return (
     <main className="main-background">
       <header className="text-center mb-12">
         <h1 className="text-4xl font-display font-semibold text-white">
-          {journey.title}
+          {journey?.title}
         </h1>
         <p className="text-lg text-[var(--text-muted)] mt-2">Your Current Mental Prayer Journey</p>
       </header>
@@ -68,7 +59,7 @@ export default function JourneyPage() {
       <section>
         <h2 className="text-xl font-semibold text-[var(--text-subtle-heading)] text-center mb-4">Journey Progress</h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {journey.arcProgress?.map((arc) => (
+          {journey?.arcProgress?.map((arc) => (
             <Link to={`/arcs/${arc.arcId}`} key={arc.arcId} className="!no-underline">
               <div
                 className={`rounded p-4 shadow border ${
