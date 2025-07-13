@@ -19,7 +19,6 @@ export const AuthContext = React.createContext<AuthContextType>({
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
 
   const refreshUser = async () => {
     try {
