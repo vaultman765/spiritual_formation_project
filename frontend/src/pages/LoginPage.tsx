@@ -51,9 +51,9 @@ export default function LoginPage() {
       </form>
       <p className="text-sm mt-4 text-white/80 text-center">
         Don’t have an account?{' '}
-        <a href="/auth/register" className="underline hover:text-white text-yellow-400">
+        <Link to="/auth/register" className="underline hover:text-white text-yellow-400">
           Register here
-        </a>
+        </Link>
       </p>
     </main>
   );
