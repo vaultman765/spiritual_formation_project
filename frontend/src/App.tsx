@@ -5,6 +5,10 @@ import HomePage from "@/pages/HomePage";
 import ExplorePage from "@/pages/ExplorePage";
 import MeditationDayPage from "@/pages/MeditationDayPage";
 import ArcPage from "@/pages/ArcPage";
+import JourneyPage from "@/pages/JourneyPage";
+import LoginPage from "@/pages/LoginPage";
+import StartJourneyPage from './pages/StartJourneyPage';
+import CustomJourneyPage from './pages/CustomJourneyPage';
 
 function App() {
   return (
@@ -15,8 +19,10 @@ function App() {
           <Link to="/" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">Home</Link>
           <Link to="#" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">Today</Link>
           <Link to="/explore" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">Explore</Link>
+           <Link to="/my-journey" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">Journey</Link>
           <Link to="#" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">Tags</Link>
           <Link to="/how-to-pray" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">How to Pray</Link>
+          <Link to="/auth/login" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">Login</Link>     
         </div>
       </nav>
       
@@ -28,6 +34,11 @@ function App() {
         <Route path="/how-to-pray" element={<div>How to Pray Page (Coming Soon)</div>} />
         <Route path="/explore" element={<ExplorePage />} />
         <Route path="/arcs/:arcId" element={<ArcPage />} />
+        <Route path="/my-journey" element={<JourneyPage />} />
+        <Route path="/auth/login" element={<LoginPage />} />
+        <Route path="/start-journey" element={<StartJourneyPage />} />
+        <Route path="/create-custom-journey" element={<CustomJourneyPage />} />
+
       </Routes>
     </Router>
   );

@@ -8,7 +8,6 @@ class ArcSerializer(serializers.ModelSerializer):
     primary_reading = serializers.ListField(child=serializers.CharField())
     anchor_image = serializers.ListField(child=serializers.CharField())
 
-
     class Meta:
         model = Arc
         fields = [
@@ -31,5 +30,3 @@ class ArcSerializer(serializers.ModelSerializer):
             return json.loads(obj.card_tags)
         except Exception:
             return []
-
-

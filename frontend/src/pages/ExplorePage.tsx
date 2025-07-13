@@ -5,6 +5,7 @@ import ArcCard from '@/components/ArcCard';
 import { fetchAllArcs } from '@/api/arcs';
 import type { ArcData } from '@/utils/types';
 
+
 export default function ExplorePage() {
   const [search, setSearch] = useState('');
   const [selectedTag, setSelectedTag] = useState('');
@@ -44,7 +45,7 @@ export default function ExplorePage() {
       {/* Action Buttons */}
       <section className="section-standard">
         <Link
-          to="/explore/custom/create"
+          to="/create-custom-journey"
           className="!no-underline text-base font-semibold bg-[var(--brand-primary)] !text-black px-6 py-2 rounded shadow-md shadow-black/20 hover:bg-[var(--hover-gold)] hover:ring-2 hover:ring-yellow-300/70 focus:ring"
         >
           Create a Custom Journey

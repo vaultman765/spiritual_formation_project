@@ -1,8 +1,9 @@
+from django.contrib.auth.models import User
 from django.db import models
+from django.db.models import JSONField
 
 
 # --- Core Arc Model ---
-
 class Arc(models.Model):
     arc_id = models.CharField(max_length=100, unique=True)
     arc_title = models.TextField()
@@ -115,3 +116,12 @@ class DayTag(models.Model):
 
     def __str__(self):
         return f"Day {self.meditation_day.master_day_number}: {self.tag.name} [{self.tag.category}]"
+
+
+class UserJourney(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="journey")
+    title = models.CharField(max_length=255, default="My Journey with Ignation Mental Prayer")
+    arc_progress = JSONField(default=list, blank=True)  # List of arcs with status, current day, etc.
+
+    def __str__(self):
+        return f"Journey of {self.user.username}"

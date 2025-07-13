@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Arc, MeditationDay, Tag, ArcTag, DayTag, SecondaryReading
+from .models import Arc, MeditationDay, Tag, ArcTag, DayTag, SecondaryReading, UserJourney
 
 
 @admin.register(Arc)
@@ -42,3 +42,10 @@ class DayTagAdmin(admin.ModelAdmin):
 class SecondaryReadingAdmin(admin.ModelAdmin):
     list_display = ["meditation_day", "title", "reference"]
     search_fields = ["title", "reference"]
+
+
+@admin.register(UserJourney)
+class UserJourneyAdmin(admin.ModelAdmin):
+    list_display = ["user", "title"]
+    search_fields = ["user__username", "journey__title"]
+    list_filter = ["user"]
