@@ -8,11 +8,31 @@ We will check off boxes as items are completed to stay on task and aligned.
 
 ## 🥇 PHASE 1 – Core Experience Polish & Completion (🔥 High Priority)
 
+### 🔐 Account System – Hybrid Auth Strategy (Phase 1 Now, Phase 2 Later)
+
+#### Phase 1: Email + Password Auth (Immediate)
+
+- [x] `/api/register/` – backend view for account creation
+- [x] `/api/login/` – backend session login
+- [x] `/api/logout/` – session logout route
+- [x] Enable CSRF + session middleware (DRF)
+- [x] Create registration form on frontend
+- [x] Update `LoginPage.tsx` to use real login (remove mock)
+- [x] Add user greeting / status in nav bar
+- [x] Protect journey endpoints with login-required
+
+#### Phase 2: Google OAuth (Optional Later)
+
+- [ ] Add `django-allauth` or `dj-rest-auth`
+- [ ] Setup Google client ID + secret
+- [ ] Add “Sign in with Google” button to login/register
+- [ ] Auto-link or create `User` object on first login
+
 ### 🔨 Journey Core Features
 
-- [ ] 🧍‍♂️ Build real user registration + login (DRF session-based)
-- [ ] 🔐 Decide between username/password, Google OAuth, or both
-- [ ] 🏠 Show “your next and next-next day” on homepage if logged in
+- [x] 🧍‍♂️ Build real user registration + login (DRF session-based)
+- [x] 🔐 Decide between username/password, Google OAuth, or both
+- [x] 🏠 Show “your next and next-next day” on homepage if logged in
 
 - [ ] ✅ Mark day complete → auto-advance journey `currentDay`
 - [ ] 🔁 Skip day / arc functionality in `/my-journey`
@@ -120,4 +140,4 @@ We will check off boxes as items are completed to stay on task and aligned.
 
 ---
 
-*Last updated: 2025-07-12*
+Last updated: 2025-07-12

@@ -1,16 +1,14 @@
 import { useEffect, useState } from 'react';
-import { useAuth,  } from '@/context/authContext';
-import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/context/authContext';
 import MeditationCard from "@/components/MeditationCard";
 import type { MeditationData } from "@/utils/types";
-import { fetchTodayMeditation, fetchTomorrowMeditation } from "@/api/homepage";
+import { useNavigate } from 'react-router-dom';
 
 export default function HomePage() {
   const { user } = useAuth();
   const [today, setToday] = useState<MeditationData | null>(null);
   const [tomorrow, setTomorrow] = useState<MeditationData | null>(null);
   const navigate = useNavigate();
-  
 
   useEffect(() => {
     if (user) {
@@ -36,9 +34,15 @@ export default function HomePage() {
         })
         .catch(console.error);
     } else {
-      fetchTodayMeditation().then(setToday).catch(console.error);
+      fetch('/api/days/homepage/today')
+        .then((res) => res.json())
+        .then(setToday)
+        .catch(console.error);
 
-      fetchTomorrowMeditation().then(setTomorrow).catch(console.error);
+      fetch('/api/days/homepage/tomorrow')
+        .then((res) => res.json())
+        .then(setTomorrow)
+        .catch(console.error);
     }
   }, [user]);
 
@@ -63,7 +67,6 @@ export default function HomePage() {
         )}
       </header>
 
-      {/* Meditation Cards */}
       <section className="px-6 py-2 grid grid-cols-2 gap-12 max-w-6xl mx-auto">
         {today && (
           <MeditationCard
@@ -86,9 +89,7 @@ export default function HomePage() {
           />
         )}
       </section>
-      
 
-      {/* How to Pray CTA */}
       <section className="px-6 pb-2 pt-4 grid grid-cols-1 gap-6 max-w-6xl mx-auto">
         <button
           onClick={() => navigate('/how-to-pray')}
