@@ -51,8 +51,8 @@ We will check off boxes as items are completed to stay on task and aligned.
 
 ### 🧘 Day Page Enhancements
 
-- [ ] ✅ Prev / Next day nav logic
-- [ ] ✅ Toggle for `Resolution` section
+- [x] ✅ Prev / Next day nav logic
+- [x] ✅ Toggle for `Resolution` section
 - [ ] 🏷️ Show tags on meditation day pages
 - [ ] 📝 Add user notepad per day (saved reflection field)
 

@@ -40,38 +40,25 @@ export interface ArcData {
   card_tags: string[];
 }
 
-export interface ArcProgress {
-  arcId: string;
-  arcTitle: string;
-  status: 'completed' | 'in_progress' | 'upcoming';
-  currentDay?: number;
-  dayCount: number;
+interface ArcProgressItem {
+  arc_id: string;
+  arc_title: string;
+  day_count: number;
+  current_day: number;
+  status: 'in_progress' | 'upcoming' | 'completed';
+  order: number;
 }
 
 export interface Journey {
   id: number;
   title: string;
-  arcProgress: ArcProgress[];
-}
-
-interface RawArcProgress {
-  arcId: string;
-  arcTitle: string;
-  dayCount: number;
-  status: 'completed' | 'in_progress' | 'upcoming';
-  currentDay?: number;
-}
-
-export interface RawJourneyResponse {
-  id: number;
-  title: string;
-  arc_progress: RawArcProgress[];
+  arc_progress: ArcProgressItem[];
 }
 
 export interface JourneyContextType {
   journey: Journey | null;
   refreshJourney: () => Promise<void>;
-  createJourney: (title: string, arcProgress: ArcProgress[]) => Promise<void>;
+  createJourney: (title: string, arc_progress: ArcProgressItem[]) => Promise<void>;
   journeyLoading: boolean;
 }
 

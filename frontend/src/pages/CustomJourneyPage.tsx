@@ -58,11 +58,12 @@ export default function CreateCustomJourneyPage() {
     }
 
     const arc_progress = selectedArcs.map((arc, index) => ({
-      arcId: arc.arc_id,
-      arcTitle: arc.arc_title,
-      dayCount: arc.day_count,
+      arc_id: arc.arc_id,
+      arc_title: arc.arc_title,
+      day_count: arc.day_count,
       status: (index === 0 ? 'in_progress' : 'upcoming') as 'in_progress' | 'upcoming',
-      currentDay: 1,
+      current_day: 1,
+      order: index + 1,
     }));
 
     await createJourney(title, arc_progress);
@@ -138,7 +139,7 @@ export default function CreateCustomJourneyPage() {
                   }
                 >
                 <div className="mb-2 transition duration-200 hover:scale-[1.01] hover:ring-2 hover:ring-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/20 rounded-xl">
-                  <ArcCard arc={arc} />
+                  <ArcCard arc={arc} key={arc.arc_id} />
                 </div>
                 </TooltipWrapper>
               </div>
@@ -188,7 +189,7 @@ export default function CreateCustomJourneyPage() {
                             }
                           >
                               <div className="transition duration-200 hover:scale-[1.01] hover:ring-2 hover:ring-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/20 rounded-xl">
-                                <ArcCard arc={arc} />
+                                <ArcCard arc={arc} key={arc.arc_id} />
                               </div>
                             </TooltipWrapper>
                           </div>

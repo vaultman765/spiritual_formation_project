@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Arc, MeditationDay, Tag, ArcTag, DayTag, SecondaryReading, UserJourney
+from .models import Arc, MeditationDay, Tag, ArcTag, DayTag, SecondaryReading, UserJourney, UserJourneyArcProgress
 
 
 @admin.register(Arc)
@@ -49,3 +49,10 @@ class UserJourneyAdmin(admin.ModelAdmin):
     list_display = ["user", "title"]
     search_fields = ["user__username", "journey__title"]
     list_filter = ["user"]
+
+@admin.register(UserJourneyArcProgress)
+class UserJourneyArcProgressAdmin(admin.ModelAdmin):
+    list_display = ['user_journey', 'arc_id', 'arc_title', 'order', 'status', 'current_day', 'day_count']
+    list_filter = ['status']
+    search_fields = ['arc_id', 'arc_title']
+    ordering = ['user_journey', 'order']

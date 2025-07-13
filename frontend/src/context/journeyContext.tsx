@@ -2,24 +2,12 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from '@/utils/axios';
 import { useAuth } from '@/context/authContext';
 import { getCSRFToken } from '@/utils/auth/tokens';
-import type { ArcProgress, Journey } from '@/utils/types';
-import type { RawJourneyResponse, JourneyContextType } from '@/utils/types';
+import type { Journey } from '@/utils/types';
+import type { JourneyContextType } from '@/utils/types';
+axios.defaults.withCredentials = true
 
 const JourneyContext = createContext<JourneyContextType | undefined>(undefined);
 
-function normalizeJourney(data: RawJourneyResponse): Journey {
-  return {
-    id: data.id,
-    title: data.title,
-    arcProgress: data.arc_progress.map((arc) => ({
-      arcId: arc.arcId,
-      arcTitle: arc.arcTitle,
-      dayCount: arc.dayCount,
-      status: arc.status,
-      currentDay: arc.currentDay,
-    })),
-  };
-}
 
 export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user } = useAuth();
@@ -30,8 +18,8 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
   const fetchJourney = async () => {
     setJourneyLoading(true);
     try {
-      const response = await axios.get<RawJourneyResponse>('/api/user/journey/');
-      setJourney(normalizeJourney(response.data));
+      const response = await axios.get<Journey>('/api/user/journey/');
+      setJourney(response.data);
     } catch (error: any) {
       if (error.response?.status === 404) {
         setJourney(null); // Explicitly set to null if no journey exists
@@ -43,7 +31,7 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
     }
   };
 
-  const createJourney = async (title: string, arcProgress: ArcProgress[]) => {
+  const createJourney = async (title: string, arc_progress: Journey["arc_progress"]) => {
     const csrfToken = getCSRFToken();
     try {
       if (journey) {
@@ -56,9 +44,9 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
         });
       }
 
-      const res = await axios.post<RawJourneyResponse>(
+      const res = await axios.post<Journey>(
         '/api/user/journey/',
-        { title, arc_progress: arcProgress },
+        { title, arc_progress },
         {
           headers: {
             'X-CSRFToken': csrfToken || '',
@@ -67,9 +55,7 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
           withCredentials: true,
         }
       );
-
-      const normalized = normalizeJourney(res.data);
-      setJourney(normalized);
+      setJourney(res.data);
     } catch (err) {
       console.error('Failed to create or overwrite journey:', err);
     }

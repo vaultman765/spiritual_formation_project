@@ -121,7 +121,27 @@ class DayTag(models.Model):
 class UserJourney(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="journey")
     title = models.CharField(max_length=255, default="My Journey with Ignation Mental Prayer")
-    arc_progress = JSONField(default=list, blank=True)  # List of arcs with status, current day, etc.
 
     def __str__(self):
         return f"Journey of {self.user.username}"
+
+
+class UserJourneyArcProgress(models.Model):
+    user_journey = models.ForeignKey('UserJourney', on_delete=models.CASCADE, related_name='arc_progress_items')
+    arc_id = models.CharField(max_length=100)
+    arc_title = models.CharField(max_length=255)
+    day_count = models.PositiveIntegerField(default=1)
+    current_day = models.PositiveIntegerField(default=1)
+    status = models.CharField(max_length=20, choices=[
+        ('in_progress', 'In Progress'),
+        ('upcoming', 'Upcoming'),
+        ('completed', 'Completed'),
+    ])
+    order = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ['order']
+        unique_together = ['user_journey', 'arc_id']
+
+    def __str__(self):
+        return f"{self.arc_title} ({self.status})"

@@ -1,11 +1,13 @@
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.decorators import api_view, permission_classes
+from django.views.decorators.csrf import ensure_csrf_cookie
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
 
 
+@ensure_csrf_cookie
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def current_user_view(request):

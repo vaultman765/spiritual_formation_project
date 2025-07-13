@@ -39,7 +39,7 @@ export default function MeditationDayPage() {
               <p className="text-sm italic text-[var(--text-muted)]">
                 Arc: {day.arc_title} (Day {day.arc_day_number} of {day.arc_total_days}) •{" "}
                 <Link
-                  to={`/arc/${day.arc_id}`}
+                  to={`/arcs/${day.arc_id}`}
                   className="underline hover:text-[var(--brand-primary)]"
                 >
                   View Arc

@@ -30,7 +30,7 @@ export default function JourneyPage() {
     );
   }
 
-  const currentArc = journey?.arcProgress?.find(a => a.status === 'in_progress');
+  const currentArc = journey?.arc_progress?.find(a => a.status === 'in_progress');
 
   return (
     <main className="main-background">
@@ -44,11 +44,11 @@ export default function JourneyPage() {
       {currentArc && (
         <section className="mb-10 text-center">
           <h2 className="text-2xl text-[var(--text-subtle-heading)] font-semibold mb-2">Currently In</h2>
-          <p className="text-xl text-white font-medium">{currentArc.arcTitle}</p>
+          <p className="text-xl text-white font-medium">{currentArc.arc_title}</p>
           <p className="text-sm text-[var(--text-muted)] mb-4">
-            Day {currentArc.currentDay} of {currentArc.dayCount}
+            Day {currentArc.current_day} of {currentArc.day_count}
           </p>
-          <Link to={`/days/${currentArc.arcId}/${currentArc.currentDay}`}>
+          <Link to={`/days/${currentArc.arc_id}/${currentArc.current_day}`}>
             <button className="bg-[var(--brand-primary)] px-6 py-2 rounded shadow font-semibold text-black hover:bg-[var(--hover-gold)]">
               Continue Today’s Prayer
             </button>
@@ -59,8 +59,10 @@ export default function JourneyPage() {
       <section>
         <h2 className="text-xl font-semibold text-[var(--text-subtle-heading)] text-center mb-4">Journey Progress</h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {journey?.arcProgress?.map((arc) => (
-            <Link to={`/arcs/${arc.arcId}`} key={arc.arcId} className="!no-underline">
+          {journey?.arc_progress
+            ?.sort((a, b) => a.order - b.order)
+            .map((arc) => (
+            <Link to={`/arcs/${arc.arc_id}`} key={arc.order} className="!no-underline">
               <div
                 className={`rounded p-4 shadow border ${
                   arc.status === 'completed'
@@ -70,11 +72,11 @@ export default function JourneyPage() {
                     : 'bg-blue-800/20 border-blue-400'
                 }`}
               >
-                <div className="text-white font-semibold mb-1">{arc.arcTitle}</div>
+                <div className="text-white font-semibold mb-1">{arc.arc_title}</div>
                 <div className="text-sm text-[var(--text-muted)]">
-                  {arc.status === 'completed' && `✅ Completed (${arc.dayCount} days)`}
-                  {arc.status === 'in_progress' && `🔄 Day ${arc.currentDay} of ${arc.dayCount}`}
-                  {arc.status === 'upcoming' && `🔜 Upcoming (${arc.dayCount} days)`}
+                  {arc.status === 'completed' && `✅ Completed (${arc.day_count} days)`}
+                  {arc.status === 'in_progress' && `🔄 Day ${arc.current_day} of ${arc.day_count}`}
+                  {arc.status === 'upcoming' && `🔜 Upcoming (${arc.day_count} days)`}
                 </div>
               </div>
             </Link>
