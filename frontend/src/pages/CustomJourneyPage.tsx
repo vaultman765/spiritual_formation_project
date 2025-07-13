@@ -70,38 +70,58 @@ export default function CreateCustomJourneyPage() {
   };
 
   return (
-    <main className="main-background text-white py-12 px-6">
-      <h1 className="text-4xl font-display font-semibold text-center mb-2">
-        Create a Custom Journey
-      </h1>
-      <p className="text-center text-lg text-[var(--text-muted)] mb-8">
-        Select and reorder arcs to build a mental prayer journey tailored to your needs.
-      </p>
+    <main className="main-background text-white py-2">
+      <div className="text-center mb-4">
+        <h1 className="text-5xl font-display font-semibold mb-2">
+          Create a Custom Journey
+        </h1>
+        <p className="text-lg text-white/70 max-w-2xl mx-auto">
+          Select and reorder arcs to build a mental prayer journey tailored to your needs.
+        </p>
+      </div>
 
-      <div className="max-w-xl mx-auto mb-8">
+      <div className="max-w-xl mx-auto mb-4">
         <input
           type="text"
           placeholder="Journey Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="w-full px-4 py-2 rounded text-black"
+          className="input-style placeholder-white/70"
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto">
+      <hr className="mt-4 mb-4 border-white/20" />
+
+      <div className="grid grid-cols-2  max-w-7xl mx-auto">
+
+        {/* Search and Available Arcs Title */}
+        <div className="text-center">
+          <h2 className="text-2xl font-semibold mb-2 relative inline-block after:content-[''] after:block after:h-[2px] after:w-8 after:bg-[var(--brand-primary)] after:mt-1 after:mx-auto">
+            Available Arcs
+          </h2>
+        </div>
+
+        {/* Selected Arcs Title */}
+        <div className="text-center">
+          <h2 className="text-2xl font-semibold mb-2 relative inline-block after:content-[''] after:block after:h-[2px] after:w-8 after:bg-[var(--brand-primary)] after:mt-1 after:mx-auto">
+            Selected Arcs
+          </h2>
+        </div>
+
+        <div className="mb-4 col-span-2 justify-self-center">
+          <input
+            type="text"
+            placeholder="Search Available Arcs..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="input-style placeholder-white/70"
+          />
+        </div>
+
         {/* Available Arcs */}
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">Available Arcs</h2>
-          <div className="mb-4">
-            <input
-              type="text"
-              placeholder="Search Available Arcs..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-3 py-2 rounded text-black"
-            />
-          </div>
-          <div className="flex flex-col gap-4 max-h-[65vh] overflow-y-auto pr-2">
+        <div className="flex flex-col max-h-[65vh] overflow-y-auto p-4 rounded-xl bg-[var(--bg-card)] border border-white/10 shadow-inner mx-4">          
+          <div className="gap-4">
+
             {displayAvailableArcs.map((arc) => (
               <div
                 key={arc.arc_id}
@@ -117,32 +137,35 @@ export default function CreateCustomJourneyPage() {
                     </>
                   }
                 >
+                <div className="mb-2 transition duration-200 hover:scale-[1.01] hover:ring-2 hover:ring-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/20 rounded-xl">
                   <ArcCard arc={arc} />
+                </div>
                 </TooltipWrapper>
               </div>
             ))}
           </div>
         </div>
 
+        
+
         {/* Selected Arcs with drag-to-reorder */}
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">Selected Arcs (Drag to Reorder)</h2>
+        <div className="flex flex-col gap-4 max-h-[65vh] overflow-y-auto p-4 rounded-xl bg-[var(--bg-card)] border border-white/10 shadow-inner mx-4">          
           <DragDropContext onDragEnd={handleSelectedReorder}>
             <Droppable droppableId="selected-arcs">
               {(provided) => (
                 <div
                   {...provided.droppableProps}
                   ref={provided.innerRef}
-                  className="flex flex-col gap-4 min-h-[65vh] bg-purple-900/30 p-4 rounded"
-                >
+                  className="gap-4">
                   {selectedArcs.map((arc, index) => (
-                    <Draggable draggableId={arc.arc_id} index={index} key={arc.arc_id}>
+                    <Draggable draggableId={arc.arc_id} index={index} key={arc.arc_id}
+                >
                       {(provided) => (
                         <div
                           ref={provided.innerRef}
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
-                          className="relative"
+                          className="relative mb-2"
                         >
                           {/* Remove button */}
                           <button
@@ -164,12 +187,14 @@ export default function CreateCustomJourneyPage() {
                               </>
                             }
                           >
-                            <ArcCard arc={arc} />
-                          </TooltipWrapper>
-                        </div>
-                      )}
-                    </Draggable>
-                  ))}
+                              <div className="transition duration-200 hover:scale-[1.01] hover:ring-2 hover:ring-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/20 rounded-xl">
+                                <ArcCard arc={arc} />
+                              </div>
+                            </TooltipWrapper>
+                          </div>
+                        )}
+                      </Draggable>
+                    ))}
                   {provided.placeholder}
                 </div>
               )}
@@ -178,10 +203,10 @@ export default function CreateCustomJourneyPage() {
         </div>
       </div>
 
-      <div className="text-center mt-10">
+      <div className="text-center mt-6">
         <button
           onClick={handleSave}
-          className="bg-yellow-500 hover:bg-yellow-600 px-8 py-3 rounded font-bold text-black"
+          className="bg-yellow-500 hover:bg-yellow-600 px-10 py-4 rounded-xl text-black font-bold shadow-md hover:shadow-lg transition"
         >
           Save Journey
         </button>

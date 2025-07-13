@@ -18,7 +18,7 @@ export default function TooltipWrapper({
     >
       {children}
       {visible && (
-        <div className="absolute z-50 top-full mt-2 left-1/2 -translate-x-1/2 w-72 bg-black text-white text-sm p-3 rounded shadow-lg">
+        <div className="absolute z-50 top-full mt-2 left-1/2 -translate-x-1/2 w-72 bg-gray-800/90 text-white text-sm px-4 py-2 rounded shadow-lg max-w-xs">
           {content}
         </div>
       )}
