@@ -1,23 +1,29 @@
-// src/context/authContext.tsx
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import axios from '@/utils/axios';
+import { getCSRFToken } from '@/utils/auth/tokens';
 import type { User } from '@/utils/types';
 
-interface AuthContextType {
+export type AuthContextType = {
   user: User | null;
-  loading: boolean;
-  refreshUser: () => Promise<void>;
-}
+  setUser: (user: User | null) => void;
+  login: (username: string, password: string) => Promise<void>;
+  logout: () => Promise<void>;
+};
 
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+export const AuthContext = React.createContext<AuthContextType>({
+  user: null,
+  setUser: () => {},
+  login: async () => {},
+  logout: async () => {},
+});
 
-export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
   const refreshUser = async () => {
     try {
-      const res = await axios.get<User>('/api/current-user/', {
+      const res = await axios.get<User>('/api/user/current/', {
         withCredentials: true,
       });
       setUser(res.data);
@@ -32,8 +38,32 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     refreshUser();
   }, []);
 
+  const login = async (username: string, password: string) => {
+    const res = await axios.post<User>(
+      '/api/user/login/',
+      { username, password },
+      { withCredentials: true }
+    );
+    setUser(res.data);
+  };
+
+  const logout = async () => {
+    const csrfToken = getCSRFToken();
+    await axios.post(
+      '/api/user/logout/',
+      {},
+      {
+        withCredentials: true,
+        headers: {
+          'X-CSRFToken': csrfToken || '',
+        },
+      }
+    );
+    setUser(null);
+  };
+
   return (
-    <AuthContext.Provider value={{ user, loading, refreshUser }}>
+    <AuthContext.Provider value={{ user, setUser, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

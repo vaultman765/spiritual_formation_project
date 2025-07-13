@@ -1,22 +1,11 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from '@/utils/axios';
-import { useAuth } from './authContext';
+import { useAuth } from '@/context/authContext';
+import { getCSRFToken } from '@/utils/auth/tokens';
 import type { ArcProgress, Journey } from '@/utils/types';
 import type { RawJourneyResponse, JourneyContextType } from '@/utils/types';
 
 const JourneyContext = createContext<JourneyContextType | undefined>(undefined);
-
-function getCSRFToken(): string | null {
-  const name = 'csrftoken';
-  const cookies = document.cookie.split(';');
-  for (let cookie of cookies) {
-    cookie = cookie.trim();
-    if (cookie.startsWith(name + '=')) {
-      return decodeURIComponent(cookie.substring(name.length + 1));
-    }
-  }
-  return null;
-}
 
 function normalizeJourney(data: RawJourneyResponse): Journey {
   return {
