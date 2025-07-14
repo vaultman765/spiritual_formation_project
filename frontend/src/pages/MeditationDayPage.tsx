@@ -4,14 +4,33 @@ import { fetchDayByArc } from "@/api/days";
 import type { MeditationData } from "@/utils/types";
 import SecondaryReadings from "@/components/SecondaryReadings";
 import ScrollToTop from "@/components/ScrollToTop";
+import { useJourney } from "@/context/journeyContext";
+
 
 
 export default function MeditationDayPage() {
   const [day, setDay] = useState<MeditationData | null>(null);
   const [showResolution, setShowResolution] = useState(false);
   const { arcID, arcDayNumber } = useParams<{ arcID: string; arcDayNumber: string }>();
+  const { markDayComplete, refreshJourneys } = useJourney();
   const navigate = useNavigate();
-  
+  const { activeJourney } = useJourney();
+
+  const currentArc = activeJourney?.arc_progress?.find(a => a.status === 'in_progress');
+  const isCurrentArc = currentArc?.arc_id === arcID;
+  const currentDay = currentArc?.current_day;
+  const isCurrentDay = currentDay === parseInt(arcDayNumber || "0");
+
+  const handleMarkDayComplete = async () => {
+    try {
+      await markDayComplete();
+      navigate("/my-journey");
+      await refreshJourneys();
+    } catch (error) {
+      console.error("Failed to mark day complete:", error);
+    }
+  }
+
   useEffect(() => {
     if (arcID && arcDayNumber) {
       fetchDayByArc(arcID, parseInt(arcDayNumber))
@@ -163,6 +182,15 @@ export default function MeditationDayPage() {
             ← Previous Day
           </button>
         ) : <div />}
+
+        {isCurrentArc && isCurrentDay && (
+          <button
+            onClick={handleMarkDayComplete}
+            className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg text-white font-semibold shadow hover:shadow-lg transition mt-10"
+          >
+            ✅ Mark Today as Complete
+          </button>
+        )}
 
         {day.arc_day_number < day.arc_total_days ? (
           <button

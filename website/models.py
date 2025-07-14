@@ -1,6 +1,5 @@
 from django.contrib.auth.models import User
 from django.db import models
-from django.db.models import JSONField
 
 
 # --- Core Arc Model ---
@@ -119,8 +118,13 @@ class DayTag(models.Model):
 
 
 class UserJourney(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="journey")
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="journeys")
     title = models.CharField(max_length=255, default="My Journey with Ignation Mental Prayer")
+    is_active = models.BooleanField(default=True)
+    is_custom = models.BooleanField(default=False)
+    completed_on = models.DateField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f"Journey of {self.user.username}"
@@ -136,7 +140,9 @@ class UserJourneyArcProgress(models.Model):
         ('in_progress', 'In Progress'),
         ('upcoming', 'Upcoming'),
         ('completed', 'Completed'),
+        ('skipped', 'Skipped'),
     ])
+    skipped = models.BooleanField(default=False)
     order = models.PositiveIntegerField(default=0)
 
     class Meta:

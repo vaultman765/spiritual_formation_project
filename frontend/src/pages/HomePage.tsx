@@ -32,9 +32,12 @@ export default function HomePage() {
           return res.json();
         })
         .then((journey) => {
+          console.log("Fetched journey:", journey);
           if (!journey) return;
 
           const arcs = journey.arc_progress;
+          console.log("Fetched arcs:", arcs);
+
           if (!arcs || arcs.length === 0) {
             setNoJourney(true);
             return;
@@ -127,9 +130,9 @@ export default function HomePage() {
       <section className="px-6 py-2 max-w-6xl mx-auto">
         {noJourney && user && (
           <div className="bg-white/10 border border-white/30 rounded p-6 mb-8 text-center text-white shadow-md">
-            <p className="text-lg font-medium mb-2">📘 You haven’t started your journey yet.</p>
+            <p className="text-lg font-medium mb-2">📘 You haven’t started a journey yet.</p>
             <p className="text-sm text-white/80 mb-4">
-              These are sample meditations from our journey library. To receive daily recommendations, begin your own journey.
+              These are sample meditations from our meditation library. To receive daily recommendations, begin your own journey.
             </p>
             <button
               onClick={() => navigate('/explore')}

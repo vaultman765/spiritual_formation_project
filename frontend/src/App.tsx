@@ -10,6 +10,7 @@ import LoginPage from "@/pages/LoginPage";
 import StartJourneyPage from '@/pages/StartJourneyPage';
 import CustomJourneyPage from '@/pages/CustomJourneyPage';
 import RegisterPage from '@/pages/RegisterPage';
+import CustomJourneyEditor from '@/pages/EditCustomJourneyPage';
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
         <Route path="/auth/register" element={<RegisterPage />} />
         <Route path="/start-journey" element={<StartJourneyPage />} />
         <Route path="/create-custom-journey" element={<CustomJourneyPage />} />
+        <Route path="/edit-journey" element={<CustomJourneyEditor />} />
+
 
       </Routes>
     </Router>

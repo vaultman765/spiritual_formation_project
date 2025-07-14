@@ -45,20 +45,37 @@ interface ArcProgressItem {
   arc_title: string;
   day_count: number;
   current_day: number;
-  status: 'in_progress' | 'upcoming' | 'completed';
+  status:  'in_progress' | 'upcoming' | 'completed' | 'skipped';
   order: number;
 }
 
 export interface Journey {
   id: number;
   title: string;
+  is_active: boolean;
+  is_custom: boolean;
+  completed_on: Date | null;
+  created_at: string;
+  updated_at: string;
   arc_progress: ArcProgressItem[];
+  arc_progress_items?: ArcProgressItem[];
 }
 
 export interface JourneyContextType {
-  journey: Journey | null;
-  refreshJourney: () => Promise<void>;
-  createJourney: (title: string, arc_progress: ArcProgressItem[]) => Promise<void>;
+  journeys: Journey[];
+  activeJourney: Journey | null;
+  pastJourneys: Journey[];
+  archivedJourneys: Journey[];
+  refreshJourneys: () => Promise<void>;
+  createJourney: (data: { title: string; arc_progress: ArcProgressItem[] }) => Promise<void>
+  restartJourney: () => Promise<void>;
+  restoreJourney: (id: number) => Promise<void>;
+  fetchPastJourneys: () => Promise<void>;
+  completeJourney: () => Promise<void>;
+  skipArc: () => Promise<void>;
+  skipDay: () => Promise<void>;
+  updateJourney: (journeyId: number, title: string, arcProgress: { arc_id: string; arc_title: string; order: number; day_count: number; }[]) => Promise<void>;
+  markDayComplete: () => Promise<void>;
   journeyLoading: boolean;
 }
 

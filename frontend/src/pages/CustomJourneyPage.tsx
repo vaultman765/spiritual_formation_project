@@ -18,7 +18,6 @@ export default function CreateCustomJourneyPage() {
   const [title, setTitle] = useState('');
   const navigate = useNavigate();
   const { createJourney } = useJourney();
-  const { journey } = useJourney();
 
   useEffect(() => {
     fetch('/api/arcs/')
@@ -51,23 +50,26 @@ export default function CreateCustomJourneyPage() {
   };
 
   const handleSave = async () => {
-    if (!title || selectedArcs.length === 0) return;
-    if (journey) {
-      const confirmed = window.confirm("You already have a journey. Create a new one and overwrite?");
-      if (!confirmed) return;
+    if (selectedArcs.length === 0) return;
+
+    try {
+      await createJourney({
+        title,
+        arc_progress: selectedArcs.map((arc, index) => ({
+          arc_id: arc.arc_id,
+          arc_title: arc.arc_title,
+          current_day: 1,
+          status: index === 0 ? "in_progress" : "upcoming",
+          order: index,
+          day_count: arc.day_count,
+        })),
+      });
+
+
+      navigate('/my-journey');
+    } catch (err) {
+      console.error('Failed to create or overwrite journey:', err);
     }
-
-    const arc_progress = selectedArcs.map((arc, index) => ({
-      arc_id: arc.arc_id,
-      arc_title: arc.arc_title,
-      day_count: arc.day_count,
-      status: (index === 0 ? 'in_progress' : 'upcoming') as 'in_progress' | 'upcoming',
-      current_day: 1,
-      order: index + 1,
-    }));
-
-    await createJourney(title, arc_progress);
-    navigate('/my-journey');
   };
 
   return (

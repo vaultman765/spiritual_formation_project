@@ -50,6 +50,7 @@ class UserJourneyAdmin(admin.ModelAdmin):
     search_fields = ["user__username", "journey__title"]
     list_filter = ["user"]
 
+
 @admin.register(UserJourneyArcProgress)
 class UserJourneyArcProgressAdmin(admin.ModelAdmin):
     list_display = ['user_journey', 'arc_id', 'arc_title', 'order', 'status', 'current_day', 'day_count']
