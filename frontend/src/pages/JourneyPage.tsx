@@ -2,12 +2,17 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/context/authContext';
 import { useJourney } from '@/context/journeyContext';
+import type { Journey } from '@/utils/types'; // Adjust path if needed
 
 export default function JourneyPage() {
   const { user, loading: authLoading } = useAuth();
   const [showRestartConfirm, setShowRestartConfirm] = useState(false);
   const [recentlyCompletedArc, setRecentlyCompletedArc] = useState<string | null>(null);
   const [recentlyCompletedJourney, setRecentlyCompletedJourney] = useState<string | null>(null);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [journeyToDelete, setJourneyToDelete] = useState<Journey | null>(null);
+  const arcsPerPage = 9;
   const navigate = useNavigate();
   const {
     archivedJourneys,
@@ -20,7 +25,35 @@ export default function JourneyPage() {
     completeJourney,
     skipArc,
     skipDay,
+    deleteJourney
   } = useJourney();
+
+  useEffect(() => {
+    if (!activeJourney?.arc_progress) return;
+
+    const sorted = [...activeJourney.arc_progress].sort((a, b) => a.order - b.order);
+    const inProgressIndex = sorted.findIndex(arc => arc.status === 'in_progress');
+    if (inProgressIndex !== -1) {
+      const page = Math.floor(inProgressIndex / arcsPerPage);
+      setCurrentPage(page);
+    }
+  }, [activeJourney]);
+
+  const visibleArcs = activeJourney?.arc_progress
+    ?.sort((a, b) => a.order - b.order)
+    ?.slice(currentPage * arcsPerPage, (currentPage + 1) * arcsPerPage);
+
+  const totalPages = Math.ceil((activeJourney?.arc_progress?.length || 0) / arcsPerPage);
+
+  const handleRestoreJourney = async (journey: Journey) => {
+    try {
+      await restoreJourney(journey.id);
+      await refreshJourneys();
+      setTimeout(() => navigate('/my-journey'), 50);
+    } catch (err) { 
+      console.error("Error restoring journey:", err);
+    }
+  }; 
 
   const handleSkipDay = async () => {
     try {
@@ -49,6 +82,23 @@ export default function JourneyPage() {
       console.error("Error completing journey:", err);
     }
   };
+
+  const handleDeleteJourney = async () => {
+    if (!journeyToDelete) return;
+
+    try {
+      await deleteJourney(journeyToDelete.id);
+      setShowDeleteConfirm(false);
+      setJourneyToDelete(null);
+      await refreshJourneys();
+    } catch (err) {
+      console.error("Error deleting journey:", err);
+    }
+  };
+
+  useEffect(() => {
+    refreshJourneys();
+  }, []);
 
   useEffect(() => {
     const journey = localStorage.getItem("justCompletedJourney");
@@ -101,7 +151,7 @@ export default function JourneyPage() {
       </header>
 
       {currentArc && (
-        <section className="mb-10 text-center">
+        <section className="mb-10 text-center" key={activeJourney?.id || 'no-journey'}>
           <h2 className="text-2xl text-[var(--text-subtle-heading)] font-semibold mb-2">Currently In</h2>
           <p className="text-xl text-white font-medium">{currentArc.arc_title}</p>
           <p className="text-sm text-[var(--text-muted)] mb-4">
@@ -136,9 +186,7 @@ export default function JourneyPage() {
         </h2>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
-          {activeJourney?.arc_progress
-            ?.sort((a, b) => a.order - b.order)
-            .map((arc) => {
+          {visibleArcs?.map((arc) => {
               let cardStyle = '';
               let statusLabel = '';
 
@@ -149,7 +197,7 @@ export default function JourneyPage() {
                   break;
                 case 'in_progress':
                   cardStyle = 'bg-yellow-800/20 border-yellow-400';
-                  statusLabel = `🔄 Day ${arc.current_day} of ${arc.day_count}`;
+                  statusLabel = `🔄 In progress - Day ${arc.current_day} of ${arc.day_count}`;
                   break;
                 case 'upcoming':
                   cardStyle = 'bg-blue-800/20 border-blue-400';
@@ -172,6 +220,35 @@ export default function JourneyPage() {
             })}
         </div>
 
+        {/* Pagination controls */}
+        {totalPages > 1 && (
+        <div className="flex justify-center gap-4 mb-4">
+          <button
+            disabled={currentPage === 0}
+            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 0))}
+            className={`px-4 py-2 rounded-lg font-medium transition ${
+              currentPage === 0
+                ? 'bg-white/20 text-white/50 cursor-not-allowed'
+                : 'bg-white text-black hover:bg-yellow-200'
+            }`}
+          >
+            ← Prev
+          </button>
+          <span className="text-white/70 pt-2">Page {currentPage + 1} of {totalPages}</span>
+          <button
+            disabled={currentPage === totalPages - 1}
+            onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages - 1))}
+            className={`px-4 py-2 rounded-lg font-medium transition ${
+              currentPage === totalPages - 1
+                ? 'bg-white/20 text-white/50 cursor-not-allowed'
+                : 'bg-white text-black hover:bg-yellow-200'
+            }`}
+          >
+            Next →
+          </button>
+        </div>
+      )}
+
         <div className="flex gap-4 justify-center mt-6">
         {!canCompleteJourney && (
           <div className="flex gap-4">
@@ -192,8 +269,9 @@ export default function JourneyPage() {
         )}
         </div>
 
-        {/* Restart Journey button and confirmation dialog */}
+        {/* Action buttons */}
         <div className="flex flex-row justify-center mt-6 gap-4">
+          {/* Complete Journey */}
           {canCompleteJourney && (
             <div className="flex justify-center mb-4">
               <button
@@ -204,6 +282,8 @@ export default function JourneyPage() {
               </button>
           </div>
           )}
+
+          {/* Restart Journey button */}
           {activeJourney && (
               <div className="flex justify-center mb-4">
                 <button
@@ -212,8 +292,8 @@ export default function JourneyPage() {
                 >
                   🔁 Restart This Journey
                 </button>
-              
 
+              {/* Confirm dialog for restarting journey */}
               {showRestartConfirm && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                   <div className="bg-gray-900 text-white p-6 rounded-lg border border-white/20 w-[300px] text-center">
@@ -240,6 +320,8 @@ export default function JourneyPage() {
               )}
               </div>
           )}
+
+          {/* Edit Journey button */}
           {activeJourney?.is_custom && activeJourney?.is_active && (
              <div className="flex justify-center mb-4">
             <button
@@ -250,6 +332,23 @@ export default function JourneyPage() {
             </button>
           </div>
           )}
+          
+          {/* Delete Journey button */}
+          {activeJourney && (
+          <div className="flex justify-center mb-4">
+            <button
+              className="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-lg text-white font-semibold shadow hover:shadow-lg transition"
+              onClick={() => {
+                setJourneyToDelete(activeJourney);
+                setShowDeleteConfirm(true);
+                refreshJourneys();
+              }}
+            >
+              🗑️ Delete This Journey
+            </button>
+          </div>
+        )}
+
         </div>
       </section>
       ) : (
@@ -278,22 +377,34 @@ export default function JourneyPage() {
                 Past Journeys
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {archivedJourneys.map((j) => (
-                  <div key={j.id} className="p-4 rounded-lg bg-gray-800 shadow-md">
-                    <h3 className="text-xl font-semibold text-white mb-2">{j.title}</h3>
+                {archivedJourneys.map((journey) => (
+                  <div key={journey.id} className="p-4 rounded-lg bg-gray-800 shadow-md">
+                    <h3 className="text-xl font-semibold text-white mb-2">{journey.title}</h3>
                     <p className="text-white/70 text-sm mb-2">
-                      {j.arc_progress.length} arcs
+                      {journey.arc_progress.length} arcs
                     </p>
-                    {j.completed_on ? (
-                      <p className="text-green-400 text-sm mb-2">Completed on {new Date(j.completed_on).toLocaleDateString()}</p>
+                    {journey.completed_on ? (
+                      <p className="text-green-400 text-sm mb-2">Completed on {new Date(journey.completed_on).toLocaleDateString()}</p>
                     ) : (
                       <p className="text-yellow-400 text-sm mb-2">Incomplete</p>
                     )}
                     <button
-                      onClick={() => restoreJourney(j.id)}
+                      onClick={() => { handleRestoreJourney(journey); }}
                       className="mt-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded text-white font-bold"
                     >
                       Restore
+                    </button>
+
+                    {/* Delete button for archived journeys */}
+                    <button
+                      onClick={() => {
+                        setJourneyToDelete(journey);
+                        setShowDeleteConfirm(true);
+                        refreshJourneys();
+                      }}
+                      className="text-red-500 hover:text-red-700 text-sm ml-4"
+                    >
+                      Delete
                     </button>
                   </div>
                 ))}
@@ -301,6 +412,28 @@ export default function JourneyPage() {
             </div>
           )}
       </section>
+      {showDeleteConfirm && journeyToDelete && (
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className="bg-gray-900 text-white p-6 rounded-lg border border-white/20 w-[300px] text-center">
+          <p className="mb-4 font-semibold">Delete this journey?</p>
+          <p className="mb-4 text-sm text-white/70">This cannot be undone.</p>
+          <div className="flex justify-around">
+            <button
+              className="bg-red-600 px-4 py-1 rounded hover:bg-red-500"
+              onClick={handleDeleteJourney}
+            >
+              Yes, Delete
+            </button>
+            <button
+              className="bg-gray-700 px-4 py-1 rounded hover:bg-gray-600"
+              onClick={() => setShowDeleteConfirm(false)}
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
     </main>
   );
 }

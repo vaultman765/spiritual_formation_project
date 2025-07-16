@@ -17,7 +17,7 @@ export default function CreateCustomJourneyPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [title, setTitle] = useState('');
   const navigate = useNavigate();
-  const { createJourney } = useJourney();
+  const { createJourney, refreshJourneys } = useJourney();
 
   useEffect(() => {
     fetch('/api/arcs/')
@@ -65,8 +65,8 @@ export default function CreateCustomJourneyPage() {
         })),
       });
 
-
-      navigate('/my-journey');
+      await refreshJourneys();  
+      setTimeout(() => navigate('/my-journey'), 50);
     } catch (err) {
       console.error('Failed to create or overwrite journey:', err);
     }

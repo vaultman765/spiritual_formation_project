@@ -62,22 +62,28 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
     }
   };
   
-  const fetchJourneys = async () => {
-    setJourneyLoading(true);
-    try {
-      const res = await axios.get<Journey[]>('/api/user/journeys/');
-      const allJourneys = res.data;
-      setJourneys(allJourneys);
+  const fetchJourneys = async (): Promise<void> => {
+    return new Promise<void>(async (resolve) => {
+      setJourneyLoading(true);
+      try {
+        const res = await axios.get<Journey[]>('/api/user/journeys/');
+        const allJourneys = res.data;
+        setJourneys(allJourneys);
 
-      const active = allJourneys.find(j => j.is_active);
-      const past = allJourneys.filter(j => !j.is_active);
-      setActiveJourney(active || null);
-      setPastJourneys(past);
-    } catch (err) {
-      console.error("Failed to fetch user journeys:", err);
-    } finally {
-      setJourneyLoading(false);
-    }
+        const active = allJourneys.find(j => j.is_active);
+        const past = allJourneys.filter(j => !j.is_active);
+        setActiveJourney(active || null);
+        setPastJourneys(past);
+
+        resolve();
+      } catch (err) {
+        console.error("Failed to fetch user journeys:", err);
+        resolve();
+      } finally {
+        setJourneyLoading(false);
+        resolve();
+      }
+    });
   };
 
   const createJourney = async (
@@ -178,6 +184,21 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
     }
   };
 
+  const deleteJourney = async (journeyId: number): Promise<void> => {
+    try {
+      await axios.delete(`/api/user/journey/${journeyId}/`, {
+        headers: headers,
+        withCredentials: true,
+      });
+      setJourneys(prev => prev.filter(j => j.id !== journeyId));
+      if (activeJourney?.id === journeyId) {
+        setActiveJourney(null);
+      }
+    } catch (err) {
+      console.error("Failed to delete journey:", err);
+    }
+  }
+
   useEffect(() => {
     if (user) fetchJourneys();
     if (user) fetchPastJourneys();
@@ -202,6 +223,7 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
         skipDay,
         updateJourney,
         markDayComplete,
+        deleteJourney
       }}
     >
         {children}

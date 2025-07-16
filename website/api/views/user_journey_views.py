@@ -242,6 +242,15 @@ class UserJourneyViewSet(viewsets.ViewSet):
                     "arc_title": arc.arc_title,
                     "journey_title": journey.title,
                 })
+            
+    def destroy(self, request, pk=None):
+        try:
+            journey = UserJourney.objects.get(pk=pk, user=request.user)
+            journey.delete()
+            return Response({'detail': 'Journey deleted successfully.'}, status=status.HTTP_204_NO_CONTENT)
+        except UserJourney.DoesNotExist:
+            return Response({'error': 'Journey not found.'}, status=status.HTTP_404_NOT_FOUND)
+
 
 
 class UserJourneyListAllView(ListAPIView):

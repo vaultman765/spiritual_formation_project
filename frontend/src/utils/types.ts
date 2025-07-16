@@ -76,6 +76,7 @@ export interface JourneyContextType {
   skipDay: () => Promise<void>;
   updateJourney: (journeyId: number, title: string, arcProgress: { arc_id: string; arc_title: string; order: number; day_count: number; }[]) => Promise<void>;
   markDayComplete: () => Promise<void>;
+  deleteJourney: (journeyId: number) => Promise<void>;
   journeyLoading: boolean;
 }
 
