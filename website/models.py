@@ -151,3 +151,17 @@ class UserJourneyArcProgress(models.Model):
 
     def __str__(self):
         return f"{self.arc_title} ({self.status})"
+
+
+class MeditationNote(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    meditation_day = models.ForeignKey('MeditationDay', on_delete=models.CASCADE)
+    content = models.TextField(blank=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        unique_together = ['user', 'meditation_day']
+        ordering = ['-updated_at']
+
+    def __str__(self):
+        return f"Note for {self.user.username} – Day {self.meditation_day.master_day_number}"

@@ -34,13 +34,15 @@ We will check off boxes as items are completed to stay on task and aligned.
 - [x] 🔐 Decide between username/password, Google OAuth, or both
 - [x] 🏠 Show “your next and next-next day” on homepage if logged in
 
-- [ ] ✅ Mark day complete → auto-advance journey `currentDay`
-- [ ] 🔁 Skip day / arc functionality in `/my-journey`
-- [ ] 🔄 Reorder arcs **after journey creation**
-- [ ] ➕ Add arc to existing journey (custom only)
-- [ ] 🗑️ Remove arc from existing journey
-- [ ] ✅ Journey deletion & overwrite logic (already in place)
+- [x] ✅ Mark day complete → auto-advance journey `currentDay`
+- [x] 🔁 Skip day / arc functionality in `/my-journey`
+- [x] 🔄 Reorder arcs **after journey creation**
+- [x] ➕ Add arc to existing journey (custom only)
+- [x] 🗑️ Remove arc from existing journey
+- [x] ✅ Journey deletion & overwrite logic (already in place)
 - [ ] 🧭 Visual journey progress tracker (e.g. arc chips or bar)
+- [ ] 📅 Calendar view of journey progress
+- [ ] 📝 Add user notes page that shows notes per day, per arc, etc
 
 ### 🎨 UI Polish and UX Improvements
 
@@ -54,7 +56,7 @@ We will check off boxes as items are completed to stay on task and aligned.
 - [x] ✅ Prev / Next day nav logic
 - [x] ✅ Toggle for `Resolution` section
 - [ ] 🏷️ Show tags on meditation day pages
-- [ ] 📝 Add user notepad per day (saved reflection field)
+- [x] 📝 Add user notepad per day (saved reflection field)
 
 ---
 
@@ -99,8 +101,8 @@ We will check off boxes as items are completed to stay on task and aligned.
 
 ### 📦 Meditation System Enhancements
 
-- [ ] Begin Arc 13 (*Luminous Mysteries*)
 - [ ] Begin Arc 14 (*Angelus*)
+- [ ] Continue creating symphonic meditation journeys with all planned/thought about arcs
 - [ ] Validate YAML batch with `day_full_schema.yaml`
 - [ ] Update or regenerate arc tag files if missing
 - [ ] Automate checklist YAML on new day creation

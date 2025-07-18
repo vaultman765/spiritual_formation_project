@@ -86,3 +86,15 @@ export type User = {
   email: string;
 };
 
+export interface NoteResponse {
+  id: number;
+  meditation_day: number;
+  content: string;
+  updated_at: string;
+}
+
+export interface NoteInput {
+  meditation_day: number;
+  content: string;
+  id?: number; // Optional for new notes
+}

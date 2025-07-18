@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from website.models import Day
+from website.models import MeditationDay
 
 
 class DaySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Day
+        model = MeditationDay
         fields = '__all__'
