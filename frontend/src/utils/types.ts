@@ -86,10 +86,19 @@ export type User = {
   email: string;
 };
 
-export interface NoteResponse {
+interface MeditationDayStub {
   id: number;
-  meditation_day: number;
+  arc_id: string;
+  arc_day_number: number;
+  arc_title: string;
+  day_title: string;
+  master_day_number: number;
+};
+
+export interface MeditationNote {
+  id: number;
   content: string;
+  meditation_day_full: MeditationDayStub;
   updated_at: string;
 }
 

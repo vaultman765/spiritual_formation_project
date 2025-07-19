@@ -18,7 +18,7 @@ export default function MeditationDayPage() {
   const navigate = useNavigate();
   const { activeJourney } = useJourney();
   const [showNoteModal, setShowNoteModal] = useState(false);
-  const [noteContent, setNoteContent] = useState<string | null>(null);
+  const [noteContent, setNoteContent] = useState<string>("");
   const [noteId, setNoteId] = useState<number | null>(null);
   const [loadingNote, setLoadingNote] = useState(true);
 
@@ -54,7 +54,7 @@ export default function MeditationDayPage() {
     try {
       console.log('Deleting note for day:', day.master_day_number);
       await deleteNote(day.master_day_number);
-      setNoteContent(null);
+      setNoteContent("");
       setNoteId(null);
       toast.success('Note deleted successfully!');
     } catch (error) {

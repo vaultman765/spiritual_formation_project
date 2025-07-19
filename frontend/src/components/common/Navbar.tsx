@@ -20,7 +20,9 @@ export default function Navbar() {
         <Link to="/explore" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">Explore</Link>
         <Link to="/my-journey" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">My Journey</Link>
         <Link to="/how-to-pray" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">How to Pray</Link>
-
+        <Link to="/my-notes" className="hover:text-[var(--brand-primary-dark)] transition-colors duration-150">My Notes</Link>
+        
+        {/* User Authentication Links */}
         {user ? (
           <>
             <span className="text-white/70">Welcome, {user.username}</span>

@@ -12,7 +12,7 @@ export default {
     extend: {
       fontFamily: {
         display: ['EB Garamond', 'serif'],
-        sans: ['Inter', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
       },
       colors: {
         'brand-primary': '#FFD56A',        // soft gold

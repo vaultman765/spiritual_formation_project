@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { getCSRFToken } from '@/utils/auth/tokens';
-import type { NoteInput, NoteResponse } from '@/utils/types';
+import type { NoteInput, MeditationNote } from '@/utils/types';
 
 const csrfToken = getCSRFToken();
 
@@ -9,14 +9,14 @@ const headers = {
     'Content-Type': 'application/json',
   };
 
-export const getNote = async (dayId: number): Promise<NoteResponse> => {
-  const res = await axios.get<NoteResponse[]>(`/api/notes/?day=${dayId}`);
+export const getNote = async (dayId: number): Promise<MeditationNote> => {
+  const res = await axios.get<MeditationNote[]>(`/api/notes/?day=${dayId}`);
   console.log(`Fetched note for day ${dayId}:`, res.data);
   console.log('res.data.id:', res.data[0]?.id);
   return res.data[0];
 };
 
-export const saveNote = async (note: NoteInput): Promise<NoteResponse> => {
+export const saveNote = async (note: NoteInput): Promise<MeditationNote> => {
   let method: 'post' | 'put';
   let url: string;
 
@@ -27,7 +27,11 @@ export const saveNote = async (note: NoteInput): Promise<NoteResponse> => {
     method = 'put';
     url = `/api/notes/${note.id}/`;
   }
-  console.log(`Saving note with method: ${method}, URL: ${url}`, note);
+  console.log('Sending note payload:', {
+    meditation_day: note.meditation_day,
+    content: note.content,
+  });
+
   const res = await axios({
     method,
     url,
@@ -37,8 +41,8 @@ export const saveNote = async (note: NoteInput): Promise<NoteResponse> => {
       content: note.content,
     },
   });
-
-  const data = res.data as NoteResponse;
+  
+  const data = res.data as unknown as MeditationNote;
   return data; 
 };
 
@@ -50,3 +54,10 @@ export const deleteNote = async (dayId: number): Promise<void> => {
     },
   });
 };
+
+
+export async function getAllNotes(): Promise<MeditationNote[]> {
+  const res = await axios.get<MeditationNote[]>('/api/notes/');
+  return res.data;
+}
+
