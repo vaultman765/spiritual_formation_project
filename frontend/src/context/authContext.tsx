@@ -2,12 +2,14 @@ import React, { useState, useContext, useEffect } from 'react';
 import axios from '@/utils/axios';
 import { getCSRFToken } from '@/utils/auth/tokens';
 import type { User } from '@/utils/types';
+axios.defaults.withCredentials = true
 
 export type AuthContextType = {
   user: User | null;
   setUser: (user: User | null) => void;
   login: (username: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
+  loading: boolean;
 };
 
 export const AuthContext = React.createContext<AuthContextType>({
@@ -15,6 +17,7 @@ export const AuthContext = React.createContext<AuthContextType>({
   setUser: () => {},
   login: async () => {},
   logout: async () => {},
+  loading: false,
 });
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
@@ -63,7 +66,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, setUser, login, logout }}>
+    <AuthContext.Provider value={{ user, setUser, login, logout, loading }}>
       {children}
     </AuthContext.Provider>
   );

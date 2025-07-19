@@ -1,6 +1,5 @@
 from django.contrib.auth.models import User
 from django.db import models
-from django.db.models import JSONField
 
 
 # --- Core Arc Model ---
@@ -119,9 +118,50 @@ class DayTag(models.Model):
 
 
 class UserJourney(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="journey")
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="journeys")
     title = models.CharField(max_length=255, default="My Journey with Ignation Mental Prayer")
-    arc_progress = JSONField(default=list, blank=True)  # List of arcs with status, current day, etc.
+    is_active = models.BooleanField(default=True)
+    is_custom = models.BooleanField(default=False)
+    completed_on = models.DateField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f"Journey of {self.user.username}"
+
+
+class UserJourneyArcProgress(models.Model):
+    user_journey = models.ForeignKey('UserJourney', on_delete=models.CASCADE, related_name='arc_progress_items')
+    arc_id = models.CharField(max_length=100)
+    arc_title = models.CharField(max_length=255)
+    day_count = models.PositiveIntegerField(default=1)
+    current_day = models.PositiveIntegerField(default=1)
+    status = models.CharField(max_length=20, choices=[
+        ('in_progress', 'In Progress'),
+        ('upcoming', 'Upcoming'),
+        ('completed', 'Completed'),
+        ('skipped', 'Skipped'),
+    ])
+    skipped = models.BooleanField(default=False)
+    order = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ['order']
+        unique_together = ['user_journey', 'arc_id']
+
+    def __str__(self):
+        return f"{self.arc_title} ({self.status})"
+
+
+class MeditationNote(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    meditation_day = models.ForeignKey('MeditationDay', on_delete=models.CASCADE)
+    content = models.TextField(blank=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        unique_together = ['user', 'meditation_day']
+        ordering = ['-updated_at']
+
+    def __str__(self):
+        return f"Note for {self.user.username} – Day {self.meditation_day.master_day_number}"

@@ -8,7 +8,7 @@ import type { ArcData } from '@/utils/types';
 
 export default function ExplorePage() {
   const [search, setSearch] = useState('');
-  const [selectedTag, setSelectedTag] = useState('');
+  const [selectedTag, setSelectedTag] = useState<string>('');
   const [arcs, setArcs] = useState<ArcData[]>([]);
 
   const availableTags = Array.from(
@@ -70,10 +70,11 @@ export default function ExplorePage() {
       
         {/* Tag Filter Dropdown */}
         <TagFilterDropdown
-          selectedTag={selectedTag}
+          selected={selectedTag}
           onChange={setSelectedTag}
-          allTags={tagOptions}
+          options={tagOptions}
         />
+
       </section>
 
       {/* Arc Grid */}

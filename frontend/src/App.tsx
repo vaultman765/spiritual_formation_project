@@ -10,13 +10,15 @@ import LoginPage from "@/pages/LoginPage";
 import StartJourneyPage from '@/pages/StartJourneyPage';
 import CustomJourneyPage from '@/pages/CustomJourneyPage';
 import RegisterPage from '@/pages/RegisterPage';
+import NotesPage from '@/pages/NotesPage'
+import CustomJourneyEditor from '@/pages/EditCustomJourneyPage';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <Router>
-
       <Navbar />
-      
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/home" element={<HomePage />} />
@@ -30,8 +32,10 @@ function App() {
         <Route path="/auth/register" element={<RegisterPage />} />
         <Route path="/start-journey" element={<StartJourneyPage />} />
         <Route path="/create-custom-journey" element={<CustomJourneyPage />} />
-
+        <Route path="/edit-journey" element={<CustomJourneyEditor />} />
+        <Route path="/my-notes" element={<NotesPage />} />
       </Routes>
+      <ToastContainer position="top-right" autoClose={3000} />
     </Router>
   );
 }
