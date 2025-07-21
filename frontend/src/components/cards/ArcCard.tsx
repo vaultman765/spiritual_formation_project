@@ -4,7 +4,7 @@ import type { ArcData } from "@/utils/types";
 
 interface ArcCardProps {
   arc: ArcData;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 interface ArcTagProps {
@@ -67,7 +67,7 @@ export function CustomJourneyArcCard({
 }: ArcCardProps) {
   return (
     <CustomOnClickCard
-      onClick={onClick}
+      onClick={onClick ?? (() => {})}
       className="cursor-pointer rounded-lg bg-purple-800 hover:bg-purple-700 border border-yellow-400/70 p-4 shadow transition-colors transition-transform duration-150 hover:scale-[1.02]"
     >
       <CardTitle title={arc.arc_title} />
