@@ -45,16 +45,12 @@ export function CustomOnClickCard({
 export function CardImage(
   { imageSrc, altText, divClassName = 'card-image-container', imgClassName = 'card-image' }:
   { imageSrc: string; altText?: string; divClassName?: string; imgClassName?: string }) {
-  try {
-    return (
-      <div className={divClassName}>
-        <img src={imageSrc} alt={altText} className={imgClassName} />
-      </div>
-    );
-  } catch (error) {
-    console.error('Error rendering CardImage:', error);
-    return null;
-  }
+  return (
+    <div className={divClassName}>
+      <img src={imageSrc} alt={altText} className={imgClassName} />
+    </div>
+  );
+
 }
 
 export function CardTitle({ title, className = 'card-title' }: { title: string; className?: string }) {
