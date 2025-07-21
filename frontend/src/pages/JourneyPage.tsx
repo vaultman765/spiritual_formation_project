@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/context/authContext';
 import { useJourney } from '@/context/journeyContext';
-import type { Journey } from '@/utils/types'; // Adjust path if needed
+import { JourneyArcCard } from '@/components/cards/ArcCard';
+import type { Journey } from '@/utils/types';
 
 export default function JourneyPage() {
   const { user, loading: authLoading } = useAuth();
@@ -186,38 +187,9 @@ export default function JourneyPage() {
         </h2>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
-          {visibleArcs?.map((arc) => {
-              let cardStyle = '';
-              let statusLabel = '';
-
-              switch (arc.status) {
-                case 'completed':
-                  cardStyle = 'bg-green-800/20 border-green-400';
-                  statusLabel = `✅ Completed (${arc.day_count} days)`;
-                  break;
-                case 'in_progress':
-                  cardStyle = 'bg-yellow-800/20 border-yellow-400';
-                  statusLabel = `🔄 In progress - Day ${arc.current_day} of ${arc.day_count}`;
-                  break;
-                case 'upcoming':
-                  cardStyle = 'bg-blue-800/20 border-blue-400';
-                  statusLabel = `🔜 Upcoming (${arc.day_count} days)`;
-                  break;
-                case 'skipped':
-                  cardStyle = 'bg-red-800/20 border-red-400 text-red-100 italic';
-                  statusLabel = `⏭️ Skipped`;
-                  break;
-              }
-
-              return (
-                <Link to={`/arcs/${arc.arc_id}`} key={arc.order} className="!no-underline">
-                  <div className={`rounded p-4 shadow border ${cardStyle}`}>
-                    <div className="text-white font-semibold mb-1">{arc.arc_title}</div>
-                    <div className="text-sm text-[var(--text-muted)]">{statusLabel}</div>
-                  </div>
-                </Link>
-              );
-            })}
+          {visibleArcs?.map((arc) => (
+            <JourneyArcCard key={arc.arc_id} {...arc} />
+          ))}
         </div>
 
         {/* Pagination controls */}

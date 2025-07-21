@@ -1,28 +1,11 @@
 import { useEffect, useState, useMemo } from 'react';
-import NoteCard from '@/components/notes/NoteCard';
+import NoteCard from '@/components/cards/NoteCard';
 import NoteModal from '@/components/notes/NoteModal';
 import SimpleListboxDropdown from '@/components/SimpleListboxDropdown';
 import { getAllNotes } from '@/hooks/useNotes';
+import { groupNotesByArc, groupNotesByMonth } from '@/utils/groupNotes'
 import type { MeditationNote } from '@/utils/types';
 
-function groupNotesByMonth(notes: MeditationNote[]) {
-  return notes.reduce<Record<string, MeditationNote[]>>((acc, note) => {
-    const date = new Date(note.updated_at);
-    const key = date.toLocaleString('default', { month: 'long', year: 'numeric' });
-    if (!acc[key]) acc[key] = [];
-    acc[key].push(note);
-    return acc;
-  }, {});
-}
-
-function groupNotesByArc(notes: MeditationNote[]) {
-  return notes.reduce<Record<string, MeditationNote[]>>((acc, note) => {
-    const key = note.meditation_day_full?.arc_title || 'Unknown Arc';
-    if (!acc[key]) acc[key] = [];
-    acc[key].push(note);
-    return acc;
-  }, {});
-}
 
 export default function NotesPage() {
   const [notes, setNotes] = useState<MeditationNote[]>([]);
@@ -53,9 +36,11 @@ export default function NotesPage() {
 
   useEffect(() => {
     if (sortBy === 'month') {
-      setGroupedNotes(groupNotesByMonth(filteredNotes));
+      const grouped = groupNotesByMonth(filteredNotes);
+      setGroupedNotes(grouped);
     } else {
-      setGroupedNotes(groupNotesByArc(filteredNotes));
+      const grouped = groupNotesByArc(filteredNotes);
+      setGroupedNotes(grouped);
     }
   }, [filteredNotes, sortBy]);
 
@@ -85,7 +70,7 @@ export default function NotesPage() {
           />
         </div>
 
-        {Object.entries(groupedNotes).map(([groupTitle, groupNotes]) => (
+        {Object.entries(groupedNotes || {}).map(([groupTitle, groupNotes]) => (
           <div key={groupTitle} className="mb-10">
             <h2 className="text-lg text-white/60 font-semibold mb-3">{groupTitle}</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

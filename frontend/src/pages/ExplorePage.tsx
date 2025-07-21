@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import TagFilterDropdown from '@/components/TagFilterDropdown';
-import ArcCard from '@/components/ArcCard';
+import { DetailArcCard } from '@/components/cards/ArcCard';
 import { fetchAllArcs } from '@/api/arcs';
 import type { ArcData } from '@/utils/types';
 
@@ -80,7 +80,7 @@ export default function ExplorePage() {
       {/* Arc Grid */}
       <section className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
         {filteredArcs.map((arc) => (
-          <ArcCard key={arc.arc_id} arc={arc} />
+          <DetailArcCard key={arc.arc_id} arc={arc} />
         ))}
       </section>
     </main>

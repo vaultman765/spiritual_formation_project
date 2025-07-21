@@ -10,7 +10,7 @@ import {
 } from '@hello-pangea/dnd';
 import { useJourney } from '@/context/journeyContext';
 import TooltipWrapper from '@/components/common/TooltipWrapper';
-import ArcCard from '@/components/journey/ArcCard';
+import { CustomJourneyArcCard } from '@/components/cards/ArcCard';
 import type { ArcData } from '@/utils/types';
 
 export default function CustomJourneyEditor() {
@@ -128,7 +128,7 @@ export default function CustomJourneyEditor() {
                   }
                 >
                   <div className="transition hover:scale-[1.01] hover:ring-2 ring-yellow-400/40 rounded-xl">
-                    <ArcCard arc={arc} />
+                    <CustomJourneyArcCard arc={arc} />
                   </div>
                 </TooltipWrapper>
               </div>
@@ -166,7 +166,7 @@ export default function CustomJourneyEditor() {
                             </>
                           }>
                             <div className="transition hover:scale-[1.01] hover:ring-2 ring-yellow-400/40 rounded-xl">
-                              <ArcCard arc={arc} />
+                              <CustomJourneyArcCard arc={arc} />
                             </div>
                           </TooltipWrapper>
                         </div>

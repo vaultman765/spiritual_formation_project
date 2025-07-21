@@ -8,7 +8,7 @@ import {
 } from '@hello-pangea/dnd';
 import TooltipWrapper from '@/components/common/TooltipWrapper';
 import type { ArcData } from '@/utils/types';
-import ArcCard from '@/components/journey/ArcCard';
+import { CustomJourneyArcCard } from '@/components/cards/ArcCard';
 import { useJourney } from '@/context/journeyContext';
 
 export default function CreateCustomJourneyPage() {
@@ -141,7 +141,7 @@ export default function CreateCustomJourneyPage() {
                   }
                 >
                 <div className="mb-2 transition duration-200 hover:scale-[1.01] hover:ring-2 hover:ring-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/20 rounded-xl">
-                  <ArcCard arc={arc} key={arc.arc_id} />
+                  <CustomJourneyArcCard arc={arc} key={arc.arc_id} />
                 </div>
                 </TooltipWrapper>
               </div>
@@ -191,7 +191,7 @@ export default function CreateCustomJourneyPage() {
                             }
                           >
                               <div className="transition duration-200 hover:scale-[1.01] hover:ring-2 hover:ring-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/20 rounded-xl">
-                                <ArcCard arc={arc} key={arc.arc_id} />
+                                <CustomJourneyArcCard arc={arc} key={arc.arc_id} />
                               </div>
                             </TooltipWrapper>
                           </div>

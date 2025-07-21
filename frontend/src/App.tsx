@@ -10,7 +10,7 @@ import LoginPage from "@/pages/LoginPage";
 import StartJourneyPage from '@/pages/StartJourneyPage';
 import CustomJourneyPage from '@/pages/CustomJourneyPage';
 import RegisterPage from '@/pages/RegisterPage';
-import NotesPage from '@/pages/NotesPage'
+import NotesPage from '@/pages/notes/NotesPage'
 import CustomJourneyEditor from '@/pages/EditCustomJourneyPage';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

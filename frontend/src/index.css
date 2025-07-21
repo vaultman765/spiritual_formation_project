@@ -30,7 +30,7 @@ button {
   } 
 }
 
-.tag-pill-arc {
+.tag-pill-meditation-card {
   font-size: 0.75rem; /* text-xs */
   background-color: var(--badge-bg);
   color: var(--text-main);
@@ -39,13 +39,31 @@ button {
   border-radius: 9999px;
 }
 
-.meditation-image {
+.tag-div-arc-card {
+  display: flex; /* Use flexbox */
+  flex-wrap: nowrap; /* Prevent wrapping to multiple rows */
+  justify-content: center; /* Center tags horizontally */
+  align-items: center; /* Center tags vertically */
+  gap: 0rem; /* Add spacing between tags */
+  margin-top: 0.5rem; /* Adjust spacing above the tags */
+}
+
+.tag-pill-arc-card {
+  background-color: var(--brand-primary-dark); /* Tag background color */
+  margin: 0.25rem; /* Space between tags */
+  padding: 0.2rem 0.3rem; /* Adjust padding for smaller tags */
+  border-radius: 9999px; /* Rounded corners */
+  white-space: nowrap; /* Prevent text from breaking into multiple lines */
+  @apply text-xs text-black; /* Tailwind utility classes */
+}
+
+.card-image {
   max-height: 400px;
   max-width: 100%;
   object-fit: contain;
 }
 
-.meditation-image-container {
+.card-image-container {
   max-height: 400px; /* max-h-[400px] */
   width: 100%; /* w-full */
   padding: .5rem; /* px-4 */
@@ -56,14 +74,14 @@ button {
   margin-bottom: 0.5rem; /* mb-2 */
 }
 
-.homepage-section-link:hover {
+.card-link:hover {
   scale: 1.01; /* hover:scale-[1.01] */
   transition-duration: 200ms; /* duration-200 */
   transition-property: all; /* transition-all */
   @apply shadow-lg shadow-yellow-400/20 ring-2 ring-yellow-400/30;
 }
 
-.homepage-section-link {
+.card-link {
   text-decoration: none; /* !no-underline */
   border: var(--brand-primary-dark) 1px solid;
   padding: 1rem; /* p-4 */
@@ -76,6 +94,33 @@ button {
   @apply block rounded-2xl bg-[var(--bg-card)]/75 shadow-black/20;
 }
 
+.card-onclick {
+  box-shadow: var(--shadow-md); /* shadow-md */
+  cursor: pointer; /* cursor-pointer */
+  backdrop-filter: blur(10px); /* backdrop-blur-sm */
+  padding: 1.25rem; /* p-5 */
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  ); /* bg-gradient-to-br from-white/10 to-white/5 */
+  border-color: rgba(255, 255, 255, 0.1); /* border-white/10 */
+  border-width: 1px; /* border */
+  border-radius: var(--radius-xl); /* rounded-xl */
+}
+
+.card-onclick:hover {
+  scale: 1.01; /* hover:scale-[1.01] */
+  transition-duration: 200ms; /* duration-200 */
+  transition-property: all; /* transition-all */
+  @apply shadow-lg shadow-yellow-400/20 ring-2 ring-yellow-400/30;
+}
+.card-title {
+  font-weight: 600; /* font-semibold */
+  font-size: var(--text-lg); /* 1.125rem (18px) - text-lg*/ 
+  line-height: var(--text-lg--line-height); /* calc(1.75 / 1.125) */
+  @apply text-[var(--text-light)]
+}
 
 .main-background {
   background: linear-gradient(

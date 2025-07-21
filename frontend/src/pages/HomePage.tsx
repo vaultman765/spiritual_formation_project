@@ -6,7 +6,8 @@ import {
   fetchJourneyMeditation 
 } from '@/api/homepage'
 import { useAuth } from '@/context/authContext';
-import MeditationCard from "@/components/MeditationCard";
+import MeditationCard from "@/components/cards/MeditationCard";
+import { CustomLinkCard, CardTitle } from '@/components/cards/BaseCard';
 import type { MeditationData } from "@/utils/types";
 
 
@@ -32,11 +33,9 @@ export default function HomePage() {
           return res.json();
         })
         .then((journey) => {
-          console.log("Fetched journey:", journey);
           if (!journey) return;
 
           const arcs = journey.arc_progress;
-          console.log("Fetched arcs:", arcs);
 
           if (!arcs || arcs.length === 0) {
             setNoJourney(true);
@@ -145,7 +144,7 @@ export default function HomePage() {
         <div className="grid grid-cols-2 gap-12">
           {today && (
             <MeditationCard
-              title={today.day_title}
+              dayTitle={today.day_title}
               subtitle="Current Meditation"
               imageSrc={`/images/arc_days/${String(today.arc_id)}_day_${String(today.arc_day_number).padStart(2, '0')}.jpg`}
               altText={today.day_title}
@@ -155,7 +154,7 @@ export default function HomePage() {
           )}
           {tomorrow && (
             <MeditationCard
-              title={tomorrow.day_title}
+              dayTitle={tomorrow.day_title}
               subtitle="Next Meditation"
               imageSrc={`/images/arc_days/${String(tomorrow.arc_id)}_day_${String(tomorrow.arc_day_number).padStart(2, '0')}.jpg`}
               altText={tomorrow.day_title}
@@ -178,17 +177,12 @@ export default function HomePage() {
       </section>
 
       <section className="px-6 pb-2 pt-4 grid grid-cols-1 gap-6 max-w-6xl mx-auto">
-        <button
-          onClick={() => navigate('/how-to-pray')}
-          className="homepage-section-link"
-        >
-          <h2 className="text-xl pb-2 font-display font-semibold text-[var(--text-light)] tracking-wide">
-            📖 How to Pray
-          </h2>
+        <CustomLinkCard link ='/how-to-pray'>
+          <CardTitle title="📖 How to Pray" className='!text-xl tracking-wide card-title' />
           <p className="text-[var(--text-muted)] font-display">
             New to Mental Prayer? Learn how to begin using the method taught by St. Ignatius.
           </p>
-        </button>
+        </CustomLinkCard>
       </section>
     </main>
   );

@@ -5,7 +5,7 @@ import { useAuth } from '@/context/authContext';
 import { fetchDayByArc } from "@/api/days";
 import type { MeditationData } from "@/utils/types";
 import SecondaryReadings from "@/components/SecondaryReadings";
-import ScrollToTop from "@/components/ScrollToTop";
+import ScrollToTop from "@/components/common/ScrollToTop";
 import { useJourney } from "@/context/journeyContext";
 import { getNote, saveNote, deleteNote } from '@/hooks/useNotes';
 
@@ -52,7 +52,6 @@ export default function MeditationDayPage() {
     if (!day) return;
 
     try {
-      console.log('Deleting note for day:', day.master_day_number);
       await deleteNote(day.master_day_number);
       setNoteContent("");
       setNoteId(null);

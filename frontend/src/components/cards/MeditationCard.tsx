@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
+import { CustomLinkCard, CardImage, CardTitle } from '@/components/cards/BaseCard';
 
 interface MeditationCardProps {
-  title: string;
+  dayTitle: string;
   subtitle: string;
   imageSrc: string;
   altText: string;
   link: string;
-  tag?: string;
+  tag: string;
 }
 
 export default function MeditationCard({
-  title,
+  dayTitle,
   subtitle,
   imageSrc,
   altText,
@@ -18,19 +18,10 @@ export default function MeditationCard({
   tag,
 }: MeditationCardProps) {
   return (
-    <Link
-      to={link}
-      className="card-link"
-    >
+    <CustomLinkCard link={link}>
       <p className="text-xs uppercase text-[var(--text-subtle-heading)] mb-1">{subtitle}</p>
-      <h2 className="text-lg font-semibold text-[var(--text-light)]">{title}</h2>
-      <div className="card-image-container">
-        <img
-          src={imageSrc}
-          alt={altText}
-          className="card-image"
-        />
-      </div>
+      <CardTitle title={dayTitle} />
+      <CardImage imageSrc={imageSrc} altText={altText} />
       {tag && (
         <div className="flex justify-center gap-2">
           <span className="tag-pill-meditation-card">
@@ -38,6 +29,6 @@ export default function MeditationCard({
           </span>
         </div>
       )}
-    </Link>
+    </CustomLinkCard>
   );
 }
