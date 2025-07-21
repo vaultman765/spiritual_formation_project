@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from 'react';
 import NoteCard from '@/components/cards/NoteCard';
-import NoteModal from '@/components/notes/NoteModal';
+import NoteModal from '@/components/modals/NoteModal';
 import SimpleListboxDropdown from '@/components/SimpleListboxDropdown';
 import { getAllNotes } from '@/hooks/useNotes';
 import { groupNotesByArc, groupNotesByMonth } from '@/utils/groupNotes'
