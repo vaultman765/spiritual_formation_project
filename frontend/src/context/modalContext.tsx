@@ -1,11 +1,14 @@
-import React, { createContext, useState, ReactNode } from 'react';
+import { createContext, useState, ReactNode } from "react";
 
-export const ModalContext = createContext<{
-  isOpen: boolean;
-  openModal: () => void;
-  closeModal: () => void;
-  toggleModal: () => void;
-} | undefined>(undefined);
+export const ModalContext = createContext<
+  | {
+      isOpen: boolean;
+      openModal: () => void;
+      closeModal: () => void;
+      toggleModal: () => void;
+    }
+  | undefined
+>(undefined);
 
 export function ModalProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +18,9 @@ export function ModalProvider({ children }: { children: ReactNode }) {
   const toggleModal = () => setIsOpen((prev) => !prev);
 
   return (
-    <ModalContext.Provider value={{ isOpen, openModal, closeModal, toggleModal }}>
+    <ModalContext.Provider
+      value={{ isOpen, openModal, closeModal, toggleModal }}
+    >
       {children}
     </ModalContext.Provider>
   );

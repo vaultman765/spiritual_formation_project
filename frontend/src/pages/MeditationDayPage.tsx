@@ -38,10 +38,17 @@ export default function MeditationDayPage() {
 
     try {
       const note = await getNote(day.master_day_number);
-      setNoteContent(note.content);
-      setNoteId(note.id);
+      if (note) {
+        setNoteContent(note.content);
+        setNoteId(note.id);
+      } else {
+        setNoteContent(""); // Clear the content if the note is deleted
+        setNoteId(null); // Reset the note ID
+      }
     } catch (err) {
       console.warn("No note found for day", day.master_day_number);
+      setNoteContent(""); // Clear the content if the note is deleted
+      setNoteId(null); // Reset the note ID
     } finally {
       setLoadingNote(false);
     }

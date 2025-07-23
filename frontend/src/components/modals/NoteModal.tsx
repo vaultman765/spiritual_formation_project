@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
-import type { MeditationNote } from '@/utils/types';
-import { saveNote, deleteNote, getAllNotes } from '@/hooks/useNotes';
+import { useEffect, useRef, useState } from "react";
+import type { MeditationNote } from "@/utils/types";
+import { saveNote, deleteNote, getAllNotes } from "@/hooks/useNotes";
 
 interface NoteModalProps {
   note: MeditationNote;
@@ -20,23 +20,26 @@ export default function NoteModal({ note, onClose, onUpdate }: NoteModalProps) {
   // Close on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+      if (
+        modalRef.current &&
+        !modalRef.current.contains(event.target as Node)
+      ) {
         onClose();
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [onClose]);
 
   // Close on Escape key
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         onClose();
       }
     };
-    document.addEventListener('keydown', handleEsc);
-    return () => document.removeEventListener('keydown', handleEsc);
+    document.addEventListener("keydown", handleEsc);
+    return () => document.removeEventListener("keydown", handleEsc);
   }, [onClose]);
 
   useEffect(() => {
@@ -45,24 +48,28 @@ export default function NoteModal({ note, onClose, onUpdate }: NoteModalProps) {
 
   const handleSave = async () => {
     try {
-      await saveNote({ id: note.id, content: editedContent, meditation_day: note.meditation_day_full.id });
+      await saveNote({
+        id: note.id,
+        content: editedContent,
+        meditation_day: note.meditation_day_full.id,
+      });
       await onUpdate();
       setIsEditing(false);
       onClose(); // Optional: refresh or reload logic could be handled at parent level
     } catch (err) {
-      console.error('Error saving note:', err);
+      console.error("Error saving note:", err);
     }
   };
 
   const handleDelete = async () => {
-    if (!confirm('Are you sure you want to delete this note?')) return;
+    if (!confirm("Are you sure you want to delete this note?")) return;
     try {
       await deleteNote(master_day_number);
-      await onUpdate()
+      await onUpdate();
       setIsDeleting(true);
       onClose();
     } catch (err) {
-      console.error('Error deleting note:', err);
+      console.error("Error deleting note:", err);
     }
   };
 
