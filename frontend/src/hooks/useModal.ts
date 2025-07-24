@@ -1,10 +1,15 @@
-import { useContext } from 'react';
-import { ModalContext } from '@/context/modalContext';
+import { useContext } from "react";
+import { ModalContext } from "@/context/modalContext";
 
-export function useModal() {
+export function useModal(modalId: string) {
   const context = useContext(ModalContext);
   if (!context) {
-    throw new Error('useModal must be used within a ModalProvider');
+    throw new Error("useModal must be used within a ModalProvider");
   }
-  return context;
+  const { isOpen, openModal, closeModal } = context;
+  return {
+    isOpen: isOpen(modalId),
+    openModal: () => openModal(modalId),
+    closeModal: () => closeModal(modalId),
+  };
 }

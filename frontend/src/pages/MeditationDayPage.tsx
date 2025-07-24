@@ -8,7 +8,7 @@ import ScrollToTop from "@/components/common/ScrollToTop";
 import { useJourney } from "@/context/journeyContext";
 import { getNote } from "@/hooks/useNotes";
 import { useModal } from "@/hooks/useModal";
-import { EditNoteModal } from "@/components/modals/NoteModal_new";
+import { EditNoteModal } from "@/components/modals/NoteModal";
 
 export default function MeditationDayPage() {
   const { user } = useAuth();
@@ -24,7 +24,7 @@ export default function MeditationDayPage() {
   const [noteContent, setNoteContent] = useState<string>("");
   const [_, setNoteId] = useState<number | null>(null);
   const [loadingNote, setLoadingNote] = useState(true);
-  const { isOpen, openModal } = useModal();
+  const { isOpen, openModal } = useModal("editNoteModal");
 
   const currentArc = activeJourney?.arc_progress?.find(
     (a) => a.status === "in_progress"
@@ -258,6 +258,7 @@ export default function MeditationDayPage() {
       {/* Note Editor Modal */}
       {isOpen && (
         <EditNoteModal
+          modalId="editNoteModal"
           title={day.day_title}
           content={noteContent}
           day={day}

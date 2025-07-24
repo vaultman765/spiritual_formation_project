@@ -1,14 +1,11 @@
 import { useEffect, useState, useMemo } from "react";
 import NoteCard from "@/components/cards/NoteCard";
-import NoteModal from "@/components/modals/NoteModal";
-import {
-  EditNoteContent,
-  ViewerNoteModal,
-} from "@/components/modals/NoteModal_new";
+import { ViewerNoteModal, EditNoteModal } from "@/components/modals/NoteModal";
 import SimpleListboxDropdown from "@/components/SimpleListboxDropdown";
 import { getAllNotes } from "@/hooks/useNotes";
 import { groupNotesByArc, groupNotesByMonth } from "@/utils/groupNotes";
 import type { MeditationNote } from "@/utils/types";
+import { useModal } from "@/hooks/useModal";
 
 export default function NotesPage() {
   const [notes, setNotes] = useState<MeditationNote[]>([]);
@@ -18,6 +15,11 @@ export default function NotesPage() {
   >({});
   const [selectedNote, setSelectedNote] = useState<MeditationNote | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
+
+  const { openModal: openViewerModal, closeModal: closeViewerModal } =
+    useModal("viewerNoteModal");
+  const { openModal: openEditorModal, closeModal: closeEditorModal } =
+    useModal("editNoteModal");
 
   const fetchNotes = async () => {
     const data = await getAllNotes();
@@ -90,7 +92,10 @@ export default function NotesPage() {
                 <NoteCard
                   key={note.id}
                   note={note}
-                  onClick={() => setSelectedNote(note)}
+                  onClick={() => {
+                    setSelectedNote(note);
+                    openViewerModal(); // Open ViewerNoteModal
+                  }}
                 />
               ))}
             </div>
@@ -99,9 +104,32 @@ export default function NotesPage() {
 
         {selectedNote && (
           <ViewerNoteModal
+            modalId="viewerNoteModal"
             note={selectedNote}
-            onClose={() => setSelectedNote(null)}
+            onClose={() => {
+              closeViewerModal(); // Close ViewerNoteModal
+              setSelectedNote(null);
+            }}
             onUpdate={fetchNotes}
+            onEdit={() => {
+              console.log("Selected note for editing:", selectedNote);
+              setSelectedNote({ ...selectedNote }); // Explicitly update selectedNote
+              closeViewerModal(); // Close ViewerNoteModal
+              openEditorModal(); // Open EditNoteModal
+            }}
+          />
+        )}
+
+        {selectedNote && (
+          <EditNoteModal
+            modalId="editNoteModal"
+            title={selectedNote.meditation_day_full?.day_title || "Edit Note"}
+            content={selectedNote.content}
+            day={selectedNote.meditation_day_full}
+            onUpdate={() => {
+              closeEditorModal(); // Close EditNoteModal
+              fetchNotes(); // Refresh notes
+            }}
           />
         )}
       </div>
