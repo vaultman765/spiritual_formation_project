@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useAuth } from "@/context/authContext";
 import { fetchDayByArc } from "@/api/days";
-import type { MeditationData } from "@/utils/types";
+import type { MeditationData, MeditationNote } from "@/utils/types";
 import SecondaryReadings from "@/components/SecondaryReadings";
 import ScrollToTop from "@/components/common/ScrollToTop";
 import { useJourney } from "@/context/journeyContext";
 import { getNote } from "@/hooks/useNotes";
 import { useModal } from "@/hooks/useModal";
-import { EditNoteModal } from "@/components/modals/NoteModal";
+import { EditNoteModal } from "@/components/modals/NoteModal/NoteModal";
 
 export default function MeditationDayPage() {
   const { user } = useAuth();
@@ -24,7 +24,7 @@ export default function MeditationDayPage() {
   const [noteContent, setNoteContent] = useState<string>("");
   const [_, setNoteId] = useState<number | null>(null);
   const [loadingNote, setLoadingNote] = useState(true);
-  const { isOpen, openModal } = useModal("editNoteModal");
+  const { isOpen, openModal, closeModal } = useModal("editNoteModal");
 
   const currentArc = activeJourney?.arc_progress?.find(
     (a) => a.status === "in_progress"
@@ -32,23 +32,27 @@ export default function MeditationDayPage() {
   const isCurrentArc = currentArc?.arc_id === arcID;
   const currentDay = currentArc?.current_day;
   const isCurrentDay = currentDay === parseInt(arcDayNumber || "0");
+  const [note, setNote] = useState<MeditationNote | null>(null);
 
   const refreshNote = async () => {
     if (!day?.master_day_number) return;
 
     try {
-      const note = await getNote(day.master_day_number);
-      if (note) {
-        setNoteContent(note.content);
-        setNoteId(note.id);
+      const fetchedNote = await getNote(day.master_day_number);
+      if (fetchedNote) {
+        setNoteContent(fetchedNote.content);
+        setNoteId(fetchedNote.id);
+        setNote(fetchedNote);
       } else {
         setNoteContent(""); // Clear the content if the note is deleted
         setNoteId(null); // Reset the note ID
+        setNote(null);
       }
     } catch (err) {
       console.warn("No note found for day", day.master_day_number);
       setNoteContent(""); // Clear the content if the note is deleted
       setNoteId(null); // Reset the note ID
+      setNote(null);
     } finally {
       setLoadingNote(false);
     }
@@ -78,6 +82,17 @@ export default function MeditationDayPage() {
 
   if (!day || loadingNote)
     return <p className="text-center text-white mt-10">Loading...</p>;
+
+  // Used to clear the selected note when closing the modal.
+  function setSelectedNote(_: null) {
+    setNoteContent("");
+    setNoteId(null);
+  }
+
+  async function fetchNotes() {
+    setLoadingNote(true);
+    await refreshNote();
+  }
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[var(--bg-light)] via-[var(--bg-mid)] to-[var(--bg-dark)] text-white px-6 pb-2 pt-0">
@@ -259,10 +274,18 @@ export default function MeditationDayPage() {
       {isOpen && (
         <EditNoteModal
           modalId="editNoteModal"
+          day={note}
           title={day.day_title}
           content={noteContent}
-          day={day}
-          onUpdate={refreshNote}
+          master_day_number={day.master_day_number}
+          onClose={() => {
+            closeModal(); // Close EditNoteModal
+            setSelectedNote(null); // Clear selected note
+          }}
+          onUpdate={() => {
+            closeModal(); // Close EditNoteModal
+            fetchNotes(); // Refresh notes
+          }}
         />
       )}
     </main>

@@ -7,6 +7,18 @@ interface ModalProps {
   modalClassName?: string;
 }
 
+interface ModalButtonProps {
+  text: string;
+  onClick: () => void;
+  variant?: "primary" | "secondary" | "danger";
+}
+
+interface ButtonProps {
+  onClick: () => void;
+  text?: string;
+  modalId?: string;
+}
+
 export function BaseModal({
   modalId,
   children,
@@ -24,6 +36,44 @@ export function BaseModal({
   );
 }
 
+export function ModalRenderer({
+  modals,
+}: {
+  modals: { id: string; content: React.ReactNode }[];
+}) {
+  return (
+    <>
+      {modals.map(({ id, content }) => (
+        <BaseModal key={id} modalId={id}>
+          {content}
+        </BaseModal>
+      ))}
+    </>
+  );
+}
+
+export function ModalButton({
+  text,
+  onClick,
+  variant = "primary",
+}: ModalButtonProps) {
+  const baseClass = "px-4 py-2 rounded font-semibold transition";
+  const variantClass = {
+    primary: "bg-blue-700 text-white hover:bg-blue-900",
+    secondary: "bg-gray-300 text-gray-800 hover:bg-gray-400",
+    danger: "bg-red-600 text-white hover:bg-red-700",
+  };
+
+  return (
+    <button
+      className={`${baseClass} ${variantClass[variant]}`}
+      onClick={onClick}
+    >
+      {text}
+    </button>
+  );
+}
+
 export function CloseButton({ modalId }: { modalId: string }) {
   const { closeModal } = useModal(modalId);
   return (
@@ -36,54 +86,48 @@ export function CloseButton({ modalId }: { modalId: string }) {
   );
 }
 
-export function CancelButton({ modalId }: { modalId: string }) {
-  const { closeModal } = useModal(modalId);
-  return (
-    <button
-      className="bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400"
-      onClick={closeModal}
-    >
-      Cancel
-    </button>
-  );
+export function SaveButton({ text = "Save", onClick, modalId }: ButtonProps) {
+  const { closeModal } = useModal(modalId || ""); // Use modalId if provided
+  const handleClick = async () => {
+    await onClick();
+    if (modalId) closeModal(); // Close the modal if modalId is provided
+  };
+  return <ModalButton text={text} onClick={handleClick} variant="primary" />;
 }
 
-interface ButtonProps {
-  onClick: () => void;
-  text?: string;
+export function DeleteButton({
+  text = "Delete",
+  onClick,
+  modalId,
+}: ButtonProps) {
+  const { closeModal } = useModal(modalId || ""); // Use modalId if provided
+  const handleClick = async () => {
+    await onClick();
+    if (modalId) closeModal(); // Close the modal if modalId is provided
+  };
+  return <ModalButton text={text} onClick={handleClick} variant="danger" />;
 }
 
-export function SaveButton({ text = "Save", onClick }: ButtonProps) {
-  return (
-    <button
-      className="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-900"
-      onClick={onClick}
-    >
-      {text}
-    </button>
-  );
+export function EditButton({ text = "Edit", onClick, modalId }: ButtonProps) {
+  const { closeModal } = useModal(modalId || ""); // Use modalId if provided
+  const handleClick = async () => {
+    await onClick();
+    if (modalId) closeModal(); // Close the modal if modalId is provided
+  };
+  return <ModalButton text={text} onClick={handleClick} variant="primary" />;
 }
 
-export function DeleteButton({ onClick, text = "Delete" }: ButtonProps) {
-  return (
-    <button
-      className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
-      onClick={onClick}
-    >
-      {text}
-    </button>
-  );
-}
-
-export function EditButton({ onClick, text = "Edit" }: ButtonProps) {
-  return (
-    <button
-      className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-      onClick={onClick}
-    >
-      {text}
-    </button>
-  );
+export function CancelButton({
+  text = "Cancel",
+  onClick = () => {}, // Default to an empty function if no onClick is provided
+  modalId,
+}: ButtonProps) {
+  const { closeModal } = useModal(modalId || ""); // Use modalId if provided
+  const handleClick = () => {
+    onClick(); // Call the provided onClick function
+    if (modalId) closeModal(); // Close the modal if modalId is provided
+  };
+  return <ModalButton text={text} onClick={handleClick} variant="secondary" />;
 }
 
 export function ModalTitle({ title }: { title: string }) {

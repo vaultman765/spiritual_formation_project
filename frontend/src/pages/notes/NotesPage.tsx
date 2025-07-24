@@ -1,11 +1,15 @@
 import { useEffect, useState, useMemo } from "react";
 import NoteCard from "@/components/cards/NoteCard";
-import { ViewerNoteModal, EditNoteModal } from "@/components/modals/NoteModal";
+import {
+  ViewerNoteModal,
+  EditNoteModal,
+} from "@/components/modals/NoteModal/NoteModal";
 import SimpleListboxDropdown from "@/components/SimpleListboxDropdown";
 import { getAllNotes } from "@/hooks/useNotes";
 import { groupNotesByArc, groupNotesByMonth } from "@/utils/groupNotes";
 import type { MeditationNote } from "@/utils/types";
 import { useModal } from "@/hooks/useModal";
+import { ModalRenderer } from "@/components/modals/BaseModal";
 
 export default function NotesPage() {
   const [notes, setNotes] = useState<MeditationNote[]>([]);
@@ -26,9 +30,48 @@ export default function NotesPage() {
     setNotes(data);
   };
 
-  useEffect(() => {
-    fetchNotes();
-  }, []);
+  const modals = [
+    {
+      id: "viewerNoteModal",
+      content: (
+        <ViewerNoteModal
+          modalId="viewerNoteModal"
+          day={selectedNote}
+          title={selectedNote?.meditation_day_full?.day_title || "View Note"}
+          content={selectedNote?.content || ""}
+          onClose={() => {
+            closeViewerModal();
+            setSelectedNote(null);
+          }}
+          onUpdate={fetchNotes}
+          onEdit={() => {
+            setSelectedNote(selectedNote);
+            closeViewerModal();
+            openEditorModal();
+          }}
+        />
+      ),
+    },
+    {
+      id: "editNoteModal",
+      content: (
+        <EditNoteModal
+          modalId="editNoteModal"
+          day={selectedNote}
+          title={selectedNote?.meditation_day_full?.day_title || "Edit Note"}
+          content={selectedNote?.content || ""}
+          master_day_number={
+            selectedNote?.meditation_day_full?.master_day_number
+          }
+          onClose={() => {
+            closeEditorModal();
+            setSelectedNote(null);
+          }}
+          onUpdate={fetchNotes}
+        />
+      ),
+    },
+  ];
 
   const filteredNotes = useMemo(() => {
     return notes.filter((note) => {
@@ -43,6 +86,10 @@ export default function NotesPage() {
       );
     });
   }, [notes, searchTerm]);
+
+  useEffect(() => {
+    fetchNotes();
+  }, []);
 
   useEffect(() => {
     if (sortBy === "month") {
@@ -102,36 +149,7 @@ export default function NotesPage() {
           </div>
         ))}
 
-        {selectedNote && (
-          <ViewerNoteModal
-            modalId="viewerNoteModal"
-            note={selectedNote}
-            onClose={() => {
-              closeViewerModal(); // Close ViewerNoteModal
-              setSelectedNote(null);
-            }}
-            onUpdate={fetchNotes}
-            onEdit={() => {
-              console.log("Selected note for editing:", selectedNote);
-              setSelectedNote({ ...selectedNote }); // Explicitly update selectedNote
-              closeViewerModal(); // Close ViewerNoteModal
-              openEditorModal(); // Open EditNoteModal
-            }}
-          />
-        )}
-
-        {selectedNote && (
-          <EditNoteModal
-            modalId="editNoteModal"
-            title={selectedNote.meditation_day_full?.day_title || "Edit Note"}
-            content={selectedNote.content}
-            day={selectedNote.meditation_day_full}
-            onUpdate={() => {
-              closeEditorModal(); // Close EditNoteModal
-              fetchNotes(); // Refresh notes
-            }}
-          />
-        )}
+        <ModalRenderer modals={modals} />
       </div>
     </main>
   );
