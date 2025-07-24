@@ -1,6 +1,9 @@
 # 🕯️ Spiritual Formation Project – Catholic Mental Prayer Journey
 
-This repository contains a longform, deeply-structured spiritual formation journey grounded in the tradition of **Catholic mental prayer**, using a format inspired by **St. Ignatius**, **St. Teresa of Avila**, and the **saints of the Church**. It blends **Scripture**, **magisterial texts**, **Church Fathers**, and **Catholic theology** into daily meditations that follow a thematic arc-based structure.
+This repository contains a longform, deeply-structured spiritual formation journey grounded in the tradition of
+**Catholic mental prayer**, using a format inspired by **St. Ignatius**, **St. Teresa of Avila**, and the
+**saints of the Church**. It blends **Scripture**, **magisterial texts**, **Church Fathers**, and **Catholic theology**
+into daily meditations that follow a thematic arc-based structure.
 
 > “Speak, Lord, for Your servant is listening.” (1 Samuel 3:10)
 

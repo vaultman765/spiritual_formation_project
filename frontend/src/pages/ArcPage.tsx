@@ -23,9 +23,6 @@ export default function ArcPage() {
 
   const isSingleReading = arc?.primary_reading.length === 1;
 
-  console.log("Arc Data:", arc);
-
-
     const dailyCards =
       arc && days.length
         ? Array.from({ length: arc.day_count }, (_, i) => ({

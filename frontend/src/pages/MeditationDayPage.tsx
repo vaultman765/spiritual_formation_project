@@ -1,92 +1,66 @@
 import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { toast } from 'react-toastify';
-import { useAuth } from '@/context/authContext';
+import { useAuth } from "@/context/authContext";
 import { fetchDayByArc } from "@/api/days";
-import type { MeditationData } from "@/utils/types";
+import type { MeditationData, MeditationNote } from "@/utils/types";
 import SecondaryReadings from "@/components/SecondaryReadings";
-import ScrollToTop from "@/components/ScrollToTop";
+import ScrollToTop from "@/components/common/ScrollToTop";
 import { useJourney } from "@/context/journeyContext";
-import { getNote, saveNote, deleteNote } from '@/hooks/useNotes';
+import { getNote } from "@/hooks/useNotes";
+import { useModal } from "@/hooks/useModal";
+import { EditNoteModal } from "@/components/modals/NoteModal/NoteModal";
 
 export default function MeditationDayPage() {
   const { user } = useAuth();
   const [day, setDay] = useState<MeditationData | null>(null);
   const [showResolution, setShowResolution] = useState(false);
-  const { arcID, arcDayNumber } = useParams<{ arcID: string; arcDayNumber: string }>();
+  const { arcID, arcDayNumber } = useParams<{
+    arcID: string;
+    arcDayNumber: string;
+  }>();
   const { markDayComplete, refreshJourneys } = useJourney();
   const navigate = useNavigate();
   const { activeJourney } = useJourney();
-  const [showNoteModal, setShowNoteModal] = useState(false);
   const [noteContent, setNoteContent] = useState<string>("");
-  const [noteId, setNoteId] = useState<number | null>(null);
+  const [_, setNoteId] = useState<number | null>(null);
   const [loadingNote, setLoadingNote] = useState(true);
+  const { isOpen, openModal, closeModal } = useModal("editNoteModal");
 
-  const currentArc = activeJourney?.arc_progress?.find(a => a.status === 'in_progress');
+  const currentArc = activeJourney?.arc_progress?.find(
+    (a) => a.status === "in_progress"
+  );
   const isCurrentArc = currentArc?.arc_id === arcID;
   const currentDay = currentArc?.current_day;
   const isCurrentDay = currentDay === parseInt(arcDayNumber || "0");
+  const [note, setNote] = useState<MeditationNote | null>(null);
 
-  const handleSaveNote = async () => {
-    if (!day) return;
-
-    const originalNote = await getNote(day.master_day_number);
-
-    try {
-      const saved = await saveNote({
-        meditation_day: day.master_day_number,
-        content: noteContent ?? "",
-        id: originalNote?.id
-      });
-      setNoteId(saved.id);
-      toast.success('Note saved successfully!');
-    } catch (error) {
-      console.error('Error saving note:', error);
-      toast.error('Failed to save note.');
-    } finally {
-      setShowNoteModal(false);
-    }
-  };
-
-  const handleDeleteNote = async () => {
-    if (!day) return;
+  const refreshNote = async () => {
+    if (!day?.master_day_number) return;
 
     try {
-      console.log('Deleting note for day:', day.master_day_number);
-      await deleteNote(day.master_day_number);
-      setNoteContent("");
-      setNoteId(null);
-      toast.success('Note deleted successfully!');
-    } catch (error) {
-      console.error('Error deleting note:', error);
-      toast.error('Failed to delete note.');
-      setShowNoteModal(false);
-      getNote(day.master_day_number)
+      const fetchedNote = await getNote(day.master_day_number);
+      if (fetchedNote) {
+        setNoteContent(fetchedNote.content);
+        setNoteId(fetchedNote.id);
+        setNote(fetchedNote);
+      } else {
+        setNoteContent(""); // Clear the content if the note is deleted
+        setNoteId(null); // Reset the note ID
+        setNote(null);
+      }
+    } catch (err) {
+      console.warn("No note found for day", day.master_day_number);
+      setNoteContent(""); // Clear the content if the note is deleted
+      setNoteId(null); // Reset the note ID
+      setNote(null);
     } finally {
-      setShowNoteModal(false);
-      getNote(day.master_day_number)
+      setLoadingNote(false);
     }
   };
 
   useEffect(() => {
-    const fetchNote = async () => {
-      if (!day?.master_day_number) return;
-
-      try {
-        const note = await getNote(day.master_day_number);
-        setNoteContent(note.content);
-        setNoteId(note.id);
-      } catch (err) {
-        console.warn('No note found for day', day.master_day_number);
-      } finally {
-        setLoadingNote(false);
-      }
-    };
-
-    fetchNote();
+    refreshNote();
   }, [day?.master_day_number]);
-
-
 
   const handleMarkDayComplete = async () => {
     try {
@@ -96,7 +70,7 @@ export default function MeditationDayPage() {
     } catch (error) {
       console.error("Failed to mark day complete:", error);
     }
-  }
+  };
 
   useEffect(() => {
     if (arcID && arcDayNumber) {
@@ -106,12 +80,19 @@ export default function MeditationDayPage() {
     }
   }, [arcID, arcDayNumber]);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [arcDayNumber]);
+  if (!day || loadingNote)
+    return <p className="text-center text-white mt-10">Loading...</p>;
 
-    if (!day || loadingNote) return <p className="text-center text-white mt-10">Loading...</p>;
+  // Used to clear the selected note when closing the modal.
+  function setSelectedNote(_: null) {
+    setNoteContent("");
+    setNoteId(null);
+  }
 
+  async function fetchNotes() {
+    setLoadingNote(true);
+    await refreshNote();
+  }
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[var(--bg-light)] via-[var(--bg-mid)] to-[var(--bg-dark)] text-white px-6 pb-2 pt-0">
@@ -119,40 +100,40 @@ export default function MeditationDayPage() {
 
       {/* Header */}
       <section className="text-center mb-6 relative">
-              <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-main)] mb-2 leading-snug">
-                {day.day_title}
-              </h1>
-              <p className="text-sm italic text-[var(--text-muted)]">
-                Arc: {day.arc_title} (Day {day.arc_day_number} of {day.arc_total_days}) •{" "}
-                <Link
-                  to={`/arcs/${day.arc_id}`}
-                  className="underline hover:text-[var(--brand-primary)]"
-                >
-                  View Arc
-                </Link>
-              </p>
-      
-              {day.resolution && (
-                <button
-                  onClick={() => setShowResolution(!showResolution)}
-                  className="absolute top-0 right-0 mt-2 mr-2 text-xs text-[var(--text-muted)] hover:text-white border border-white/20 px-3 py-1 rounded-full transition-all duration-200"
-                >
-                  {showResolution ? "Hide Resolution" : "Show Suggested Resolution"}
-                </button>
-              )}
-            </section>
+        <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-main)] mb-2 leading-snug">
+          {day.day_title}
+        </h1>
+        <p className="text-sm italic text-[var(--text-muted)]">
+          Arc: {day.arc_title} (Day {day.arc_day_number} of {day.arc_total_days}
+          ) •{" "}
+          <Link
+            to={`/arcs/${day.arc_id}`}
+            className="underline hover:text-[var(--brand-primary)]"
+          >
+            View Arc
+          </Link>
+        </p>
 
-            {user && (
-              <div className="flex justify-end gap-3 mt-2 mr-4">
-                <button
-                  className="bg-purple-700 hover:bg-purple-800 text-white px-4 py-2 rounded shadow"
-                  onClick={() => setShowNoteModal(true)}
-                >
-                  {noteContent ? 'Edit Your Notes' : 'Take Meditation Notes'}
-                </button>
-              </div>
-            )}
+        {day.resolution && (
+          <button
+            onClick={() => setShowResolution(!showResolution)}
+            className="absolute top-0 right-0 mt-2 mr-2 text-xs text-[var(--text-muted)] hover:text-white border border-white/20 px-3 py-1 rounded-full transition-all duration-200"
+          >
+            {showResolution ? "Hide Resolution" : "Show Suggested Resolution"}
+          </button>
+        )}
+      </section>
 
+      {user && (
+        <div className="flex justify-end gap-3 mt-2 mr-4">
+          <button
+            className="bg-purple-700 hover:bg-purple-800 text-white px-4 py-2 rounded shadow"
+            onClick={openModal}
+          >
+            {noteContent ? "Edit Your Notes" : "Take Meditation Notes"}
+          </button>
+        </div>
+      )}
 
       {/* Side-by-Side Image and Readings */}
       <section className="flex flex-col md:flex-row items-center justify-center gap-12 mb-6">
@@ -256,11 +237,15 @@ export default function MeditationDayPage() {
         {day.arc_day_number > 1 ? (
           <button
             className="text-sm text-[var(--text-light)] hover:text-white underline"
-            onClick={() => navigate(`/days/${day.arc_id}/${day.arc_day_number - 1}`)}
+            onClick={() =>
+              navigate(`/days/${day.arc_id}/${day.arc_day_number - 1}`)
+            }
           >
             ← Previous Day
           </button>
-        ) : <div />}
+        ) : (
+          <div />
+        )}
 
         {isCurrentArc && isCurrentDay && (
           <button
@@ -274,65 +259,34 @@ export default function MeditationDayPage() {
         {day.arc_day_number < day.arc_total_days ? (
           <button
             className="text-sm text-[var(--text-light)] hover:text-white underline"
-            onClick={() => navigate(`/days/${day.arc_id}/${day.arc_day_number + 1}`)}
+            onClick={() =>
+              navigate(`/days/${day.arc_id}/${day.arc_day_number + 1}`)
+            }
           >
             Next Day →
           </button>
-        ) : <div />}
+        ) : (
+          <div />
+        )}
       </div>
 
       {/* Note Editor Modal */}
-      {showNoteModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-[#fefae0] text-gray-900 w-[90%] max-w-2xl rounded-lg shadow-lg border border-gray-300 px-6 py-6 relative font-serif">
-            {/* Close Button */}
-            <button
-              className="absolute top-3 right-4 text-gray-500 hover:text-gray-700 text-xl"
-              onClick={() => setShowNoteModal(false)}
-            >
-              &times;
-            </button>
-
-            {/* Title */}
-            <h2 className="text-2xl font-bold mb-4 text-center border-b pb-2 border-gray-300">
-              My Meditation Notes
-            </h2>
-
-            {/* Textarea */}
-            <textarea
-              className="w-full h-64 p-4 bg-transparent border border-gray-400 rounded-lg resize-none font-serif text-[1rem] leading-relaxed focus:outline-none focus:ring-2 focus:ring-purple-400"
-              placeholder="Write your thoughts, inspirations, or resolutions here..."
-              value={noteContent}
-              onChange={(e) => setNoteContent(e.target.value)}
-            />
-
-            {/* Buttons */}
-            <div className="mt-6 flex justify-between items-center">
-              <button
-                className="bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400"
-                onClick={() => setShowNoteModal(false)}
-              >
-                Cancel
-              </button>
-              <div className="flex gap-2">
-                {noteId && (
-                  <button
-                    className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
-                    onClick={handleDeleteNote}
-                  >
-                    Delete
-                  </button>
-                )}
-                <button
-                  className="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800"
-                  onClick={handleSaveNote}
-                >
-                  Save Note
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+      {isOpen && (
+        <EditNoteModal
+          modalId="editNoteModal"
+          day={note}
+          title={day.day_title}
+          content={noteContent}
+          master_day_number={day.master_day_number}
+          onClose={() => {
+            closeModal(); // Close EditNoteModal
+            setSelectedNote(null); // Clear selected note
+          }}
+          onUpdate={() => {
+            closeModal(); // Close EditNoteModal
+            fetchNotes(); // Refresh notes
+          }}
+        />
       )}
     </main>
   );

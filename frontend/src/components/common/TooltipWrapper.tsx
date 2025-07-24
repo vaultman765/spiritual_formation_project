@@ -12,7 +12,7 @@ export default function TooltipWrapper({
 
   return (
     <div
-      className="relative"
+      className="relative group"
       onMouseEnter={() => setVisible(true)}
       onMouseLeave={() => setVisible(false)}
     >

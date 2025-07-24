@@ -11,8 +11,6 @@ const headers = {
 
 export const getNote = async (dayId: number): Promise<MeditationNote> => {
   const res = await axios.get<MeditationNote[]>(`/api/notes/?day=${dayId}`);
-  console.log(`Fetched note for day ${dayId}:`, res.data);
-  console.log('res.data.id:', res.data[0]?.id);
   return res.data[0];
 };
 
@@ -27,10 +25,6 @@ export const saveNote = async (note: NoteInput): Promise<MeditationNote> => {
     method = 'put';
     url = `/api/notes/${note.id}/`;
   }
-  console.log('Sending note payload:', {
-    meditation_day: note.meditation_day,
-    content: note.content,
-  });
 
   const res = await axios({
     method,
