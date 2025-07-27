@@ -1,10 +1,12 @@
 import { useModal } from "@/hooks/useModal";
+import { useEffect } from "react";
 
 interface ModalProps {
   modalId: string;
   children: React.ReactNode;
   modalBackground?: string;
   modalClassName?: string;
+  onClose?: () => void;
 }
 
 interface ModalButtonProps {
@@ -24,14 +26,40 @@ export function BaseModal({
   children,
   modalBackground = "modal-background",
   modalClassName = "modal-default",
+  onClose,
 }: ModalProps) {
-  const { isOpen } = useModal(modalId);
+  const { isOpen, closeModal } = useModal(modalId);
+
+  // Handle modal close logic
+  const handleClose = () => {
+    if (onClose) onClose();
+    closeModal();
+  };
+
+  // Close modal on Escape key press
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        handleClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
   return (
     <div className={modalBackground}>
-      <div className={modalClassName}>{children}</div>
+      <div className={modalClassName} onClick={(e) => e.stopPropagation()}>
+        {children}
+      </div>
     </div>
   );
 }

@@ -1,15 +1,15 @@
-import { useEffect, useState, useMemo } from "react";
 import NoteCard from "@/components/cards/NoteCard";
+import { ModalRenderer } from "@/components/modals/BaseModal";
 import {
-  ViewerNoteModal,
   EditNoteModal,
+  ViewerNoteModal,
 } from "@/components/modals/NoteModal/NoteModal";
 import SimpleListboxDropdown from "@/components/SimpleListboxDropdown";
+import { useModal } from "@/hooks/useModal";
 import { getAllNotes } from "@/hooks/useNotes";
 import { groupNotesByArc, groupNotesByMonth } from "@/utils/groupNotes";
 import type { MeditationNote } from "@/utils/types";
-import { useModal } from "@/hooks/useModal";
-import { ModalRenderer } from "@/components/modals/BaseModal";
+import { useEffect, useMemo, useState } from "react";
 
 export default function NotesPage() {
   const [notes, setNotes] = useState<MeditationNote[]>([]);

@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
 import * as modal from "@/components/modals/BaseModal";
-import { useModal } from "@/hooks/useModal";
-import type { MeditationNote } from "@/utils/types";
 import EditNoteContent from "@/components/modals/NoteModal/EditNoteContent";
 import {
   EditNoteModalButtons,
   ViewNoteModalButtons,
 } from "@/components/modals/NoteModal/NoteModalButtons";
+import { useModal } from "@/hooks/useModal";
+import type { MeditationNote } from "@/utils/types";
+import { useEffect, useState } from "react";
 
 interface NoteModalProps {
   modalId: string;
@@ -26,6 +26,7 @@ export function EditNoteModal({
   content,
   master_day_number,
   onUpdate,
+  onClose,
 }: NoteModalProps) {
   const { isOpen } = useModal(modalId);
   const [noteContent, setNoteContent] = useState(content);
@@ -38,7 +39,7 @@ export function EditNoteModal({
 
   if (!master_day_number) {
     return (
-      <modal.BaseModal modalId={modalId}>
+      <modal.BaseModal modalId={modalId} onClose={onClose}>
         <modal.CloseButton modalId={modalId} />
         <div className="p-6 text-center">
           <h2 className="text-lg font-semibold">No Day Selected</h2>
@@ -49,7 +50,7 @@ export function EditNoteModal({
   }
 
   return (
-    <modal.BaseModal modalId={modalId}>
+    <modal.BaseModal modalId={modalId} onClose={onClose}>
       <modal.CloseButton modalId={modalId} />
       <modal.ModalTitle title={title} />
       <EditNoteContent
@@ -74,6 +75,7 @@ export function ViewerNoteModal({
   day,
   onUpdate,
   onEdit,
+  onClose,
 }: NoteModalProps) {
   const { isOpen } = useModal(modalId);
 
@@ -83,7 +85,7 @@ export function ViewerNoteModal({
 
   if (!meditation_day_full?.master_day_number) {
     return (
-      <modal.BaseModal modalId={modalId}>
+      <modal.BaseModal modalId={modalId} onClose={onClose}>
         <modal.CloseButton modalId={modalId} />
         <div className="p-6 text-center">
           <h2 className="text-lg font-semibold">No Day Selected</h2>
@@ -94,7 +96,7 @@ export function ViewerNoteModal({
   }
 
   return (
-    <modal.BaseModal modalId={modalId}>
+    <modal.BaseModal modalId={modalId} onClose={onClose}>
       <modal.CloseButton modalId={modalId} />
       <modal.ModalTitle title={meditation_day_full.day_title} />
       <div

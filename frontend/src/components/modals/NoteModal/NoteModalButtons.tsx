@@ -1,9 +1,9 @@
-import { toast } from "react-toastify";
-import { CancelButton } from "@/components/modals/BaseModal";
-import type { MeditationNote } from "@/utils/types";
 import * as modal from "@/components/modals/BaseModal";
-import { saveNote, deleteNote } from "@/hooks/useNotes";
+import { CancelButton } from "@/components/modals/BaseModal";
 import { useModal } from "@/hooks/useModal";
+import { deleteNote, saveNote } from "@/hooks/useNotes";
+import type { MeditationNote } from "@/utils/types";
+import { toast } from "react-toastify";
 
 interface NoteActionButtonProps {
   id?: number;
@@ -82,23 +82,30 @@ export function NoteActionButton({
 }
 
 export function EditNoteModalButtons({
+  id,
   modalId,
   master_day_number,
   content,
   setNoteId,
   onUpdate,
-  id, // Add id to props
+  onClose,
 }: {
+  id?: number;
   modalId: string;
   master_day_number: number;
   content: string;
   setNoteId: (id: number | null) => void;
   onUpdate: () => void;
-  id?: number; // Add id to props
+  onClose?: () => void;
 }) {
   return (
     <div className="mt-6 flex justify-between items-center">
-      <CancelButton modalId={modalId} onClick={() => {}} />
+      <CancelButton
+        modalId={modalId}
+        onClick={() => {
+          if (onClose) onClose(); // Invoke onClose if provided
+        }}
+      />
       <div className="flex gap-2">
         <NoteActionButton
           modalId={modalId}
@@ -128,6 +135,7 @@ export function ViewNoteModalButtons({
   setNoteId,
   onUpdate,
   onEdit,
+  onClose,
 }: {
   modalId: string;
   note: MeditationNote;
@@ -136,10 +144,16 @@ export function ViewNoteModalButtons({
   setNoteId: (id: number | null) => void;
   onUpdate: () => void;
   onEdit: () => void;
+  onClose?: () => void;
 }) {
   return (
     <div className="mt-6 flex justify-between items-center">
-      <CancelButton modalId={modalId} onClick={() => {}} />
+      <CancelButton
+        modalId={modalId}
+        onClick={() => {
+          if (onClose) onClose(); // Invoke onClose if provided
+        }}
+      />
       <div className="flex gap-2">
         <NoteActionButton
           modalId={modalId}

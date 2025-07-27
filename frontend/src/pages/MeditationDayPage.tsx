@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
-import { useAuth } from "@/context/authContext";
 import { fetchDayByArc } from "@/api/days";
-import type { MeditationData, MeditationNote } from "@/utils/types";
 import SecondaryReadings from "@/components/SecondaryReadings";
 import ScrollToTop from "@/components/common/ScrollToTop";
-import { useJourney } from "@/context/journeyContext";
-import { getNote } from "@/hooks/useNotes";
-import { useModal } from "@/hooks/useModal";
 import { EditNoteModal } from "@/components/modals/NoteModal/NoteModal";
+import { useAuth } from "@/context/authContext";
+import { useJourney } from "@/context/journeyContext";
+import { useModal } from "@/hooks/useModal";
+import { getNote } from "@/hooks/useNotes";
+import type { MeditationData, MeditationNote } from "@/utils/types";
+import { useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function MeditationDayPage() {
   const { user } = useAuth();
@@ -279,12 +279,12 @@ export default function MeditationDayPage() {
           content={noteContent}
           master_day_number={day.master_day_number}
           onClose={() => {
-            closeModal(); // Close EditNoteModal
-            setSelectedNote(null); // Clear selected note
+            closeModal();
+            setSelectedNote(null);
           }}
           onUpdate={() => {
-            closeModal(); // Close EditNoteModal
-            fetchNotes(); // Refresh notes
+            closeModal();
+            fetchNotes();
           }}
         />
       )}
