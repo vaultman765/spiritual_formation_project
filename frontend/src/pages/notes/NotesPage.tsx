@@ -94,9 +94,11 @@ export default function NotesPage() {
   useEffect(() => {
     if (sortBy === "month") {
       const grouped = groupNotesByMonth(filteredNotes);
+      console.log("Grouped Notes by Month:", grouped); // Debugging
       setGroupedNotes(grouped);
     } else {
       const grouped = groupNotesByArc(filteredNotes);
+      console.log("Grouped Notes by Arc:", grouped); // Debugging
       setGroupedNotes(grouped);
     }
   }, [filteredNotes, sortBy]);
@@ -129,25 +131,29 @@ export default function NotesPage() {
           />
         </div>
 
-        {Object.entries(groupedNotes || {}).map(([groupTitle, groupNotes]) => (
-          <div key={groupTitle} className="mb-10">
-            <h2 className="text-lg text-white/60 font-semibold mb-3">
-              {groupTitle}
-            </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {groupNotes.map((note) => (
-                <NoteCard
-                  key={note.id}
-                  note={note}
-                  onClick={() => {
-                    setSelectedNote(note);
-                    openViewerModal(); // Open ViewerNoteModal
-                  }}
-                />
-              ))}
+        {Object.entries(groupedNotes || {}).length === 0 ? (
+          <p className="text-center text-white">No notes available.</p>
+        ) : (
+          Object.entries(groupedNotes).map(([groupTitle, groupNotes]) => (
+            <div key={groupTitle} className="mb-10">
+              <h2 className="text-lg text-white/60 font-semibold mb-3">
+                {groupTitle}
+              </h2>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {groupNotes.map((note) => (
+                  <NoteCard
+                    key={note.id}
+                    note={note}
+                    onClick={() => {
+                      setSelectedNote(note);
+                      openViewerModal(); // Open ViewerNoteModal
+                    }}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        )}
 
         <ModalRenderer modals={modals} />
       </div>

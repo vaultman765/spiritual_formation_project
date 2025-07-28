@@ -1,6 +1,6 @@
-import type { MeditationNote } from "@/utils/types";
+import { CardTitle, CustomOnClickCard } from "@/components/cards/BaseCard";
 import { formatDate } from "@/utils/dates";
-import { CustomOnClickCard, CardTitle } from "@/components/cards/BaseCard";
+import type { MeditationNote } from "@/utils/types";
 
 interface NoteCardProps {
   note: MeditationNote;
@@ -22,7 +22,7 @@ export default function NoteCard({ note, onClick }: NoteCardProps) {
   }
 
   return (
-    <CustomOnClickCard onClick={onClick}>
+    <CustomOnClickCard onClick={onClick} data-testid={`note-card-${note.id}`}>
       <CardTitle
         title={day_title}
         className="!text-yellow-300 mb-1 card-title"
