@@ -15,7 +15,7 @@
   - Display tooltips and metadata.
   - Handle `onReorder` and `onRemove` actions.
 
-## 3. Generalize Save and Update Logic
+## 3. Generalize Save and Update Logic ✅
 
 - Create a utility function `saveOrUpdateJourney` to:
   - Handle both creating and updating journeys.

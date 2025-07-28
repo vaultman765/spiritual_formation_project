@@ -8,10 +8,12 @@ import {
   Draggable,
   type DropResult,
 } from "@hello-pangea/dnd";
+import { ArcList } from "@/components/ArcList";
 import { useJourney } from "@/context/journeyContext";
 import TooltipWrapper from "@/components/common/TooltipWrapper";
 import { CustomJourneyArcCard } from "@/components/cards/ArcCard";
 import type { ArcData } from "@/utils/types";
+import { saveOrUpdateJourney } from "@/utils/journeyUtils";
 
 export default function CustomJourneyEditor() {
   const { activeJourney, updateJourney, refreshJourneys } = useJourney();
@@ -48,48 +50,21 @@ export default function CustomJourneyEditor() {
         ))
   );
 
-  const handleSelectedReorder = (result: DropResult) => {
-    const { source, destination } = result;
-    if (!destination) return;
-    if (
-      source.droppableId === destination.droppableId &&
-      source.index === destination.index
-    )
-      return;
-
-    const reordered = [...selectedArcs];
-    const [moved] = reordered.splice(source.index, 1);
-    reordered.splice(destination.index, 0, moved);
-    setSelectedArcs(reordered);
-  };
-
   const handleUpdate = async () => {
-    if (!activeJourney || selectedArcs.length === 0) return;
-
-    const confirmUpdate = window.confirm(
-      "This will reset the progress of your journey. All current arc progress will be lost.\n\nDo you want to continue?"
-    );
-
-    if (!confirmUpdate) return;
+    if (selectedArcs.length === 0) return;
 
     try {
-      await updateJourney(
-        activeJourney.id,
+      await saveOrUpdateJourney({
+        journeyId: activeJourney.id,
         title,
-        selectedArcs.map((arc, index) => ({
-          arc_id: arc.arc_id,
-          arc_title: arc.arc_title,
-          current_day: 1,
-          status: index === 0 ? "in_progress" : "upcoming",
-          order: index,
-          day_count: arc.day_count,
-        }))
-      );
+        arcs: selectedArcs,
+        updateJourney,
+      });
 
-      await refreshJourneys(); // refresh context
-      navigate("/my-journey");
+      await refreshJourneys();
+      setTimeout(() => navigate("/my-journey"), 50);
     } catch (err) {
-      console.error("Failed to update journey:", err);
+      console.error("Failed to create or overwrite journey:", err);
     }
   };
 
@@ -143,100 +118,28 @@ export default function CustomJourneyEditor() {
 
         {/* Available Arcs */}
         <div className="flex flex-col max-h-[65vh] overflow-y-auto p-4 rounded-xl bg-[var(--bg-card)] border border-white/10 shadow-inner mx-4">
-          <div className="gap-4">
-            {displayAvailableArcs.map((arc) => (
-              <div
-                key={arc.arc_id}
-                onClick={() => setSelectedArcs([...selectedArcs, arc])}
-                className="cursor-pointer"
-              >
-                <TooltipWrapper
-                  content={
-                    <>
-                      <p className="font-bold mb-1">{arc.arc_title}</p>
-                      <p className="italic text-sm mb-1 text-gray-300">
-                        {arc.primary_reading.join(", ")}
-                      </p>
-                      <p className="text-sm text-white">{arc.arc_summary}</p>
-                    </>
-                  }
-                >
-                  <div className="mb-2 transition duration-200 hover:scale-[1.01] hover:ring-2 hover:ring-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/20 rounded-xl">
-                    <CustomJourneyArcCard arc={arc} key={arc.arc_id} />
-                  </div>
-                </TooltipWrapper>
-              </div>
-            ))}
-          </div>
+          <ArcList
+            arcs={displayAvailableArcs}
+            onSelect={(arc) => setSelectedArcs([...selectedArcs, arc])} // Add to selected
+          />
         </div>
 
         {/* Selected Arcs with drag-to-reorder */}
         <div className="flex flex-col gap-4 max-h-[65vh] overflow-y-auto p-4 rounded-xl bg-[var(--bg-card)] border border-white/10 shadow-inner mx-4">
-          <DragDropContext onDragEnd={handleSelectedReorder}>
-            <Droppable droppableId="selected-arcs">
-              {(provided) => (
-                <div
-                  {...provided.droppableProps}
-                  ref={provided.innerRef}
-                  className="gap-4"
-                >
-                  {selectedArcs.map((arc, index) => (
-                    <Draggable
-                      draggableId={arc.arc_id}
-                      index={index}
-                      key={arc.arc_id}
-                    >
-                      {(provided) => (
-                        <div
-                          ref={provided.innerRef}
-                          {...provided.draggableProps}
-                          {...provided.dragHandleProps}
-                          className="relative mb-2"
-                        >
-                          {/* Remove button */}
-                          <button
-                            onClick={() =>
-                              setSelectedArcs(
-                                selectedArcs.filter(
-                                  (a) => a.arc_id !== arc.arc_id
-                                )
-                              )
-                            }
-                            className="absolute top-1 right-1 text-sm text-red-400 hover:text-red-600 z-10"
-                          >
-                            ✕
-                          </button>
-                          <TooltipWrapper
-                            content={
-                              <>
-                                <p className="font-bold mb-1">
-                                  {arc.arc_title}
-                                </p>
-                                <p className="italic text-sm mb-1 text-gray-300">
-                                  {arc.primary_reading.join(", ")}
-                                </p>
-                                <p className="text-sm text-white">
-                                  {arc.arc_summary}
-                                </p>
-                              </>
-                            }
-                          >
-                            <div className="transition duration-200 hover:scale-[1.01] hover:ring-2 hover:ring-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/20 rounded-xl">
-                              <CustomJourneyArcCard
-                                arc={arc}
-                                key={arc.arc_id}
-                              />
-                            </div>
-                          </TooltipWrapper>
-                        </div>
-                      )}
-                    </Draggable>
-                  ))}
-                  {provided.placeholder}
-                </div>
-              )}
-            </Droppable>
-          </DragDropContext>
+          <ArcList
+            arcs={selectedArcs}
+            onReorder={(sourceIndex, destinationIndex) => {
+              const reordered = [...selectedArcs];
+              const [moved] = reordered.splice(sourceIndex, 1);
+              reordered.splice(destinationIndex, 0, moved);
+              setSelectedArcs(reordered);
+            }}
+            onRemove={(arcId) =>
+              setSelectedArcs(
+                selectedArcs.filter((arc) => arc.arc_id !== arcId)
+              )
+            }
+          />
         </div>
       </div>
 
