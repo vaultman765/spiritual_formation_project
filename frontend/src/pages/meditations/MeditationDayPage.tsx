@@ -1,6 +1,5 @@
 import { fetchDayByArc } from "@/api/days";
 import SecondaryReadings from "@/components/SecondaryReadings";
-import ScrollToTop from "@/components/common/ScrollToTop";
 import { EditNoteModal } from "@/components/modals/NoteModal/NoteModal";
 import { useAuth } from "@/context/authContext";
 import { useJourney } from "@/context/journeyContext";

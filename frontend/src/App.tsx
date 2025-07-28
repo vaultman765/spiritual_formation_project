@@ -1,7 +1,6 @@
 // App.tsx
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MainLayout from "@/layouts/MainLayout";
-import Navbar from "@/components/common/Navbar";
 import HomePage from "@/pages/homepage/HomePage";
 import ExplorePage from "@/pages/explore/ExplorePage";
 import MeditationDayPage from "@/pages/meditations/MeditationDayPage";

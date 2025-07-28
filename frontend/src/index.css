@@ -1,11 +1,10 @@
 @import "tailwindcss";
-@import '@/styles/colors.css';
+@import "@/styles/colors.css";
 
 :root {
-  --font-display: 'EB Garamond', Georgia, serif;
-  --font-body: 'Inter', Arial, sans-serif;
+  --font-display: "EB Garamond", Georgia, serif;
+  --font-body: "Inter", Arial, sans-serif;
 }
-
 
 body {
   @apply antialiased font-sans leading-relaxed;
@@ -25,9 +24,12 @@ button {
 }
 
 @layer base {
-  h1, h2, h3, .font-display {
-  font-family: var(--font-display);
-  } 
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+  }
 }
 
 .tag-pill-meditation-card {
@@ -66,7 +68,7 @@ button {
 .card-image-container {
   max-height: 400px; /* max-h-[400px] */
   width: 100%; /* w-full */
-  padding: .5rem; /* px-4 */
+  padding: 0.5rem; /* px-4 */
   display: flex; /* flex */
   justify-content: center; /* justify-center */
   align-items: center; /* items-center */
@@ -117,9 +119,9 @@ button {
 }
 .card-title {
   font-weight: 600; /* font-semibold */
-  font-size: var(--text-lg); /* 1.125rem (18px) - text-lg*/ 
+  font-size: var(--text-lg); /* 1.125rem (18px) - text-lg*/
   line-height: var(--text-lg--line-height); /* calc(1.75 / 1.125) */
-  @apply text-[var(--text-light)]
+  @apply text-[var(--text-light)];
 }
 
 .modal-default {
