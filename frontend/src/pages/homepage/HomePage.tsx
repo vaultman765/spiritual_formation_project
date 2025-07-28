@@ -1,15 +1,14 @@
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { 
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import {
   fetchTodayMeditation,
   fetchTomorrowMeditation,
-  fetchJourneyMeditation 
-} from '@/api/homepage'
-import { useAuth } from '@/context/authContext';
+  fetchJourneyMeditation,
+} from "@/api/homepage";
+import { useAuth } from "@/context/authContext";
 import MeditationCard from "@/components/cards/MeditationCard";
-import { CustomLinkCard, CardTitle } from '@/components/cards/BaseCard';
+import { CustomLinkCard, CardTitle } from "@/components/cards/BaseCard";
 import type { MeditationData } from "@/utils/types";
-
 
 export default function HomePage() {
   const { user } = useAuth();
@@ -21,7 +20,7 @@ export default function HomePage() {
 
   useEffect(() => {
     if (user) {
-      fetch('/api/user/journey/', { credentials: 'include' })
+      fetch("/api/user/journey/", { credentials: "include" })
         .then((res) => {
           if (!res.ok) {
             if (res.status === 404) {
@@ -42,13 +41,15 @@ export default function HomePage() {
             return;
           }
 
-          const currentArc = arcs.find((a: any) => a.status === 'in_progress');
+          const currentArc = arcs.find((a: any) => a.status === "in_progress");
           if (!currentArc || !currentArc.arc_id || !currentArc.current_day) {
             console.warn("Current arc or required fields missing:", currentArc);
             return null; // or show a fallback UI
           }
 
-          const currentIndex = arcs.findIndex((a: any) => a.status === 'in_progress');
+          const currentIndex = arcs.findIndex(
+            (a: any) => a.status === "in_progress"
+          );
           const nextArc = arcs[currentIndex + 1];
 
           if (!currentArc) {
@@ -80,25 +81,20 @@ export default function HomePage() {
           setNoJourney(true);
         });
     } else {
-      fetchTodayMeditation()
-        .then(setToday)
-        .catch(console.error);
+      fetchTodayMeditation().then(setToday).catch(console.error);
 
-      fetchTomorrowMeditation()
-        .then(setTomorrow)
-        .catch(console.error);
+      fetchTomorrowMeditation().then(setTomorrow).catch(console.error);
     }
   }, [user]);
 
-  // 🩹 Bugfix: if user has no journey and today/tomorrow still null, load public meditations
   useEffect(() => {
     if (user && noJourney && !today && !tomorrow) {
-      fetch('/api/days/homepage/today')
+      fetch("/api/days/homepage/today")
         .then((res) => res.json())
         .then(setToday)
         .catch(console.error);
 
-      fetch('/api/days/homepage/tomorrow')
+      fetch("/api/days/homepage/tomorrow")
         .then((res) => res.json())
         .then(setTomorrow)
         .catch(console.error);
@@ -106,19 +102,20 @@ export default function HomePage() {
   }, [user, noJourney, today, tomorrow]);
 
   return (
-    <main className="main-background">
+    <main>
       <header className="header">
         <h1 className="text-5xl md:text-6xl font-display font-semibold text-[var(--text-main)]">
           Encounter God through Ignatian Mental Prayer
         </h1>
         <p className="mt-4 text-[var(--text-muted)] max-w-4xl mx-auto text-lg">
-          Make time each day to step away, reflect, and grow in intimacy with the Lord.
+          Make time each day to step away, reflect, and grow in intimacy with
+          the Lord.
         </p>
         {!user && (
           <div className="mt-6">
             <button
               className="text-base font-semibold bg-[var(--brand-primary)] text-black px-6 py-2 rounded shadow-md shadow-black/20 hover:bg-[var(--hover-gold)] hover:ring-2 hover:ring-yellow-300/70 focus:ring"
-              onClick={() => navigate('/auth/register')}
+              onClick={() => navigate("/auth/register")}
             >
               Start Here
             </button>
@@ -129,12 +126,15 @@ export default function HomePage() {
       <section className="px-6 py-2 max-w-6xl mx-auto">
         {noJourney && user && (
           <div className="bg-white/10 border border-white/30 rounded p-6 mb-8 text-center text-white shadow-md">
-            <p className="text-lg font-medium mb-2">📘 You haven’t started a journey yet.</p>
+            <p className="text-lg font-medium mb-2">
+              📘 You haven’t started a journey yet.
+            </p>
             <p className="text-sm text-white/80 mb-4">
-              These are sample meditations from our meditation library. To receive daily recommendations, begin your own journey.
+              These are sample meditations from our meditation library. To
+              receive daily recommendations, begin your own journey.
             </p>
             <button
-              onClick={() => navigate('/explore')}
+              onClick={() => navigate("/explore")}
               className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-2 rounded"
             >
               Explore the Journey Library
@@ -146,7 +146,9 @@ export default function HomePage() {
             <MeditationCard
               dayTitle={today.day_title}
               subtitle="Current Meditation"
-              imageSrc={`/images/arc_days/${String(today.arc_id)}_day_${String(today.arc_day_number).padStart(2, '0')}.jpg`}
+              imageSrc={`/images/arc_days/${String(today.arc_id)}_day_${String(
+                today.arc_day_number
+              ).padStart(2, "0")}.jpg`}
               altText={today.day_title}
               link={`/days/${today.arc_id}/${today.arc_day_number}`}
               tag={`Arc: ${today.arc_title} – Day ${today.arc_day_number}`}
@@ -156,7 +158,9 @@ export default function HomePage() {
             <MeditationCard
               dayTitle={tomorrow.day_title}
               subtitle="Next Meditation"
-              imageSrc={`/images/arc_days/${String(tomorrow.arc_id)}_day_${String(tomorrow.arc_day_number).padStart(2, '0')}.jpg`}
+              imageSrc={`/images/arc_days/${String(
+                tomorrow.arc_id
+              )}_day_${String(tomorrow.arc_day_number).padStart(2, "0")}.jpg`}
               altText={tomorrow.day_title}
               link={`/days/${tomorrow.arc_id}/${tomorrow.arc_day_number}`}
               tag={`Arc: ${tomorrow.arc_title} – Day ${tomorrow.arc_day_number}`}
@@ -164,9 +168,11 @@ export default function HomePage() {
           )}
           {user && journeyComplete && !tomorrow && (
             <div className="text-center col-span-2 text-white">
-              <p className="text-xl mb-2">🎉 You’ve completed your current journey!</p>
+              <p className="text-xl mb-2">
+                🎉 You’ve completed your current journey!
+              </p>
               <button
-                onClick={() => navigate('/create-custom-journey')}
+                onClick={() => navigate("/create-custom-journey")}
                 className="mt-2 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-6 py-2 rounded shadow transition"
               >
                 Start a New Journey
@@ -177,10 +183,14 @@ export default function HomePage() {
       </section>
 
       <section className="px-6 pb-2 pt-4 grid grid-cols-1 gap-6 max-w-6xl mx-auto">
-        <CustomLinkCard link ='/how-to-pray'>
-          <CardTitle title="📖 How to Pray" className='!text-xl tracking-wide card-title' />
+        <CustomLinkCard link="/how-to-pray">
+          <CardTitle
+            title="📖 How to Pray"
+            className="!text-xl tracking-wide card-title"
+          />
           <p className="text-[var(--text-muted)] font-display">
-            New to Mental Prayer? Learn how to begin using the method taught by St. Ignatius.
+            New to Mental Prayer? Learn how to begin using the method taught by
+            St. Ignatius.
           </p>
         </CustomLinkCard>
       </section>

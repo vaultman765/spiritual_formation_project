@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
     "test": "jest --watchAll --coverage",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
@@ -41,7 +40,6 @@
     "@types/testing-library__react": "^10.0.1",
     "@vitejs/plugin-react": "^4.5.2",
     "autoprefixer": "^10.4.21",
-    "babel-jest": "^30.0.4",
     "eslint": "^9.29.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",

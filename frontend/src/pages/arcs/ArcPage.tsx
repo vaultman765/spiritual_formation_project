@@ -23,21 +23,21 @@ export default function ArcPage() {
 
   const isSingleReading = arc?.primary_reading.length === 1;
 
-    const dailyCards =
-      arc && days.length
-        ? Array.from({ length: arc.day_count }, (_, i) => ({
-            day: i + 1,
-            day_title: days[i].day_title,
-            reading: isSingleReading ? null : days[i].primary_reading_title ?? null,
-          }))
-        : [];
-
+  const dailyCards =
+    arc && days.length
+      ? Array.from({ length: arc.day_count }, (_, i) => ({
+          day: i + 1,
+          day_title: days[i].day_title,
+          reading: isSingleReading
+            ? null
+            : days[i].primary_reading_title ?? null,
+        }))
+      : [];
 
   if (!arc) return <p className="text-white text-center mt-10">Loading...</p>;
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[var(--bg-light)] via-[var(--bg-mid)] to-[var(--bg-dark)] text-white px-6">
-
+    <main>
       {/* Title */}
       <section className="text-center mb-10">
         <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-main)]">
@@ -64,7 +64,7 @@ export default function ArcPage() {
               Primary Reading
             </h2>
             <p className="text-lg font-semibold text-[var(--text-light)]">
-              {isSingleReading ? arc.primary_reading[0] : 'Various (see below)'}
+              {isSingleReading ? arc.primary_reading[0] : "Various (see below)"}
             </p>
           </div>
 
@@ -89,7 +89,12 @@ export default function ArcPage() {
         </h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto px-4">
           {dailyCards.map(({ day, day_title, reading }) => (
-            <Link title={day_title} to={`/days/${arcId}/${day}`} key={day} className="!no-underline block">
+            <Link
+              title={day_title}
+              to={`/days/${arcId}/${day}`}
+              key={day}
+              className="!no-underline block"
+            >
               <li
                 className="bg-white/5 px-4 py-3 rounded-md shadow shadow-black/10 hover:bg-white/10 transition
                   flex flex-col justify-evenly items-center
@@ -99,7 +104,7 @@ export default function ArcPage() {
                   Day {day}
                 </div>
                 <div className="font-semibold text-[var(--text-light)] text-center text-sm overflow-hidden text-ellipsis line-clamp-1 leading-tight">
-                  {day_title ?? 'Untitled'}
+                  {day_title ?? "Untitled"}
                 </div>
                 {reading && (
                   <div className="text-[var(--text-muted)] italic text-xs text-center mt-1">
@@ -111,7 +116,7 @@ export default function ArcPage() {
           ))}
         </ul>
       </section>
-        
+
       {/* Begin Button */}
       <section className="text-center">
         <Link to={`/days/${arcId}/1`}>

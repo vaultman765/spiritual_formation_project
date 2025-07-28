@@ -104,7 +104,7 @@ export default function NotesPage() {
   }, [filteredNotes, sortBy]);
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[var(--bg-light)] via-[var(--bg-mid)] to-[var(--bg-dark)] text-white px-6 pb-2 pt-0">
+    <main>
       <div className="px-4 py-12 max-w-5xl mx-auto">
         <h1 className="text-4xl font-display text-white mb-2 text-center">
           My Notes

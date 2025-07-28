@@ -1,26 +1,26 @@
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   DragDropContext,
   Droppable,
   Draggable,
   type DropResult,
-} from '@hello-pangea/dnd';
-import TooltipWrapper from '@/components/common/TooltipWrapper';
-import type { ArcData } from '@/utils/types';
-import { CustomJourneyArcCard } from '@/components/cards/ArcCard';
-import { useJourney } from '@/context/journeyContext';
+} from "@hello-pangea/dnd";
+import TooltipWrapper from "@/components/common/TooltipWrapper";
+import type { ArcData } from "@/utils/types";
+import { CustomJourneyArcCard } from "@/components/cards/ArcCard";
+import { useJourney } from "@/context/journeyContext";
 
 export default function CreateCustomJourneyPage() {
   const [availableArcs, setAvailableArcs] = useState<ArcData[]>([]);
   const [selectedArcs, setSelectedArcs] = useState<ArcData[]>([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [title, setTitle] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [title, setTitle] = useState("");
   const navigate = useNavigate();
   const { createJourney, refreshJourneys } = useJourney();
 
   useEffect(() => {
-    fetch('/api/arcs/')
+    fetch("/api/arcs/")
       .then((res) => res.json())
       .then((data) => setAvailableArcs(data));
   }, []);
@@ -28,10 +28,10 @@ export default function CreateCustomJourneyPage() {
   const displayAvailableArcs = availableArcs.filter(
     (arc) =>
       !selectedArcs.some((selected) => selected.arc_id === arc.arc_id) &&
-      (
-        arc.arc_title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        arc.card_tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      )
+      (arc.arc_title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        arc.card_tags.some((tag) =>
+          tag.toLowerCase().includes(searchTerm.toLowerCase())
+        ))
   );
 
   const handleSelectedReorder = (result: DropResult) => {
@@ -65,21 +65,22 @@ export default function CreateCustomJourneyPage() {
         })),
       });
 
-      await refreshJourneys();  
-      setTimeout(() => navigate('/my-journey'), 50);
+      await refreshJourneys();
+      setTimeout(() => navigate("/my-journey"), 50);
     } catch (err) {
-      console.error('Failed to create or overwrite journey:', err);
+      console.error("Failed to create or overwrite journey:", err);
     }
   };
 
   return (
-    <main className="main-background text-white py-2">
-      <div className="text-center mb-4">
+    <main>
+      <div className="text-center mb-4 text-[var(--text-main)]">
         <h1 className="text-5xl font-display font-semibold mb-2">
           Create a Custom Journey
         </h1>
         <p className="text-lg text-white/70 max-w-2xl mx-auto">
-          Select and reorder arcs to build a mental prayer journey tailored to your needs.
+          Select and reorder arcs to build a mental prayer journey tailored to
+          your needs.
         </p>
       </div>
 
@@ -95,18 +96,17 @@ export default function CreateCustomJourneyPage() {
 
       <hr className="mt-4 mb-4 border-white/20" />
 
-      <div className="grid grid-cols-2  max-w-7xl mx-auto">
-
+      <div className="grid grid-cols-2 max-w-7xl mx-auto">
         {/* Search and Available Arcs Title */}
         <div className="text-center">
-          <h2 className="text-2xl font-semibold mb-2 relative inline-block after:content-[''] after:block after:h-[2px] after:w-8 after:bg-[var(--brand-primary)] after:mt-1 after:mx-auto">
+          <h2 className="text-2xl text-[var(--brand-primary)] font-semibold mb-2 relative inline-block after:content-[''] after:block after:h-[2px] after:w-8 after:bg-[var(--brand-primary)] after:mt-1 after:mx-auto">
             Available Arcs
           </h2>
         </div>
 
         {/* Selected Arcs Title */}
         <div className="text-center">
-          <h2 className="text-2xl font-semibold mb-2 relative inline-block after:content-[''] after:block after:h-[2px] after:w-8 after:bg-[var(--brand-primary)] after:mt-1 after:mx-auto">
+          <h2 className="text-2xl text-[var(--brand-primary)] font-semibold mb-2 relative inline-block after:content-[''] after:block after:h-[2px] after:w-8 after:bg-[var(--brand-primary)] after:mt-1 after:mx-auto">
             Selected Arcs
           </h2>
         </div>
@@ -122,9 +122,8 @@ export default function CreateCustomJourneyPage() {
         </div>
 
         {/* Available Arcs */}
-        <div className="flex flex-col max-h-[65vh] overflow-y-auto p-4 rounded-xl bg-[var(--bg-card)] border border-white/10 shadow-inner mx-4">          
+        <div className="flex flex-col max-h-[65vh] overflow-y-auto p-4 rounded-xl bg-[var(--bg-card)] border border-white/10 shadow-inner mx-4">
           <div className="gap-4">
-
             {displayAvailableArcs.map((arc) => (
               <div
                 key={arc.arc_id}
@@ -135,34 +134,38 @@ export default function CreateCustomJourneyPage() {
                   content={
                     <>
                       <p className="font-bold mb-1">{arc.arc_title}</p>
-                      <p className="italic text-sm mb-1 text-gray-300">{arc.primary_reading.join(', ')}</p>
+                      <p className="italic text-sm mb-1 text-gray-300">
+                        {arc.primary_reading.join(", ")}
+                      </p>
                       <p className="text-sm text-white">{arc.arc_summary}</p>
                     </>
                   }
                 >
-                <div className="mb-2 transition duration-200 hover:scale-[1.01] hover:ring-2 hover:ring-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/20 rounded-xl">
-                  <CustomJourneyArcCard arc={arc} key={arc.arc_id} />
-                </div>
+                  <div className="mb-2 transition duration-200 hover:scale-[1.01] hover:ring-2 hover:ring-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/20 rounded-xl">
+                    <CustomJourneyArcCard arc={arc} key={arc.arc_id} />
+                  </div>
                 </TooltipWrapper>
               </div>
             ))}
           </div>
         </div>
 
-        
-
         {/* Selected Arcs with drag-to-reorder */}
-        <div className="flex flex-col gap-4 max-h-[65vh] overflow-y-auto p-4 rounded-xl bg-[var(--bg-card)] border border-white/10 shadow-inner mx-4">          
+        <div className="flex flex-col gap-4 max-h-[65vh] overflow-y-auto p-4 rounded-xl bg-[var(--bg-card)] border border-white/10 shadow-inner mx-4">
           <DragDropContext onDragEnd={handleSelectedReorder}>
             <Droppable droppableId="selected-arcs">
               {(provided) => (
                 <div
                   {...provided.droppableProps}
                   ref={provided.innerRef}
-                  className="gap-4">
-                  {selectedArcs.map((arc, index) => (
-                    <Draggable draggableId={arc.arc_id} index={index} key={arc.arc_id}
+                  className="gap-4"
                 >
+                  {selectedArcs.map((arc, index) => (
+                    <Draggable
+                      draggableId={arc.arc_id}
+                      index={index}
+                      key={arc.arc_id}
+                    >
                       {(provided) => (
                         <div
                           ref={provided.innerRef}
@@ -174,7 +177,9 @@ export default function CreateCustomJourneyPage() {
                           <button
                             onClick={() =>
                               setSelectedArcs(
-                                selectedArcs.filter((a) => a.arc_id !== arc.arc_id)
+                                selectedArcs.filter(
+                                  (a) => a.arc_id !== arc.arc_id
+                                )
                               )
                             }
                             className="absolute top-1 right-1 text-sm text-red-400 hover:text-red-600 z-10"
@@ -184,20 +189,29 @@ export default function CreateCustomJourneyPage() {
                           <TooltipWrapper
                             content={
                               <>
-                                <p className="font-bold mb-1">{arc.arc_title}</p>
-                                <p className="italic text-sm mb-1 text-gray-300">{arc.primary_reading.join(', ')}</p>
-                                <p className="text-sm text-white">{arc.arc_summary}</p>
+                                <p className="font-bold mb-1">
+                                  {arc.arc_title}
+                                </p>
+                                <p className="italic text-sm mb-1 text-gray-300">
+                                  {arc.primary_reading.join(", ")}
+                                </p>
+                                <p className="text-sm text-white">
+                                  {arc.arc_summary}
+                                </p>
                               </>
                             }
                           >
-                              <div className="transition duration-200 hover:scale-[1.01] hover:ring-2 hover:ring-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/20 rounded-xl">
-                                <CustomJourneyArcCard arc={arc} key={arc.arc_id} />
-                              </div>
-                            </TooltipWrapper>
-                          </div>
-                        )}
-                      </Draggable>
-                    ))}
+                            <div className="transition duration-200 hover:scale-[1.01] hover:ring-2 hover:ring-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/20 rounded-xl">
+                              <CustomJourneyArcCard
+                                arc={arc}
+                                key={arc.arc_id}
+                              />
+                            </div>
+                          </TooltipWrapper>
+                        </div>
+                      )}
+                    </Draggable>
+                  ))}
                   {provided.placeholder}
                 </div>
               )}

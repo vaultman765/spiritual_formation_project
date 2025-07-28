@@ -1,21 +1,20 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import TagFilterDropdown from '@/components/TagFilterDropdown';
-import { DetailArcCard } from '@/components/cards/ArcCard';
-import { fetchAllArcs } from '@/api/arcs';
-import type { ArcData } from '@/utils/types';
-
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import TagFilterDropdown from "@/components/TagFilterDropdown";
+import { DetailArcCard } from "@/components/cards/ArcCard";
+import { fetchAllArcs } from "@/api/arcs";
+import type { ArcData } from "@/utils/types";
 
 export default function ExplorePage() {
-  const [search, setSearch] = useState('');
-  const [selectedTag, setSelectedTag] = useState<string>('');
+  const [search, setSearch] = useState("");
+  const [selectedTag, setSelectedTag] = useState<string>("");
   const [arcs, setArcs] = useState<ArcData[]>([]);
 
   const availableTags = Array.from(
     new Set(arcs.flatMap((arc) => arc.card_tags))
   ).sort();
 
-  const tagOptions = ['All Tags', ...availableTags];
+  const tagOptions = ["All Tags", ...availableTags];
 
   const filteredArcs = arcs.filter((arc) => {
     const searchText = search.toLowerCase();
@@ -27,18 +26,21 @@ export default function ExplorePage() {
     const matchesTag = selectedTag ? arc.card_tags.includes(selectedTag) : true;
 
     return matchesSearch && matchesTag;
-    });
-  
+  });
+
   useEffect(() => {
     fetchAllArcs().then(setArcs).catch(console.error);
-    }, []);
+  }, []);
 
   return (
-    <main className="main-background">
+    <main>
       <header className="header">
-        <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-main)]">Explore Arcs and Journeys</h1>
+        <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-main)]">
+          Explore Arcs and Journeys
+        </h1>
         <p className="mt-4 text-lg text-[var(--text-muted)] max-w-4xl mx-auto">
-          Explore all available arcs of mental prayer. Walk the full 1000+ day journey or begin with a custom path.
+          Explore all available arcs of mental prayer. Walk the full 1000+ day
+          journey or begin with a custom path.
         </p>
       </header>
 
@@ -67,14 +69,13 @@ export default function ExplorePage() {
           onChange={(e) => setSearch(e.target.value)}
           className="px-4 py-2 rounded bg-white/10 border border-white/20 text-white placeholder-gray-400 w-full md:w-1/2"
         />
-      
+
         {/* Tag Filter Dropdown */}
         <TagFilterDropdown
           selected={selectedTag}
           onChange={setSelectedTag}
           options={tagOptions}
         />
-
       </section>
 
       {/* Arc Grid */}

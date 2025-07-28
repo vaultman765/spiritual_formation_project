@@ -95,9 +95,7 @@ export default function MeditationDayPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[var(--bg-light)] via-[var(--bg-mid)] to-[var(--bg-dark)] text-white px-6 pb-2 pt-0">
-      <ScrollToTop />
-
+    <main>
       {/* Header */}
       <section className="text-center mb-6 relative">
         <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-main)] mb-2 leading-snug">
@@ -122,18 +120,17 @@ export default function MeditationDayPage() {
             {showResolution ? "Hide Resolution" : "Show Suggested Resolution"}
           </button>
         )}
+        {user && (
+          <div className="flex justify-end gap-3 mt-2 mr-4">
+            <button
+              className="absolute top-10 right-0 mt-2 mr-2 text-xs text-[var(--text-muted)] hover:text-white border border-white/20 px-3 py-1 rounded-full transition-all duration-200"
+              onClick={openModal}
+            >
+              {noteContent ? "Edit Your Notes" : "Take Meditation Notes"}
+            </button>
+          </div>
+        )}
       </section>
-
-      {user && (
-        <div className="flex justify-end gap-3 mt-2 mr-4">
-          <button
-            className="bg-purple-700 hover:bg-purple-800 text-white px-4 py-2 rounded shadow"
-            onClick={openModal}
-          >
-            {noteContent ? "Edit Your Notes" : "Take Meditation Notes"}
-          </button>
-        </div>
-      )}
 
       {/* Side-by-Side Image and Readings */}
       <section className="flex flex-col md:flex-row items-center justify-center gap-12 mb-6">
