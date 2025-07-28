@@ -18,7 +18,16 @@ export function useJourneyEditor({ initialJourney }: UseJourneyEditorProps) {
       .then((res) => res.json())
       .then((data) => setAvailableArcs(data))
       .catch(console.error);
-  }, []);
+
+    // Reset state for "create" mode
+    if (!initialJourney) {
+      setSelectedArcs([]);
+      setTitle("");
+    }
+  }, [initialJourney]);
+
+  
+  
 
   // Handle reordering of selected arcs
   const handleReorder = (sourceIndex: number, destinationIndex: number) => {

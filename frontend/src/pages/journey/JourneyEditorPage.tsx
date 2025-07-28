@@ -1,31 +1,33 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import {
-  DragDropContext,
-  Droppable,
-  Draggable,
-  type DropResult,
-} from "@hello-pangea/dnd";
-import TooltipWrapper from "@/components/common/TooltipWrapper";
-import type { ArcData } from "@/utils/types";
-import { ArcList } from "@/components/ArcList";
-import { CustomJourneyArcCard } from "@/components/cards/ArcCard";
-import { useJourney } from "@/context/journeyContext";
+import { useState, useEffect } from "react";
+import { useJourneyEditor } from "@/hooks/useJourneyEditor";
 import { saveOrUpdateJourney } from "@/utils/journeyUtils";
+import { ArcList } from "@/components/ArcList";
+import type { ArcData } from "@/utils/types";
+import { useJourney } from "@/context/journeyContext";
+import { useNavigate } from "react-router-dom";
 
-export default function CreateCustomJourneyPage() {
-  const [availableArcs, setAvailableArcs] = useState<ArcData[]>([]);
-  const [selectedArcs, setSelectedArcs] = useState<ArcData[]>([]);
+interface JourneyEditorPageProps {
+  mode: "create" | "edit";
+  initialJourney?: { title: string; arcs: ArcData[] };
+}
+
+export default function JourneyEditorPage({
+  mode,
+  initialJourney,
+}: JourneyEditorPageProps) {
+  const {
+    availableArcs,
+    selectedArcs,
+    title,
+    setTitle,
+    setSelectedArcs,
+    handleReorder,
+    refreshJourneys,
+  } = useJourneyEditor(mode === "edit" ? { initialJourney } : {});
+
+  const { createJourney, updateJourney, activeJourney } = useJourney();
   const [searchTerm, setSearchTerm] = useState("");
-  const [title, setTitle] = useState("");
   const navigate = useNavigate();
-  const { createJourney, refreshJourneys } = useJourney();
-
-  useEffect(() => {
-    fetch("/api/arcs/")
-      .then((res) => res.json())
-      .then((data) => setAvailableArcs(data));
-  }, []);
 
   const displayAvailableArcs = availableArcs.filter(
     (arc) =>
@@ -41,27 +43,43 @@ export default function CreateCustomJourneyPage() {
 
     try {
       await saveOrUpdateJourney({
+        journeyId: mode === "edit" ? activeJourney?.id : undefined,
         title,
         arcs: selectedArcs,
-        createJourney,
+        createJourney: mode === "create" ? createJourney : undefined,
+        updateJourney: mode === "edit" ? updateJourney : undefined,
       });
 
       await refreshJourneys();
-      setTimeout(() => navigate("/my-journey"), 50);
+      navigate("/my-journey");
     } catch (err) {
-      console.error("Failed to create or overwrite journey:", err);
+      console.error("Failed to save journey:", err);
     }
   };
+
+  useEffect(() => {
+    if (mode === "edit" && activeJourney) {
+      setTitle(activeJourney.title);
+      const selected = activeJourney.arc_progress.map((arc) => {
+        const fullArc = availableArcs.find((a) => a.arc_id === arc.arc_id);
+        return { ...arc, ...fullArc }; // Merge arc data with fullArc to include card_tags
+      });
+      setSelectedArcs(selected.filter(Boolean) as ArcData[]);
+    }
+  }, [activeJourney, availableArcs]);
 
   return (
     <main>
       <div className="text-center mb-4 text-[var(--text-main)]">
         <h1 className="text-5xl font-display font-semibold mb-2">
-          Create a Custom Journey
+          {mode === "create"
+            ? "Create a Custom Journey"
+            : "Edit Custom Journey"}
         </h1>
         <p className="text-lg text-white/70 max-w-2xl mx-auto">
-          Select and reorder arcs to build a mental prayer journey tailored to
-          your needs.
+          {mode === "create"
+            ? "Select and reorder arcs to build a mental prayer journey tailored to your needs."
+            : "Add, remove, or reorder arcs in your journey."}
         </p>
       </div>
 
@@ -102,24 +120,19 @@ export default function CreateCustomJourneyPage() {
           />
         </div>
 
-        {/* Available Arcs */}
+        {/* Available Arcs List */}
         <div className="flex flex-col max-h-[65vh] overflow-y-auto p-4 rounded-xl bg-[var(--bg-card)] border border-white/10 shadow-inner mx-4">
           <ArcList
             arcs={displayAvailableArcs}
-            onSelect={(arc) => setSelectedArcs([...selectedArcs, arc])} // Add to selected
+            onSelect={(arc) => setSelectedArcs([...selectedArcs, arc])}
           />
         </div>
 
-        {/* Selected Arcs with drag-to-reorder */}
+        {/* Selected Arcs List */}
         <div className="flex flex-col gap-4 max-h-[65vh] overflow-y-auto p-4 rounded-xl bg-[var(--bg-card)] border border-white/10 shadow-inner mx-4">
           <ArcList
             arcs={selectedArcs}
-            onReorder={(sourceIndex, destinationIndex) => {
-              const reordered = [...selectedArcs];
-              const [moved] = reordered.splice(sourceIndex, 1);
-              reordered.splice(destinationIndex, 0, moved);
-              setSelectedArcs(reordered);
-            }}
+            onReorder={handleReorder}
             onRemove={(arcId) =>
               setSelectedArcs(
                 selectedArcs.filter((arc) => arc.arc_id !== arcId)
@@ -129,13 +142,23 @@ export default function CreateCustomJourneyPage() {
         </div>
       </div>
 
-      <div className="text-center mt-6">
-        <button
-          onClick={handleSave}
-          className="bg-yellow-500 hover:bg-yellow-600 px-10 py-4 rounded-xl text-black font-bold shadow-md hover:shadow-lg transition"
-        >
-          Save Journey
-        </button>
+      <div className="flex flex-row gap-6 justify-center mt-6">
+        <div className="flex justify-center mb-4">
+          <button
+            onClick={handleSave}
+            className="bg-yellow-500 hover:bg-yellow-600 px-10 py-4 rounded-xl text-black font-bold shadow-md hover:shadow-lg transition"
+          >
+            {mode === "create" ? "Create Journey" : "Save Changes"}
+          </button>
+        </div>
+        <div className="flex justify-center mb-4">
+          <button
+            onClick={() => navigate("/my-journey")}
+            className="bg-gray-600 hover:bg-gray-700 px-6 py-2 rounded-xl text-white font-semibold shadow hover:shadow-lg transition"
+          >
+            Cancel
+          </button>
+        </div>
       </div>
     </main>
   );

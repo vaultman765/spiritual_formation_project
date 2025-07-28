@@ -1,11 +1,11 @@
 import type { ArcData } from "@/utils/types";
 
 interface SaveOrUpdateJourneyParams {
-  journeyId?: string; // Optional for updates
+  journeyId?: number; // Optional for updates
   title: string;
   arcs: ArcData[];
   createJourney?: (data: any) => Promise<void>;
-  updateJourney?: (id: string, data: any) => Promise<void>;
+  updateJourney?: (id: number, title: string, data: any) => Promise<void>;
 }
 
 export async function saveOrUpdateJourney({
@@ -26,9 +26,17 @@ export async function saveOrUpdateJourney({
 
   if (journeyId) {
     // Update existing journey
-    await updateJourney(journeyId, title, arcProgress);
+    if (updateJourney) {
+      await updateJourney(journeyId, title, arcProgress);
+    } else {
+      throw new Error("updateJourney function is not provided.");
+    }
   } else {
     // Create new journey
-    await createJourney({ title, arc_progress: arcProgress });
+    if (createJourney) {
+      await createJourney({ title, arc_progress: arcProgress });
+    } else {
+      throw new Error("createJourney function is not provided.");
+    }
   }
 }
