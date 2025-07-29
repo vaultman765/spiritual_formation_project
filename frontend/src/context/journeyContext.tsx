@@ -1,15 +1,14 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import axios from '@/utils/axios';
-import { useAuth } from '@/context/authContext';
-import { getCSRFToken } from '@/utils/auth/tokens';
-import type { Journey } from '@/utils/types';
-import type { JourneyContextType } from '@/utils/types';
-axios.defaults.withCredentials = true
-
+import React, { createContext, useContext, useState, useEffect } from "react";
+import axios from "@/utils/axios";
+import { useAuth } from "@/context/authContext";
+import { getCSRFToken } from "@/utils/auth/tokens";
+import type { Journey } from "@/utils/types";
+import type { JourneyContextType } from "@/utils/types";
 const JourneyContext = createContext<JourneyContextType | undefined>(undefined);
 
-
-export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const { user } = useAuth();
   const [journeys, setJourneys] = useState<Journey[]>([]);
   const [activeJourney, setActiveJourney] = useState<Journey | null>(null);
@@ -19,16 +18,20 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
   const csrfToken = getCSRFToken();
 
   const headers = {
-    'X-CSRFToken': csrfToken || '',
-    'Content-Type': 'application/json',
+    "X-CSRFToken": csrfToken || "",
+    "Content-Type": "application/json",
   };
 
   const restartJourney = async () => {
     try {
-      await axios.post('/api/user/journey/restart/', {}, {
-        headers: headers,
-        withCredentials: true,
-      });
+      await axios.post(
+        "/api/user/journey/restart/",
+        {},
+        {
+          headers: headers,
+          withCredentials: true,
+        }
+      );
 
       await fetchJourneys(); // Refresh updated state
     } catch (err) {
@@ -38,41 +41,46 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
 
   const fetchPastJourneys = async () => {
     try {
-      const res = await axios.get<Journey[]>('/api/user/journeys/');
+      const res = await axios.get<Journey[]>("/api/user/journeys/");
       const allJourneys = res.data;
 
       // Split active vs inactive
-      const past = allJourneys.filter(j => !j.is_active);
+      const past = allJourneys.filter((j) => !j.is_active);
       setArchivedJourneys(past);
     } catch (err) {
-      console.error('Failed to fetch past journeys:', err);
+      console.error("Failed to fetch past journeys:", err);
     }
   };
 
   const restoreJourney = async (id: number) => {
     try {
-      const res = await axios.post<Journey>(`/api/user/journey/${id}/restore/`, {}, {
-        headers: headers,
-        withCredentials: true,
-      });
+      const res = await axios.post<Journey>(
+        `/api/user/journey/${id}/restore/`,
+        {},
+        {
+          headers: headers,
+          withCredentials: true,
+        }
+      );
       setActiveJourney(res.data);
       await fetchJourneys(); // sync all journeys
     } catch (err) {
-      console.error('Failed to restore journey:', err);
+      console.error("Failed to restore journey:", err);
     }
   };
-  
+
   const fetchJourneys = async (): Promise<void> => {
     return new Promise<void>(async (resolve) => {
       setJourneyLoading(true);
       try {
-        const res = await axios.get<Journey[]>('/api/user/journeys/');
+        const res = await axios.get<Journey[]>("/api/user/journeys/");
         const allJourneys = res.data;
         setJourneys(allJourneys);
 
-        const active = allJourneys.find(j => j.is_active);
-        const past = allJourneys.filter(j => !j.is_active);
-        setActiveJourney(active || null);
+        const active = allJourneys.find((j) => j.is_active);
+        const past = allJourneys.filter((j) => !j.is_active);
+        setActiveJourney(null); // Force re-render by resetting first
+        setActiveJourney(active || null); // Then set the actual active journey
         setPastJourneys(past);
 
         resolve();
@@ -86,69 +94,85 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
     });
   };
 
-  const createJourney = async (
-    data: 
-      { title: string;
-        arc_progress: Journey["arc_progress"] }) => {
-
+  const createJourney = async (data: {
+    title: string;
+    arc_progress: Journey["arc_progress"];
+  }) => {
     try {
       if (activeJourney) {
-        await axios.post('/api/user/journey/archive/', {}, {
-          headers: headers,
-          withCredentials: true,
-        });
+        await axios.post(
+          "/api/user/journey/archive/",
+          {},
+          {
+            headers: headers,
+            withCredentials: true,
+          }
+        );
       }
 
-      const res = await axios.post<Journey>('/api/user/journey/',
-        data,
-        {
-          headers: headers,
-          withCredentials: true,
-        }
-      );
+      const res = await axios.post<Journey>("/api/user/journey/", data, {
+        headers: headers,
+        withCredentials: true,
+      });
       setActiveJourney(res.data);
       await fetchJourneys(); // refresh all
     } catch (err) {
-      console.error('Failed to create or overwrite journey:', err);
+      console.error("Failed to create or overwrite journey:", err);
     }
   };
 
   const skipDay = async (): Promise<void> => {
     try {
-      await axios.post<Journey>('/api/user/journey/skip-day/', {}, {
-            headers: headers,
-            withCredentials: true,
-          });
+      await axios.post<Journey>(
+        "/api/user/journey/skip-day/",
+        {},
+        {
+          headers: headers,
+          withCredentials: true,
+        }
+      );
     } catch (err) {
-        console.error("Failed to skip day:", err);
+      console.error("Failed to skip day:", err);
     }
   };
 
   const skipArc = async (): Promise<void> => {
     try {
-      await axios.post<Journey>('/api/user/journey/skip-arc/', {}, {
-            headers: headers,
-            withCredentials: true,
-          });
+      await axios.post<Journey>(
+        "/api/user/journey/skip-arc/",
+        {},
+        {
+          headers: headers,
+          withCredentials: true,
+        }
+      );
     } catch (err) {
-        console.error("Failed to skip arc:", err);
+      console.error("Failed to skip arc:", err);
     }
   };
 
   const completeJourney = async (): Promise<void> => {
     try {
-      await axios.post<Journey>('/api/user/journey/complete/', {}, {
-        headers: headers,
-        withCredentials: true,
-      });
+      await axios.post<Journey>(
+        "/api/user/journey/complete/",
+        {},
+        {
+          headers: headers,
+          withCredentials: true,
+        }
+      );
     } catch (err) {
       console.error("Failed to complete journey:", err);
     }
   };
 
-  const updateJourney = async (journeyId: number, title: string, arcData: any[]) => {
+  const updateJourney = async (
+    journeyId: number,
+    title: string,
+    arcData: any[]
+  ) => {
     const response = await fetch(`/api/user/journey/${journeyId}/`, {
-      method: 'PATCH',
+      method: "PATCH",
       headers: headers,
       body: JSON.stringify({
         title,
@@ -157,7 +181,7 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
     });
 
     if (!response.ok) {
-      throw new Error('Failed to update journey');
+      throw new Error("Failed to update journey");
     }
 
     const updated = await response.json();
@@ -178,7 +202,6 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
       if (response.journey_complete) {
         localStorage.setItem("justCompletedJourney", response.journey_title);
       }
-
     } catch (err) {
       console.error("Failed to complete day:", err);
     }
@@ -190,20 +213,19 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
         headers: headers,
         withCredentials: true,
       });
-      setJourneys(prev => prev.filter(j => j.id !== journeyId));
+      setJourneys((prev) => prev.filter((j) => j.id !== journeyId));
       if (activeJourney?.id === journeyId) {
         setActiveJourney(null);
       }
     } catch (err) {
       console.error("Failed to delete journey:", err);
     }
-  }
+  };
 
   useEffect(() => {
     if (user) fetchJourneys();
     if (user) fetchPastJourneys();
   }, [user]);
-
 
   return (
     <JourneyContext.Provider
@@ -223,16 +245,17 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
         skipDay,
         updateJourney,
         markDayComplete,
-        deleteJourney
+        deleteJourney,
       }}
     >
-        {children}
-      </JourneyContext.Provider>
+      {children}
+    </JourneyContext.Provider>
   );
 };
 
 export const useJourney = () => {
   const context = useContext(JourneyContext);
-  if (!context) throw new Error('useJourney must be used within JourneyProvider');
+  if (!context)
+    throw new Error("useJourney must be used within JourneyProvider");
   return context;
 };

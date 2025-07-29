@@ -1,4 +1,3 @@
-// tailwind.config.js
 import plugin from 'tailwindcss/plugin';
 import lineClamp from '@tailwindcss/line-clamp';
 
@@ -15,12 +14,12 @@ export default {
         body: ['Inter', 'sans-serif'],
       },
       colors: {
-        'brand-primary': '#FFD56A',        // soft gold
-        'hover-gold': '#FFE48A',
-        'text-main': '#FFFFFF',
-        'text-subtle-heading': '#FFD56A',
-        'text-muted': '#D1C9D1',
-        'text-light': '#EEE6F9',
+        'brand-primary': '#f5d7a4',        // soft gold
+        'hover-gold': '#f0c676',         // hover gold
+        'text-main': '#fff7e6',
+        'text-subtle-heading': '#9ca3af',
+        'text-muted': '#e0ccae',
+        'text-light': '#fcf8ef',
         'text-tag': '#BDAAFF',
         'background-base': '#20003D',
         'background-section': '#2E005A',
