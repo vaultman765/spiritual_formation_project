@@ -2,7 +2,6 @@ import React, { useState, useContext, useEffect } from "react";
 import axios from "@/utils/axios";
 import { getCSRFToken } from "@/utils/auth/tokens";
 import type { User } from "@/utils/types";
-// axios.defaults.withCredentials = true
 
 export type AuthContextType = {
   user: User | null;
