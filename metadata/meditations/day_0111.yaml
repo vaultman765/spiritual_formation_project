@@ -1,44 +1,47 @@
-# Last imported into DB: 2025-07-29 13:13:54
+# Last imported into DB: 2025-07-29 14:49:51
 master_day_number: 111
 arc_day_number: 6
 arc_id: arc_the_angelus
 arc_title: The Angelus
 arc_number: 14
 day_title: And Dwelt Among Us
-anchor_image: The Christ Child in the arms of Mary, light surrounding them, God made
+anchor_image:
+  The Christ Child in the arms of Mary, light surrounding them, God made
   visible in human form.
 primary_reading:
   title: The Angelus
-  reference: 
+  reference:
   url: /docs/readings/Prayers_to_the_Blessed_Virgin_Mary.pdf
 secondary_reading:
-- title: John 1:14
-  reference: 
-  url:
-- title: St. Athanasius – On the Incarnation
-  reference: Chapter 2, §§8–10
-  url: /docs/readings/St_Athanasius_On_the_Incarnation.pdf
+  - title: John 1:14
+    reference:
+    url:
+  - title: St. Athanasius – On the Incarnation
+    reference: Chapter 2, §§8–10
+    url: /docs/readings/St_Athanasius_On_the_Incarnation.pdf
 meditative_points:
-- “And dwelt among us.” The eternal Word did not merely visit — He remained, He tabernacled
-  among His people.
-- The God who could not be seen now walks among us, veiled in humility.
+  - “And dwelt among us.” The eternal Word did not merely visit — He remained, He tabernacled
+    among His people.
+  - The God who could not be seen now walks among us, veiled in humility.
 ejaculatory_prayer: O Word Incarnate, remain in me as You remained among us.
-colloquy: Lord Jesus, You did not remain distant — You came to dwell among sinners.
+colloquy:
+  Lord Jesus, You did not remain distant — You came to dwell among sinners.
   Make my heart a worthy dwelling place for You. May I never forget Your nearness,
   Your humanity, and Your desire to be with me.
-resolution: I will spend 5 minutes today in silent awareness of Christ's real presence
+resolution:
+  I will spend 5 minutes today in silent awareness of Christ's real presence
   with me.
 tags:
   thematic: []
   doctrinal:
-  - incarnation
+    - incarnation
   virtue: []
   mystical:
-  - divine presence
-  - divine indwelling
+    - divine presence
+    - divine indwelling
   liturgical:
-  - ordinary time
+    - ordinary time
   typological:
-  - tabernacle
+    - tabernacle
   structural:
-  - prayer
+    - prayer
