@@ -6,7 +6,7 @@ ignore: |
 rules:
   line-length:
     max: 140
-    level: warning
+    level: error
 
   indentation:
     spaces: consistent
@@ -21,8 +21,7 @@ rules:
   trailing-spaces:
     level: warning
 
-  new-lines:
-    type: unix
+  new-lines: disable
 
   truthy:
     allowed-values: ["true", "false"]

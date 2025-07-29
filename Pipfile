@@ -3,7 +3,6 @@ python_version = "3.*"
 
 [packages]
 pyyaml = "*"
-yamllint = "*"
 django = "*"
 djangorestframework = "*"
 jsonschema = "*"
@@ -15,6 +14,8 @@ pytest-cov = "*"
 coverage = "*"
 black = "*"
 flake8 = "*"
+yamllint = "*"
+yamlfix = "*"
 
 [scripts]
 lint = "flake8 ."

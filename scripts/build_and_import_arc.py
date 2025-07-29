@@ -40,7 +40,7 @@ class ArcMetadataHandler:
 def run(command: list[str], description: str):
     command = [sys.executable if c == "python" else c for c in command]
     logger.info(f"\n▶ {description}: {' '.join(command)}")
-    result = subprocess.run(command, capture_output=True, text=True, encoding="utf-8")
+    result = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", errors="replace")
 
     # Always show stdout if there is any
     if result.stdout:

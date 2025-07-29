@@ -27,7 +27,7 @@ def main(arc_id: str = None):
         print("❌ arc_metadata.yaml not found.")
         return
 
-    with open(ARC_METADATA_PATH, "r", encoding="utf-8") as f:
+    with open(ARC_METADATA_PATH, "r", encoding="utf-8-sig") as f:
         metadata = yaml.safe_load(f)
 
     count = 0

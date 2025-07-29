@@ -1,0 +1,50 @@
+# Last imported into DB: 2025-07-29 14:49:52
+master_day_number: 112
+arc_day_number: 7
+arc_id: arc_the_angelus
+arc_title: The Angelus
+arc_number: 14
+day_title: Pray for Us Sinners, Now and at the Hour of Our Death
+anchor_image:
+  The Blessed Virgin interceding before the throne of God, holding the
+  world in her mantle.
+primary_reading:
+  title: The Angelus
+  reference:
+  url: /docs/readings/Prayers_to_the_Blessed_Virgin_Mary.pdf
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§2677–2679
+    url: https://www.vatican.va/archive/ENG0015/__P9F.HTM
+  - title: St. Alphonsus Liguori – The Glories of Mary
+    reference: "Part I, Chapter VI, Section 1"
+    url: /docs/readings/St_Alphonsus_Maria_de_Liguori_The_Glories_of_Mary.pdf
+meditative_points:
+  - “Pray for us sinners…” — the Virgin Mother stands beside us in our misery, not apart
+    from it.
+  - She is Advocate, not by power of her own, but because her Son wills her to intercede.
+ejaculatory_prayer: O Mary, my Mother and Advocate, be with me in the hour of my death.
+colloquy:
+  Blessed Mother, who held God in your arms and holds sinners in your heart,
+  pray for me today and at the moment of my dying. Do not leave me in that final hour.
+  Let me breathe your name with my last breath.
+resolution:
+  I will entrust one soul to Mary's intercession today, especially someone
+  near death or in grave need.
+tags:
+  thematic:
+    - intercession
+    - mary
+    - marian intercession
+  doctrinal:
+    - marian mediation
+  virtue:
+    - hope
+    - trust
+  mystical:
+    - marian companionship
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - prayer

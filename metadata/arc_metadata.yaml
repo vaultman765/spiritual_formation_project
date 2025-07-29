@@ -1006,3 +1006,67 @@
     - sacraments
     - rosary
     - glory and heaven
+- arc_id: arc_the_angelus
+  arc_title: The Angelus
+  arc_number: 14
+  day_count: 7
+  master_day_range:
+    start: 106
+    end: 112
+  anchor_image:
+    - Mary bowed in stillness as the Holy Spirit, depicted as radiant light or a descending
+      dove, overshadows her in silence.
+    - Mary lifting her eyes toward Heaven, accepting the divine will with perfect
+      peace.
+    - Mary, head bowed in peace, hands crossed over her chest in humble assent before
+      the angel.
+    - The Archangel Gabriel appearing to Mary, radiant with light, as she pauses in
+      humility and awe.
+    - The Blessed Virgin interceding before the throne of God, holding the world in
+      her mantle.
+    - The Christ Child in the arms of Mary, light surrounding them, God made visible
+      in human form.
+    - The eternal Son entering the womb of the Virgin — divine light radiating from
+      her heart outward.
+  arc_summary: A meditative journey through each line of the Angelus prayer. This
+    arc draws us into the mystery of the Incarnation, Mary’s fiat, and her intercession
+    for sinners. Each day centers on a phrase from the Angelus and invites deeper
+    union through mental prayer.
+  primary_reading:
+    - The Angelus
+  tags:
+    - adoration
+    - annunciation
+    - ark of the covenant
+    - divine condescension
+    - divine indwelling
+    - divine presence
+    - divine will
+    - docility
+    - fiat
+    - holy spirit
+    - hope
+    - humility
+    - hypostatic union
+    - incarnation
+    - intercession
+    - marian companionship
+    - marian intercession
+    - marian mediation
+    - mary
+    - new adam
+    - obedience
+    - ordinary time
+    - overshadowing
+    - prayer
+    - reverence
+    - submission
+    - surrender
+    - tabernacle
+    - trust
+    - union
+    - virgin birth
+  card_tags:
+    - prayer
+    - marian
+    - incarnation
