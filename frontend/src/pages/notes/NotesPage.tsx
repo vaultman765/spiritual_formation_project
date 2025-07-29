@@ -94,11 +94,9 @@ export default function NotesPage() {
   useEffect(() => {
     if (sortBy === "month") {
       const grouped = groupNotesByMonth(filteredNotes);
-      console.log("Grouped Notes by Month:", grouped); // Debugging
       setGroupedNotes(grouped);
     } else {
       const grouped = groupNotesByArc(filteredNotes);
-      console.log("Grouped Notes by Arc:", grouped); // Debugging
       setGroupedNotes(grouped);
     }
   }, [filteredNotes, sortBy]);
