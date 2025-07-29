@@ -9,5 +9,5 @@ module.exports = {
     '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.json' }],
   },
   extensionsToTreatAsEsm: ['.ts', '.tsx'], // Treat TypeScript files as ESM
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'], // Ensure this is a valid path
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'], // Ensure this is a valid path
 };

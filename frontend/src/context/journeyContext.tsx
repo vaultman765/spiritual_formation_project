@@ -4,7 +4,7 @@ import { useAuth } from "@/context/authContext";
 import { getCSRFToken } from "@/utils/auth/tokens";
 import type { Journey } from "@/utils/types";
 import type { JourneyContextType } from "@/utils/types";
-axios.defaults.withCredentials = true;
+// axios.defaults.withCredentials = true;
 
 const JourneyContext = createContext<JourneyContextType | undefined>(undefined);
 

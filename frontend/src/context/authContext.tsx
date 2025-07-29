@@ -1,8 +1,8 @@
-import React, { useState, useContext, useEffect } from 'react';
-import axios from '@/utils/axios';
-import { getCSRFToken } from '@/utils/auth/tokens';
-import type { User } from '@/utils/types';
-axios.defaults.withCredentials = true
+import React, { useState, useContext, useEffect } from "react";
+import axios from "@/utils/axios";
+import { getCSRFToken } from "@/utils/auth/tokens";
+import type { User } from "@/utils/types";
+// axios.defaults.withCredentials = true
 
 export type AuthContextType = {
   user: User | null;
@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const refreshUser = async () => {
     try {
-      const res = await axios.get<User>('/api/user/current/', {
+      const res = await axios.get<User>("/api/user/current/", {
         withCredentials: true,
       });
       setUser(res.data);
@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const login = async (username: string, password: string) => {
     const res = await axios.post<User>(
-      '/api/user/login/',
+      "/api/user/login/",
       { username, password },
       { withCredentials: true }
     );
@@ -53,12 +53,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const logout = async () => {
     const csrfToken = getCSRFToken();
     await axios.post(
-      '/api/user/logout/',
+      "/api/user/logout/",
       {},
       {
         withCredentials: true,
         headers: {
-          'X-CSRFToken': csrfToken || '',
+          "X-CSRFToken": csrfToken || "",
         },
       }
     );
@@ -75,7 +75,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 export const useAuth = (): AuthContextType => {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
 };
