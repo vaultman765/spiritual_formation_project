@@ -50,3 +50,7 @@ arc_rosary_luminous_mysteries:
   arc_number: 13
   start_day: 99
   end_day: 105
+arc_the_angelus:
+  arc_number: 14
+  start_day: 106
+  end_day: 112

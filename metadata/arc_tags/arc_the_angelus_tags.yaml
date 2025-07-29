@@ -1,0 +1,43 @@
+arc_id: arc_the_angelus
+arc_title: The Angelus
+arc_number: 14
+day_count: 7
+master_day_range:
+  start: 106
+  end: 112
+tags:
+  thematic:
+    - adoration
+    - marian intercession
+    - mary
+    - submission
+  doctrinal:
+    - holy spirit
+    - hypostatic union
+    - incarnation
+    - marian mediation
+    - reverence
+    - virgin birth
+  virtue:
+    - hope
+    - humility
+    - obedience
+    - surrender
+    - trust
+  mystical:
+    - divine condescension
+    - divine indwelling
+    - divine presence
+    - divine will
+    - docility
+    - marian companionship
+    - overshadowing
+    - union
+  liturgical:
+    - ordinary time
+  typological:
+    - ark of the covenant
+    - new adam
+    - tabernacle
+  structural:
+    - prayer
