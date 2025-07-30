@@ -1,0 +1,24 @@
+arc_id: arc_detachment_and_simplicity
+arc_title: Detachment and Simplicity
+arc_number: 16
+day_count: 7
+master_day_range:
+  start: 118
+  end: 124
+tags:
+  thematic:
+    - detachment
+    - kingdom of god
+    - simplicity
+  doctrinal:
+    - poverty of spirit
+  virtue:
+    - detachment
+    - humility
+    - temperance
+    - trust
+  mystical: []
+  liturgical:
+    - ordinary time
+  typological: []
+  structural: []
