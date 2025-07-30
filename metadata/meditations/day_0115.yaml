@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-07-29 22:39:47
+# Last imported into DB: 2025-07-29 22:46:18
 master_day_number: 115
 arc_day_number: 3
 arc_id: arc_three_evangelical_counsels
@@ -34,13 +34,13 @@ resolution:
 tags:
   thematic:
     - evangelical counsels
-  doctrinal:
-    - vision of god
+  doctrinal: []
   virtue:
     - chastity
     - purity
     - love
-  mystical: []
+  mystical:
+    - beatific vision
   liturgical:
     - ordinary time
   typological: []
