@@ -1,0 +1,50 @@
+# Last imported into DB: 2025-07-29 22:39:48
+master_day_number: 116
+arc_day_number: 4
+arc_id: arc_three_evangelical_counsels
+arc_title: The Three Evangelical Counsels
+arc_number: 15
+day_title: Thy Will Be Done
+anchor_image:
+  You are among the crowd on the hillside as Jesus speaks with authority.
+  His eyes move over the people. You hear Him say, ‘Not everyone who says
+  to me, “Lord, Lord,” will enter… but he who does the will of my Father.’
+primary_reading:
+  title: Matthew 7:21-23
+  reference:
+  url:
+secondary_reading:
+  - title: St. Ignatius of Loyola, Spiritual Exercises
+    reference: First Principle and Foundation
+    url: /docs/readings/St_Ignatius_of_Loyola_Spiritual_Exercises.pdf
+  - title: Catechism of the Catholic Church
+    reference: §2826
+    url: https://www.vatican.va/archive/ENG0015/__PA9.HTM
+meditative_points:
+  - “Not everyone who says to me, ‘Lord, Lord’…” — As Christ looks at me,
+    I hear these words not as a threat, but as an invitation to deeper discipleship.
+  - Obedience is not mere effort — it is intimacy. The terrifying words
+    “I never knew you” are not about failure, but about a life lived apart from Him.’
+ejaculatory_prayer: Father, not my will, but Yours be done.
+colloquy:
+  "Lord Jesus, You obeyed even unto death — and in that obedience You saved
+  the world. Help me to love obedience, not as control, but as freedom: to walk in
+  the will of the Father with confidence and peace."
+resolution:
+  I will pause today before every decision and ask, ‘Is this the will of
+  the Father?’
+tags:
+  thematic:
+    - evangelical counsels
+  doctrinal: []
+  virtue:
+    - obedience
+    - surrender
+    - faith
+  mystical:
+    - divine will
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - prayer

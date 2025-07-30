@@ -1,0 +1,31 @@
+arc_id: arc_three_evangelical_counsels
+arc_title: The Three Evangelical Counsels
+arc_number: 15
+day_count: 5
+master_day_range:
+  start: 113
+  end: 117
+tags:
+  thematic:
+    - evangelical counsels
+  doctrinal:
+    - imitation of christ
+    - poverty of spirit
+  virtue:
+    - detachment
+    - faith
+    - humility
+    - love
+    - obedience
+    - purity
+    - surrender
+    - trust
+  mystical:
+    - divine will
+    - docility
+    - union with christ
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - prayer

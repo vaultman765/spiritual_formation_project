@@ -1070,3 +1070,57 @@
     - prayer
     - marian
     - incarnation
+- arc_id: arc_three_evangelical_counsels
+  arc_title: The Three Evangelical Counsels
+  arc_number: 15
+  day_count: 5
+  master_day_range:
+    start: 113
+    end: 117
+  anchor_image:
+    - Christ standing on the mount, hand raised in blessing, eyes fixed with loving
+      authority on those who hear Him.
+    - Christ teaching the crowd, pointing to heaven, while the pure of heart behold
+      Him with awe.
+    - Christ with no sandals, seated on a stone, surrounded by the poor and outcast
+      — His hands open in blessing.
+    - You are among the crowd gathered near Jesus. He turns and says aloud, ‘Come
+      to Me, all you who labor and are burdened… Learn from Me, for I am meek and
+      humble of heart.’
+    - You are among the crowd on the hillside as Jesus speaks with authority. His
+      eyes move over the people. You hear Him say, ‘Not everyone who says to me, “Lord,
+      Lord,” will enter… but he who does the will of my Father.’
+  arc_summary: This arc explores the evangelical counsels of poverty, chastity, and
+    obedience through the voice of Christ in the Sermon on the Mount. Each day draws
+    the soul deeper into imitation of the One who was poor, pure, and obedient unto
+    death. These meditations are a call not only to admire, but to follow.
+  primary_reading:
+    - Matthew 11:25-30
+    - Matthew 5:3
+    - Matthew 5:43-50
+    - Matthew 5:8
+    - Matthew 7:21-23
+  tags:
+    - chastity
+    - detachment
+    - divine will
+    - docility
+    - evangelical counsels
+    - faith
+    - humility
+    - imitation of christ
+    - love
+    - obedience
+    - ordinary time
+    - poverty
+    - poverty of spirit
+    - prayer
+    - purity
+    - surrender
+    - trust
+    - union with christ
+    - vision of god
+  card_tags:
+    - chastity
+    - poverty
+    - obedience
