@@ -107,7 +107,7 @@ export default function ArcPage() {
                   {day_title ?? "Untitled"}
                 </div>
                 {reading && (
-                  <div className="text-[var(--text-muted)] italic text-xs text-center mt-1">
+                  <div className="text-[var(--text-muted)] italic text-xs text-center mt-1 overflow-hidden text-ellipsis line-clamp-1 leading-tight">
                     {reading}
                   </div>
                 )}

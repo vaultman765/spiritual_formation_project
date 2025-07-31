@@ -1,0 +1,43 @@
+# Last imported into DB: 2025-07-31 17:11:06
+master_day_number: 128
+arc_day_number: 4
+arc_id: arc_hidden_life_of_jesus
+arc_title: The Hidden Life of Jesus
+arc_number: 17
+day_title: Interior Worship and Silence
+anchor_image:
+  You are beside the small home at Nazareth in the early morning. Jesus
+  rises before the town stirs. He kneels in silence, face bowed, in prayer to the
+  Father.
+primary_reading:
+  title: St. Francis de Sales – Introduction to the Devout Life
+  reference: Part II, Chapter 1
+  url: /docs/readings/St_Francis_de_Sales_Intro_to_the_Devout_Life.pdf
+secondary_reading:
+  - title: Luke 5:16
+    reference:
+    url:
+meditative_points:
+  - Before He taught the crowds, He prayed alone in silence.
+  - "Prayer opens the understanding to the brightness of Divine Light, and the will to the warmth of Heavenly
+    Love — nothing can so effectually purify the mind from its many ignorances, or the will from its perverse affections"
+ejaculatory_prayer: Jesus, draw me into the silence where You worship the Father.
+colloquy:
+  Lord, so few saw You pray — but it was the source of everything. Teach me
+  to love the invisible prayer. Let me begin my day like You did — not in haste, but
+  in quiet communion with the Father.
+resolution:
+  I will begin tomorrow with 10 minutes of silent prayer before anything
+  else.
+tags:
+  thematic:
+    - hidden life
+    - love of God
+  doctrinal: []
+  virtue: []
+  mystical:
+    - silence
+  liturgical:
+    - ordinary time
+  typological: []
+  structural: []

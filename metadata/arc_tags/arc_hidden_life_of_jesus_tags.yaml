@@ -1,0 +1,33 @@
+arc_id: arc_hidden_life_of_jesus
+arc_title: The Hidden Life of Jesus
+arc_number: 17
+day_count: 7
+master_day_range:
+  start: 125
+  end: 131
+tags:
+  thematic:
+    - hidden life
+    - joy
+    - silence
+    - simplicity
+  doctrinal:
+    - incarnation
+    - kenosis
+    - redemption
+  virtue:
+    - humility
+    - love
+    - meekness
+    - obedience
+    - patience
+    - poverty
+  mystical:
+    - divine condescension
+    - docility
+    - silence
+  liturgical:
+    - ordinary time
+  typological:
+    - holy family
+  structural: []
