@@ -81,7 +81,7 @@ properties:
           URL or PDF link to the reading.
         anyOf:
           - format: uri
-          - pattern: .*\.pdf$
+          - pattern: '.*\.pdf$'
   secondary_reading:
     type: array
     description:
