@@ -111,7 +111,21 @@ export default function MeditationDayPage() {
           </Link>
         </p>
 
+        {/* Action and Navigation Buttons */}
         <div className="flex flex-wrap justify-center gap-4">
+          {day.arc_day_number > 1 ? (
+            <button
+              className="text-sm text-[var(--text-light)] hover:text-white underline"
+              onClick={() =>
+                navigate(`/days/${day.arc_id}/${day.arc_day_number - 1}`)
+              }
+            >
+              ← Previous Day
+            </button>
+          ) : (
+            <div />
+          )}
+
           {day.resolution && (
             <button
               onClick={() => setShowResolution(!showResolution)}
@@ -127,6 +141,19 @@ export default function MeditationDayPage() {
             >
               {noteContent ? "Edit Your Notes" : "Take Meditation Notes"}
             </button>
+          )}
+
+          {day.arc_day_number < day.arc_total_days ? (
+            <button
+              className="text-sm text-[var(--text-light)] hover:text-white underline"
+              onClick={() =>
+                navigate(`/days/${day.arc_id}/${day.arc_day_number + 1}`)
+              }
+            >
+              Next Day →
+            </button>
+          ) : (
+            <div />
           )}
         </div>
       </section>
