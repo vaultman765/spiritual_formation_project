@@ -50,7 +50,7 @@ class DayImporter:
         missing = [f for f in required_fields if f not in data or not data[f]]
 
         # Allow empty 'reference' in 'primary_reading'
-        if "primary_reading" in missing and "title" in data.get("primary_reading", {}):
+        if "primary_reading" in missing and isinstance(data.get("primary_reading"), dict) and "title" in data["primary_reading"]:
             missing.remove("primary_reading")
 
         if missing:
