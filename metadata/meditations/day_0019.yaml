@@ -1,18 +1,18 @@
-# Last imported into DB: 2025-07-10 15:05:03
+# Last imported into DB: 2025-07-30 22:10:55
 master_day_number: 19
 arc_day_number: 5
 arc_id: arc_holy_fear_of_the_lord
 arc_title: The Holy Fear of the Lord
 arc_number: 3
-day_title: Fear and the Hidden God (*Deus Absconditus*)
+day_title: Fear and the Hidden God
 anchor_image:
   Sinai thunder and cloud — The mountain shakes, clothed in fire and smoke.
   Lightning flashes. A trumpet sounds. The people tremble as the voice of God roars
   from the cloud.
 primary_reading:
   title: Proverbs 9:10; Exodus 20:18–21
-  reference: ''
-  url: ''
+  reference: ""
+  url: ""
 secondary_reading:
   - title: St. John Paul II, *Dominum et Vivificantem*
     reference: §28–30

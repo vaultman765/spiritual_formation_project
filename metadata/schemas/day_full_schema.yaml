@@ -30,11 +30,13 @@ properties:
   arc_id:
     type: string
     description:
-      "Unique ID for the arc, must match arc_metadata.yaml and arc_tags/*.yaml.
-      Generally in snake_case format with form arc_<arc_name>. For example, arc_litany_sacred_heart."
+      Unique ID for the arc, must match arc_metadata.yaml and arc_tags/*.yaml.
+      Generally in snake_case format with form arc_<arc_name>. For example, arc_litany_sacred_heart.
   arc_title:
     type: string
-    description: Full title of the arc (e.g., "The Love of God" or "Litany of the Sacred Heart").
+    description:
+      Full title of the arc (e.g., "The Love of God" or "Litany of the
+      Sacred Heart").
   arc_number:
     type: integer
     description: Arc number from the roadmap, used to populate the _index_by_arc.yaml.
@@ -44,11 +46,16 @@ properties:
   anchor_image:
     type: string
     description:
-      A vivid image (mental composition) tied directly to the primary reading.
-      Generally a single image across the whole arc, but not always.
+      A concrete, stable composition-of-place drawn from the primary reading.
+      It should put the soul physically and imaginatively in the setting — e.g., ‘You
+      are standing among the crowd listening to Jesus…’ or ‘You are at the foot of
+      the Cross…’. Do not shift the setting every day if the reading remains the same.
+      Let it remain fixed.
   primary_reading:
     type: object
-    description: Primary source for the meditation. Generally a single reading across the whole arc, but sometimes more than one.
+    description:
+      Primary source for the meditation. Generally a single reading across
+      the whole arc, but sometimes more than one.
     required:
       - title
     additionalProperties: false
@@ -61,19 +68,25 @@ properties:
           - string
           - integer
           - "null"
-        description: "Use for if the reading is a subset of the title (E.g. title: Catechism of the Catholic Church. reference: 2842–2845)"
+        description:
+          "Use for if the reading is a subset of the title (E.g. title:
+          Catechism of the Catholic Church. reference: 2842–2845)"
       url:
         type:
           - string
           - "null"
-        description: "Only used for non-Bible sources (e.g. CCC, encyclicals) - URL or PDF link to the reading."
+        description:
+          URL to source of the reading, if applicable. Must always be included,
+          even if left blank. Only used for non-Bible sources (e.g. CCC, encyclicals) -
+          URL or PDF link to the reading.
         anyOf:
           - format: uri
-          - pattern: ".*\\.pdf$"
+          - pattern: .*\.pdf$
   secondary_reading:
     type: array
-    description: List of secondary readings (may include title, reference, URL).
-      Generally a list of 1–3 readings. At minimum, one reading is required.
+    description:
+      List of secondary readings (may include title, reference, URL). Generally
+      a list of 1–3 readings. At minimum, one reading is required.
     minItems: 1
     items:
       type: object
@@ -90,50 +103,65 @@ properties:
             - string
             - integer
             - "null"
-          description: "Use for if the reading is a subset of the title
-            (E.g. title: Catechism of the Catholic Church. reference: 2842–2845)"
+          description:
+            "Use for if the reading is a subset of the title (E.g. title:
+            Catechism of the Catholic Church. reference: 2842–2845)"
         url:
           type:
             - string
             - "null"
-          description: "Only used for non-Bible sources (e.g. CCC, encyclicals) - URL or PDF link to the reading."
+          description:
+            Only used for non-Bible sources (e.g. CCC, encyclicals) - URL
+            or PDF link to the reading.
           anyOf:
             - format: uri
-            - pattern: ".*\\.pdf$"
+            - pattern: .*\.pdf$
   meditative_points:
     type: array
     description:
       1–3 narrow points that flow directly from the primary reading + image.
-      Generally a quote or phrase from the primary reading. See examples below.
+      They are experiential and meditative, NOT reflective — placing the soul *in the mystery*, hearing
+      the words, seeing the action. Avoid moral summaries or applications. Do not
+      turn them into reflections — reserve that for the colloquy.
     items:
       type: string
     minItems: 1
     examples:
-      - 'If the topic/reading of the meditation is The Crucifixion with the anchor_imagebeing Christ crucified and the
-        day_title being Suffering of Christ. The meditative_points for this day should take us from being in the scene of
-        the anchor_image to being-hyper focused on the suffering of Christ. Examples of meditative_points for this day might be
-        things like "The physical suffering of Christ", "Mental suffering of Christ", "Father why have you forsaken me", etc'
-      - 'If the topic/reading of the meditation is The Crucifixion with the anchor_image being Christ crucified and the
-        day_title was something like Salvation from the Cross... we instead would have meditative_points that bring us to
-        focus on salvation... Examples might be meditative_points like "The words to the Good Thief on the other cross", etc.'
-      - 'If the topic/reading of the meditation is The Beatitudes with the anchor_image being "listening to Jesus give the
-        sermon of the Beatitudes" with day_title being one of the beatitudes the meditative_points would make us hyper focus
-        on the Beatitude for the day... an example meditative_points would be Christ directly saying that Beatitude to us'
+      - If the topic/reading of the meditation is The Crucifixion with the anchor_imagebeing
+        Christ crucified and the day_title being Suffering of Christ. The meditative_points
+        for this day should take us from being in the scene of the anchor_image to being-hyper
+        focused on the suffering of Christ. Examples of meditative_points for this day
+        might be things like "The physical suffering of Christ", "Mental suffering of
+        Christ", "Father why have you forsaken me", etc
+      - If the topic/reading of the meditation is The Crucifixion with the anchor_image
+        being Christ crucified and the day_title was something like Salvation from the
+        Cross... we instead would have meditative_points that bring us to focus on salvation...
+        Examples might be meditative_points like "The words to the Good Thief on the
+        other cross", etc.
+      - If the topic/reading of the meditation is The Beatitudes with the anchor_image
+        being "listening to Jesus give the sermon of the Beatitudes" with day_title
+        being one of the beatitudes the meditative_points would make us hyper focus
+        on the Beatitude for the day... an example meditative_points would be Christ
+        directly saying that Beatitude to us
   ejaculatory_prayer:
     type: string
     description:
-      Short, heart-level prayer to be repeated throughout the day. Serves during the day to briefly bring to mind the entire meditation.
-      Examples include "Jesus, I trust in you." or "Lord, teach me to love as you love."
+      Short, heart-level prayer to be repeated throughout the day. Serves
+      during the day to briefly bring to mind the entire meditation. Examples include
+      "Jesus, I trust in you." or "Lord, teach me to love as you love."
   colloquy:
     type: string
     description:
-      A personal, heartfelt prayer addressed to Jesus Christ, the Blessed Virgin Mary, or some other saint.
-      This is a free-form prayer that flows from the meditative points above. It should be a few sentences long and deeply personal.
+      A short, affective prayer response to the mystery, drawn from the
+      soul’s interior reaction. This is the place for vulnerability, confession, gratitude,
+      or longing. It should follow naturally after having meditated deeply — a movement
+      of the heart.
   resolution:
     type: string
     description:
-      Practical or spiritual action arising from the day’s meditation. This should be a specific action that the person
-      can take to live out the meditation in their daily life.
+      Practical or spiritual action arising from the day’s meditation.
+      This should be a specific action that the person can take to live out the meditation
+      in their daily life.
   tags:
     type: object
     additionalProperties: false
@@ -188,3 +216,7 @@ properties:
       - liturgical
       - typological
       - structural
+    description:
+      "Tag categories must appear in the following order: thematic, doctrinal,
+      virtue, mystical, liturgical, typological, structural. Each category must be
+      present, even if empty. All tags must match the current canonical tag_bank.yaml."
