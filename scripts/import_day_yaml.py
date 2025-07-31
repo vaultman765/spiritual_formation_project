@@ -46,8 +46,14 @@ class DayImporter:
         """
         Import a single day's data. Returns True if successful, False otherwise.
         """
-        required_fields = ["master_day_number", "arc_day_number", "arc_id",  "primary_reading", "meditative_points"]
+        required_fields = ["master_day_number", "arc_day_number", "arc_id", "primary_reading", "meditative_points"]
         missing = [f for f in required_fields if f not in data or not data[f]]
+
+        # Allow empty 'reference' in 'primary_reading'
+        if "primary_reading" in missing and isinstance(data.get("primary_reading"), dict) \
+                and "title" in data["primary_reading"]:
+            missing.remove("primary_reading")
+
         if missing:
             self.logger.error(f"Missing required fields: {missing}")
             return False
