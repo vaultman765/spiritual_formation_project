@@ -97,10 +97,10 @@ export default function MeditationDayPage() {
     <main>
       {/* Header */}
       <section className="text-center mb-6 relative">
-        <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-main)] mb-2 leading-snug">
+        <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-main)] mb-4 leading-snug">
           {day.day_title}
         </h1>
-        <p className="text-sm italic text-[var(--text-muted)]">
+        <p className="text-sm italic text-[var(--text-muted)] mb-4">
           Arc: {day.arc_title} (Day {day.arc_day_number} of {day.arc_total_days}
           ) •{" "}
           <Link
@@ -111,24 +111,24 @@ export default function MeditationDayPage() {
           </Link>
         </p>
 
-        {day.resolution && (
-          <button
-            onClick={() => setShowResolution(!showResolution)}
-            className="absolute top-0 right-0 mt-2 mr-2 text-xs text-[var(--text-muted)] hover:text-white border border-white/20 px-3 py-1 rounded-full transition-all duration-200"
-          >
-            {showResolution ? "Hide Resolution" : "Show Suggested Resolution"}
-          </button>
-        )}
-        {user && (
-          <div className="flex justify-end gap-3 mt-2 mr-4">
+        <div className="flex flex-wrap justify-center gap-4">
+          {day.resolution && (
             <button
-              className="absolute top-10 right-0 mt-2 mr-2 text-xs text-[var(--text-muted)] hover:text-white border border-white/20 px-3 py-1 rounded-full transition-all duration-200"
+              onClick={() => setShowResolution(!showResolution)}
+              className="text-xs text-[var(--text-muted)] hover:text-white border border-white/20 px-3 py-1 rounded-full transition-all duration-200"
+            >
+              {showResolution ? "Hide Resolution" : "Show Suggested Resolution"}
+            </button>
+          )}
+          {user && (
+            <button
+              className="text-xs text-[var(--text-muted)] hover:text-white border border-white/20 px-3 py-1 rounded-full transition-all duration-200"
               onClick={openModal}
             >
               {noteContent ? "Edit Your Notes" : "Take Meditation Notes"}
             </button>
-          </div>
-        )}
+          )}
+        </div>
       </section>
 
       {/* Side-by-Side Image and Readings */}
