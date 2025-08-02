@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-08-01 23:35:53
+# Last imported into DB: 2025-08-01 23:42:31
 master_day_number: 137
 arc_day_number: 6
 arc_id: arc_preparation_for_death_and_judgment
@@ -39,6 +39,5 @@ tags:
     - darkness
   liturgical:
     - good friday
-  typological:
-    - isaac
+  typological: []
   structural: []
