@@ -1,0 +1,43 @@
+# Last imported into DB: 2025-08-02 22:44:18
+master_day_number: 142
+arc_day_number: 4
+arc_id: arc_particular_judgment
+arc_title: The Particular Judgment
+arc_number: 19
+day_title: Mercy and Justice
+anchor_image: Christ, the Good Shepherd, sits in judgment. The sheep gather at
+  His right; the goats stand at His left. You are among the crowd,
+  watching as each soul is called forward and greeted with either joy
+  or sorrow.
+primary_reading:
+  title: Matthew 25:31–46
+  reference:
+  url:
+secondary_reading:
+  - title: St. Alphonsus Liguori – Preparation for Death
+    reference: "Consideration XXIV: The Particular Judgment"
+    url: /docs/readings/frontend/public/docs/readings/St_Alphonsus_Maria_de_Liguori_Preparation_for_Death.pdf
+meditative_points:
+  - “Come, you blessed of my Father…” Christ’s words are joy — the reward of secret mercy, now made public.
+  - “Depart from me…” The voice is just, not cruel. Separation is not random; it is truth revealed in love.
+ejaculatory_prayer: Jesus, make me worthy to stand at Your right hand.
+colloquy: Stand with Christ among the sheep. Ask for a heart like His — merciful, truthful, ready to embrace the lost.
+resolution: Today I will forgive a hidden hurt or serve someone in need, preparing for my own judgment with mercy.
+tags:
+  thematic:
+    - judgment
+    - mercy
+  doctrinal:
+    - particular judgment
+    - justice of God
+  virtue:
+    - mercy
+    - justice
+  mystical: []
+  liturgical:
+    - ordinary time
+    - christ the king
+  typological:
+    - sheep and goats
+  structural:
+    - parable

@@ -70,3 +70,7 @@ arc_preparation_for_death_and_judgment:
   arc_number: 18
   start_day: 132
   end_day: 138
+arc_particular_judgment:
+  arc_number: 19
+  start_day: 139
+  end_day: 145

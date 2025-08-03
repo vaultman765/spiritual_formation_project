@@ -1,0 +1,48 @@
+arc_id: arc_particular_judgment
+arc_title: The Particular Judgment
+arc_number: 19
+day_count: 7
+master_day_range:
+  start: 139
+  end: 145
+tags:
+  thematic:
+    - contrition
+    - eternal reward
+    - glory and heaven
+    - judgment
+    - marian intercession
+    - mercy
+  doctrinal:
+    - communion of saints
+    - justice of God
+    - mediation
+    - particular judgment
+    - repentance
+    - truth
+  virtue:
+    - charity
+    - honesty
+    - hope
+    - humility
+    - justice
+    - love
+    - mercy
+    - perseverance
+    - trust
+  mystical:
+    - beatific vision
+    - intercession
+    - light
+    - separation from God
+  liturgical:
+    - all saints
+    - all souls
+    - marian feast
+    - ordinary time
+  typological:
+    - judgment seat
+    - lazarus
+    - sheep and goats
+  structural:
+    - parable
