@@ -1,12 +1,11 @@
-# Last imported into DB: 2025-08-02 22:44:17
+# Last imported into DB: 2025-08-03 15:21:56
 master_day_number: 140
 arc_day_number: 2
 arc_id: arc_particular_judgment
 arc_title: The Particular Judgment
 arc_number: 19
 day_title: The Light of Truth
-anchor_image:
-  Christ stands in radiant light. Every soul’s secrets are exposed — not in cruelty,
+anchor_image: Christ stands in radiant light. Every soul’s secrets are exposed — not in cruelty,
   but in divine clarity. The soul stands in the brightness, nothing hidden, nothing
   left in shadow.
 primary_reading:
@@ -29,9 +28,8 @@ resolution: Today I will make a simple, honest confession to God, hiding nothing
 tags:
   thematic:
     - judgment
-
   doctrinal:
-    - divine justice
+    - justice of God
     - truth
   virtue:
     - honesty
