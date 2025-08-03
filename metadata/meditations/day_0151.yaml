@@ -1,0 +1,40 @@
+# Last imported into DB: 2025-08-03 15:13:49
+master_day_number: 151
+arc_day_number: 6
+arc_id: arc_devotion_precious_blood
+arc_title: Devotion to the Precious Blood
+arc_number: 20
+day_title: The Blood that Unites — Communion and the Church
+anchor_image: The early Church gathered for prayer and the breaking of bread. At the center is the chalice,
+  symbolizing the Blood of Christ poured out for all. Faces from many nations are united in a single
+  act of worship and love.
+primary_reading:
+  title: Acts 20:17–38; Ephesians 2:11–22
+  reference:
+  url:
+secondary_reading:
+  - title: Pope St. John Paul II, Ecclesia de Eucharistia
+    reference: §§1–5
+    url: /docs/readings/St_Pope_JP2_Ecclesia_de_Eucharista.pdf
+meditative_points:
+  - See the chalice at the heart of the Church, Christ’s Blood uniting all in one Body.
+  - Notice the faces gathered from every nation, made brothers and sisters through His sacrifice.
+ejaculatory_prayer: Precious Blood of Jesus, unite us as one family in Your Church.
+colloquy: Speak to Christ, asking to love the Church and all her members as those purchased by His Blood.
+resolution: Today, I will pray for unity and charity within the Church and my own family.
+tags:
+  thematic:
+    - blood of christ
+    - unity
+  doctrinal:
+    - communion
+    - eucharist
+    - mystical body
+  virtue:
+    - charity
+  mystical: []
+  liturgical:
+    - feast of the most precious blood
+  typological:
+    - covenant
+  structural: []

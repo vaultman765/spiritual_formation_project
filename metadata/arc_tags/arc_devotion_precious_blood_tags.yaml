@@ -1,0 +1,64 @@
+arc_id: arc_devotion_precious_blood
+arc_title: Devotion to the Precious Blood
+arc_number: 20
+day_count: 7
+master_day_range:
+  start: 146
+  end: 152
+tags:
+  thematic:
+    - blood of christ
+    - bread of life
+    - crucifixion
+    - interior agony
+    - mercy
+    - passion of christ
+    - sacrifice
+    - salvation
+    - suffering
+    - unity
+    - victory
+  doctrinal:
+    - atonement
+    - communion
+    - eucharist
+    - mystical body
+    - paschal mystery
+    - real presence
+    - reconciliation
+    - redemption
+    - repentance
+    - resurrection of body
+    - resurrection of christ
+  virtue:
+    - charity
+    - compassion
+    - courage
+    - faith
+    - hope
+    - love
+    - obedience
+    - perseverance
+    - surrender
+    - trust
+  mystical:
+    - divine mercy
+    - healing
+    - pierced heart
+    - purification
+  liturgical:
+    - all saints
+    - feast of the most precious blood
+    - good friday
+    - holy thursday
+    - holy week
+    - lent
+    - ordinary time
+  typological:
+    - blood of the covenant
+    - covenant
+    - manna
+    - paschal lamb
+    - passover
+    - sacrifice
+  structural: []

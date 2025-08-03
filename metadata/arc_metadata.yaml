@@ -1353,7 +1353,6 @@
     - christ the king
     - communion of saints
     - contrition
-    - divine justice
     - eternal reward
     - glory and heaven
     - honesty
@@ -1384,3 +1383,107 @@
     - judgment
     - hope
     - mercy
+- arc_id: arc_devotion_precious_blood
+  arc_title: Devotion to the Precious Blood
+  arc_number: 20
+  day_count: 7
+  master_day_range:
+    start: 146
+    end: 152
+  anchor_image:
+    - Christ kneeling in the Garden of Gethsemane under the ancient olive trees. The
+      night is heavy and silent. Sweat falls from His face like drops of blood, and
+      an angel stands near Him, holding a chalice of suffering and consolation. In
+      the distance, the torches of those coming to arrest Him flicker in the darkness.
+    - Christ nailed to the Cross on Calvary, the sky darkened. His side is pierced
+      by a soldier’s lance and Blood and water stream down, pooling at the foot of
+      the Cross. Mary and John stand close in silent, heartbroken witness as the world
+      holds its breath.
+    - The Upper Room at the Last Supper. Christ stands at the head of the table, elevating
+      the chalice filled with wine turned to His Precious Blood. The apostles look
+      on in wonder, the room bathed in a quiet, sacred light that radiates from the
+      Lord’s hands.
+    - The early Church gathered for prayer and the breaking of bread. At the center
+      is the chalice, symbolizing the Blood of Christ poured out for all. Faces from
+      many nations are united in a single act of worship and love.
+    - The heavenly Jerusalem filled with the light of the Lamb. Multitudes in white
+      robes hold palm branches, singing praise. Rivers of living water flow from the
+      throne, and the Blood of Christ is their eternal victory.
+    - The night of the first Passover. In a humble Israelite home, a lamb has just
+      been sacrificed; its blood is freshly painted on the doorposts. Families are
+      gathered together in silent, prayerful anticipation. Candlelight flickers on
+      faces filled with hope and fear, as outside, the Angel of Death passes over
+      Egypt. The city is wrapped in supernatural quiet, and the blood of the lamb
+      stands as a visible mark of God’s protection and promise.
+    - The soul kneeling at the foot of the Cross, gazing up as the Blood of Christ
+      pours down. Rays of light stream from His wounds, touching those who approach
+      in humility and repentance.
+  arc_summary: A week-long spiritual journey into the mystery of Christ’s Precious
+    Blood, following the story from Old Testament foreshadowing to the heavenly victory
+    of the Lamb. Each day invites the soul to contemplate the Blood’s saving power
+    — in the Passover, Gethsemane, Calvary, the Eucharist, and the life of the Church.
+    Through vivid scenes and direct encounter, this arc leads the soul to gratitude,
+    repentance, unity, and hope in the Blood of Christ poured out for the salvation
+    of the world.
+  primary_reading:
+    - Acts 20:17–38; Ephesians 2:11–22
+    - Exodus 12
+    - Hebrews 9:11–28; 10:11–25
+    - John 18:28 – 19:37
+    - John 6:22–71; 1 Corinthians 10:16–17; 11:23–32
+    - Luke 22:39–53; Matthew 26:36–46
+    - Revelation 5:1–14; 7:9–17
+  tags:
+    - all saints
+    - atonement
+    - blood of christ
+    - blood of the covenant
+    - bread of life
+    - charity
+    - communion
+    - compassion
+    - corpus christi
+    - courage
+    - covenant
+    - crucifixion
+    - divine mercy
+    - eucharist
+    - faith
+    - feast of the most precious blood
+    - good friday
+    - healing
+    - holy thursday
+    - holy week
+    - hope
+    - interior agony
+    - lent
+    - love
+    - manna
+    - mercy
+    - mystical body
+    - obedience
+    - ordinary time
+    - paschal lamb
+    - paschal mystery
+    - passion of christ
+    - passover
+    - perseverance
+    - pierced heart
+    - purification
+    - real presence
+    - reconciliation
+    - redemption
+    - repentance
+    - resurrection of body
+    - resurrection of christ
+    - sacrifice
+    - salvation
+    - suffering
+    - surrender
+    - trust
+    - unity
+    - victory
+  card_tags:
+    - precious blood
+    - eucharist
+    - redemption
