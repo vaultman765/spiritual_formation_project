@@ -82,3 +82,7 @@ arc_suffering_divine_providence:
   arc_number: 21
   start_day: 153
   end_day: 159
+arc_trust:
+  arc_number: 22
+  start_day: 160
+  end_day: 166

@@ -1555,3 +1555,76 @@
     - suffering
     - hope
     - trust
+- arc_id: arc_trust
+  arc_title: Trust
+  arc_number: 22
+  day_count: 7
+  master_day_range:
+    start: 160
+    end: 166
+  anchor_image:
+    - Christ on the Cross, His face turned upward in trust, even as darkness and pain
+      surround Him. Mary and John at the foot of the cross, witnessing His surrender.
+      The crowd is mocking Him, but His eyes are fixed on the Father. His final words
+      echo with confidence in the Father.
+    - In the Upper Room, Jesus speaks gently to His apostles. The air is heavy with
+      uncertainty, but His words and eyes are filled with calm and reassurance.
+    - Peter steps out of the boat onto the stormy sea, eyes fixed on Jesus who stands
+      above the waves, wind and spray all around.
+    - The great golden statue towers over the plain of Dura, surrounded by officials
+      and the gathered crowd. Shadrach, Meshach, and Abednego stand alone, refusing
+      to bow as the music plays. The furious king orders the blazing furnace to be
+      heated seven times hotter. The young men, bound and dressed in their finest
+      garments, are thrown into the fire. The flames roar, but in the midst of the
+      furnace, an angel appears—there is peace where death was expected. The astonished
+      king sees four figures walking unharmed in the fire, the angel shining with
+      divine light. The crowd watches in awe as the three faithful emerge untouched,
+      proclaiming the power of the true God.
+    - The risen Christ stands before Thomas and the apostles, His wounds visible.
+      Thomas kneels, doubt giving way to faith and trust.
+    - The sun rises over quiet green pastures. The Good Shepherd walks ahead of His
+      sheep, staff in hand. You follow, passing still waters and shaded valleys, His
+      presence always near, guiding and protecting.
+    - Under a night sky thick with stars, Abraham stands in the silence of the desert.
+      He looks up, listening to God’s promise. Abraham’s heart wrestles with hope
+      and uncertainty as he gazes at the stars.
+  arc_summary: 'A seven-day spiritual journey through the mystery of trusting God,
+    from Peter’s trembling step onto the waves to Thomas’s confession before the Risen
+    Christ. These meditations place the soul inside scenes of fear, surrender, and
+    hope—inviting us to listen to Jesus’ promises, witness the courage of Abraham
+    and the three young men, and find peace in the Shepherd’s care. The arc gently
+    forms the heart in childlike faith: not by analysis, but by letting Christ speak
+    and act within the soul.'
+  primary_reading:
+    - Daniel 3:8–28
+    - John 14:1–14
+    - John 20:19–29
+    - Luke 23:26–49
+    - Matthew 14:22–33
+    - Psalm 23
+    - Romans 4:1–25
+  tags:
+    - abandonment
+    - courage
+    - covenant
+    - divine mercy
+    - divine providence
+    - faith
+    - fidelity
+    - good friday
+    - holy week
+    - hope
+    - mercy
+    - ordinary time
+    - paschal mystery
+    - passion
+    - peace
+    - perseverance
+    - psalm
+    - resurrection of christ
+    - surrender
+    - trust
+  card_tags:
+    - trust
+    - faith
+    - surrender
