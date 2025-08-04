@@ -1,0 +1,37 @@
+# Last imported into DB: 2025-08-04 07:35:24
+master_day_number: 163
+arc_day_number: 4
+arc_id: arc_trust
+arc_title: Trust
+arc_number: 22
+day_title: The Lord Is My Shepherd
+anchor_image: The sun rises over quiet green pastures. The Good Shepherd walks ahead of His sheep, staff in hand.
+  You follow, passing still waters and shaded valleys, His presence always near, guiding and protecting.
+primary_reading:
+  title: Psalm 23
+  reference:
+  url:
+secondary_reading:
+  - title: Pope Benedict XVI, General Audience on Psalm 23
+    reference: 5 Oct 2011
+    url: /docs/readings/Pope_Benedict_XVI_General_Audience_Psalm_23_20111005.pdf
+meditative_points:
+  - "Let resonate the words: “You are with me; Your rod and Your staff comfort me.”"
+  - Rest with the Shepherd in peaceful pastures. Feel His gentle hand guiding and protecting you.
+  - Trust that you are never alone, even when you walk through dark valleys.
+ejaculatory_prayer: Lord, You are my shepherd; I shall not want.
+colloquy: Thank Jesus for guiding you with love and ask for deeper confidence in His care.
+resolution: Today, I will recall God’s goodness to me whenever I am tempted to worry.
+tags:
+  thematic:
+    - trust
+  doctrinal:
+    - divine providence
+  virtue: []
+  mystical: []
+  liturgical:
+    - ordinary time
+  typological:
+    - shepherd
+  structural:
+    - psalm

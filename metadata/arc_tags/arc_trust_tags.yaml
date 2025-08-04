@@ -1,0 +1,35 @@
+arc_id: arc_trust
+arc_title: Trust
+arc_number: 22
+day_count: 7
+master_day_range:
+  start: 160
+  end: 166
+tags:
+  thematic:
+    - abandonment
+    - mercy
+    - peace
+    - trust
+  doctrinal:
+    - divine providence
+    - paschal mystery
+    - passion
+    - resurrection of christ
+  virtue:
+    - courage
+    - faith
+    - fidelity
+    - hope
+    - perseverance
+    - surrender
+  mystical:
+    - divine mercy
+  liturgical:
+    - good friday
+    - holy week
+    - ordinary time
+  typological:
+    - covenant
+  structural:
+    - psalm
