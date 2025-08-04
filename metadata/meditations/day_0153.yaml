@@ -1,0 +1,40 @@
+# Last imported into DB: 2025-08-03 16:38:01
+master_day_number: 153
+arc_day_number: 1
+arc_id: arc_suffering_divine_providence
+arc_title: Suffering and Divine Providence
+arc_number: 21
+day_title: Job’s Loss — Silence in Devastation
+anchor_image:
+  Job sits in ashes outside the ruins of his home. Torn garments hang from his shoulders. He is silent, eyes fixed on the ground,
+  with all that he once loved now lost.
+primary_reading:
+  title: Job 1
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: CCC §§309–314
+    url: https://www.vatican.va/archive/ENG0015/__P19.HTM
+meditative_points:
+  - Sit with Job in the silence of loss, feeling the emptiness and bewilderment of his suffering.
+  - Notice how he does not curse God, but brings his pain into God’s presence, even when no answers come.
+ejaculatory_prayer: Lord, help me to trust You even in the silence of suffering.
+colloquy: Speak to God about your own losses and uncertainties, asking for the grace to remain faithful as Job did.
+resolution: Today, I will quietly surrender one sorrow to God without demanding an answer.
+tags:
+  thematic:
+    - suffering
+  doctrinal:
+    - divine providence
+  virtue:
+    - faith
+    - trust
+    - perseverance
+  mystical:
+    - silence
+  liturgical:
+    - ordinary time
+  typological:
+    - job
+  structural: []

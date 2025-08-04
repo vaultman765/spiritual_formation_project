@@ -1,0 +1,39 @@
+arc_id: arc_suffering_divine_providence
+arc_title: Suffering and Divine Providence
+arc_number: 21
+day_count: 7
+master_day_range:
+  start: 153
+  end: 159
+tags:
+  thematic:
+    - abandonment
+    - prayer
+    - redemptive suffering
+    - suffering
+  doctrinal:
+    - communion of saints
+    - divine providence
+  virtue:
+    - charity
+    - compassion
+    - faith
+    - honesty
+    - hope
+    - humility
+    - patience
+    - perseverance
+    - surrender
+    - trust
+  mystical:
+    - awe
+    - darkness
+    - silence
+    - union with christ
+  liturgical:
+    - easter
+    - ordinary time
+  typological:
+    - job
+    - new creation
+  structural: []

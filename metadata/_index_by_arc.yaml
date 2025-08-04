@@ -78,3 +78,7 @@ arc_devotion_precious_blood:
   arc_number: 20
   start_day: 146
   end_day: 152
+arc_suffering_divine_providence:
+  arc_number: 21
+  start_day: 153
+  end_day: 159
