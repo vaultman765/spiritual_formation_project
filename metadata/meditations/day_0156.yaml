@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-08-03 22:58:13
+# Last imported into DB: 2025-08-03 22:59:31
 master_day_number: 156
 arc_day_number: 4
 arc_id: arc_suffering_divine_providence
@@ -8,9 +8,9 @@ day_title: Job’s Dialogue with God — The Mystery Confronted
 anchor_image: Job, face to the ground, listens as a whirlwind surrounds him and a ray of light pierces the darkness,
   signifying God’s presence.
 primary_reading:
-  title: God’s Answer to Job (Job 38:1–7; 40:1–5; 42:1–6)
-  reference: Job 38:1–7; 40:1–5; 42:1–6
-  url: ""
+  title: Job 38:1–7; 40:1–5; 42:1–6
+  reference:
+  url:
 secondary_reading:
   - title: St. Gregory the Great, Moralia on Job
     reference: Book XXIII, §52
