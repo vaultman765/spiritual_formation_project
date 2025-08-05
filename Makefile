@@ -14,4 +14,4 @@ runserver:
 	pipenv run python manage.py runserver
 
 npm-dev:
-	cd frontend && npm run dev -- --host
+	cd frontend && pipenv run npm run dev -- --host

@@ -352,7 +352,7 @@ const tagDescriptions: Record<string, Record<string, string>> = {
     "the pierced heart": "A type of the outpouring of divine love through Christ’s suffering.",
     "the return from exile": "A type of spiritual restoration and homecoming through mercy.",
     "veil of the temple": "A barrier symbolizing distance from God, torn at Christ’s death to signify union.",
-    "veil of veronica": "A devotional tradition highlighting the imprint of Christ’s face — the image of divine suffering.",
+    "veil of st. veronica": "A devotional tradition highlighting the imprint of Christ’s face — the image of divine suffering.",
     "vine and branches": "A type of mystical union with Christ, who gives life and fruitfulness to the soul.",
   },
 
