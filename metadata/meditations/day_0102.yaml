@@ -1,12 +1,11 @@
-# Last imported into DB: 2025-07-10 15:05:34
+# Last imported into DB: 2025-08-04 22:22:18
 master_day_number: 102
 arc_day_number: 4
 arc_id: arc_rosary_luminous_mysteries
 arc_title: The Rosary - Luminous Mysteries
 arc_number: 13
 day_title: The Transfiguration
-anchor_image:
-  Christ shining in radiant light on the mountaintop, Moses and Elijah
+anchor_image: Christ shining in radiant light on the mountaintop, Moses and Elijah
   beside Him, the disciples in awe
 primary_reading:
   title: Luke 9:28–36
@@ -24,12 +23,10 @@ meditative_points:
   - This is My beloved Son, listen to Him.
   - They saw His glory — veiled no more.
 ejaculatory_prayer: Jesus, reveal to me the light of Your glory.
-colloquy:
-  O radiant Christ, You allowed the veil to be lifted for a moment — that
+colloquy: O radiant Christ, You allowed the veil to be lifted for a moment — that
   we might glimpse Your divinity. Let Your light shine into my darkness. Help me carry
   Your radiance with reverence and humility.
-resolution:
-  I will pause in silence today to contemplate the glory of Christ — even
+resolution: I will pause in silence today to contemplate the glory of Christ — even
   in small or hidden ways.
 tags:
   thematic:
@@ -46,7 +43,7 @@ tags:
     - light
     - transfiguration
   liturgical:
-    - feast of transfiguration
+    - feast of the transfiguration
     - lent
   typological: []
   structural:
