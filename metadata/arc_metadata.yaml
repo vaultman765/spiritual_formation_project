@@ -1754,3 +1754,66 @@
     - holy name
     - adoration
     - discipleship
+- arc_id: arc_beatitudes
+  arc_title: The Beatitudes
+  arc_number: 24
+  day_count: 10
+  master_day_range:
+    start: 183
+    end: 192
+  anchor_image:
+    - You are present on the mountainside with the disciples and the crowds, sitting
+      close to Jesus as He proclaims the Beatitudes. You watch Him speak, hear His
+      voice, see the faces around you, and receive each word as if spoken to you alone.
+  arc_summary: 'A 10-day journey into the heart of the Sermon on the Mount. Each day,
+    the soul is present on the hillside with Christ, hearing Him pronounce a Beatitude
+    as if spoken directly to the heart. The anchor image never changes: you are among
+    the crowd, watching, listening, and receiving the words of Jesus with awe. Every
+    meditation is an invitation to be transformed by the Gospel—poverty of spirit,
+    mourning, meekness, mercy, purity, peace, fortitude in suffering, and finally,
+    the joy of heaven. Drawing on the wisdom of the Fathers, saints, and popes, this
+    arc allows the Beatitudes to become the pattern of true Christian discipleship
+    and happiness.'
+  primary_reading:
+    - Matthew 5:1–12
+  tags:
+    - beatitude
+    - beatitudes
+    - charity
+    - communion
+    - compassion
+    - contemplation
+    - detachment
+    - discipleship
+    - divine mercy
+    - docility
+    - eschatology
+    - faith
+    - fortitude
+    - grace
+    - hope
+    - humility
+    - joy
+    - justice
+    - meekness
+    - mercy
+    - ordinary time
+    - patience
+    - peace
+    - perseverance
+    - poverty
+    - poverty of spirit
+    - purity
+    - reconciliation
+    - redemptive suffering
+    - righteousness
+    - simplicity
+    - sorrow
+    - suffering
+    - trust
+    - virtues
+    - zeal
+  card_tags:
+    - beatitudes
+    - discipleship
+    - virtues

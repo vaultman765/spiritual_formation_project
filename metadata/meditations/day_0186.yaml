@@ -1,0 +1,40 @@
+# Last imported into DB: 2025-08-05 13:53:22
+master_day_number: 186
+arc_day_number: 4
+arc_id: arc_beatitudes
+arc_title: The Beatitudes
+arc_number: 24
+day_title: Blessed Are the Meek
+anchor_image: You are present on the mountainside with the disciples and the crowds, sitting close to Jesus as He proclaims the
+  Beatitudes. You watch Him speak, hear His voice, see the faces around you, and receive each word as if spoken to you alone.
+primary_reading:
+  title: Matthew 5:1–12
+  reference:
+  url:
+secondary_reading:
+  - title: St. Thomas Aquinas, Catena Aurea on Matthew
+    reference: Chapter 5, Section 5 (PDF Page 116)
+    url: /docs/readings/St_Thomas_Aquinas_Catena_Aurea_Gospel_of_Matthew.pdf
+  - title: St. Teresa of Avila, Way of Perfection
+    reference: Chapter 15
+    url: /docs/readings/St_Teresa_of_Avila_The_Way_of_Perfection.pdf
+meditative_points:
+  - "Listen as Jesus turns to you and says: “Blessed are the meek, for they shall inherit the earth.”"
+  - See the beauty of gentleness in His voice and actions as He blesses the lowly.
+ejaculatory_prayer: Jesus, meek and humble of heart, make my heart like Yours.
+colloquy: Ask Jesus for the strength to answer harshness with gentleness today.
+resolution: Today, I will respond with patience where I am tempted to anger.
+tags:
+  thematic:
+    - beatitude
+  doctrinal:
+    - virtues
+  virtue:
+    - meekness
+    - patience
+  mystical: []
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - beatitudes
