@@ -1,0 +1,40 @@
+# Last imported into DB: 2025-08-04 22:13:30
+master_day_number: 168
+arc_day_number: 2
+arc_id: arc_litany_holy_name
+arc_title: Litany of the Holy Name of Jesus
+arc_number: 23
+day_title: Jesus, King of glory
+anchor_image: he summit of Mount Tabor. Jesus stands transfigured in dazzling white, His face radiant with glory.
+  Moses and Elijah converse with Him. Peter, James, and John are awestruck, falling to the ground in reverence
+  as the voice from the cloud proclaims, “This is my beloved Son; listen to Him.”
+primary_reading:
+  title: Litany of the Holy Name of Jesus
+  reference:
+  url: /docs/readings/USCCB_Litany_of_the_Holy_Name_of_Jesus.pdf
+secondary_reading:
+  - title: Matthew 17:1–8
+    reference:
+    url:
+meditative_points:
+  - See Jesus shining with heavenly glory on the mountain, His majesty revealed to those He loves.
+  - Listen as the Father commands, “Listen to Him,” and let your heart adore the King of glory.
+ejaculatory_prayer: Jesus, King of glory, reign in my heart.
+colloquy: Adore Christ in His majesty and ask for the grace to honor His Holy Name above all earthly things.
+resolution: Today, I will honor the Kingship of Christ in my actions and words.
+tags:
+  thematic:
+    - holy name
+  doctrinal:
+    - christology
+    - kingship of christ
+  virtue:
+    - adoration
+  mystical:
+    - transfiguration
+  liturgical:
+    - feast of the transfiguration
+    - ordinary time
+  typological: []
+  structural:
+    - litany

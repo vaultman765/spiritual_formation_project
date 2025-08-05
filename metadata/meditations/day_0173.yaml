@@ -1,0 +1,37 @@
+# Last imported into DB: 2025-08-04 22:13:34
+master_day_number: 173
+arc_day_number: 7
+arc_id: arc_litany_holy_name
+arc_title: Litany of the Holy Name of Jesus
+arc_number: 23
+day_title: Jesus, God of peace
+anchor_image: The Upper Room after the Resurrection. Jesus appears to the disciples behind locked doors.
+  He shows them His wounds and says, “Peace be with you.” Joy and calm fill the room.
+primary_reading:
+  title: Litany of the Holy Name of Jesus
+  reference:
+  url: /docs/readings/USCCB_Litany_of_the_Holy_Name_of_Jesus.pdf
+secondary_reading:
+  - title: John 20:19–23
+    reference:
+    url:
+meditative_points:
+  - "Hear the words of the Risen Christ: “Peace be with you,” as He stands among His friends."
+  - See His wounds shining in glory, the source of lasting peace.
+ejaculatory_prayer: Jesus, God of peace, grant peace to my heart and to the world.
+colloquy: Thank Christ for His gift of peace, and ask Him to bring calm to the places in your life where there is fear or division.
+resolution: Today, I will pray for peace in a place of conflict or anxiety.
+tags:
+  thematic:
+    - holy name
+    - peace
+    - resurrection
+  doctrinal: []
+  virtue: []
+  mystical: []
+  liturgical:
+    - easter
+    - ordinary time
+  typological: []
+  structural:
+    - litany

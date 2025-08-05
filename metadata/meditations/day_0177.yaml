@@ -1,0 +1,36 @@
+# Last imported into DB: 2025-08-04 22:13:37
+master_day_number: 177
+arc_day_number: 11
+arc_id: arc_litany_holy_name
+arc_title: Litany of the Holy Name of Jesus
+arc_number: 23
+day_title: Jesus, infinite goodness
+anchor_image: A crowd of children runs to Jesus as He sits in the midst of the people. He receives each one with gentle words
+  and a loving embrace, blessing them as the disciples look on. His goodness radiates in every word and gesture.
+primary_reading:
+  title: Litany of the Holy Name of Jesus
+  reference:
+  url: /docs/readings/USCCB_Litany_of_the_Holy_Name_of_Jesus.pdf
+secondary_reading:
+  - title: Mark 10:13–16
+    reference:
+    url:
+meditative_points:
+  - Watch as Jesus welcomes the children, blessing each one with kindness and joy.
+  - "Hear His words: “Let the little children come to me… for to such belongs the kingdom of God.”"
+ejaculatory_prayer: Jesus, infinite goodness, draw my heart to Your loving embrace.
+colloquy: Speak to Christ about your desire to receive His goodness and to share it with others.
+resolution: Today, I will show kindness to those who are overlooked or forgotten.
+tags:
+  thematic:
+    - holy name
+  doctrinal: []
+  virtue:
+    - charity
+    - humility
+  mystical: []
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - litany

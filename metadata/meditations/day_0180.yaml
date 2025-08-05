@@ -1,0 +1,39 @@
+master_day_number: 180
+arc_day_number: 14
+arc_id: arc_litany_holy_name
+arc_title: Litany of the Holy Name of Jesus
+arc_number: 23
+day_title: Jesus, purity of Virgins
+anchor_image: The Virgin Mary kneels in prayer at Nazareth, surrounded by lilies. The angelic light fills the room,
+  and she offers herself to God in perfect purity. In the distance, young saints like Agnes and Cecilia follow
+  Christ in chaste devotion.
+primary_reading:
+  title: Litany of the Holy Name of Jesus
+  reference:
+  url: /docs/readings/USCCB_Litany_of_the_Holy_Name_of_Jesus.pdf
+secondary_reading:
+  - title: 1 Corinthians 6:17–20
+    reference:
+    url:
+meditative_points:
+  - See Mary’s purity shine in her fiat to the angel and her total gift of self to God.
+  - Stand with the virgin saints who follow Christ, finding joy and strength in His Name.
+ejaculatory_prayer: Jesus, purity of Virgins, create in me a clean heart.
+colloquy: Speak to Jesus and Mary about your desire for purity and integrity in your life.
+resolution: Today, I will guard my thoughts and actions out of love for Jesus.
+tags:
+  thematic:
+    - holy name
+    - mary
+  doctrinal: []
+  virtue:
+    - chastity
+    - purity
+    - humility
+  mystical:
+  liturgical:
+    - annunciation
+    - ordinary time
+  typological: []
+  structural:
+    - litany

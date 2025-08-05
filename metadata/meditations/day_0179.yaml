@@ -1,0 +1,40 @@
+# Last imported into DB: 2025-08-04 22:13:38
+master_day_number: 179
+arc_day_number: 13
+arc_id: arc_litany_holy_name
+arc_title: Litany of the Holy Name of Jesus
+arc_number: 23
+day_title: Jesus, strength of Martyrs
+anchor_image: St. Stephen stands before the angry council, his face shining with the peace of Christ.
+  As stones are thrown, Stephen gazes upward, seeing Jesus at the right hand of the Father, giving strength
+  and courage to endure.
+primary_reading:
+  title: Litany of the Holy Name of Jesus
+  reference:
+  url: /docs/readings/USCCB_Litany_of_the_Holy_Name_of_Jesus.pdf
+secondary_reading:
+  - title: Acts 7:54–60
+    reference:
+    url:
+meditative_points:
+  - "See Stephen’s face as he prays: “Lord Jesus, receive my spirit.”"
+  - Watch as Christ stands to welcome His witness, giving him strength in the hour of trial.
+ejaculatory_prayer: Jesus, strength of Martyrs, strengthen my faith and courage.
+colloquy: Speak to Jesus about any trial or suffering you face, and ask for the courage to bear witness to Him.
+resolution: Today, I will offer a sacrifice for those persecuted for the faith.
+tags:
+  thematic:
+    - holy name
+    - martyrdom
+  doctrinal:
+    - communion of saints
+  virtue:
+    - fortitude
+    - faith
+    - perseverance
+  mystical: []
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - litany

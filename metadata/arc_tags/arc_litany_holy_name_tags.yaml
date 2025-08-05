@@ -1,0 +1,70 @@
+arc_id: arc_litany_holy_name
+arc_title: Litany of the Holy Name of Jesus
+arc_number: 23
+day_count: 16
+master_day_range:
+  start: 167
+  end: 182
+tags:
+  thematic:
+    - adoration
+    - discipleship
+    - fiat
+    - glory and heaven
+    - holy name
+    - joy
+    - martyrdom
+    - mary
+    - mercy
+    - peace
+    - suffering
+    - victory
+  doctrinal:
+    - christology
+    - communion of saints
+    - divinity of christ
+    - eschatology
+    - eucharist
+    - incarnation
+    - kingship of christ
+    - resurrection of body
+    - resurrection of christ
+    - reverence
+    - sonship of christ
+    - trinity
+  virtue:
+    - charity
+    - chastity
+    - faith
+    - fortitude
+    - hope
+    - humility
+    - joy
+    - meekness
+    - obedience
+    - patience
+    - perseverance
+    - purity
+    - trust
+  mystical:
+    - awe
+    - divine mercy
+    - divine presence
+    - healing
+    - light
+    - transfiguration
+  liturgical:
+    - all saints
+    - annunciation
+    - baptism of the lord
+    - christmas
+    - easter
+    - holy thursday
+    - holy week
+    - lent
+    - ordinary time
+  typological:
+    - foot washing
+    - shepherds
+  structural:
+    - litany

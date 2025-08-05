@@ -1,0 +1,40 @@
+# Last imported into DB: 2025-08-04 22:13:35
+master_day_number: 175
+arc_day_number: 9
+arc_id: arc_litany_holy_name
+arc_title: Litany of the Holy Name of Jesus
+arc_number: 23
+day_title: Jesus, good Shepherd
+anchor_image: The green hills of Galilee at dawn. Jesus stands among the flock, gently lifting a lost sheep onto His shoulders
+  while the others gather close. The sun casts golden light as He leads them safely along the path.
+primary_reading:
+  title: Litany of the Holy Name of Jesus
+  reference:
+  url: /docs/readings/USCCB_Litany_of_the_Holy_Name_of_Jesus.pdf
+secondary_reading:
+  - title: John 10:11–18
+    reference:
+    url:
+meditative_points:
+  - "Hear Jesus say: “I am the good shepherd. The good shepherd lays down his life for the sheep.”"
+  - Watch as He carries the lost sheep, His eyes filled with joy and mercy.
+ejaculatory_prayer: Jesus, good Shepherd, never let me stray from Your care.
+colloquy: Speak to Jesus about your desire to follow His voice and trust in His protection.
+resolution: Today, I will call to mind Christ’s care whenever I feel lost or alone.
+tags:
+  thematic:
+    - holy name
+    - mercy
+  doctrinal:
+    - christology
+  virtue:
+    - charity
+    - trust
+  mystical:
+    - divine mercy
+  liturgical:
+    - ordinary time
+  typological:
+    - shepherds
+  structural:
+    - litany

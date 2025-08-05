@@ -86,3 +86,7 @@ arc_trust:
   arc_number: 22
   start_day: 160
   end_day: 166
+arc_litany_holy_name:
+  arc_number: 23
+  start_day: 167
+  end_day: 182

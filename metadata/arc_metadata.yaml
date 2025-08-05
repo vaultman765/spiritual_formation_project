@@ -1628,3 +1628,131 @@
     - trust
     - faith
     - surrender
+- arc_id: arc_litany_holy_name
+  arc_title: Litany of the Holy Name of Jesus
+  arc_number: 23
+  day_count: 16
+  master_day_range:
+    start: 167
+    end: 182
+  anchor_image:
+    - A crowd of children runs to Jesus as He sits in the midst of the people. He
+      receives each one with gentle words and a loving embrace, blessing them as the
+      disciples look on. His goodness radiates in every word and gesture.
+    - Jesus stands silent before Pilate. The crowd shouts, accusations fly, but Christ
+      endures it all in meekness, His face calm, accepting the suffering in patience
+      for the salvation of all.
+    - Outside the city gates, Jesus gently touches the eyes of a man born blind. As
+      light breaks over the horizon, the man’s eyes are opened for the first time
+      and he gazes up in awe at the face of Christ, the true Light come into the world.
+    - Outside the tomb of Lazarus. Jesus stands and calls out, “Lazarus, come forth!”
+      The dead man rises and steps into the light, unbound by Christ’s word of power.
+    - St. Stephen stands before the angry council, his face shining with the peace
+      of Christ. As stones are thrown, Stephen gazes upward, seeing Jesus at the right
+      hand of the Father, giving strength and courage to endure.
+    - The Upper Room after the Resurrection. Jesus appears to the disciples behind
+      locked doors. He shows them His wounds and says, “Peace be with you.” Joy and
+      calm fill the room.
+    - The Upper Room. Jesus kneels before His disciples, washing their feet with loving
+      care. The Lord of all creation serves each one in perfect humility.
+    - The Virgin Mary kneels in prayer at Nazareth, surrounded by lilies. The angelic
+      light fills the room, and she offers herself to God in perfect purity. In the
+      distance, young saints like Agnes and Cecilia follow Christ in chaste devotion.
+    - 'The banks of the Jordan River. Jesus stands in the water before John the Baptist.
+      Heaven opens, the Spirit descends, and the Father’s voice resounds: “This is
+      My beloved Son, in whom I am well pleased.” The crowd looks on in awe as the
+      Holy Name is revealed.'
+    - The disciples are caught in a storm on the sea. Jesus stands in the boat, raising
+      His hand. With a word, the wind and waves become calm, and awe falls upon all
+      present.
+    - The dusty road to Emmaus. Two disciples walk in sorrow, but Jesus draws near
+      and journeys with them, His presence transforming their confusion into burning
+      hope as He opens the Scriptures and breaks bread.
+    - The green hills of Galilee at dawn. Jesus stands among the flock, gently lifting
+      a lost sheep onto His shoulders while the others gather close. The sun casts
+      golden light as He leads them safely along the path.
+    - The heavenly Jerusalem shines with light. A great multitude of saints in white
+      robes, holding palm branches, gathers before the Lamb. All worship Christ, their
+      joy and victory, the Name above every name.
+    - The humble home of Nazareth. The Angel Gabriel stands before Mary, announcing
+      that she will bear a Son and call His Name Jesus. Mary bows her head in surrender,
+      and the Holy Spirit overshadows her in radiant light.
+    - The night sky over Bethlehem bursts with radiant light as angels sing “Glory
+      to God in the highest.” Below, the newborn Christ lies in the manger, and the
+      angelic host adores Him with joyful praise.
+    - he summit of Mount Tabor. Jesus stands transfigured in dazzling white, His face
+      radiant with glory. Moses and Elijah converse with Him. Peter, James, and John
+      are awestruck, falling to the ground in reverence as the voice from the cloud
+      proclaims, “This is my beloved Son; listen to Him.”
+  arc_summary: A 16-day spiritual journey, immersing the soul in the power and beauty
+    of the Name of Jesus. Each day focuses on a single title from the Litany, bringing
+    the meditator into a living Gospel scene—Son of the living God, King of glory,
+    Good Shepherd, strength of Martyrs, crown of Saints, and more. Through vivid anchor
+    images, concrete meditative points, and the daily recitation of the Litany, this
+    arc forms the heart in adoration, trust, and ever-deepening love for the Holy
+    Name. The arc concludes with the heavenly vision of the saints in glory, worshipping
+    Jesus as their eternal joy and crown.
+  primary_reading:
+    - Litany of the Holy Name of Jesus
+  tags:
+    - adoration
+    - all saints
+    - annunciation
+    - awe
+    - baptism of the lord
+    - charity
+    - chastity
+    - christmas
+    - christology
+    - communion of saints
+    - discipleship
+    - divine mercy
+    - divine presence
+    - divinity of christ
+    - easter
+    - eschatology
+    - eucharist
+    - faith
+    - feast of the transfiguration
+    - fiat
+    - foot washing
+    - fortitude
+    - glory and heaven
+    - healing
+    - holy  name
+    - holy name
+    - holy thursday
+    - holy week
+    - hope
+    - humility
+    - incarnation
+    - joy
+    - kingship of christ
+    - lent
+    - light
+    - litany
+    - martyrdom
+    - mary
+    - meekness
+    - mercy
+    - obedience
+    - ordinary time
+    - patience
+    - peace
+    - perseverance
+    - purity
+    - resurrection
+    - resurrection of body
+    - resurrection of christ
+    - reverence
+    - shepherds
+    - sonship of christ
+    - suffering
+    - transfiguration
+    - trinity
+    - trust
+    - victory
+  card_tags:
+    - holy name
+    - adoration
+    - discipleship

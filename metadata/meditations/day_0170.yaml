@@ -1,0 +1,37 @@
+# Last imported into DB: 2025-08-04 22:13:31
+master_day_number: 170
+arc_day_number: 4
+arc_id: arc_litany_holy_name
+arc_title: Litany of the Holy Name of Jesus
+arc_number: 23
+day_title: Jesus, mighty God
+anchor_image:
+  The disciples are caught in a storm on the sea. Jesus stands in the boat, raising His hand. With a word, the wind and waves become calm,
+  and awe falls upon all present.
+primary_reading:
+  title: Litany of the Holy Name of Jesus
+  reference:
+  url: /docs/readings/USCCB_Litany_of_the_Holy_Name_of_Jesus.pdf
+secondary_reading:
+  - title: Mark 4:35–41
+    reference:
+    url:
+meditative_points:
+  - Watch as Jesus commands the wind and sea, and creation obeys the power of His Name.
+  - "Stand in awe with the disciples as peace follows His word: “Who then is this, that even wind and sea obey Him?”"
+ejaculatory_prayer: Jesus, mighty God, bring peace to my heart and to the world.
+colloquy: Praise Christ for His power and ask to trust Him in every trial.
+resolution: Today, I will call on the Name of Jesus in moments of fear or anxiety.
+tags:
+  thematic:
+    - holy name
+  doctrinal: []
+  virtue:
+    - faith
+  mystical:
+    - awe
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - litany
