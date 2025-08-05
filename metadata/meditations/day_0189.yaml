@@ -1,0 +1,38 @@
+# Last imported into DB: 2025-08-05 13:53:25
+master_day_number: 189
+arc_day_number: 7
+arc_id: arc_beatitudes
+arc_title: The Beatitudes
+arc_number: 24
+day_title: Blessed Are the Pure of Heart
+anchor_image: You are present on the mountainside with the disciples and the crowds, sitting close to Jesus as He proclaims the
+  Beatitudes. You watch Him speak, hear His voice, see the faces around you, and receive each word as if spoken to you alone.
+primary_reading:
+  title: Matthew 5:1–12
+  reference:
+  url:
+secondary_reading:
+  - title: St. Gregory of Nyssa, On the Beatitudes
+    reference: Sermon 6
+    url: /docs/readings/St_Gregory_of_Nyssa_The_Lords_Prayer_The_Beatitudes.pdf
+meditative_points:
+  - "Hear Jesus say to you: “Blessed are the pure of heart, for they shall see God.”"
+  - Watch as He looks directly at you with a gaze full of light and innocence.
+ejaculatory_prayer: Jesus, purify my heart so that I may see You.
+colloquy: Speak to Christ about your struggles and desires for purity and integrity of heart.
+resolution: Today, I will make a concrete act to guard my senses and seek simplicity of heart.
+tags:
+  thematic:
+    - beatitude
+  doctrinal: []
+  virtue:
+    - charity
+    - purity
+    - simplicity
+  mystical:
+    - contemplation
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - beatitudes

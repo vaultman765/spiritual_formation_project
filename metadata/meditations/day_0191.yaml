@@ -1,0 +1,41 @@
+# Last imported into DB: 2025-08-05 13:53:26
+master_day_number: 191
+arc_day_number: 9
+arc_id: arc_beatitudes
+arc_title: The Beatitudes
+arc_number: 24
+day_title: Blessed Are Those Who Are Persecuted for Righteousness
+anchor_image: You are present on the mountainside with the disciples and the crowds, sitting close to Jesus as He proclaims the
+  Beatitudes. You watch Him speak, hear His voice, see the faces around you, and receive each word as if spoken to you alone.
+primary_reading:
+  title: Matthew 5:1–12
+  reference:
+  url:
+secondary_reading:
+  - title: Pope St. John Paul II, Veritatis Splendor
+    reference: §91
+    url: /docs/readings/St_Pope_JP2_Veritas_Splendor.pdf
+  - title: St. Cyprian, On the Lapsed
+    reference: §13
+    url: https://www.newadvent.org/fathers/050703.htm
+meditative_points:
+  - "Hear Jesus say to you: “Blessed are those who are persecuted for righteousness’ sake, for theirs is the kingdom of heaven.”"
+  - Watch as Jesus’ voice becomes firm yet gentle, meeting your eyes with strength and promise.
+ejaculatory_prayer: Jesus, strengthen my faith in every trial.
+colloquy: Offer Christ any suffering or injustice you experience for love of Him and the Gospel.
+resolution: Today, I will quietly endure any difficulty for the sake of righteousness.
+tags:
+  thematic:
+    - beatitude
+    - righteousness
+    - suffering
+  doctrinal: []
+  virtue:
+    - fortitude
+    - faith
+  mystical: []
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - beatitudes

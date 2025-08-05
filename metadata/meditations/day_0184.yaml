@@ -1,0 +1,43 @@
+# Last imported into DB: 2025-08-05 13:53:21
+master_day_number: 184
+arc_day_number: 2
+arc_id: arc_beatitudes
+arc_title: The Beatitudes
+arc_number: 24
+day_title: Blessed Are the Poor in Spirit
+anchor_image: You are present on the mountainside with the disciples and the crowds, sitting close to Jesus as He proclaims the
+  Beatitudes. You watch Him speak, hear His voice, see the faces around you, and receive each word as if spoken to you alone.
+primary_reading:
+  title: Matthew 5:1–12
+  reference:
+  url:
+secondary_reading:
+  - title: St. John Chrysostom, Homily on Matthew 15
+    reference: §§1-3
+    url: https://www.newadvent.org/fathers/200115.htm
+  - title: St. Thérèse of Lisieux, Story of a Soul
+    reference: PDF Pages 237-238
+    url: /docs/readings/St_Therese_of_Lisieux_Story_of_a_Soul.pdf
+meditative_points:
+  - "Hear Jesus say to you: “Blessed are the poor in spirit, for theirs is the kingdom of heaven.”"
+  - Let His eyes meet yours as He calls you to simplicity, trust, and joyful dependence on the Father.
+ejaculatory_prayer: Jesus, make my heart poor and open to You.
+colloquy: Confess to Christ your need for Him and ask for the grace to desire only God.
+resolution: Today, I will offer a small act of detachment in love for Jesus.
+tags:
+  thematic:
+    - beatitude
+    - detachment
+    - simplicity
+    - trust
+  doctrinal:
+    - poverty of spirit
+  virtue:
+    - humility
+    - poverty
+  mystical: []
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - beatitudes

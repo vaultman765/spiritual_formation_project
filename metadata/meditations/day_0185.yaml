@@ -1,0 +1,41 @@
+# Last imported into DB: 2025-08-05 13:53:22
+master_day_number: 185
+arc_day_number: 3
+arc_id: arc_beatitudes
+arc_title: The Beatitudes
+arc_number: 24
+day_title: Blessed Are Those Who Mourn
+anchor_image: You are present on the mountainside with the disciples and the crowds, sitting close to Jesus as He proclaims the
+  Beatitudes. You watch Him speak, hear His voice, see the faces around you, and receive each word as if spoken to you alone.
+primary_reading:
+  title: Matthew 5:1–12
+  reference:
+  url:
+secondary_reading:
+  - title: Pope St. John Paul II, Salvifici Doloris
+    reference: §§7–8
+    url: /docs/readings/St_Pope_JP2_Salvifici_Doloris.pdf
+  - title: St. Gregory of Nyssa, On the Beatitudes
+    reference: Sermon 3
+    url: /docs/readings/St_Gregory_of_Nyssa_The_Lords_Prayer_The_Beatitudes.pdf
+meditative_points:
+  - "Jesus looks into your eyes and proclaims: “Blessed are those who mourn, for they shall be comforted.”"
+  - Notice how He draws close to the sorrowful and offers hope and healing in His gaze.
+ejaculatory_prayer: Jesus, be my comfort in sorrow and teach me to mourn with holy hope.
+colloquy: Bring to Jesus your sorrows or the sorrows of others, and ask for His comfort.
+resolution: Today, I will pray for someone suffering grief or loss.
+tags:
+  thematic:
+    - beatitude
+    - redemptive suffering
+  doctrinal: []
+  virtue:
+    - compassion
+    - fortitude
+  mystical:
+    - sorrow
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - beatitudes

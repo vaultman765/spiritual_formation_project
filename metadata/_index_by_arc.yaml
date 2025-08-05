@@ -90,3 +90,7 @@ arc_litany_holy_name:
   arc_number: 23
   start_day: 167
   end_day: 182
+arc_beatitudes:
+  arc_number: 24
+  start_day: 183
+  end_day: 192

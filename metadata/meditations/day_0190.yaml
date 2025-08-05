@@ -1,0 +1,43 @@
+# Last imported into DB: 2025-08-05 13:53:26
+master_day_number: 190
+arc_day_number: 8
+arc_id: arc_beatitudes
+arc_title: The Beatitudes
+arc_number: 24
+day_title: Blessed Are the Peacemakers
+anchor_image: You are present on the mountainside with the disciples and the crowds, sitting close to Jesus as He proclaims the
+  Beatitudes. You watch Him speak, hear His voice, see the faces around you, and receive each word as if spoken to you alone.
+primary_reading:
+  title: Matthew 5:1–12
+  reference:
+  url:
+secondary_reading:
+  - title: Pope Benedict XVI, Message for World Day of Peace
+    reference: 2013
+    url: docs/readings/Pope_Benedict_XVI_Blessed_Are_the_Peacemakers.pdf
+  - title: St. Augustine, City of God
+    reference: Book XIX, Ch. 13
+    url: https://www.newadvent.org/fathers/120119.htm
+meditative_points:
+  - "Hear Jesus say to you: “Blessed are the peacemakers, for they shall be called children of God.”"
+  - See His peace radiate out to the crowd as He pronounces these words, and watch the faces of those listening in wonder.
+ejaculatory_prayer: Jesus, Prince of Peace, make me a channel of Your peace.
+colloquy: Tell Christ about any division or unrest in your life, and ask for the courage to sow peace.
+resolution: Today, I will take a step toward reconciliation or peace, even in something small.
+tags:
+  thematic:
+    - beatitude
+    - peace
+  doctrinal:
+    - communion
+    - reconciliation
+  virtue:
+    - peace
+    - charity
+    - justice
+  mystical: []
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - beatitudes

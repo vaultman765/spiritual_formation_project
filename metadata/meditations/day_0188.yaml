@@ -1,0 +1,41 @@
+# Last imported into DB: 2025-08-05 13:53:24
+master_day_number: 188
+arc_day_number: 6
+arc_id: arc_beatitudes
+arc_title: The Beatitudes
+arc_number: 24
+day_title: Blessed Are the Merciful
+anchor_image: You are present on the mountainside with the disciples and the crowds, sitting close to Jesus as He proclaims the
+  Beatitudes. You watch Him speak, hear His voice, see the faces around you, and receive each word as if spoken to you alone.
+primary_reading:
+  title: Matthew 5:1–12
+  reference:
+  url:
+secondary_reading:
+  - title: St. John Chrysostom, Homily on Matthew 15
+    reference: §6 ("Blessed are the merciful...")
+    url: https://www.newadvent.org/fathers/200115.htm
+  - title: Pope Francis, Misericordiae Vultus
+    reference: §9
+    url: /docs/readings/Pope_Francis_Misericordiae_Vultus.pdf
+meditative_points:
+  - "Hear Jesus say to you: “Blessed are the merciful, for they shall obtain mercy.”"
+  - See His merciful gaze rest upon you as He pronounces these words, filled with compassion and promise.
+ejaculatory_prayer: Jesus, make my heart merciful as Yours.
+colloquy: Speak to Christ about those you find difficult to forgive, and ask for His mercy in your life and theirs.
+resolution: Today, I will make an act of mercy for someone who cannot repay me.
+tags:
+  thematic:
+    - beatitude
+    - mercy
+  doctrinal:
+    - divine mercy
+  virtue:
+    - mercy
+    - compassion
+  mystical: []
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - beatitudes

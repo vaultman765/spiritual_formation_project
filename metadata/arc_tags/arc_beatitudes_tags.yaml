@@ -1,0 +1,52 @@
+arc_id: arc_beatitudes
+arc_title: The Beatitudes
+arc_number: 24
+day_count: 10
+master_day_range:
+  start: 183
+  end: 192
+tags:
+  thematic:
+    - beatitude
+    - detachment
+    - discipleship
+    - joy
+    - mercy
+    - peace
+    - redemptive suffering
+    - righteousness
+    - simplicity
+    - suffering
+    - trust
+  doctrinal:
+    - communion
+    - eschatology
+    - grace
+    - poverty of spirit
+    - reconciliation
+    - virtues
+  virtue:
+    - charity
+    - compassion
+    - faith
+    - fortitude
+    - hope
+    - humility
+    - joy
+    - justice
+    - meekness
+    - mercy
+    - patience
+    - perseverance
+    - poverty
+    - purity
+    - zeal
+  mystical:
+    - contemplation
+    - docility
+    - sorrow
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - beatitudes
