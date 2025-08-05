@@ -1,0 +1,40 @@
+# Last imported into DB: 2025-08-04 22:18:10
+master_day_number: 176
+arc_day_number: 10
+arc_id: arc_litany_holy_name
+arc_title: Litany of the Holy Name of Jesus
+arc_number: 23
+day_title: Jesus, true light
+anchor_image: Outside the city gates, Jesus gently touches the eyes of a man born blind. As light breaks over the horizon,
+  the man’s eyes are opened for the first time and he gazes up in awe at the face of Christ, the true Light come
+  into the world.
+primary_reading:
+  title: Litany of the Holy Name of Jesus
+  reference:
+  url: /docs/readings/USCCB_Litany_of_the_Holy_Name_of_Jesus.pdf
+secondary_reading:
+  - title: John 9:1–7
+    reference:
+    url:
+meditative_points:
+  - "Hear Jesus say: “I am the light of the world.” Watch as He brings sight and hope to the blind."
+  - See the first rays of dawn as the man opens his eyes, and let the light of Christ fill the scene.
+ejaculatory_prayer: Jesus, true Light, scatter my darkness and lead me to see as You see.
+colloquy: Thank Jesus for the light He brings to your mind and soul, and ask for grace to walk in that light today.
+resolution: Today, I will seek to bring the light of Christ to a place of confusion or discouragement.
+tags:
+  thematic:
+    - holy name
+  doctrinal:
+    - divinity of christ
+  virtue:
+    - faith
+    - hope
+  mystical:
+    - healing
+    - light
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - litany

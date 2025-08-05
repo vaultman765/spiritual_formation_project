@@ -1,0 +1,39 @@
+# Last imported into DB: 2025-08-04 22:13:29
+master_day_number: 167
+arc_day_number: 1
+arc_id: arc_litany_holy_name
+arc_title: Litany of the Holy Name of Jesus
+arc_number: 23
+day_title: Jesus, Son of the living God
+anchor_image: "The banks of the Jordan River. Jesus stands in the water before John the Baptist. Heaven opens, the Spirit descends,
+  and the Father’s voice resounds: “This is My beloved Son, in whom I am well pleased.” The crowd looks on in awe as
+  the Holy Name is revealed."
+primary_reading:
+  title: Litany of the Holy Name of Jesus
+  reference:
+  url: /docs/readings/USCCB_Litany_of_the_Holy_Name_of_Jesus.pdf
+secondary_reading:
+  - title: Matthew 3:13–17
+    reference:
+    url:
+meditative_points:
+  - "Hear the Father declare: “This is My beloved Son.” Let the words echo as you gaze on Jesus in the Jordan."
+  - Watch the Spirit descend and rest upon Him as the Holy Name is revealed to the world.
+ejaculatory_prayer: Jesus, Son of the living God, have mercy on us.
+colloquy: Speak to the Father, asking for a deeper reverence and love for the Name of Jesus, His beloved Son.
+resolution: Today, I will say the Holy Name of Jesus with special reverence.
+tags:
+  thematic:
+    - holy name
+  doctrinal:
+    - reverence
+    - sonship of christ
+    - trinity
+  virtue: []
+  mystical: []
+  liturgical:
+    - baptism of the lord
+    - ordinary time
+  typological: []
+  structural:
+    - litany

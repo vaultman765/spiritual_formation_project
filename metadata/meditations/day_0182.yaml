@@ -1,0 +1,41 @@
+# Last imported into DB: 2025-08-04 22:13:41
+master_day_number: 182
+arc_day_number: 16
+arc_id: arc_litany_holy_name
+arc_title: Litany of the Holy Name of Jesus
+arc_number: 23
+day_title: Jesus, crown of Saints
+anchor_image: The heavenly Jerusalem shines with light. A great multitude of saints in white robes, holding palm
+  branches, gathers before the Lamb. All worship Christ, their joy and victory, the Name above every name.
+primary_reading:
+  title: Litany of the Holy Name of Jesus
+  reference:
+  url: /docs/readings/USCCB_Litany_of_the_Holy_Name_of_Jesus.pdf
+secondary_reading:
+  - title: Revelation 7:9–17
+    reference:
+    url:
+meditative_points:
+  - See the saints in glory, gathered before Jesus, their crown and their joy forever.
+  - "Hear the heavenly song: “Salvation belongs to our God… and to the Lamb,” as all honor His Name."
+ejaculatory_prayer: Jesus, crown of Saints, lead me to eternal union with You.
+colloquy: Pray to Christ to help you persevere in faith until you share in His victory and joy.
+resolution: Today, I will honor the saints as examples of trust and hope in Christ’s Name.
+tags:
+  thematic:
+    - glory and heaven
+    - holy name
+    - victory
+  doctrinal:
+    - communion of saints
+    - eschatology
+  virtue:
+    - perseverance
+    - hope
+  mystical: []
+  liturgical:
+    - all saints
+    - ordinary time
+  typological: []
+  structural:
+    - litany

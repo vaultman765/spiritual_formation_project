@@ -1,0 +1,39 @@
+# Last imported into DB: 2025-08-04 22:22:19
+master_day_number: 174
+arc_day_number: 8
+arc_id: arc_litany_holy_name
+arc_title: Litany of the Holy Name of Jesus
+arc_number: 23
+day_title: Jesus, author of life
+anchor_image: Outside the tomb of Lazarus. Jesus stands and calls out, “Lazarus, come forth!” The dead man rises and steps into the light,
+  unbound by Christ’s word of power.
+primary_reading:
+  title: Litany of the Holy Name of Jesus
+  reference:
+  url: /docs/readings/USCCB_Litany_of_the_Holy_Name_of_Jesus.pdf
+secondary_reading:
+  - title: John 11:17–44
+    reference:
+    url:
+meditative_points:
+  - "Hear Jesus cry out with authority: “Lazarus, come forth!” and watch life return where there was only death."
+  - "Stand in awe at the power of the Holy Name, which brings new life to all who hear."
+ejaculatory_prayer: Jesus, author of life, awaken my soul to Your living presence.
+colloquy: Thank Jesus for the gift of new life and ask Him to call forth what is dead within you to live again.
+resolution: Today, I will honor the dignity of life in myself and others.
+tags:
+  thematic:
+    - holy name
+  doctrinal:
+    - divinity of christ
+    - resurrection of body
+  virtue:
+    - faith
+    - hope
+  mystical: []
+  liturgical:
+    - lent
+    - ordinary time
+  typological: []
+  structural:
+    - litany

@@ -1,0 +1,39 @@
+# Last imported into DB: 2025-08-04 22:13:40
+master_day_number: 181
+arc_day_number: 15
+arc_id: arc_litany_holy_name
+arc_title: Litany of the Holy Name of Jesus
+arc_number: 23
+day_title: Jesus, joy of Angels
+anchor_image: The night sky over Bethlehem bursts with radiant light as angels sing “Glory to God in the highest.”
+  Below, the newborn Christ lies in the manger, and the angelic host adores Him with joyful praise.
+primary_reading:
+  title: Litany of the Holy Name of Jesus
+  reference:
+  url: /docs/readings/USCCB_Litany_of_the_Holy_Name_of_Jesus.pdf
+secondary_reading:
+  - title: Luke 2:8–14
+    reference:
+    url:
+meditative_points:
+  - "Hear the angels announce the Savior’s birth: “Today is born for you a Savior, Christ the Lord.”"
+  - "Join in the angelic hymn: “Glory to God in the highest,” adoring Jesus with the hosts of heaven."
+ejaculatory_prayer: "Jesus, joy of Angels, fill my heart with praise."
+colloquy: "Praise Christ for the joy He brings to heaven and earth, and ask to share in that joy today."
+resolution: "Today, I will rejoice in Christ’s presence, especially in times of discouragement."
+tags:
+  thematic:
+    - holy name
+    - joy
+    - adoration
+  doctrinal:
+    - incarnation
+  virtue:
+    - joy
+  mystical: []
+  liturgical:
+    - christmas
+    - ordinary time
+  typological: []
+  structural:
+    - litany

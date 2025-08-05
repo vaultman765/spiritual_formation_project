@@ -1,0 +1,40 @@
+# Last imported into DB: 2025-08-04 22:13:38
+master_day_number: 178
+arc_day_number: 12
+arc_id: arc_litany_holy_name
+arc_title: Litany of the Holy Name of Jesus
+arc_number: 23
+day_title: Jesus, our way and our life
+anchor_image: The dusty road to Emmaus. Two disciples walk in sorrow, but Jesus draws near and journeys with them,
+  His presence transforming their confusion into burning hope as He opens the Scriptures and breaks bread.
+primary_reading:
+  title: Litany of the Holy Name of Jesus
+  reference:
+  url: /docs/readings/USCCB_Litany_of_the_Holy_Name_of_Jesus.pdf
+secondary_reading:
+  - title: Luke 24:13–35
+    reference:
+    url:
+meditative_points:
+  - Walk with Jesus on the road as He reveals Himself in the breaking of the bread.
+  - Hear Him say, “I am the way, and the truth, and the life,” and let hope rise in your heart.
+ejaculatory_prayer: Jesus, our way and our life, guide every step I take today.
+colloquy: Tell Jesus where you most need His presence to transform your journey.
+resolution: Today, I will turn to Christ as my guide in a decision or moment of doubt.
+tags:
+  thematic:
+    - holy name
+    - discipleship
+  doctrinal:
+    - eucharist
+    - resurrection of christ
+  virtue:
+    - hope
+    - trust
+  mystical:
+    - divine presence
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - litany

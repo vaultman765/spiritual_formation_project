@@ -1,0 +1,39 @@
+# Last imported into DB: 2025-08-04 22:13:30
+master_day_number: 169
+arc_day_number: 3
+arc_id: arc_litany_holy_name
+arc_title: Litany of the Holy Name of Jesus
+arc_number: 23
+day_title: Jesus, Son of the Virgin Mary
+anchor_image: The humble home of Nazareth. The Angel Gabriel stands before Mary, announcing that she will bear a Son and
+  call His Name Jesus. Mary bows her head in surrender, and the Holy Spirit overshadows her in radiant light.
+primary_reading:
+  title: Litany of the Holy Name of Jesus
+  reference:
+  url: /docs/readings/USCCB_Litany_of_the_Holy_Name_of_Jesus.pdf
+secondary_reading:
+  - title: Luke 1:26–38
+    reference:
+    url:
+meditative_points:
+  - "Hear the Angel’s greeting: “You will conceive and bear a Son, and you shall call His Name Jesus.”"
+  - See Mary’s humble fiat as she receives the Holy Name into her heart and womb.
+ejaculatory_prayer: Jesus, Son of Mary, form my heart in humility and trust.
+colloquy: Speak to the Blessed Virgin, asking her to teach you how to honor and love the Name of her Son.
+resolution: Today, I will imitate Mary’s humility in accepting God’s will.
+tags:
+  thematic:
+    - holy name
+    - fiat
+    - mary
+  doctrinal:
+    - incarnation
+  virtue:
+    - humility
+    - obedience
+  mystical: []
+  liturgical:
+    - annunciation
+  typological: []
+  structural:
+    - litany
