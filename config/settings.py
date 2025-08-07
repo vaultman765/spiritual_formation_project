@@ -37,7 +37,6 @@ else:
             "NAME": BASE_DIR / "db.sqlite3",
         }
     }
-print("DATABASE FILE:", DATABASES['default']['NAME'])
 
 # Application definition
 
