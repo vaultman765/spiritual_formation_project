@@ -4,6 +4,7 @@ import type { MeditationNote } from "@/utils/types";
 
 jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
+const API_URL = import.meta.env.VITE_API_URL;
 
 describe("useNotes", () => {
   afterEach(() => {
@@ -29,7 +30,7 @@ describe("useNotes", () => {
 
       const result = await getNote(64);
 
-      expect(mockedAxios.get).toHaveBeenCalledWith("/api/notes/?day=64");
+      expect(mockedAxios.get).toHaveBeenCalledWith(`${API_URL}/api/notes/?day=64/`);
       expect(result).toEqual(mockNote);
     });
 
@@ -38,7 +39,7 @@ describe("useNotes", () => {
 
       const result = await getNote(64);
 
-      expect(mockedAxios.get).toHaveBeenCalledWith("/api/notes/?day=64");
+      expect(mockedAxios.get).toHaveBeenCalledWith(`${API_URL}/api/notes/?day=64`);
       expect(result).toBeUndefined();
     });
   });
@@ -49,7 +50,7 @@ describe("useNotes", () => {
 
       await deleteNote(64);
 
-      expect(mockedAxios.delete).toHaveBeenCalledWith("/api/notes/by-day/", {
+      expect(mockedAxios.delete).toHaveBeenCalledWith(`${API_URL}/api/notes/by-day/`, {
         params: { day: 64 },
         headers: expect.any(Object), // Headers are passed
       });
@@ -90,7 +91,7 @@ describe("useNotes", () => {
 
       const result = await getAllNotes();
 
-      expect(mockedAxios.get).toHaveBeenCalledWith("/api/notes/");
+      expect(mockedAxios.get).toHaveBeenCalledWith(`${API_URL}/api/notes/`);
       expect(result).toEqual(mockNotes);
     });
   });

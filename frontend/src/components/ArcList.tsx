@@ -1,6 +1,4 @@
 import { Draggable, Droppable, DragDropContext } from "@hello-pangea/dnd";
-import TooltipWrapper from "@/components/common/TooltipWrapper";
-import { CustomJourneyArcCard } from "@/components/cards/ArcCard";
 import type { ArcData } from "@/utils/types";
 import ArcCardWithTooltip from "@/components/cards/ArcCardWithTooltip";
 
@@ -23,23 +21,10 @@ export function ArcList({ arcs, onReorder, onRemove, onSelect }: ArcListProps) {
         {(provided) => (
           <div ref={provided.innerRef} {...provided.droppableProps}>
             {arcs.map((arc, index) => (
-              <Draggable
-                key={arc.arc_id}
-                draggableId={arc.arc_id}
-                index={index}
-              >
+              <Draggable key={arc.arc_id} draggableId={arc.arc_id} index={index}>
                 {(provided) => (
-                  <div
-                    ref={provided.innerRef}
-                    {...provided.draggableProps}
-                    {...provided.dragHandleProps}
-                    className="relative mb-2"
-                  >
-                    <ArcCardWithTooltip
-                      arc={arc}
-                      onSelect={onSelect}
-                      onRemove={onRemove}
-                    />
+                  <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} className="relative mb-2">
+                    <ArcCardWithTooltip arc={arc} onSelect={onSelect} onRemove={onRemove} />
                   </div>
                 )}
               </Draggable>

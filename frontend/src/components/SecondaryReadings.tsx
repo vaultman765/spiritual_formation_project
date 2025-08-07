@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import type { SecondaryReading } from "@/utils/types";
 
@@ -12,16 +11,14 @@ export default function SecondaryReadings({ readings }: SecondaryReadingsProps) 
       {readings.map((reading, idx) => (
         <li key={idx}>
           {reading.url ? (
-            <Link
-              to={reading.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[var(--text-main)] hover:underline"
-            >
+            <Link to={reading.url} target="_blank" rel="noopener noreferrer" className="text-[var(--text-main)] hover:underline">
               <span className="text-[var(--text-muted)]">
                 {reading.title}
                 {reading.reference && (
-                  <> – <span className="italic">{reading.reference}</span></>
+                  <>
+                    {" "}
+                    – <span className="italic">{reading.reference}</span>
+                  </>
                 )}
               </span>
             </Link>
@@ -29,7 +26,10 @@ export default function SecondaryReadings({ readings }: SecondaryReadingsProps) 
             <span className="text-[var(--text-muted)]">
               {reading.title}
               {reading.reference && (
-                <> – <span className="italic">{reading.reference}</span></>
+                <>
+                  {" "}
+                  – <span className="italic">{reading.reference}</span>
+                </>
               )}
             </span>
           )}

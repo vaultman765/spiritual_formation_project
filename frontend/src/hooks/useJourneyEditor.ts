@@ -6,6 +6,8 @@ interface UseJourneyEditorProps {
   initialJourney?: { title: string; arcs: ArcData[] };
 }
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export function useJourneyEditor({ initialJourney }: UseJourneyEditorProps) {
   const [availableArcs, setAvailableArcs] = useState<ArcData[]>([]);
   const [selectedArcs, setSelectedArcs] = useState<ArcData[]>(initialJourney?.arcs || []);
@@ -14,7 +16,7 @@ export function useJourneyEditor({ initialJourney }: UseJourneyEditorProps) {
 
   // Fetch available arcs on mount
   useEffect(() => {
-    fetch("/api/arcs/")
+    fetch(`${API_URL}/api/arcs/`)
       .then((res) => res.json())
       .then((data) => setAvailableArcs(data))
       .catch(console.error);
