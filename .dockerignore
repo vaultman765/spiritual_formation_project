@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+.env
+frontend/
+tests/
+roadmap/
+reference_library/
+reading_plan/
+.git
+.gitignore
+requirements.txt
+Dockerfile

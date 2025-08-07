@@ -19,13 +19,15 @@ export const AuthContext = React.createContext<AuthContextType>({
   loading: false,
 });
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
   const refreshUser = async () => {
     try {
-      const res = await axios.get<User>("/api/user/current/", {
+      const res = await axios.get<User>(`${API_URL}/api/user/current/`, {
         withCredentials: true,
       });
       setUser(res.data);
@@ -41,18 +43,14 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   const login = async (username: string, password: string) => {
-    const res = await axios.post<User>(
-      "/api/user/login/",
-      { username, password },
-      { withCredentials: true }
-    );
+    const res = await axios.post<User>(`${API_URL}/api/user/login/`, { username, password }, { withCredentials: true });
     setUser(res.data);
   };
 
   const logout = async () => {
     const csrfToken = getCSRFToken();
     await axios.post(
-      "/api/user/logout/",
+      `${API_URL}/api/user/logout/`,
       {},
       {
         withCredentials: true,
@@ -64,11 +62,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     setUser(null);
   };
 
-  return (
-    <AuthContext.Provider value={{ user, setUser, login, logout, loading }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={{ user, setUser, login, logout, loading }}>{children}</AuthContext.Provider>;
 };
 
 export const useAuth = (): AuthContextType => {

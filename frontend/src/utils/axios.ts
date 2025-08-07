@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:8000', // your Django backend URL
+  baseURL: API_URL,
   withCredentials: true,            // crucial for session auth
 });
 

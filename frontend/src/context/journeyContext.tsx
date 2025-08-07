@@ -6,9 +6,7 @@ import type { Journey } from "@/utils/types";
 import type { JourneyContextType } from "@/utils/types";
 const JourneyContext = createContext<JourneyContextType | undefined>(undefined);
 
-export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
+export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user } = useAuth();
   const [journeys, setJourneys] = useState<Journey[]>([]);
   const [activeJourney, setActiveJourney] = useState<Journey | null>(null);
@@ -22,10 +20,12 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({
     "Content-Type": "application/json",
   };
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const restartJourney = async () => {
     try {
       await axios.post(
-        "/api/user/journey/restart/",
+        `${API_URL}/api/user/journey/restart/`,
         {},
         {
           headers: headers,
@@ -41,7 +41,7 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const fetchPastJourneys = async () => {
     try {
-      const res = await axios.get<Journey[]>("/api/user/journeys/");
+      const res = await axios.get<Journey[]>(`${API_URL}/api/user/journeys/`);
       const allJourneys = res.data;
 
       // Split active vs inactive
@@ -55,7 +55,7 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({
   const restoreJourney = async (id: number) => {
     try {
       const res = await axios.post<Journey>(
-        `/api/user/journey/${id}/restore/`,
+        `${API_URL}/api/user/journey/${id}/restore/`,
         {},
         {
           headers: headers,
@@ -73,7 +73,7 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({
     return new Promise<void>(async (resolve) => {
       setJourneyLoading(true);
       try {
-        const res = await axios.get<Journey[]>("/api/user/journeys/");
+        const res = await axios.get<Journey[]>(`${API_URL}/api/user/journeys/`);
         const allJourneys = res.data;
         setJourneys(allJourneys);
 
@@ -94,14 +94,11 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({
     });
   };
 
-  const createJourney = async (data: {
-    title: string;
-    arc_progress: Journey["arc_progress"];
-  }) => {
+  const createJourney = async (data: { title: string; arc_progress: Journey["arc_progress"] }) => {
     try {
       if (activeJourney) {
         await axios.post(
-          "/api/user/journey/archive/",
+          `${API_URL}/api/user/journey/archive/`,
           {},
           {
             headers: headers,
@@ -110,7 +107,7 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({
         );
       }
 
-      const res = await axios.post<Journey>("/api/user/journey/", data, {
+      const res = await axios.post<Journey>(`${API_URL}/api/user/journey/`, data, {
         headers: headers,
         withCredentials: true,
       });
@@ -124,7 +121,7 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({
   const skipDay = async (): Promise<void> => {
     try {
       await axios.post<Journey>(
-        "/api/user/journey/skip-day/",
+        `${API_URL}/api/user/journey/skip-day/`,
         {},
         {
           headers: headers,
@@ -139,7 +136,7 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({
   const skipArc = async (): Promise<void> => {
     try {
       await axios.post<Journey>(
-        "/api/user/journey/skip-arc/",
+        `${API_URL}/api/user/journey/skip-arc/`,
         {},
         {
           headers: headers,
@@ -154,7 +151,7 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({
   const completeJourney = async (): Promise<void> => {
     try {
       await axios.post<Journey>(
-        "/api/user/journey/complete/",
+        `${API_URL}/api/user/journey/complete/`,
         {},
         {
           headers: headers,
@@ -166,14 +163,11 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({
     }
   };
 
-  const updateJourney = async (
-    journeyId: number,
-    title: string,
-    arcData: any[]
-  ) => {
-    const response = await fetch(`/api/user/journey/${journeyId}/`, {
+  const updateJourney = async (journeyId: number, title: string, arcData: any[]) => {
+    const response = await fetch(`${API_URL}/api/user/journey/${journeyId}/`, {
       method: "PATCH",
       headers: headers,
+      credentials: "include",
       body: JSON.stringify({
         title,
         arc_progress: arcData,
@@ -191,9 +185,10 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const markDayComplete = async (): Promise<void> => {
     try {
-      const res = await fetch("/api/user/journey/complete-day/", {
+      const res = await fetch(`${API_URL}/api/user/journey/complete-day/ `, {
         method: "POST",
         headers: headers,
+        credentials: "include",
       });
       const response = await res.json();
       if (response.arc_complete) {
@@ -209,7 +204,7 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const deleteJourney = async (journeyId: number): Promise<void> => {
     try {
-      await axios.delete(`/api/user/journey/${journeyId}/`, {
+      await axios.delete(`${API_URL}/api/user/journey/${journeyId}/`, {
         headers: headers,
         withCredentials: true,
       });
@@ -255,7 +250,6 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({
 
 export const useJourney = () => {
   const context = useContext(JourneyContext);
-  if (!context)
-    throw new Error("useJourney must be used within JourneyProvider");
+  if (!context) throw new Error("useJourney must be used within JourneyProvider");
   return context;
 };

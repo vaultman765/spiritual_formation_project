@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '@/utils/axios';
 import { getCSRFToken } from '@/utils/auth/tokens';
 import type { NoteInput, MeditationNote } from '@/utils/types';
 
@@ -9,8 +9,13 @@ const headers = {
     'Content-Type': 'application/json',
   };
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export const getNote = async (dayId: number): Promise<MeditationNote> => {
-  const res = await axios.get<MeditationNote[]>(`/api/notes/?day=${dayId}`);
+  const res = await axios.get<MeditationNote[]>(
+    `${API_URL}/api/notes/?day=${dayId}`,
+    { headers }
+  );
   return res.data[0];
 };
 
@@ -20,10 +25,10 @@ export const saveNote = async (note: NoteInput): Promise<MeditationNote> => {
 
   if (!note.id || note.id <= 0 || note.id === undefined) {
     method = 'post';
-    url = '/api/notes/';
+    url = `${API_URL}/api/notes/`;
   } else {
     method = 'put';
-    url = `/api/notes/${note.id}/`;
+    url = `${API_URL}/api/notes/${note.id}/`;
   }
 
   const res = await axios({
@@ -41,7 +46,7 @@ export const saveNote = async (note: NoteInput): Promise<MeditationNote> => {
 };
 
 export const deleteNote = async (dayId: number): Promise<void> => {
-  await axios.delete(`/api/notes/by-day/`, {
+  await axios.delete(`${API_URL}/api/notes/by-day/`, {
     params: { day: dayId },
     headers: {
       'X-CSRFToken': csrfToken || '',
@@ -51,7 +56,7 @@ export const deleteNote = async (dayId: number): Promise<void> => {
 
 
 export async function getAllNotes(): Promise<MeditationNote[]> {
-  const res = await axios.get<MeditationNote[]>('/api/notes/');
+  const res = await axios.get<MeditationNote[]>(`${API_URL}/api/notes/`);
   return res.data;
 }
 

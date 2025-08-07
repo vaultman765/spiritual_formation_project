@@ -1,5 +1,5 @@
 [requires]
-python_version = "3.*"
+python_version = "3.12"
 
 [packages]
 pyyaml = "*"
@@ -7,6 +7,9 @@ django = "*"
 djangorestframework = "*"
 jsonschema = "*"
 django-cors-headers = "*"
+django-environ = "*"
+gunicorn = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 pytest = "*"
