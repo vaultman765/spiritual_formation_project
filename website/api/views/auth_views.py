@@ -31,8 +31,6 @@ def register_view(request):
     first_name = request.data.get('first_name')
     last_name = request.data.get('last_name')
 
-
-    
     # Require all fields
     if not all([username, email, password, confirm_password, first_name, last_name]):
         return Response({"error": "All fields are required."}, status=status.HTTP_400_BAD_REQUEST)
@@ -42,7 +40,7 @@ def register_view(request):
         return Response({"error": "Username already exists."}, status=status.HTTP_400_BAD_REQUEST)
     if User.objects.filter(email=email).exists():
         return Response({"error": "Email already in use."}, status=status.HTTP_400_BAD_REQUEST)
-    
+
     # Check password confirmation
     if password != confirm_password:
         return Response({"error": "Passwords do not match."}, status=status.HTTP_400_BAD_REQUEST)
