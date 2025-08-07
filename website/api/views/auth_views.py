@@ -14,6 +14,8 @@ def current_user_view(request):
     user = request.user
     return Response({
         "id": user.id,
+        "first_name": user.first_name,
+        "last_name": user.last_name,
         "username": user.username,
         "email": user.email,
     })
@@ -25,18 +27,38 @@ def register_view(request):
     username = request.data.get('username')
     email = request.data.get('email')
     password = request.data.get('password')
+    confirm_password = request.data.get('confirm_password')
+    first_name = request.data.get('first_name')
+    last_name = request.data.get('last_name')
 
-    if not username or not password:
-        return Response({"error": "Username and password are required."}, status=status.HTTP_400_BAD_REQUEST)
+    # Require all fields
+    if not all([username, email, password, confirm_password, first_name, last_name]):
+        return Response({"error": "All fields are required."}, status=status.HTTP_400_BAD_REQUEST)
 
+    # Check username and email uniqueness
     if User.objects.filter(username=username).exists():
         return Response({"error": "Username already exists."}, status=status.HTTP_400_BAD_REQUEST)
+    if User.objects.filter(email=email).exists():
+        return Response({"error": "Email already in use."}, status=status.HTTP_400_BAD_REQUEST)
 
-    user = User.objects.create_user(username=username, email=email, password=password)
+    # Check password confirmation
+    if password != confirm_password:
+        return Response({"error": "Passwords do not match."}, status=status.HTTP_400_BAD_REQUEST)
+
+    user = User.objects.create_user(
+        username=username,
+        email=email,
+        password=password,
+        first_name=first_name,
+        last_name=last_name
+    )
+
     return Response({
         "id": user.id,
         "username": user.username,
-        "email": user.email
+        "email": user.email,
+        "first_name": user.first_name,
+        "last_name": user.last_name
     }, status=status.HTTP_201_CREATED)
 
 

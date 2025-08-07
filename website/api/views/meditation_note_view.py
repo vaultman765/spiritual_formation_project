@@ -2,9 +2,9 @@ from rest_framework import viewsets, permissions, status
 from rest_framework.decorators import action
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
-from rest_framework.views import APIView
 from website.models import MeditationNote
 from website.api.serializers.meditation_note_serializer import MeditationNoteSerializer
+
 
 class MeditationNoteView(viewsets.ModelViewSet):
     serializer_class = MeditationNoteSerializer
@@ -19,7 +19,7 @@ class MeditationNoteView(viewsets.ModelViewSet):
             queryset = queryset.filter(meditation_day=day)
 
         return queryset
-    
+
     def perform_list(self, serializer):
         day = self.request.query_params.get('day')
 
