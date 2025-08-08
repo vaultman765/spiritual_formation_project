@@ -1,12 +1,11 @@
-# Last imported into DB: 2025-07-10 15:04:57
+# Last imported into DB: 2025-08-08 13:26:21
 master_day_number: 1
 arc_day_number: 1
 arc_id: arc_love_of_god
 arc_title: Love of God – Foundation of All
 arc_number: 1
 day_title: God Is Love – Love’s Divine Origin
-anchor_image:
-  The Crucified Christ (Face) — You gaze upon the face of Christ crucified.
+anchor_image: The Crucified Christ (Face) — You gaze upon the face of Christ crucified.
   His eyes are closed, His head bowed beneath the crown of thorns. From this suffering Face shines infinite love.
   Every wound speaks the truth of God’s heart.
 primary_reading:
@@ -15,18 +14,17 @@ primary_reading:
   url: ""
 secondary_reading:
   - title: Catechism of the Catholic Church
-    reference: 219–221
+    reference: §§219–221
     url: https://www.vatican.va/archive/ENG0015/__P16.HTM
   - title: St. John Paul II, Novo Millennio Ineunte
     reference: §33
     url: https://www.vatican.va/content/john-paul-ii/en/apost_letters/2001/documents/hf_jp-ii_apl_20010106_novo-millennio-ineunte.html
 meditative_points:
-  - "“God is love: His very being is love.” (CCC 221)"
-  - “Whoever loves has been born of God and knows God.” (1 Jn 4:7)
+  - "“God is love: His very being is love.”"
+  - “Whoever loves has been born of God and knows God.”
   - The origin of love is not our effort, but God’s essence.
 ejaculatory_prayer: God of love, let me receive You before I try to respond.
-colloquy:
-  Father, I believe You are love. But I forget this when I feel unworthy.
+colloquy: Father, I believe You are love. But I forget this when I feel unworthy.
   Remind me that love does not begin with me — it begins with You.
 resolution: Today, I will pause before I act — and receive love from God in silence before I offer it to anyone else.
 tags:
@@ -36,6 +34,7 @@ tags:
   doctrinal:
     - love of god
   virtue:
+    - love
     - mercy
   mystical:
     - divine image

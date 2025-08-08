@@ -1,6 +1,9 @@
 from pathlib import Path
 import environ
 import os
+from socket import gethostname, gethostbyname_ex
+from .hostpatch import _patched_get_host  # noqa
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -12,10 +15,10 @@ environ.Env.read_env(os.path.join(BASE_DIR, "website/.env"))
 
 SECRET_KEY = env('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', '192.168.1.209'])
+ALLOWED_HOSTS += [gethostname(),] + list(set(gethostbyname_ex(gethostname())[2]))
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -28,6 +31,9 @@ if env('DJANGO_DB', default='sqlite') == 'postgres':
             'PASSWORD': env('DB_PASSWORD'),
             'HOST': env('DB_HOST'),
             'PORT': env('DB_PORT'),
+            'OPTIONS': {
+                'sslmode': 'require' if env.bool('DB_SSL', default=False) else 'disable',
+            },
         }
     }
 else:
@@ -122,11 +128,40 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
+# === S3 STATIC & MEDIA STORAGE (prod) ===
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
-STATIC_URL = "static/"
+USE_S3 = env.bool('USE_S3', default=False)  # Set this in your .env or App Runner
+
+if USE_S3:
+    INSTALLED_APPS += ["storages"]
+
+    AWS_STORAGE_BUCKET_NAME = env('S3_BUCKET_NAME', default='spiritual-formation-prod')
+    AWS_S3_REGION_NAME = env('AWS_REGION', default='us-east-1')
+    AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+    AWS_DEFAULT_ACL = None  # No public-read by default
+    AWS_QUERYSTRING_AUTH = True  # Signed URLs
+
+    # Store static and media separately in S3 (recommended)
+    STATICFILES_STORAGE = "website.storage_backends.StaticRootS3Boto3Storage"
+    STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/django/static/"
+
+    DEFAULT_FILE_STORAGE = "website.storage_backends.MediaRootS3Boto3Storage"
+    MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/django/media/"
+
+    # Optional: Separate static/media files (advanced, can do later)
+    # from storages.backends.s3boto3 import S3Boto3Storage
+    # class StaticRootS3Boto3Storage(S3Boto3Storage):
+    #     location = 'static'
+    # class MediaRootS3Boto3Storage(S3Boto3Storage):
+    #     location = 'media'
+    # STATICFILES_STORAGE = 'config.settings.StaticRootS3Boto3Storage'
+    # DEFAULT_FILE_STORAGE = 'config.settings.MediaRootS3Boto3Storage'
+else:
+    # Local dev: keep using filesystem
+    STATIC_URL = "static/"
+    MEDIA_URL = "/media/"
+    STATIC_ROOT = BASE_DIR / "staticfiles"
+    MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

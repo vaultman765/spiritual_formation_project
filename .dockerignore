@@ -9,6 +9,7 @@ tests/
 roadmap/
 reference_library/
 reading_plan/
+metadata/
 .git
 .gitignore
 requirements.txt

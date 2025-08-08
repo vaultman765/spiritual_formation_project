@@ -4,7 +4,9 @@ ENV PIPENV_VENV_IN_PROJECT=1
 WORKDIR /app/website
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y build-essential libpq-dev --no-install-recommends
+RUN apt-get update && \
+    apt-get install -y libpq-dev --no-install-recommends && \
+    rm -rf /var/lib/apt/lists/*
 
 # Install pipenv
 RUN pip install --upgrade pip && pip install pipenv
@@ -15,19 +17,23 @@ COPY ../Pipfile ../Pipfile.lock /app/
 # Install Python dependencies from /app
 WORKDIR /app
 RUN pipenv install --deploy --ignore-pipfile
+
 # Copy backend code to /app/website
-WORKDIR /app/website
-COPY . /app/website
+COPY . /app/
 
 # Make sure venv is in PATH
-
 ENV PATH="/app/.venv/bin:$PATH"
 
 # Create staticfiles dir, add non-root user
-RUN mkdir -p /app/website/staticfiles
-RUN adduser --disabled-password --no-create-home django
+RUN mkdir -p /app/staticfiles && \
+    mkdir -p /app/website/data && \
+    adduser --disabled-password --no-create-home django && \
+    chown -R django:django /app/staticfiles /app/website/data
 
 EXPOSE 8000
+
+# Switch to django user (security best practice)
+USER django
 
 # Entrypoint: collect static, migrate DB, start app
 CMD ["sh", "-c", \
@@ -35,4 +41,4 @@ CMD ["sh", "-c", \
  python manage.py collectstatic --noinput && \
  python manage.py migrate --noinput && \
 #  python manage.py import_arc --arc-id all --skip-unchanged && \
- gunicorn config.wsgi:application --bind 0.0.0.0:8000"]
+ gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 3"]
