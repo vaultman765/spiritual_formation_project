@@ -5,12 +5,10 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
     branches: [ main, release* ]
-    paths-ignore:
-      - 'metadata/**'      
+    paths-ignore: [ 'metadata/**', frontend/** ]
   push:
     branches: [ release* ]
-    paths-ignore:
-      - 'metadata/**'      
+    paths-ignore: [ 'metadata/**', frontend/** ]
   workflow_dispatch: {}
 
 permissions:
