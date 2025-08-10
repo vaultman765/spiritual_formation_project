@@ -27,15 +27,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Should we skip (forked PR)?
+      - uses: dorny/paths-filter@v3
+        id: pf
+        with:
+          filters: |
+            non_metadata:
+              exclude:
+                - 'metadata/**'
+                - 'frontend/**'
+                - 'tests/**'
+                - 'roadmap/**'
+
+      - name: Should we skip (forked PR or non-docker file updates)?
         id: gate
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ] && [ "${{ github.event.pull_request.head.repo.fork }}" = "true" ]; then
+          if { [ "${{ github.event_name }}" = "pull_request" ] && [ "${{ github.event.pull_request.head.repo.fork }}" = "true" ]; } || [ "${{ steps.pf.outputs.non_metadata }}" = "true" ]; then
             echo "skip=true" >> $GITHUB_OUTPUT
           else
             echo "skip=false" >> $GITHUB_OUTPUT
           fi
-
+      
       - name: Exit early for forked PRs
         if: steps.gate.outputs.skip == 'true'
         run: echo "Skipping ECR push for forked PR."
