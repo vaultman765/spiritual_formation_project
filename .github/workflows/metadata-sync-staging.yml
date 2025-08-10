@@ -2,7 +2,7 @@ name: metadata-sync-staging
 
 on:
   push:
-    branches: [ main, release/** ]
+    branches: [ main, release* ]
     paths: [ 'metadata/**' ]
   workflow_dispatch: {}
 
@@ -28,6 +28,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - uses: dorny/paths-filter@v3
+        id: pf
+        with:
+          filters: |
+            metadata:
+              - 'metadata/**'
 
       - name: Get OIDC token
         id: oidc

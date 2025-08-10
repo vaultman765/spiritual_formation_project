@@ -4,14 +4,13 @@ on:
   # Build on PRs (from same repo) so reviewers can try the image
   pull_request:
     types: [opened, synchronize, reopened]
-    branches: [ main, release/** ]
+    branches: [ main, release* ]
     paths-ignore:
-      - 'metadata/**'      # metadata changes don’t rebuild the image
-  # Build on merges to release/* (treat as staging)
+      - 'metadata/**'      
   push:
-    branches: [ release/** ]
+    branches: [ release* ]
     paths-ignore:
-      - 'metadata/**'      # metadata changes don’t rebuild the image
+      - 'metadata/**'      
   workflow_dispatch: {}
 
 permissions:
@@ -20,8 +19,7 @@ permissions:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPO: spiritual-formation-backend   # Terraform created this
-
+  ECR_REPO: spiritual-formation-backend
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
@@ -31,7 +29,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Decide early if we should skip (forked PRs can't assume your AWS role)
       - name: Should we skip (forked PR)?
         id: gate
         run: |
@@ -95,7 +92,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          # If your Dockerfile is at repo root, keep this. If it's at website/Dockerfile, change to ./website/Dockerfile
           file: ./Dockerfile
           push: true
           platforms: linux/amd64
