@@ -1,0 +1,32 @@
+name: metadata-sync-staging
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'metadata/**' # Only run when metadata changes
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  AWS_REGION: us-east-1
+  METADATA_BUCKET: spiritual-formation-staging  # make sure this matches the bucket we create in Terraform
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure AWS (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::756859458263:role/spiritual-staging-github-apprepo-metadata
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync metadata to S3
+        run: |
+          aws s3 sync metadata "s3://${METADATA_BUCKET}/metadata" --delete

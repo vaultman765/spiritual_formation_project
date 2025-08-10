@@ -56,7 +56,8 @@ This document describes how to deploy the
 - [x] Health check handled with patched ALLOWED_HOSTS logic
 - [x] Static files collected in Docker, pending S3 setup
 - [x] All management/command scripts identified and checked
-- [x] Checklist up to date as of 2025-08-07
+- [x]  import_arc working locally and against RDS
+- [x] Design approved: single S3 checksum is the production source of truth
 
 ---
 
@@ -65,10 +66,10 @@ This document describes how to deploy the
 ### 📦 1. **Add S3 static/media file storage**
 
 - [ ] Use **django-storages** + S3 for:
-  - [ ] Static files in production
-  - [ ] User-uploaded files (if any)
-  - [ ] **checksum file** used by `import_arc` management command
-  - [ ] Document access/usage of these files in both code and deployment
+  - [x] Static files in production
+  - [x] User-uploaded files (if any) - N/A
+  - [x] Single checksum file in S3: s3://spiritual-formation-prod/checksum/.mental_prayer_checksums.json
+  - [ ] Document S3 paths and lifecycle rules (optional)
 
 ---
 
@@ -100,17 +101,17 @@ This document describes how to deploy the
 
 ---
 
-### 🛠 5. **Consider Infrastructure as Code (IaC)**
+### 🛠 5. **Consider Infrastructure as Code (IaC) IMPORTANT**
 
 - [ ] Plan migration to **CloudFormation** and/or **Terraform**
-  - [ ] Automate all AWS resources: RDS, ECR, App Runner, S3, IAM, Secrets, Route53, etc.
-  - [ ] Enable easy, repeatable production/dev/test stack creation
+  - [ ] Terraform/CloudFormation modules for: RDS, ECR, App Runner, S3, IAM, Secrets, Route53, EventBridge, Lambda/ECS, everything!
+  - [ ] Reproducible staging/prod environments
 
 ---
 
 ### 🔄 6. **Database Security**
 
-- [ ] **Lock down RDS**: Only App Runner (and optionally your IP) can connect
+- [ ] Restrict RDS to App Runner + admin IP(s)
 - [ ] Remove public access to RDS
 - [ ] Ensure SSL is enforced on all DB connections
 
@@ -120,17 +121,39 @@ This document describes how to deploy the
 
 - [ ] Add **GitHub Actions** (or AWS CodePipeline) for:
   - [ ] Docker image build/push to ECR
-  - [ ] App Runner deploys on push to main
+  - [ ] Trigger App Runner deploy on merge to main
+  - [ ] Sync metadata/** to S3 on merge (see pipeline below)
   - [ ] Environment variable/secrets sync (but never push secrets to GitHub!)
 
 ---
 
 ### 📝 8. **import_arc & Data Import Commands**
 
-- [ ] Document/automate how to run `import_arc` on production
-  - [ ] Use one-off App Runner jobs or management commands via admin shell, SSM, or CLI
-  - [ ] Ensure all files used (including **checksum file**) are available (S3)
-- [ ] Add a "run data import" action to CI/CD or as a custom admin operation if needed
+#### Desired End-State Workflow:
+
+##### Dev changes arc YAML in repo (/metadata/**).
+
+##### PR → code review → merge to main.
+
+##### GitHub Actions:
+
+- Build and push backend image to ECR  
+- Upload updated YAML to S3 (`metadata/**`)
+
+##### EventBridge rule watches S3 ObjectCreated in metadata/ and triggers a one-off import job
+
+```bash
+python manage.py import_arc --arc-id <id-or-all> --skip-unchanged
+```
+
+The job:
+
+- Reads checksum JSON from S3
+- Imports only changed days/arcs to RDS
+- Writes updated checksum JSON back to S3
+- Updates first line of each changed YAML with Last imported into DB: <ts> (writes to S3)
+  
+##### Everything is hands-off; no manual RDS/S3 sync needed.
 
 ---
 
@@ -146,40 +169,41 @@ This document describes how to deploy the
 ## 🔗 **Notes & Further Enhancements**
 
 - **App Runner**: Health checks should be pointed to `/admin/login/` or `/api/health/` (create if not present)
-- **Checksum File**: Should be moved to S3 bucket, code should read from/write to S3
-- **Static/media**: S3 for all persistent user or app data; do **not** store in container
+
+- **Checksum File**:
+  - Prod: Single source of truth is S3 (checksum/.mental_prayer_checksums.json).
+  - Dev: Local file is fine; production jobs never rely on it.
+- **Import job IAM role needs**:
+  - s3:GetObject, s3:PutObject, s3:ListBucket on spiritual-formation-prod/metadata/** and checksum/.mental_prayer_checksums.json
+  - secretsmanager:GetSecretValue for DB/SECRET_KEY
+  - (If ECS) VPC access to RDS (subnets + SG)
 - **Secret rotation**: Regularly rotate DB and Django keys in Secrets Manager
 - **Monitoring**: Add error alerting via CloudWatch or a third-party system
 - **Documentation**: Keep this checklist up to date with progress
+- Avoid writing persistent data to container filesystems.
+- Optionally add pre-signed URLs if manual S3 inspection is needed.
+- Future: split import_arc into subcommands for more granular reprocessing.
 
 ---
 
 ## ✅ **Recently Completed**
 
-- [x] Dockerfile cleaned and production ready
-- [x] RDS PostgreSQL migrated and restricted
-- [x] App Runner builds from ECR image with env vars from Secrets Manager
+- [x] Reverted S3/local hybrid changes that broke imports
+- [x] Restored working local + RDS imports
+- [x] Finalized S3‑only checksum design for prod
 - [x] Patched ALLOWED_HOSTS for App Runner IP health checks
-- [x] Frontend build/config set for VITE_API_URL, etc
+- [x] Agreed on one‑off job pattern (Lambda/ECS) instead of trying to “exec into” App Runner
 
 ---
 
 # 🚀 **Next Steps**
 
-1. S3 for static, media, and import checksum files
+1. IaC plan - All infra/everything on AWS comes from Terraform/cdk/CloudFormation (whichever we chose).
 2. Harden RDS and Secrets Manager
-3. Add custom domains with HTTPS via App Runner + Route 53
-4. Add CI/CD via GitHub Actions
-5. Migrate to IaC (CloudFormation/Terraform)
-6. Add health check endpoint for App Runner
-
----
-
-## **Questions to Resolve**
-
-- [ ] How to best automate/deliver one-off management commands (import_arc, etc) in production?
-- [ ] How to handle custom import/checksum workflow with files in S3 (access, auth, etc)?
-- [ ] When/how to rotate secrets and DB creds safely?
-- [ ] What IAM roles need to exist for App Runner/CI/CD?
+3. Add GitHub Actions job to sync metadata/** to S3 on merge.
+4. Create S3 → EventBridge/GH Action → (Lambda container or ECS task) trigger to run import_arc.
+5. Add custom domains with HTTPS via App Runner + Route 53
+6. Enable HTTPS on custom domains.
+7. Add health check endpoint for App Runner
 
 ---

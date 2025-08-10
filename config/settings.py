@@ -130,9 +130,9 @@ USE_TZ = True
 
 # === S3 STATIC & MEDIA STORAGE (prod) ===
 
-USE_S3 = env.bool('USE_S3', default=False)  # Set this in your .env or App Runner
+ENV = env('ENV', default='Local')
 
-if USE_S3:
+if ENV in ('Prod', 'Staging'):
     INSTALLED_APPS += ["storages"]
 
     AWS_STORAGE_BUCKET_NAME = env('S3_BUCKET_NAME', default='spiritual-formation-prod')

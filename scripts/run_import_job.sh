@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "[import-job] starting…"
+export HOME=/home/app
+echo "Using HOME=$HOME"
 
-# --- Env you’ll pass at run time ---
-# S3_BUCKET_NAME=spiritual-formation-prod
-# DJANGO_DB=postgres   (your settings expect this)
-# AWS_REGION=us-east-1
-# DB_PASSWORD provided via Secrets Manager env or injected by file
-# HOME set to /home/app (so Path.home() = /home/app)
+echo "[import-job] starting…"
 
 mkdir -p /home/app
 CHECKSUM_KEY="checksum/.mental_prayer_checksums.json"

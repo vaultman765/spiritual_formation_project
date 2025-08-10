@@ -51,8 +51,6 @@ def run(command: list[str], description: str):
         if result.stderr:
             logger.error(f"STDERR: {result.stderr}")
         raise RuntimeError(f"Step failed: {description}")
-    else:
-        logger.info(f"✅ {description} completed successfully")
 
 
 def run_import_arc_metadata(arc_id):
@@ -111,7 +109,6 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
                 if not should_skip(day_file_path, checksums, args.skip_unchanged):
                     run(["python", "-m", "scripts.import_day_yaml", "--file", str(day_file)], f"Import {day_file}")
                     update_checksum(day_file_path, checksums)
-                    logger.info(f"✅ Imported updated {day_file}")
             save_checksums(checksums)
         else:
             # If not skipping unchanged, just import all days
@@ -127,7 +124,6 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
                 if not should_skip(tag_file, checksums, args.skip_unchanged):
                     run(["python", "-m", "scripts.import_arc_tags", "--arc-id", aid], f"Import arc tags for {aid}")
                     update_checksum(tag_file, checksums)
-                    logger.info(f"✅ Imported updated tags for {aid}")
             save_checksums(checksums)
         else:
             # If not skipping unchanged, just import all tags
