@@ -123,7 +123,7 @@ class ArcMetadataGenerator:
             arc_metadata.append(metadata_entry)
 
         # Write the updated metadata to file
-        write_yaml(ARC_METADATA_FILE, arc_metadata, mode="w")
+        write_yaml(ARC_METADATA_FILE, arc_metadata)
 
 
 class ArcTagGenerator:

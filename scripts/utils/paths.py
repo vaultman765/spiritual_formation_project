@@ -1,21 +1,48 @@
 from pathlib import Path
+import os
 
-# Project structure
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+ENV = os.getenv('ENV', 'Local')
+AWS_REGION = os.getenv('AWS_REGION', 'us-east-1')
+S3_BUCKET_NAME = os.getenv('S3_BUCKET_NAME', 'spiritual-formation-prod')
 
-METADATA_DIR = PROJECT_ROOT / "metadata"
-DAY_FILES_DIR = METADATA_DIR / "meditations"
-ARC_TAGS_DIR = METADATA_DIR / "arc_tags"
-ARC_METADATA_FILE = METADATA_DIR / "arc_metadata.yaml"
-INDEX_FILE = METADATA_DIR / "_index_by_arc.yaml"
-TAG_BANK_FILE = METADATA_DIR / "tag_bank.yaml"
+METADATA_S3_PREFIX = os.getenv('METADATA_S3_PREFIX', 'metadata')
+CHECKSUM_S3_KEY = os.getenv('CHECKSUM_S3_KEY', 'checksum/.mental_prayer_checksums.json')
 
-SCHEMA_DIR = METADATA_DIR / "schemas"
-ARC_METADATA_SCHEMA = SCHEMA_DIR / "arc_metadata_schema.yaml"
-ARC_TAG_SCHEMA = SCHEMA_DIR / "arc_tag_schema.yaml"
-DAY_SCHEMA = SCHEMA_DIR / "day_full_schema.yaml"
 
-CONFIG_DIR = PROJECT_ROOT / "config"
+if ENV in ('Prod', 'Staging'):
+    # Keys inside the bucket (strings, not Paths)
+    PROJECT_ROOT = f"s3://{S3_BUCKET_NAME}"
+    METADATA_DIR = f"{METADATA_S3_PREFIX}"
+    DAY_FILES_DIR = f"{METADATA_S3_PREFIX}/meditations"
+    ARC_TAGS_DIR = f"{METADATA_S3_PREFIX}/arc_tags"
+    ARC_METADATA_FILE = f"{METADATA_S3_PREFIX}/arc_metadata.yaml"
+    INDEX_FILE = f"{METADATA_S3_PREFIX}/_index_by_arc.yaml"
+    TAG_BANK_FILE = f"{METADATA_S3_PREFIX}/tag_bank.yaml"
+
+    SCHEMA_DIR = f"{METADATA_S3_PREFIX}/schemas"
+    ARC_METADATA_SCHEMA = f"{SCHEMA_DIR}/arc_metadata_schema.yaml"
+    ARC_TAG_SCHEMA = f"{SCHEMA_DIR}/arc_tag_schema.yaml"
+    DAY_SCHEMA = f"{SCHEMA_DIR}/day_full_schema.yaml"
+
+    # Single source of truth checksum lives in S3
+    CHECKSUM_FILE = CHECKSUM_S3_KEY
+
+else:
+    PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+
+    METADATA_DIR = PROJECT_ROOT / "metadata"
+    DAY_FILES_DIR = METADATA_DIR / "meditations"
+    ARC_TAGS_DIR = METADATA_DIR / "arc_tags"
+    ARC_METADATA_FILE = METADATA_DIR / "arc_metadata.yaml"
+    INDEX_FILE = METADATA_DIR / "_index_by_arc.yaml"
+    TAG_BANK_FILE = METADATA_DIR / "tag_bank.yaml"
+
+    SCHEMA_DIR = METADATA_DIR / "schemas"
+    ARC_METADATA_SCHEMA = SCHEMA_DIR / "arc_metadata_schema.yaml"
+    ARC_TAG_SCHEMA = SCHEMA_DIR / "arc_tag_schema.yaml"
+    DAY_SCHEMA = SCHEMA_DIR / "day_full_schema.yaml"
+
+    CHECKSUM_FILE = Path.home() / ".mental_prayer_checksums.json"
+
+
 DJANGO_SETTINGS_MODULE = "config.settings"
-
-CHECKSUM_FILE = Path.home() / ".mental_prayer_checksums.json"

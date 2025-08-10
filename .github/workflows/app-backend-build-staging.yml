@@ -1,0 +1,116 @@
+name: app-backend-build-staging
+
+on:
+  # Build on PRs (from same repo) so reviewers can try the image
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [ main, release* ]
+    paths-ignore: [ 'metadata/**', frontend/** ]
+  push:
+    branches: [ release* ]
+    paths-ignore: [ 'metadata/**', frontend/** ]
+  workflow_dispatch: {}
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  AWS_REGION: us-east-1
+  ECR_REPO: spiritual-formation-backend
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: app-backend-staging-${{ github.event.pull_request.number || github.ref }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dorny/paths-filter@v3
+        id: pf
+        with:
+          filters: |
+            non_metadata:
+              exclude:
+                - 'metadata/**'
+                - 'frontend/**'
+                - 'tests/**'
+                - 'roadmap/**'
+
+      - name: Should we skip (forked PR or non-docker file updates)?
+        id: gate
+        run: |
+          if { [ "${{ github.event_name }}" = "pull_request" ] && [ "${{ github.event.pull_request.head.repo.fork }}" = "true" ]; } || [ "${{ steps.pf.outputs.non_metadata }}" = "false" ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Exit early for forked PRs or non-docker files
+        if: steps.gate.outputs.skip == 'true'
+        run: echo "Skipping ECR push for forked PR or non-docker files."
+
+      - name: Configure AWS (OIDC)
+        if: steps.gate.outputs.skip != 'true'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::756859458263:role/spiritual-staging-github-apprepo-build
+          aws-region: us-east-1
+
+      - name: Get AWS account ID
+        if: steps.gate.outputs.skip != 'true'
+        id: acct
+        run: echo "id=$(aws sts get-caller-identity --query Account --output text)" >> $GITHUB_OUTPUT
+
+      - name: Compute full image refs
+        if: steps.gate.outputs.skip != 'true'
+        id: refs
+        shell: bash
+        env:
+          AWS_REGION: us-east-1
+          ECR_REPO: spiritual-formation-backend
+        run: |
+          SHORT_SHA="${GITHUB_SHA::12}"
+          REG="${{ steps.acct.outputs.id }}.dkr.ecr.${AWS_REGION}.amazonaws.com"
+          REPO="$REG/${ECR_REPO}"
+
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            echo "image=${REPO}:pr-${{ github.event.number }}-${SHORT_SHA}" >> $GITHUB_OUTPUT
+            echo "push_latest=false" >> $GITHUB_OUTPUT
+          else
+            SAFE_BRANCH="${GITHUB_REF_NAME//\//-}"
+            echo "image=${REPO}:rel-${SAFE_BRANCH}-${SHORT_SHA}" >> $GITHUB_OUTPUT
+            echo "latest=${REPO}:staging-latest" >> $GITHUB_OUTPUT
+            echo "push_latest=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Login to Amazon ECR
+        if: steps.gate.outputs.skip != 'true'
+        run: |
+          aws ecr get-login-password --region us-east-1 \
+            | docker login --username AWS --password-stdin \
+              ${{ steps.acct.outputs.id }}.dkr.ecr.us-east-1.amazonaws.com
+
+      - name: Set up Docker Buildx
+        if: steps.gate.outputs.skip != 'true'
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build & push (primary tag)
+        if: steps.gate.outputs.skip != 'true'
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          platforms: linux/amd64
+          tags: ${{ steps.refs.outputs.image }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Tag & push staging-latest (for release/* pushes)
+        if: steps.gate.outputs.skip != 'true' && steps.refs.outputs.push_latest == 'true'
+        run: |
+          docker pull "${{ steps.refs.outputs.image }}"
+          docker tag  "${{ steps.refs.outputs.image }}" "${{ steps.refs.outputs.latest }}"
+          docker push "${{ steps.refs.outputs.latest }}"

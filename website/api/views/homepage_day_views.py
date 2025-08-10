@@ -6,8 +6,9 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework import status
 from website.models import MeditationDay
+from django.conf import settings
 
-HOMEPAGE_JSON_PATH = Path("website/data/homepage_day.json")
+HOMEPAGE_JSON_PATH = Path(settings.BASE_DIR).joinpath("website", "data", "homepage_day.json")
 
 
 def load_homepage_data():

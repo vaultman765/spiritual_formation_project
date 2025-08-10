@@ -1,12 +1,18 @@
+import boto3
+import json
 import sys
 import yaml
+from io import StringIO
 from pathlib import Path
 from jsonschema import validate, ValidationError
-from typing import Any
+from typing import Any, Union
+
+from scripts.utils.paths import ENV, S3_BUCKET_NAME
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 
+# ---------- Validation helpers ----------
 class IndentDumper(yaml.SafeDumper):
     def increase_indent(self, flow=False, indentless=False):
         return super().increase_indent(flow, False)
@@ -24,26 +30,104 @@ class DayYamlValidator:
             return False, ve.message
 
 
-def load_yaml(file_path: Path) -> Any:
+# ---------- S3 helpers ----------
+def _ensure_key(p: Union[str, Path]) -> str:
+    # Turn Path into forward-slash key
+    return str(p).replace("\\", "/") if isinstance(p, (Path,)) else str(p)
+
+
+def _s3() -> boto3.client:
+    return boto3.client("s3")
+
+
+def load_yaml(path_or_key: Union[str, Path], encoding="utf-8-sig") -> Any:
+    """
+    If ENV=Prod or Staging, read YAML from S3 key.
+    Else, read from local filesystem (Path or str).
+    """
     try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            return yaml.safe_load(f)
-    except FileNotFoundError:
-        print(f"File not found: {file_path}")
-        return None
-    except yaml.YAMLError as e:
-        print(f"YAML error in {file_path}: {e}")
-        return None
+        if ENV in ('Prod', 'Staging'):
+            key = _ensure_key(path_or_key)
+            obj = _s3().get_object(Bucket=S3_BUCKET_NAME, Key=key)
+            body = obj["Body"].read().decode(encoding)
+            return yaml.safe_load(body)
+        else:
+            p = Path(path_or_key)
+            with p.open("r", encoding=encoding) as f:
+                return yaml.safe_load(f)
+    except Exception as e:
+        print(f"Error loading YAML from {path_or_key}: {e}")
+        raise e
 
 
-def write_yaml(filepath, data, mode="w"):
-    with open(filepath, mode, encoding="utf-8") as f:
-        yaml.dump(
-            data,
-            f,
-            allow_unicode=True,
-            sort_keys=False,
-            default_flow_style=False,
-            indent=2,
-            Dumper=IndentDumper,
-        )
+def write_yaml(path_or_key: Union[str, Path], data, encoding="utf-8") -> None:
+    """
+    If ENV=Prod, write YAML to S3 key.
+    Else, write to local filesystem.
+    """
+    try:
+        if ENV in ('Prod', 'Staging'):
+            key = _ensure_key(path_or_key)
+            buf = StringIO()
+            yaml.dump(
+                data,
+                buf,
+                allow_unicode=True,
+                sort_keys=False,
+                default_flow_style=False,
+                indent=2,
+                Dumper=IndentDumper,
+            )
+            _s3().put_object(Bucket=S3_BUCKET_NAME, Key=key, Body=buf.getvalue().encode(encoding))
+        else:
+            p = Path(path_or_key)
+            p.parent.mkdir(parents=True, exist_ok=True)
+            with p.open("w", encoding=encoding) as f:
+                yaml.dump(
+                    data,
+                    f,
+                    allow_unicode=True,
+                    sort_keys=False,
+                    default_flow_style=False,
+                    indent=2,
+                    Dumper=IndentDumper,
+                )
+    except Exception as e:
+        print(f"Error writing YAML to {path_or_key}: {e}")
+        raise e
+
+
+# ---------- JSON I/O (for checksum) ----------
+def load_json(path_or_key: Union[str, Path]) -> dict:
+    if ENV in ('Prod', 'Staging'):
+        key = _ensure_key(path_or_key)
+        try:
+            obj = _s3().get_object(Bucket=S3_BUCKET_NAME, Key=key)
+            return json.loads(obj["Body"].read().decode("utf-8"))
+        except _s3().exceptions.NoSuchKey:  # type: ignore[attr-defined]
+            return {}
+        except Exception:
+            return {}
+    else:
+        p = Path(path_or_key)
+        if not p.exists():
+            return {}
+        try:
+            return json.loads(p.read_text(encoding="utf-8"))
+        except Exception as e:
+            print(f"Error loading JSON from {path_or_key}: {e}")
+            raise e
+
+
+def write_json(data: dict, path_or_key: Union[str, Path]):
+    try:
+        if ENV in ('Prod', 'Staging'):
+            key = _ensure_key(path_or_key)
+            _s3().put_object(Bucket=S3_BUCKET_NAME, Key=key, Body=json.dumps(data, indent=2).encode("utf-8"))
+        else:
+            p = Path(path_or_key)
+            p.parent.mkdir(parents=True, exist_ok=True)
+            p.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    except Exception as e:
+        print(f"Error writing JSON to {path_or_key}: {e}")
+        raise e

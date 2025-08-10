@@ -1,12 +1,11 @@
-# Last imported into DB: 2025-07-10 15:05:02
+# Last imported into DB: 2025-08-09 11:37:54
 master_day_number: 17
 arc_day_number: 3
 arc_id: arc_holy_fear_of_the_lord
 arc_title: The Holy Fear of the Lord
 arc_number: 3
 day_title: The Gift of Fear and the Spirit
-anchor_image:
-  Sinai thunder and cloud — The mountain shakes, clothed in fire and smoke.
+anchor_image: Sinai thunder and cloud — The mountain shakes, clothed in fire and smoke.
   Lightning flashes. A trumpet sounds. The people tremble as the voice of God roars
   from the cloud.
 primary_reading:
@@ -15,7 +14,7 @@ primary_reading:
   url: ""
 secondary_reading:
   - title: Catechism of the Catholic Church
-    reference: 1830–1831
+    reference: §§1830–1831
     url: https://www.vatican.va/archive/ENG0015/__P67.HTM
 meditative_points:
   - The fear of the Lord is not only a disposition—it is a **gift of the Holy Spirit**. It is infused, not achieved,
@@ -24,8 +23,7 @@ meditative_points:
   - The saints feared sin more than suffering. This fear purifies love.
 ejaculatory_prayer: Spirit of God, give me the gift of holy fear
 colloquy: Holy Spirit, inflame in me Your gift of holy fear. Teach me to recoil not from pain, but from sin.
-resolution:
-  I will examine my conscience today in the light of holy fear — not shame,
+resolution: I will examine my conscience today in the light of holy fear — not shame,
   but awe that leads to repentance.
 tags:
   thematic:

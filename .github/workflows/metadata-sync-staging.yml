@@ -1,0 +1,68 @@
+name: metadata-sync-staging
+
+on:
+  push:
+    branches: [ main, release* ]
+    paths: [ 'metadata/**' ]
+  workflow_dispatch: {}
+
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [ main, release* ]
+    paths: [ 'metadata/**' ]
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: metadata-sync-staging
+  cancel-in-progress: true
+
+env:
+  AWS_REGION: us-east-1
+  METADATA_BUCKET: spiritual-formation-staging
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dorny/paths-filter@v3
+        id: pf
+        with:
+          filters: |
+            metadata:
+              - 'metadata/**'
+
+      - name: Get OIDC token
+        id: oidc
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const id = await core.getIDToken('sts.amazonaws.com');  // 'core' is preloaded
+            core.setOutput('token', id);
+
+      - name: Show OIDC claims
+        run: |
+          python - <<'PY'
+          import os, json, base64
+          tok = os.environ['TOKEN']
+          payload = tok.split('.')[1]
+          # pad and decode
+          payload += '=' * (-len(payload) % 4)
+          print(json.dumps(json.loads(base64.urlsafe_b64decode(payload).decode()), indent=2))
+          PY
+        env:
+          TOKEN: ${{ steps.oidc.outputs.token }}
+
+
+      - name: Configure AWS (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::756859458263:role/spiritual-staging-github-apprepo-metadata
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync metadata to S3
+        run: aws s3 sync metadata "s3://${METADATA_BUCKET}/metadata" --delete
