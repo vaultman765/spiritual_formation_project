@@ -52,6 +52,27 @@ jobs:
         if: steps.tags.outputs.skip_push == 'true'
         run: echo "Skipping ECR push for forked PR."
 
+      - name: Get OIDC token
+        id: oidc
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const core = require('@actions/core');
+            const id = await core.getIDToken('sts.amazonaws.com');
+            core.setOutput('token', id);
+
+      - name: Show OIDC claims
+        run: |
+          python - <<'PY'
+          import os, json, base64
+          tok = os.environ['TOKEN']
+          payload = tok.split('.')[1] + '=='
+          print(json.dumps(json.loads(base64.urlsafe_b64decode(payload).decode()), indent=2))
+          PY
+        env:
+          TOKEN: ${{ steps.oidc.outputs.token }}
+
+
       - name: Configure AWS (OIDC)
         if: steps.tags.outputs.skip_push != 'true'
         uses: aws-actions/configure-aws-credentials@v4
