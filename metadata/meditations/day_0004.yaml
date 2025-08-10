@@ -1,33 +1,30 @@
-# Last imported into DB: 2025-08-09 11:43:07
+# Last imported into DB: 2025-08-10 16:30:30
 master_day_number: 4
 arc_day_number: 4
 arc_id: arc_love_of_god
 arc_title: Love of God – Foundation of All
 arc_number: 1
 day_title: God Is Love
-anchor_image:
-  The Crucified Christ (Face) — You gaze upon the face of Christ crucified.
+anchor_image: The Crucified Christ (Face) — You gaze upon the face of Christ crucified.
   His eyes are closed, His head bowed beneath the crown of thorns. From this suffering Face shines infinite love.
   Every wound speaks the truth of God’s heart.
 primary_reading:
   title: 1 John 4:7–21
   reference:
-  url: ''
+  url: ""
 secondary_reading:
   - title: Catechism of the Catholic Church
-    reference: 218–221
+    reference: §§218–221
     url: https://www.vatican.va/archive/ENG0015/__P16.HTM
 meditative_points:
   - “God is love.”
   - He loved us first.
   - Love casts out fear.
 ejaculatory_prayer: God is love — and He loves me.
-colloquy:
-  Lord Jesus, let me not merely speak of love, but live in the reality that
+colloquy: Lord Jesus, let me not merely speak of love, but live in the reality that
   You *are* love — and You love me first. Remove all fear from my heart, and help
   me rest in Your perfect love.
-resolution:
-  I will spend 5 minutes today simply receiving God’s love in silence, not
+resolution: I will spend 5 minutes today simply receiving God’s love in silence, not
   trying to earn or understand it — only receive.
 tags:
   thematic:

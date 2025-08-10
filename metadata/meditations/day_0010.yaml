@@ -1,26 +1,25 @@
-# Last imported into DB: 2025-08-09 11:37:48
+# Last imported into DB: 2025-08-10 16:30:31
 master_day_number: 10
 arc_day_number: 3
 arc_id: arc_love_of_neighbor
 arc_title: Love of Neighbor – Living Charity
 arc_number: 2
 day_title: Love of Enemies
-anchor_image:
-  Christ washing the disciples’ feet — The Son of God kneels in the dust.
+anchor_image: Christ washing the disciples’ feet — The Son of God kneels in the dust.
   He touches dirt and fatigue, pouring water not only onto their feet, but into their
   shame. This is love made visible in humility.
 primary_reading:
   title: John 13:1–17
-  reference: ''
-  url: ''
+  reference: ""
+  url: ""
 secondary_reading:
   - title: Matthew 5:38–48
-    reference: ''
+    reference: ""
   - title: Catechism of the Catholic Church
-    reference: CCC 1825
+    reference: §1825
     url: https://www.vatican.va/archive/ENG0015/__P66.HTM
   - title: Catechism of the Catholic Church
-    reference: CCC 2844
+    reference: §2844
     url: https://www.vatican.va/archive/ENG0015/__PAB.HTM
 meditative_points:
   - “You also ought to wash one another’s feet.” (Jn 13:14) — He said this after washing
@@ -29,8 +28,7 @@ meditative_points:
     enemy does not mean to feel warmth — it means to will their sanctity.
   - “If you love those who love you, what reward do you have?” (Mt 5:46)
 ejaculatory_prayer: Lord, give me the strength to love those who do not love me.
-colloquy:
-  Jesus, You knew Judas would betray You — yet You served him with tenderness.
+colloquy: Jesus, You knew Judas would betray You — yet You served him with tenderness.
   Teach me how to kneel before those I fear. Teach me how to pray for those who wound.
 resolution: Today I will silently bless or intercede for someone I resist in my heart.
 tags:

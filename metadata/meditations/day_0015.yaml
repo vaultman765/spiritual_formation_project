@@ -1,12 +1,11 @@
-# Last imported into DB: 2025-08-09 11:37:53
+# Last imported into DB: 2025-08-10 16:30:36
 master_day_number: 15
 arc_day_number: 1
 arc_id: arc_holy_fear_of_the_lord
 arc_title: The Holy Fear of the Lord
 arc_number: 3
 day_title: The Beginning of Wisdom
-anchor_image:
-  Sinai thunder and cloud — The mountain shakes, clothed in fire and smoke.
+anchor_image: Sinai thunder and cloud — The mountain shakes, clothed in fire and smoke.
   Lightning flashes. A trumpet sounds. The people tremble as the voice of God roars
   from the cloud.
 primary_reading:
@@ -15,7 +14,7 @@ primary_reading:
   url: ""
 secondary_reading:
   - title: Sirach 1:12–20
-    reference: on the joy, life, and wisdom flowing from holy fear
+    reference:
     url: ""
 meditative_points:
   - “The fear of the Lord is the beginning of wisdom.” (Prov 9:10) — not dread, but
@@ -25,11 +24,9 @@ meditative_points:
   - Prayer begins not with comfort, but awe. Reverence is the gate into the presence
     of the living God.
 ejaculatory_prayer: Teach me to begin every prayer with awe, O Lord.
-colloquy:
-  Lord, give me holy fear—not the fear that hides, but the awe that bows and adores.
+colloquy: Lord, give me holy fear—not the fear that hides, but the awe that bows and adores.
   Let this fear strip me of arrogance and teach me wisdom.
-resolution:
-  Today I will examine whether I begin my prayer with reverence — and I
+resolution: Today I will examine whether I begin my prayer with reverence — and I
   will ask for the grace to fear rightly.
 tags:
   thematic:
