@@ -8,7 +8,7 @@ from rest_framework import status
 from website.models import MeditationDay
 from django.conf import settings
 
-HOMEPAGE_JSON_PATH = Path(settings.BASE_DIR) / "website" / "data" / "homepage_day.json"
+HOMEPAGE_JSON_PATH = Path(settings.BASE_DIR).joinpath("website", "data", "homepage_day.json")
 
 
 def load_homepage_data():
