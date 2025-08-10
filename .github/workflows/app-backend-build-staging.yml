@@ -9,9 +9,11 @@ on:
       - 'website/**'
       - 'Dockerfile'
       - 'Pipfile*'
+      - 'Pipfile.lock'
       - '.dockerignore'
       - 'scripts/**'
       - 'config/**'
+      - 'manage.py'
   push:
     branches: [ main, release* ]
     paths-ignore: [ 'metadata/**', frontend/** ]
