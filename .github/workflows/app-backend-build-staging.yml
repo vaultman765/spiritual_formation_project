@@ -41,7 +41,7 @@ jobs:
       - name: Should we skip (forked PR or non-docker file updates)?
         id: gate
         run: |
-          if { [ "${{ github.event_name }}" = "pull_request" ] && [ "${{ github.event.pull_request.head.repo.fork }}" = "true" ]; } || [ "${{ steps.pf.outputs.non_metadata }}" = "true" ]; then
+          if { [ "${{ github.event_name }}" = "pull_request" ] && [ "${{ github.event.pull_request.head.repo.fork }}" = "true" ]; } || [ "${{ steps.pf.outputs.non_metadata }}" = "false" ]; then
             echo "skip=true" >> $GITHUB_OUTPUT
           else
             echo "skip=false" >> $GITHUB_OUTPUT
