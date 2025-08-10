@@ -5,9 +5,13 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
     branches: [ main, release/** ]
+    paths-ignore:
+      - 'metadata/**'      # metadata changes don’t rebuild the image
   # Build on merges to release/* (treat as staging)
   push:
     branches: [ release/** ]
+    paths-ignore:
+      - 'metadata/**'      # metadata changes don’t rebuild the image
   workflow_dispatch: {}
 
 permissions:

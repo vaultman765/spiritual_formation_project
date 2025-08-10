@@ -1,10 +1,20 @@
 name: metadata-sync-staging
 
 on:
-  push:
-    branches: [ main ]
+  # Build on PRs (from same repo) so reviewers can try the image
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [ main, release/** ]
     paths:
-      - 'metadata/**' # Only run when metadata changes
+      - 'metadata/**'      # Only run if files in metadata/ change
+
+  # Build on merges to release/* (treat as staging)
+  push:
+    branches: [ release/** ]
+    paths:
+      - 'metadata/**'      # Only run if files in metadata/ change
+
+  workflow_dispatch: {}
 
 permissions:
   id-token: write
