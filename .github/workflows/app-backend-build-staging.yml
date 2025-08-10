@@ -47,9 +47,9 @@ jobs:
             echo "skip=false" >> $GITHUB_OUTPUT
           fi
       
-      - name: Exit early for forked PRs
+      - name: Exit early for forked PRs or non-docker files
         if: steps.gate.outputs.skip == 'true'
-        run: echo "Skipping ECR push for forked PR."
+        run: echo "Skipping ECR push for forked PR or non-docker files."
 
       - name: Configure AWS (OIDC)
         if: steps.gate.outputs.skip != 'true'
