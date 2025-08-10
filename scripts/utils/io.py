@@ -12,7 +12,6 @@ from scripts.utils.paths import ENV, S3_BUCKET_NAME
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 
-
 # ---------- Validation helpers ----------
 class IndentDumper(yaml.SafeDumper):
     def increase_indent(self, flow=False, indentless=False):
@@ -29,7 +28,7 @@ class DayYamlValidator:
             return True, None
         except ValidationError as ve:
             return False, ve.message
-        
+
 
 # ---------- S3 helpers ----------
 def _ensure_key(p: Union[str, Path]) -> str:

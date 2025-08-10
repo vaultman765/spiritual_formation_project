@@ -25,59 +25,50 @@ env:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    concurrency:
-      group: app-backend-staging-${{ github.event.pull_request.number || github.ref }}
-      cancel-in-progress: true
     steps:
       - uses: actions/checkout@v4
 
-      - name: Configure AWS (OIDC)
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          role-to-assume: arn:aws:iam::756859458263:role/spiritual-staging-github-apprepo-build
-          aws-region: ${{ env.AWS_REGION }}
-
-      - name: Get AWS account ID
-        id: acct
-        run: echo "id=$(aws sts get-caller-identity --query Account --output text)" >> $GITHUB_OUTPUT
-
+      # decide tags AND whether to skip (forked PRs)
       - name: Compute tags
         id: tags
         shell: bash
         run: |
-          REPO="${{ steps.acct.outputs.id }}.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com/${{ env.ECR_REPO }}"
           SHORT_SHA="${GITHUB_SHA::12}"
-
+          echo "sha=$SHORT_SHA" >> $GITHUB_OUTPUT
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-            # Skip ECR push for PRs from forks (no OIDC perms)
             if [[ "${{ github.event.pull_request.head.repo.fork }}" == "true" ]]; then
               echo "skip_push=true" >> $GITHUB_OUTPUT
               exit 0
             fi
-            PR="${{ github.event.pull_request.number }}"
-            echo "repo=$REPO"        >> $GITHUB_OUTPUT
-            echo "sha=$SHORT_SHA"    >> $GITHUB_OUTPUT
-            echo "tag1=pr-${PR}-${SHORT_SHA}" >> $GITHUB_OUTPUT
+            echo "tag1=pr-${{ github.event.pull_request.number }}-${SHORT_SHA}" >> $GITHUB_OUTPUT
             echo "push_latest=false" >> $GITHUB_OUTPUT
           else
-            # push to release/* branches
-            BRANCH="${GITHUB_REF_NAME}"
-            SAFE_BRANCH="${BRANCH//\//-}"  # release/my-branch -> release-my-branch
-            echo "repo=$REPO"        >> $GITHUB_OUTPUT
-            echo "sha=$SHORT_SHA"    >> $GITHUB_OUTPUT
+            SAFE_BRANCH="${GITHUB_REF_NAME//\//-}"
             echo "tag1=rel-${SAFE_BRANCH}-${SHORT_SHA}" >> $GITHUB_OUTPUT
-            echo "push_latest=true"  >> $GITHUB_OUTPUT
+            echo "push_latest=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Exit early for forked PRs
         if: steps.tags.outputs.skip_push == 'true'
         run: echo "Skipping ECR push for forked PR."
 
+      - name: Configure AWS (OIDC)
+        if: steps.tags.outputs.skip_push != 'true'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::756859458263:role/spiritual-staging-github-apprepo-build
+          aws-region: us-east-1
+
+      - name: Get AWS account ID
+        if: steps.tags.outputs.skip_push != 'true'
+        id: acct
+        run: echo "id=$(aws sts get-caller-identity --query Account --output text)" >> $GITHUB_OUTPUT
+
       - name: Login to Amazon ECR
         if: steps.tags.outputs.skip_push != 'true'
         run: |
-          aws ecr get-login-password --region $AWS_REGION \
-            | docker login --username AWS --password-stdin ${{ steps.acct.outputs.id }}.dkr.ecr.${AWS_REGION}.amazonaws.com
+          aws ecr get-login-password --region us-east-1 \
+            | docker login --username AWS --password-stdin ${{ steps.acct.outputs.id }}.dkr.ecr.us-east-1.amazonaws.com
 
       - name: Set up Docker Buildx
         if: steps.tags.outputs.skip_push != 'true'

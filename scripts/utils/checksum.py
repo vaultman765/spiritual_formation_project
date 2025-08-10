@@ -1,14 +1,11 @@
 
-from turtle import up
 import boto3
 import hashlib
 import json
 from typing import Union
 from pathlib import Path
-from config.settings import ENV
 from scripts.utils.paths import CHECKSUM_FILE, ENV, S3_BUCKET_NAME
 from scripts.utils.io import load_json, write_json
-
 
 
 def _read_lines(path_or_key: Union[str, Path]) -> list[str]:
@@ -60,7 +57,7 @@ def should_skip(path_or_key: Union[str, Path], checksums: dict, skip: bool) -> b
     fname = _basename(path_or_key)
     current = compute_checksum(path_or_key)
     cached = checksums.get(fname)
-    
+
     if cached is None or cached != current:
         return False
     return True

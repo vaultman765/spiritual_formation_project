@@ -1,35 +1,33 @@
 name: metadata-sync-staging
 
 on:
-  # Build on PRs (from same repo) so reviewers can try the image
+  push:
+    branches: [ main, release/** ]
+    paths: [ 'metadata/**' ]
+  workflow_dispatch: {}
+
   pull_request:
     types: [opened, synchronize, reopened]
-    branches: [ main, release/** ]
-    paths:
-      - 'metadata/**'      # Only run if files in metadata/ change
-
-  # Build on merges to release/* (treat as staging)
-  push:
-    branches: [ release/** ]
-    paths:
-      - 'metadata/**'      # Only run if files in metadata/ change
-
-  workflow_dispatch: {}
+    branches: [ main ]
+    paths: [ 'metadata/**' ]
 
 permissions:
   id-token: write
   contents: read
 
+concurrency:
+  group: metadata-sync-staging
+  cancel-in-progress: true
+
 env:
   AWS_REGION: us-east-1
-  METADATA_BUCKET: spiritual-formation-staging  # make sure this matches the bucket we create in Terraform
+  METADATA_BUCKET: spiritual-formation-staging
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Configure AWS (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
@@ -38,5 +36,4 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Sync metadata to S3
-        run: |
-          aws s3 sync metadata "s3://${METADATA_BUCKET}/metadata" --delete
+        run: aws s3 sync metadata "s3://${METADATA_BUCKET}/metadata" --delete
