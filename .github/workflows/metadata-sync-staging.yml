@@ -4,20 +4,17 @@ on:
   push:
     branches: [ main, release* ]
     paths: [ 'metadata/**' ]
-  workflow_dispatch: {}
-
   pull_request:
     types: [opened, synchronize, reopened]
     branches: [ main, release* ]
     paths: [ 'metadata/**' ]
+  workflow_dispatch: {}
 
 permissions:
   id-token: write
   contents: read
 
-concurrency:
-  group: metadata-sync-staging
-  cancel-in-progress: true
+
 
 env:
   AWS_REGION: us-east-1
@@ -26,43 +23,54 @@ env:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    concurrency:
+      group: metadata-sync-staging
+      cancel-in-progress: true
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
 
       - uses: dorny/paths-filter@v3
         id: pf
         with:
+          # detect added/modified/deleted files in metadata/**
           filters: |
-            metadata:
-              - 'metadata/**'
-
-      - name: Get OIDC token
-        id: oidc
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const id = await core.getIDToken('sts.amazonaws.com');  // 'core' is preloaded
-            core.setOutput('token', id);
-
-      - name: Show OIDC claims
-        run: |
-          python - <<'PY'
-          import os, json, base64
-          tok = os.environ['TOKEN']
-          payload = tok.split('.')[1]
-          # pad and decode
-          payload += '=' * (-len(payload) % 4)
-          print(json.dumps(json.loads(base64.urlsafe_b64decode(payload).decode()), indent=2))
-          PY
-        env:
-          TOKEN: ${{ steps.oidc.outputs.token }}
-
+            added:
+              - added: ['metadata/**']
+            modified:
+              - modified: ['metadata/**']
+            deleted:
+              - deleted: ['metadata/**']
 
       - name: Configure AWS (OIDC)
+        if: (steps.pf.outputs.added == 'true' || steps.pf.outputs.modified == 'true' || steps.pf.outputs.deleted == 'true') && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork != true)
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::756859458263:role/spiritual-staging-github-apprepo-metadata
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Sync metadata to S3
-        run: aws s3 sync metadata "s3://${METADATA_BUCKET}/metadata" --delete
+      - name: Upload added/modified files
+        if: steps.pf.outputs.added == 'true' || steps.pf.outputs.modified == 'true'
+        shell: bash
+        run: |
+          git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.sha }} | \
+            grep '^metadata/' | while read p; do
+              aws s3 cp "$p" "s3://${METADATA_BUCKET}/$p" --only-show-errors
+            done
+
+      - name: Delete removed files
+        if: steps.pf.outputs.deleted == 'true'
+        shell: bash
+        run: |
+          git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.sha }} | \
+            grep '^metadata/' | while read p; do
+              aws s3 rm "s3://${METADATA_BUCKET}/$p" --only-show-errors || true
+            done
+
+      - name: Fire single trigger
+        if: (steps.pf.outputs.added == 'true' || steps.pf.outputs.modified == 'true' || steps.pf.outputs.deleted == 'true')
+        shell: bash
+        run: |
+          TMP=$(mktemp)
+          echo "{\"run_id\":\"${GITHUB_RUN_ID}\",\"sha\":\"${GITHUB_SHA}\",\"ts\":\"$(date -u +%FT%TZ)\"}" > "$TMP"
+          aws s3 cp "$TMP" "s3://${METADATA_BUCKET}/metadata/_triggers/${GITHUB_RUN_ID}-${GITHUB_SHA}.json" --only-show-errors
