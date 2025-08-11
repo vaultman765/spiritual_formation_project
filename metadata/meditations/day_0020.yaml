@@ -5,8 +5,7 @@ arc_id: arc_holy_fear_of_the_lord
 arc_title: The Holy Fear of the Lord
 arc_number: 3
 day_title: Judgment and Reverence
-anchor_image:
-  Sinai thunder and cloud — The mountain shakes, clothed in fire and smoke.
+anchor_image: Sinai thunder and cloud — The mountain shakes, clothed in fire and smoke.
   Lightning flashes. A trumpet sounds. The people tremble as the voice of God roars
   from the cloud.
 primary_reading:
@@ -15,7 +14,7 @@ primary_reading:
   url: ""
 secondary_reading:
   - title: Catechism of the Catholic Church
-    reference: 1021–1022
+    reference: §§1021–1022
     url: https://www.vatican.va/archive/ENG0015/__P2L.HTM
 meditative_points:
   - Fear of the Lord includes judgment — not just final, but present. Every action echoes in eternity.
