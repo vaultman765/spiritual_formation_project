@@ -140,8 +140,6 @@ class ArcTagGenerator:
         loader = ArcDataLoader(self.index_data)
         arc_data = loader.load_arc_day_data(arc_ids=arc_ids)
 
-        ARC_TAGS_DIR.mkdir(parents=True, exist_ok=True)
-
         for arc_id, arc_days in arc_data.items():
             if not arc_days:
                 continue
@@ -181,10 +179,6 @@ class ArcMetadataCLI:
     def __init__(self):
         self.index_data = load_yaml(INDEX_FILE) or {}
         self.tag_bank = load_yaml(TAG_BANK_FILE) or {}
-
-        # Ensure directories exist
-        ARC_TAGS_DIR.mkdir(parents=True, exist_ok=True)
-        DAY_FILES_DIR.mkdir(parents=True, exist_ok=True)
 
     def run(self) -> None:
         parser = argparse.ArgumentParser(
