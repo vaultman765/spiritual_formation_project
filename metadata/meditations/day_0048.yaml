@@ -1,12 +1,11 @@
-# Last imported into DB: 2025-08-09 11:38:21
+# Last imported into DB: 2025-08-12 13:20:56
 master_day_number: 48
 arc_day_number: 10
 arc_id: arc_litany_sacred_heart
 arc_title: Litany of the Sacred Heart
 arc_number: 6
 day_title: King and Center of All Hearts
-anchor_image:
-  "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
+anchor_image: "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
   His hands are extended in blessing, and His robe gleams like light.
   But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love.
   It is not a wound of shame, but a throne of glory. He says nothing.
@@ -21,13 +20,13 @@ secondary_reading:
     reference:
     url:
   - title: Catechism of the Catholic Church
-    reference: 478
+    reference: §478
     url: https://www.vatican.va/archive/ENG0015/__P1J.HTM
   - title: Catechism of the Catholic Church
-    reference: 766
+    reference: §766
     url: https://www.vatican.va/archive/ENG0015/__P27.HTM
   - title: Catechism of the Catholic Church
-    reference: 2669
+    reference: §2669
     url: https://www.vatican.va/archive/ENG0015/__P9F.HTM
   - title: Pope Pius XII, *Haurietis Aquas*
     reference: 87–95
@@ -36,8 +35,7 @@ meditative_points:
   - Christ’s Heart reigns not through domination, but through self-offering
   - To enthrone His Heart is to open mine without defense
 ejaculatory_prayer: Heart of Jesus, King of hearts, reign in me.
-colloquy:
-  Jesus, be King not just of my thoughts, but of the places I hide. Rule over my resentment, my fears, my hunger to control.
+colloquy: Jesus, be King not just of my thoughts, but of the places I hide. Rule over my resentment, my fears, my hunger to control.
   You gave me Your Heart — here is mine.
 resolution: 'Today I will let go of control in one small area — and repeat: "Jesus, reign here."'
 tags:
