@@ -6,6 +6,10 @@ from typing import Union
 from pathlib import Path
 from scripts.utils.paths import CHECKSUM_FILE, ENV, S3_BUCKET_NAME
 from scripts.utils.io import load_json, write_json
+from scripts.utils.log import configure_logging, get_logger
+
+configure_logging()
+logger = get_logger(__name__)
 
 
 def _read_lines(path_or_key: Union[str, Path]) -> list[str]:
@@ -30,7 +34,7 @@ def load_checksums():
     try:
         return load_json(CHECKSUM_FILE)
     except json.JSONDecodeError as e:
-        print(f"Failed to load checksums. Error: {e}")
+        logger.error(f"Failed to load checksums. Error: {e}")
         raise e
 
 
@@ -38,7 +42,7 @@ def save_checksums(data):
     try:
         write_json(data, CHECKSUM_FILE)
     except Exception as e:
-        print(f"Failed to save checksums. Error: {e}")
+        logger.error(f"Failed to save checksums. Error: {e}")
         raise e
 
 

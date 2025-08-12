@@ -23,8 +23,11 @@ from scripts.utils.paths import (
 from scripts.utils.constants import TAG_CATEGORIES
 from scripts.utils.io import load_yaml, write_yaml
 from typing import Any, Dict, List, Optional
+from scripts.utils.log import configure_logging, get_logger
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
+configure_logging()
+logger = get_logger(__name__)
 # === Shared Data Loader ===
 
 
@@ -198,16 +201,16 @@ class ArcMetadataCLI:
         if args.arc_id:
             invalid = [arc for arc in args.arc_id if arc not in self.index_data]
             if invalid:
-                print(f"Invalid arc_ids: {invalid}")
+                logger.error(f"Invalid arc_ids: {invalid}")
                 return
             arc_ids = args.arc_id
 
         if args.mode in ["metadata", "both"]:
-            print("Generating arc_metadata.yaml...")
+            logger.info("Generating arc_metadata.yaml...")
             ArcMetadataGenerator(self.index_data).generate(arc_ids=arc_ids)
 
         if args.mode in ["tags", "both"]:
-            print("Generating arc_tags/*.yaml...")
+            logger.info("Generating arc_tags/*.yaml...")
             ArcTagGenerator(self.index_data, self.tag_bank).generate(arc_ids=arc_ids)
 
 

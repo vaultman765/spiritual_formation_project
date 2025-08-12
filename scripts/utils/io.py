@@ -6,10 +6,12 @@ from io import StringIO
 from pathlib import Path
 from jsonschema import validate, ValidationError
 from typing import Any, Union
-
 from scripts.utils.paths import ENV, S3_BUCKET_NAME
+from scripts.utils.log import configure_logging, get_logger
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
+configure_logging()
+logger = get_logger(__name__)
 
 
 # ---------- Validation helpers ----------
@@ -56,7 +58,7 @@ def load_yaml(path_or_key: Union[str, Path], encoding="utf-8-sig") -> Any:
             with p.open("r", encoding=encoding) as f:
                 return yaml.safe_load(f)
     except Exception as e:
-        print(f"Error loading YAML from {path_or_key}: {e}")
+        logger.error(f"Error loading YAML from {path_or_key}: {e}")
         raise e
 
 
@@ -93,7 +95,7 @@ def write_yaml(path_or_key: Union[str, Path], data, encoding="utf-8") -> None:
                     Dumper=IndentDumper,
                 )
     except Exception as e:
-        print(f"Error writing YAML to {path_or_key}: {e}")
+        logger.error(f"Error writing YAML to {path_or_key}: {e}")
         raise e
 
 
@@ -115,7 +117,7 @@ def load_json(path_or_key: Union[str, Path]) -> dict:
         try:
             return json.loads(p.read_text(encoding="utf-8"))
         except Exception as e:
-            print(f"Error loading JSON from {path_or_key}: {e}")
+            logger.error(f"Error loading JSON from {path_or_key}: {e}")
             raise e
 
 
@@ -129,5 +131,5 @@ def write_json(data: dict, path_or_key: Union[str, Path]):
             p.parent.mkdir(parents=True, exist_ok=True)
             p.write_text(json.dumps(data, indent=2), encoding="utf-8")
     except Exception as e:
-        print(f"Error writing JSON to {path_or_key}: {e}")
+        logger.error(f"Error writing JSON to {path_or_key}: {e}")
         raise e
