@@ -2,9 +2,6 @@ from pathlib import Path
 import os
 
 ENV = os.getenv('ENV', 'Local')
-S3_BUCKET_NAME = os.getenv('S3_BUCKET_NAME', 'spiritual-formation-prod')
-CHECKSUM_S3_KEY = os.getenv('CHECKSUM_S3_KEY', 'checksum/.mental_prayer_checksums.json')
-
 
 if ENV in ('Prod', 'Staging'):
     # Keys inside the bucket (strings, not Paths)

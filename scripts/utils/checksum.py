@@ -1,10 +1,9 @@
 
-import boto3
 import hashlib
 import json
 from typing import Union
 from pathlib import Path
-from scripts.utils.paths import CHECKSUM_FILE, ENV, S3_BUCKET_NAME
+from scripts.utils.paths import CHECKSUM_FILE
 from scripts.utils.io import load_json, write_json
 from scripts.utils.log import configure_logging, get_logger
 
