@@ -3,6 +3,7 @@ set -euo pipefail
 set -x
 
 export HOME=/tmp
+export DJANGO_SETTINGS_MODULE=config.settings
 echo "Using HOME=$HOME"
 echo "[import-job] starting…"
 
@@ -47,13 +48,14 @@ cd /app
 
 python - <<'PY'
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE","config.settings")
-import django; django.setup()
+print("DJANGO_SETTINGS_MODULE =", os.getenv("DJANGO_SETTINGS_MODULE"))
 from django.conf import settings
-print("[import-job] DATABASE ENGINE:", settings.DATABASES["default"]["ENGINE"])
-print("[import-job] DATABASE NAME:", settings.DATABASES["default"]["NAME"])
-print("[import-job] DATABASE HOST:", settings.DATABASES["default"].get("HOST"))
-print("[import-job] DATABASE USER:", settings.DATABASES["default"].get("USER"))
+print("settings file:", getattr(settings, "__file__", "<none>"))
+db = settings.DATABASES["default"]
+print("ENGINE =", db["ENGINE"])
+print("NAME   =", db["NAME"])
+print("HOST   =", db.get("HOST"))
+print("USER   =", db.get("USER"))
 PY
 
 echo "[import-job] running migrations"

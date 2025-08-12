@@ -119,7 +119,6 @@ class DayImporter:
 def import_day_file(path: Path, dry_run: bool = False) -> bool:
     """Import a single YAML file into the database."""
     if not path.exists():
-        logging.info(f"Updating path to {DAY_FILES_DIR / path}")
         path = DAY_FILES_DIR / path
     if not path.exists():
         logging.error(f"File not found: {path}")
