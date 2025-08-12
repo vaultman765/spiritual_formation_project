@@ -2,7 +2,6 @@ import django
 import os
 import sys
 import argparse
-import yaml
 from pathlib import Path
 from scripts.utils.arc_loader import load_arc_from_metadata
 from scripts.utils.io import load_yaml

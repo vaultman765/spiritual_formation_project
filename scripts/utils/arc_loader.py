@@ -1,5 +1,3 @@
-import yaml
-
 from scripts.utils.io import load_yaml
 from scripts.utils.paths import ARC_METADATA_FILE
 

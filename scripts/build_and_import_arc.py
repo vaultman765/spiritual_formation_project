@@ -1,7 +1,6 @@
 import argparse
 import subprocess
 import sys
-import yaml
 from pathlib import Path
 from scripts.utils.io import load_yaml
 from scripts.utils.paths import INDEX_FILE, ARC_METADATA_FILE, ARC_TAGS_DIR, DAY_FILES_DIR

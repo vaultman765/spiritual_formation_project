@@ -3,7 +3,6 @@ import sys
 import django
 import logging
 import argparse
-import yaml
 from pathlib import Path
 from datetime import datetime
 
