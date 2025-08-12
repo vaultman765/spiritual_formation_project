@@ -57,23 +57,14 @@ jobs:
               - deleted:  ['metadata/**']
 
       - name: Configure AWS (OIDC)
-        if: >
-          (github.event_name == 'push'        && steps.pf_push.outputs.changed == 'true') ||
-          (github.event_name == 'pull_request' && (
-             steps.pf_pr.outputs.added == 'true' ||
-             steps.pf_pr.outputs.modified == 'true' ||
-             steps.pf_pr.outputs.deleted == 'true'))
-          && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork != true)
+        if: (github.event_name == 'push' && steps.pf_push.outputs.changed == 'true') || (github.event_name == 'pull_request' && (steps.pf_pr.outputs.added == 'true' || steps.pf_pr.outputs.modified == 'true' || steps.pf_pr.outputs.deleted == 'true')) && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork != true)
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::756859458263:role/spiritual-staging-github-apprepo-metadata
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Upload added/modified files
-        if: >
-          (github.event_name == 'push'        && steps.pf_push.outputs.changed == 'true') ||
-          (github.event_name == 'pull_request' && (
-            steps.pf_pr.outputs.added == 'true' || steps.pf_pr.outputs.modified == 'true'))
+        if: (github.event_name == 'push' && steps.pf_push.outputs.changed == 'true') || (github.event_name == 'pull_request' && (steps.pf_pr.outputs.added == 'true' || steps.pf_pr.outputs.modified == 'true'))
         shell: bash
         env:
           BASE_SHA: ${{ github.event_name == 'pull_request' && format('{0}~1', github.event.pull_request.head.sha) || github.event.before }}
@@ -85,9 +76,7 @@ jobs:
           done
 
       - name: Delete removed files
-        if: >
-          (github.event_name == 'push'        && steps.pf_push.outputs.changed == 'true') ||
-          (github.event_name == 'pull_request' && steps.pf_pr.outputs.deleted == 'true')
+        if: (github.event_name == 'push' && steps.pf_push.outputs.changed == 'true') || (github.event_name == 'pull_request' && steps.pf_pr.outputs.deleted == 'true')
         shell: bash
         env:
           BASE_SHA: ${{ github.event_name == 'pull_request' && format('{0}~1', github.event.pull_request.head.sha) || github.event.before }}
@@ -98,8 +87,22 @@ jobs:
             aws s3 rm "s3://${METADATA_BUCKET}/$p" --only-show-errors || true
           done
 
+      - name: Ensure core metadata files exist
+        run: |
+          set -e
+          for f in \
+            metadata/_index_by_arc.yaml \
+            metadata/arc_metadata.yaml \
+            metadata/tag_bank.yaml
+          do
+            if ! aws s3api head-object --bucket "$METADATA_BUCKET" --key "$f" --region "$AWS_REGION" >/dev/null 2>&1; then
+              echo "Uploading missing $f"
+              aws s3 cp "$f" "s3://$METADATA_BUCKET/$f" --only-show-errors --region "$AWS_REGION"
+            fi
+          done
+
       - name: Fire single trigger
-        if: (steps.pf.outputs.added == 'true' || steps.pf.outputs.modified == 'true' || steps.pf.outputs.deleted == 'true')
+        if: (steps.pf_pr.outputs.added == 'true' || steps.pf_pr.outputs.modified == 'true' || steps.pf_pr.outputs.deleted == 'true' || steps.pf_push.outputs.changed == 'true')
         shell: bash
         run: |
           TMP=$(mktemp)

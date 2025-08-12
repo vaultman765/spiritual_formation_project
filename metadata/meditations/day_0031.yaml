@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-08-09 11:38:06
+# Last imported into DB: 2025-08-11 21:18:19
 master_day_number: 31
 arc_day_number: 3
 arc_id: arc_passion_of_christ
@@ -18,7 +18,7 @@ secondary_reading:
     reference: Chapter 2
     url: /docs/readings/St_Alphonsus_Maria_de_Liguori_The_Passion_and_the_Death_of_Jesus_Christ.pdf
   - title: Catechism of the Catholic Church
-    reference: 572–574
+    reference: §§572–574
     url: https://www.vatican.va/archive/ENG0015/__P1M.HTM
 meditative_points:
   - Every lash He endured was for love — not vengeance.
