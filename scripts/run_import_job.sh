@@ -4,11 +4,15 @@ set -x
 
 export HOME=/tmp
 echo "Using HOME=$HOME"
+echo "[import-job] starting…"
 
-set -euo pipefail
-set -x
-
-export HOME=/tmp
+# activate the app virtualenv
+if [ -f /app/.venv/bin/activate ]; then
+  echo "[import-job] activating venv at /app/.venv"
+  . /app/.venv/bin/activate
+else
+  echo "[import-job][WARN] venv not found at /app/.venv; Python may miss packages"
+fi
 
 id -u; id -g; whoami || true
 echo "[import-job] ls -ld / /app /app/metadata (before mkdir)"
@@ -41,7 +45,7 @@ fi
 
 echo "[import-job] running import_arc (skip unchanged)"
 cd /app
-python manage.py import_arc --arc-id all --skip-unchanged
+pipenv run python manage.py import_arc --arc-id all --skip-unchanged
 
 echo "[import-job] pushing updated YAML back to S3"
 aws s3 sync "/app/metadata" "s3://${S3_BUCKET_NAME}/metadata" --delete --region "$AWS_REGION"
