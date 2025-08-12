@@ -24,27 +24,21 @@ ALLOWED_HOSTS += [gethostname(),] + list(set(gethostbyname_ex(gethostname())[2])
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-if env('DJANGO_DB', default='sqlite') == 'postgres':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': env('DB_NAME'),
-            'USER': env('DB_USER'),
-            'PASSWORD': env('DB_PASSWORD'),
-            'HOST': env('DB_HOST'),
-            "PORT": env("DB_PORT", default="5432"),
-            'OPTIONS': {
-                'sslmode': 'require' if env.bool('DB_SSL', default=False) else 'disable',
-            },
-        }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
+        "PORT": env("DB_PORT", default="5432"),
+        'OPTIONS': {
+            'sslmode': 'require' if env.bool('DB_SSL', default=False) else 'disable',
+        },
     }
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
-    }
+}
+
 
 # Application definition
 
