@@ -71,7 +71,7 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
         arc_ids = [arc_id]
 
     # Check arc is registered
-    arc_handler = ArcMetadataHandler(INDEX_FILE)
+    arc_handler = ArcMetadataHandler()
     if not arc_handler.arc_id_in_index(arc_ids):
         logger.error(f"⚠️  Arc ID '{arc_ids}' not found in _index_by_arc.yaml — update it before running this script.")
         return
