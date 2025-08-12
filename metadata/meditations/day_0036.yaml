@@ -1,27 +1,26 @@
-# Last imported into DB: 2025-08-09 11:38:11
+# Last imported into DB: 2025-08-11 23:27:44
 master_day_number: 36
 arc_day_number: 8
 arc_id: arc_passion_of_christ
 arc_title: The Passion of Christ
 arc_number: 5
 day_title: The Final Surrender – Into Your Hands
-anchor_image:
-  '**The Final Surrender** Jesus breathes His last. "Father, into Your hands I commend My spirit."
+anchor_image: '**The Final Surrender** Jesus breathes His last. "Father, into Your hands I commend My spirit."
   The veil of the Temple is torn. The earth trembles. Those who stood near beat their breasts.
   The centurion says, "Truly this man was the Son of God."'
 primary_reading:
   title: Luke 23:44–46
-  reference: ''
-  url: ''
+  reference: ""
+  url: ""
 secondary_reading:
   - title: Catechism of the Catholic Church
-    reference: 614
+    reference: §614
     url: https://www.vatican.va/archive/ENG0015/__P1O.HTM
   - title: Catechism of the Catholic Church
-    reference: 2606
-    url: hhttps://www.vatican.va/archive/ENG0015/__P93.HTM
+    reference: §2606
+    url: https://www.vatican.va/archive/ENG0015/__P93.HTM
   - title: Catechism of the Catholic Church
-    reference: 2842
+    reference: §2842
     url: https://www.vatican.va/archive/ENG0015/__PAB.HTM
 meditative_points:
   - Christ's final breath was not taken — it was given.
