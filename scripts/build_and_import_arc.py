@@ -66,8 +66,7 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
     arc_id = args.arc_id
 
     if arc_id == 'all':
-        with open(index_file, "r", encoding="utf-8") as f:
-            index = yaml.safe_load(f)
+        index = load_yaml(index_file)
         arc_ids = list(index.keys())
     else:
         arc_ids = [arc_id]

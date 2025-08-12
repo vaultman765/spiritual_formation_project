@@ -175,13 +175,7 @@ def import_folder(folder: Path, dry_run: bool = False):
 
 
 def import_arc(arc_id: str, dry_run: bool = False):
-    try:
-        with open(INDEX_FILE, "r") as f:
-            index = yaml.safe_load(f)
-    except Exception as e:
-        logging.error(f"Could not load arc index: {e}")
-        return
-
+    index = load_yaml(INDEX_FILE)
     if arc_id not in index:
         logging.error(f"Arc ID '{arc_id}' not found in index.")
         return
