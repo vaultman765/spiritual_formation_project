@@ -10,7 +10,7 @@ CHECKSUM_S3_KEY = os.getenv('CHECKSUM_S3_KEY', 'checksum/.mental_prayer_checksum
 
 if ENV in ('Prod', 'Staging'):
     # Keys inside the bucket (strings, not Paths)
-    PROJECT_ROOT = "/app"
+    PROJECT_ROOT = Path("/app")
     # Single source of truth checksum lives in S3
     CHECKSUM_FILE = CHECKSUM_S3_KEY
 else:
