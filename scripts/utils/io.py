@@ -42,60 +42,32 @@ def _s3() -> boto3.client:
     return boto3.client("s3")
 
 
-def load_yaml(path_or_key: Union[str, Path], encoding="utf-8-sig") -> Any:
-    """
-    If ENV=Prod or Staging, read YAML from S3 key.
-    Else, read from local filesystem (Path or str).
-    """
+def load_yaml(path: Union[str, Path], encoding="utf-8-sig") -> Any:
     try:
-        if ENV in ('Prod', 'Staging'):
-            key = _ensure_key(path_or_key)
-            obj = _s3().get_object(Bucket=S3_BUCKET_NAME, Key=key)
-            body = obj["Body"].read().decode(encoding)
-            return yaml.safe_load(body)
-        else:
-            p = Path(path_or_key)
-            with p.open("r", encoding=encoding) as f:
-                return yaml.safe_load(f)
+        p = Path(path)
+        with p.open("r", encoding=encoding) as f:
+            return yaml.safe_load(f)
     except Exception as e:
-        logger.error(f"Error loading YAML from {path_or_key}: {e}")
+        logger.error(f"Error loading YAML from {path}: {e}")
         raise e
 
 
-def write_yaml(path_or_key: Union[str, Path], data, encoding="utf-8") -> None:
-    """
-    If ENV=Prod, write YAML to S3 key.
-    Else, write to local filesystem.
-    """
+def write_yaml(path: Union[str, Path], data, encoding="utf-8") -> None:
     try:
-        if ENV in ('Prod', 'Staging'):
-            key = _ensure_key(path_or_key)
-            buf = StringIO()
+        p = Path(path)
+        p.parent.mkdir(parents=True, exist_ok=True)
+        with p.open("w", encoding=encoding) as f:
             yaml.dump(
                 data,
-                buf,
+                f,
                 allow_unicode=True,
                 sort_keys=False,
                 default_flow_style=False,
                 indent=2,
                 Dumper=IndentDumper,
             )
-            _s3().put_object(Bucket=S3_BUCKET_NAME, Key=key, Body=buf.getvalue().encode(encoding))
-        else:
-            p = Path(path_or_key)
-            p.parent.mkdir(parents=True, exist_ok=True)
-            with p.open("w", encoding=encoding) as f:
-                yaml.dump(
-                    data,
-                    f,
-                    allow_unicode=True,
-                    sort_keys=False,
-                    default_flow_style=False,
-                    indent=2,
-                    Dumper=IndentDumper,
-                )
     except Exception as e:
-        logger.error(f"Error writing YAML to {path_or_key}: {e}")
+        logger.error(f"Error writing YAML to {path}: {e}")
         raise e
 
 
