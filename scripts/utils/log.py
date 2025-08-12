@@ -1,5 +1,8 @@
-import logging, os, sys
+import logging
+import os
+import sys
 from pathlib import Path
+
 
 def configure_logging():
     level = os.getenv("LOG_LEVEL", "INFO").upper()
