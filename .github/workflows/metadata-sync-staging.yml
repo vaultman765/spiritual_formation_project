@@ -52,18 +52,24 @@ jobs:
       - name: Upload added/modified files
         if: steps.pf.outputs.added == 'true' || steps.pf.outputs.modified == 'true'
         shell: bash
+        env:
+          BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
         run: |
-          git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.sha }} | \
-            grep '^metadata/' | while read p; do
+          git diff --name-only --diff-filter=AM "$BASE_SHA" "$HEAD_SHA" -- 'metadata/**' \
+          | while IFS= read -r p; do
               aws s3 cp "$p" "s3://${METADATA_BUCKET}/$p" --only-show-errors
             done
 
       - name: Delete removed files
         if: steps.pf.outputs.deleted == 'true'
         shell: bash
+        env:
+          BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
         run: |
-          git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.sha }} | \
-            grep '^metadata/' | while read p; do
+          git diff --name-only --diff-filter=D "$BASE_SHA" "$HEAD_SHA" -- 'metadata/**' \
+          | while IFS= read -r p; do
               aws s3 rm "s3://${METADATA_BUCKET}/$p" --only-show-errors || true
             done
 
