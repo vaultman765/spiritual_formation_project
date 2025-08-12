@@ -12,7 +12,7 @@ if ENV in ('Prod', 'Staging'):
     # Keys inside the bucket (strings, not Paths)
     PROJECT_ROOT = Path("/app")
     # Single source of truth checksum lives in S3
-    CHECKSUM_FILE = CHECKSUM_S3_KEY
+    CHECKSUM_FILE = PROJECT_ROOT / CHECKSUM_S3_KEY
 else:
     PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
     CHECKSUM_FILE = Path.home() / ".mental_prayer_checksums.json"
