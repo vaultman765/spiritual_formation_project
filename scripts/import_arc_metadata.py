@@ -2,9 +2,9 @@ import django
 import os
 import sys
 import argparse
-import yaml
 from pathlib import Path
 from scripts.utils.arc_loader import load_arc_from_metadata
+from scripts.utils.io import load_yaml
 from scripts.utils.log import configure_logging, get_logger
 from scripts.utils.paths import DJANGO_SETTINGS_MODULE
 
@@ -30,8 +30,7 @@ def main(arc_id: str = None):
         logger.error("arc_metadata.yaml not found.")
         return
 
-    with open(ARC_METADATA_PATH, "r", encoding="utf-8-sig") as f:
-        metadata = yaml.safe_load(f)
+    metadata = load_yaml(ARC_METADATA_PATH)
 
     count = 0
     for arc in metadata:
