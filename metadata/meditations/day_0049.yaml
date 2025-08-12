@@ -1,12 +1,11 @@
-# Last imported into DB: 2025-08-09 11:38:22
+# Last imported into DB: 2025-08-12 14:00:33
 master_day_number: 49
 arc_day_number: 11
 arc_id: arc_litany_sacred_heart
 arc_title: Litany of the Sacred Heart
 arc_number: 6
 day_title: In Whom the Father is Well Pleased
-anchor_image:
-  "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
+anchor_image: "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
   His hands are extended in blessing, and His robe gleams like light.
   But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love.
   It is not a wound of shame, but a throne of glory. He says nothing.
@@ -24,17 +23,16 @@ secondary_reading:
     reference: ""
     url: ""
   - title: Catechism of the Catholic Church
-    reference: 536
+    reference: §536
     url: https://www.vatican.va/archive/ENG0015/__P1L.HTM
   - title: Catechism of the Catholic Church
-    reference: 444
+    reference: §444
     url: https://www.vatican.va/archive/ENG0015/__P1G.HTM
 meditative_points:
   - The Father's voice - declaring love before Christ's mission begins
   - The Sacred Heart as the place where the Father's pleasure dwells
 ejaculatory_prayer: Heart of Jesus, beloved of the Father, delight in me through mercy.
-colloquy:
-  Father, You were well pleased with the Heart of Your Son. Let me see in Him the love You have for me.
+colloquy: Father, You were well pleased with the Heart of Your Son. Let me see in Him the love You have for me.
   Let me stop trying to earn what You already offer.
 resolution: "Today, I will pause to remember that I am loved before I act - not because of how I perform."
 tags:

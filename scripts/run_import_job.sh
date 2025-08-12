@@ -61,8 +61,16 @@ PY
 echo "[import-job] running migrations"
 python manage.py migrate --noinput
 
-echo "[import-job] running import_arc (skip unchanged)"
-pipenv run python manage.py import_arc --arc-id all --skip-unchanged
+SKIP_FLAG="--skip-unchanged"
+if [ "${FULL_IMPORT:-0}" = "1" ] \
+   || [ -f /app/metadata/_triggers/full-reimport ] \
+   || [ -f /app/metadata/_triggers/full-reimport.txt ]; then
+  echo "[import-job] FULL IMPORT requested — processing all files."
+  SKIP_FLAG=""
+fi
+
+echo "[import-job] running import_arc (${SKIP_FLAG:-no-skip})"
+python manage.py import_arc --arc-id all ${SKIP_FLAG}
 
 echo "[import-job] pushing updated YAML back to S3"
 aws s3 sync "/app/metadata" "s3://${S3_BUCKET_NAME}/metadata" --delete --region "$AWS_REGION"
@@ -70,4 +78,10 @@ aws s3 sync "/app/metadata" "s3://${S3_BUCKET_NAME}/metadata" --delete --region 
 echo "[import-job] pushing updated checksum back to S3"
 aws s3 cp "$CHECKSUM_LOCAL" "s3://${S3_BUCKET_NAME}/${CHECKSUM_KEY}" --region "$AWS_REGION"
 
-echo "[import-job] done."
+# If a trigger file was used, clean it up in S3 so subsequent runs go back to skip mode
+if [ -n "${S3_BUCKET_NAME:-}" ] && [ -z "${SKIP_FLAG}" ]; then
+  aws s3 rm "s3://${S3_BUCKET_NAME}/metadata/_triggers/full-reimport"        --region "$AWS_REGION" || true
+  aws s3 rm "s3://${S3_BUCKET_NAME}/metadata/_triggers/full-reimport.txt"   --region "$AWS_REGION" || true
+fi
+
+echo "[import-job] SUCCESS: Import job completed successfully."

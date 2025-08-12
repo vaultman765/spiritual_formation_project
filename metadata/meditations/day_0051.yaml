@@ -1,12 +1,11 @@
-# Last imported into DB: 2025-08-09 11:38:24
+# Last imported into DB: 2025-08-12 14:30:07
 master_day_number: 51
 arc_day_number: 13
 arc_id: arc_litany_sacred_heart
 arc_title: Litany of the Sacred Heart
 arc_number: 6
 day_title: Full of Kindness and Love
-anchor_image:
-  "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
+anchor_image: "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
   His hands are extended in blessing, and His robe gleams like light.
   But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love.
   It is not a wound of shame, but a throne of glory. He says nothing.
@@ -21,7 +20,7 @@ secondary_reading:
     reference:
     url:
   - title: Catechism of the Catholic Church
-    reference: 478
+    reference: §478
     url: https://www.vatican.va/archive/ENG0015/__P1J.HTM
   - title: St. Bernard, *On Loving God*
     reference: Chapter 2
