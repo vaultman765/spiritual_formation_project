@@ -17,7 +17,7 @@ if os.path.exists(env_file):
 
 SECRET_KEY = env('SECRET_KEY')
 
-DEBUG = env('DEBUG')
+DEBUG = env.bool('DEBUG', default=False)
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', '192.168.1.209'])
 ALLOWED_HOSTS += [gethostname(),] + list(set(gethostbyname_ex(gethostname())[2]))
@@ -34,7 +34,7 @@ DATABASES = {
         'HOST': env('DB_HOST'),
         "PORT": env("DB_PORT", default="5432"),
         'OPTIONS': {
-            'sslmode': 'require' if env.bool('DB_SSL', default=False) else 'disable',
+            'sslmode': 'require' if env.bool('DB_SSL', default=True) else 'disable',
         },
     }
 }
