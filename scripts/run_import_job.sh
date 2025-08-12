@@ -43,8 +43,23 @@ if [ ! -f /app/metadata/_index_by_arc.yaml ]; then
   exit 42
 fi
 
-echo "[import-job] running import_arc (skip unchanged)"
 cd /app
+
+python - <<'PY'
+import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE","config.settings")
+import django; django.setup()
+from django.conf import settings
+print("[import-job] DATABASE ENGINE:", settings.DATABASES["default"]["ENGINE"])
+print("[import-job] DATABASE NAME:", settings.DATABASES["default"]["NAME"])
+print("[import-job] DATABASE HOST:", settings.DATABASES["default"].get("HOST"))
+print("[import-job] DATABASE USER:", settings.DATABASES["default"].get("USER"))
+PY
+
+echo "[import-job] running migrations"
+python manage.py migrate --noinput
+
+echo "[import-job] running import_arc (skip unchanged)"
 pipenv run python manage.py import_arc --arc-id all --skip-unchanged
 
 echo "[import-job] pushing updated YAML back to S3"

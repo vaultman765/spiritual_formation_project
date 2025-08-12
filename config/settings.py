@@ -32,7 +32,7 @@ if env('DJANGO_DB', default='sqlite') == 'postgres':
             'USER': env('DB_USER'),
             'PASSWORD': env('DB_PASSWORD'),
             'HOST': env('DB_HOST'),
-            'PORT': env('DB_PORT'),
+            "PORT": env("DB_PORT", default="5432"),
             'OPTIONS': {
                 'sslmode': 'require' if env.bool('DB_SSL', default=False) else 'disable',
             },
