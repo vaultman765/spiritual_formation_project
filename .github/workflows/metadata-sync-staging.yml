@@ -30,48 +30,73 @@ jobs:
       - uses: actions/checkout@v4
         with: { fetch-depth: 0 }
 
+      # For push events: compare previous → current
       - uses: dorny/paths-filter@v3
-        id: pf
+        id: pf_push
+        if: github.event_name == 'push'
         with:
-          # detect added/modified/deleted files in metadata/**
+          base: ${{ github.event.before }}
+          ref:  ${{ github.sha }}
+          filters: |
+            changed:
+              - added|modified|deleted: ['metadata/**']
+
+      # For PRs: compare *latest commit only* (head~1 → head)
+      - uses: dorny/paths-filter@v3
+        id: pf_pr
+        if: github.event_name == 'pull_request'
+        with:
+          base: ${{ github.event.pull_request.head.sha }}~1
+          ref:  ${{ github.event.pull_request.head.sha }}
           filters: |
             added:
-              - added: ['metadata/**']
+              - added:    ['metadata/**']
             modified:
               - modified: ['metadata/**']
             deleted:
-              - deleted: ['metadata/**']
+              - deleted:  ['metadata/**']
 
       - name: Configure AWS (OIDC)
-        if: (steps.pf.outputs.added == 'true' || steps.pf.outputs.modified == 'true' || steps.pf.outputs.deleted == 'true') && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork != true)
+        if: >
+          (github.event_name == 'push'        && steps.pf_push.outputs.changed == 'true') ||
+          (github.event_name == 'pull_request' && (
+             steps.pf_pr.outputs.added == 'true' ||
+             steps.pf_pr.outputs.modified == 'true' ||
+             steps.pf_pr.outputs.deleted == 'true'))
+          && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork != true)
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::756859458263:role/spiritual-staging-github-apprepo-metadata
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Upload added/modified files
-        if: steps.pf.outputs.added == 'true' || steps.pf.outputs.modified == 'true'
+        if: >
+          (github.event_name == 'push'        && steps.pf_push.outputs.changed == 'true') ||
+          (github.event_name == 'pull_request' && (
+            steps.pf_pr.outputs.added == 'true' || steps.pf_pr.outputs.modified == 'true'))
         shell: bash
         env:
-          BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+          BASE_SHA: ${{ github.event_name == 'pull_request' && format('{0}~1', github.event.pull_request.head.sha) || github.event.before }}
           HEAD_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
         run: |
-          git diff --name-only --diff-filter=AM "$BASE_SHA" "$HEAD_SHA" -- 'metadata/**' \
-          | while IFS= read -r p; do
-              aws s3 cp "$p" "s3://${METADATA_BUCKET}/$p" --only-show-errors
-            done
+          git diff --name-only --diff-filter=AMR "$BASE_SHA" "$HEAD_SHA" -- 'metadata/**' |
+          while IFS= read -r p; do
+            aws s3 cp "$p" "s3://${METADATA_BUCKET}/$p" --only-show-errors
+          done
 
       - name: Delete removed files
-        if: steps.pf.outputs.deleted == 'true'
+        if: >
+          (github.event_name == 'push'        && steps.pf_push.outputs.changed == 'true') ||
+          (github.event_name == 'pull_request' && steps.pf_pr.outputs.deleted == 'true')
         shell: bash
         env:
-          BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+          BASE_SHA: ${{ github.event_name == 'pull_request' && format('{0}~1', github.event.pull_request.head.sha) || github.event.before }}
           HEAD_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
         run: |
-          git diff --name-only --diff-filter=D "$BASE_SHA" "$HEAD_SHA" -- 'metadata/**' \
-          | while IFS= read -r p; do
-              aws s3 rm "s3://${METADATA_BUCKET}/$p" --only-show-errors || true
-            done
+          git diff --name-only --diff-filter=D "$BASE_SHA" "$HEAD_SHA" -- 'metadata/**' |
+          while IFS= read -r p; do
+            aws s3 rm "s3://${METADATA_BUCKET}/$p" --only-show-errors || true
+          done
 
       - name: Fire single trigger
         if: (steps.pf.outputs.added == 'true' || steps.pf.outputs.modified == 'true' || steps.pf.outputs.deleted == 'true')
