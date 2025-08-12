@@ -2,7 +2,6 @@ import boto3
 import json
 import sys
 import yaml
-from io import StringIO
 from pathlib import Path
 from jsonschema import validate, ValidationError
 from typing import Any, Union
