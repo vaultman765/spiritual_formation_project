@@ -5,9 +5,19 @@ set -x
 export HOME=/tmp
 echo "Using HOME=$HOME"
 
-echo "[import-job] starting…"
+set -euo pipefail
+set -x
 
-mkdir -p /home/app
+export HOME=/tmp
+
+id -u; id -g; whoami || true
+echo "[import-job] ls -ld / /app /app/metadata (before mkdir)"
+ls -ld / /app || true
+ls -ld /app/metadata || true
+
+mkdir -p /app/metadata
+chmod 0777 /app/metadata || true
+
 CHECKSUM_KEY="checksum/.mental_prayer_checksums.json"
 CHECKSUM_LOCAL="$HOME/.mental_prayer_checksums.json"
 
