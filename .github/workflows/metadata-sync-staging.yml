@@ -87,6 +87,20 @@ jobs:
             aws s3 rm "s3://${METADATA_BUCKET}/$p" --only-show-errors || true
           done
 
+      - name: Ensure core metadata files exist
+        run: |
+          set -e
+          for f in \
+            metadata/_index_by_arc.yaml \
+            metadata/arc_metadata.yaml \
+            metadata/tag_bank.yaml
+          do
+            if ! aws s3api head-object --bucket "$METADATA_BUCKET" --key "$f" --region "$AWS_REGION" >/dev/null 2>&1; then
+              echo "Uploading missing $f"
+              aws s3 cp "$f" "s3://$METADATA_BUCKET/$f" --only-show-errors --region "$AWS_REGION"
+            fi
+          done
+
       - name: Fire single trigger
         if: (steps.pf_pr.outputs.added == 'true' || steps.pf_pr.outputs.modified == 'true' || steps.pf_pr.outputs.deleted == 'true' || steps.pf_push.outputs.changed == 'true')
         shell: bash

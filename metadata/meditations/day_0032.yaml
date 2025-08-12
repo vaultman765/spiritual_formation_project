@@ -1,30 +1,29 @@
-# Last imported into DB: 2025-08-09 11:38:07
+# Last imported into DB: 2025-08-11 21:30:57
 master_day_number: 32
 arc_day_number: 4
 arc_id: arc_passion_of_christ
 arc_title: The Passion of Christ
 arc_number: 5
 day_title: Christ Crowned with Thorns – Majesty in Mockery
-anchor_image:
-  '**Christ Crowned with Thorns** Jesus is seated, hands bound, draped in a purple robe.
+anchor_image: "**Christ Crowned with Thorns** Jesus is seated, hands bound, draped in a purple robe.
   A crown of twisted thorns is pressed onto His head. Blood trickles down His face.
   A reed is shoved into His hand like a mock scepter. Soldiers jeer and bow in sarcasm.
-  Yet He radiates quiet majesty in their mockery.'
+  Yet He radiates quiet majesty in their mockery."
 primary_reading:
   title: Matthew 27:27–31
-  reference: ''
-  url: ''
+  reference: ""
+  url: ""
 secondary_reading:
-  - title: Pope Benedict XVI, *Homily on Palm Sunday*, April 9, 2006
-    reference: ''
+  - title: Pope Benedict XVI, Homily on Palm Sunday
+    reference: ""
     url: https://www.vatican.va/content/benedict-xvi/en/homilies/2006/documents/hf_ben-xvi_hom_20060409_palm-sunday.html
 meditative_points:
   - Christ accepts the crown of thorns — not in wrath, but in silence.
   - The King of Heaven is mocked with earthly symbols of power.
   - Every insult He received purifies the pride in my own heart.
 ejaculatory_prayer: Jesus, King crowned in thorns, rule in my heart.
-colloquy: 'Jesus, mocked King, I often seek crowns of comfort and control.
-  Teach me to wear the crown of thorns with You — not to be honored, but to love.'
+colloquy: "Jesus, mocked King, I often seek crowns of comfort and control.
+  Teach me to wear the crown of thorns with You — not to be honored, but to love."
 resolution: Today I will resist one urge to seek praise — and silently offer it as a crown of thorns.
 tags:
   thematic:
