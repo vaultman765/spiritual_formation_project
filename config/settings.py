@@ -145,7 +145,7 @@ if ENV in ('prod', 'staging'):
     DEFAULT_FILE_STORAGE    = "website.storage_backends.MediaRootS3Boto3Storage"
 
     STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/django/static/"
-    MEDIA_URL  = f"https://{AWS_S3_CUSTOM_DOMAIN}/django/media/""
+    MEDIA_URL  = f"https://{AWS_S3_CUSTOM_DOMAIN}/django/media/"
 else:
     # Local dev: keep using filesystem
     STATIC_URL = "static/"
