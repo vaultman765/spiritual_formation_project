@@ -3,7 +3,7 @@ import os
 
 ENV = os.getenv('ENV', 'Local')
 
-if ENV in ('Prod', 'Staging'):
+if ENV in ('prod', 'staging'):
     # Keys inside the bucket (strings, not Paths)
     PROJECT_ROOT = Path("/app")
 else:

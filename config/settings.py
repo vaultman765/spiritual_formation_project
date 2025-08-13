@@ -128,7 +128,7 @@ USE_TZ = True
 
 ENV = env('ENV', default='Local')
 
-if ENV in ('Prod', 'Staging'):
+if ENV in ('prod', 'staging'):
     INSTALLED_APPS += ["storages"]
 
     AWS_STORAGE_BUCKET_NAME = env('S3_BUCKET_NAME', default='spiritual-formation-prod')
