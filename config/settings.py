@@ -126,32 +126,26 @@ USE_TZ = True
 
 # === S3 STATIC & MEDIA STORAGE ===
 
-ENV = env('ENV', default='local')
+ENV = env('ENV', default='local').lower()
 
 if ENV in ('prod', 'staging'):
     INSTALLED_APPS += ["storages"]
 
-    AWS_STORAGE_BUCKET_NAME = env('S3_BUCKET_NAME', default='spiritual-formation-prod')
-    AWS_S3_REGION_NAME = env('AWS_REGION', default='us-east-1')
-    AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
-    AWS_DEFAULT_ACL = None  # No public-read by default
-    AWS_QUERYSTRING_AUTH = False  # Signed URLs
+    AWS_STORAGE_BUCKET_NAME = env('S3_BUCKET_NAME')   # e.g. spiritual-formation-staging
+    AWS_S3_REGION_NAME      = env('AWS_REGION', default='us-east-1')
+    AWS_S3_CUSTOM_DOMAIN    = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
 
-    # Store static and media separately in S3 (recommended)
-    STATICFILES_STORAGE = "website.storage_backends.StaticRootS3Boto3Storage"
+    # Make admin assets publicly fetchable (simplest path). Alternatively use a bucket policy.
+    AWS_DEFAULT_ACL         = "public-read"
+    AWS_QUERYSTRING_AUTH    = False
+    AWS_S3_OBJECT_PARAMETERS = { "CacheControl": "max-age=86400" }
+
+    # Your custom storages (or use storages.backends.s3boto3.S3StaticStorage)
+    STATICFILES_STORAGE     = "website.storage_backends.StaticRootS3Boto3Storage"
+    DEFAULT_FILE_STORAGE    = "website.storage_backends.MediaRootS3Boto3Storage"
+
     STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/django/static/"
-
-    DEFAULT_FILE_STORAGE = "website.storage_backends.MediaRootS3Boto3Storage"
-    MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/django/media/"
-
-    # Optional: Separate static/media files (advanced, can do later)
-    # from storages.backends.s3boto3 import S3Boto3Storage
-    # class StaticRootS3Boto3Storage(S3Boto3Storage):
-    #     location = 'static'
-    # class MediaRootS3Boto3Storage(S3Boto3Storage):
-    #     location = 'media'
-    # STATICFILES_STORAGE = 'config.settings.StaticRootS3Boto3Storage'
-    # DEFAULT_FILE_STORAGE = 'config.settings.MediaRootS3Boto3Storage'
+    MEDIA_URL  = f"https://{AWS_S3_CUSTOM_DOMAIN}/django/media/""
 else:
     # Local dev: keep using filesystem
     STATIC_URL = "static/"
