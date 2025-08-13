@@ -30,7 +30,7 @@ COPY config/ /app/config/
 COPY scripts/ /app/scripts/
 COPY website/ /app/website/
 RUN chmod +x /app/scripts/run_import_job.sh \
-    && chmod +x /app/scripts/docker_entrypoint.sh
+    && chmod +x /app/scripts/entrypoint.sh
 
 # Make sure venv is in PATH
 ENV PATH="/app/.venv/bin:$PATH"
@@ -46,5 +46,7 @@ EXPOSE 8000
 # Switch to django user (security best practice)
 USER django
 
+ENTRYPOINT ["/app/scripts/entrypoint.sh"]
+
 # Entrypoint: collect static, migrate DB, start app
-CMD ["/app/scripts/docker_entrypoint.sh"]
+CMD ["gunicorn", "config.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3"]

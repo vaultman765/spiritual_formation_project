@@ -44,8 +44,6 @@ def main(arc_id: str = None):
 
     if count == 0:
         logger.warning("No arcs imported. Check arc_id?")
-    else:
-        logger.info(f"{count} arcs imported/updated.")
 
 
 if __name__ == "__main__":
