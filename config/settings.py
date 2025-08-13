@@ -124,9 +124,9 @@ USE_I18N = True
 USE_TZ = True
 
 
-# === S3 STATIC & MEDIA STORAGE (prod) ===
+# === S3 STATIC & MEDIA STORAGE ===
 
-ENV = env('ENV', default='Local')
+ENV = env('ENV', default='local')
 
 if ENV in ('prod', 'staging'):
     INSTALLED_APPS += ["storages"]
@@ -135,7 +135,7 @@ if ENV in ('prod', 'staging'):
     AWS_S3_REGION_NAME = env('AWS_REGION', default='us-east-1')
     AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
     AWS_DEFAULT_ACL = None  # No public-read by default
-    AWS_QUERYSTRING_AUTH = True  # Signed URLs
+    AWS_QUERYSTRING_AUTH = False  # Signed URLs
 
     # Store static and media separately in S3 (recommended)
     STATICFILES_STORAGE = "website.storage_backends.StaticRootS3Boto3Storage"
