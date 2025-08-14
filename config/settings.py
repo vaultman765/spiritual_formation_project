@@ -131,13 +131,13 @@ ENV = env('ENV', default='local').lower()
 if ENV in ('prod', 'staging'):
     INSTALLED_APPS += ["storages"]
 
-    AWS_STORAGE_BUCKET_NAME = env('S3_BUCKET_NAME')   # e.g. spiritual-formation-staging
+    AWS_STORAGE_BUCKET_NAME = env('S3_BUCKET_NAME')
     AWS_S3_REGION_NAME      = env('AWS_REGION', default='us-east-1')
     AWS_S3_CUSTOM_DOMAIN    = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
 
     # Make admin assets publicly fetchable (simplest path). Alternatively use a bucket policy.
-    AWS_DEFAULT_ACL         = "public-read"
-    AWS_QUERYSTRING_AUTH    = False
+    AWS_DEFAULT_ACL         = None
+    AWS_QUERYSTRING_AUTH    = True
     AWS_S3_OBJECT_PARAMETERS = { "CacheControl": "max-age=86400" }
 
     # Your custom storages (or use storages.backends.s3boto3.S3StaticStorage)
