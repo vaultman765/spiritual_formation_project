@@ -2,6 +2,7 @@ from pathlib import Path
 import environ
 import os
 from socket import gethostname, gethostbyname_ex
+from corsheaders.defaults import default_headers
 from .hostpatch import _patched_get_host  # noqa
 
 
@@ -14,13 +15,15 @@ env_file = os.path.join(BASE_DIR, ".env")
 if os.path.exists(env_file):
     environ.Env.read_env(env_file)
 
-
+ENV = env('ENV', default='local').lower()
 SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = env.bool('DEBUG', default=False)
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', '192.168.1.209'])
 ALLOWED_HOSTS += [gethostname(),] + list(set(gethostbyname_ex(gethostname())[2]))
+
+
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -58,6 +61,19 @@ CORS_ALLOW_ALL_ORIGINS = env.bool('CORS_ALLOW_ALL_ORIGINS', default=False)
 CORS_ALLOW_CREDENTIALS = env.bool('CORS_ALLOW_CREDENTIALS', default=True)
 CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS', default=['http://localhost:5173'])
 CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS', default=['http://localhost:5173'])
+
+if ENV in ('prod', 'staging'):
+    # If you use Django session auth (cookies) from a different subdomain:
+    SESSION_COOKIE_DOMAIN = ".catholicmentalprayer.com"
+    CSRF_COOKIE_DOMAIN    = ".catholicmentalprayer.com"
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE    = True
+    SESSION_COOKIE_SAMESITE = "None"
+    CSRF_COOKIE_SAMESITE    = "None"
+    CORS_ALLOW_HEADERS = list(default_headers) + [
+        "authorization",
+        "x-csrftoken",
+    ]
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",  # CORS middleware must come first
@@ -126,7 +142,7 @@ USE_TZ = True
 
 # === S3 STATIC & MEDIA STORAGE ===
 
-ENV = env('ENV', default='local').lower()
+
 
 if ENV in ('prod', 'staging'):
     INSTALLED_APPS += ["storages"]
