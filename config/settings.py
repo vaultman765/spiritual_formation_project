@@ -23,7 +23,7 @@ DEBUG = env.bool('DEBUG', default=False)
 # Django is behind App Runner/Envoy. Tell Django when the original request was HTTPS.
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 USE_X_FORWARDED_HOST = True
-SECURE_SSL_REDIRECT = True  # optional but recommended in staging/prod
+SECURE_SSL_REDIRECT = env.bool("SECURE_SSL_REDIRECT", default=False)
 SECURE_REDIRECT_EXEMPT = [r"^/health/?$"]
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', '192.168.1.209'])
