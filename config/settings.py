@@ -20,6 +20,11 @@ SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = env.bool('DEBUG', default=False)
 
+# Django is behind App Runner/Envoy. Tell Django when the original request was HTTPS.
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+USE_X_FORWARDED_HOST = True
+SECURE_SSL_REDIRECT = True  # optional but recommended in staging/prod
+
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', '192.168.1.209'])
 ALLOWED_HOSTS += [gethostname(),] + list(set(gethostbyname_ex(gethostname())[2]))
 
@@ -151,7 +156,6 @@ if ENV in ('prod', 'staging'):
     AWS_S3_REGION_NAME      = env('AWS_REGION', default='us-east-1')
     AWS_S3_CUSTOM_DOMAIN    = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
 
-    # Make admin assets publicly fetchable (simplest path). Alternatively use a bucket policy.
     AWS_DEFAULT_ACL         = None
     AWS_QUERYSTRING_AUTH    = True
     AWS_S3_OBJECT_PARAMETERS = { "CacheControl": "max-age=86400" }
