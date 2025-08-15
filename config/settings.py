@@ -166,11 +166,11 @@ if ENV in ('prod', 'staging'):
     DEFAULT_FILE_STORAGE    = "website.storage_backends.MediaRootS3Boto3Storage"
 
     if ENV == 'prod':
-        STATIC_URL = "https://static.catholicmentalprayer.com/django/static/"
-        MEDIA_URL  = "https://static.catholicmentalprayer.com/django/media/"
+        STATIC_URL = "https://static.catholicmentalprayer.com/"
+        MEDIA_URL  = "https://static.catholicmentalprayer.com/"
     elif ENV == 'staging':
-        STATIC_URL = "https://static.staging.catholicmentalprayer.com/django/static/"
-        MEDIA_URL  = "https://static.staging.catholicmentalprayer.com/django/media/"
+        STATIC_URL = "https://static.staging.catholicmentalprayer.com/"
+        MEDIA_URL  = "https://static.staging.catholicmentalprayer.com/"
 else:
     # Local dev: keep using filesystem
     STATIC_URL = "static/"
