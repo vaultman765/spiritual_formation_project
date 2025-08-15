@@ -1,9 +1,6 @@
 import * as modal from "@/components/modals/BaseModal";
 import EditNoteContent from "@/components/modals/NoteModal/EditNoteContent";
-import {
-  EditNoteModalButtons,
-  ViewNoteModalButtons,
-} from "@/components/modals/NoteModal/NoteModalButtons";
+import { EditNoteModalButtons, ViewNoteModalButtons } from "@/components/modals/NoteModal/NoteModalButtons";
 import { useModal } from "@/hooks/useModal";
 import type { MeditationNote } from "@/utils/types";
 import { useEffect, useState } from "react";
@@ -19,15 +16,7 @@ interface NoteModalProps {
   onEdit?: () => void;
 }
 
-export function EditNoteModal({
-  modalId = "editNoteModal",
-  day,
-  title,
-  content,
-  master_day_number,
-  onUpdate,
-  onClose,
-}: NoteModalProps) {
+export function EditNoteModal({ modalId = "editNoteModal", day, title, content, master_day_number, onUpdate, onClose }: NoteModalProps) {
   const { isOpen } = useModal(modalId);
   const [noteContent, setNoteContent] = useState(content);
 
@@ -70,13 +59,7 @@ export function EditNoteModal({
   );
 }
 
-export function ViewerNoteModal({
-  modalId = "viewerNoteModal",
-  day,
-  onUpdate,
-  onEdit,
-  onClose,
-}: NoteModalProps) {
+export function ViewerNoteModal({ modalId = "viewerNoteModal", day, onUpdate, onEdit, onClose }: NoteModalProps) {
   const { isOpen } = useModal(modalId);
 
   if (!isOpen || !day) return null;

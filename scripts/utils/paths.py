@@ -1,8 +1,16 @@
 from pathlib import Path
+import os
 
-# Project structure
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+ENV = os.getenv('ENV', 'Local')
 
+if ENV in ('prod', 'staging'):
+    # Keys inside the bucket (strings, not Paths)
+    PROJECT_ROOT = Path("/app")
+else:
+    PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+
+
+CHECKSUM_FILE = Path.home() / ".mental_prayer_checksums.json"
 METADATA_DIR = PROJECT_ROOT / "metadata"
 DAY_FILES_DIR = METADATA_DIR / "meditations"
 ARC_TAGS_DIR = METADATA_DIR / "arc_tags"
@@ -15,7 +23,4 @@ ARC_METADATA_SCHEMA = SCHEMA_DIR / "arc_metadata_schema.yaml"
 ARC_TAG_SCHEMA = SCHEMA_DIR / "arc_tag_schema.yaml"
 DAY_SCHEMA = SCHEMA_DIR / "day_full_schema.yaml"
 
-CONFIG_DIR = PROJECT_ROOT / "config"
 DJANGO_SETTINGS_MODULE = "config.settings"
-
-CHECKSUM_FILE = Path.home() / ".mental_prayer_checksums.json"

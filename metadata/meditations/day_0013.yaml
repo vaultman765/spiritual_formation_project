@@ -1,12 +1,11 @@
-# Last imported into DB: 2025-07-10 15:05:01
+# Last imported into DB: 2025-08-10 16:30:34
 master_day_number: 13
 arc_day_number: 6
 arc_id: arc_love_of_neighbor
 arc_title: Love of Neighbor – Living Charity
 arc_number: 2
 day_title: Love Is Sacrificial Service
-anchor_image:
-  Christ washing the disciples’ feet — The Son of God kneels in the dust.
+anchor_image: Christ washing the disciples’ feet — The Son of God kneels in the dust.
   He touches dirt and fatigue, pouring water not only onto their feet, but into their
   shame. This is love made visible in humility.
 primary_reading:
@@ -15,7 +14,7 @@ primary_reading:
   url: ""
 secondary_reading:
   - title: Catechism of the Catholic Church
-    reference: 1825
+    reference: §1825
     url: https://www.vatican.va/archive/ENG0015/__P66.HTM
 meditative_points:
   - “If I then, your Lord and Teacher, have washed your feet…” (Jn 13:14) — Christ does
@@ -24,8 +23,7 @@ meditative_points:
   - The Catechism calls this love “the form of all the virtues” (CCC 1825) — it gives
     life to every act.
 ejaculatory_prayer: Let me love by lowering myself.
-colloquy:
-  Jesus, I want to follow You — but I fear the basin and the towel. Give me
+colloquy: Jesus, I want to follow You — but I fear the basin and the towel. Give me
   the joy of sacrificial love, not in words but in humble acts.
 resolution: Today I will choose a task I usually avoid — and do it with reverence.
 tags:

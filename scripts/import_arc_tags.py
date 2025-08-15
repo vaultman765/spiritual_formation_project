@@ -56,9 +56,6 @@ def import_arc_tags(arc_id: str = None):
                 tag = Tag.objects.filter(name=tag_name).first()
                 if tag is None:
                     tag = Tag.objects.create(name=tag_name, category=category)
-                elif tag.category != category:
-                    logger.warning(f"⚠️ Tag '{tag_name}' exists with different category "
-                                   f"('{tag.category}') than expected ('{category}')")
                 ArcTag.objects.get_or_create(arc=arc, tag=tag)
                 count += 1
 

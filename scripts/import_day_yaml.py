@@ -3,7 +3,6 @@ import sys
 import django
 import logging
 import argparse
-import yaml
 from pathlib import Path
 from datetime import datetime
 
@@ -120,7 +119,6 @@ class DayImporter:
 def import_day_file(path: Path, dry_run: bool = False) -> bool:
     """Import a single YAML file into the database."""
     if not path.exists():
-        logging.info(f"Updating path to {DAY_FILES_DIR / path}")
         path = DAY_FILES_DIR / path
     if not path.exists():
         logging.error(f"File not found: {path}")
@@ -175,13 +173,7 @@ def import_folder(folder: Path, dry_run: bool = False):
 
 
 def import_arc(arc_id: str, dry_run: bool = False):
-    try:
-        with open(INDEX_FILE, "r") as f:
-            index = yaml.safe_load(f)
-    except Exception as e:
-        logging.error(f"Could not load arc index: {e}")
-        return
-
+    index = load_yaml(INDEX_FILE)
     if arc_id not in index:
         logging.error(f"Arc ID '{arc_id}' not found in index.")
         return

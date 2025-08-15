@@ -1,12 +1,11 @@
-# Last imported into DB: 2025-07-30 22:11:06
+# Last imported into DB: 2025-08-12 14:10:28
 master_day_number: 50
 arc_day_number: 12
 arc_id: arc_litany_sacred_heart
 arc_title: Litany of the Sacred Heart
 arc_number: 6
 day_title: Source of Justice and Love
-anchor_image:
-  "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
+anchor_image: "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
   His hands are extended in blessing, and His robe gleams like light.
   But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love.
   It is not a wound of shame, but a throne of glory. He says nothing.
@@ -21,17 +20,16 @@ secondary_reading:
     reference:
     url:
   - title: Catechism of the Catholic Church
-    reference: 1999–2002
+    reference: §§1999–2002
     url: https://www.vatican.va/archive/ENG0015/__P6Z.HTM
   - title: Pope Benedict XVI, *Deus Caritas Est*
-    reference: §10–13
+    reference: §§10–13
     url: https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20051225_deus-caritas-est.html
 meditative_points:
   - Justice flows from a Heart that never separates it from love
   - The Cross reveals justice satisfied — and mercy overflowing
 ejaculatory_prayer: Heart of Jesus, fountain of true justice, order my loves according to Your righteousness.
-colloquy:
-  Lord Jesus, You are meek and humble, but never unjust. In Your Heart, love and truth embrace. Teach me never to separate them.
+colloquy: Lord Jesus, You are meek and humble, but never unjust. In Your Heart, love and truth embrace. Teach me never to separate them.
   Let me seek justice that springs from Your mercy and never ends in coldness or pride.
 resolution: I will practice justice today in a hidden way — returning good for wrong or giving silently to someone in need.
 tags:

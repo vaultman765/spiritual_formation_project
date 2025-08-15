@@ -2,12 +2,15 @@ import django
 import os
 import sys
 import argparse
-import yaml
 from pathlib import Path
 from scripts.utils.arc_loader import load_arc_from_metadata
+from scripts.utils.io import load_yaml
+from scripts.utils.log import configure_logging, get_logger
 from scripts.utils.paths import DJANGO_SETTINGS_MODULE
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
+configure_logging()
+logger = get_logger(__name__)
 
 
 def setup_django():
@@ -24,11 +27,10 @@ ARC_METADATA_PATH = Path("metadata") / "arc_metadata.yaml"
 
 def main(arc_id: str = None):
     if not ARC_METADATA_PATH.exists():
-        print("❌ arc_metadata.yaml not found.")
+        logger.error("arc_metadata.yaml not found.")
         return
 
-    with open(ARC_METADATA_PATH, "r", encoding="utf-8-sig") as f:
-        metadata = yaml.safe_load(f)
+    metadata = load_yaml(ARC_METADATA_PATH)
 
     count = 0
     for arc in metadata:
@@ -37,13 +39,11 @@ def main(arc_id: str = None):
             continue
 
         obj = load_arc_from_metadata(this_id, Arc)
-        print(f"[OK] Synced arc: {obj.arc_number} — {obj.arc_title}")
+        logger.info(f"[OK] Synced arc: {obj.arc_number} — {obj.arc_title}")
         count += 1
 
     if count == 0:
-        print("No arcs imported. Check arc_id?")
-    else:
-        print(f"{count} arcs imported/updated.")
+        logger.warning("No arcs imported. Check arc_id?")
 
 
 if __name__ == "__main__":

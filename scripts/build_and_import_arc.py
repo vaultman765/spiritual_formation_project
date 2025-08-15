@@ -1,8 +1,8 @@
 import argparse
 import subprocess
 import sys
-import yaml
 from pathlib import Path
+from scripts.utils.io import load_yaml
 from scripts.utils.paths import INDEX_FILE, ARC_METADATA_FILE, ARC_TAGS_DIR, DAY_FILES_DIR
 from scripts.utils.log import configure_logging, get_logger
 from scripts.utils.checksum import load_checksums, save_checksums, should_skip, update_checksum
@@ -13,13 +13,8 @@ logger = get_logger(__name__)
 
 
 class ArcMetadataHandler:
-    def __init__(self, index_file: Path):
-        self.index_file = index_file
-        self.index = self._load_index()
-
-    def _load_index(self) -> dict:
-        with open(self.index_file, "r", encoding="utf-8") as f:
-            return yaml.safe_load(f)
+    def __init__(self):
+        self.index = load_yaml(INDEX_FILE)
 
     def arc_id_in_index(self, arc_id: list[str]) -> bool:
         return all(aid in self.index for aid in arc_id)
@@ -51,8 +46,6 @@ def run(command: list[str], description: str):
         if result.stderr:
             logger.error(f"STDERR: {result.stderr}")
         raise RuntimeError(f"Step failed: {description}")
-    else:
-        logger.info(f"✅ {description} completed successfully")
 
 
 def run_import_arc_metadata(arc_id):
@@ -72,14 +65,13 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
     arc_id = args.arc_id
 
     if arc_id == 'all':
-        with open(index_file, "r", encoding="utf-8") as f:
-            index = yaml.safe_load(f)
+        index = load_yaml(index_file)
         arc_ids = list(index.keys())
     else:
         arc_ids = [arc_id]
 
     # Check arc is registered
-    arc_handler = ArcMetadataHandler(INDEX_FILE)
+    arc_handler = ArcMetadataHandler()
     if not arc_handler.arc_id_in_index(arc_ids):
         logger.error(f"⚠️  Arc ID '{arc_ids}' not found in _index_by_arc.yaml — update it before running this script.")
         return
@@ -111,7 +103,6 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
                 if not should_skip(day_file_path, checksums, args.skip_unchanged):
                     run(["python", "-m", "scripts.import_day_yaml", "--file", str(day_file)], f"Import {day_file}")
                     update_checksum(day_file_path, checksums)
-                    logger.info(f"✅ Imported updated {day_file}")
             save_checksums(checksums)
         else:
             # If not skipping unchanged, just import all days
@@ -127,7 +118,6 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
                 if not should_skip(tag_file, checksums, args.skip_unchanged):
                     run(["python", "-m", "scripts.import_arc_tags", "--arc-id", aid], f"Import arc tags for {aid}")
                     update_checksum(tag_file, checksums)
-                    logger.info(f"✅ Imported updated tags for {aid}")
             save_checksums(checksums)
         else:
             # If not skipping unchanged, just import all tags

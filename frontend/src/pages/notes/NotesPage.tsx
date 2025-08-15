@@ -1,9 +1,6 @@
 import NoteCard from "@/components/cards/NoteCard";
 import { ModalRenderer } from "@/components/modals/BaseModal";
-import {
-  EditNoteModal,
-  ViewerNoteModal,
-} from "@/components/modals/NoteModal/NoteModal";
+import { EditNoteModal, ViewerNoteModal } from "@/components/modals/NoteModal/NoteModal";
 import SimpleListboxDropdown from "@/components/SimpleListboxDropdown";
 import { useModal } from "@/hooks/useModal";
 import { getAllNotes } from "@/hooks/useNotes";
@@ -14,16 +11,12 @@ import { useEffect, useMemo, useState } from "react";
 export default function NotesPage() {
   const [notes, setNotes] = useState<MeditationNote[]>([]);
   const [sortBy, setSortBy] = useState<"month" | "arc">("month");
-  const [groupedNotes, setGroupedNotes] = useState<
-    Record<string, MeditationNote[]>
-  >({});
+  const [groupedNotes, setGroupedNotes] = useState<Record<string, MeditationNote[]>>({});
   const [selectedNote, setSelectedNote] = useState<MeditationNote | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const { openModal: openViewerModal, closeModal: closeViewerModal } =
-    useModal("viewerNoteModal");
-  const { openModal: openEditorModal, closeModal: closeEditorModal } =
-    useModal("editNoteModal");
+  const { openModal: openViewerModal, closeModal: closeViewerModal } = useModal("viewerNoteModal");
+  const { openModal: openEditorModal, closeModal: closeEditorModal } = useModal("editNoteModal");
 
   const fetchNotes = async () => {
     const data = await getAllNotes();
@@ -60,9 +53,7 @@ export default function NotesPage() {
           day={selectedNote}
           title={selectedNote?.meditation_day_full?.day_title || "Edit Note"}
           content={selectedNote?.content || ""}
-          master_day_number={
-            selectedNote?.meditation_day_full?.master_day_number
-          }
+          master_day_number={selectedNote?.meditation_day_full?.master_day_number}
           onClose={() => {
             closeEditorModal();
             setSelectedNote(null);
@@ -79,11 +70,7 @@ export default function NotesPage() {
       const title = note.meditation_day_full?.day_title?.toLowerCase() || "";
       const arc = note.meditation_day_full?.arc_title?.toLowerCase() || "";
       const search = searchTerm.toLowerCase();
-      return (
-        content.includes(search) ||
-        title.includes(search) ||
-        arc.includes(search)
-      );
+      return content.includes(search) || title.includes(search) || arc.includes(search);
     });
   }, [notes, searchTerm]);
 
@@ -104,12 +91,8 @@ export default function NotesPage() {
   return (
     <main>
       <div className="px-4 py-12 max-w-5xl mx-auto">
-        <h1 className="text-4xl font-display text-white mb-2 text-center">
-          My Notes
-        </h1>
-        <p className="text-center text-white/70 mb-10">
-          Review your past meditation notes.
-        </p>
+        <h1 className="text-4xl font-display text-white mb-2 text-center">My Notes</h1>
+        <p className="text-center text-white/70 mb-10">Review your past meditation notes.</p>
 
         <div className="flex items-center justify-between mb-6 gap-4 flex-wrap">
           <input
@@ -123,9 +106,7 @@ export default function NotesPage() {
             options={["month", "arc"]}
             selected={sortBy}
             onChange={(val) => setSortBy(val as "month" | "arc")}
-            labelFormatter={(val) =>
-              val === "month" ? "Group by Month" : "Group by Arc"
-            }
+            labelFormatter={(val) => (val === "month" ? "Group by Month" : "Group by Arc")}
           />
         </div>
 
@@ -134,9 +115,7 @@ export default function NotesPage() {
         ) : (
           Object.entries(groupedNotes).map(([groupTitle, groupNotes]) => (
             <div key={groupTitle} className="mb-10">
-              <h2 className="text-lg text-white/60 font-semibold mb-3">
-                {groupTitle}
-              </h2>
+              <h2 className="text-lg text-white/60 font-semibold mb-3">{groupTitle}</h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {groupNotes.map((note) => (
                   <NoteCard
@@ -144,7 +123,7 @@ export default function NotesPage() {
                     note={note}
                     onClick={() => {
                       setSelectedNote(note);
-                      openViewerModal(); // Open ViewerNoteModal
+                      openViewerModal();
                     }}
                   />
                 ))}

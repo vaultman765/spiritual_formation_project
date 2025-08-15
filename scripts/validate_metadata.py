@@ -17,8 +17,11 @@ from scripts.utils.paths import (
     DAY_SCHEMA,
 )
 from scripts.utils.constants import TAG_CATEGORIES
+from scripts.utils.log import configure_logging, get_logger
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
+configure_logging()
+logger = get_logger(__name__)
 
 
 class SchemaValidator:
@@ -297,11 +300,11 @@ class MetadataValidator:
         errors.extend(integrity.validate())
 
         if errors:
-            print("\n".join(errors))
-            print(f"❌ Metadata validation failed with {len(errors)} error(s).")
+            logger.error("\n".join(errors))
+            logger.error(f"Metadata validation failed with {len(errors)} error(s).")
             sys.exit(1)
         else:
-            print("✅ All metadata passed schema, tag, and integrity validation.")
+            logger.info("All metadata passed schema, tag, and integrity validation.")
 
 
 if __name__ == "__main__":

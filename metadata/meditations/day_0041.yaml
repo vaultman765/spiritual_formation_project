@@ -1,12 +1,11 @@
-# Last imported into DB: 2025-07-30 22:10:58
+# Last imported into DB: 2025-08-12 10:11:56
 master_day_number: 41
 arc_day_number: 3
 arc_id: arc_litany_sacred_heart
 arc_title: Litany of the Sacred Heart
 arc_number: 6
 day_title: United Substantially with the Word of God
-anchor_image:
-  "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
+anchor_image: "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
   His hands are extended in blessing, and His robe gleams like light.
   But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love.
   It is not a wound of shame, but a throne of glory. He says nothing.
@@ -21,7 +20,7 @@ secondary_reading:
     reference:
     url:
   - title: Catechism of the Catholic Church
-    reference: 470–483
+    reference: §§470–483
     url: https://www.vatican.va/archive/ENG0015/__P1J.HTM
   - title: St. Thomas Aquinas, *Summa Theologiae*, III
     reference: Q.2, a.1–2
@@ -33,8 +32,7 @@ meditative_points:
 ejaculatory_prayer: Heart of Jesus, one with the Eternal Word, possess me wholly.
 colloquy: Jesus, Word made flesh, I cannot grasp the mystery — but I can kneel.
   May Your divine and human love pierce through my resistance. Let my poor heart be drawn into Yours.
-resolution:
-  Today I will reject the temptation to compartmentalize — and ask Christ to dwell fully in all areas of my life,
+resolution: Today I will reject the temptation to compartmentalize — and ask Christ to dwell fully in all areas of my life,
   even the hidden ones.
 tags:
   thematic:

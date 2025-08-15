@@ -1,4 +1,4 @@
-# Last imported into DB: 2025-08-04 07:35:19
+# Last imported into DB: 2025-08-12 14:30:09
 master_day_number: 53
 arc_day_number: 15
 arc_id: arc_litany_sacred_heart
@@ -20,7 +20,7 @@ secondary_reading:
     reference: ""
     url: ""
   - title: Catechism of the Catholic Church
-    reference: 1817–1821
+    reference: §§1817–1821
     url: https://www.vatican.va/archive/ENG0015/__P66.HTM
   - title: St. Thérèse of Lisieux, Story of a Soul
     reference: PDF Page 224 ("Charity gave me" through "my vocation is Love!")
