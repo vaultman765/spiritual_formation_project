@@ -24,6 +24,7 @@ DEBUG = env.bool('DEBUG', default=False)
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 USE_X_FORWARDED_HOST = True
 SECURE_SSL_REDIRECT = True  # optional but recommended in staging/prod
+SECURE_REDIRECT_EXEMPT = [r"^/health/?$"]
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', '192.168.1.209'])
 ALLOWED_HOSTS += [gethostname(),] + list(set(gethostbyname_ex(gethostname())[2]))
