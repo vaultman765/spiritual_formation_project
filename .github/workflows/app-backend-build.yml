@@ -30,7 +30,6 @@ jobs:
       ECR_REPO:   ${{ vars.ECR_REPO }}
       APPRUNNER_SERVICE_NAME: ${{ vars.APPRUNNER_SERVICE_NAME_STAGING }}
       IMAGE_TAG:  sha-${{ github.sha }}
-      LATEST_TAG: staging-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -55,12 +54,12 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}" -t "${{ steps.repo.outputs.uri }}:${LATEST_TAG}" .
+          docker build -t "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}" -t "${{ steps.repo.outputs.uri }}:staging-latest" .
 
       - name: Push image
         run: |
           docker push "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}"
-          docker push "${{ steps.repo.outputs.uri }}:${LATEST_TAG}"
+          docker push "${{ steps.repo.outputs.uri }}:staging-latest"
 
       - name: Lookup App Runner service ARN by name
         id: svc
@@ -81,7 +80,7 @@ jobs:
         run: |
           aws apprunner update-service \
             --service-arn "${{ steps.svc.outputs.arn }}" \
-            --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:$LATEST_TAG,ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
+            --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:staging-latest,ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
 
 
   prod:
@@ -95,7 +94,6 @@ jobs:
       ECR_REPO:   ${{ vars.ECR_REPO }}
       APPRUNNER_SERVICE_NAME: ${{ vars.APPRUNNER_SERVICE_NAME_PROD }}
       IMAGE_TAG:  sha-${{ github.sha }}
-      LATEST_TAG: prod-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -120,12 +118,12 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}" -t "${{ steps.repo.outputs.uri }}:${LATEST_TAG}" .
+          docker build -t "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}" -t "${{ steps.repo.outputs.uri }}:prod-latest" .
 
       - name: Push image
         run: |
           docker push "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}"
-          docker push "${{ steps.repo.outputs.uri }}:${LATEST_TAG}"
+          docker push "${{ steps.repo.outputs.uri }}:prod-latest"
 
       - name: Lookup App Runner service ARN by name
         id: svc
@@ -146,4 +144,4 @@ jobs:
         run: |
           aws apprunner update-service \
             --service-arn "${{ steps.svc.outputs.arn }}" \
-            --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:${LATEST_TAG},ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
+            --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:prod-latest,ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
