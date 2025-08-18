@@ -153,20 +153,16 @@ if ENV in ("prod", "staging"):
     AWS_S3_REGION_NAME = env("AWS_REGION", default="us-east-1")
     AWS_DEFAULT_ACL = None
     AWS_QUERYSTRING_AUTH = True
+    AWS_S3_SIGNATURE_VERSION = "s3v4"
     AWS_S3_OBJECT_PARAMETERS = {"CacheControl": "max-age=86400"}
 
     STATICFILES_STORAGE = "website.storage_backends.StaticRootS3Boto3Storage"
     DEFAULT_FILE_STORAGE = "website.storage_backends.MediaRootS3Boto3Storage"
 
-    if STATIC_CDN_DOMAIN:
-        STATIC_URL = f"https://{STATIC_CDN_DOMAIN}/django/static/"
-    else:
-        STATIC_URL = f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/static/"
-
-    if MEDIA_CDN_DOMAIN:
-        MEDIA_URL = f"https://{MEDIA_CDN_DOMAIN}/django/media/"
-    else:
-        MEDIA_URL = f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/media/"
+    STATIC_URL = f"https://{STATIC_CDN_DOMAIN}/django/static/" if STATIC_CDN_DOMAIN \
+                 else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/static/"
+    MEDIA_URL = f"https://{MEDIA_CDN_DOMAIN}/django/media/" if MEDIA_CDN_DOMAIN \
+                 else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/media/"
 
 else:
     # Local dev: keep using filesystem
