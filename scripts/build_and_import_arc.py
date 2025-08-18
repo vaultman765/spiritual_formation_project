@@ -3,6 +3,7 @@ import subprocess
 import sys
 import yaml
 from pathlib import Path
+from scripts.utils.io import load_yaml
 from scripts.utils.paths import INDEX_FILE, ARC_METADATA_FILE, ARC_TAGS_DIR, DAY_FILES_DIR
 from scripts.utils.log import configure_logging, get_logger
 from scripts.utils.checksum import load_checksums, save_checksums, should_skip, update_checksum
@@ -18,8 +19,7 @@ class ArcMetadataHandler:
         self.index = self._load_index()
 
     def _load_index(self) -> dict:
-        with open(self.index_file, "r", encoding="utf-8") as f:
-            return yaml.safe_load(f)
+        return load_yaml(self.index_file)
 
     def arc_id_in_index(self, arc_id: list[str]) -> bool:
         return all(aid in self.index for aid in arc_id)
@@ -71,18 +71,14 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
 
     arc_id = args.arc_id
 
+    index = load_yaml(index_file)
     if arc_id == 'all':
-        with open(index_file, "r", encoding="utf-8") as f:
-            index = yaml.safe_load(f)
         arc_ids = list(index.keys())
     else:
+        if arc_id not in index:
+            logger.error(f"⚠️  Arc ID '{arc_id}' not found in _index_by_arc.yaml — update it before running this script.")
+            return
         arc_ids = [arc_id]
-
-    # Check arc is registered
-    arc_handler = ArcMetadataHandler(INDEX_FILE)
-    if not arc_handler.arc_id_in_index(arc_ids):
-        logger.error(f"⚠️  Arc ID '{arc_ids}' not found in _index_by_arc.yaml — update it before running this script.")
-        return
 
     # Step 1: Rebuild arc_metadata.yaml and arc_tags (can do all at once)
     run(["python", "-m", "scripts.build_arc_metadata_and_tags", "both"], "Build arc metadata and tags")
@@ -102,6 +98,7 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
             run_import_arc_metadata(aid)
 
     # Step 3: Import meditation days (one at a time)
+    arc_handler = ArcMetadataHandler(INDEX_FILE)
     day_list = arc_handler.get_day_list(arc_ids)
     if not args.skip_days:
         if args.skip_unchanged:
