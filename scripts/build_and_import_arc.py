@@ -2,6 +2,7 @@ import argparse
 import subprocess
 import sys
 import yaml
+import re
 from pathlib import Path
 from scripts.utils.io import load_yaml
 from scripts.utils.paths import INDEX_FILE, ARC_METADATA_FILE, ARC_TAGS_DIR, DAY_FILES_DIR
@@ -69,6 +70,10 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
     parser.add_argument("--skip-unchanged", action="store_true", help="Skip files with unchanged checksum")
     args = parser.parse_args()
 
+    def is_valid_arc_id(arc_id):
+        # Only allow alphanumeric characters and underscores, and must start with a letter
+        return re.match(r"^[A-Za-z][A-Za-z0-9_]*$", arc_id) is not None
+
     arc_id = args.arc_id
 
     index = load_yaml(index_file)
@@ -79,6 +84,12 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
             logger.error(f"⚠️  Arc ID '{arc_id}' not found in _index_by_arc.yaml — update it before running this script.")
             return
         arc_ids = [arc_id]
+
+    # Validate all arc_ids
+    for aid in arc_ids:
+        if not is_valid_arc_id(aid):
+            logger.error(f"⚠️  Invalid arc ID '{aid}'. Only alphanumeric characters and underscores are allowed, and must start with a letter.")
+            return
 
     # Step 1: Rebuild arc_metadata.yaml and arc_tags (can do all at once)
     run(["python", "-m", "scripts.build_arc_metadata_and_tags", "both"], "Build arc metadata and tags")
