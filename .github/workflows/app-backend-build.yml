@@ -1,0 +1,149 @@
+name: Backend - Build & Deploy
+
+on:
+  push:
+    branches: [ main, release* ]
+    paths-ignore: [ 'metadata/**', frontend/** ]
+  workflow_dispatch: {}
+
+concurrency:
+  group: backend-${{ github.ref }}
+  cancel-in-progress: true
+
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  staging:
+
+
+
+    name: Build & Deploy Staging
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release')) && vars.STAGING_ENABLED == 'true'
+
+    env:
+      AWS_REGION: ${{ vars.AWS_REGION }}
+      ROLE_ARN:   ${{ vars.ROLE_ARN_BACKEND_STAGING }}
+      ECR_REPO:   ${{ vars.ECR_REPO }}
+      APPRUNNER_SERVICE_NAME: ${{ vars.APPRUNNER_SERVICE_NAME_STAGING }}
+      IMAGE_TAG:  sha-${{ github.sha }}
+      LATEST_TAG: staging-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to ECR
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Resolve ECR repo URI
+        id: repo
+        run: |
+          URI=$(aws ecr describe-repositories --repository-names "$ECR_REPO" --query 'repositories[0].repositoryUri' --output text)
+          if [ -z "$URI" ] || [ "$URI" = "None" ]; then
+            echo "ECR repo not found: $ECR_REPO" && exit 1
+          fi
+          echo "uri=$URI" >> "$GITHUB_OUTPUT"
+
+      - name: Build image
+        run: |
+          docker build -t "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}" -t "${{ steps.repo.outputs.uri }}:${LATEST_TAG}" .
+
+      - name: Push image
+        run: |
+          docker push "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}"
+          docker push "${{ steps.repo.outputs.uri }}:${LATEST_TAG}"
+
+      - name: Lookup App Runner service ARN by name
+        id: svc
+        run: |
+          ARN=$(aws apprunner list-services --query "ServiceSummaryList[?ServiceName=='${APPRUNNER_SERVICE_NAME}'].ServiceArn | [0]" --output text)
+          STATUS=$(aws apprunner list-services --query "ServiceSummaryList[?ServiceName=='${APPRUNNER_SERVICE_NAME}'].Status | [0]" --output text)
+          if [ -z "$ARN" ] || [ "$ARN" = "None" ]; then
+            echo "Service not found: ${APPRUNNER_SERVICE_NAME}" && exit 1
+          fi
+          echo "arn=$ARN" >> $GITHUB_OUTPUT
+          echo "status=$STATUS" >> $GITHUB_OUTPUT
+
+      - name: Resume service if paused
+        if: steps.svc.outputs.status == 'PAUSED'
+        run: aws apprunner resume-service --service-arn "${{ steps.svc.outputs.arn }}"
+
+      - name: Update service to new image
+        run: |
+          aws apprunner update-service \
+            --service-arn "${{ steps.svc.outputs.arn }}" \
+            --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:${LATEST_TAG},ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
+
+
+  prod:
+    name: Build & Deploy Prod
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.PROD_ENABLED == 'true'
+
+    env:
+      AWS_REGION: ${{ vars.AWS_REGION }}
+      ROLE_ARN:   ${{ vars.ROLE_ARN_BACKEND_PROD }}
+      ECR_REPO:   ${{ vars.ECR_REPO }}
+      APPRUNNER_SERVICE_NAME: ${{ vars.APPRUNNER_SERVICE_NAME_PROD }}
+      IMAGE_TAG:  sha-${{ github.sha }}
+      LATEST_TAG: prod-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to ECR
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Resolve ECR repo URI
+        id: repo
+        run: |
+          URI=$(aws ecr describe-repositories --repository-names "$ECR_REPO" --query 'repositories[0].repositoryUri' --output text)
+          if [ -z "$URI" ] || [ "$URI" = "None" ]; then
+            echo "ECR repo not found: $ECR_REPO" && exit 1
+          fi
+          echo "uri=$URI" >> "$GITHUB_OUTPUT"
+
+      - name: Build image
+        run: |
+          docker build -t "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}" -t "${{ steps.repo.outputs.uri }}:${LATEST_TAG}" .
+
+      - name: Push image
+        run: |
+          docker push "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}"
+          docker push "${{ steps.repo.outputs.uri }}:${LATEST_TAG}"
+
+      - name: Lookup App Runner service ARN by name
+        id: svc
+        run: |
+          ARN=$(aws apprunner list-services --query "ServiceSummaryList[?ServiceName=='${APPRUNNER_SERVICE_NAME}'].ServiceArn | [0]" --output text)
+          STATUS=$(aws apprunner list-services --query "ServiceSummaryList[?ServiceName=='${APPRUNNER_SERVICE_NAME}'].Status | [0]" --output text)
+          if [ -z "$ARN" ] || [ "$ARN" = "None" ]; then
+            echo "Service not found: ${APPRUNNER_SERVICE_NAME}" && exit 1
+          fi
+          echo "arn=$ARN" >> $GITHUB_OUTPUT
+          echo "status=$STATUS" >> $GITHUB_OUTPUT
+
+      - name: Resume service if paused
+        if: steps.svc.outputs.status == 'PAUSED'
+        run: aws apprunner resume-service --service-arn "${{ steps.svc.outputs.arn }}"
+
+      - name: Update service to new image
+        run: |
+          aws apprunner update-service \
+            --service-arn "${{ steps.svc.outputs.arn }}" \
+            --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:${LATEST_TAG},ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
