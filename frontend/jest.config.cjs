@@ -8,6 +8,6 @@ module.exports = {
   transform: {
     '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.json' }],
   },
-  extensionsToTreatAsEsm: ['.ts', '.tsx'], // Treat TypeScript files as ESM
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'], // Ensure this is a valid path
+  extensionsToTreatAsEsm: ['.ts', '.tsx'], 
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'],
 };
