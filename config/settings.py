@@ -18,6 +18,9 @@ if os.path.exists(env_file):
 ENV = env('ENV', default='local').lower()
 SECRET_KEY = env('SECRET_KEY')
 
+STATIC_CDN_DOMAIN = env("STATIC_CDN_DOMAIN", default=None)
+MEDIA_CDN_DOMAIN  = env("MEDIA_CDN_DOMAIN",  default=None)
+
 DEBUG = env.bool('DEBUG', default=False)
 
 # Django is behind App Runner/Envoy. Tell Django when the original request was HTTPS.
@@ -29,11 +32,8 @@ SECURE_REDIRECT_EXEMPT = [r"^/health/?$"]
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', '192.168.1.209'])
 ALLOWED_HOSTS += [gethostname(),] + list(set(gethostbyname_ex(gethostname())[2]))
 
-
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -71,11 +71,11 @@ CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS', default=['http://localho
 if ENV in ('prod', 'staging'):
     # If you use Django session auth (cookies) from a different subdomain:
     SESSION_COOKIE_DOMAIN = ".catholicmentalprayer.com"
-    CSRF_COOKIE_DOMAIN    = ".catholicmentalprayer.com"
+    CSRF_COOKIE_DOMAIN = ".catholicmentalprayer.com"
     SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE    = True
+    CSRF_COOKIE_SECURE = True
     SESSION_COOKIE_SAMESITE = "None"
-    CSRF_COOKIE_SAMESITE    = "None"
+    CSRF_COOKIE_SAMESITE = "None"
     CORS_ALLOW_HEADERS = list(default_headers) + [
         "authorization",
         "x-csrftoken",
@@ -147,30 +147,27 @@ USE_TZ = True
 
 
 # === S3 STATIC & MEDIA STORAGE ===
-
-
-
-if ENV in ('prod', 'staging'):
+if ENV in ("prod", "staging"):
     INSTALLED_APPS += ["storages"]
+    AWS_STORAGE_BUCKET_NAME = env("S3_BUCKET_NAME")
+    AWS_S3_REGION_NAME = env("AWS_REGION", default="us-east-1")
+    AWS_DEFAULT_ACL = None
+    AWS_QUERYSTRING_AUTH = True
+    AWS_S3_OBJECT_PARAMETERS = {"CacheControl": "max-age=86400"}
 
-    AWS_STORAGE_BUCKET_NAME = env('S3_BUCKET_NAME')
-    AWS_S3_REGION_NAME      = env('AWS_REGION', default='us-east-1')
-    AWS_S3_CUSTOM_DOMAIN    = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+    STATICFILES_STORAGE = "website.storage_backends.StaticRootS3Boto3Storage"
+    DEFAULT_FILE_STORAGE = "website.storage_backends.MediaRootS3Boto3Storage"
 
-    AWS_DEFAULT_ACL         = None
-    AWS_QUERYSTRING_AUTH    = True
-    AWS_S3_OBJECT_PARAMETERS = { "CacheControl": "max-age=86400" }
+    if STATIC_CDN_DOMAIN:
+        STATIC_URL = f"https://{STATIC_CDN_DOMAIN}/django/static/"
+    else:
+        STATIC_URL = f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/static/"
 
-    # Your custom storages (or use storages.backends.s3boto3.S3StaticStorage)
-    STATICFILES_STORAGE     = "website.storage_backends.StaticRootS3Boto3Storage"
-    DEFAULT_FILE_STORAGE    = "website.storage_backends.MediaRootS3Boto3Storage"
+    if MEDIA_CDN_DOMAIN:
+        MEDIA_URL = f"https://{MEDIA_CDN_DOMAIN}/django/media/"
+    else:
+        MEDIA_URL = f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/media/"
 
-    if ENV == 'prod':
-        STATIC_URL = "https://static.catholicmentalprayer.com/"
-        MEDIA_URL  = "https://static.catholicmentalprayer.com/"
-    elif ENV == 'staging':
-        STATIC_URL = "https://static.staging.catholicmentalprayer.com/"
-        MEDIA_URL  = "https://static.staging.catholicmentalprayer.com/"
 else:
     # Local dev: keep using filesystem
     STATIC_URL = "static/"
