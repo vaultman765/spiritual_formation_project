@@ -12,11 +12,6 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  // server: {
-  //   proxy: {
-  //     '/api': 'http://localhost:8000',
-  //   },
-  // },
    css: {
     // This lets PostCSS (and Tailwind inside it) process index.css properly
     devSourcemap: true,
