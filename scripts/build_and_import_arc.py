@@ -76,13 +76,12 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
             index = yaml.safe_load(f)
         arc_ids = list(index.keys())
     else:
+        with open(index_file, "r", encoding="utf-8") as f:
+            index = yaml.safe_load(f)
+        if arc_id not in index:
+            logger.error(f"⚠️  Arc ID '{arc_id}' not found in _index_by_arc.yaml — update it before running this script.")
+            return
         arc_ids = [arc_id]
-
-    # Check arc is registered
-    arc_handler = ArcMetadataHandler(INDEX_FILE)
-    if not arc_handler.arc_id_in_index(arc_ids):
-        logger.error(f"⚠️  Arc ID '{arc_ids}' not found in _index_by_arc.yaml — update it before running this script.")
-        return
 
     # Step 1: Rebuild arc_metadata.yaml and arc_tags (can do all at once)
     run(["python", "-m", "scripts.build_arc_metadata_and_tags", "both"], "Build arc metadata and tags")
