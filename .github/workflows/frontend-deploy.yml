@@ -9,6 +9,7 @@ on:
       - 'pnpm-lock.yaml'
       - 'vite.config.ts'
       - '.env.*'
+      - 'frontend-deploy.yml'
   workflow_dispatch: {}
 
 concurrency:
@@ -52,9 +53,7 @@ jobs:
       - name: Build (${{ env.VITE_MODE }})
         env:
           NODE_OPTIONS: --max_old_space_size=4096
-        run: |
-          npm run -s tsc -- -b
-          npx vite build --mode $VITE_MODE
+        run: npm run staging
 
       - name: Configure AWS (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
@@ -101,9 +100,7 @@ jobs:
       - name: Build (${{ env.VITE_MODE }})
         env:
           NODE_OPTIONS: --max_old_space_size=4096
-        run: |
-          npm run -s tsc -- -b
-          npx vite build --mode $VITE_MODE
+        run: npm run build
 
       - name: Configure AWS (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
