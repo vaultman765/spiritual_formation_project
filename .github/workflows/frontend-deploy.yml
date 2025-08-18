@@ -1,0 +1,107 @@
+name: Frontend - Deploy
+
+on:
+  push:
+    branches: [ main, 'release/**' ]
+    paths:
+      - 'frontend/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'vite.config.ts'
+      - '.env.*'
+  workflow_dispatch: {}
+
+concurrency:
+  group: frontend-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  staging:
+    name: Deploy Staging
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release')) && vars.STAGING_ENABLED == 'true'
+
+    env:
+      AWS_REGION: ${{ vars.AWS_REGION }}
+      ROLE_ARN:   ${{ vars.ROLE_ARN_FRONTEND_STAGING }}
+      BUCKET:     ${{ vars.FRONTEND_BUCKET_STAGING }}
+      CF_DIST_ID: ${{ vars.CF_FRONTEND_DIST_ID_STAGING }}
+      VITE_MODE:  staging
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build (${{ env.VITE_MODE }})
+        env:
+          NODE_OPTIONS: --max_old_space_size=4096
+        run: |
+          npm run -s tsc -- -b
+          npx vite build --mode $VITE_MODE
+
+      - name: Configure AWS (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync to S3
+        run: aws s3 sync ./dist "s3://${{ env.BUCKET }}" --delete
+
+      - name: Invalidate CloudFront
+        run: aws cloudfront create-invalidation --distribution-id "${{ env.CF_DIST_ID }}" --paths "/*"
+
+  prod:
+    name: Deploy Prod
+    runs-on: ubuntu-latest
+    # Only on push to main (never PRs, never release/*)
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.PROD_ENABLED == 'true'
+
+    env:
+      AWS_REGION: ${{ vars.AWS_REGION }}
+      ROLE_ARN:   ${{ vars.ROLE_ARN_FRONTEND_PROD }}
+      BUCKET:     ${{ vars.FRONTEND_BUCKET_PROD }}
+      CF_DIST_ID: ${{ vars.CF_FRONTEND_DIST_ID_PROD }}
+      VITE_MODE:  production
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build (${{ env.VITE_MODE }})
+        env:
+          NODE_OPTIONS: --max_old_space_size=4096
+        run: |
+          npm run -s tsc -- -b
+          npx vite build --mode $VITE_MODE
+
+      - name: Configure AWS (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync to S3
+        run: aws s3 sync ./dist "s3://${{ env.BUCKET }}" --delete
+
+      - name: Invalidate CloudFront
+        run: aws cloudfront create-invalidation --distribution-id "${{ env.CF_DIST_ID }}" --paths "/*"

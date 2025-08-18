@@ -1,0 +1,73 @@
+name: Metadata - Sync
+
+on:
+  push:
+    branches: [ main, 'release/**' ]
+    paths:
+      - 'metadata/**'
+  workflow_dispatch: {}
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: metadata-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  staging:
+    name: Sync Staging
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release')) && vars.STAGING_ENABLED == 'true'
+
+    env:
+      AWS_REGION:  ${{ vars.AWS_REGION }}
+      ROLE_ARN:    ${{ vars.ROLE_ARN_METADATA_STAGING }}
+      BUCKET:      ${{ vars.METADATA_BUCKET_STAGING }}
+      PREFIX:      metadata
+      TRIGGER_KEY: _triggers/import.json
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync metadata to S3
+        run: aws s3 sync ./metadata "s3://${BUCKET}/${PREFIX}" --delete
+
+      - name: Write trigger
+        run: |
+          echo "{\"timestamp\":\"$(date -u +%FT%TZ)\",\"source\":\"gha\"}" \
+            | aws s3 cp - "s3://${BUCKET}/${TRIGGER_KEY}" --content-type application/json
+
+  prod:
+    name: Sync Prod
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'  && vars.PROD_ENABLED == 'true'
+    env:
+      AWS_REGION:  ${{ vars.AWS_REGION }}
+      ROLE_ARN:    ${{ vars.ROLE_ARN_METADATA_PROD }}
+      BUCKET:      ${{ vars.METADATA_BUCKET_PROD }}
+      PREFIX:      metadata
+      TRIGGER_KEY: _triggers/import.json
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync metadata to S3
+        run: |
+          aws s3 sync ./metadata "s3://${BUCKET}/${PREFIX}" --delete
+
+      - name: Write trigger
+        run: |
+          echo "{\"timestamp\":\"$(date -u +%FT%TZ)\",\"source\":\"gha\"}" \
+            | aws s3 cp - "s3://${BUCKET}/${TRIGGER_KEY}" --content-type application/json
