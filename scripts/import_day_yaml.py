@@ -164,6 +164,16 @@ def import_day_file(path: Path, dry_run: bool = False) -> bool:
 
 
 def import_folder(folder: Path, dry_run: bool = False):
+    # Validate that folder is within DAY_FILES_DIR
+    try:
+        safe_root = DAY_FILES_DIR.resolve()
+        folder_path = folder.resolve()
+        if not str(folder_path).startswith(str(safe_root)):
+            logging.error(f"Folder '{folder}' is not within the allowed directory '{DAY_FILES_DIR}'. Aborting.")
+            return
+    except Exception as e:
+        logging.error(f"Could not resolve folder path: {e}")
+        return
     yaml_files = sorted(folder.glob("day_*.yaml"))
     success, failure = 0, 0
     for f in yaml_files:
