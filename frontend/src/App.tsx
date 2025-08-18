@@ -25,14 +25,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/days/:dayNumber" element={<MeditationDayPage />} />
-          <Route
-            path="/days/:arcID/:arcDayNumber"
-            element={<MeditationDayPage />}
-          />
-          <Route
-            path="/how-to-pray"
-            element={<div>How to Pray Page (Coming Soon)</div>}
-          />
+          <Route path="/days/:arcID/:arcDayNumber" element={<MeditationDayPage />} />
+          <Route path="/how-to-pray" element={<div>How to Pray Page (Coming Soon!)</div>} />
           <Route path="/explore" element={<ExplorePage />} />
           <Route path="/arcs/:arcId" element={<ArcPage />} />
           <Route path="/my-journey" element={<JourneyPage />} />
@@ -40,10 +34,7 @@ function App() {
           <Route path="/auth/register" element={<RegisterPage />} />
           <Route path="/start-journey" element={<StartJourneyPage />} />
           <Route path="/my-notes" element={<NotesPage />} />
-          <Route
-            path="/create-custom-journey"
-            element={<JourneyEditorPage mode="create" />}
-          />
+          <Route path="/create-custom-journey" element={<JourneyEditorPage mode="create" />} />
           <Route
             path="/edit-journey"
             element={
