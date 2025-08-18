@@ -1,12 +1,11 @@
-# Last imported into DB: 2025-08-09 11:38:33
+# Last imported into DB: 2025-08-18 09:14:46
 master_day_number: 61
 arc_day_number: 7
 arc_id: arc_christ_our_high_priest
 arc_title: Christ Our High Priest
 arc_number: 7
 day_title: The Priesthood We Receive
-anchor_image:
-  Christ laying His wounded hand on a soul kneeling before Him, clothing
+anchor_image: Christ laying His wounded hand on a soul kneeling before Him, clothing
   it with a white garment and pressing it close to His Heart.
 primary_reading:
   title: 1 Peter 2:9
@@ -14,20 +13,18 @@ primary_reading:
   url:
 secondary_reading:
   - title: Pope Pius XII, *Mediator Dei*
-    reference: §88–89
+    reference: §§88–89
     url: /docs/readings/Pope_Pius_XII_Mediator_Dei.pdf
 meditative_points:
   - You are a chosen race, a royal priesthood
   - Christ shares His priesthood with His Body, the Church
   - Every baptized soul is called to offer spiritual sacrifices
 ejaculatory_prayer: Jesus, help me live as a priestly soul in union with You.
-colloquy:
-  Lord, You have made me a priest in Your image — not by ordination, but by
+colloquy: Lord, You have made me a priest in Your image — not by ordination, but by
   Baptism. Let me never forget the dignity of this call. Teach me to offer my day,
   my sufferings, my praise — all united to Your one offering. I want to live as a
   living sacrifice to You.
-resolution:
-  Today I will make a spiritual offering of some small suffering or task,
+resolution: Today I will make a spiritual offering of some small suffering or task,
   uniting it to Christ’s priesthood with intention.
 tags:
   thematic:
