@@ -19,8 +19,7 @@ class ArcMetadataHandler:
         self.index = self._load_index()
 
     def _load_index(self) -> dict:
-        with open(self.index_file, "r", encoding="utf-8") as f:
-            return yaml.safe_load(f)
+        return load_yaml(self.index_file)
 
     def arc_id_in_index(self, arc_id: list[str]) -> bool:
         return all(aid in self.index for aid in arc_id)
@@ -99,6 +98,7 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
             run_import_arc_metadata(aid)
 
     # Step 3: Import meditation days (one at a time)
+    arc_handler = ArcMetadataHandler(INDEX_FILE)
     day_list = arc_handler.get_day_list(arc_ids)
     if not args.skip_days:
         if args.skip_unchanged:
