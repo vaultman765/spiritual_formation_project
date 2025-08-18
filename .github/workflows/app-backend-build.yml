@@ -3,7 +3,7 @@ name: Backend - Build & Deploy
 on:
   push:
     branches: [ main, release* ]
-    paths-ignore: [ 'metadata/**', frontend/** ]
+    paths-ignore: [ 'metadata/**', 'frontend/**' ]
   workflow_dispatch: {}
 
 concurrency:
