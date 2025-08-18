@@ -81,7 +81,7 @@ jobs:
         run: |
           aws apprunner update-service \
             --service-arn "${{ steps.svc.outputs.arn }}" \
-            --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:${LATEST_TAG},ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
+            --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:$LATEST_TAG,ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
 
 
   prod:
