@@ -47,8 +47,14 @@ jobs:
           cache: npm
           cache-dependency-path: frontend/package-lock.json 
 
-      - name: Install deps
-        run: npm ci
+      - name: Install deps (robust)
+        run: |
+          set -e
+          npm ci || {
+            echo "npm ci failed (rollup optional dep bug). Falling back to npm install…"
+            rm -rf node_modules
+            npm install --no-audit --no-fund
+          }
 
       - name: Build (${{ env.VITE_MODE }})
         env:
