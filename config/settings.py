@@ -19,7 +19,7 @@ ENV = env('ENV', default='local').lower()
 SECRET_KEY = env('SECRET_KEY')
 
 STATIC_CDN_DOMAIN = env("STATIC_CDN_DOMAIN", default=None)
-MEDIA_CDN_DOMAIN  = env("MEDIA_CDN_DOMAIN",  default=None)
+MEDIA_CDN_DOMAIN = env("MEDIA_CDN_DOMAIN",  default=None)
 
 DEBUG = env.bool('DEBUG', default=False)
 
@@ -160,9 +160,9 @@ if ENV in ("prod", "staging"):
     DEFAULT_FILE_STORAGE = "website.storage_backends.MediaRootS3Boto3Storage"
 
     STATIC_URL = f"https://{STATIC_CDN_DOMAIN}/django/static/" if STATIC_CDN_DOMAIN \
-                 else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/static/"
+        else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/static/"
     MEDIA_URL = f"https://{MEDIA_CDN_DOMAIN}/django/media/" if MEDIA_CDN_DOMAIN \
-                 else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/media/"
+        else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/media/"
 
 else:
     # Local dev: keep using filesystem

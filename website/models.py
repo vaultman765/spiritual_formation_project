@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.conf import settings
 
 
 # --- Core Arc Model ---
@@ -165,3 +166,30 @@ class MeditationNote(models.Model):
 
     def __str__(self):
         return f"Note for {self.user.username} – Day {self.meditation_day.master_day_number}"
+
+
+# --- User Statistics ---
+class PageView(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    path = models.CharField(max_length=1024)
+    title = models.CharField(max_length=512, blank=True)
+    referrer = models.CharField(max_length=1024, blank=True)
+    visitor_id = models.CharField(max_length=64, db_index=True)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.SET_NULL, related_name="pageviews"
+    )
+    user_agent = models.TextField(blank=True)
+    ip = models.GenericIPAddressField(null=True, blank=True)
+    screen_w = models.IntegerField(null=True, blank=True)
+    screen_h = models.IntegerField(null=True, blank=True)
+    tz = models.CharField(max_length=128, blank=True)
+
+    class Meta:
+        indexes = [
+            models.Index(fields=["created_at"]),
+            models.Index(fields=["path"]),
+            models.Index(fields=["visitor_id", "created_at"]),
+        ]
+
+    def __str__(self):
+        return f"{self.created_at:%Y-%m-%d %H:%M:%S} {self.path} ({self.visitor_id})"
