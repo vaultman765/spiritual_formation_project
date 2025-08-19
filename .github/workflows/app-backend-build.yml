@@ -76,11 +76,12 @@ jobs:
         if: steps.svc.outputs.status == 'PAUSED'
         run: aws apprunner resume-service --service-arn "${{ steps.svc.outputs.arn }}"
 
-      - name: Update service to new image
-        run: |
-          aws apprunner update-service \
-            --service-arn "${{ steps.svc.outputs.arn }}" \
-            --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:staging-latest,ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
+      # Have auto-deploy on
+      # - name: Update service to new image
+      #   run: |
+      #     aws apprunner update-service \
+      #       --service-arn "${{ steps.svc.outputs.arn }}" \
+      #       --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:staging-latest,ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
 
 
   prod:
@@ -140,8 +141,9 @@ jobs:
         if: steps.svc.outputs.status == 'PAUSED'
         run: aws apprunner resume-service --service-arn "${{ steps.svc.outputs.arn }}"
 
-      - name: Update service to new image
-        run: |
-          aws apprunner update-service \
-            --service-arn "${{ steps.svc.outputs.arn }}" \
-            --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:prod-latest,ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
+      # Have auto-deploy on
+      # - name: Update service to new image
+      #   run: |
+      #     aws apprunner update-service \
+      #       --service-arn "${{ steps.svc.outputs.arn }}" \
+      #       --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:prod-latest,ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
