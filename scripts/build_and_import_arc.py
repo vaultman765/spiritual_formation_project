@@ -64,10 +64,14 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
 
     arc_id = args.arc_id
 
+    index = load_yaml(index_file)
     if arc_id == 'all':
         index = load_yaml(index_file)
         arc_ids = list(index.keys())
     else:
+        if arc_id not in index:
+            logger.error(f"⚠️  Arc ID '{arc_id}' not found in _index_by_arc.yaml — update it before running this script.")
+            return
         arc_ids = [arc_id]
 
     # Check arc is registered
@@ -94,6 +98,7 @@ def main(index_file: Path, arc_metadata_file: Path, arc_tags_dir: Path, day_file
             run_import_arc_metadata(aid)
 
     # Step 3: Import meditation days (one at a time)
+    arc_handler = ArcMetadataHandler(INDEX_FILE)
     day_list = arc_handler.get_day_list(arc_ids)
     if not args.skip_days:
         if args.skip_unchanged:
