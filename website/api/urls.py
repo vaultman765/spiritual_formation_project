@@ -8,6 +8,7 @@ from website.api.views.user_journey_views import UserJourneyViewSet, UserJourney
 from website.api.views.meditation_note_view import MeditationNoteView
 from website.api.views.auth_views import current_user_view, register_view, login_view, logout_view
 from website.api.views.health_check import health_check
+from website.api.views.user_analytics_view import track
 
 router = DefaultRouter()
 router.register(r'arcs', ArcViewSet, basename='arc')
@@ -26,4 +27,5 @@ urlpatterns = [
     path('api/user/journeys/', UserJourneyListAllView.as_view(), name='user-journey-list'),
     path('api-auth/', include('rest_framework.urls')),
     path('health/', health_check, name='health-check'),
+    path("api/user-analytics/", track, name='user-analytics')
 ]

@@ -107,3 +107,14 @@ export interface NoteInput {
   content: string;
   id?: number; // Optional for new notes
 }
+
+export type PageviewPayload = {
+  type: "pageview";
+  path: string;
+  title?: string;
+  referrer?: string;
+  visitorId: string;
+  userId?: string | number | null;
+  screen?: { w: number; h: number };
+  tz?: string;
+};
