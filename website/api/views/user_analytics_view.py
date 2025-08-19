@@ -1,4 +1,4 @@
-# website/views.py
+# website/api/views/user_analytics_view.py
 import json
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
