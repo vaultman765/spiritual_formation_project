@@ -54,6 +54,9 @@ def track(request: HttpRequest):
             user = user_model.objects.get(pk=user_id)
         except user_model.DoesNotExist:
             user = None
+    # Fallback: use request.user if authenticated and user is still None
+    if user is None and hasattr(request, "user") and request.user.is_authenticated:
+        user = request.user
 
     PageView.objects.create(
         created_at=timezone.now(),
