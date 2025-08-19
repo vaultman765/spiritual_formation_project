@@ -15,7 +15,7 @@ from .models import (
 @admin.register(PageView)
 class PageViewAdmin(admin.ModelAdmin):
     list_display = ("created_at", "path", "visitor_id", "user", "ip", "tz")
-    list_filter  = ("tz",)
+    list_filter = ("tz",)
     search_fields = ("path", "visitor_id", "referrer", "user_agent", "ip")
     date_hierarchy = "created_at"
 

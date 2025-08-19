@@ -49,10 +49,10 @@ def track(request: HttpRequest):
         # If your API authenticates requests, you could also use request.user
         # For now we accept a numeric id if you pass it from frontend
         from django.contrib.auth import get_user_model
-        User = get_user_model()
+        user_model = get_user_model()
         try:
-            user = User.objects.get(pk=user_id)
-        except User.DoesNotExist:
+            user = user_model.objects.get(pk=user_id)
+        except user_model.DoesNotExist:
             user = None
 
     PageView.objects.create(
