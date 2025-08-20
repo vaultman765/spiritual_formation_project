@@ -46,107 +46,164 @@ This document describes how to deploy the
 
 ---
 
-## 🏗️ Deployment Steps & Status
+## ✅ **Current Status**
 
-### 1. **Backend (Django API)**
-
-#### **Current Progress:**
-
-- [x] Dockerized Django app (`website` folder)
-- [x] PostgreSQL used for local/Docker backend (no SQLite)
-- [x] Environment-based settings and secret separation for dev/prod
-- [x] Local CORS configured for frontend
-- [x] Can run locally and via Docker
-
-#### **Production-Ready Checklist:**
-
-- [x] AWS RDS (Postgres) created, automated backups enabled
-- [ ] RDS public access set to **No**; security group allows only AWS app, not global access
-- [ ] Store all secrets (`DB_PASSWORD`, `SECRET_KEY`, etc) in AWS Secrets Manager (or as env vars in App Runner for MVP)
-- [ ] DEBUG=False and ALLOWED_HOSTS set to your public domain(s) (e.g., `api.catholicmentalprayer.com`)
-- [ ] CORS/CSRF set for your frontend domain (`https://catholicmentalprayer.com`)
-- [ ] S3 used for `STATIC_ROOT` & Django static files; update `STATIC_URL`
-- [ ] Logging settings for errors
-- [ ] Build & push backend Docker image to ECR
-- [ ] Deploy Django backend to AWS App Runner (using ECR image and RDS connection)
-- [ ] Test: admin login, user login, saving data, static file load
+- [x] Local dev: Dockerized Django backend
+- [x] Local dev: Vite/React frontend using `.env.development` and `.env.production`
+- [x] PostgreSQL on AWS RDS, working with local and App Runner
+- [x] Django secrets managed via AWS Secrets Manager
+- [x] App Runner deployed with Docker image from ECR
+- [x] Health check handled with patched ALLOWED_HOSTS logic
+- [x] Static files collected in Docker, pending S3 setup
+- [x] All management/command scripts identified and checked
+- [x]  import_arc working locally and against RDS
+- [x] Design approved: single S3 checksum is the production source of truth
 
 ---
 
-### 2. **Frontend (React/Vite)**
+## 🟡 **Production Readiness & To-Do Checklist**
 
-#### **Current Progress:**
+### 📦 1. **Add S3 static/media file storage**
 
-- [x] Frontend builds to static files using Vite
-- [x] API calls use `import.meta.env.VITE_API_URL`
-- [x] `.env.production` points to backend API URL
-
-#### **Production-Ready Checklist:**
-
-- [ ] `npm run build` and upload `/dist` to S3 bucket (public-read)
-- [ ] Configure CloudFront to serve S3 with HTTPS + custom domain
-- [ ] Test site: API requests use backend (`VITE_API_URL`)
-- [ ] Set up S3 website hosting for redirect domain (`meditationwithchrist.com`)
-- [ ] (If needed) Set CORS on S3 if you run into browser errors
+- [ ] Use **django-storages** + S3 for:
+  - [x] Static files in production
+  - [x] User-uploaded files (if any) - N/A
+  - [x] Single checksum file in S3: s3://spiritual-formation-prod/checksum/.mental_prayer_checksums.json
+  - [ ] Document S3 paths and lifecycle rules (optional)
 
 ---
 
-### 3. **DNS / Domains**
+### 🔒 2. **Lock down your Secrets Manager policy**
 
-- [ ] Use Route 53 (or your DNS) to point domains to:
-  - CloudFront for frontend (`catholicmentalprayer.com`)
-  - App Runner for API backend (`api.catholicmentalprayer.com`)
-- [ ] Set up redirect for `meditationwithchrist.com` (S3 or Route 53)
-
----
-
-### 4. **Security**
-
-- [x] RDS in AWS (not local), backups on
-- [ ] RDS security group: not public, only accessible by App Runner/ECS
-- [ ] App Runner exposes only HTTP/HTTPS (API)
-- [ ] No secrets in git or code (use env vars or AWS Secrets Manager)
-- [ ] HTTPS/SSL via CloudFront and App Runner
+- [ ] Ensure **only App Runner** (and CI/CD) can access secrets
+- [ ] Remove access from other IAM users
+- [ ] Periodically rotate secrets
 
 ---
 
-### 5. **CI/CD (Optional, but Recommended)**
+### 🛡 3. **Enable HTTPS (via custom domain in App Runner)**
 
-- [ ] GitHub Actions for backend: build Docker, push to ECR, trigger App Runner deploy
-- [ ] GitHub Actions for frontend: build, sync to S3
-
----
-
-## 🏁 **Launch Steps**
-
-1. Finalize RDS security (lock down security group, no public access)
-2. Build Docker image, push to ECR, deploy to App Runner, configure env vars (DB, SECRET_KEY, ALLOWED_HOSTS, etc)
-3. Set up Django static files to use S3 (`collectstatic`)
-4. Build and upload frontend to S3, configure CloudFront for HTTPS
-5. Set up domains and DNS (Route 53)
-6. Test site as a user (frontend → backend → database flow)
-7. Announce your launch!
+- [ ] Hook up `catholicmentalprayer.com` and `meditationwithchrist.com`
+  - [ ] In **App Runner → Custom domain**
+  - [ ] In **Route 53 → Alias to App Runner service**
+- [ ] Add both domains to Django `ALLOWED_HOSTS`
+- [ ] Test with SSL
 
 ---
 
-## 📚 References
+### 📈 4. **Add monitoring/logging**
 
-- [Deploying Django on App Runner](https://aws.amazon.com/blogs/containers/deploy-and-scale-django-applications-on-aws-app-runner/)
-- [Hosting Vite/React on S3 + CloudFront](https://dev.to/aws-builders/deploy-your-react-app-on-aws-s3-cloudfront-30eo)
-- [Django environment variable config](https://django-environ.readthedocs.io/en/latest/)
-- [AWS Secrets Manager pricing](https://aws.amazon.com/secrets-manager/pricing/)
-
----
-
-**Questions? Contact:** [Your Email]
+- [ ] Use **CloudWatch Logs** for:
+  - [ ] App Runner logs (stdout/stderr)
+  - [ ] Django error logging
+- [ ] Enable App Runner auto-scaling
+- [ ] Add alerts for health check failures
 
 ---
 
-## **Quick-Action: Your Next Step**
->
-> **Backend:** Build Docker image → Push to ECR → Deploy to App Runner (connect to RDS, set env vars)
-> **Frontend:** Build → Upload to S3 → Configure CloudFront  
-> **DNS:** Update Route 53
-> **Security:** Lock down RDS
+### 🛠 5. **Consider Infrastructure as Code (IaC) IMPORTANT**
+
+- [ ] Plan migration to **CloudFormation** and/or **Terraform**
+  - [ ] Terraform/CloudFormation modules for: RDS, ECR, App Runner, S3, IAM, Secrets, Route53, EventBridge, Lambda/ECS, everything!
+  - [ ] Reproducible staging/prod environments
+
+---
+
+### 🔄 6. **Database Security**
+
+- [ ] Restrict RDS to App Runner + admin IP(s)
+- [ ] Remove public access to RDS
+- [ ] Ensure SSL is enforced on all DB connections
+
+---
+
+### 🗂 7. **CI/CD and Automated Deployments**
+
+- [ ] Add **GitHub Actions** (or AWS CodePipeline) for:
+  - [ ] Docker image build/push to ECR
+  - [ ] Trigger App Runner deploy on merge to main
+  - [ ] Sync metadata/** to S3 on merge (see pipeline below)
+  - [ ] Environment variable/secrets sync (but never push secrets to GitHub!)
+
+---
+
+### 📝 8. **import_arc & Data Import Commands**
+
+#### Desired End-State Workflow:
+
+##### Dev changes arc YAML in repo (/metadata/**).
+
+##### PR → code review → merge to main.
+
+##### GitHub Actions:
+
+- Build and push backend image to ECR  
+- Upload updated YAML to S3 (`metadata/**`)
+
+##### EventBridge rule watches S3 ObjectCreated in metadata/ and triggers a one-off import job
+
+```bash
+python manage.py import_arc --arc-id <id-or-all> --skip-unchanged
+```
+
+The job:
+
+- Reads checksum JSON from S3
+- Imports only changed days/arcs to RDS
+- Writes updated checksum JSON back to S3
+- Updates first line of each changed YAML with Last imported into DB: <ts> (writes to S3)
+  
+##### Everything is hands-off; no manual RDS/S3 sync needed.
+
+---
+
+### 🏷 9. **Checklist: ALLOWED_HOSTS / CORS / CSRF**
+
+- [x] Dev: Only localhost/127.0.0.1/etc
+- [x] Prod: All your domains, App Runner hostname, and no wildcards
+- [ ] No * in production!
+- [ ] Document and restrict to known hosts
+
+---
+
+## 🔗 **Notes & Further Enhancements**
+
+- **App Runner**: Health checks should be pointed to `/admin/login/` or `/api/health/` (create if not present)
+
+- **Checksum File**:
+  - Prod: Single source of truth is S3 (checksum/.mental_prayer_checksums.json).
+  - Dev: Local file is fine; production jobs never rely on it.
+- **Import job IAM role needs**:
+  - s3:GetObject, s3:PutObject, s3:ListBucket on spiritual-formation-prod/metadata/** and checksum/.mental_prayer_checksums.json
+  - secretsmanager:GetSecretValue for DB/SECRET_KEY
+  - (If ECS) VPC access to RDS (subnets + SG)
+- **Secret rotation**: Regularly rotate DB and Django keys in Secrets Manager
+- **Monitoring**: Add error alerting via CloudWatch or a third-party system
+- **Documentation**: Keep this checklist up to date with progress
+- Avoid writing persistent data to container filesystems.
+- Optionally add pre-signed URLs if manual S3 inspection is needed.
+- Future: split import_arc into subcommands for more granular reprocessing.
+
+---
+
+## ✅ **Recently Completed**
+
+- [x] Reverted S3/local hybrid changes that broke imports
+- [x] Restored working local + RDS imports
+- [x] Finalized S3‑only checksum design for prod
+- [x] Patched ALLOWED_HOSTS for App Runner IP health checks
+- [x] Agreed on one‑off job pattern (Lambda/ECS) instead of trying to “exec into” App Runner
+
+---
+
+# 🚀 **Next Steps**
+
+1. IaC plan - All infra/everything on AWS comes from Terraform/cdk/CloudFormation (whichever we chose).
+2. Harden RDS and Secrets Manager
+3. Add GitHub Actions job to sync metadata/** to S3 on merge.
+4. Create S3 → EventBridge/GH Action → (Lambda container or ECS task) trigger to run import_arc.
+5. Add custom domains with HTTPS via App Runner + Route 53
+6. Enable HTTPS on custom domains.
+7. Add health check endpoint for App Runner
 
 ---

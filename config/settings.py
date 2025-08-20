@@ -1,43 +1,53 @@
 from pathlib import Path
 import environ
 import os
+from socket import gethostname, gethostbyname_ex
+from corsheaders.defaults import default_headers
+from .hostpatch import _patched_get_host  # noqa
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Initialize environment variables
 env = environ.Env()
-environ.Env.read_env(os.path.join(BASE_DIR, "website/.env"))
+env_file = os.path.join(BASE_DIR, ".env")
+if os.path.exists(env_file):
+    environ.Env.read_env(env_file)
 
-
+ENV = env('ENV', default='local').lower()
 SECRET_KEY = env('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+STATIC_CDN_DOMAIN = env("STATIC_CDN_DOMAIN", default=None)
+MEDIA_CDN_DOMAIN = env("MEDIA_CDN_DOMAIN",  default=None)
+
+DEBUG = env.bool('DEBUG', default=False)
+
+# Django is behind App Runner/Envoy. Tell Django when the original request was HTTPS.
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+USE_X_FORWARDED_HOST = True
+SECURE_SSL_REDIRECT = env.bool("SECURE_SSL_REDIRECT", default=False)
+SECURE_REDIRECT_EXEMPT = [r"^/health/?$"]
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', '192.168.1.209'])
+ALLOWED_HOSTS += [gethostname(),] + list(set(gethostbyname_ex(gethostname())[2]))
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-if env('DJANGO_DB', default='sqlite') == 'postgres':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': env('DB_NAME'),
-            'USER': env('DB_USER'),
-            'PASSWORD': env('DB_PASSWORD'),
-            'HOST': env('DB_HOST'),
-            'PORT': env('DB_PORT'),
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
+        "PORT": env("DB_PORT", default="5432"),
+        'OPTIONS': {
+            'sslmode': 'require' if env.bool('DB_SSL', default=True) else 'disable',
+        },
     }
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
-    }
-print("DATABASE FILE:", DATABASES['default']['NAME'])
+}
+
 
 # Application definition
 
@@ -57,6 +67,19 @@ CORS_ALLOW_ALL_ORIGINS = env.bool('CORS_ALLOW_ALL_ORIGINS', default=False)
 CORS_ALLOW_CREDENTIALS = env.bool('CORS_ALLOW_CREDENTIALS', default=True)
 CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS', default=['http://localhost:5173'])
 CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS', default=['http://localhost:5173'])
+
+if ENV in ('prod', 'staging'):
+    # If you use Django session auth (cookies) from a different subdomain:
+    SESSION_COOKIE_DOMAIN = ".catholicmentalprayer.com"
+    CSRF_COOKIE_DOMAIN = ".catholicmentalprayer.com"
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SAMESITE = "None"
+    CSRF_COOKIE_SAMESITE = "None"
+    CORS_ALLOW_HEADERS = list(default_headers) + [
+        "authorization",
+        "x-csrftoken",
+    ]
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",  # CORS middleware must come first
@@ -123,11 +146,30 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
+# === S3 STATIC & MEDIA STORAGE ===
+if ENV in ("prod", "staging"):
+    INSTALLED_APPS += ["storages"]
+    AWS_STORAGE_BUCKET_NAME = env("S3_BUCKET_NAME")
+    AWS_S3_REGION_NAME = env("AWS_REGION", default="us-east-1")
+    AWS_DEFAULT_ACL = None
+    AWS_QUERYSTRING_AUTH = True
+    AWS_S3_SIGNATURE_VERSION = "s3v4"
+    AWS_S3_OBJECT_PARAMETERS = {"CacheControl": "max-age=86400"}
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
-STATIC_URL = "static/"
+    STATICFILES_STORAGE = "website.storage_backends.StaticRootS3Boto3Storage"
+    DEFAULT_FILE_STORAGE = "website.storage_backends.MediaRootS3Boto3Storage"
+
+    STATIC_URL = f"https://{STATIC_CDN_DOMAIN}/django/static/" if STATIC_CDN_DOMAIN \
+        else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/static/"
+    MEDIA_URL = f"https://{MEDIA_CDN_DOMAIN}/django/media/" if MEDIA_CDN_DOMAIN \
+        else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/media/"
+
+else:
+    # Local dev: keep using filesystem
+    STATIC_URL = "static/"
+    MEDIA_URL = "/media/"
+    STATIC_ROOT = BASE_DIR / "staticfiles"
+    MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

@@ -1,4 +1,4 @@
-import yaml
+from scripts.utils.io import load_yaml
 from scripts.utils.paths import ARC_METADATA_FILE
 
 
@@ -9,8 +9,7 @@ def load_arc_from_metadata(arc_id: str, arc_model) -> object:
     if not ARC_METADATA_FILE.exists():
         raise FileNotFoundError(f"arc_metadata.yaml not found at: {ARC_METADATA_FILE}")
 
-    with open(ARC_METADATA_FILE, "r", encoding="utf-8") as f:
-        metadata = yaml.safe_load(f)
+    metadata = load_yaml(ARC_METADATA_FILE)
 
     arc_data = next((arc for arc in metadata if arc["arc_id"] == arc_id), None)
     if not arc_data:

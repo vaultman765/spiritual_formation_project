@@ -34,7 +34,10 @@ export const saveNote = async (note: NoteInput): Promise<MeditationNote> => {
   const res = await axios({
     method,
     url,
-    headers,
+    headers: {
+      'X-CSRFToken': csrfToken || '',
+      'Content-Type': 'application/json',
+    },
     data: {
       meditation_day: note.meditation_day,
       content: note.content,

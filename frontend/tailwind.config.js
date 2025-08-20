@@ -14,8 +14,8 @@ export default {
         body: ['Inter', 'sans-serif'],
       },
       colors: {
-        'brand-primary': '#f5d7a4',        // soft gold
-        'hover-gold': '#f0c676',         // hover gold
+        'brand-primary': '#f5d7a4',
+        'hover-gold': '#f0c676',
         'text-main': '#fff7e6',
         'text-subtle-heading': '#9ca3af',
         'text-muted': '#e0ccae',

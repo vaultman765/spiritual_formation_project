@@ -30,19 +30,18 @@ jobs:
       ECR_REPO:   ${{ vars.ECR_REPO }}
       APPRUNNER_SERVICE_NAME: ${{ vars.APPRUNNER_SERVICE_NAME_STAGING }}
       IMAGE_TAG:  sha-${{ github.sha }}
-      LATEST_TAG: staging-latest
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Configure AWS (OIDC)
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@7474bc4690e29a8392af63c5b98e7449536d5c3a
         with:
           role-to-assume: ${{ env.ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Login to ECR
-        uses: aws-actions/amazon-ecr-login@v2
+        uses: aws-actions/amazon-ecr-login@062b18b96a7aff071d4dc91bc00c4c1a7945b076
 
       - name: Resolve ECR repo URI
         id: repo
@@ -55,12 +54,12 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}" -t "${{ steps.repo.outputs.uri }}:${LATEST_TAG}" .
+          docker build -t "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}" -t "${{ steps.repo.outputs.uri }}:staging-latest" .
 
       - name: Push image
         run: |
           docker push "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}"
-          docker push "${{ steps.repo.outputs.uri }}:${LATEST_TAG}"
+          docker push "${{ steps.repo.outputs.uri }}:staging-latest"
 
       - name: Lookup App Runner service ARN by name
         id: svc
@@ -77,11 +76,12 @@ jobs:
         if: steps.svc.outputs.status == 'PAUSED'
         run: aws apprunner resume-service --service-arn "${{ steps.svc.outputs.arn }}"
 
-      - name: Update service to new image
-        run: |
-          aws apprunner update-service \
-            --service-arn "${{ steps.svc.outputs.arn }}" \
-            --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:${LATEST_TAG},ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
+      # Have auto-deploy on
+      # - name: Update service to new image
+      #   run: |
+      #     aws apprunner update-service \
+      #       --service-arn "${{ steps.svc.outputs.arn }}" \
+      #       --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:staging-latest,ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
 
 
   prod:
@@ -95,19 +95,18 @@ jobs:
       ECR_REPO:   ${{ vars.ECR_REPO }}
       APPRUNNER_SERVICE_NAME: ${{ vars.APPRUNNER_SERVICE_NAME_PROD }}
       IMAGE_TAG:  sha-${{ github.sha }}
-      LATEST_TAG: prod-latest
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Configure AWS (OIDC)
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@7474bc4690e29a8392af63c5b98e7449536d5c3a
         with:
           role-to-assume: ${{ env.ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Login to ECR
-        uses: aws-actions/amazon-ecr-login@v2
+        uses: aws-actions/amazon-ecr-login@062b18b96a7aff071d4dc91bc00c4c1a7945b076
 
       - name: Resolve ECR repo URI
         id: repo
@@ -120,12 +119,12 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}" -t "${{ steps.repo.outputs.uri }}:${LATEST_TAG}" .
+          docker build -t "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}" -t "${{ steps.repo.outputs.uri }}:prod-latest" .
 
       - name: Push image
         run: |
           docker push "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}"
-          docker push "${{ steps.repo.outputs.uri }}:${LATEST_TAG}"
+          docker push "${{ steps.repo.outputs.uri }}:prod-latest"
 
       - name: Lookup App Runner service ARN by name
         id: svc
@@ -142,8 +141,9 @@ jobs:
         if: steps.svc.outputs.status == 'PAUSED'
         run: aws apprunner resume-service --service-arn "${{ steps.svc.outputs.arn }}"
 
-      - name: Update service to new image
-        run: |
-          aws apprunner update-service \
-            --service-arn "${{ steps.svc.outputs.arn }}" \
-            --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:${LATEST_TAG},ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
+      # Have auto-deploy on
+      # - name: Update service to new image
+      #   run: |
+      #     aws apprunner update-service \
+      #       --service-arn "${{ steps.svc.outputs.arn }}" \
+      #       --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:prod-latest,ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"

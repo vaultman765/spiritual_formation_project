@@ -1,17 +1,16 @@
-# Last imported into DB: 2025-07-10 15:05:16
+# Last imported into DB: 2025-08-18 08:56:41
 master_day_number: 55
 arc_day_number: 1
 arc_id: arc_christ_our_high_priest
 arc_title: Christ Our High Priest
 arc_number: 7
 day_title: Behold the High Priest
-anchor_image:
-  Christ ascending into the heavenly sanctuary, holding the chalice of
+anchor_image: Christ ascending into the heavenly sanctuary, holding the chalice of
   His own Blood, entering before the Father as Eternal High Priest.
 primary_reading:
   title: Hebrews 4:14-16
-  reference: null
-  url: null
+  reference:
+  url:
 secondary_reading:
   - title: St. John Chrysostom, Homilies VII on Hebrews 4:14
     reference:
@@ -20,13 +19,11 @@ meditative_points:
   - Jesus presents His Blood to the Father
   - He invites me to draw near with confidence and trust
 ejaculatory_prayer: Jesus, Eternal Priest, receive me before the throne of grace.
-colloquy:
-  "O Jesus, Eternal High Priest, You ascended bearing the wounds of my redemption.
+colloquy: "O Jesus, Eternal High Priest, You ascended bearing the wounds of my redemption.
   Before the throne of the Father, You offer not another's sacrifice but Your
   own Blood — for me. Let me never again be afraid to draw near to You. Fill
   me with awe, gratitude, and a longing to approach You with trust."
-resolution:
-  I will spend time today in prayer envisioning Christ before the Father,
+resolution: I will spend time today in prayer envisioning Christ before the Father,
   and I will speak to Him as one who intercedes for me even now.
 tags:
   thematic:

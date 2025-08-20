@@ -1,32 +1,29 @@
-# Last imported into DB: 2025-07-10 15:05:07
+# Last imported into DB: 2025-08-11 19:47:11
 master_day_number: 29
 arc_day_number: 1
 arc_id: arc_passion_of_christ
 arc_title: The Passion of Christ
 arc_number: 5
 day_title: Christ in Gethsemane – Agony of Surrender
-anchor_image:
-  '**Christ in Gethsemane** Christ kneels beneath twisted olive trees.
+anchor_image: '**Christ in Gethsemane** Christ kneels beneath twisted olive trees.
   His face is pressed to the earth, streaked with sweat and blood. The chalice of suffering looms before Him.
   The disciples sleep nearby. The moonlight casts long shadows as He whispers, "Not My will, but Yours be done."'
 primary_reading:
   title: Luke 22:39–46
-  reference: ''
-  url: ''
+  reference: ""
+  url: ""
 secondary_reading:
   - title: Catechism of the Catholic Church
-    reference: 612–613
+    reference: §§612–613
     url: https://www.vatican.va/archive/ENG0015/__P1O.HTM
 meditative_points:
   - He sees every sin — and chooses to drink the cup anyway.
   - He asks the Father if it may pass — but surrenders.
   - He finds His disciples asleep — and prays alone.
 ejaculatory_prayer: Jesus in Gethsemane, strengthen my weak will with Your agony.
-colloquy:
-  Jesus, I have fled from hard things too quickly. But You did not flee the Garden...
+colloquy: Jesus, I have fled from hard things too quickly. But You did not flee the Garden...
   Make my fear a prayer — and my surrender a love song.
-resolution:
-  'Today I will offer one hidden act of surrender — unspoken, quiet, and done for love — saying interiorly:
+resolution: 'Today I will offer one hidden act of surrender — unspoken, quiet, and done for love — saying interiorly:
   "Not my will, but Yours be done."'
 tags:
   thematic:

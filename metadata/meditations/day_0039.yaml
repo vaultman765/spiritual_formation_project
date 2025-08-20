@@ -1,12 +1,11 @@
-# Last imported into DB: 2025-07-30 22:10:57
+# Last imported into DB: 2025-08-12 08:37:55
 master_day_number: 39
 arc_day_number: 1
 arc_id: arc_litany_sacred_heart
 arc_title: Litany of the Sacred Heart
 arc_number: 6
 day_title: Son of the Eternal Father
-anchor_image:
-  "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
+anchor_image: "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
   His hands are extended in blessing, and His robe gleams like light.
   But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love.
   It is not a wound of shame, but a throne of glory. He says nothing.
@@ -21,7 +20,7 @@ secondary_reading:
     reference:
     url:
   - title: Catechism of the Catholic Church
-    reference: 422–429
+    reference: §§422–429
     url: https://www.vatican.va/archive/ENG0015/__P1D.HTM
   - title: Pope Benedict XVI, *Deus Caritas Est*
     reference: Part I, §§1–6
@@ -31,11 +30,9 @@ meditative_points:
   - The Heart of Jesus is the Heart of God
   - The Love of the Father revealed
 ejaculatory_prayer: Heart of Jesus, radiance of the Eternal Father, draw me into the love You have known forever.
-colloquy:
-  Lord Jesus, Eternal Word of the Father, You are not an idea. You are the Son, and You have a Heart.
+colloquy: Lord Jesus, Eternal Word of the Father, You are not an idea. You are the Son, and You have a Heart.
   Let me enter into the silence of Your divine origin. Let me adore not only what You have done — but who You are.
-resolution:
-  Today, I will take one quiet moment to adore Jesus silently — not asking, not thanking, just gazing — and remember that
+resolution: Today, I will take one quiet moment to adore Jesus silently — not asking, not thanking, just gazing — and remember that
   He is the Eternal Son.
 tags:
   thematic:

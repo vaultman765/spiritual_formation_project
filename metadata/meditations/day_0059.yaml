@@ -1,17 +1,16 @@
-# Last imported into DB: 2025-07-10 15:05:18
+# Last imported into DB: 2025-08-18 09:14:46
 master_day_number: 59
 arc_day_number: 5
 arc_id: arc_christ_our_high_priest
 arc_title: Christ Our High Priest
 arc_number: 7
 day_title: Interceding for Us
-anchor_image:
-  Christ at the right hand of the Father, hands raised in intercession,
+anchor_image: Christ at the right hand of the Father, hands raised in intercession,
   gazing with love upon the world.
 primary_reading:
   title: Romans 8:33–34
-  reference: null
-  url: null
+  reference:
+  url:
 secondary_reading:
   - title: Catechism of the Catholic Church
     reference: §§2634–2636
@@ -21,12 +20,10 @@ meditative_points:
   - He intercedes for us
   - No charge can stand against the one Christ defends
 ejaculatory_prayer: Jesus, pray for me even now, as You stand before the Father.
-colloquy:
-  Lord, You are my defender. You do not accuse me — You intercede. You speak
+colloquy: Lord, You are my defender. You do not accuse me — You intercede. You speak
   on my behalf. Let me never forget that Your Blood pleads for me. In my weakness
   and sin, give me the humility to entrust myself to You completely.
-resolution:
-  I will pray today in confidence, trusting that Christ intercedes for me
+resolution: I will pray today in confidence, trusting that Christ intercedes for me
   even in my failures.
 tags:
   thematic:

@@ -1,21 +1,20 @@
-# Last imported into DB: 2025-07-10 15:05:05
+# Last imported into DB: 2025-08-11 07:00:23
 master_day_number: 23
 arc_day_number: 2
 arc_id: arc_sin_mercy_conversion
 arc_title: Sin, Mercy, and Conversion
 arc_number: 4
 day_title: Conviction of Sin
-anchor_image:
-  '**The Light That Reveals** — You are in a room lit only by candlelight. Christ opens the door, and radiant light floods in.
+anchor_image: "**The Light That Reveals** — You are in a room lit only by candlelight. Christ opens the door, and radiant light floods in.
   You see the dust, the stains, the wounds — things hidden in the half-light are now exposed. But He does not turn away.
-  He looks with truth and love, not accusation.'
+  He looks with truth and love, not accusation."
 primary_reading:
   title: John 3:16–21
-  reference: ''
-  url: ''
+  reference: ""
+  url: ""
 secondary_reading:
   - title: Catechism of the Catholic Church
-    reference: 1848–1850
+    reference: §§1848–1850
     url: https://www.vatican.va/archive/ENG0015/__P69.HTM
   - title: St. Augustine, Tractates on the Gospel of John - Tractate 12
     reference: §13
@@ -23,15 +22,13 @@ secondary_reading:
 meditative_points:
   - "'But whoever does what is true comes to the light…' (v. 21) — The closer we draw to Christ, the more clearly we see our sin.
     The light is not to condemn, but to heal."
-  - 'St. Augustine says the sinner flees the light because he fears being exposed. But you must not run. The exposure is part of the cure.'
-  - 'The Lord reveals your darkness only so He may shine into it.
-    He uncovers what you hide — not to shame you, but to cleanse you and make you whole.'
+  - "St. Augustine says the sinner flees the light because he fears being exposed. But you must not run. The exposure is part of the cure."
+  - "The Lord reveals your darkness only so He may shine into it.
+    He uncovers what you hide — not to shame you, but to cleanse you and make you whole."
 ejaculatory_prayer: Lord Jesus, shine Your light into my heart and do not let me flee from You.
-colloquy:
-  Speak to the Lord as one who is afraid to be known. Tell Him the truths you would rather keep in shadow.
+colloquy: Speak to the Lord as one who is afraid to be known. Tell Him the truths you would rather keep in shadow.
   Ask for courage to come to the light, and for the grace not to turn away when conviction burns.
-resolution:
-  Tonight, examine your conscience in the light of Christ’s gaze. Let Him show you what you fear to face — and do not argue.
+resolution: Tonight, examine your conscience in the light of Christ’s gaze. Let Him show you what you fear to face — and do not argue.
   Just remain with Him.
 tags:
   thematic:

@@ -23,8 +23,11 @@ from scripts.utils.paths import (
 from scripts.utils.constants import TAG_CATEGORIES
 from scripts.utils.io import load_yaml, write_yaml
 from typing import Any, Dict, List, Optional
+from scripts.utils.log import configure_logging, get_logger
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
+configure_logging()
+logger = get_logger(__name__)
 # === Shared Data Loader ===
 
 
@@ -123,7 +126,7 @@ class ArcMetadataGenerator:
             arc_metadata.append(metadata_entry)
 
         # Write the updated metadata to file
-        write_yaml(ARC_METADATA_FILE, arc_metadata, mode="w")
+        write_yaml(ARC_METADATA_FILE, arc_metadata)
 
 
 class ArcTagGenerator:
@@ -136,8 +139,6 @@ class ArcTagGenerator:
     def generate(self, arc_ids: Optional[List[str]] = None) -> None:
         loader = ArcDataLoader(self.index_data)
         arc_data = loader.load_arc_day_data(arc_ids=arc_ids)
-
-        ARC_TAGS_DIR.mkdir(parents=True, exist_ok=True)
 
         for arc_id, arc_days in arc_data.items():
             if not arc_days:
@@ -179,10 +180,6 @@ class ArcMetadataCLI:
         self.index_data = load_yaml(INDEX_FILE) or {}
         self.tag_bank = load_yaml(TAG_BANK_FILE) or {}
 
-        # Ensure directories exist
-        ARC_TAGS_DIR.mkdir(parents=True, exist_ok=True)
-        DAY_FILES_DIR.mkdir(parents=True, exist_ok=True)
-
     def run(self) -> None:
         parser = argparse.ArgumentParser(
             description="Generate arc_metadata and arc_tags from day files."
@@ -198,16 +195,16 @@ class ArcMetadataCLI:
         if args.arc_id:
             invalid = [arc for arc in args.arc_id if arc not in self.index_data]
             if invalid:
-                print(f"Invalid arc_ids: {invalid}")
+                logger.error(f"Invalid arc_ids: {invalid}")
                 return
             arc_ids = args.arc_id
 
         if args.mode in ["metadata", "both"]:
-            print("Generating arc_metadata.yaml...")
+            logger.info("Generating arc_metadata.yaml...")
             ArcMetadataGenerator(self.index_data).generate(arc_ids=arc_ids)
 
         if args.mode in ["tags", "both"]:
-            print("Generating arc_tags/*.yaml...")
+            logger.info("Generating arc_tags/*.yaml...")
             ArcTagGenerator(self.index_data, self.tag_bank).generate(arc_ids=arc_ids)
 
 
