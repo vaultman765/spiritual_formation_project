@@ -3,7 +3,6 @@ python_version = "3.12"
 
 [packages]
 pyyaml = "*"
-django = "*"
 djangorestframework = "*"
 jsonschema = "*"
 django-cors-headers = "*"
@@ -12,6 +11,7 @@ gunicorn = "*"
 psycopg2-binary = "*"
 django-storages = "*"
 boto3 = "*"
+django = "5.1.*"
 
 [dev-packages]
 pytest = "*"
