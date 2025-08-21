@@ -18,8 +18,6 @@ permissions:
 jobs:
   staging:
 
-
-
     name: Build & Deploy Staging
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release')) && vars.STAGING_ENABLED == 'true'
@@ -29,7 +27,7 @@ jobs:
       ROLE_ARN:   ${{ vars.ROLE_ARN_BACKEND_STAGING }}
       ECR_REPO:   ${{ vars.ECR_REPO }}
       APPRUNNER_SERVICE_NAME: ${{ vars.APPRUNNER_SERVICE_NAME_STAGING }}
-      IMAGE_TAG:  sha-${{ github.sha }}
+      IMAGE_TAG:  sha-${{ github.sha }} 
 
     steps:
       - uses: actions/checkout@v4
