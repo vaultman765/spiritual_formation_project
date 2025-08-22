@@ -162,7 +162,7 @@ if ENV in ("prod", "staging"):
     # NEW in Django 5 – use STORAGES
     STORAGES = {
         "default": {
-            "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+            "BACKEND": "website.storage_backends.MediaRootS3Boto3Storage",
             "OPTIONS": {
                 "bucket_name": AWS_STORAGE_BUCKET_NAME,
                 "region_name": AWS_S3_REGION_NAME,
@@ -171,7 +171,7 @@ if ENV in ("prod", "staging"):
             },
         },
         "staticfiles": {
-            "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+            "BACKEND": "website.storage_backends.StaticRootS3Boto3Storage",
             "OPTIONS": {
                 "bucket_name": AWS_STORAGE_BUCKET_NAME,
                 "region_name": AWS_S3_REGION_NAME,
