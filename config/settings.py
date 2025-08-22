@@ -163,10 +163,6 @@ if ENV in ("prod", "staging"):
         else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/static/"
     MEDIA_URL = f"https://{MEDIA_CDN_DOMAIN}/django/media/" if MEDIA_CDN_DOMAIN \
         else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/media/"
-    
-    # TODO remove later after prod all setup
-    STATIC_ROOT = BASE_DIR / "staticfiles"
-    MEDIA_ROOT  = BASE_DIR / "media"
 
 else:
     # Local dev: keep using filesystem
