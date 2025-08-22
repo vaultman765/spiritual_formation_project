@@ -4,7 +4,6 @@ python_version = "3.12"
 [packages]
 pyyaml = "*"
 djangorestframework = "*"
-jsonschema = "*"
 django-cors-headers = "*"
 django-environ = "*"
 gunicorn = "*"
@@ -12,6 +11,8 @@ psycopg2-binary = "*"
 django-storages = "*"
 boto3 = "*"
 django = "5.1.*"
+jsonschema = "*"
+referencing = "*"
 
 [dev-packages]
 pytest = "*"
@@ -21,6 +22,8 @@ black = "*"
 flake8 = "*"
 yamllint = "*"
 yamlfix = "*"
+jsonschema = "*"
+referencing = "*"
 
 [scripts]
 lint = "flake8 ."
