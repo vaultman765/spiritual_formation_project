@@ -6,7 +6,7 @@ set -euo pipefail
 . /app/.venv/bin/activate
 if [[ "${APP_ROLE:-}" = "web" || "${COLLECT_STATIC:-}" = "1" ]]; then
   echo "[entrypoint] Running Django collectstatic and migrate..."
-  python manage.py collectstatic --noinput
+  ENV=env('ENV', default='prod') S3_BUCKET_NAME=env('S3_BUCKET_NAME', default='sprititual-formation-prod') AWS_REGION=us-east-1 python manage.py collectstatic --noinput
   python manage.py migrate --noinput
   echo "[entrypoint] collectstatic and migrate completed."
 fi
