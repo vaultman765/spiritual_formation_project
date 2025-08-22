@@ -1,12 +1,11 @@
-# Last imported into DB: 2025-08-09 11:38:59
+# Last imported into DB: 2025-08-22 15:31:28
 master_day_number: 91
 arc_day_number: 7
 arc_id: arc_rosary_sorrowful_mysteries
 arc_number: 11
 arc_title: The Rosary - Sorrowful Mysteries
 day_title: The Burial of Christ
-anchor_image:
-  The lifeless body of Christ is wrapped in linen and laid in the tomb,
+anchor_image: The lifeless body of Christ is wrapped in linen and laid in the tomb,
   Mary and disciples nearby in mourning
 primary_reading:
   title: Luke 23:50–56
@@ -14,7 +13,7 @@ primary_reading:
   url:
 secondary_reading:
   - title: Catechism of the Catholic Church
-    reference: §624–625
+    reference: §§624–625
     url: https://www.vatican.va/archive/ENG0015/__P1P.HTM
   - title: St. Alphonsus Liguori, Considerations on the Passion of Jesus Christ
     reference: Chapter VII, Section VI (pdf pages 319-321)
@@ -24,8 +23,7 @@ meditative_points:
   - Mary remained in sorrow, keeping vigil in silence.
   - Hope is hidden — love continues to trust in the dark.
 ejaculatory_prayer: Jesus, buried in the tomb, bury my pride with You.
-colloquy:
-  Sit with Mary at the tomb. Speak not much, but wait with her in sorrow and
+colloquy: Sit with Mary at the tomb. Speak not much, but wait with her in sorrow and
   hope.
 resolution: Today, I will make an act of trust in God’s work even when I see no fruit.
 tags:
