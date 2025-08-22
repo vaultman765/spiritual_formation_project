@@ -163,6 +163,9 @@ if ENV in ("prod", "staging"):
         else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/static/"
     MEDIA_URL = f"https://{MEDIA_CDN_DOMAIN}/django/media/" if MEDIA_CDN_DOMAIN \
         else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/media/"
+    
+    STATIC_ROOT = "/app/staticfiles"
+    MEDIA_ROOT = "/app/mediafiles"
 
 else:
     # Local dev: keep using filesystem
