@@ -2,7 +2,6 @@ import json
 import sys
 import yaml
 from pathlib import Path
-from jsonschema import validate, ValidationError
 from typing import Any, Union
 from scripts.utils.log import configure_logging, get_logger
 
@@ -15,18 +14,6 @@ logger = get_logger(__name__)
 class IndentDumper(yaml.SafeDumper):
     def increase_indent(self, flow=False, indentless=False):
         return super().increase_indent(flow, False)
-
-
-class DayYamlValidator:
-    def __init__(self, schema_path):
-        self.schema = load_yaml(schema_path)
-
-    def validate(self, data):
-        try:
-            validate(instance=data, schema=self.schema)
-            return True, None
-        except ValidationError as ve:
-            return False, ve.message
 
 
 def load_yaml(path: Union[str, Path], encoding="utf-8-sig") -> Any:
