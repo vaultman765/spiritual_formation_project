@@ -120,3 +120,24 @@ jobs:
 
       - name: Invalidate CloudFront
         run: aws cloudfront create-invalidation --distribution-id "${{ env.CF_DIST_ID }}" --paths "/*"
+
+      - name: Re-upload sitemap.xml with short cache
+        if: ${{ success() }}
+        run: |
+          aws s3 cp ./dist/sitemap.xml "s3://${{ env.BUCKET }}/sitemap.xml" \
+            --cache-control "max-age=600, public" \
+            --content-type "application/xml"
+
+      - name: Re-upload robots.txt with short cache
+        if: ${{ success() }}
+        run: |
+          aws s3 cp ./dist/robots.txt "s3://${{ env.BUCKET }}/robots.txt" \
+            --cache-control "max-age=600, public" \
+            --content-type "text/plain"
+
+      - name: Invalidate CF for sitemap/robots
+        if: ${{ success() }}
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ env.CF_DIST_ID }}" \
+            --paths "/sitemap.xml" "/robots.txt"
