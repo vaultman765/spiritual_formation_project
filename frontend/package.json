@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "test": "jest --coverage",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "postbuild": "node scripts/generate-sitemap.mjs"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
@@ -49,6 +50,7 @@
     "postcss": "^8.5.6",
     "react-router-dom": "^7.7.0",
     "rollup": "^4.24.0",
+    "sitemap": "^8.0.0",
     "ts-jest": "^29.4.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.34.1",

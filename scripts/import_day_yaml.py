@@ -8,7 +8,7 @@ from datetime import datetime
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 from scripts.utils.io import load_yaml  # noqa: E402
-from scripts.utils.paths import DAY_SCHEMA, DJANGO_SETTINGS_MODULE, INDEX_FILE, DAY_FILES_DIR  # noqa: E402
+from scripts.utils.paths import DJANGO_SETTINGS_MODULE, INDEX_FILE, DAY_FILES_DIR  # noqa: E402
 from scripts.utils.log import configure_logging, get_logger  # noqa: E402
 from scripts.utils.arc_loader import load_arc_from_metadata  # noqa: E402
 
