@@ -30,6 +30,26 @@ export default function ExplorePage() {
     return matchesSearch && matchesTag;
   });
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Explore Arcs",
+    description: "Browse meditation arcs for Ignatian Mental Prayer.",
+    itemListElement: filteredArcs.map((arc, index) => ({
+      "@type": "Book",
+      position: index + 1,
+      name: arc.arc_title,
+      description: arc.arc_summary || "Meditation arc focused on spiritual growth.",
+      image: `https://www.catholicmentalprayer.com/images/arc_whole/${arc.arc_id}.jpg`,
+      author: {
+        "@type": "Organization",
+        name: "Spiritual Formation Project",
+      },
+      numberOfPages: arc.day_count,
+      keywords: arc.card_tags.join(", "),
+    })),
+  };
+
   useEffect(() => {
     fetchAllArcs().then(setArcs).catch(console.error);
   }, []);
@@ -55,6 +75,8 @@ export default function ExplorePage() {
         <meta name="twitter:title" content="Explore Meditation Arcs | Spiritual Formation Project" />
         <meta name="twitter:description" content="Choose from prebuilt or custom journeys rooted in Ignatian spirituality." />
         <meta name="twitter:image" content="https://www.catholicmentalprayer.com/images/og-explore.jpg" />
+
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
       <header className="header">
