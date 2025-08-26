@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import { fetchArcById } from "@/api/arcs";
 import { fetchDaysByArcId } from "@/api/days";
 import type { ArcData, DaySummary } from "@/utils/types";
+import { Helmet } from "react-helmet-async";
 
 export default function ArcPage() {
   const { arcId } = useParams<{ arcId: string }>();
   const [arc, setArc] = useState<ArcData | null>(null);
   const [days, setDays] = useState<DaySummary[]>([]);
+  const location = useLocation();
+  const canonicalUrl = `https://www.catholicmentalprayer.com${location.pathname}`;
 
   useEffect(() => {
     if (!arcId) return;
@@ -28,9 +31,7 @@ export default function ArcPage() {
       ? Array.from({ length: arc.day_count }, (_, i) => ({
           day: i + 1,
           day_title: days[i].day_title,
-          reading: isSingleReading
-            ? null
-            : days[i].primary_reading_title ?? null,
+          reading: isSingleReading ? null : days[i].primary_reading_title ?? null,
         }))
       : [];
 
@@ -38,14 +39,43 @@ export default function ArcPage() {
 
   return (
     <main>
+      <Helmet>
+        <title>{arc?.arc_title} | Meditation Arc | Spiritual Formation Project</title>
+        <meta
+          name="description"
+          content={`Explore ${arc?.arc_title} — a ${arc?.day_count}-day meditation arc focusing on ${arc?.primary_reading?.join(", ")}.`}
+        />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content={`${arc?.arc_title} | Spiritual Formation Project`} />
+        <meta property="og:description" content={arc?.arc_summary} />
+        <meta property="og:image" content={`https://www.catholicmentalprayer.com/images/arc_whole/${arc?.arc_id}.jpg`} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${arc?.arc_title} | Spiritual Formation Project`} />
+        <meta name="twitter:description" content={arc?.arc_summary} />
+        <meta name="twitter:image" content={`https://www.catholicmentalprayer.com/images/arc_whole/${arc?.arc_id}.jpg`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Book",
+            name: arc?.arc_title,
+            description: arc?.arc_summary,
+            image: `https://www.catholicmentalprayer.com/images/arc_whole/${arc?.arc_id}.jpg`,
+            author: {
+              "@type": "Organization",
+              name: "Spiritual Formation Project",
+            },
+            numberOfPages: arc?.day_count,
+            keywords: arc?.card_tags?.join(", "),
+          })}
+        </script>
+      </Helmet>
+
       {/* Title */}
       <section className="text-center mb-10">
-        <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-main)]">
-          {arc.arc_title}
-        </h1>
-        <p className="text-sm italic text-[var(--text-muted)] mt-1">
-          {arc.day_count}-day Meditation
-        </p>
+        <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-main)]">{arc.arc_title}</h1>
+        <p className="text-sm italic text-[var(--text-muted)] mt-1">{arc.day_count}-day Meditation</p>
       </section>
 
       {/* Arc Overview Section */}
@@ -60,9 +90,7 @@ export default function ArcPage() {
         {/* Text Block */}
         <div className="flex flex-col text-center lg:text-left max-w-sm gap-12">
           <div>
-            <h2 className="text-sm uppercase tracking-widest text-yellow-300 mb-1">
-              Primary Reading
-            </h2>
+            <h2 className="text-sm uppercase tracking-widest text-yellow-300 mb-1">Primary Reading</h2>
             <p className="text-lg font-semibold text-[var(--text-light)]">
               {isSingleReading ? arc.primary_reading[0] : "Various (see below)"}
             </p>
@@ -72,12 +100,8 @@ export default function ArcPage() {
           <div></div>
 
           <div>
-            <h2 className="text-sm uppercase tracking-widest text-[var(--text-subtle-heading)] mb-1">
-              Arc Summary
-            </h2>
-            <p className="text-sm text-[var(--text-main)] leading-relaxed">
-              {arc.arc_summary}
-            </p>
+            <h2 className="text-sm uppercase tracking-widest text-[var(--text-subtle-heading)] mb-1">Arc Summary</h2>
+            <p className="text-sm text-[var(--text-main)] leading-relaxed">{arc.arc_summary}</p>
           </div>
         </div>
       </section>
@@ -89,20 +113,13 @@ export default function ArcPage() {
         </h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto px-4">
           {dailyCards.map(({ day, day_title, reading }) => (
-            <Link
-              title={day_title}
-              to={`/days/${arcId}/${day}`}
-              key={day}
-              className="!no-underline block"
-            >
+            <Link title={day_title} to={`/days/${arcId}/${day}`} key={day} className="!no-underline block">
               <li
                 className="bg-white/5 px-4 py-3 rounded-md shadow shadow-black/10 hover:bg-white/10 transition
                   flex flex-col justify-evenly items-center
                   hover:scale-105 transform duration-200 ease-in-out"
               >
-                <div className="text-yellow-400 font-bold text-center text-xs mb-1">
-                  Day {day}
-                </div>
+                <div className="text-yellow-400 font-bold text-center text-xs mb-1">Day {day}</div>
                 <div className="font-semibold text-[var(--text-light)] text-center text-sm overflow-hidden text-ellipsis line-clamp-1 leading-tight">
                   {day_title ?? "Untitled"}
                 </div>

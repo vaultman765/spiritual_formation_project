@@ -1,19 +1,16 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "@/context/authContext";
 import { useJourney } from "@/context/journeyContext";
 import { JourneyArcCard } from "@/components/cards/ArcCard";
 import type { Journey } from "@/utils/types";
+import { Helmet } from "react-helmet-async";
 
 export default function JourneyPage() {
   const { user, loading: authLoading } = useAuth();
   const [showRestartConfirm, setShowRestartConfirm] = useState(false);
-  const [recentlyCompletedArc, setRecentlyCompletedArc] = useState<
-    string | null
-  >(null);
-  const [recentlyCompletedJourney, setRecentlyCompletedJourney] = useState<
-    string | null
-  >(null);
+  const [recentlyCompletedArc, setRecentlyCompletedArc] = useState<string | null>(null);
+  const [recentlyCompletedJourney, setRecentlyCompletedJourney] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(0);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [journeyToDelete, setJourneyToDelete] = useState<Journey | null>(null);
@@ -32,16 +29,14 @@ export default function JourneyPage() {
     skipDay,
     deleteJourney,
   } = useJourney();
+  const location = useLocation();
+  const canonicalUrl = `https://www.catholicmentalprayer.com${location.pathname}`;
 
   useEffect(() => {
     if (!activeJourney?.arc_progress) return;
 
-    const sorted = [...activeJourney.arc_progress].sort(
-      (a, b) => a.order - b.order
-    );
-    const inProgressIndex = sorted.findIndex(
-      (arc) => arc.status === "in_progress"
-    );
+    const sorted = [...activeJourney.arc_progress].sort((a, b) => a.order - b.order);
+    const inProgressIndex = sorted.findIndex((arc) => arc.status === "in_progress");
     if (inProgressIndex !== -1) {
       const page = Math.floor(inProgressIndex / arcsPerPage);
       setCurrentPage(page);
@@ -52,9 +47,7 @@ export default function JourneyPage() {
     ?.sort((a, b) => a.order - b.order)
     ?.slice(currentPage * arcsPerPage, (currentPage + 1) * arcsPerPage);
 
-  const totalPages = Math.ceil(
-    (activeJourney?.arc_progress?.length || 0) / arcsPerPage
-  );
+  const totalPages = Math.ceil((activeJourney?.arc_progress?.length || 0) / arcsPerPage);
 
   const handleRestoreJourney = async (journey: Journey) => {
     try {
@@ -145,38 +138,43 @@ export default function JourneyPage() {
     );
   }
 
-  const currentArc = activeJourney?.arc_progress?.find(
-    (a) => a.status === "in_progress"
-  );
+  const currentArc = activeJourney?.arc_progress?.find((a) => a.status === "in_progress");
   const canCompleteJourney = activeJourney?.arc_progress.every(
-    (arc) =>
-      arc.status === "completed" ||
-      arc.status === "skipped" ||
-      (arc.status === "in_progress" && arc.current_day === arc.day_count)
+    (arc) => arc.status === "completed" || arc.status === "skipped" || (arc.status === "in_progress" && arc.current_day === arc.day_count)
   );
 
   return (
     <main>
+      <Helmet>
+        <title>My Journey | Spiritual Formation Project</title>
+        <meta
+          name="description"
+          content="Track your progress on your personal journey of Ignatian mental prayer. View current arcs, complete days, and celebrate milestones."
+        />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="My Journey | Spiritual Formation Project" />
+        <meta
+          property="og:description"
+          content="Continue your journey with daily Ignatian meditation. Track your spiritual growth and prayer habits."
+        />
+        <meta property="og:image" content="https://www.catholicmentalprayer.com/images/og-journey.jpg" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="My Journey | Spiritual Formation Project" />
+        <meta name="twitter:description" content="View your current meditation journey and explore your completed arcs." />
+        <meta name="twitter:image" content="https://www.catholicmentalprayer.com/images/og-journey.jpg" />
+      </Helmet>
+
       <header className="text-center mb-12">
-        <h1 className="text-4xl font-display font-semibold text-white">
-          {activeJourney?.title}
-        </h1>
-        <p className="text-lg text-[var(--text-muted)]">
-          Your Current Mental Prayer Journey
-        </p>
+        <h1 className="text-4xl font-display font-semibold text-white">{activeJourney?.title}</h1>
+        <p className="text-lg text-[var(--text-muted)]">Your Current Mental Prayer Journey</p>
       </header>
 
       {currentArc && (
-        <section
-          className="mb-10 text-center"
-          key={activeJourney?.id || "no-journey"}
-        >
-          <h2 className="text-2xl text-[var(--text-subtle-heading)] font-semibold mb-2">
-            Currently In
-          </h2>
-          <p className="text-xl text-white font-medium">
-            {currentArc.arc_title}
-          </p>
+        <section className="mb-10 text-center" key={activeJourney?.id || "no-journey"}>
+          <h2 className="text-2xl text-[var(--text-subtle-heading)] font-semibold mb-2">Currently In</h2>
+          <p className="text-xl text-white font-medium">{currentArc.arc_title}</p>
           <p className="text-sm text-[var(--text-muted)] mb-4">
             Day {currentArc.current_day} of {currentArc.day_count}
           </p>
@@ -189,26 +187,19 @@ export default function JourneyPage() {
       )}
       {recentlyCompletedJourney ? (
         <div className="bg-blue-700 text-white px-6 py-3 rounded-lg shadow text-center mb-4">
-          🌟 Congratulations! You just completed the journey:{" "}
-          <strong>{recentlyCompletedJourney}</strong>! 🌟
+          🌟 Congratulations! You just completed the journey: <strong>{recentlyCompletedJourney}</strong>! 🌟
         </div>
       ) : recentlyCompletedArc ? (
         <div className="bg-blue-700 text-white px-6 py-3 rounded-lg shadow text-center mb-4">
-          🌟 Congratulations! You just completed the arc:{" "}
-          <strong>{recentlyCompletedArc}</strong>! 🌟
-          <button
-            onClick={() => setRecentlyCompletedArc(null)}
-            className=" top-1 right-2 text-white hover:text-red-300 text-md"
-          >
+          🌟 Congratulations! You just completed the arc: <strong>{recentlyCompletedArc}</strong>! 🌟
+          <button onClick={() => setRecentlyCompletedArc(null)} className=" top-1 right-2 text-white hover:text-red-300 text-md">
             ×
           </button>
         </div>
       ) : null}
       {activeJourney && activeJourney.is_active ? (
         <section>
-          <h2 className="text-xl font-semibold text-[var(--text-subtle-heading)] text-center mb-4">
-            Journey Progress
-          </h2>
+          <h2 className="text-xl font-semibold text-[var(--text-subtle-heading)] text-center mb-4">Journey Progress</h2>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
             {visibleArcs?.map((arc) => (
@@ -223,9 +214,7 @@ export default function JourneyPage() {
                 disabled={currentPage === 0}
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 0))}
                 className={`px-4 py-2 rounded-lg font-medium transition ${
-                  currentPage === 0
-                    ? "bg-white/20 text-white/50 cursor-not-allowed"
-                    : "bg-white text-black hover:bg-yellow-200"
+                  currentPage === 0 ? "bg-white/20 text-white/50 cursor-not-allowed" : "bg-white text-black hover:bg-yellow-200"
                 }`}
               >
                 ← Prev
@@ -235,9 +224,7 @@ export default function JourneyPage() {
               </span>
               <button
                 disabled={currentPage === totalPages - 1}
-                onClick={() =>
-                  setCurrentPage((prev) => Math.min(prev + 1, totalPages - 1))
-                }
+                onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages - 1))}
                 className={`px-4 py-2 rounded-lg font-medium transition ${
                   currentPage === totalPages - 1
                     ? "bg-white/20 text-white/50 cursor-not-allowed"
@@ -297,9 +284,7 @@ export default function JourneyPage() {
                 {showRestartConfirm && (
                   <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                     <div className="bg-gray-900 text-white p-6 rounded-lg border border-white/20 w-[300px] text-center">
-                      <p className="mb-4">
-                        Are you sure you want to restart this journey?
-                      </p>
+                      <p className="mb-4">Are you sure you want to restart this journey?</p>
                       <div className="flex justify-around">
                         <button
                           className="bg-red-600 px-4 py-1 rounded hover:bg-red-500"
@@ -310,10 +295,7 @@ export default function JourneyPage() {
                         >
                           Yes, Restart
                         </button>
-                        <button
-                          className="bg-gray-700 px-4 py-1 rounded hover:bg-gray-600"
-                          onClick={() => setShowRestartConfirm(false)}
-                        >
+                        <button className="bg-gray-700 px-4 py-1 rounded hover:bg-gray-600" onClick={() => setShowRestartConfirm(false)}>
                           Cancel
                         </button>
                       </div>
@@ -354,9 +336,7 @@ export default function JourneyPage() {
         </section>
       ) : (
         <div className="text-center mt-10">
-          <p className="text-lg text-white mb-4">
-            You’ve completed your most recent journey.
-          </p>
+          <p className="text-lg text-white mb-4">You’ve completed your most recent journey.</p>
           <div className="flex justify-center gap-6">
             <button
               onClick={() => navigate("/create-custom-journey")}
@@ -376,26 +356,14 @@ export default function JourneyPage() {
       <section>
         {archivedJourneys?.length > 0 && (
           <div className="mt-10">
-            <h2 className="text-3xl font-display font-semibold mb-4 text-white">
-              Past Journeys
-            </h2>
+            <h2 className="text-3xl font-display font-semibold mb-4 text-white">Past Journeys</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {archivedJourneys.map((journey) => (
-                <div
-                  key={journey.id}
-                  className="p-4 rounded-lg bg-gray-800 shadow-md"
-                >
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    {journey.title}
-                  </h3>
-                  <p className="text-white/70 text-sm mb-2">
-                    {journey.arc_progress.length} arcs
-                  </p>
+                <div key={journey.id} className="p-4 rounded-lg bg-gray-800 shadow-md">
+                  <h3 className="text-xl font-semibold text-white mb-2">{journey.title}</h3>
+                  <p className="text-white/70 text-sm mb-2">{journey.arc_progress.length} arcs</p>
                   {journey.completed_on ? (
-                    <p className="text-green-400 text-sm mb-2">
-                      Completed on{" "}
-                      {new Date(journey.completed_on).toLocaleDateString()}
-                    </p>
+                    <p className="text-green-400 text-sm mb-2">Completed on {new Date(journey.completed_on).toLocaleDateString()}</p>
                   ) : (
                     <p className="text-yellow-400 text-sm mb-2">Incomplete</p>
                   )}
@@ -431,16 +399,10 @@ export default function JourneyPage() {
             <p className="mb-4 font-semibold">Delete this journey?</p>
             <p className="mb-4 text-sm text-white/70">This cannot be undone.</p>
             <div className="flex justify-around">
-              <button
-                className="bg-red-600 px-4 py-1 rounded hover:bg-red-500"
-                onClick={handleDeleteJourney}
-              >
+              <button className="bg-red-600 px-4 py-1 rounded hover:bg-red-500" onClick={handleDeleteJourney}>
                 Yes, Delete
               </button>
-              <button
-                className="bg-gray-700 px-4 py-1 rounded hover:bg-gray-600"
-                onClick={() => setShowDeleteConfirm(false)}
-              >
+              <button className="bg-gray-700 px-4 py-1 rounded hover:bg-gray-600" onClick={() => setShowDeleteConfirm(false)}>
                 Cancel
               </button>
             </div>
