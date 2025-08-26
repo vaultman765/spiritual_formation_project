@@ -35,6 +35,24 @@ export default function ArcPage() {
         }))
       : [];
 
+  const arcStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: arc?.arc_title,
+    description: arc?.arc_summary || "A meditation arc focused on spiritual growth.",
+    image: `https://www.catholicmentalprayer.com/images/arc_whole/${arc?.arc_id}.jpg`,
+    author: {
+      "@type": "Organization",
+      name: "Spiritual Formation Project",
+    },
+    numberOfPages: arc?.day_count,
+    keywords: arc?.card_tags.join(", "),
+    publisher: {
+      "@type": "Organization",
+      name: "Spiritual Formation Project",
+    },
+  };
+
   if (!arc) return <p className="text-white text-center mt-10">Loading...</p>;
 
   return (
@@ -55,21 +73,8 @@ export default function ArcPage() {
         <meta name="twitter:title" content={`${arc?.arc_title} | Spiritual Formation Project`} />
         <meta name="twitter:description" content={arc?.arc_summary} />
         <meta name="twitter:image" content={`https://www.catholicmentalprayer.com/images/arc_whole/${arc?.arc_id}.jpg`} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Book",
-            name: arc?.arc_title,
-            description: arc?.arc_summary,
-            image: `https://www.catholicmentalprayer.com/images/arc_whole/${arc?.arc_id}.jpg`,
-            author: {
-              "@type": "Organization",
-              name: "Spiritual Formation Project",
-            },
-            numberOfPages: arc?.day_count,
-            keywords: arc?.card_tags?.join(", "),
-          })}
-        </script>
+
+        <script type="application/ld+json">{JSON.stringify(arcStructuredData)}</script>
       </Helmet>
 
       {/* Title */}

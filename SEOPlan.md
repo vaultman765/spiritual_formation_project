@@ -14,7 +14,7 @@ and beyond.
 - [x] Allow all bots
 - [x] Link to sitemap in `robots.txt`
 - [ ] **Add image sitemap** for `/images/arc_whole/` and `/arc_days/`
-- [ ] Submit sitemap to:
+- [x] Submit sitemap to:
   - [Google Search Console](https://search.google.com/search-console)
   - [Bing Webmaster Tools](https://www.bing.com/webmasters/)
 
@@ -31,7 +31,7 @@ and beyond.
 
 ### ✅ 2.1 Page Metadata
 
-- [ ] Add dynamic:
+- [x] Add dynamic:
   - `<title>`
   - `<meta name="description">`
   - `<link rel="canonical">`
@@ -39,7 +39,7 @@ and beyond.
 
 ### ✅ 2.2 Open Graph & Twitter Cards
 
-- [ ] Add to `<head>`:
+- [x] Add to `<head>`:
 
   ```html
   <meta property="og:title" content="..." />
