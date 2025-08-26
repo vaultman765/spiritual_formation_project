@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent } from "@/test-utils/testing-library-exports";
 import {
   BaseModal,
   ModalRenderer,
@@ -84,9 +84,7 @@ describe("ModalRenderer", () => {
 
 describe("ModalButton", () => {
   it("renders with the correct text and variant", () => {
-    render(
-      <ModalButton text="Click Me" onClick={jest.fn()} variant="danger" />
-    );
+    render(<ModalButton text="Click Me" onClick={jest.fn()} variant="danger" />);
 
     const button = screen.getByText("Click Me");
     expect(button).toBeInTheDocument();

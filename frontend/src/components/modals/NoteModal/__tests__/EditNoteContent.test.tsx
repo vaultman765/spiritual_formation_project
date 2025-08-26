@@ -1,15 +1,9 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent } from "@/test-utils/testing-library-exports";
 import EditNoteContent from "@/components/modals/NoteModal/EditNoteContent";
 
 describe("EditNoteContent", () => {
   it("renders the textarea with the correct placeholder and value", () => {
-    render(
-      <EditNoteContent
-        content="Test content"
-        placeholder="Write something..."
-        onChange={() => {}}
-      />
-    );
+    render(<EditNoteContent content="Test content" placeholder="Write something..." onChange={() => {}} />);
 
     const textarea = screen.getByPlaceholderText("Write something...");
     expect(textarea).toBeInTheDocument();
@@ -18,13 +12,7 @@ describe("EditNoteContent", () => {
 
   it("calls onChange when the user types", () => {
     const handleChange = jest.fn();
-    render(
-      <EditNoteContent
-        content=""
-        placeholder="Write something..."
-        onChange={handleChange}
-      />
-    );
+    render(<EditNoteContent content="" placeholder="Write something..." onChange={handleChange} />);
 
     const textarea = screen.getByPlaceholderText("Write something...");
     fireEvent.change(textarea, { target: { value: "New content" } });
@@ -34,24 +22,12 @@ describe("EditNoteContent", () => {
   });
 
   it("updates the value when the content prop changes", () => {
-    const { rerender } = render(
-      <EditNoteContent
-        content="Initial content"
-        placeholder="Write something..."
-        onChange={() => {}}
-      />
-    );
+    const { rerender } = render(<EditNoteContent content="Initial content" placeholder="Write something..." onChange={() => {}} />);
 
     const textarea = screen.getByPlaceholderText("Write something...");
     expect(textarea).toHaveValue("Initial content");
 
-    rerender(
-      <EditNoteContent
-        content="Updated content"
-        placeholder="Write something..."
-        onChange={() => {}}
-      />
-    );
+    rerender(<EditNoteContent content="Updated content" placeholder="Write something..." onChange={() => {}} />);
 
     expect(textarea).toHaveValue("Updated content");
   });
