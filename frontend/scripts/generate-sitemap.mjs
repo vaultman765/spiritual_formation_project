@@ -3,6 +3,7 @@ import { createWriteStream } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import axios from 'axios';
+import { readdir } from 'node:fs/promises';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SITE_URL = 'https://www.catholicmentalprayer.com';
@@ -58,6 +59,32 @@ async function fetchDynamicRoutes() {
   }
 }
 
+async function getPublicAssetRoutes() {
+  const docsDir = path.resolve(__dirname, '../public/docs');
+  const arcWholeDir = path.resolve(__dirname, '../public/images/arc_whole');
+  const arcDaysDir = path.resolve(__dirname, '../public/images/arc_days');
+
+  const pdfs = (await readdir(docsDir)).filter(f => f.endsWith('.pdf')).map(file => ({
+    url: `/docs/${file}`,
+    changefreq: 'weekly',
+    priority: 0.3
+  }));
+
+  const arcImages = (await readdir(arcWholeDir)).filter(f => /\.(png|jpe?g)$/.test(f)).map(file => ({
+    url: `/images/arc_whole/${file}`,
+    changefreq: 'weekly',
+    priority: 0.3
+  }));
+
+  const dayImages = (await readdir(arcDaysDir)).filter(f => /\.(png|jpe?g)$/.test(f)).map(file => ({
+    url: `/images/arc_days/${file}`,
+    changefreq: 'weekly',
+    priority: 0.3
+  }));
+
+  return [...pdfs, ...arcImages, ...dayImages];
+}
+
 async function run() {
   const outPath = path.resolve(__dirname, '../dist/sitemap.xml');
   const smStream = new SitemapStream({ hostname: SITE_URL });
@@ -72,6 +99,12 @@ async function run() {
   // Add dynamic routes
   const dynamicRoutes = await fetchDynamicRoutes();
   for (const route of dynamicRoutes) {
+    smStream.write(route);
+  }
+
+  // Add Public (docs and images) routes
+  const assetRoutes = await getPublicAssetRoutes();
+  for (const route of assetRoutes) {
     smStream.write(route);
   }
 
