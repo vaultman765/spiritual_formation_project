@@ -73,7 +73,7 @@ export default function RegisterPage() {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.catholicmentalprayer.com/images/og-default.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Login | Spiritual Formation Project" />
+        <meta name="twitter:title" content="Register | Spiritual Formation Project" />
         <meta name="twitter:description" content="Sign in to continue your spiritual journey with daily guided Ignatian meditations." />
         <meta name="twitter:image" content="https://www.catholicmentalprayer.com/images/og-default.jpg" />
       </Helmet>
