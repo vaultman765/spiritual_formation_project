@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "@/context/authContext";
+import { Helmet } from "react-helmet-async";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -16,6 +17,8 @@ export default function RegisterPage() {
     password: "",
     confirm_password: "",
   });
+  const location = useLocation();
+  const canonicalUrl = `https://www.catholicmentalprayer.com${location.pathname}`;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -55,6 +58,26 @@ export default function RegisterPage() {
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen text-white">
+      <Helmet>
+        <title>Register | Spiritual Formation Project</title>
+        <meta
+          name="description"
+          content="Create a free account to begin your Catholic mental prayer journey and track your progress daily."
+        />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Register | Spiritual Formation Project" />
+        <meta
+          property="og:description"
+          content="Join our community and start a personalized Ignatian meditation journey tailored to your spiritual growth."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.catholicmentalprayer.com/images/og-default.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Register | Spiritual Formation Project" />
+        <meta name="twitter:description" content="Sign in to continue your spiritual journey with daily guided Ignatian meditations." />
+        <meta name="twitter:image" content="https://www.catholicmentalprayer.com/images/og-default.jpg" />
+      </Helmet>
+
       <h1 className="text-3xl font-display font-semibold mb-4">Create Account</h1>
       <form onSubmit={handleSubmit} className="w-full max-w-md space-y-4">
         <input
