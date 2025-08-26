@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams, Link, useLocation } from "react-router-dom";
 import { fetchArcById } from "@/api/arcs";
 import { fetchDaysByArcId } from "@/api/days";
-import type { ArcData, DaySummary } from "@/utils/types";
 import { Helmet } from "react-helmet-async";
+import type { ArcData, DaySummary } from "@/utils/types";
 
 export default function ArcPage() {
   const { arcId } = useParams<{ arcId: string }>();
