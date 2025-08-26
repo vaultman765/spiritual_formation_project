@@ -190,9 +190,15 @@ export default function JourneyPage() {
           🌟 Congratulations! You just completed the journey: <strong>{recentlyCompletedJourney}</strong>! 🌟
         </div>
       ) : recentlyCompletedArc ? (
-        <div className="bg-blue-700 text-white px-6 py-3 rounded-lg shadow text-center mb-4">
-          🌟 Congratulations! You just completed the arc: <strong>{recentlyCompletedArc}</strong>! 🌟
-          <button onClick={() => setRecentlyCompletedArc(null)} className=" top-1 right-2 text-white hover:text-red-300 text-md">
+        <div className="bg-blue-700 text-white px-6 py-3 rounded-lg shadow text-center mb-4 relative">
+          <div className="pr-8">
+            🌟 Congratulations! You just completed the arc: <strong>{recentlyCompletedArc}</strong>! 🌟
+          </div>
+          <button
+            onClick={() => setRecentlyCompletedArc(null)}
+            className="absolute top-2 right-2 text-white hover:text-red-300 text-md"
+            aria-label="Close notification"
+          >
             ×
           </button>
         </div>

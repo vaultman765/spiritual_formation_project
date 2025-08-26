@@ -13,7 +13,9 @@ export default function ExplorePage() {
   const location = useLocation();
   const canonicalUrl = `https://www.catholicmentalprayer.com${location.pathname}`;
 
-  const availableTags = Array.from(new Set(arcs.flatMap((arc) => arc.card_tags))).sort();
+  const availableTags = Array.from(new Set(arcs.flatMap((arc) => arc.card_tags))).sort((a, b) =>
+    a.localeCompare(b, undefined, { sensitivity: "base" })
+  );
 
   const tagOptions = ["All Tags", ...availableTags];
 

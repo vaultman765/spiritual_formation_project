@@ -95,7 +95,7 @@ export default function MeditationDayPage() {
     <main>
       <Helmet>
         <title>
-          {day?.day_title} | Day {day?.arc_day_number} of {day?.arc_title} | Catholic Mental Prayer
+          {`${day?.day_title || "Meditation"} | Day ${day?.arc_day_number || "0"} of ${day?.arc_title || "Arc"} | Catholic Mental Prayer`}
         </title>
         <meta
           name="description"
