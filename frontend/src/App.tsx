@@ -17,7 +17,7 @@ import { useJourney } from "@/context/journeyContext";
 import { useAuth } from "@/context/authContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { loadGA4, trackPageview } from "@/utils/seo/ga4";
+import { loadGA4, trackPageviews } from "@/components/seo/ga4";
 
 const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
 loadGA4(GA_MEASUREMENT_ID);
@@ -43,7 +43,7 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    trackPageview(location.pathname + location.search, GA_MEASUREMENT_ID);
+    trackPageviews(location.pathname + location.search, GA_MEASUREMENT_ID);
   }, [location]);
 
   return (
