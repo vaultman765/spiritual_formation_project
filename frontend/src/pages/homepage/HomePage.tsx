@@ -103,6 +103,27 @@ export default function HomePage() {
       )}.jpg`
     : "https://www.catholicmentalprayer.com/images/og-default.jpg";
 
+  const homepageStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    url: "https://www.catholicmentalprayer.com/",
+    name: "Spiritual Formation Project",
+    alternateName: "Catholic Mental Prayer",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://www.catholicmentalprayer.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Spiritual Formation Project",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.catholicmentalprayer.com/images/logo.png",
+      },
+    },
+  };
+
   return (
     <main>
       <Helmet>
@@ -124,6 +145,8 @@ export default function HomePage() {
         <meta name="twitter:title" content="Ignatian Mental Prayer | Spiritual Formation Project" />
         <meta name="twitter:description" content="Guided Catholic meditations to deepen your relationship with God." />
         <meta name="twitter:image" content={ogImageUrl} />
+
+        <script type="application/ld+json">{JSON.stringify(homepageStructuredData)}</script>
       </Helmet>
 
       <header className="header">
