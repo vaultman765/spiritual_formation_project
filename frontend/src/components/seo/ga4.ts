@@ -1,3 +1,11 @@
+// Add type declarations for Google Analytics
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
+
 // Load the GA4 script
 export function loadGA4(measurementId: string) {
   if (!measurementId) return;
@@ -21,7 +29,7 @@ export function loadGA4(measurementId: string) {
 }
 
 // Track pageview manually
-export function trackPageview(url: string, measurementId: string) {
+export function trackPageviews(url: string, measurementId: string) {
   if (!measurementId || typeof window.gtag !== "function") return;
   window.gtag("config", measurementId, {
     page_path: url,
