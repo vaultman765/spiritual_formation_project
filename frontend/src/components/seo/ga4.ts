@@ -1,4 +1,3 @@
-// Add type declarations for Google Analytics
 declare global {
   interface Window {
     dataLayer: any[];
@@ -6,32 +5,39 @@ declare global {
   }
 }
 
-// Load the GA4 script
 export function loadGA4(measurementId: string) {
-  if (!measurementId) return;
+  if (!measurementId || typeof window === "undefined") return;
 
-  if (typeof window !== "undefined") {
-    // Add GA script tag
-    const scriptTag = document.createElement("script");
-    scriptTag.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-    scriptTag.async = true;
-    document.head.appendChild(scriptTag);
+  if (typeof window.gtag === "function") return;
 
-    // Init window.gtag
+  // Inject GA4 script
+  const script = document.createElement("script");
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+  script.async = true;
+
+  // Attach config after script is loaded
+  script.onload = () => {
     window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]) {
-      window.dataLayer.push(args);
-    }
+    window.gtag = function () {
+      window.dataLayer.push(arguments);
+    };
 
-    gtag("js", new Date());
-    gtag("config", measurementId);
-  }
+    window.gtag("js", new Date());
+    window.gtag("config", measurementId, {
+      send_page_view: true, // ✅ let Google send the initial page view
+    });
+
+    console.log("[GA4] Loaded and configured");
+  };
+
+  document.head.appendChild(script);
 }
 
-// Track pageview manually
+// Optional helper for manual page tracking
 export function trackPageviews(url: string, measurementId: string) {
-  if (!measurementId || typeof window.gtag !== "function") return;
-  window.gtag("config", measurementId, {
-    page_path: url,
-  });
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("config", measurementId, {
+      page_path: url,
+    });
+  }
 }
