@@ -22,13 +22,11 @@ import { loadGA4, trackPageviews } from "@/components/seo/ga4";
 const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
 loadGA4(GA_MEASUREMENT_ID);
 
+// This component needs to be inside Router context
 function RouteChangeTracker() {
   const location = useLocation();
   const { user } = useAuth();
 
-  // OPTIONAL: if you can get the logged-in user id from your auth context,
-  // import that context here instead of useJourney, e.g. `useAuth()`.
-  // For now I'm leaving userId null.
   useEffect(() => {
     trackPageview(location.pathname + location.search, {
       userId: user?.id ?? null,
@@ -38,8 +36,9 @@ function RouteChangeTracker() {
   return null;
 }
 
-function App() {
-  const { activeJourney } = useJourney(); // Access activeJourney from the context
+// This component needs to be inside Router context
+function AppRoutes() {
+  const { activeJourney } = useJourney();
   const location = useLocation();
 
   useEffect(() => {
@@ -47,48 +46,55 @@ function App() {
   }, [location]);
 
   return (
-    <Router>
+    <MainLayout>
       {/* Tracks on every route change */}
       <RouteChangeTracker />
-      <MainLayout>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/days/:dayNumber" element={<MeditationDayPage />} />
-          <Route path="/days/:arcID/:arcDayNumber" element={<MeditationDayPage />} />
-          <Route path="/how-to-pray" element={<div>How to Pray Page (Coming Soon!)</div>} />
-          <Route path="/explore" element={<ExplorePage />} />
-          <Route path="/arcs/:arcId" element={<ArcPage />} />
-          <Route path="/my-journey" element={<JourneyPage />} />
-          <Route path="/auth/login" element={<LoginPage />} />
-          <Route path="/auth/register" element={<RegisterPage />} />
-          <Route path="/start-journey" element={<StartJourneyPage />} />
-          <Route path="/my-notes" element={<NotesPage />} />
-          <Route path="/create-custom-journey" element={<JourneyEditorPage mode="create" />} />
-          <Route
-            path="/edit-journey"
-            element={
-              <JourneyEditorPage
-                mode="edit"
-                initialJourney={{
-                  title: activeJourney?.title || "",
-                  arcs:
-                    activeJourney?.arc_progress.map((arc) => ({
-                      arc_id: arc.arc_id,
-                      arc_title: arc.arc_title,
-                      day_count: arc.day_count,
-                      anchor_image: [], // Provide default or placeholder value
-                      arc_summary: "", // Provide default or placeholder value
-                      primary_reading: [], // Provide default or placeholder value
-                      card_tags: [], // Provide default or placeholder value
-                    })) || [],
-                }}
-              />
-            }
-          />
-        </Routes>
-        <ToastContainer position="top-right" autoClose={3000} />
-      </MainLayout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/days/:dayNumber" element={<MeditationDayPage />} />
+        <Route path="/days/:arcID/:arcDayNumber" element={<MeditationDayPage />} />
+        <Route path="/how-to-pray" element={<div>How to Pray Page (Coming Soon!)</div>} />
+        <Route path="/explore" element={<ExplorePage />} />
+        <Route path="/arcs/:arcId" element={<ArcPage />} />
+        <Route path="/my-journey" element={<JourneyPage />} />
+        <Route path="/auth/login" element={<LoginPage />} />
+        <Route path="/auth/register" element={<RegisterPage />} />
+        <Route path="/start-journey" element={<StartJourneyPage />} />
+        <Route path="/my-notes" element={<NotesPage />} />
+        <Route path="/create-custom-journey" element={<JourneyEditorPage mode="create" />} />
+        <Route
+          path="/edit-journey"
+          element={
+            <JourneyEditorPage
+              mode="edit"
+              initialJourney={{
+                title: activeJourney?.title || "",
+                arcs:
+                  activeJourney?.arc_progress.map((arc) => ({
+                    arc_id: arc.arc_id,
+                    arc_title: arc.arc_title,
+                    day_count: arc.day_count,
+                    anchor_image: [], // Provide default or placeholder value
+                    arc_summary: "", // Provide default or placeholder value
+                    primary_reading: [], // Provide default or placeholder value
+                    card_tags: [], // Provide default or placeholder value
+                  })) || [],
+              }}
+            />
+          }
+        />
+      </Routes>
+      <ToastContainer position="top-right" autoClose={3000} />
+    </MainLayout>
+  );
+}
+
+// Main App component that just provides the Router
+function App() {
+  return (
+    <Router>
+      <AppRoutes />
     </Router>
   );
 }
