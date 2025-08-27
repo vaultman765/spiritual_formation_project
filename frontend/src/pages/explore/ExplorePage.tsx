@@ -56,6 +56,7 @@ export default function ExplorePage() {
   };
 
   const exploreBreadcrumbData = {
+    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
       {
