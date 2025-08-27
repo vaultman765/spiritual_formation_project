@@ -8,7 +8,7 @@ import { getNote } from "@/hooks/useNotes";
 import type { MeditationData, MeditationNote } from "@/utils/types";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import SeoMeta from "@/components/seo/SeoMeta";
 
 export default function MeditationDayPage() {
   const { user } = useAuth();
@@ -91,94 +91,72 @@ export default function MeditationDayPage() {
     await refreshNote();
   }
 
+  const meditationStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: day?.day_title,
+    url: `https://www.catholicmentalprayer.com/days/${day?.arc_id}/${day?.arc_day_number}`,
+    image: `https://www.catholicmentalprayer.com/images/arc_days/${day?.arc_id}_day_${String(day?.arc_day_number).padStart(2, "0")}.jpg`,
+    articleBody: day?.anchor_image,
+    datePublished: new Date().toISOString(),
+    author: {
+      "@type": "Organization",
+      name: "Spiritual Formation Project",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Spiritual Formation Project",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.catholicmentalprayer.com/images/logo.png",
+      },
+    },
+    description: day?.ejaculatory_prayer || day?.colloquy,
+    isPartOf: {
+      "@type": "Book",
+      name: day?.arc_title,
+    },
+  };
+
+  const meditationBreadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.catholicmentalprayer.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: day?.arc_title,
+        item: `https://www.catholicmentalprayer.com/arcs/${day?.arc_id}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: day?.day_title,
+        item: `https://www.catholicmentalprayer.com/days/${day?.arc_id}/${day?.arc_day_number}`,
+      },
+    ],
+  };
+
   return (
     <main>
-      <Helmet>
-        <title>
-          {`${day?.day_title || "Meditation"} | Day ${day?.arc_day_number || "0"} of ${day?.arc_title || "Arc"} | Catholic Mental Prayer`}
-        </title>
-        <meta
-          name="description"
-          content={`Meditation on "${day?.day_title}" — Day ${day?.arc_day_number} in the ${day?.arc_title} series of Ignatian meditations.`}
-        />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content={`${day?.day_title} | Spiritual Formation Project`} />
-        <meta property="og:description" content={day?.ejaculatory_prayer || day?.colloquy || "Daily Catholic mental prayer meditation."} />
-        <meta
-          property="og:image"
-          content={`https://www.catholicmentalprayer.com/images/arc_days/${day?.arc_id}_day_${String(day?.arc_day_number).padStart(
-            2,
-            "0"
-          )}.jpg`}
-        />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${day?.day_title} | Spiritual Formation Project`} />
-        <meta name="twitter:description" content={day?.ejaculatory_prayer || day?.colloquy} />
-        <meta
-          name="twitter:image"
-          content={`https://www.catholicmentalprayer.com/images/arc_days/${day?.arc_id}_day_${String(day?.arc_day_number).padStart(
-            2,
-            "0"
-          )}.jpg`}
-        />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: day?.day_title,
-            image: `https://www.catholicmentalprayer.com/images/arc_days/${day?.arc_id}_day_${String(day?.arc_day_number).padStart(
-              2,
-              "0"
-            )}.jpg`,
-            datePublished: new Date().toISOString(),
-            author: {
-              "@type": "Organization",
-              name: "Spiritual Formation Project",
-            },
-            publisher: {
-              "@type": "Organization",
-              name: "Spiritual Formation Project",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://www.catholicmentalprayer.com/images/logo.png",
-              },
-            },
-            description: day?.ejaculatory_prayer || day?.colloquy,
-            isPartOf: {
-              "@type": "Book",
-              name: day?.arc_title,
-            },
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://www.catholicmentalprayer.com",
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: day?.arc_title,
-                item: `https://www.catholicmentalprayer.com/arcs/${day?.arc_id}`,
-              },
-              {
-                "@type": "ListItem",
-                position: 3,
-                name: day?.day_title,
-                item: `https://www.catholicmentalprayer.com/days/${day?.arc_id}/${day?.arc_day_number}`,
-              },
-            ],
-          })}
-        </script>
-      </Helmet>
+      <SeoMeta
+        title={`Day: ${day?.day_title} from Arc: ${day?.arc_title} | Spiritual Formation Project`}
+        description={`Meditation on "${day?.day_title}" — Day ${day?.arc_day_number} in the ${day?.arc_title} series of Ignatian meditations.`}
+        canonicalUrl={canonicalUrl}
+        imageUrl={`https://www.catholicmentalprayer.com/images/arc_days/${day?.arc_id}_day_${String(day?.arc_day_number).padStart(
+          2,
+          "0"
+        )}.jpg`}
+        type="article"
+        jsonLd={meditationStructuredData}
+        breadcrumbsJsonLd={meditationBreadcrumbData}
+      />
 
       {/* Header */}
       <section className="text-center mb-6 relative">

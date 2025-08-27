@@ -1,4 +1,5 @@
 import { CustomLinkCard, CardImage, CardTitle } from "@/components/cards/BaseCard";
+import MeditationJsonLd from "@/components/seo/MeditationJsonLd";
 
 interface MeditationCardProps {
   dayTitle: string;
@@ -12,6 +13,7 @@ interface MeditationCardProps {
 export default function MeditationCard({ dayTitle, subtitle, imageSrc, altText, link, tag }: MeditationCardProps) {
   return (
     <CustomLinkCard link={link}>
+      <MeditationJsonLd dayTitle={dayTitle} subtitle={subtitle} imageSrc={imageSrc} altText={altText} link={link} tag={tag} />
       <div className="flex flex-col h-full">
         <div>
           <p className="text-xs uppercase text-[var(--text-subtle-heading)] mb-1">{subtitle}</p>

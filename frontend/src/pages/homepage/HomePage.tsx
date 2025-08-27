@@ -5,7 +5,7 @@ import { useAuth } from "@/context/authContext";
 import MeditationCard from "@/components/cards/MeditationCard";
 import { CustomLinkCard, CardTitle } from "@/components/cards/BaseCard";
 import type { MeditationData } from "@/utils/types";
-import { Helmet } from "react-helmet-async";
+import SeoMeta from "@/components/seo/SeoMeta";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -96,16 +96,11 @@ export default function HomePage() {
     }
   }, [user, noJourney, today, tomorrow]);
 
-  const ogImageUrl = today
-    ? `https://www.catholicmentalprayer.com/images/arc_days/${String(today.arc_id)}_day_${String(today.arc_day_number).padStart(
-        2,
-        "0"
-      )}.jpg`
-    : "https://www.catholicmentalprayer.com/images/og-default.jpg";
+  const ogImageUrl = "https://www.catholicmentalprayer.com/images/logo.png";
 
   const homepageStructuredData = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
+    "@type": "WebPage",
     url: "https://www.catholicmentalprayer.com/",
     name: "Spiritual Formation Project",
     alternateName: "Catholic Mental Prayer",
@@ -124,31 +119,30 @@ export default function HomePage() {
     },
   };
 
+  const homepageBreadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.catholicmentalprayer.com",
+      },
+    ],
+  };
+
   return (
     <main>
-      <Helmet>
-        <title>Ignatian Mental Prayer | Spiritual Formation Project</title>
-        <meta
-          name="description"
-          content="Begin your journey into Ignatian Mental Prayer. Encounter God daily through guided meditations rooted in Catholic tradition."
-        />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Ignatian Mental Prayer | Spiritual Formation Project" />
-        <meta
-          property="og:description"
-          content="Step into a rhythm of daily prayer with guided Ignatian meditations designed to help you encounter God and grow spiritually."
-        />
-        <meta property="og:image" content={ogImageUrl} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ignatian Mental Prayer | Spiritual Formation Project" />
-        <meta name="twitter:description" content="Guided Catholic meditations to deepen your relationship with God." />
-        <meta name="twitter:image" content={ogImageUrl} />
-
-        <script type="application/ld+json">{JSON.stringify(homepageStructuredData)}</script>
-      </Helmet>
-
+      <SeoMeta
+        title="Ignatian Mental Prayer | Spiritual Formation Project"
+        description="Begin your journey into Ignatian Mental Prayer. Encounter God daily through guided meditations rooted in Catholic tradition."
+        canonicalUrl={canonicalUrl}
+        imageUrl={ogImageUrl}
+        type="website"
+        jsonLd={homepageStructuredData}
+        breadcrumbsJsonLd={homepageBreadcrumbData}
+      />
       <header className="header">
         <h1 className="text-5xl md:text-6xl font-display font-semibold text-[var(--text-main)]">
           Encounter God through Ignatian Mental Prayer

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link, useLocation } from "react-router-dom";
 import { fetchArcById } from "@/api/arcs";
 import { fetchDaysByArcId } from "@/api/days";
-import { Helmet } from "react-helmet-async";
+import SeoMeta from "@/components/seo/SeoMeta";
 import type { ArcData, DaySummary } from "@/utils/types";
 
 export default function ArcPage() {
@@ -39,6 +39,7 @@ export default function ArcPage() {
     "@context": "https://schema.org",
     "@type": "Book",
     name: arc?.arc_title,
+    url: `https://www.catholicmentalprayer.com/arcs/${arc?.arc_id}`,
     description: arc?.arc_summary || "A meditation arc focused on spiritual growth.",
     image: `https://www.catholicmentalprayer.com/images/arc_whole/${arc?.arc_id}.jpg`,
     author: {
@@ -53,30 +54,38 @@ export default function ArcPage() {
     },
   };
 
+  const arcBreadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.catholicmentalprayer.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: arc?.arc_title,
+        item: `https://www.catholicmentalprayer.com/arcs/${arc?.arc_id}`,
+      },
+    ],
+  };
+
   if (!arc) return <p className="text-white text-center mt-10">Loading...</p>;
 
   return (
     <main>
-      <Helmet>
-        <title>{arc?.arc_title} | Meditation Arc | Spiritual Formation Project</title>
-        <meta
-          name="description"
-          content={`Explore ${arc?.arc_title} — a ${arc?.day_count}-day meditation arc focusing on ${arc?.primary_reading?.join(", ")}.`}
-        />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content={`${arc?.arc_title} | Spiritual Formation Project`} />
-        <meta property="og:description" content={arc?.arc_summary} />
-        <meta property="og:image" content={`https://www.catholicmentalprayer.com/images/arc_whole/${arc?.arc_id}.jpg`} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${arc?.arc_title} | Spiritual Formation Project`} />
-        <meta name="twitter:description" content={arc?.arc_summary} />
-        <meta name="twitter:image" content={`https://www.catholicmentalprayer.com/images/arc_whole/${arc?.arc_id}.jpg`} />
-
-        <script type="application/ld+json">{JSON.stringify(arcStructuredData)}</script>
-      </Helmet>
-
+      <SeoMeta
+        title={`${arc.arc_title} | Spiritual Formation Project`}
+        description={`Explore ${arc.arc_title} — a ${arc.day_count}-day meditation arc focused on ${arc.primary_reading?.join(", ")}.`}
+        canonicalUrl={canonicalUrl}
+        imageUrl={`https://www.catholicmentalprayer.com/images/arc_whole/${arc.arc_id}.jpg`}
+        type="article"
+        jsonLd={arcStructuredData}
+        breadcrumbsJsonLd={arcBreadcrumbData}
+      />
       {/* Title */}
       <section className="text-center mb-10">
         <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-main)]">{arc.arc_title}</h1>

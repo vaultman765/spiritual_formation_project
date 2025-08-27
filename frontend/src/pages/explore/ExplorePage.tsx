@@ -4,7 +4,7 @@ import TagFilterDropdown from "@/components/TagFilterDropdown";
 import { DetailArcCard } from "@/components/cards/ArcCard";
 import { fetchAllArcs } from "@/api/arcs";
 import type { ArcData } from "@/utils/types";
-import { Helmet } from "react-helmet-async";
+import SeoMeta from "@/components/seo/SeoMeta";
 
 export default function ExplorePage() {
   const [search, setSearch] = useState("");
@@ -30,7 +30,11 @@ export default function ExplorePage() {
     return matchesSearch && matchesTag;
   });
 
-  const structuredData = {
+  useEffect(() => {
+    fetchAllArcs().then(setArcs).catch(console.error);
+  }, []);
+
+  const exploreStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Explore Arcs",
@@ -39,6 +43,7 @@ export default function ExplorePage() {
       "@type": "Book",
       position: index + 1,
       name: arc.arc_title,
+      url: `https://www.catholicmentalprayer.com/explore/${arc.arc_id}`,
       description: arc.arc_summary || "Meditation arc focused on spiritual growth.",
       image: `https://www.catholicmentalprayer.com/images/arc_whole/${arc.arc_id}.jpg`,
       author: {
@@ -50,34 +55,35 @@ export default function ExplorePage() {
     })),
   };
 
-  useEffect(() => {
-    fetchAllArcs().then(setArcs).catch(console.error);
-  }, []);
+  const exploreBreadcrumbData = {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.catholicmentalprayer.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Explore Arcs",
+        item: "https://www.catholicmentalprayer.com/explore",
+      },
+    ],
+  };
 
   return (
     <main>
-      <Helmet>
-        <title>Explore Meditation Arcs | Catholic Mental Prayer</title>
-        <meta
-          name="description"
-          content="Browse over 1000 days of Ignatian meditations organized into arcs. Start your custom journey in Ignatian style mental prayer today."
-        />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Explore Meditation Arcs | Spiritual Formation Project" />
-        <meta
-          property="og:description"
-          content="Explore our full library of Ignatian meditation arcs and build your own spiritual formation path."
-        />
-        <meta property="og:image" content="https://www.catholicmentalprayer.com/images/og-explore.jpg" />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Explore Meditation Arcs | Spiritual Formation Project" />
-        <meta name="twitter:description" content="Choose from prebuilt or custom journeys rooted in Ignatian spirituality." />
-        <meta name="twitter:image" content="https://www.catholicmentalprayer.com/images/og-explore.jpg" />
-
-        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-      </Helmet>
+      <SeoMeta
+        title="Explore Meditation Arcs | Spiritual Formation Project"
+        description="Browse over 1000 days of Ignatian meditations organized into arcs. Start your custom journey in Ignatian style mental prayer today."
+        canonicalUrl={canonicalUrl}
+        imageUrl="https://www.catholicmentalprayer.com/images/og-explore.jpg"
+        type="website"
+        jsonLd={exploreStructuredData}
+        breadcrumbsJsonLd={exploreBreadcrumbData}
+      />
 
       <header className="header">
         <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-main)]">Explore Arcs and Journeys</h1>
