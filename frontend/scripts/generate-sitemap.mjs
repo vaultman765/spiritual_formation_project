@@ -65,7 +65,7 @@ async function getPublicAssetRoutes() {
   const arcDaysDir = path.resolve(__dirname, '../public/images/arc_days');
 
   const pdfs = (await readdir(docsDir)).filter(f => f.endsWith('.pdf')).map(file => ({
-    url: `/docs/${file}`,
+    url: `/docs/readings/${file}`,
     changefreq: 'weekly',
     priority: 0.3
   }));
