@@ -4,12 +4,11 @@ interface MeditationJsonLdProps {
   dayTitle: string;
   subtitle: string;
   imageSrc: string;
-  altText: string;
   link: string;
   tag: string;
 }
 
-export default function MeditationJsonLd({ dayTitle, subtitle, imageSrc, altText, link, tag }: MeditationJsonLdProps) {
+export default function MeditationJsonLd({ dayTitle, subtitle, imageSrc, link, tag }: MeditationJsonLdProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
