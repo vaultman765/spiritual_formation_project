@@ -12,6 +12,7 @@ import StartJourneyPage from "@/pages/journey/StartJourneyPage";
 import RegisterPage from "@/pages/login/RegisterPage";
 import NotesPage from "@/pages/notes/NotesPage";
 import JourneyEditorPage from "@/pages/journey/JourneyEditorPage";
+import HowToPrayPage from "@/pages/how_to_pray/HowToPrayPage";
 import { trackPageview } from "@/utils/analytics";
 import { useJourney } from "@/context/journeyContext";
 import { useAuth } from "@/context/authContext";
@@ -53,7 +54,7 @@ function AppRoutes() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/days/:dayNumber" element={<MeditationDayPage />} />
         <Route path="/days/:arcID/:arcDayNumber" element={<MeditationDayPage />} />
-        <Route path="/how-to-pray" element={<div>How to Pray Page (Coming Soon!)</div>} />
+        <Route path="/how-to-pray" element={<HowToPrayPage />} />
         <Route path="/explore" element={<ExplorePage />} />
         <Route path="/arcs/:arcId" element={<ArcPage />} />
         <Route path="/my-journey" element={<JourneyPage />} />
