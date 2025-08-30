@@ -38,7 +38,7 @@ const breadcrumbsJsonLd = {
 };
 
 export default function InDepthHowToPrayPage() {
-  const pdfUrl = "/docs/resources/Ignatian_Mental _Prayer_Step_by_Step.pdf";
+  const pdfUrl = "/docs/resources/Ignatian_Mental_Prayer_Step_by_Step.pdf";
   const [today, setToday] = useState<MeditationData | null>(null);
 
   useEffect(() => {

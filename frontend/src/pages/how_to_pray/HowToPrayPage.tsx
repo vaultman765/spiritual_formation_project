@@ -248,7 +248,7 @@ export default function HowToPrayPage() {
           )}
           <p className="mx-auto mt-3 max-w-2xl text-[var(--text-muted)]">
             Or, for a more in-depth article on the Ignatian method, check out the{" "}
-            <a href="/how-to-pray/guide" target="_blank" rel="noopener noreferrer">
+            <a href="/how-to-pray/guide" rel="noopener noreferrer">
               In-Depth Guide
             </a>
             !
