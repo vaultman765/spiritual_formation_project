@@ -12,6 +12,7 @@ type SeoMetaProps = {
   twitterHandle?: string;
   jsonLd?: object;
   breadcrumbsJsonLd?: object;
+  keywords?: string;
 };
 
 export default function SeoMeta({
@@ -23,6 +24,7 @@ export default function SeoMeta({
   locale = "en_US",
   siteName = "Spiritual Formation Project",
   twitterHandle = "@RCMentalPrayer",
+  keywords = "Ignatian Meditation, Mental Prayer, Catholic Prayer Guide, Ignatian Spirituality, Spiritual Formation, Christian Meditation, Prayer Techniques, Spiritual Growth",
   jsonLd,
   breadcrumbsJsonLd,
 }: SeoMetaProps) {
@@ -50,8 +52,17 @@ export default function SeoMeta({
       <meta name="twitter:site" content={twitterHandle} />
       <meta name="twitter:creator" content={twitterHandle} />
 
+      {/* Keywords */}
+      <meta name="keywords" content={keywords} />
+
       {/* JSON-LD */}
-      {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
+      {Array.isArray(jsonLd)
+        ? jsonLd.map((block, i) => (
+            <script key={i} type="application/ld+json">
+              {JSON.stringify(block)}
+            </script>
+          ))
+        : jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
       {breadcrumbsJsonLd && <script type="application/ld+json">{JSON.stringify(breadcrumbsJsonLd)}</script>}
     </Helmet>
   );

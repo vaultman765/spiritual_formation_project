@@ -1,0 +1,101 @@
+import SeoMeta from "@/components/seo/SeoMeta";
+import { useEffect, useState } from "react";
+import { fetchTodayMeditation } from "@/api/homepage";
+import type { MeditationData } from "@/utils/types";
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Ignatian Mental Prayer — In-Depth Guide",
+  description:
+    "A fuller, printable walkthrough of the Ignatian method used on CatholicMentalPrayer.com: preparation, meditation, conclusion, and daily follow-through.",
+  image: "https://www.catholicmentalprayer.com/images/how_to_pray/how_to_pray.jpg",
+  author: { "@type": "Organization", name: "Spiritual Formation Project" },
+  publisher: {
+    "@type": "Organization",
+    name: "Spiritual Formation Project",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.catholicmentalprayer.com/images/logo_748.png",
+      width: 748,
+      height: 598,
+    },
+  },
+  mainEntityOfPage: "https://www.catholicmentalprayer.com/how-to-pray/guide",
+  inLanguage: "en-US",
+  timeRequired: "PT30M",
+  wordCount: 6941,
+};
+
+const breadcrumbsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.catholicmentalprayer.com" },
+    { "@type": "ListItem", position: 2, name: "How to Pray", item: "https://www.catholicmentalprayer.com/how-to-pray" },
+    { "@type": "ListItem", position: 3, name: "In-Depth Guide", item: "https://www.catholicmentalprayer.com/how-to-pray/guide" },
+  ],
+};
+
+export default function InDepthHowToPrayPage() {
+  const pdfUrl = "/docs/resources/Ignatian_Mental _Prayer_Step_by_Step.pdf";
+  const [today, setToday] = useState<MeditationData | null>(null);
+
+  useEffect(() => {
+    fetchTodayMeditation().then(setToday).catch(console.error);
+  }, []);
+
+  return (
+    <main>
+      <SeoMeta
+        title="Ignatian Mental Prayer — In-Depth Guide (Printable PDF)"
+        description="A fuller, printable walkthrough of the Ignatian method, aligned with the beginner How-to-Pray page."
+        canonicalUrl="https://www.catholicmentalprayer.com/how-to-pray/guide"
+        imageUrl="https://www.catholicmentalprayer.com/images/how_to_pray/how_to_pray.jpg"
+        keywords="Spiritual Formation, Mental Prayer, Ignatian Prayer, Catholic Prayer, Prayer Guide, How to Pray, Christian Meditation, Prayer Techniques, Spiritual Growth, In Depth Guide"
+        type="article"
+        jsonLd={articleJsonLd}
+        breadcrumbsJsonLd={breadcrumbsJsonLd}
+      />
+
+      <article className="mx-auto max-w-4xl px-2 py-6">
+        <header className="mb-6 text-center">
+          <h1 className="font-display text-4xl text-[var(--text-light)]">Ignatian Mental Prayer — In-Depth Guide</h1>
+          <p className="mt-3 text-[var(--text-muted)]">
+            This printable guide expands the beginner steps with extra detail, tips, and examples.
+          </p>
+          {today && (
+            <p className="mx-auto mt-3 max-w-2xl text-[var(--text-muted)]">
+              After reading the article, check out today&apos;s featured meditation{" "}
+              <a href={`/days/${today.arc_id}/${today.arc_day_number}`} target="_blank" rel="noopener noreferrer">
+                here
+              </a>
+              !
+            </p>
+          )}
+
+          <div className="mt-4">
+            <a
+              href={pdfUrl}
+              className="inline-block rounded-2xl border border-white/15 bg-[var(--brand-primary-dark)]/90 px-4 py-2 !text-black no-underline shadow"
+              download
+            >
+              Download PDF
+            </a>
+          </div>
+        </header>
+
+        <section className="rounded-2xl border border-white/15 bg-[var(--bg-card)]/75 p-3 shadow-sm shadow-black/20">
+          <object data={pdfUrl} type="application/pdf" className="w-full" style={{ height: "80vh" }}>
+            <p className="p-4 text-[var(--text-main)]">
+              Your browser can’t display the PDF.{" "}
+              <a className="underline" href={pdfUrl} download>
+                Click here to download it.
+              </a>
+            </p>
+          </object>
+        </section>
+      </article>
+    </main>
+  );
+}
