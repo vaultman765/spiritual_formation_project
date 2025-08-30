@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import SeoMeta from "@/components/seo/SeoMeta";
 import { fetchTodayMeditation } from "@/api/homepage";
 import type { MeditationData } from "@/utils/types";
@@ -9,12 +8,12 @@ function AccordionSection({
   title,
   children,
   defaultOpen = false,
-}: {
+}: Readonly<{
   id: string;
   title: string;
   children: React.ReactNode;
   defaultOpen?: boolean;
-}) {
+}>) {
   return (
     <details
       id={id}
@@ -36,7 +35,7 @@ function AccordionSection({
   );
 }
 
-function Tip({ children, TipHeader = "Tip" }: { children: React.ReactNode; TipHeader?: string }) {
+function Tip({ children, TipHeader = "Tip" }: Readonly<{ children: React.ReactNode; TipHeader?: string }>) {
   return (
     <div className="rounded-xl border border-yellow-400/20 bg-yellow-400/10 p-3 text-[var(--text-main)]">
       <div className="text-sm font-semibold tracking-wide text-[var(--brand-primary-dark)]">{TipHeader}</div>
@@ -591,8 +590,8 @@ export default function HowToPrayPage() {
         <section className="mt-10 text-sm text-[var(--text-muted)]">
           <p>
             Inspired by the classical Ignatian method (see <em>Spiritual Exercises</em> of St. Ignatius of Loyola) and the clear, practical
-            outline in <em>A Brief Guide to Mental Prayer According to the Mind of St. Ignatius</em>
-            (Jesuit author; ed. Christian B. Wagner). This page paraphrases their method in beginner-friendly language.
+            outline in <span className="underline">A Brief Guide to Mental Prayer According to the Mind of St. Ignatius</span> (Jesuit
+            author; ed. Christian B. Wagner). This page paraphrases their method in beginner-friendly language.
           </p>
         </section>
       </article>

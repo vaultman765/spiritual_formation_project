@@ -58,7 +58,7 @@ export default function SeoMeta({
       {/* JSON-LD */}
       {Array.isArray(jsonLd)
         ? jsonLd.map((block, i) => (
-            <script key={i} type="application/ld+json">
+            <script key={`${block.name}`} type="application/ld+json">
               {JSON.stringify(block)}
             </script>
           ))
