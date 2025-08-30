@@ -64,7 +64,7 @@ const howToJsonLd = {
     logo: { "@type": "ImageObject", url: "https://www.catholicmentalprayer.com/images/logo_748.png", width: 748, height: 598 },
   },
   datePublished: "2025-08-29",
-  dateModified: "2025-08-29",
+  dateModified: "2025-08-30",
   step: [
     {
       "@type": "HowToStep",
@@ -346,7 +346,9 @@ export default function HowToPrayPage() {
                 </li>
                 <li>
                   <span className="font-semibold">
-                    Particular examen focusing on one fault/sin to overcome or virtue to obtain (3 touchpoints)
+                    Particular examen focusing on one fault/sin to overcome or virtue to obtain. This should be very specific - for example,
+                    instead of, "I want to not be judgmental", pick a specific instance or circumstance you know you are judgmental and
+                    focus on that first. (3 touchpoints)
                   </span>
                   :
                   <ul className="mt-1 list-[circle] pl-5">
