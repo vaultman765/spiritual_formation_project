@@ -7,8 +7,7 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "Ignatian Mental Prayer — In-Depth Guide",
-  description:
-    "A fuller, printable walkthrough of the Ignatian method used on CatholicMentalPrayer.com: preparation, meditation, conclusion, and daily follow-through.",
+  description: "A printable, detailed guide that expands the beginner steps with extra tips, detail, and examples.",
   image: "https://www.catholicmentalprayer.com/images/how_to_pray/how_to_pray.jpg",
   author: { "@type": "Organization", name: "Spiritual Formation Project" },
   publisher: {
@@ -25,6 +24,18 @@ const articleJsonLd = {
   inLanguage: "en-US",
   timeRequired: "PT30M",
   wordCount: 6941,
+  datePublished: "2025-08-29",
+  dateModified: "2025-08-30",
+  hasPart: {
+    "@type": "MediaObject",
+    encodingFormat: "application/pdf",
+    contentUrl: "https://www.catholicmentalprayer.com/docs/resources/Ignatian_Mental_Prayer_Step_by_Step.pdf",
+    name: "Ignatian Mental Prayer — In-Depth Guide (PDF)",
+  },
+  isPartOf: {
+    "@type": "WebPage",
+    "@id": "https://www.catholicmentalprayer.com/how-to-pray",
+  },
 };
 
 const breadcrumbsJsonLd = {
@@ -48,8 +59,8 @@ export default function InDepthHowToPrayPage() {
   return (
     <main>
       <SeoMeta
-        title="Ignatian Mental Prayer — In-Depth Guide (Printable PDF)"
-        description="A fuller, printable walkthrough of the Ignatian method, aligned with the beginner How-to-Pray page."
+        title="Ignatian Mental Prayer — In-Depth Guide (PDF)"
+        description="Printable, detailed article expanding the beginner method with tips, examples, and step-by-step help."
         canonicalUrl="https://www.catholicmentalprayer.com/how-to-pray/guide"
         imageUrl="https://www.catholicmentalprayer.com/images/how_to_pray/how_to_pray.jpg"
         keywords="Spiritual Formation, Mental Prayer, Ignatian Prayer, Catholic Prayer, Prayer Guide, How to Pray, Christian Meditation, Prayer Techniques, Spiritual Growth, In Depth Guide"
