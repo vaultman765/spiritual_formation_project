@@ -177,7 +177,7 @@ export default function HomePage() {
             </button>
           </div>
         )}
-        <div className="grid grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {today && (
             <MeditationCard
               dayTitle={today.day_title}

@@ -94,13 +94,13 @@ export default function NotesPage() {
         <h1 className="text-4xl font-display text-white mb-2 text-center">My Notes</h1>
         <p className="text-center text-white/70 mb-10">Review your past meditation notes.</p>
 
-        <div className="flex items-center justify-between mb-6 gap-4 flex-wrap">
+        <div className="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between mb-6">
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search notes..."
-            className="flex-1 rounded px-4 py-2 bg-white/10 text-white placeholder-white/40"
+            className="w-full sm:w-auto flex-1 rounded px-4 py-2 bg-white/10 text-white placeholder-white/40"
           />
           <SimpleListboxDropdown
             options={["month", "arc"]}
@@ -116,7 +116,7 @@ export default function NotesPage() {
           Object.entries(groupedNotes).map(([groupTitle, groupNotes]) => (
             <div key={groupTitle} className="mb-10">
               <h2 className="text-lg text-white/60 font-semibold mb-3">{groupTitle}</h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {groupNotes.map((note) => (
                   <NoteCard
                     key={note.id}
