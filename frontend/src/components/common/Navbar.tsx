@@ -103,7 +103,7 @@ export default function Navbar() {
           {user ? (
             <>
               <span className="text-white/70">Welcome, {user.username}</span>
-              <button onClick={handleLogout} className="text-white border border-white/30 rounded px-3 py-1 hover:bg-white/10">
+              <button onClick={handleLogout} className="text-white border border-white/30 rounded px-3 py-1 hover:bg-white/10" aria-label="Logout">
                 Logout
               </button>
             </>
