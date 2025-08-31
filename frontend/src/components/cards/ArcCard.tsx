@@ -42,7 +42,7 @@ export function DetailArcCard({ arc }: ArcCardProps) {
       <CardImage
         imageSrc={`/images/arc_whole/${arc.arc_id}.jpg`}
         altText={arc.arc_title}
-        divClassName="!mb-0 card-image-container"
+        divClassName="w-full !mb-0 card-image-container"
         imgClassName="h-70 card-image"
       />
       <div className="text-sm text-[var(--text-subtle-heading)]">{arc.day_count}-day arc</div>
@@ -63,7 +63,7 @@ export function CustomJourneyArcCard({ arc, onClick }: ArcCardProps) {
       <p className="text-sm text-violet-300 italic mb-2">{day_count}-day arc</p>
       <div className="flex flex-wrap gap-2">
         {card_tags?.map((tag) => (
-          <span key={tag} className="bg-[var(--brand-primary-dark)] text-black px-2 py-1 text-xs rounded-full">
+          <span key={tag} className="bg-[var(--brand-primary-dark)] text-[var(--bg-dark)] px-2 py-1 text-xs rounded-full">
             {tag}
           </span>
         ))}

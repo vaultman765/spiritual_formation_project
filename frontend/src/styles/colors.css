@@ -12,7 +12,7 @@
   /* === Text === */
   --text-light: #fcf8ef;
   --text-main: #fff7e6;
-  --text-muted: #e0ccae;
+  --text-muted: #c8b68f;
   --text-subtle-heading: #9ca3af;
   --tag-bg: #382b5e;
 
@@ -23,4 +23,11 @@
   /* === Effects === */
   --glow: rgba(255, 217, 130, 0.15);
   --hover-gold: #f0c676;
+
+  /* === Grays === */
+  --gray-100: #f3f4f6;
+  --gray-300: #d1d5db;
+  --gray-500: #6b7280;
+  --gray-700: #374151;
+  --gray-900: #111827;  
 }

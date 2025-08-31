@@ -63,7 +63,7 @@ export default function JourneyEditorPage({ mode, initialJourney }: JourneyEdito
         <h1 className="text-5xl font-display font-semibold mb-2">
           {mode === "create" ? "Create a Custom Journey" : "Edit Custom Journey"}
         </h1>
-        <p className="text-lg text-white/70 max-w-2xl mx-auto">
+        <p className="text-lg text-[var(--text-muted)] max-w-2xl mx-auto">
           {mode === "create"
             ? "Select and reorder arcs to build a mental prayer journey tailored to your needs."
             : "Add, remove, or reorder arcs in your journey."}
@@ -76,7 +76,7 @@ export default function JourneyEditorPage({ mode, initialJourney }: JourneyEdito
           placeholder="Journey Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="input-style placeholder-white/70"
+          className="input-style !sm:w-auto"
         />
       </div>
 
@@ -88,7 +88,7 @@ export default function JourneyEditorPage({ mode, initialJourney }: JourneyEdito
           placeholder="Search Available Arcs..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="input-style placeholder-white/70"
+          className="input-style !sm:w-auto"
         />
       </div>
 
