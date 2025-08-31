@@ -1,42 +1,14 @@
 @import "tailwindcss";
 @import "@/styles/colors.css";
+@tailwind base;
+@tailwind components;
 
+/* ------------------------------
+   Fonts
+------------------------------ */
 :root {
   --font-display: "EB Garamond", Georgia, serif;
   --font-body: "Inter", Arial, sans-serif;
-}
-
-@media (max-width: 768px) {
-  .relative {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center align */
-  }
-
-  .absolute {
-    position: static; /* Remove absolute positioning */
-    margin-top: 1rem; /* Add spacing */
-  }
-
-  h1 {
-    font-size: 2.5rem; /* Reduce font size for smaller screens */
-  }
-
-  h2 {
-    font-size: 2rem; /* Reduce font size for smaller screens */
-  }
-
-  h3 {
-    font-size: 1.75rem; /* Reduce font size for smaller screens */
-  }
-
-  h4 {
-    font-size: 1.5rem; /* Reduce font size for smaller screens */
-  }
-
-  button {
-    width: 100%; /* Make buttons full width */
-    text-align: center; /* Center text */
-  }
 }
 
 body {
@@ -56,6 +28,9 @@ button {
   @apply font-medium rounded shadow px-4 py-2 transition;
 }
 
+/* ------------------------------
+   Headings
+------------------------------ */
 @layer base {
   h1,
   h2,
@@ -65,6 +40,50 @@ button {
   }
 }
 
+/* ------------------------------
+   Utilities (opt-in classes)
+------------------------------ */
+@layer utilities {
+  /* Make buttons responsive only when desired */
+  .btn-responsive {
+    @apply w-full sm:w-auto;
+  }
+
+  /* Stack flex layouts on mobile */
+  .stack-mobile {
+    @apply flex-col items-center;
+  }
+
+  /* Reset absolute positioning on mobile */
+  .unset-absolute-mobile {
+    @apply static mt-4;
+  }
+}
+
+/* ------------------------------
+   Mobile-specific typography
+------------------------------ */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem; /* Reduce font size for smaller screens */
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ------------------------------
+   Tags
+------------------------------ */
 .tag-pill-meditation-card {
   font-size: 0.75rem; /* text-xs */
   background-color: var(--badge-bg);
@@ -75,148 +94,162 @@ button {
 }
 
 .tag-div-arc-card {
-  display: flex; /* Use flexbox */
-  flex-wrap: nowrap; /* Prevent wrapping to multiple rows */
-  justify-content: center; /* Center tags horizontally */
-  align-items: center; /* Center tags vertically */
-  gap: 0rem; /* Add spacing between tags */
-  margin-top: 0.5rem; /* Adjust spacing above the tags */
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
+  margin-top: 0.5rem;
 }
 
 .tag-pill-arc-card {
-  background-color: var(--brand-primary-dark); /* Tag background color */
-  margin: 0.25rem; /* Space between tags */
-  padding: 0.2rem 0.3rem; /* Adjust padding for smaller tags */
-  border-radius: 9999px; /* Rounded corners */
-  white-space: nowrap; /* Prevent text from breaking into multiple lines */
-  @apply text-xs text-black; /* Tailwind utility classes */
+  background-color: var(--brand-primary-dark);
+  margin: 0.25rem;
+  padding: 0.2rem 0.3rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+  @apply text-xs text-black;
 }
 
+/* ------------------------------
+   Cards
+------------------------------ */
 .card-image {
   max-height: 400px;
   max-width: 100%;
-  object-fit: contain;
+  object-fit: contain; /* ✅ preserve full image */
 }
 
 .card-image-container {
-  max-height: 400px; /* max-h-[400px] */
-  width: 100%; /* w-full */
-  padding: 0.5rem; /* px-4 */
-  display: flex; /* flex */
-  justify-content: center; /* justify-center */
-  align-items: center; /* items-center */
-  border-radius: 1rem; /* rounded-xl */
-  margin-bottom: 0.5rem; /* mb-2 */
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+
+  /* ✅ Let images expand naturally */
+  height: auto;
+  max-height: none;
 }
 
+
+.card-link {
+  text-decoration: none;
+  border: var(--brand-primary-dark) 1px solid;
+  padding: 1rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  @apply block rounded-2xl bg-[var(--bg-card)]/75 shadow-black/20;
+}
 .card-link:hover {
-  scale: 1.01; /* hover:scale-[1.01] */
-  transition-duration: 200ms; /* duration-200 */
-  transition-property: all; /* transition-all */
+  scale: 1.01;
+  transition-duration: 200ms;
+  transition-property: all;
   @apply shadow-lg shadow-yellow-400/20 ring-2 ring-yellow-400/30;
 }
 
-.card-link {
-  text-decoration: none; /* !no-underline */
-  border: var(--brand-primary-dark) 1px solid;
-  padding: 1rem; /* p-4 */
-  box-shadow: var(--shadow-md); /* shadow-md */
-  align-items: center; /* flex items-center */
-  justify-content: center; /* flex justify-center */
-  display: flex; /* flex */
-  flex-direction: column; /* flex-col */
-  text-align: center; /* text-center */
-  @apply block rounded-2xl bg-[var(--bg-card)]/75 shadow-black/20;
-}
-
 .card-onclick {
-  box-shadow: var(--shadow-md); /* shadow-md */
-  cursor: pointer; /* cursor-pointer */
-  backdrop-filter: blur(10px); /* backdrop-blur-sm */
-  padding: 1.25rem; /* p-5 */
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  padding: 1.25rem;
   background-image: linear-gradient(
     to bottom right,
     rgba(255, 255, 255, 0.1),
     rgba(255, 255, 255, 0.05)
-  ); /* bg-gradient-to-br from-white/10 to-white/5 */
-  border-color: rgba(255, 255, 255, 0.1); /* border-white/10 */
-  border-width: 1px; /* border */
-  border-radius: var(--radius-xl); /* rounded-xl */
+  );
+  border-color: rgba(255, 255, 255, 0.1);
+  border-width: 1px;
+  border-radius: var(--radius-xl);
 }
-
 .card-onclick:hover {
-  scale: 1.01; /* hover:scale-[1.01] */
-  transition-duration: 200ms; /* duration-200 */
-  transition-property: all; /* transition-all */
+  scale: 1.01;
+  transition-duration: 200ms;
+  transition-property: all;
   @apply shadow-lg shadow-yellow-400/20 ring-2 ring-yellow-400/30;
 }
+
 .card-title {
-  font-weight: 600; /* font-semibold */
-  font-size: var(--text-lg); /* 1.125rem (18px) - text-lg*/
-  line-height: var(--text-lg--line-height); /* calc(1.75 / 1.125) */
+  font-weight: 600;
+  font-size: var(--text-lg);
+  line-height: var(--text-lg--line-height);
   @apply text-[var(--text-light)];
 }
 
+/* ------------------------------
+   Modals
+------------------------------ */
 .modal-default {
-  width: 90vw; /* w-[90vw] */
-  max-width: var(--container-2xl); /* max-w-2xl */
-  color: var(--color-gray-900); /* oklch(21% 0.034 264.665) */
-  background-color: rgba(254, 250, 224, 0.95); /* bg-[#fefae0]/95 */
-  border-width: 1px; /* border */
-  border-radius: 1rem; /* rounded-xl */
-  border-color: rgba(224, 224, 224, 1); /* border-gray-300 */
-  box-shadow: var(--shadow-lg); /* shadow-lg */
-  padding: 1.5rem; /* p-6 */
+  width: 90vw;
+  max-width: var(--container-2xl);
+  color: var(--color-gray-900);
+  background-color: rgba(254, 250, 224, 0.95);
+  border-width: 1px;
+  border-radius: 1rem;
+  border-color: rgba(224, 224, 224, 1);
+  box-shadow: var(--shadow-lg);
+  padding: 1.5rem;
   @apply relative font-serif;
 }
 
 .modal-background {
-  position: fixed; /* fixed */
-  display: flex; /* flex */
-  top: 0; /* top-0 */
-  left: 0; /* left-0 */
-  width: 100vw; /* w-screen */
-  height: 100vh; /* h-screen */
-  background-color: rgba(0, 0, 0, 0.8); /* bg-black/50 */
-  z-index: 50; /* z-50 */
-  justify-content: center; /* justify-center */
-  align-items: center; /* items-center */
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 50;
+  justify-content: center;
+  align-items: center;
 }
 
+/* ------------------------------
+   Layout Helpers
+------------------------------ */
 .main-background {
   background: linear-gradient(
     to bottom,
     var(--bg-light) 0%,
     var(--bg-mid) 50%,
     var(--bg-dark) 100%
-  ); /* bg-gradient-to-b from-[var(--bg-light)] via-[var(--bg-mid)] to-[var(--bg-dark)] */
-  min-height: 100vh; /* min-h-screen */
+  );
+  min-height: 100vh;
 }
 
 .header {
   padding: 1rem;
-  text-align: center; /* text-center */
+  text-align: center;
 }
 
 .section-standard {
-  @apply md:flex-row;
-  display: flex; /* flex */
-  justify-content: center; /* justify-center */
-  align-items: center; /* items-center */
-  margin-bottom: 2.5rem; /* mb-10 */
-  margin-inline: auto; /* mx-auto */
-  max-width: 50%; /* max-w-5xl */
-  gap: 1rem; /* gap-4 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  margin-inline: auto;
+  gap: 1rem;
+
+  max-width: 100%;   /* ✅ full width on mobile */
 }
 
-.section-standard:md {
-  flex-direction: row; /* md:flex-row */
+@media (min-width: 768px) {
+  .section-standard {
+    max-width: 50%;  /* ✅ narrower only on desktop */
+    flex-direction: row;
+  }
 }
 
 .input-style {
   @apply w-full px-4 py-2 rounded bg-white/10 border border-white/20 text-white placeholder-gray-400;
 }
 
-@tailwind base;
-@tailwind components;
+
 @tailwind utilities;

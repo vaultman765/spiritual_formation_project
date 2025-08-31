@@ -94,37 +94,39 @@ export default function ExplorePage() {
       </header>
 
       {/* Action Buttons */}
-      <section className="section-standard">
-        <Link
-          to="/create-custom-journey"
-          className="!no-underline text-base font-semibold bg-[var(--brand-primary)] !text-black px-6 py-2 rounded shadow-md shadow-black/20 hover:bg-[var(--hover-gold)] hover:ring-2 hover:ring-yellow-300/70 focus:ring"
-        >
-          Create a Custom Journey
-        </Link>
-        <Link
-          to="/explore/prebuilt"
-          className="!no-underline text-base font-semibold bg-[var(--brand-primary)] !text-black px-6 py-2 rounded shadow-md shadow-black/20 hover:bg-[var(--hover-gold)] hover:ring-2 hover:ring-yellow-300/70 focus:ring"
-        >
-          Browse Prebuilt Journeys
-        </Link>
+      <section className="px-6 mb-6 max-w-4xl mx-auto">
+        <div className="flex flex-col sm:flex-row gap-3 w-full sm:justify-center">
+          <Link
+            to="/create-custom-journey"
+            className="!no-underline text-base font-semibold bg-[var(--brand-primary)] !text-[var(--bg-dark)] px-6 py-3 rounded shadow-md shadow-black/20 hover:bg-[var(--hover-gold)] hover:ring-2 hover:ring-yellow-300/70 focus:ring w-full sm:w-auto text-center"
+          >
+            Create a Custom Journey
+          </Link>
+          <Link
+            to="/explore/prebuilt"
+            className="!no-underline text-base font-semibold bg-[var(--brand-primary)] !text-[var(--bg-dark)] px-6 py-3 rounded shadow-md shadow-black/20 hover:bg-[var(--hover-gold)] hover:ring-2 hover:ring-yellow-300/70 focus:ring w-full sm:w-auto text-center"
+          >
+            Browse Prebuilt Journeys
+          </Link>
+        </div>
       </section>
 
-      {/* Search Bar */}
-      <section className="section-standard">
-        <input
-          type="text"
-          placeholder="Search arcs..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="px-4 py-2 rounded bg-white/10 border border-white/20 text-white placeholder-gray-400 w-full md:w-1/2"
-        />
-
-        {/* Tag Filter Dropdown */}
-        <TagFilterDropdown selected={selectedTag} onChange={setSelectedTag} options={tagOptions} />
+      {/* Search + Filter */}
+      <section className="px-6 mb-6 max-w-4xl mx-auto">
+        <div className="flex flex-col sm:flex-row gap-3 w-full sm:justify-center">
+          <input
+            type="text"
+            placeholder="Search arcs..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="input-style w-full sm:w-1/2"
+          />
+          <TagFilterDropdown selected={selectedTag} onChange={setSelectedTag} options={tagOptions} />
+        </div>
       </section>
 
       {/* Arc Grid */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto overflow-visible">
         {filteredArcs.map((arc) => (
           <DetailArcCard key={arc.arc_id} arc={arc} />
         ))}

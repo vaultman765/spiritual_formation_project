@@ -64,8 +64,8 @@ export default function Navbar() {
 
           {user ? (
             <div className="flex items-center space-x-4">
-              <span className="text-white/70">Welcome, {user.username}</span>
-              <button onClick={handleLogout} className="text-white border border-white/30 rounded px-3 py-1 hover:bg-white/10">
+              <span className="text-[var(--gray-100)]">Welcome, {user.username}</span>
+              <button onClick={handleLogout} className="text-[var(--gray-100)] border border-white/30 rounded px-3 py-1 hover:bg-white/10">
                 Logout
               </button>
             </div>

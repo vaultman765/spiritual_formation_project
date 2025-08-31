@@ -1,4 +1,5 @@
 import SeoMeta from "@/components/seo/SeoMeta";
+import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchTodayMeditation } from "@/api/homepage";
 import type { MeditationData } from "@/utils/types";
@@ -51,6 +52,8 @@ const breadcrumbsJsonLd = {
 export default function InDepthHowToPrayPage() {
   const pdfUrl = "/docs/resources/Ignatian_Mental_Prayer_Step_by_Step.pdf";
   const [today, setToday] = useState<MeditationData | null>(null);
+  const location = useLocation();
+  const canonicalUrl = `https://www.catholicmentalprayer.com${location.pathname}`;
 
   useEffect(() => {
     fetchTodayMeditation().then(setToday).catch(console.error);
@@ -61,7 +64,7 @@ export default function InDepthHowToPrayPage() {
       <SeoMeta
         title="Ignatian Mental Prayer — In-Depth Guide (PDF)"
         description="Printable, detailed article expanding the beginner method with tips, examples, and step-by-step help."
-        canonicalUrl="https://www.catholicmentalprayer.com/how-to-pray/guide"
+        canonicalUrl={canonicalUrl}
         imageUrl="https://www.catholicmentalprayer.com/images/how_to_pray/how_to_pray.jpg"
         keywords="Spiritual Formation, Mental Prayer, Ignatian Prayer, Catholic Prayer, Prayer Guide, How to Pray, Christian Meditation, Prayer Techniques, Spiritual Growth, In Depth Guide"
         type="article"
@@ -84,27 +87,35 @@ export default function InDepthHowToPrayPage() {
               !
             </p>
           )}
+        </header>
 
-          <div className="mt-4">
+        {/* PDF Viewer with mobile fallback */}
+        <section className="px-6 py-6 max-w-5xl mx-auto">
+          {/* Desktop viewer */}
+          <div className="hidden sm:block h-[90vh]">
+            <iframe src={pdfUrl} title="How to Pray PDF" className="w-full h-full border rounded bg-white overflow-auto" />
+          </div>
+
+          {/* Mobile viewer alternative */}
+          <div className="sm:hidden text-center">
+            <p className="mb-4 text-[var(--text-muted)]">For best experience on mobile, use the direct link:</p>
             <a
               href={pdfUrl}
-              className="inline-block rounded-2xl border border-white/15 bg-[var(--brand-primary-dark)]/90 px-4 py-2 !text-black no-underline shadow"
+              className="inline-block rounded-2xl border border-white/15 bg-[var(--brand-primary-dark)]/90 px-4 py-2 !text-black no-underline shadow mb-4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open PDF in Browser
+            </a>
+            <p className="mt-4 text-sm text-[var(--text-muted)]">Or download to view offline:</p>
+            <a
+              href={pdfUrl}
+              className="inline-block rounded-2xl border border-white/15 bg-gray-700 px-4 py-2 text-white no-underline shadow"
               download
             >
               Download PDF
             </a>
           </div>
-        </header>
-
-        <section className="rounded-2xl border border-white/15 bg-[var(--bg-card)]/75 p-3 shadow-sm shadow-black/20">
-          <object data={pdfUrl} type="application/pdf" className="w-full" style={{ height: "80vh" }}>
-            <p className="p-4 text-[var(--text-main)]">
-              Your browser can’t display the PDF.{" "}
-              <a className="underline" href={pdfUrl} download>
-                Click here to download it.
-              </a>
-            </p>
-          </object>
         </section>
       </article>
     </main>
