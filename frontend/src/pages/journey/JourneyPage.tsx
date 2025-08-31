@@ -207,7 +207,7 @@ export default function JourneyPage() {
         <section>
           <h2 className="text-xl font-semibold text-[var(--text-subtle-heading)] text-center mb-4">Journey Progress</h2>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
             {visibleArcs?.map((arc) => (
               <JourneyArcCard key={arc.arc_id} {...arc} />
             ))}
