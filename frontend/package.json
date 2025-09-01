@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "staging": "tsc -b && vite build --mode staging",
-    "build": "tsc -b && vite build --mode production",
+    "build": "npm run gen:cards && tsc -b && vite build --mode production",
+    "gen:cards": "node scripts/generate-cards.mjs",
     "preview": "vite preview",
     "test": "jest --coverage",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
