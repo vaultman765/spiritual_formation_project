@@ -7,7 +7,16 @@ import { readdir } from 'node:fs/promises';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SITE_URL = 'https://www.catholicmentalprayer.com';
-const API_URL = process.env.VITE_API_URL || 'https://api.catholicmentalprayer.com';
+// Only allow API_URL values from a verified allow-list to prevent SSRF
+const ALLOWED_API_URLS = [
+  'https://api.catholicmentalprayer.com',
+  // If you have staging/dev endpoints, add them here explicitly
+  // 'https://staging-api.catholicmentalprayer.com'
+];
+const ENV_API_URL = process.env.VITE_API_URL;
+const API_URL = (ENV_API_URL && ALLOWED_API_URLS.includes(ENV_API_URL))
+  ? ENV_API_URL
+  : 'https://api.catholicmentalprayer.com';
 
 
 /**
