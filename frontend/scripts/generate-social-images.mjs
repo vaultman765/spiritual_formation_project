@@ -1,7 +1,3 @@
-// Generate padded 1200x630 JPEGs for social sharing
-// Input folders (existing): public/images/arc_days, public/images/arc_whole
-// Output folders: public/social/arc_days, public/social/arc_whole
-
 import fs from 'node:fs';
 import path from 'node:path';
 import { glob } from 'glob';
@@ -19,20 +15,33 @@ const OUT_ARCS   = path.join(ROOT, 'public/images/social/arc_whole');
 
 const WIDTH = 1200;
 const HEIGHT = 630;
-// pick background that fits your site; white tends to look clean on X
-const BACKGROUND = { r: 255, g: 255, b: 255, alpha: 1 };
 
-// ensure dirs
 for (const d of [OUT_DAYS, OUT_ARCS]) fs.mkdirSync(d, { recursive: true });
 
 async function processOne(srcFile, outFile) {
   try {
-    const img = sharp(srcFile).rotate(); // auto-orient
-    const resized = await img
-      .resize(WIDTH, HEIGHT, { fit: 'contain', background: BACKGROUND })
-      .jpeg({ quality: 85, chromaSubsampling: '4:4:4' })
+    const input = sharp(srcFile).rotate(); // auto-orient
+
+    // Background = blurred + darkened cover
+    const background = await input
+      .clone()
+      .resize(WIDTH, HEIGHT, { fit: 'cover' })
+      .blur(50)
+      .modulate({ brightness: 0.6 }) // darken slightly
       .toBuffer();
-    await fs.promises.writeFile(outFile, resized);
+
+    // Foreground = fit inside with transparent padding
+    const foreground = await input
+      .clone()
+      .resize(WIDTH, HEIGHT, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+      .toBuffer();
+
+    // Composite
+    await sharp(background)
+      .composite([{ input: foreground, gravity: 'center' }])
+      .jpeg({ quality: 85, chromaSubsampling: '4:4:4' })
+      .toFile(outFile);
+
     console.log('✓', path.relative(ROOT, outFile));
   } catch (e) {
     console.warn('✗', srcFile, e.message);
