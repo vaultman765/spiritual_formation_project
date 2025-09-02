@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "staging": "tsc -b && vite build --mode staging",
-    "build": "npm run gen:cards && tsc -b && vite build --mode production && npm run build:social",
+    "build": "npm run gen:cards && npm run build:social && tsc -b && vite build --mode production",
     "gen:cards": "node scripts/generate-cards.mjs",
     "build:social": "node ./scripts/generate-social-images.mjs",
     "preview": "vite preview",
