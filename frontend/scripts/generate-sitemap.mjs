@@ -18,6 +18,7 @@ const STATIC_ROUTES = [
   { url: '/home',                 changefreq: 'daily',   priority: 0.9 },
   { url: '/explore',              changefreq: 'daily',   priority: 0.8 },
   { url: '/how-to-pray',          changefreq: 'monthly', priority: 0.7 },
+  { url: '/how-to-pray/guide',    changefreq: 'monthly', priority: 0.7 },
   { url: '/start-journey',        changefreq: 'monthly', priority: 0.6 },
   { url: '/auth/login',           changefreq: 'yearly',  priority: 0.3 },
   { url: '/auth/register',        changefreq: 'yearly',  priority: 0.3 },
@@ -111,7 +112,7 @@ async function run() {
   smStream.end();
   await streamToPromise(smStream);
 
-  console.log(`[sitemap] wrote ${outPath} with ${STATIC_ROUTES.length + dynamicRoutes.length} URLs`);
+  console.log(`[sitemap] wrote ${outPath} with ${STATIC_ROUTES.length + dynamicRoutes.length + assetRoutes.length} URLs`);
 }
 
 run().catch(e => {
