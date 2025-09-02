@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const OUT_ROOT = path.join(process.cwd(), "public"); // or "static" depending on your setup
+const OUT_ROOT = path.join(process.cwd(), "public");
 const cards = JSON.parse(fs.readFileSync("scripts/cards.config.json", "utf8"));
 
 const tpl = ({ type, title, description, canonicalUrl, image, twitterHandle = "@RCMentalPrayer" }) => `<!doctype html>
