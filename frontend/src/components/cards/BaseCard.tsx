@@ -81,6 +81,7 @@ export function CardImage({
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           alt={altText}
           loading="lazy"
+          decoding="async"
           className={imgClassName}
         />
       </picture>
