@@ -4,6 +4,7 @@ import { fetchArcById } from "@/api/arcs";
 import { fetchDaysByArcId } from "@/api/days";
 import SeoMeta from "@/components/seo/SeoMeta";
 import type { ArcData, DaySummary } from "@/utils/types";
+import { CardImage } from "@/components/cards/BaseCard";
 
 export default function ArcPage() {
   const { arcId } = useParams<{ arcId: string }>();
@@ -95,10 +96,10 @@ export default function ArcPage() {
       {/* Arc Overview Section */}
       <section className="flex flex-col lg:flex-row justify-center items-start lg:items-center gap-10 max-w-6xl mx-auto mb-12">
         {/* Image */}
-        <img
-          src={`/images/arc_whole/${arc.arc_id}.jpg`}
-          alt={arc.arc_title}
-          className="rounded-xl border-[3px] border-yellow-500 shadow-lg shadow-black/30 max-h-[420px] w-auto max-w-lg object-contain"
+        <CardImage
+          imageSrc={`/images/arc_whole/${arc.arc_id}.jpg`}
+          altText={arc.arc_title}
+          divClassName="rounded-xl border-[3px] border-yellow-500 shadow-lg shadow-black/30 max-h-[420px] w-auto max-w-lg object-contain"
         />
 
         {/* Text Block */}

@@ -9,6 +9,7 @@ import type { MeditationData, MeditationNote } from "@/utils/types";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
 import SeoMeta from "@/components/seo/SeoMeta";
+import { CardImage } from "@/components/cards/BaseCard";
 
 export default function MeditationDayPage() {
   const { user } = useAuth();
@@ -216,10 +217,11 @@ export default function MeditationDayPage() {
         <div className="flex flex-col md:flex-row gap-x-12 gap-y-6 items-center">
           {/* Image */}
           <div className="flex-shrink-0">
-            <img
-              src={`/images/arc_days/${day.arc_id}_day_${String(day.arc_day_number).padStart(2, "0")}.jpg`}
-              alt={day.day_title}
-              className="rounded-xl border-2 border-yellow-500 max-w-sm w-full object-contain shadow-lg shadow-black/20"
+            <CardImage
+              imageSrc={`/images/arc_days/${day.arc_id}_day_${String(day.arc_day_number).padStart(2, "0")}.jpg`}
+              altText={day.day_title}
+              divClassName="flex justify-center w-full"
+              imgClassName="rounded-lg shadow-md max-h-[600px] object-contain"
             />
           </div>
 

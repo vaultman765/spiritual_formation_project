@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "vite",
     "staging": "tsc -b && vite build --mode staging",
-    "build": "npm run gen:cards && npm run build:social && tsc -b && vite build --mode production",
+    "build": "npm run gen:cards && npm run build:social && npm run build:images && tsc -b && vite build --mode production",
     "gen:cards": "node scripts/generate-cards.mjs",
     "build:social": "node ./scripts/generate-social-images.mjs",
+    "build:images": "node scripts/generate-site-images.mjs",
     "preview": "vite preview",
     "test": "jest --coverage",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
