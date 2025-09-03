@@ -210,6 +210,10 @@ frontend/coverage
 # production
 frontend/build
 
+# images
+frontend/public/images/site_images/*
+frontend/public/images/social/*
+
 # misc
 .DS_Store
 .env.local
@@ -223,3 +227,4 @@ yarn-error.log*
 
 scratch*.txt
 PROJECT_HANDBOOK.md
+
