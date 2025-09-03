@@ -20,7 +20,7 @@ const SRC_FOLDERS = [
 // Output folder (optimized versions)
 const OUT_DIR = path.join(ROOT, "public/images/site_images");
 
-// ✅ Cache file in public/ so it always goes into dist + S3
+// Cache file in public/ so it always goes into dist + S3
 const CACHE_FILE = path.join(ROOT, "public", ".image-cache.json");
 
 // Target widths for responsive images
@@ -91,7 +91,7 @@ async function run() {
   }
 
   fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2));
-  console.log(`📝 cache updated: ${CACHE_FILE}`);
+  console.log(`Cache updated: ${CACHE_FILE}`);
 }
 
 run().catch((err) => {
