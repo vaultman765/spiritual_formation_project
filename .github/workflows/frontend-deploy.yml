@@ -100,6 +100,12 @@ jobs:
           cache: npm
           cache-dependency-path: frontend/package-lock.json
 
+      - name: Configure AWS (OIDC)
+        uses: aws-actions/configure-aws-credentials@7474bc4690e29a8392af63c5b98e7449536d5c3a
+        with:
+          role-to-assume: ${{ env.ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
       - name: Download .image-cache.json from S3
         run: |
           aws s3 cp "s3://${{ env.BUCKET }}/.image-cache.json" frontend/public/.image-cache.json || echo "No cache file yet"
@@ -111,12 +117,6 @@ jobs:
         env:
           NODE_OPTIONS: --max_old_space_size=4096
         run: npm run build
-
-      - name: Configure AWS (OIDC)
-        uses: aws-actions/configure-aws-credentials@7474bc4690e29a8392af63c5b98e7449536d5c3a
-        with:
-          role-to-assume: ${{ env.ROLE_ARN }}
-          aws-region: ${{ env.AWS_REGION }}
 
       - name: Sync to S3
         run: aws s3 sync ./dist "s3://${{ env.BUCKET }}" --delete
