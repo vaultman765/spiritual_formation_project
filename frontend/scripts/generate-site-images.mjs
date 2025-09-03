@@ -21,15 +21,19 @@ const SRC_FOLDERS = [
 const OUT_DIR = path.join(ROOT, "public/images/site_images");
 
 // Cache file in public/ so it always goes into dist + S3
-const CACHE_FILE = path.join(ROOT, "public", ".image-cache.json");
+const CACHE_FILE = path.join(ROOT, "public/.image-cache.json");
 
 // Target widths for responsive images
 const WIDTHS = [400, 800, 1200];
 
-// Load or init cache
+// Load cache if exists
 let cache = {};
 if (fs.existsSync(CACHE_FILE)) {
-  cache = JSON.parse(fs.readFileSync(CACHE_FILE, "utf-8"));
+  try {
+    cache = JSON.parse(fs.readFileSync(CACHE_FILE, "utf-8"));
+  } catch {
+    console.warn("⚠️ Failed to parse existing cache, starting fresh.");
+  }
 }
 
 // Ensure output dir exists
@@ -91,7 +95,7 @@ async function run() {
   }
 
   fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2));
-  console.log(`Cache updated: ${CACHE_FILE}`);
+  console.log("✓ wrote cache file", CACHE_FILE);
 }
 
 run().catch((err) => {
