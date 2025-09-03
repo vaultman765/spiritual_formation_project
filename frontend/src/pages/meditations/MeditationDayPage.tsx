@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
 import SeoMeta from "@/components/seo/SeoMeta";
 import { CardImage } from "@/components/cards/BaseCard";
+import { Helmet } from "react-helmet-async";
 
 export default function MeditationDayPage() {
   const { user } = useAuth();
@@ -34,6 +35,7 @@ export default function MeditationDayPage() {
   const [note, setNote] = useState<MeditationNote | null>(null);
   const location = useLocation();
   const canonicalUrl = `https://www.catholicmentalprayer.com${location.pathname}`;
+  const base = `/images/site_images/arc_days/${day?.arc_id}_day_${String(day?.arc_day_number).padStart(2, "0")}`;
 
   const refreshNote = async () => {
     if (!day?.master_day_number) return;
@@ -158,6 +160,21 @@ export default function MeditationDayPage() {
         jsonLd={meditationStructuredData}
         breadcrumbsJsonLd={meditationBreadcrumbData}
       />
+
+      <Helmet>
+        <link
+          rel="preload"
+          as="image"
+          href={`${base}-800.avif`}
+          type="image/avif"
+          imageSrcSet={`
+            ${base}-400.avif 400w,
+            ${base}-800.avif 800w,
+            ${base}-1200.avif 1200w
+          `}
+          imageSizes="100vw"
+        />
+      </Helmet>
 
       {/* Header */}
       <section className="text-center mb-6 relative">
