@@ -1,5 +1,4 @@
 // Optimize site images for performance (WebP + AVIF + resized JPG fallback)
-// Only reprocess if the source image changed (checksum-based cache)
 
 import fs from "node:fs";
 import path from "node:path";
@@ -21,29 +20,24 @@ const SRC_FOLDERS = [
 // Output folder (optimized versions)
 const OUT_DIR = path.join(ROOT, "public/images/site_images");
 
+// ✅ Cache file in public/ so it always goes into dist + S3
+const CACHE_FILE = path.join(ROOT, "public", ".image-cache.json");
+
 // Target widths for responsive images
 const WIDTHS = [400, 800, 1200];
 
-// Cache file
-const CACHE_FILE = path.join(ROOT, ".image-cache.json");
-
-// Load existing cache
+// Load or init cache
 let cache = {};
 if (fs.existsSync(CACHE_FILE)) {
-  try {
-    cache = JSON.parse(fs.readFileSync(CACHE_FILE, "utf-8"));
-  } catch {
-    cache = {};
-  }
+  cache = JSON.parse(fs.readFileSync(CACHE_FILE, "utf-8"));
 }
 
 // Ensure output dir exists
 fs.mkdirSync(OUT_DIR, { recursive: true });
 
-// Utility: compute checksum of a file
-function fileChecksum(file) {
-  const data = fs.readFileSync(file);
-  return crypto.createHash("md5").update(data).digest("hex");
+function fileChecksum(filePath) {
+  const fileBuffer = fs.readFileSync(filePath);
+  return crypto.createHash("md5").update(fileBuffer).digest("hex");
 }
 
 async function optimizeImage(srcFile, relPath) {
@@ -53,40 +47,36 @@ async function optimizeImage(srcFile, relPath) {
 
   const checksum = fileChecksum(srcFile);
 
-  // Skip if checksum matches cache
+  // Skip if checksum matches
   if (cache[relPath] === checksum) {
-    console.log("↷ skip (unchanged)", relPath);
+    console.log("• skipped (no change)", relPath);
     return;
   }
 
-  // Otherwise, reprocess
+  const buffer = sharp(srcFile).rotate();
+
   for (const width of WIDTHS) {
     // WebP
-    await sharp(srcFile)
-      .rotate()
+    await buffer
       .resize(width, null, { fit: "inside", withoutEnlargement: true })
       .webp({ quality: 80 })
       .toFile(path.join(outDir, `${baseName}-${width}.webp`));
 
     // AVIF
-    await sharp(srcFile)
-      .rotate()
+    await buffer
       .resize(width, null, { fit: "inside", withoutEnlargement: true })
       .avif({ quality: 50 })
       .toFile(path.join(outDir, `${baseName}-${width}.avif`));
 
     // JPEG fallback
-    await sharp(srcFile)
-      .rotate()
+    await buffer
       .resize(width, null, { fit: "inside", withoutEnlargement: true })
       .jpeg({ quality: 80, progressive: true, chromaSubsampling: "4:4:4" })
       .toFile(path.join(outDir, `${baseName}-${width}.jpg`));
   }
 
-  console.log("✓ optimized", relPath);
-
-  // Update cache
   cache[relPath] = checksum;
+  console.log("✓ optimized", relPath);
 }
 
 async function run() {
@@ -100,8 +90,8 @@ async function run() {
     }
   }
 
-  // Save updated cache
   fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2));
+  console.log(`📝 cache updated: ${CACHE_FILE}`);
 }
 
 run().catch((err) => {
