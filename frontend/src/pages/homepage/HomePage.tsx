@@ -6,6 +6,7 @@ import MeditationCard from "@/components/cards/MeditationCard";
 import { CustomLinkCard, CardTitle } from "@/components/cards/BaseCard";
 import type { MeditationData } from "@/utils/types";
 import SeoMeta from "@/components/seo/SeoMeta";
+import { Helmet } from "react-helmet-async";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -77,7 +78,6 @@ export default function HomePage() {
         });
     } else {
       fetchTodayMeditation().then(setToday).catch(console.error);
-
       fetchTomorrowMeditation().then(setTomorrow).catch(console.error);
     }
   }, [user]);
@@ -132,6 +132,27 @@ export default function HomePage() {
     ],
   };
 
+  // helper to build preload links
+  const renderPreload = (med: MeditationData) => {
+    const base = `/images/site_images/arc_days/${med.arc_id}_day_${String(med.arc_day_number).padStart(2, "0")}`;
+    return (
+      <Helmet>
+        <link
+          rel="preload"
+          as="image"
+          href={`${base}-800.avif`}
+          type="image/avif"
+          imageSrcSet={`
+            ${base}-400.avif 400w,
+            ${base}-800.avif 800w,
+            ${base}-1200.avif 1200w
+          `}
+          imageSizes="100vw"
+        />
+      </Helmet>
+    );
+  };
+
   return (
     <main>
       <SeoMeta
@@ -143,6 +164,11 @@ export default function HomePage() {
         jsonLd={homepageStructuredData}
         breadcrumbsJsonLd={homepageBreadcrumbData}
       />
+
+      {/* preload today's and tomorrow's hero images */}
+      {today && renderPreload(today)}
+      {tomorrow && renderPreload(tomorrow)}
+
       <header className="header">
         <h1 className="text-5xl md:text-6xl font-display font-semibold text-[var(--text-main)]">
           Encounter God through Ignatian Mental Prayer

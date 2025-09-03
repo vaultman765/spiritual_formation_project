@@ -24,7 +24,7 @@ export default function MeditationCard({ dayTitle, subtitle, imageSrc, altText, 
             imageSrc={imageSrc}
             altText={altText}
             divClassName="flex justify-center w-full"
-            imgClassName="card-image max-h-[320px] object-contain"
+            imgClassName="card-image aspect-[4/3] w-full h-auto"
           />
         </div>
         {tag && (

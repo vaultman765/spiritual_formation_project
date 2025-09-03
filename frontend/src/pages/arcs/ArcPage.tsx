@@ -5,6 +5,7 @@ import { fetchDaysByArcId } from "@/api/days";
 import SeoMeta from "@/components/seo/SeoMeta";
 import type { ArcData, DaySummary } from "@/utils/types";
 import { CardImage } from "@/components/cards/BaseCard";
+import { Helmet } from "react-helmet-async";
 
 export default function ArcPage() {
   const { arcId } = useParams<{ arcId: string }>();
@@ -12,6 +13,7 @@ export default function ArcPage() {
   const [days, setDays] = useState<DaySummary[]>([]);
   const location = useLocation();
   const canonicalUrl = `https://www.catholicmentalprayer.com${location.pathname}`;
+  const base = `/images/site_images/arc_whole/${arc?.arc_id}`;
 
   useEffect(() => {
     if (!arcId) return;
@@ -87,6 +89,22 @@ export default function ArcPage() {
         jsonLd={arcStructuredData}
         breadcrumbsJsonLd={arcBreadcrumbData}
       />
+
+      <Helmet>
+        <link
+          rel="preload"
+          as="image"
+          href={`${base}-800.avif`}
+          type="image/avif"
+          imageSrcSet={`
+            ${base}-400.avif 400w,
+            ${base}-800.avif 800w,
+            ${base}-1200.avif 1200w
+          `}
+          imageSizes="100vw"
+        />
+      </Helmet>
+
       {/* Title */}
       <section className="text-center mb-10">
         <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-main)]">{arc.arc_title}</h1>
