@@ -76,7 +76,6 @@ jobs:
   prod:
     name: Deploy Prod
     runs-on: ubuntu-latest
-    # Only on push to main (never PRs, never release/*)
     if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.PROD_ENABLED == 'true'
 
     env:
@@ -108,7 +107,7 @@ jobs:
 
       - name: Download .image-cache.json from S3
         run: |
-          aws s3 cp "s3://${{ env.BUCKET }}/.image-cache.json" frontend/public/.image-cache.json || echo "No cache file yet"
+          aws s3 cp "s3://${{ env.BUCKET }}/.image-cache.json" public/.image-cache.json || echo "No cache file yet"
 
       - name: Install deps
         run: npm ci --legacy-peer-deps
@@ -123,7 +122,7 @@ jobs:
 
       - name: Re-upload .image-cache.json with no-cache
         run: |
-          aws s3 cp frontend/public/.image-cache.json "s3://${{ env.BUCKET }}/.image-cache.json" \
+          aws s3 cp public/.image-cache.json "s3://${{ env.BUCKET }}/.image-cache.json" \
             --cache-control "no-cache, must-revalidate" \
             --content-type "application/json" \
             --metadata-directive REPLACE
