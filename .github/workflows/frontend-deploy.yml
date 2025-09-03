@@ -117,8 +117,11 @@ jobs:
           NODE_OPTIONS: --max_old_space_size=4096
         run: npm run build
 
-      - name: Sync to S3
-        run: aws s3 sync ./dist "s3://${{ env.BUCKET }}" --delete
+      - name: Sync app (delete old files)
+        run: aws s3 sync ./dist "s3://${{ env.BUCKET }}" --delete --exclude "images/site_images/*"
+
+      - name: Sync site_images (preserve existing)
+        run: aws s3 sync ./dist/images/site_images "s3://${{ env.BUCKET }}/images/site_images" --exact-timestamps
 
       - name: Re-upload .image-cache.json with no-cache
         run: |

@@ -1,5 +1,4 @@
 // Optimize site images for performance (WebP + AVIF + resized JPG fallback)
-
 import fs from "node:fs";
 import path from "node:path";
 import { glob } from "glob";
