@@ -2,14 +2,14 @@ name: Frontend - Deploy
 
 on:
   push:
-    branches: [ main, 'release*' ]
+    branches: [main, "release*"]
     paths:
-      - 'frontend/**'
-      - 'package.json'
-      - 'pnpm-lock.yaml'
-      - 'vite.config.ts'
-      - '.env.*'
-      - 'frontend-deploy.yml'
+      - "frontend/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "vite.config.ts"
+      - ".env.*"
+      - "frontend-deploy.yml"
   workflow_dispatch: {}
 
 concurrency:
@@ -28,14 +28,14 @@ jobs:
 
     env:
       AWS_REGION: ${{ vars.AWS_REGION }}
-      ROLE_ARN:   ${{ vars.ROLE_ARN_FRONTEND_STAGING }}
-      BUCKET:     ${{ vars.FRONTEND_BUCKET_STAGING }}
+      ROLE_ARN: ${{ vars.ROLE_ARN_FRONTEND_STAGING }}
+      BUCKET: ${{ vars.FRONTEND_BUCKET_STAGING }}
       CF_DIST_ID: ${{ vars.CF_FRONTEND_DIST_ID_STAGING }}
-      VITE_MODE:  staging
+      VITE_MODE: staging
 
     defaults:
       run:
-        working-directory: frontend  
+        working-directory: frontend
 
     steps:
       - uses: actions/checkout@v4
@@ -45,7 +45,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: frontend/package-lock.json 
+          cache-dependency-path: frontend/package-lock.json
 
       - name: Install deps (robust)
         run: |
@@ -81,14 +81,14 @@ jobs:
 
     env:
       AWS_REGION: ${{ vars.AWS_REGION }}
-      ROLE_ARN:   ${{ vars.ROLE_ARN_FRONTEND_PROD }}
-      BUCKET:     ${{ vars.FRONTEND_BUCKET_PROD }}
+      ROLE_ARN: ${{ vars.ROLE_ARN_FRONTEND_PROD }}
+      BUCKET: ${{ vars.FRONTEND_BUCKET_PROD }}
       CF_DIST_ID: ${{ vars.CF_FRONTEND_DIST_ID_PROD }}
-      VITE_MODE:  production
+      VITE_MODE: production
 
     defaults:
       run:
-        working-directory: frontend 
+        working-directory: frontend
 
     steps:
       - uses: actions/checkout@v4
@@ -98,7 +98,11 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: frontend/package-lock.json 
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Download .image-cache.json from S3
+        run: |
+          aws s3 cp "s3://${{ env.BUCKET }}/.image-cache.json" frontend/public/.image-cache.json || echo "No cache file yet"
 
       - name: Install deps
         run: npm ci --legacy-peer-deps
@@ -110,13 +114,19 @@ jobs:
 
       - name: Configure AWS (OIDC)
         uses: aws-actions/configure-aws-credentials@7474bc4690e29a8392af63c5b98e7449536d5c3a
-
         with:
           role-to-assume: ${{ env.ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Sync to S3
         run: aws s3 sync ./dist "s3://${{ env.BUCKET }}" --delete
+
+      - name: Re-upload .image-cache.json with no-cache
+        run: |
+          aws s3 cp frontend/public/.image-cache.json "s3://${{ env.BUCKET }}/.image-cache.json" \
+            --cache-control "no-cache, must-revalidate" \
+            --content-type "application/json" \
+            --metadata-directive REPLACE
 
       - name: Invalidate CloudFront
         run: aws cloudfront create-invalidation --distribution-id "${{ env.CF_DIST_ID }}" --paths "/*"
