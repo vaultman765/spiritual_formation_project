@@ -10,9 +10,9 @@ gunicorn = "*"
 psycopg2-binary = "*"
 django-storages = "*"
 boto3 = "*"
-django = "5.1.*"
 referencing = "*"
 jsonschema = "*"
+django = "5.1.*"
 
 [dev-packages]
 pytest = "*"
