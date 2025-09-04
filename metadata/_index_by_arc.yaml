@@ -94,3 +94,7 @@ arc_beatitudes:
   arc_number: 24
   start_day: 183
   end_day: 192
+arc_anima_christi:
+  arc_number: 25
+  start_day: 193
+  end_day: 203

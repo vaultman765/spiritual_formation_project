@@ -1818,3 +1818,110 @@
     - beatitudes
     - discipleship
     - virtues
+- arc_id: arc_anima_christi
+  arc_title: The Anima Christi
+  arc_number: 25
+  day_count: 11
+  master_day_range:
+    start: 193
+    end: 203
+  anchor_image:
+    - At the foot of the Cross, you see His Blood dripping down. It pools near you,
+      staining the ground. The Precious Blood is not frightening — it is warmth, life,
+      and mystery poured out for your soul.
+    - Christ stands firm in the wilderness, the tempter at His side. The sun blazes
+      on the sand; the stones at His feet remain untouched. “Begone, Satan!” resounds
+      in the silence.
+    - Jesus speaks to you on the Mount. As you gaze upon Him, radiant and meek, He
+      utters the first invocation of the Anima Christi. You feel the weight and beauty
+      of His soul reaching to sanctify yours.
+    - You are at Calvary. Christ hangs on the Cross. He lifts His eyes to heaven and
+      breathes, “Father, into Your hands I commend My spirit.” Mary and John remain
+      still beneath the darkened sky.
+    - You are in the Garden of Gethsemane. The night is thick with dread. You see
+      Jesus kneeling alone, trembling, sweat like blood falling to the ground. An
+      angel appears, strengthening Him. You feel the weight of His sorrow, borne for
+      love of you.
+    - You are in the upper room with the apostles. Christ appears — risen and radiant.
+      He extends His hands. 'Put your finger here,' He says. You draw close, trembling,
+      and rest in His wounds.
+    - You are kneeling just behind the blind man Bartimaeus on the roadside. He cries
+      out — and Jesus stops. You feel the stillness in the crowd as Christ turns,
+      drawn by a cry of faith. You gather courage to speak His name.
+    - You are with Peter on the stormy sea. The wind howls and waves rise, but Christ
+      walks toward you. You falter, sinking — but His hand is already reaching for
+      yours.
+    - You behold the heavenly Jerusalem — a multitude in white robes stands before
+      the Lamb. The saints sing joyfully, and Christ turns to welcome you into the
+      eternal liturgy.
+    - You see the soldier pierce His side. Blood and water gush out together. You
+      realize this is not just a sign — it is the fountain of life, baptism, cleansing,
+      and rebirth. You reach toward it.
+    - You stand before the open tabernacle, gazing at the consecrated Host exposed
+      in the monstrance. Rays of light stream from the Host, illuminating your heart
+      and drawing you into the warmth of Christ's saving presence. You feel His Body,
+      broken for you, offering refuge from every temptation and weakness.
+  arc_summary: A deep journey into the soul of the Anima Christi, line by line. Each
+    day meditates on a single petition of the prayer — from the sanctification of
+    the soul to the hope of eternal union with Christ. Set within the Passion and
+    Resurrection, the meditations draw the soul closer to Christ in His Body, Blood,
+    wounds, and love. This arc is ideal for those seeking to anchor their interior
+    life in the mysteries of salvation and the personal nearness of Jesus.
+  primary_reading:
+    - The Anima Christi
+  tags:
+    - all saints
+    - anima christi
+    - baptism
+    - beatific vision
+    - blood of christ
+    - charity
+    - christology
+    - communion
+    - communion of saints
+    - death
+    - detachment
+    - eucharist
+    - faith
+    - feast of the most precious blood
+    - final judgment
+    - fortitude
+    - glory and heaven
+    - good friday
+    - grace
+    - heavenly liturgy
+    - holy name
+    - holy thursday
+    - hope
+    - humility
+    - inebriation
+    - interior battle
+    - interior cleansing
+    - judgment
+    - last things
+    - lent
+    - mass
+    - obedience
+    - ordinary time
+    - passion
+    - passion of christ
+    - perseverance
+    - prayer
+    - purity
+    - real presence
+    - redemption
+    - redemptive suffering
+    - sacrifice
+    - salvation
+    - sanctification
+    - sin
+    - soteriology
+    - spiritual warfare
+    - trust
+    - union with christ
+    - vigilance
+    - wounds of christ
+  card_tags:
+    - anima christi
+    - prayer
+    - hope
