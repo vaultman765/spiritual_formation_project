@@ -1,0 +1,47 @@
+# Last imported into DB: 2025-09-04 09:22:50
+master_day_number: 200
+arc_day_number: 8
+arc_id: arc_anima_christi
+arc_title: Anima Christi
+arc_number: 25
+day_title: Suffer Me Not to Be Separated From You
+anchor_image: You are with Peter on the stormy sea. The wind howls and waves rise,
+  but Christ walks toward you. You falter, sinking — but His hand is already reaching
+  for yours.
+primary_reading:
+  title: The Anima Christi
+  reference:
+  url:
+secondary_reading:
+  - title: Romans 8:35–39
+    reference:
+    url:
+  - title: St. Teresa of Avila, Way of Perfection
+    reference: Chapter 39
+    url: docs/readings/St_Teresa_of_Avila_The_Way_of_Perfection.pdf
+meditative_points:
+  - Feel the pull of the waters — fear, sin, pride — yet see Christ standing firm, eyes
+    locked on you.
+  - "Hear His words: 'Why did you doubt?' They are not rebuke, but invitation to deeper
+    faith."
+  - Cling to His hand. Nothing — not height, nor depth, nor any creature — can separate
+    you if you hold fast.
+ejaculatory_prayer: Suffer me not to be separated from You.
+colloquy: Lord, I am weak, but You are strong. When I drift, call me. When I sink,
+  lift me. Let nothing — not fear, not temptation, not death — tear me from Your Heart.
+resolution: "Today I will return to Christ immediately whenever I feel myself drifting
+  — through prayer, even a whisper: 'Hold me, Jesus.'"
+tags:
+  thematic: []
+  doctrinal:
+    - grace
+  virtue:
+    - perseverance
+    - hope
+  mystical:
+    - union with christ
+  liturgical: []
+  typological: []
+  structural:
+    - anima christi
+    - prayer

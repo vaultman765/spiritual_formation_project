@@ -1,0 +1,64 @@
+arc_id: arc_anima_christi
+arc_title: The Anima Christi
+arc_number: 25
+day_count: 11
+master_day_range:
+  start: 193
+  end: 203
+tags:
+  thematic:
+    - baptism
+    - blood of christ
+    - death
+    - final judgment
+    - glory and heaven
+    - holy name
+    - interior battle
+    - last things
+    - passion of christ
+    - redemptive suffering
+    - sacrifice
+    - salvation
+    - spiritual warfare
+  doctrinal:
+    - christology
+    - communion
+    - communion of saints
+    - eucharist
+    - grace
+    - judgment
+    - real presence
+    - redemption
+    - sanctification
+    - sin
+    - soteriology
+  virtue:
+    - charity
+    - detachment
+    - faith
+    - fortitude
+    - hope
+    - humility
+    - obedience
+    - perseverance
+    - purity
+    - trust
+    - vigilance
+  mystical:
+    - heavenly liturgy
+    - inebriation
+    - interior cleansing
+    - union with christ
+    - wounds of christ
+  liturgical:
+    - all saints
+    - feast of the most precious blood
+    - good friday
+    - holy thursday
+    - lent
+    - mass
+    - ordinary time
+  typological: []
+  structural:
+    - anima christi
+    - prayer
