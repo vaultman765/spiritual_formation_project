@@ -1,0 +1,59 @@
+arc_id: arc_mary_at_the_cross
+arc_title: Mary at the Cross
+arc_number: 26
+day_count: 7
+master_day_range:
+  start: 204
+  end: 210
+tags:
+  thematic:
+    - crucifixion
+    - discipleship
+    - interior agony
+    - love of neighbor
+    - marian intercession
+    - mary
+    - mission
+    - redemptive suffering
+    - sacrifice
+    - silence
+    - suffering
+  doctrinal:
+    - ecclesiology
+    - imitation of christ
+    - marian dogma
+    - marian mediation
+    - mary as co-redemptrix
+    - maternal sacrifice
+    - mother of the church
+    - paschal mystery
+    - redemption
+    - soteriology
+  virtue:
+    - charity
+    - compassion
+    - courage
+    - faith
+    - fidelity
+    - fortitude
+    - obedience
+    - patience
+    - perseverance
+    - trust
+  mystical:
+    - divine adoption
+    - divine will
+    - intercession
+    - pierced heart
+    - sorrow
+    - spiritual ascent
+    - union with mary
+  liturgical:
+    - good friday
+    - holy week
+    - marian feast
+  typological:
+    - new eve
+    - queen mother
+    - the pierced heart
+  structural: []

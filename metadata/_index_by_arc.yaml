@@ -98,3 +98,7 @@ arc_anima_christi:
   arc_number: 25
   start_day: 193
   end_day: 203
+arc_mary_at_the_cross:
+  arc_number: 26
+  start_day: 204
+  end_day: 210
