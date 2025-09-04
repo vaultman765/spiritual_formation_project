@@ -1925,3 +1925,72 @@
     - anima christi
     - prayer
     - hope
+- arc_id: arc_mary_at_the_cross
+  arc_title: Mary at the Cross
+  arc_number: 26
+  day_count: 7
+  master_day_range:
+    start: 204
+    end: 210
+  anchor_image:
+    - You are standing with Mary at the foot of the Cross. She gazes upon her Son
+      in agony, hears His words, and unites her heart to His sacrifice. John is beside
+      her, and the soldiers are near. Simeon’s prophecy — that a sword would pierce
+      her soul — is now fulfilled.
+  arc_summary: At Calvary, Mary stands faithfully beside her crucified Son. In silence
+    and sorrow she fulfills Simeon’s prophecy, offering her maternal sacrifice in
+    union with Christ. From the Cross, Jesus entrusts her to the beloved disciple,
+    giving her as Mother of the Church. This arc invites us to remain with Mary at
+    the foot of the Cross, to share her sorrow, her courage, and her intercession,
+    and to entrust ourselves entirely to her maternal care.
+  primary_reading:
+    - Luke 2:34–35; John 19:25–27
+  tags:
+    - charity
+    - compassion
+    - courage
+    - crucifixion
+    - discipleship
+    - divine adoption
+    - divine will
+    - ecclesiology
+    - faith
+    - fidelity
+    - fortitude
+    - good friday
+    - holy week
+    - imitation of christ
+    - intercession
+    - interior agony
+    - love of neighbor
+    - marian dogma
+    - marian feast
+    - marian intercession
+    - marian mediation
+    - mary
+    - mary as co-redemptrix
+    - maternal sacrifice
+    - mission
+    - mother of the church
+    - new eve
+    - obedience
+    - paschal mystery
+    - patience
+    - perseverance
+    - pierced heart
+    - queen mother
+    - redemption
+    - redemptive suffering
+    - sacrifice
+    - silence
+    - sorrow
+    - soteriology
+    - spiritual ascent
+    - suffering
+    - the pierced heart
+    - trust
+    - union with mary
+  card_tags:
+    - mary at the cross
+    - mary
+    - redemptive suffering
