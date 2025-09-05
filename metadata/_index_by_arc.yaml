@@ -106,3 +106,7 @@ arc_eucharistic_life:
   arc_number: 27
   start_day: 211
   end_day: 219
+arc_the_narrow_way:
+  arc_number: 28
+  start_day: 220
+  end_day: 227
