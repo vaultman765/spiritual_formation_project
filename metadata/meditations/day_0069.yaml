@@ -1,12 +1,11 @@
-# Last imported into DB: 2025-08-09 11:38:40
+# Last imported into DB: 2025-09-04 22:39:47
 master_day_number: 69
 arc_day_number: 6
 arc_id: arc_heaven_and_judgment
 arc_title: Heaven and Judgment
 arc_number: 8
 day_title: The Inheritance of the Blessed
-anchor_image:
-  "Christ the King turns to those on His right hand, radiant, and says,
+anchor_image: "Christ the King turns to those on His right hand, radiant, and says,
   'Come, you blessed of My Father...' as they fall to their knees in awe."
 primary_reading:
   title: Matthew 25:31–46
@@ -17,16 +16,14 @@ secondary_reading:
     reference: §§1023–1029
     url: https://www.vatican.va/archive/ENG0015/__P2M.HTM
 meditative_points:
-  - 'Come, you blessed of My Father — the most beautiful summons'
-  - 'Heaven is inheritance, not achievement: a gift for the faithful'
+  - "Come, you blessed of My Father — the most beautiful summons"
+  - "Heaven is inheritance, not achievement: a gift for the faithful"
   - The blessed receive what the Son has merited for them
 ejaculatory_prayer: Jesus, bring me into the joy of Your Kingdom.
-colloquy:
-  "Lord Jesus, my King and my Judge, let me hear those words one day: 'Come,
+colloquy: "Lord Jesus, my King and my Judge, let me hear those words one day: 'Come,
   you blessed of My Father.' Let my life be worthy of Your promises. Make me long
   for Heaven more than earth."
-resolution:
-  I will thank God today for the grace of my Baptism and pray for final
+resolution: I will thank God today for the grace of my Baptism and pray for final
   perseverance.
 tags:
   thematic:
@@ -44,6 +41,6 @@ tags:
     - november
     - ordinary time
   typological:
-    - marriage feast of the Lamb
+    - marriage feast of the lamb
     - promised land
   structural: []
