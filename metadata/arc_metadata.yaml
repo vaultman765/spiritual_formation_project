@@ -1994,3 +1994,119 @@
     - mary at the cross
     - mary
     - redemptive suffering
+- arc_id: arc_eucharistic_life
+  arc_title: The Eucharistic Life
+  arc_number: 27
+  day_count: 9
+  master_day_range:
+    start: 211
+    end: 219
+  anchor_image:
+    - 'You are among the crowd in Capernaum, listening as Jesus proclaims: “I am the
+      Bread of Life.” The people murmur, some withdraw in disbelief, but you remain
+      before Him as He speaks of giving His flesh and blood for the life of the world.'
+    - You are among the first Christians in Jerusalem, gathered with the apostles.
+      They devote themselves to the teaching, to fellowship, to prayer, and to the
+      breaking of the bread with glad and generous hearts.
+    - 'You are in a small parish church, watching the saints across the centuries
+      kneel before the tabernacle: St. John Vianney, St. Peter Julian Eymard, St.
+      Thérèse, and countless others. Their lives are aflame because they live from
+      the Eucharist.'
+    - You are in the Upper Room on the night of the Last Supper. Jesus takes bread,
+      blesses it, breaks it, and gives it to His disciples, saying, “This is My Body.”
+      Then He takes the chalice and declares, “This is My Blood of the covenant.”
+    - 'You are in the assembly at Corinth as Paul exhorts the faithful: “The cup of
+      blessing that we bless, is it not a participation in the Blood of Christ? The
+      bread that we break, is it not a participation in the Body of Christ? Because
+      there is one bread, we who are many are one body.”'
+    - 'You are in the heavenly liturgy of Revelation. The multitude cries out: “Blessed
+      are those called to the marriage supper of the Lamb!” The Eucharist on earth
+      is unveiled as a foretaste of this eternal banquet.'
+    - 'You are with the disciples after many have walked away from Jesus’ hard teaching.
+      He turns and asks, “Will you also go away?” Peter responds: “Lord, to whom shall
+      we go? You have the words of eternal life.” You remain in adoration before the
+      mystery of His Presence.'
+    - 'You are with the early Christians in Corinth as Paul repeats what he himself
+      received from the Lord: “The Lord Jesus, on the night He was betrayed, took
+      bread…” You hear the apostle proclaim the Eucharist as tradition handed on to
+      the Church.'
+    - You are with the two disciples on the road to Emmaus. Their hearts burn as Christ
+      opens the Scriptures, but it is only when He breaks bread at table that their
+      eyes are opened and they recognize Him.
+  arc_summary: 'From Christ’s promise of the Bread of Life in Capernaum to the eternal
+    Wedding Feast of the Lamb, the Church lives by the Eucharist. This arc traces
+    the mystery of the Eucharist across salvation history: promised by Jesus, instituted
+    at the Last Supper, recognized at Emmaus, lived in the early Church, handed down
+    by the apostles, adored in mystery, celebrated by the saints, and consummated
+    in heaven. It invites us to live a Eucharistic life — united to Christ, nourished
+    by His Body and Blood, and preparing for the heavenly banquet.'
+  primary_reading:
+    - 1 Corinthians 10:14–22
+    - 1 Corinthians 11:18–32
+    - Acts 2:42–47
+    - John 15:1-17
+    - John 6:48–58
+    - John 6:60–69
+    - Luke 22:14–20
+    - Luke 24:13–35
+    - Revelation 19:1–10
+  tags:
+    - adoration
+    - apostolic authority
+    - awe
+    - body of christ
+    - bread and wine
+    - bread of life
+    - charity
+    - communion
+    - communion of saints
+    - corpus christi
+    - covenant
+    - desire for god
+    - discipleship
+    - divine adoption
+    - divine love
+    - divine presence
+    - easter
+    - eschatology
+    - eternal worship
+    - eucharist
+    - faith
+    - fidelity
+    - glory and heaven
+    - heavenly liturgy
+    - holy thursday
+    - hope
+    - humility
+    - joy
+    - manna
+    - marriage feast of the lamb
+    - mass
+    - mission
+    - mystery
+    - mystical body
+    - obedience
+    - ordinary time
+    - paschal lamb
+    - paschal mystery
+    - passover
+    - perseverance
+    - real presence
+    - resurrection of body
+    - reverence
+    - sacraments
+    - sacrifice
+    - salvation
+    - sanctification
+    - solemnities
+    - soteriology
+    - spiritual ascent
+    - trust
+    - union with christ
+    - unity
+    - vine and branches
+    - zeal
+  card_tags:
+    - eucharist
+    - adoration
+    - communion

@@ -1,0 +1,68 @@
+arc_id: arc_eucharistic_life
+arc_title: The Eucharistic Life
+arc_number: 27
+day_count: 9
+master_day_range:
+  start: 211
+  end: 219
+tags:
+  thematic:
+    - adoration
+    - bread of life
+    - desire for god
+    - discipleship
+    - eternal worship
+    - glory and heaven
+    - mission
+    - sacraments
+    - sacrifice
+    - salvation
+    - unity
+  doctrinal:
+    - apostolic authority
+    - communion
+    - communion of saints
+    - eschatology
+    - eucharist
+    - mystical body
+    - paschal mystery
+    - real presence
+    - resurrection of body
+    - reverence
+    - sanctification
+    - soteriology
+  virtue:
+    - charity
+    - faith
+    - fidelity
+    - hope
+    - humility
+    - joy
+    - obedience
+    - perseverance
+    - trust
+    - zeal
+  mystical:
+    - awe
+    - body of christ
+    - divine adoption
+    - divine love
+    - divine presence
+    - heavenly liturgy
+    - mystery
+    - spiritual ascent
+    - union with christ
+  liturgical:
+    - easter
+    - holy thursday
+    - mass
+    - ordinary time
+    - solemnities
+  typological:
+    - bread and wine
+    - covenant
+    - manna
+    - paschal lamb
+    - passover
+    - vine and branches
+  structural: []
