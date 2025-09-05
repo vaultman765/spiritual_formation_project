@@ -2212,3 +2212,43 @@
     - discipleship
     - perseverance
     - eternal life
+- arc_id: arc_end_of_the_journey
+  arc_title: The End of the Journey
+  arc_number: 29
+  day_count: 1
+  master_day_range:
+    start: 228
+    end: 228
+  anchor_image:
+    - 'You behold the heavenly city: the gates are open, the river of life flows from
+      the throne of the Lamb, and you are welcomed into eternal communion with God
+      and His saints.'
+  arc_summary: 'The pilgrimage of faith comes to its close in the vision of God. Having
+    walked the narrow way of Christ, the soul enters the heavenly city, where death
+    and sorrow are no more. The river of life flows from the throne of the Lamb, and
+    the saints rejoice forever in eternal communion. This final arc is a doxology
+    — a single contemplative gaze upon the end for which we were created: the beatific
+    vision and unending union with God.'
+  primary_reading:
+    - Revelation 21:1–7; Revelation 22:1–5
+  tags:
+    - all saints
+    - all souls
+    - beatific vision
+    - charity
+    - divine adoption
+    - eschatology
+    - eternal life
+    - eternal reward
+    - glory and heaven
+    - heavenly liturgy
+    - hope
+    - marriage feast of the lamb
+    - november
+    - perseverance
+    - salvation
+    - union with christ
+  card_tags:
+    - eternal life
+    - beatific vision
+    - heavenly city
