@@ -1,0 +1,47 @@
+# Last imported into DB: 2025-09-04 22:29:42
+master_day_number: 212
+arc_day_number: 2
+arc_id: arc_eucharistic_life
+arc_title: The Eucharistic Life
+arc_number: 27
+day_title: Institution of the Eucharist
+anchor_image: You are in the Upper Room on the night of the Last Supper. Jesus takes bread, blesses it,
+  breaks it, and gives it to His disciples, saying, “This is My Body.” Then He takes the chalice and
+  declares, “This is My Blood of the covenant.”
+primary_reading:
+  title: Luke 22:14–20
+  reference:
+  url:
+secondary_reading:
+  - title: Council of Trent, Session XIII
+    reference: Chapter 1-2
+    url: https://www.papalencyclicals.net/councils/trent/thirteenth-session.htm
+meditative_points:
+  - See Christ take bread into His hands and declare it to be His very Body.
+  - Hear His voice as He gives the chalice of His Blood — the covenant sealed in sacrifice.
+  - Realize that here the Sacrament of His abiding Presence is instituted for all time.
+ejaculatory_prayer: Jesus, I believe in Your true Presence in the Eucharist.
+colloquy: Lord, on the night before You suffered, You left us this Sacrament of love.
+  I adore Your gift of Yourself under the humble signs of bread and wine.
+resolution: I will make a reverent sign of the cross today when passing a Catholic church, honoring Christ present in the tabernacle.
+tags:
+  thematic:
+    - sacrifice
+    - salvation
+  doctrinal:
+    - real presence
+    - paschal mystery
+    - eucharist
+  virtue:
+    - faith
+    - reverence
+    - charity
+  mystical:
+    - divine love
+    - mystery
+  liturgical:
+    - holy thursday
+    - corpus christi
+  typological:
+    - passover
+  structural: []

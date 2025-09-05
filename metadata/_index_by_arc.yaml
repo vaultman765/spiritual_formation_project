@@ -102,3 +102,7 @@ arc_mary_at_the_cross:
   arc_number: 26
   start_day: 204
   end_day: 210
+arc_eucharistic_life:
+  arc_number: 27
+  start_day: 211
+  end_day: 219
