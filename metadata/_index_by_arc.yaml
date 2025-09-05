@@ -110,3 +110,7 @@ arc_the_narrow_way:
   arc_number: 28
   start_day: 220
   end_day: 227
+arc_end_of_the_journey:
+  arc_number: 29
+  start_day: 228
+  end_day: 228
