@@ -2252,3 +2252,72 @@
     - eternal life
     - beatific vision
     - heavenly city
+- arc_id: arc_high_priestly_prayer
+  arc_title: The High Priestly Prayer
+  arc_number: 30
+  day_count: 7
+  master_day_range:
+    start: 229
+    end: 235
+  anchor_image:
+    - You are in the Upper Room. Christ lifts His eyes to heaven and begins to pray
+      aloud to the Father as His disciples listen in silence. His words rise like
+      incense, solemn and tender, carrying His whole mission.
+  arc_summary: 'In the Upper Room, Jesus lifts His eyes to the Father and prays aloud
+    for His disciples and for all who will believe in Him. This prayer, the climax
+    of His earthly mission, reveals His heart: glorifying the Father, granting eternal
+    life, preserving His followers in unity, sanctifying them in truth, and desiring
+    that they share His glory forever. The High Priestly Prayer is Christ’s intercession
+    for the Church — a window into His eternal priesthood and a summons to enter into
+    His own communion with the Father.'
+  primary_reading:
+    - John 17:1–26
+  tags:
+    - all saints
+    - body of christ
+    - charity
+    - christology
+    - communion of saints
+    - courage
+    - covenant
+    - discipleship
+    - divine adoption
+    - divine love
+    - divine providence
+    - divine will
+    - eastertide
+    - ecclesiology
+    - eschatology
+    - eternal life
+    - eternal reward
+    - faith
+    - fidelity
+    - glory and heaven
+    - heavenly liturgy
+    - high priest
+    - holy thursday
+    - hope
+    - humility
+    - joy
+    - mission
+    - new creation
+    - obedience
+    - ordinary time
+    - paschal mystery
+    - passover
+    - perseverance
+    - prayer
+    - purification
+    - salvation
+    - sanctification
+    - solemnities
+    - suffering servant
+    - trinity
+    - union with christ
+    - unity
+    - vine and branches
+    - zeal
+  card_tags:
+    - unity
+    - prayer
+    - discipleship
