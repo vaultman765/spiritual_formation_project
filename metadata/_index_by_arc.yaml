@@ -118,3 +118,7 @@ arc_high_priestly_prayer:
   arc_number: 30
   start_day: 229
   end_day: 235
+arc_descent_of_the_holy_spirit:
+  arc_number: 31
+  start_day: 236
+  end_day: 240

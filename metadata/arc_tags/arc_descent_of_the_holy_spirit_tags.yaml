@@ -1,0 +1,50 @@
+arc_id: arc_descent_of_the_holy_spirit
+arc_title: The Descent of the Holy Spirit
+arc_number: 31
+day_count: 5
+master_day_range:
+  start: 236
+  end: 240
+tags:
+  thematic:
+    - birth of the church
+    - discipleship
+    - holy spirit
+    - mary
+    - mission
+    - salvation
+    - transformation
+  doctrinal:
+    - ecclesiology
+    - grace
+    - holy spirit
+    - mother of the church
+    - sanctification
+    - trinity
+  virtue:
+    - charity
+    - courage
+    - faith
+    - humility
+    - joy
+    - obedience
+    - zeal
+  mystical:
+    - body of christ
+    - divine presence
+    - inebriation
+    - marian companionship
+    - spiritual ascent
+  liturgical:
+    - eastertide
+    - marian feast
+    - pentecost
+    - solemnities
+  typological:
+    - ark of the covenant
+    - covenant
+    - promised land
+    - queen mother
+    - temple
+    - tower of babel
+  structural: []
