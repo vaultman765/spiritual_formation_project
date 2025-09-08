@@ -122,3 +122,7 @@ arc_descent_of_the_holy_spirit:
   arc_number: 31
   start_day: 236
   end_day: 240
+arc_seven_gifts_of_the_spirit:
+  arc_number: 32
+  start_day: 241
+  end_day: 254
