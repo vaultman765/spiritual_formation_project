@@ -126,3 +126,7 @@ arc_seven_gifts_of_the_spirit:
   arc_number: 32
   start_day: 241
   end_day: 254
+arc_interior_castle:
+  arc_number: 33
+  start_day: 255
+  end_day: 263

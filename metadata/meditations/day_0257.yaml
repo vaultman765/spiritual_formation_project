@@ -1,0 +1,41 @@
+# Last imported into DB: 2025-09-08 14:09:27
+master_day_number: 257
+arc_day_number: 3
+arc_id: arc_interior_castle
+arc_title: The Interior Castle
+arc_number: 33
+day_title: The Fourth Mansion — Beginning of Contemplation
+anchor_image: You stand before a radiant crystal castle, shining with light. Its many mansions invite you inward,
+  where the King dwells in the center, calling you deeper into His friendship.
+primary_reading:
+  title: St. Teresa of Ávila, The Interior Castle
+  reference: Fourth Mansions, Chapter 3
+  url: /docs/readings/St_Teresa_d'Avila_The_Interior_Castle_of_The_Mansions.pdf
+secondary_reading:
+  - title: St. John of the Cross, The Living Flame of Love
+    reference:
+    url: https://www.stjosephsbrackenridge.com/uploads/3/7/8/4/37843139/living_flame_of_love_by_st_john_of_the_cross.pdf
+meditative_points:
+  - Feel the Spirit draw your soul into quiet rest beyond words.
+  - Notice how the faculties are gently held, yet free to love in silence.
+  - Taste the sweetness of God’s presence, not by effort but by grace.
+ejaculatory_prayer: Draw me, Lord, into Your quiet.
+colloquy: O Spirit of God, grant me this prayer of quiet, where I may rest in You beyond my own effort.
+resolution: I will embrace a few moments of silent prayer today, letting go of words to rest in God’s presence.
+tags:
+  thematic:
+    - holy spirit
+    - prayer
+  doctrinal:
+    - grace
+  virtue:
+    - docility
+    - faith
+  mystical:
+    - contemplation
+    - divine presence
+  liturgical:
+    - ordinary time
+  typological:
+    - temple
+  structural: []
