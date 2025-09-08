@@ -46,7 +46,7 @@
 | 40        | 309–313   | The Virtue of Patience         | 5         | ⏳    | Christ silent before Pilate, enduring insult with peace                       | Isaiah 53:7; 1 Peter 2:21–23                   | Ordinary Time          | 🔜 Planned |
 | 41        | 314–318   | Vigilance and Watchfulness     | 5         | ⏳    | Christ in Gethsemane, pleading “Could you not watch one hour with me?”        | Matthew 26:36–46                               | Advent / Lent          | 🔜 Planned |
 | 42        | 319–324   | Silence and the Hidden Life    | 6         | ⏳    | The Child Jesus working quietly in Joseph’s workshop                          | Luke 2:39–52                                   | Advent / Nazareth      | 🔜 Planned |
-| 43        | 325–331   | The Hidden Years of Jesus      | 7         | ⏳    | Mary and Joseph pondering Jesus in their hearts in obscurity                  | Luke 2:51; Matthew 2:23                        | Advent / OT            | 🔜 Planned |
+| 43        | 325–331   | The Hidden Years of Jesus **** ALRAEDY DONE??? ***     | 7         | ⏳    | Mary and Joseph pondering Jesus in their hearts in obscurity                  | Luke 2:51; Matthew 2:23                        | Advent / OT            | 🔜 Planned |
 | 44        | 332–337   | The Desert and Temptation of Christ | 6         | ⏳    | Christ alone in the desert, resisting the devil                               | Matthew 4:1–11                                 | Lent                   | 🔜 Planned |
 | 45        | 338–342   | The Armor of God               | 5         | ⏳    | A soul clothed in light, bearing a shield and sword of faith                  | Ephesians 6:10–18                              | Lent / OT              | 🔜 Planned |
 | 46        | 343–351   | The Litany of Trust            | 9         | ⏳    | A soul kneeling beneath Divine Mercy rays, whispering “Jesus, I trust in You” | Psalm 131; selections from the Litany of Trust | OT / Lent              | 🔜 Planned |
@@ -56,7 +56,7 @@
 | 50        | 367–373   | The Church and the Cross                    | 7         | ⏳    | The Church silhouetted against the Cross on Calvary                           | Colossians 1:24; CCC 677                       | Holy Week              | 🔜 Planned |
 | 51        | 374–378   | The Fire of the Holy Spirit                 | 5         | ⏳    | The soul as a candle lit by the Spirit’s fire                                 | Acts 2:1–4; Luke 12:49                         | Pentecost / OT         | 🔜 Planned |
 | 52        | 379–383   | Spiritual Childhood                         | 5         | ⏳    | A child resting in the Heart of Christ, smiling in trust                      | Matthew 18:1–4; Therese selections             | Ordinary Time          | 🔜 Planned |
-| 53        | 384–389   | The Sacred Humanity of Christ – Final Union | 6         | ⏳    | The Infant Christ and Crucified Christ side-by-side in mystical light         | John 1:14; Hebrews 10:5–10                     | Christmas / Nativity   | 🔜 Planned |
+| 53        | 384–389   | The Sacred Humanity of Christ – Final Union **** ALREADY DONE????**** | 6         | ⏳    | The Infant Christ and Crucified Christ side-by-side in mystical light         | John 1:14; Hebrews 10:5–10                     | Christmas / Nativity   | 🔜 Planned |
 
 ## 📚 Section 2: Roadmap – Thematic Arc Library (Expanded)
 
