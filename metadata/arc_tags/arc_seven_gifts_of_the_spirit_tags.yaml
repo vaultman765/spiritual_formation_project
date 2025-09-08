@@ -1,0 +1,92 @@
+arc_id: arc_seven_gifts_of_the_spirit
+arc_title: The Seven Gifts of the Spirit
+arc_number: 32
+day_count: 14
+master_day_range:
+  start: 241
+  end: 254
+tags:
+  thematic:
+    - discipleship
+    - eternal reward
+    - fear of the lord
+    - glory and heaven
+    - holy spirit
+    - knowledge
+    - martyrdom
+    - mary
+    - mission
+    - sacraments
+    - transformation
+    - understanding
+  doctrinal:
+    - baptism
+    - christology
+    - confirmation
+    - divine mysteries
+    - divine providence
+    - ecclesiology
+    - eschatology
+    - grace
+    - holy spirit
+    - marian dogma
+    - marian mediation
+    - mystical body
+    - reverence
+    - salvation
+    - sanctification
+    - soteriology
+    - trinity
+    - virtues
+    - vocation
+    - wisdom
+  virtue:
+    - charity
+    - courage
+    - faith
+    - fidelity
+    - fortitude
+    - hope
+    - humility
+    - joy
+    - love
+    - obedience
+    - patience
+    - perseverance
+    - prudence
+    - trust
+    - vigilance
+    - zeal
+  mystical:
+    - awe
+    - beatific vision
+    - body of christ
+    - contemplation
+    - divine adoption
+    - divine indwelling
+    - divine love
+    - divine presence
+    - divine sonship
+    - divine will
+    - docility
+    - marian companionship
+    - purification
+    - spiritual ascent
+    - union with christ
+  liturgical:
+    - all saints
+    - annunciation
+    - eastertide
+    - ordinary time
+    - pentecost
+    - solemnities
+  typological:
+    - ark of the covenant
+    - covenant
+    - emmaus
+    - new creation
+    - queen mother
+    - sinai
+    - temple
+    - vine and branches
+  structural: []
