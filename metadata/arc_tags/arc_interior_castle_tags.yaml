@@ -1,0 +1,53 @@
+arc_id: arc_interior_castle
+arc_title: The Interior Castle
+arc_number: 33
+day_count: 9
+master_day_range:
+  start: 255
+  end: 263
+tags:
+  thematic:
+    - detachment
+    - discipleship
+    - holy spirit
+    - interior life
+    - prayer
+    - suffering
+    - transformation
+  doctrinal:
+    - grace
+    - marriage
+    - mystical body
+    - sanctification
+    - trinity
+  virtue:
+    - charity
+    - faith
+    - fidelity
+    - fortitude
+    - humility
+    - obedience
+    - patience
+    - perseverance
+    - zeal
+  mystical:
+    - contemplation
+    - divine indwelling
+    - divine presence
+    - purification
+    - spiritual ascent
+    - transfiguration
+    - union
+    - union with christ
+  liturgical:
+    - lent
+    - ordinary time
+    - solemnities
+  typological:
+    - job
+    - marriage feast of the lamb
+    - promised land
+    - tabernacle
+    - temple
+    - vine and branches
+  structural: []

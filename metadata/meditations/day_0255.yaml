@@ -1,0 +1,42 @@
+# Last imported into DB: 2025-09-08 14:09:25
+master_day_number: 255
+arc_day_number: 1
+arc_id: arc_interior_castle
+arc_title: The Interior Castle
+arc_number: 33
+day_title: The Castle of the Soul
+anchor_image: You stand before a radiant crystal castle, shining with light. Its many mansions invite you inward,
+  where the King dwells in the center, calling you deeper into His friendship.
+primary_reading:
+  title: St. Teresa of Ávila, The Interior Castle
+  reference: The First Mansions, Chapter 1
+  url: /docs/readings/St_Teresa_d'Avila_The_Interior_Castle_of_The_Mansions.pdf
+secondary_reading:
+  - title: John 14:23
+    reference:
+    url:
+meditative_points:
+  - See your soul as a luminous castle, filled with light and many dwelling places.
+  - "Hear Christ’s promise to you: “We will come to him and make our home with him.”"
+  - Desire to enter more deeply within, leaving behind distractions.
+ejaculatory_prayer: Lord, draw me into the castle of my soul.
+colloquy: O Christ, You dwell at the heart of my soul. Let me not linger outside, but lead me inward where You are King.
+resolution: I will spend five minutes today in silence, recollecting myself before God dwelling within me.
+tags:
+  thematic:
+    - interior life
+  doctrinal:
+    - grace
+    - trinity
+  virtue:
+    - humility
+  mystical:
+    - contemplation
+    - divine indwelling
+    - spiritual ascent
+  liturgical:
+    - ordinary time
+  typological:
+    - temple
+    - tabernacle
+  structural: []

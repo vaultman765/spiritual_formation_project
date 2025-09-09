@@ -2494,3 +2494,73 @@
     - holy spirit
     - virtues
     - discipleship
+- arc_id: arc_interior_castle
+  arc_title: The Interior Castle
+  arc_number: 33
+  day_count: 9
+  master_day_range:
+    start: 255
+    end: 263
+  anchor_image:
+    - You stand before a radiant crystal castle, shining with light. Its many mansions
+      invite you inward, where the King dwells in the center, calling you deeper into
+      His friendship.
+  arc_summary: 'St. Teresa of Ávila’s vision of the soul as a luminous castle opens
+    a path of interior prayer that leads from the first stirrings of recollection
+    to the indwelling of the Trinity. In this arc, we pass through the mansions of
+    the castle: from the early stages of prayer and conversion, to the beginnings
+    of contemplation, to the betrothal of the soul in union with Christ, and finally
+    to the spiritual marriage where God and the soul live as one. Along the way, trials,
+    purifications, and ecstasies refine the heart. Guided by Teresa, John of the Cross,
+    and Scripture, we discover the mystery of the soul’s transformation into a dwelling
+    place of the Father, Son, and Spirit. This is a brief overview of St. Teresa''s
+    profound work, ideal for those seeking to deepen their prayer life and union with
+    God.'
+  primary_reading:
+    - John 14:23-28
+    - St. Teresa of Ávila, The Interior Castle
+  tags:
+    - charity
+    - contemplation
+    - detachment
+    - discipleship
+    - divine indwelling
+    - divine presence
+    - docility
+    - faith
+    - fidelity
+    - fortitude
+    - grace
+    - holy spirit
+    - humility
+    - interior life
+    - job
+    - lent
+    - marriage
+    - marriage feast of the lamb
+    - mystical body
+    - obedience
+    - ordinary time
+    - patience
+    - perseverance
+    - prayer
+    - promised land
+    - purification
+    - reverence
+    - sanctification
+    - solemnities
+    - spiritual ascent
+    - suffering
+    - tabernacle
+    - temple
+    - transfiguration
+    - transformation
+    - trinity
+    - union
+    - union with christ
+    - vine and branches
+    - zeal
+  card_tags:
+    - contemplation
+    - interior life
+    - union with christ

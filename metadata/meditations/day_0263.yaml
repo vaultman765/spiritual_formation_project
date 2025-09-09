@@ -1,0 +1,43 @@
+# Last imported into DB: 2025-09-08 14:09:32
+master_day_number: 263
+arc_day_number: 9
+arc_id: arc_interior_castle
+arc_title: The Interior Castle
+arc_number: 33
+day_title: The Indwelling Trinity
+anchor_image: You stand before a radiant crystal castle, shining with light. Its many mansions invite you inward,
+  where the King dwells in the center, calling you deeper into His friendship.
+primary_reading:
+  title: John 14:23-28
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §260
+    url: https://www.vatican.va/archive/ENG0015/__P17.HTM
+meditative_points:
+  - "Hear Christ promise: “We will come to him and make our dwelling with him.”"
+  - Recognize that the journey through the castle leads to the Trinity dwelling within.
+  - Rest in awe that the Father, Son, and Spirit make your soul their home.
+ejaculatory_prayer: O Holy Trinity, dwell in me forever.
+colloquy: Father, Son, and Holy Spirit, I adore You within me. Make me Your dwelling place for eternity.
+resolution: I will make the Sign of the Cross with special reverence today, recalling the Trinity’s indwelling.
+tags:
+  thematic: []
+  doctrinal:
+    - trinity
+  virtue:
+    - reverence
+    - faith
+  mystical:
+    - contemplation
+    - divine indwelling
+    - divine presence
+    - union
+  liturgical:
+    - ordinary time
+    - solemnities
+  typological:
+    - temple
+    - tabernacle
+  structural: []

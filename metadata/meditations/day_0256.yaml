@@ -1,0 +1,42 @@
+# Last imported into DB: 2025-09-08 14:09:26
+master_day_number: 256
+arc_day_number: 2
+arc_id: arc_interior_castle
+arc_title: The Interior Castle
+arc_number: 33
+day_title: Entering Within
+anchor_image: You stand before a radiant crystal castle, shining with light. Its many mansions invite you inward,
+  where the King dwells in the center, calling you deeper into His friendship.
+primary_reading:
+  title: St. Teresa of Ávila, The Interior Castle
+  reference: The First Mansions, Chapter 2
+  url: /docs/readings/St_Teresa_d'Avila_The_Interior_Castle_of_The_Mansions.pdf
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§257-260
+    url: http://www.vatican.va/archive/ENG0015/_P9.HTM
+meditative_points:
+  - Begin to cross the threshold, leaving behind sin and distraction.
+  - Feel the light increase as you move inward, drawn by Christ’s presence.
+  - Sense that prayer is the door that opens to each new mansion.
+ejaculatory_prayer: Lord, help me to enter within.
+colloquy: My God, You are nearer to me than I am to myself. Give me the courage to step away from noise and enter into Your silence.
+resolution: I will set aside one distraction today, choosing recollection instead.
+tags:
+  thematic:
+    - prayer
+    - detachment
+  doctrinal:
+    - grace
+    - sanctification
+  virtue:
+    - humility
+    - perseverance
+  mystical:
+    - purification
+    - spiritual ascent
+  liturgical:
+    - ordinary time
+  typological:
+    - promised land
+  structural: []
