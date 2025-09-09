@@ -130,3 +130,7 @@ arc_interior_castle:
   arc_number: 33
   start_day: 255
   end_day: 263
+arc_into_christs_wounds:
+  arc_number: 34
+  start_day: 264
+  end_day: 270
