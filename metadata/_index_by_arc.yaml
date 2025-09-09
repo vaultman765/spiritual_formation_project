@@ -138,3 +138,7 @@ arc_sacred_humanity_of_christ:
   arc_number: 35
   start_day: 271
   end_day: 277
+arc_cross_and_resurrection:
+  arc_number: 36
+  start_day: 278
+  end_day: 284

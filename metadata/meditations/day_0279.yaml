@@ -1,0 +1,41 @@
+# Last imported into DB: 2025-09-09 10:33:36
+master_day_number: 279
+arc_day_number: 2
+arc_id: arc_cross_and_resurrection
+arc_title: The Cross and the Resurrection
+arc_number: 36
+day_title: The Tomb Sealed
+anchor_image: You stand before the empty tomb, the Cross still visible in the background. The sorrow of Good Friday
+  and the glory of Easter are held together in one vision.
+primary_reading:
+  title: Luke 23:50–56
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §624–628
+    url: https://www.vatican.va/archive/ENG0015/__P1P.HTM
+meditative_points:
+  - Watch Joseph of Arimathea and the women as they lay Christ in the tomb.
+  - Feel the silence of Holy Saturday, hope hidden in darkness.
+  - Wait with trust for God’s promise to be fulfilled.
+ejaculatory_prayer: Lord, teach me to wait in hope.
+colloquy: O Jesus, even in the silence of the tomb, You are Lord. Strengthen me in times of waiting and hiddenness.
+resolution: I will embrace one moment of silence today as an act of trust in God’s hidden work.
+tags:
+  thematic:
+    - burial
+  doctrinal:
+    - paschal mystery
+    - redemption
+  virtue:
+    - patience
+    - hope
+  mystical:
+    - silence
+    - divine hiddenness
+  liturgical:
+    - holy saturday
+  typological:
+    - jonah
+  structural: []

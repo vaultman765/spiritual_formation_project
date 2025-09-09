@@ -1,0 +1,41 @@
+# Last imported into DB: 2025-09-09 10:33:40
+master_day_number: 283
+arc_day_number: 6
+arc_id: arc_cross_and_resurrection
+arc_title: The Cross and the Resurrection
+arc_number: 36
+day_title: Peace Be With You
+anchor_image: You stand before the empty tomb, the Cross still visible in the background. The sorrow of Good Friday
+  and the glory of Easter are held together in one vision.
+primary_reading:
+  title: John 20:19–23
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §645–647
+    url: https://www.vatican.va/archive/ENG0015/__P1S.HTM
+meditative_points:
+  - See Christ suddenly appear among His disciples, showing His wounds.
+  - "Hear His greeting: “Peace be with you.”"
+  - Receive the gift of His Spirit, breathing new life upon the Church.
+ejaculatory_prayer: Jesus, breathe Your peace upon me.
+colloquy: O Risen Lord, You stand among us and speak peace. Let my heart be still and filled with Your Spirit.
+resolution: I will be a peacemaker today, reconciling or calming one situation in Christ’s name.
+tags:
+  thematic:
+    - peace
+    - resurrection
+  doctrinal:
+    - resurrection of christ
+    - holy spirit
+  virtue:
+    - charity
+  mystical:
+    - risen lord
+    - divine presence
+  liturgical:
+    - easter
+    - pentecost
+  typological: []
+  structural: []
