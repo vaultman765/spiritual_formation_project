@@ -1,0 +1,55 @@
+arc_id: arc_cross_and_resurrection
+arc_title: The Cross and the Resurrection
+arc_number: 36
+day_count: 7
+master_day_range:
+  start: 278
+  end: 284
+tags:
+  thematic:
+    - adoration
+    - burial
+    - discipleship
+    - joy
+    - passion of christ
+    - peace
+    - resurrection
+    - salvation
+  doctrinal:
+    - christology
+    - holy spirit
+    - paschal mystery
+    - real presence
+    - redemption
+    - resurrection of christ
+  virtue:
+    - charity
+    - faith
+    - hope
+    - joy
+    - love
+    - patience
+    - perseverance
+    - zeal
+  mystical:
+    - divine hiddenness
+    - divine presence
+    - risen lord
+    - silence
+    - spiritual ascent
+    - union
+    - wounds of christ
+  liturgical:
+    - divine mercy sunday
+    - easter
+    - eastertide
+    - good friday
+    - holy saturday
+    - holy week
+    - pentecost
+  typological:
+    - jonah
+    - new creation
+    - paschal lamb
+    - tree of life
+  structural: []
