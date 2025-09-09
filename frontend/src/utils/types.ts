@@ -8,8 +8,10 @@ export interface MeditationData {
   arc_total_days: number;
   primary_reading: {
     title: string;
+    reference?: string;
+    url?: string;
   };
-  secondary_readings: SecondaryReading[];
+  secondary_readings: Reading[];
   meditative_points: string[];
   ejaculatory_prayer: string;
   colloquy: string;
@@ -24,7 +26,7 @@ export interface DaySummary {
   anchor_image: string;
 }
 
-export interface SecondaryReading {
+export interface Reading {
   title: string;
   reference: string;
   url: string;

@@ -142,3 +142,7 @@ arc_cross_and_resurrection:
   arc_number: 36
   start_day: 278
   end_day: 284
+arc_church_bride_and_mother:
+  arc_number: 37
+  start_day: 285
+  end_day: 291

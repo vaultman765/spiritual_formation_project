@@ -2777,3 +2777,76 @@
     - resurrection
     - paschal mystery
     - faith
+- arc_id: arc_church_bride_and_mother
+  arc_title: The Church — Bride and Mother
+  arc_number: 37
+  day_count: 7
+  master_day_range:
+    start: 285
+    end: 291
+  anchor_image:
+    - You stand at the foot of the Cross. Blood and water flow from Christ’s side,
+      and from this stream the Church is born — radiant as a Bride, nurturing as a
+      Mother.
+  arc_summary: 'The Church, born from the pierced side of Christ, is both radiant
+    Bride and nurturing Mother. This arc contemplates her mystery: flowing from the
+    sacraments, purified by Christ’s love, sheltering her children as the Ark of salvation,
+    and feeding them with the Eucharist. Though holy, she is ever in need of purification,
+    until at last she will appear as the glorious Bride, the new Jerusalem prepared
+    for her Spouse. By meditating on the Church as Bride and Mother, the soul learns
+    to love, trust, and remain faithful within her maternal embrace until the final
+    union with Christ.'
+  primary_reading:
+    - 1 Peter 3:17–21
+    - Ephesians 5:21–33
+    - Galatians 4:21-31
+    - John 19:31-37
+    - John 6:30-72
+    - Lumen Gentium
+    - Revelation 21:1–4
+  tags:
+    - all saints
+    - ark of noah
+    - ark of the covenant
+    - baptism
+    - blood and water
+    - body of christ
+    - bread of life
+    - charity
+    - christology
+    - communion
+    - communion of saints
+    - conversion
+    - corpus christi
+    - easter
+    - ecclesiology
+    - eschatology
+    - eucharist
+    - faith
+    - fidelity
+    - glory and heaven
+    - good friday
+    - heavenly liturgy
+    - hope
+    - humility
+    - love
+    - love of god
+    - manna
+    - marriage feast of the lamb
+    - obedience
+    - ordinary time
+    - paschal mystery
+    - perseverance
+    - purification
+    - repentance
+    - sacraments
+    - salvation
+    - sanctification
+    - spiritual homecoming
+    - union
+    - union with christ
+    - vine and branches
+  card_tags:
+    - ecclesiology
+    - bride of Christ
+    - communion

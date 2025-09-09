@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import type { SecondaryReading } from "@/utils/types";
+import type { Reading } from "@/utils/types";
 
 interface SecondaryReadingsProps {
-  readings: SecondaryReading[];
+  readings: Reading[];
 }
 
-export default function SecondaryReadings({ readings }: SecondaryReadingsProps) {
+export function SecondaryReadings({ readings }: SecondaryReadingsProps) {
   return (
     <ul className="space-y-2">
       {readings.map((reading, idx) => (
@@ -36,5 +36,37 @@ export default function SecondaryReadings({ readings }: SecondaryReadingsProps) 
         </li>
       ))}
     </ul>
+  );
+}
+
+interface PrimaryReadingProps {
+  title: string;
+  reference?: string;
+  url?: string;
+}
+
+export function PrimaryReading({ title, reference, url }: PrimaryReadingProps) {
+  return url ? (
+    <Link to={url} target="_blank" rel="noopener noreferrer" className="text-[var(--text-main)] hover:underline">
+      <span className="text-lg font-semibold text-[var(--text-light)]">
+        {title}
+        {reference && (
+          <>
+            {" "}
+            – <span className="italic">{reference}</span>
+          </>
+        )}
+      </span>
+    </Link>
+  ) : (
+    <span className="text-lg font-semibold text-[var(--text-light)]">
+      {title}
+      {reference && (
+        <>
+          {" "}
+          – <span className="italic">{reference}</span>
+        </>
+      )}
+    </span>
   );
 }
