@@ -1,0 +1,41 @@
+# Last imported into DB: 2025-09-09 15:35:41
+master_day_number: 290
+arc_day_number: 6
+arc_id: arc_church_bride_and_mother
+arc_title: The Church — Bride and Mother
+arc_number: 37
+day_title: Holy and Yet in Need of Purification
+anchor_image: You stand at the foot of the Cross. Blood and water flow from Christ’s side,
+  and from this stream the Church is born — radiant as a Bride, nurturing as a Mother.
+primary_reading:
+  title: Lumen Gentium
+  reference: §8
+  url: /docs/readings/Vatican_II_Lumen_Gentium.pdf
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §827
+    url: https://www.vatican.va/archive/ENG0015/__P29.HTM
+meditative_points:
+  - Contemplate the Church as holy, for Christ is her Head and Spouse.
+  - Acknowledge her members’ sins, yet trust in Christ’s purifying love.
+  - Pray for humility to remain faithful within this holy-yet-pilgrim Church.
+ejaculatory_prayer: Lord, sanctify Your Church.
+colloquy: O Christ, though Your Church bears the wounds of sinners, she remains Your holy Bride.
+  Keep me faithful, humble, and penitent within her.
+resolution: I will pray today for the sanctification of priests and all the faithful.
+tags:
+  thematic:
+    - conversion
+  doctrinal:
+    - ecclesiology
+    - repentance
+    - sanctification
+  virtue:
+    - humility
+  mystical:
+    - purification
+    - body of christ
+  liturgical:
+    - ordinary time
+  typological: []
+  structural: []

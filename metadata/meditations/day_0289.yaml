@@ -1,0 +1,41 @@
+# Last imported into DB: 2025-09-09 15:35:41
+master_day_number: 289
+arc_day_number: 5
+arc_id: arc_church_bride_and_mother
+arc_title: The Church — Bride and Mother
+arc_number: 37
+day_title: The Church Nourishes Her Children
+anchor_image: You stand at the foot of the Cross. Blood and water flow from Christ’s side,
+  and from this stream the Church is born — radiant as a Bride, nurturing as a Mother.
+primary_reading:
+  title: John 6:30-72
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §1396–1398
+    url: https://www.vatican.va/archive/ENG0015/__P42.HTM
+meditative_points:
+  - "Hear Christ say: “My flesh is true food, and my blood is true drink.”"
+  - Recognize the Eucharist as the nourishment by which the Church sustains her children.
+  - Receive with gratitude the life of Christ flowing into His Body, the Church.
+ejaculatory_prayer: O Lord, feed me with Your Body and Blood.
+colloquy: Jesus, Bread of Life, thank You for nourishing me through Your Church. Keep me faithful to this food of eternal life.
+resolution: I will make a spiritual communion today, uniting myself to Christ’s Body and Blood with love.
+tags:
+  thematic:
+    - bread of life
+  doctrinal:
+    - communion
+    - ecclesiology
+    - eucharist
+  virtue:
+    - love
+  mystical:
+    - body of christ
+  liturgical:
+    - corpus christi
+  typological:
+    - manna
+    - vine and branches
+  structural: []

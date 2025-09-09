@@ -1,5 +1,5 @@
 import { fetchDayByArc } from "@/api/days";
-import SecondaryReadings from "@/components/SecondaryReadings";
+import { SecondaryReadings, PrimaryReading } from "@/components/SecondaryReadings";
 import { EditNoteModal } from "@/components/modals/NoteModal/NoteModal";
 import { useAuth } from "@/context/authContext";
 import { useJourney } from "@/context/journeyContext";
@@ -247,7 +247,7 @@ export default function MeditationDayPage() {
             {/* Primary Reading */}
             <div>
               <h2 className="text-sm uppercase tracking-widest text-[var(--text-subtle-heading)] mb-1">Primary Reading</h2>
-              <p className="text-lg font-semibold text-[var(--text-light)]">{day.primary_reading.title}</p>
+              <PrimaryReading title={day.primary_reading.title} reference={day.primary_reading.reference} url={day.primary_reading.url} />
             </div>
 
             {/* Secondary Readings */}
