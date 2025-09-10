@@ -1,0 +1,63 @@
+arc_id: arc_eucharistic_heart_of_jesus
+arc_title: The Eucharistic Heart of Jesus
+arc_number: 38
+day_count: 10
+master_day_range:
+  start: 292
+  end: 301
+tags:
+  thematic:
+    - adoration
+    - blood of christ
+    - bread of life
+    - eternal reward
+    - lamb of god
+    - sacred heart
+    - sacrifice
+    - unity
+  doctrinal:
+    - atonement
+    - christology
+    - communion
+    - ecclesiology
+    - eschatology
+    - eucharist
+    - incarnation
+    - real presence
+    - sanctification
+    - soteriology
+  virtue:
+    - charity
+    - faith
+    - fidelity
+    - hope
+    - love
+    - perseverance
+    - surrender
+    - trust
+  mystical:
+    - body of christ
+    - divine indwelling
+    - divine love
+    - divine presence
+    - heavenly liturgy
+    - pierced heart
+    - union
+    - union with christ
+  liturgical:
+    - feast of the sacred heart
+    - good friday
+    - holy thursday
+    - solemnities
+  typological:
+    - blood and water
+    - blood of the covenant
+    - bread and wine
+    - manna
+    - marriage feast of the lamb
+    - melchizedek
+    - paschal lamb
+    - passover
+    - the pierced heart
+    - vine and branches
+  structural: []

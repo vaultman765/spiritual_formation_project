@@ -1,0 +1,43 @@
+# Last imported into DB: 2025-09-09 23:05:48
+master_day_number: 300
+arc_day_number: 9
+arc_id: arc_eucharistic_heart_of_jesus
+arc_title: The Eucharistic Heart of Jesus
+arc_number: 38
+day_title: The Heart of Jesus in the Host
+anchor_image: You kneel before Christ in the Eucharist. From the Host shines His Sacred Heart,
+  radiant with light, offering Himself as food for the life of the world.
+primary_reading:
+  title: John 19:34
+  reference:
+  url:
+secondary_reading:
+  - title: Pope St. John Paul II, Ecclesia de Eucharistia
+    reference: §25
+    url: /docs/readings/St_Pope_JP2_Ecclesia_de_Eucharista.pdf
+meditative_points:
+  - See the Host radiant with His Heart, the same Heart pierced on the Cross.
+  - Contemplate how His love is hidden yet burning in the Sacrament.
+  - Let your own heart be conformed to His Eucharistic Heart.
+ejaculatory_prayer: Sacred Heart of Jesus in the Eucharist, have mercy on us.
+colloquy: O Jesus, Your Heart beats in the Eucharist with love for me. Make my heart burn with love for You alone.
+resolution: I will pray an act of consecration to the Sacred Heart today, uniting it to my Eucharistic devotion.
+tags:
+  thematic:
+    - adoration
+    - sacred heart
+  doctrinal:
+    - eucharist
+    - real presence
+    - christology
+  virtue:
+    - love
+  mystical:
+    - pierced heart
+  liturgical:
+    - feast of the sacred heart
+    - corpus christi
+  typological:
+    - blood and water
+    - the pierced heart
+  structural: []

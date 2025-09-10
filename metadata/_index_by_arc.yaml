@@ -146,3 +146,7 @@ arc_church_bride_and_mother:
   arc_number: 37
   start_day: 285
   end_day: 291
+arc_eucharistic_heart_of_jesus:
+  arc_number: 38
+  start_day: 292
+  end_day: 301

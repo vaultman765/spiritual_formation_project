@@ -2850,3 +2850,82 @@
     - ecclesiology
     - bride of Christ
     - communion
+- arc_id: arc_eucharistic_heart_of_jesus
+  arc_title: The Eucharistic Heart of Jesus
+  arc_number: 38
+  day_count: 10
+  master_day_range:
+    start: 292
+    end: 301
+  anchor_image:
+    - You kneel before Christ in the Eucharist. From the Host shines His Sacred Heart,
+      radiant with light, offering Himself as food for the life of the world.
+  arc_summary: The Sacred Heart of Jesus shines most brightly in the Eucharist, where
+    His love becomes our food and covenant. This arc journeys through John 6 and the
+    institution of the Last Supper, unveiling the Eucharist as Real Presence, sacrifice,
+    and communion. It shows how Christ’s Heart is poured out as covenant, builds the
+    Church, and remains hidden in the Host until He comes in glory. By adoring the
+    Eucharistic Heart, the soul learns to live from His love, unite with His sacrifice,
+    and long for the eternal wedding feast of the Lamb.
+  primary_reading:
+    - 1 Corinthians 10:16–17
+    - CCC §1402–1405
+    - CCC §§1396–1397
+    - Hebrews 9:11–14
+    - John 19:34
+    - John 6:48–58
+    - Luke 22:14-20
+  tags:
+    - adoration
+    - atonement
+    - blood and water
+    - blood of christ
+    - blood of the covenant
+    - body of christ
+    - bread and wine
+    - bread of life
+    - charity
+    - christology
+    - communion
+    - corpus christi
+    - divine indwelling
+    - divine love
+    - divine presence
+    - ecclesiology
+    - eschatology
+    - eternal reward
+    - eucharist
+    - faith
+    - feast of the sacred heart
+    - fidelity
+    - good friday
+    - heavenly liturgy
+    - holy thursday
+    - hope
+    - incarnation
+    - lamb of god
+    - love
+    - manna
+    - marriage feast of the lamb
+    - melchizedek
+    - paschal lamb
+    - passover
+    - perseverance
+    - pierced heart
+    - real presence
+    - sacred heart
+    - sacrifice
+    - sanctification
+    - solemnities
+    - soteriology
+    - surrender
+    - the pierced heart
+    - trust
+    - union
+    - union with christ
+    - unity
+    - vine and branches
+  card_tags:
+    - Eucharist
+    - Sacred Heart
+    - real presence
