@@ -1,0 +1,53 @@
+arc_id: arc_seven_sorrows_of_mary
+arc_title: The Seven Sorrows of Mary
+arc_number: 39
+day_count: 7
+master_day_range:
+  start: 302
+  end: 308
+tags:
+  thematic:
+    - crucifixion
+    - interior battle
+    - lamb of god
+    - mary
+    - passion of christ
+    - suffering
+  doctrinal:
+    - christology
+    - divine mysteries
+    - divine providence
+    - eschatology
+    - marian dogma
+    - marian mediation
+    - paschal mystery
+    - redemption
+    - soteriology
+    - suffering servant
+  virtue:
+    - compassion
+    - courage
+    - faith
+    - fidelity
+    - fortitude
+    - hope
+    - humility
+    - love
+    - obedience
+    - perseverance
+    - trust
+  mystical:
+    - pierced heart
+    - sorrow
+    - union with christ
+    - union with mary
+  liturgical:
+    - christmas
+    - feast of the holy family
+    - feast of the presentation
+    - good friday
+    - holy saturday
+    - holy week
+    - lent
+  typological: []
+  structural: []

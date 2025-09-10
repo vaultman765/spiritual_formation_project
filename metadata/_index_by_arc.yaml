@@ -150,3 +150,7 @@ arc_eucharistic_heart_of_jesus:
   arc_number: 38
   start_day: 292
   end_day: 301
+arc_seven_sorrows_of_mary:
+  arc_number: 39
+  start_day: 302
+  end_day: 308

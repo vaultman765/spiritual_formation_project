@@ -1,0 +1,44 @@
+# Last imported into DB: 2025-09-10 13:32:37
+master_day_number: 306
+arc_day_number: 5
+arc_id: arc_seven_sorrows_of_mary
+arc_title: The Seven Sorrows of Mary
+arc_number: 39
+day_title: The Crucifixion and Death of Jesus
+anchor_image: You stand at Calvary beside Mary. The Cross rises before you, and Mary gazes upon her dying Son,
+  her Heart transfixed with sorrow.
+primary_reading:
+  title: John 19:25–30
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§968-970
+    url: http://www.vatican.va/archive/ENG0015/__P2Y.HTM
+meditative_points:
+  - Stand with Mary at the foot of the Cross as Jesus breathes His last.
+  - Hear Him entrust her to the beloved disciple — and to you.
+  - Share in Mary’s sorrow and her faith at the hour of death.
+ejaculatory_prayer: Mother, keep me near the Cross of Jesus.
+colloquy: Mary, you shared in your Son’s death with perfect fidelity. Help me to remain steadfast in sorrow and in hope.
+resolution: I will make time today for silence before the Cross, uniting my heart to Mary’s sorrow.
+tags:
+  thematic:
+    - lamb of god
+    - mary
+    - crucifixion
+  doctrinal:
+    - marian mediation
+    - paschal mystery
+    - suffering servant
+  virtue:
+    - fidelity
+  mystical:
+    - sorrow
+    - pierced heart
+    - union with christ
+  liturgical:
+    - good friday
+    - lent
+  typological: []
+  structural: []
