@@ -1,0 +1,44 @@
+# Last imported into DB: 2025-09-09 23:05:44
+master_day_number: 295
+arc_day_number: 4
+arc_id: arc_eucharistic_heart_of_jesus
+arc_title: The Eucharistic Heart of Jesus
+arc_number: 38
+day_title: Take and Eat
+anchor_image: You kneel before Christ in the Eucharist. From the Host shines His Sacred Heart,
+  radiant with light, offering Himself as food for the life of the world.
+primary_reading:
+  title: Luke 22:14-20
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§1339–1340 — Institution of the Eucharist
+    url: https://www.vatican.va/archive/ENG0015/__P3Z.HTM
+  - title: St. John Chrysostom, Homilies on Matthew
+    reference: Homily 82
+    url: https://www.newadvent.org/fathers/200182.htm
+meditative_points:
+  - "Christ says to you at the Last Supper: “Take, eat, this is my body.”"
+  - See His Sacred Heart in the Host, offering Himself in love to you.
+  - Receive His command not as symbol but as living gift.
+ejaculatory_prayer: O Jesus, let me hunger for You alone.
+colloquy: Lord, You give me Your very Body to eat. How could I ever be indifferent before so great a gift?
+  Enkindle my gratitude and reverence.
+resolution: I will prepare prayerfully for my next Communion by reading the Gospel account of the Last Supper.
+tags:
+  thematic:
+    - sacrifice
+  doctrinal:
+    - eucharist
+    - real presence
+  virtue: []
+  mystical:
+    - adoration
+    - divine love
+  liturgical:
+    - holy thursday
+  typological:
+    - passover
+    - bread and wine
+  structural: []
