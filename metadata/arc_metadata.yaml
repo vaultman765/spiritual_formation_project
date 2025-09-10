@@ -2929,3 +2929,83 @@
     - Eucharist
     - Sacred Heart
     - real presence
+- arc_id: arc_seven_sorrows_of_mary
+  arc_title: The Seven Sorrows of Mary
+  arc_number: 39
+  day_count: 7
+  master_day_range:
+    start: 302
+    end: 308
+  anchor_image:
+    - You follow Mary to the tomb. She watches as the stone is rolled in place, her
+      Heart heavy with sorrow, yet her faith unbroken.
+    - You search with Mary and Joseph through the crowded streets of Jerusalem, their
+      faces marked with anguish until they find Jesus teaching in the Temple.
+    - You see Joseph of Arimathea and the holy women lower Jesus’ body from the Cross.
+      Mary receives Him into her arms, cradling Him in silent grief.
+    - You stand at Calvary beside Mary. The Cross rises before you, and Mary gazes
+      upon her dying Son, her Heart transfixed with sorrow.
+    - You stand in the Temple as Simeon takes the Child Jesus into his arms. Mary
+      listens intently as he foretells a sword that will pierce her soul.
+    - You walk the streets of Jerusalem. The crowd presses close as Jesus carries
+      His Cross. Mary forces her way forward, and their eyes meet in silent sorrow.
+    - You walk with Mary and Joseph by night as they flee into Egypt. Mary holds the
+      Child close, her eyes full of both love and fear.
+  arc_summary: The Mother of Sorrows shares most deeply in the Passion of her Son.
+    This arc walks through the seven sorrows of Mary — from Simeon’s prophecy to the
+    burial of Jesus. Each day the soul stands beside her in a concrete Gospel scene,
+    beholding her pierced Heart. Her sorrows reveal both her unfailing faith and her
+    union with Christ’s redemptive suffering. By meditating with Mary in her sorrows,
+    the soul learns to unite its own trials to the Cross, to grow in compassion, and
+    to hope in the Resurrection beyond all grief.
+  primary_reading:
+    - John 19:25–30
+    - Luke 23:27–31
+    - Luke 23:50–54
+    - Luke 23:55–56
+    - Luke 2:25–35
+    - Luke 2:41–51
+    - Matthew 2:13–18
+  tags:
+    - christmas
+    - christology
+    - compassion
+    - courage
+    - crucifixion
+    - divine mysteries
+    - divine providence
+    - eschatology
+    - faith
+    - feast of the holy family
+    - feast of the presentation
+    - fidelity
+    - fortitude
+    - good friday
+    - holy saturday
+    - holy week
+    - hope
+    - humility
+    - interior battle
+    - lamb of god
+    - lent
+    - love
+    - marian dogma
+    - marian mediation
+    - mary
+    - obedience
+    - paschal mystery
+    - passion of christ
+    - perseverance
+    - pierced heart
+    - redemption
+    - sorrow
+    - soteriology
+    - suffering
+    - suffering servant
+    - trust
+    - union with christ
+    - union with mary
+  card_tags:
+    - Mary
+    - sorrow
+    - union with Christ
