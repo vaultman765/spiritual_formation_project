@@ -3009,3 +3009,61 @@
     - Mary
     - sorrow
     - union with Christ
+- arc_id: arc_virtue_of_patience
+  arc_title: The Virtue of Patience
+  arc_number: 40
+  day_count: 5
+  master_day_range:
+    start: 309
+    end: 313
+  anchor_image:
+    - You contemplate Christ in His Passion, patient in every insult and blow. His
+      silence and endurance become the model for your own life.
+    - You see Christ in Gethsemane, prostrate on the ground, praying with tears and
+      sweat like blood. His Heart accepts the Father’s will with patient surrender.
+    - 'You stand at Calvary as the crowd jeers: “Save yourself, if you are the Son
+      of God!” Christ listens in silence, His Heart unshaken in patience.'
+    - You stand in the high priest’s court. Christ is questioned and accused, yet
+      He remains silent — His face calm, His Heart steadfast in peace.
+    - You walk with Christ as Simon of Cyrene is pressed into service. Jesus bears
+      the Cross with quiet strength, patient in each step toward Calvary.
+  arc_summary: Patience is the quiet strength of Christ in His Passion. This arc contemplates
+    Jesus silent before accusers, bearing the Cross, enduring mockery, persevering
+    in prayer, and offering His endurance as the model for disciples. Rooted in Isaiah’s
+    prophecy of the Suffering Servant, each day places the soul before the meek and
+    patient Heart of Christ. By uniting with Him, the Christian learns to embrace
+    trials without bitterness, to pray with perseverance, and to walk in His footsteps
+    with trust. Patience becomes not resignation, but strength born of love.
+  primary_reading:
+    - 1 Peter 2:21–23
+    - Hebrews 5:7–9
+    - Isaiah 53:7; Matthew 26:62–64
+    - Luke 23:26–28
+    - Mark 15:29–32
+  tags:
+    - christology
+    - discipleship
+    - faith
+    - fortitude
+    - good friday
+    - holy week
+    - humility
+    - imitation of christ
+    - lent
+    - meekness
+    - obedience
+    - ordinary time
+    - patience
+    - perseverance
+    - prayer
+    - redemption
+    - sorrow
+    - stations of the cross
+    - suffering
+    - suffering servant
+    - union with christ
+    - virtues
+  card_tags:
+    - patience
+    - perseverance
+    - imitation of Christ
