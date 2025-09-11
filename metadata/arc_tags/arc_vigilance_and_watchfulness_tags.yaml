@@ -1,0 +1,37 @@
+arc_id: arc_vigilance_and_watchfulness
+arc_title: Vigilance and Watchfulness
+arc_number: 41
+day_count: 5
+master_day_range:
+  start: 314
+  end: 318
+tags:
+  thematic:
+    - eternal reward
+    - kingdom of god
+    - prayer
+    - spiritual warfare
+    - suffering
+    - watchfulness
+  doctrinal:
+    - christology
+    - eschatology
+    - grace
+    - redemption
+  virtue:
+    - fidelity
+    - fortitude
+    - hope
+    - perseverance
+    - vigilance
+  mystical:
+    - inner watchfulness
+    - spiritual ascent
+    - spiritual homecoming
+    - union with christ
+  liturgical:
+    - advent
+    - holy week
+    - lent
+  typological: []
+  structural: []

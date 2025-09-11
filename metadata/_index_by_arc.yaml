@@ -158,3 +158,7 @@ arc_virtue_of_patience:
   arc_number: 40
   start_day: 309
   end_day: 313
+arc_vigilance_and_watchfulness:
+  arc_number: 41
+  start_day: 314
+  end_day: 318
