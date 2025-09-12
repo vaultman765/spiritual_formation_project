@@ -162,3 +162,7 @@ arc_vigilance_and_watchfulness:
   arc_number: 41
   start_day: 314
   end_day: 318
+arc_silence_hidden_life:
+  arc_number: 42
+  start_day: 319
+  end_day: 324
