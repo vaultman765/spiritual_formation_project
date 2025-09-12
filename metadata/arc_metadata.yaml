@@ -3195,3 +3195,54 @@
     - silence
     - hidden life
     - prayer
+- arc_id: arc_obedience_in_obscurity
+  arc_title: Obedience in Obscurity
+  arc_number: 43
+  day_count: 7
+  master_day_range:
+    start: 325
+    end: 331
+  anchor_image:
+    - You are in Nazareth. The young Jesus bows His head in obedience as Mary gives
+      Him a simple task. Joseph looks on with quiet approval. The eternal Word submits
+      Himself in humility within this hidden home.
+  arc_summary: 'In Nazareth’s hidden years, Christ sanctified the virtue of obedience.
+    Unknown to the world, He submitted to Mary and Joseph, fulfilling the will of
+    His Father in silence. This arc contemplates obedience not as servitude but as
+    freedom — the joyful surrender of the will that prepares the soul for mission.
+    Each day narrows the gaze: from Christ’s filial obedience, to the humility it
+    demands, to its connection with hidden sacrifice, and finally to its fulfillment
+    on the Cross. The arc reveals obedience as the hidden root of holiness, the secret
+    strength of saints, and the way to union with God’s will.'
+  primary_reading:
+    - Colossians 3:23–24
+    - Hebrews 5:5-10
+    - Isaiah 53:6-9
+    - John 15:1-17
+    - John 4:31-38
+    - Luke 2:51
+    - Philippians 2:5–8
+  tags:
+    - atonement
+    - christology
+    - divine sonship
+    - divine will
+    - docility
+    - fidelity
+    - hidden life
+    - humility
+    - imitation of christ
+    - joy
+    - kenosis
+    - new adam
+    - obedience
+    - ordinary time
+    - perseverance
+    - sanctification
+    - st joseph
+    - suffering servant
+    - union with christ
+  card_tags:
+    - obedience
+    - humility
+    - hidden life

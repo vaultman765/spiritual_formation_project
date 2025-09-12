@@ -166,3 +166,7 @@ arc_silence_hidden_life:
   arc_number: 42
   start_day: 319
   end_day: 324
+arc_obedience_in_obscurity:
+  arc_number: 43
+  start_day: 325
+  end_day: 331
