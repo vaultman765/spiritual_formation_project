@@ -1,0 +1,28 @@
+arc_id: arc_armor_of_god
+arc_title: The Armor of God
+arc_number: 45
+day_count: 5
+master_day_range:
+  start: 338
+  end: 342
+tags:
+  thematic:
+    - righteousness
+    - salvation
+    - spiritual warfare
+  doctrinal:
+    - truth
+  virtue:
+    - courage
+    - faith
+    - honesty
+    - hope
+    - perseverance
+    - purity
+    - trust
+    - zeal
+  mystical: []
+  liturgical: []
+  typological:
+    - armor of god
+  structural: []
