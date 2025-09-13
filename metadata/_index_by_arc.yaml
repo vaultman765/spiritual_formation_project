@@ -174,3 +174,7 @@ arc_desert_temptation:
   arc_number: 44
   start_day: 332
   end_day: 337
+arc_armor_of_god:
+  arc_number: 45
+  start_day: 338
+  end_day: 342
