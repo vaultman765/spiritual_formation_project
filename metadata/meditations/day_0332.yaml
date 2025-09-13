@@ -1,0 +1,45 @@
+# Last imported into DB: 2025-09-12 22:47:31
+master_day_number: 332
+arc_day_number: 1
+arc_id: arc_desert_temptation
+arc_title: The Desert and Temptation of Christ
+arc_number: 44
+day_title: The Spirit Leads Christ into the Desert
+anchor_image: You are in the desert with Christ after His forty-day fast.
+  The sun burns, the wilderness is barren, and the devil approaches.
+primary_reading:
+  title: Matthew 4:1–11
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§538–542
+    url: https://www.vatican.va/archive/ENG0015/__P1D.HTM
+  - title: St. Augustine, Sermon on Lent
+    reference: Sermon 205
+    url: /docs/readings/St_Augustine_Sermons_184-229.pdf
+meditative_points:
+  - See the Spirit leading Christ — not away from trial, but into it. The desert is the stage of His obedience.
+  - Watch Him fast for forty days — the hunger, the weakness, the silence.
+  - He enters this trial to undo Adam’s fall and Israel’s failures, for your sake.
+ejaculatory_prayer: Jesus, strengthen me in trial.
+colloquy: Lord, You embraced the desert for me.
+  Teach me to accept the crosses and trials I resist. Lead me into fidelity, not comfort.
+resolution: I will fast from one small comfort today, uniting it to Christ’s forty days in the desert.
+tags:
+  thematic:
+    - temptation
+  doctrinal:
+    - christology
+    - sin
+    - redemption
+  virtue:
+    - fortitude
+    - obedience
+  mystical: []
+  liturgical:
+    - lent
+  typological:
+    - israel in desert
+    - new adam
+  structural: []
