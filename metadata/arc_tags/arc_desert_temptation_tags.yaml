@@ -1,0 +1,30 @@
+arc_id: arc_desert_temptation
+arc_title: The Desert and Temptation of Christ
+arc_number: 44
+day_count: 6
+master_day_range:
+  start: 332
+  end: 337
+tags:
+  thematic:
+    - spiritual warfare
+    - temptation
+  doctrinal:
+    - christology
+    - redemption
+    - sin
+  virtue:
+    - fortitude
+    - humility
+    - obedience
+    - perseverance
+    - trust
+  mystical: []
+  liturgical:
+    - lent
+  typological:
+    - israel in desert
+    - manna
+    - new adam
+    - temple
+  structural: []

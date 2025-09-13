@@ -170,3 +170,7 @@ arc_obedience_in_obscurity:
   arc_number: 43
   start_day: 325
   end_day: 331
+arc_desert_temptation:
+  arc_number: 44
+  start_day: 332
+  end_day: 337
