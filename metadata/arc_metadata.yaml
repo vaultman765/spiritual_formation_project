@@ -3325,3 +3325,50 @@
     - armor of God
     - spiritual warfare
     - faith
+- arc_id: arc_litany_of_trust
+  arc_title: The Litany of Trust
+  arc_number: 46
+  day_count: 9
+  master_day_range:
+    start: 343
+    end: 351
+  anchor_image:
+    - 'A soul kneeling beneath radiant rays of Divine Mercy, whispering: “Jesus, I
+      trust in You.” The light of Christ surrounds and protects, while the Heart of
+      Jesus beats with patient love.'
+  arc_summary: This arc walks day by day through the Litany of Trust, letting each
+    petition become a focus for prayer. The primary reading is always the entire Litany,
+    with each day narrowing to a particular line or affirmation. The stable anchor
+    image shows a soul kneeling beneath the radiant rays of Divine Mercy, whispering
+    “Jesus, I trust in You.”
+  primary_reading:
+    - The Litany of Trust
+  tags:
+    - charity
+    - courage
+    - divine adoption
+    - divine providence
+    - faith
+    - forgiveness
+    - grace
+    - hope
+    - humility
+    - identity
+    - litany
+    - love of god
+    - mercy
+    - obedience
+    - paschal mystery
+    - patience
+    - peace
+    - perseverance
+    - reconciliation
+    - redemption
+    - suffering
+    - surrender
+    - trust
+    - union with christ
+  card_tags:
+    - trust
+    - surrender
+    - faith

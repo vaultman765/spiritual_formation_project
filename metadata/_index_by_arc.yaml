@@ -178,3 +178,7 @@ arc_armor_of_god:
   arc_number: 45
   start_day: 338
   end_day: 342
+arc_litany_of_trust:
+  arc_number: 46
+  start_day: 343
+  end_day: 351
