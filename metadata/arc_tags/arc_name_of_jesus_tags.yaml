@@ -1,0 +1,34 @@
+arc_id: arc_name_of_jesus
+arc_title: The Name of Jesus
+arc_number: 47
+day_count: 5
+master_day_range:
+  start: 352
+  end: 356
+tags:
+  thematic:
+    - holy name
+    - prayer
+    - salvation
+    - spiritual warfare
+    - unity
+  doctrinal:
+    - christology
+    - ecclesiology
+    - mediation
+    - reverence
+    - salvation
+    - soteriology
+  virtue:
+    - charity
+    - courage
+    - faith
+    - humility
+    - trust
+    - vigilance
+  mystical:
+    - divine presence
+    - union with christ
+  liturgical: []
+  typological: []
+  structural: []
