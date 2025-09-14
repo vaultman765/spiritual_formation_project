@@ -1,0 +1,40 @@
+arc_id: arc_litany_of_trust
+arc_title: The Litany of Trust
+arc_number: 46
+day_count: 9
+master_day_range:
+  start: 343
+  end: 351
+tags:
+  thematic:
+    - identity
+    - love of god
+    - mercy
+    - peace
+    - suffering
+    - trust
+  doctrinal:
+    - divine providence
+    - grace
+    - love of god
+    - paschal mystery
+    - reconciliation
+    - redemption
+  virtue:
+    - charity
+    - courage
+    - faith
+    - forgiveness
+    - hope
+    - humility
+    - obedience
+    - patience
+    - perseverance
+    - surrender
+  mystical:
+    - divine adoption
+    - union with christ
+  liturgical: []
+  typological: []
+  structural:
+    - litany
