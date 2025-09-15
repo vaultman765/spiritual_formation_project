@@ -190,3 +190,7 @@ arc_simplicity_poverty_of_spirit:
   arc_number: 48
   start_day: 357
   end_day: 361
+arc_coming_of_the_kingdom:
+  arc_number: 49
+  start_day: 362
+  end_day: 366
