@@ -1,0 +1,28 @@
+arc_id: arc_simplicity_poverty_of_spirit
+arc_title: Simplicity and Poverty of Spirit
+arc_number: 48
+day_count: 5
+master_day_range:
+  start: 357
+  end: 361
+tags:
+  thematic:
+    - detachment
+    - simplicity
+  doctrinal:
+    - christology
+    - incarnation
+    - poverty of spirit
+  virtue:
+    - detachment
+    - humility
+    - poverty
+    - trust
+  mystical: []
+  liturgical:
+    - christmas
+    - lent
+    - ordinary time
+  typological: []
+  structural:
+    - beatitudes
