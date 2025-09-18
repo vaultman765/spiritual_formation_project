@@ -2,18 +2,88 @@ import { useEffect, useRef, useState } from "react";
 import { useAuth } from "@/context/authContext";
 import { Link, useLocation } from "react-router-dom";
 
+/** Small helpers for the dropdown UI */
+function Dropdown({ label, children }: { label: string | React.ReactNode; children: React.ReactNode }) {
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement | null>(null);
+  const inTimer = useRef<number | null>(null);
+  const outTimer = useRef<number | null>(null);
+
+  // close on outside click + Esc
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      if (!rootRef.current) return;
+      if (!rootRef.current.contains(e.target as Node)) setOpen(false);
+    };
+    const onEsc = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    document.addEventListener("mousedown", onClick);
+    document.addEventListener("keydown", onEsc);
+    return () => {
+      document.removeEventListener("mousedown", onClick);
+      document.removeEventListener("keydown", onEsc);
+    };
+  }, []);
+
+  // hover intent (desktop)
+  const onEnter = () => {
+    if (outTimer.current) clearTimeout(outTimer.current);
+    inTimer.current = window.setTimeout(() => setOpen(true), 100);
+  };
+  const onLeave = () => {
+    if (inTimer.current) clearTimeout(inTimer.current);
+    outTimer.current = window.setTimeout(() => setOpen(false), 180);
+  };
+
+  return (
+    <div ref={rootRef} className="relative" onMouseEnter={onEnter} onMouseLeave={onLeave}>
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="inline-flex items-center gap-1 rounded-md px-2 py-1.5 text-[var(--gray-100)] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+        aria-haspopup="menu"
+        aria-expanded={open}
+      >
+        {label}
+        <svg viewBox="0 0 20 20" className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`} aria-hidden>
+          <path fill="currentColor" d="M5.3 7.3a1 1 0 011.4 0L10 10.6l3.3-3.3a1 1 0 111.4 1.4l-4 4a1 1 0 01-1.4 0l-4-4a1 1 0 010-1.4z" />
+        </svg>
+      </button>
+
+      <div
+        role="menu"
+        className={`absolute right-0 z-30 mt-2 w-[22rem] max-h-[75vh] overflow-auto rounded-xl border border-white/10 bg-[var(--bg-card)]/95 p-2 shadow-xl shadow-black/30 backdrop-blur ${
+          open ? "block" : "hidden"
+        }`}
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function Item({ to, children, onClick }: { to: string; children: React.ReactNode; onClick?: () => void }) {
+  return (
+    <Link
+      to={to}
+      onClick={onClick}
+      role="menuitem"
+      className="block rounded-md px-3 py-2 text-[var(--text-main)] hover:bg-white/10 hover:text-white"
+    >
+      {children}
+    </Link>
+  );
+}
+
+function SectionTitle({ children }: { children: React.ReactNode }) {
+  return <div className="px-3 pb-1 pt-2 text-xs font-semibold uppercase tracking-wider text-[var(--text-subtle-heading)]">{children}</div>;
+}
+
 export default function Navbar() {
   const { user, logout } = useAuth();
-  const [isOpen, setIsOpen] = useState(false);
-  const [gpOpen, setGpOpen] = useState(false);
-  const [flyout, setFlyout] = useState<"guides" | "prayers" | "litanies" | null>(null);
-
-  const [mGpOpen, setMGpOpen] = useState(false);
-  const [mGuidesOpen, setMGuidesOpen] = useState(false);
-  const [mPrayersOpen, setMPrayersOpen] = useState(false);
-  const [mLitaniesOpen, setMLitaniesOpen] = useState(false);
-
+  const [isOpen, setIsOpen] = useState(false); // mobile panel
   const location = useLocation();
+
+  useEffect(() => setIsOpen(false), [location.pathname]);
 
   const handleLogout = async () => {
     try {
@@ -24,483 +94,245 @@ export default function Navbar() {
     }
   };
 
-  const closeTimer = useRef<number | null>(null);
-  const cancelClose = () => {
-    if (closeTimer.current) {
-      clearTimeout(closeTimer.current);
-      closeTimer.current = null;
-    }
-  };
-  const scheduleClose = () => {
-    cancelClose();
-    closeTimer.current = window.setTimeout(() => {
-      setGpOpen(false);
-      setFlyout(null);
-    }, 180); // small grace period prevents flicker
-  };
-
-  // close on route change
-  useEffect(() => {
-    setGpOpen(false);
-    setFlyout(null);
-  }, [location.pathname]);
-
-  // close on Esc
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && (setGpOpen(false), setFlyout(null));
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, []);
-
   return (
-    <nav className="bg-[var(--bg-light)] text-[var(--brand-primary)] px-6 py-2">
-      <div className="flex justify-between items-center">
+    <nav className="bg-[var(--bg-light)]/95 text-[var(--brand-primary)]">
+      <div className="flex w-full items-center justify-between px-4 sm:px-6 py-2">
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2">
-          <img src="/images/favicon-96x96.png" alt="Spiritual Formation Project" className="h-10 sm:h-12 w-auto" />
-          <span className="hidden sm:inline-block font-display font-semibold tracking-wide text-lg text-white">
+        <Link to="/" className="flex items-center gap-2">
+          <img src="/images/favicon-96x96.png" alt="Spiritual Formation Project" className="h-10 w-10" />
+          <span className="hidden sm:inline-block font-display text-lg font-semibold tracking-wide text-white">
             Spiritual Formation Project
           </span>
         </Link>
 
-        {/* Hamburger (mobile only) */}
-        <button className="sm:hidden text-white text-2xl focus:outline-none" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            focusable="false"
-            className="h-7 w-7"
-          >
+        {/* Desktop */}
+        <div className="hidden items-center gap-4 sm:flex">
+          <Link to="/" className="px-2 py-1.5 text-[var(--gray-100)] hover:text-white">
+            Home
+          </Link>
+
+          {/* Journey dropdown (Explore, My Journey, My Notes) */}
+          <Dropdown label="Journey">
+            <Item to="/explore">Explore</Item>
+            <Item to="/my-journey">My Journey</Item>
+            <Item to="/my-notes">My Notes</Item>
+          </Dropdown>
+
+          {/* Guides & Prayers dropdown (ALL your options) */}
+          <Dropdown label="Guides & Prayers">
+            {/* Guides */}
+            <SectionTitle>Guides</SectionTitle>
+            <Item to="/how-to-pray">Ignatian Mental Prayer</Item>
+            <Item to="/how-to-pray/guide">In-Depth How to Pray</Item>
+            <Item to="/prayers/rosary">How to Pray the Rosary</Item>
+            <Item to="/prayers/divine-mercy-chaplet">Divine Mercy Chaplet</Item>
+
+            <div className="my-2 border-t border-white/10" />
+
+            {/* Prayers */}
+            <SectionTitle>Prayers</SectionTitle>
+            <Item to="/prayers">See all prayers</Item>
+            <Item to="/prayers/apostles-creed">Apostles’ Creed</Item>
+            <Item to="/prayers/our-father">Our Father</Item>
+            <Item to="/prayers/hail-mary">Hail Mary</Item>
+            <Item to="/prayers/glory-be">Glory Be</Item>
+            <Item to="/prayers/hail-holy-queen">Hail, Holy Queen</Item>
+
+            <div className="my-2 border-t border-white/10" />
+
+            {/* Litanies */}
+            <SectionTitle>Litanies</SectionTitle>
+            <Item to="/prayers">See all litanies</Item>
+            <Item to="/prayers/litany-sacred-heart">Litany of the Sacred Heart</Item>
+            <Item to="/prayers/litany-precious-blood">Litany of the Most Precious Blood</Item>
+            <Item to="/prayers/litany-immaculate-heart">Litany of the Immaculate Heart</Item>
+            <Item to="/prayers/litany-of-humility">Litany of Humility</Item>
+          </Dropdown>
+
+          {/* Account */}
+          <Dropdown label="Account">
+            {user ? (
+              <>
+                <div className="px-3 py-1 text-xs text-[var(--text-muted)]">Signed in as {user.username}</div>
+                <button
+                  onClick={handleLogout}
+                  className="mt-1 w-full rounded-md px-3 py-2 text-left text-[var(--text-main)] hover:bg-white/10 hover:text-white"
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <>
+                <Item to="/auth/login">Login</Item>
+                <Item to="/auth/register">Register</Item>
+              </>
+            )}
+          </Dropdown>
+        </div>
+
+        {/* Mobile hamburger */}
+        <button className="sm:hidden text-white" onClick={() => setIsOpen((v) => !v)} aria-label="Toggle menu" aria-expanded={isOpen}>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
             <rect x="4" y="6" width="16" height="2" rx="1" fill="currentColor" />
             <rect x="4" y="11" width="16" height="2" rx="1" fill="currentColor" />
             <rect x="4" y="16" width="16" height="2" rx="1" fill="currentColor" />
           </svg>
         </button>
-
-        {/* Links (desktop only) */}
-        <div className="hidden sm:flex space-x-6 items-center">
-          <Link to="/" className="hover:text-[var(--brand-primary-dark)]">
-            Home
-          </Link>
-          <Link to="/explore" className="hover:text-[var(--brand-primary-dark)]">
-            Explore
-          </Link>
-          <Link to="/my-journey" className="hover:text-[var(--brand-primary-dark)]">
-            My Journey
-          </Link>
-
-          {/* ▼ Dropdown: Guides & Prayers */}
-          <div className="relative z-50 hidden sm:block" onMouseEnter={cancelClose} onMouseLeave={scheduleClose}>
-            <button
-              type="button"
-              onClick={() => setGpOpen((v) => !v)}
-              aria-expanded={gpOpen}
-              aria-haspopup="menu"
-              className="flex items-center gap-1 text-white hover:text-[var(--brand-primary-dark)]"
-            >
-              Guides & Prayers
-              <svg width="16" height="16" viewBox="0 0 24 24" className={`transition ${gpOpen ? "rotate-180" : ""}`}>
-                <path fill="currentColor" d="M7 10l5 5 5-5z" />
-              </svg>
-            </button>
-
-            {gpOpen && (
-              <div
-                role="menu"
-                className="absolute left-1/2 -translate-x-1/2 mt-2 w-56 rounded-xl border border-white/10
-                 bg-[var(--bg-card)]/95 backdrop-blur shadow-xl p-1"
-              >
-                {/* “Bridge” so there’s no hover gap when moving into flyouts */}
-                <div className="pointer-events-none absolute top-0 left-full h-full w-4" />
-
-                <button
-                  type="button"
-                  onMouseEnter={() => setFlyout("guides")}
-                  onClick={() => setFlyout("guides")}
-                  className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-[var(--text-light)] hover:bg-white/5"
-                >
-                  Guides <span className="opacity-70">▸</span>
-                </button>
-
-                <button
-                  type="button"
-                  onMouseEnter={() => setFlyout("prayers")}
-                  onClick={() => setFlyout("prayers")}
-                  className="mt-1 flex w-full items-center justify-between rounded-lg px-3 py-2 text-[var(--text-light)] hover:bg-white/5"
-                >
-                  Prayers <span className="opacity-70">▸</span>
-                </button>
-
-                <button
-                  type="button"
-                  onMouseEnter={() => setFlyout("litanies")}
-                  onClick={() => setFlyout("litanies")}
-                  className="mt-1 flex w-full items-center justify-between rounded-lg px-3 py-2 text-[var(--text-light)] hover:bg-white/5"
-                >
-                  Litanies <span className="opacity-70">▸</span>
-                </button>
-
-                {/* Flyout: Guides */}
-                {flyout === "guides" && (
-                  <div
-                    className="absolute top-0 left-full ml-2 w-64 rounded-xl border border-white/10
-                     bg-[var(--bg-card)]/95 backdrop-blur shadow-xl p-2"
-                    onMouseEnter={cancelClose}
-                    onMouseLeave={scheduleClose}
-                  >
-                    <ul className="space-y-1">
-                      <li>
-                        <Link
-                          to="/how-to-pray"
-                          onClick={() => (setGpOpen(false), setFlyout(null))}
-                          className="block rounded-lg px-3 py-2 hover:bg-white/5"
-                        >
-                          Ignatian Mental Prayer
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/prayers/rosary"
-                          onClick={() => (setGpOpen(false), setFlyout(null))}
-                          className="block rounded-lg px-3 py-2 hover:bg-white/5"
-                        >
-                          The Holy Rosary
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/prayers/divine-mercy-chaplet"
-                          onClick={() => (setGpOpen(false), setFlyout(null))}
-                          className="block rounded-lg px-3 py-2 hover:bg-white/5"
-                        >
-                          Divine Mercy Chaplet
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                )}
-
-                {/* Flyout: Prayers */}
-                {flyout === "prayers" && (
-                  <div
-                    className="absolute top-0 left-full ml-2 w-64 rounded-xl border border-white/10
-                     bg-[var(--bg-card)]/95 backdrop-blur shadow-xl p-2"
-                    onMouseEnter={cancelClose}
-                    onMouseLeave={scheduleClose}
-                  >
-                    <ul className="space-y-1">
-                      <li>
-                        <Link
-                          to="/prayers/"
-                          onClick={() => (setGpOpen(false), setFlyout(null))}
-                          className="block rounded-lg px-3 py-2 hover:bg-white/5"
-                        >
-                          See All prayers
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/prayers/apostles-creed"
-                          onClick={() => (setGpOpen(false), setFlyout(null))}
-                          className="block rounded-lg px-3 py-2 hover:bg-white/5"
-                        >
-                          Apostles’ Creed
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/prayers/our-father"
-                          onClick={() => (setGpOpen(false), setFlyout(null))}
-                          className="block rounded-lg px-3 py-2 hover:bg-white/5"
-                        >
-                          Our Father
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/prayers/hail-mary"
-                          onClick={() => (setGpOpen(false), setFlyout(null))}
-                          className="block rounded-lg px-3 py-2 hover:bg-white/5"
-                        >
-                          Hail Mary
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/prayers/glory-be"
-                          onClick={() => (setGpOpen(false), setFlyout(null))}
-                          className="block rounded-lg px-3 py-2 hover:bg-white/5"
-                        >
-                          Glory Be
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/prayers/hail-holy-queen"
-                          onClick={() => (setGpOpen(false), setFlyout(null))}
-                          className="block rounded-lg px-3 py-2 hover:bg-white/5"
-                        >
-                          Hail, Holy Queen
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                )}
-
-                {/* Flyout: litanies */}
-                {flyout === "litanies" && (
-                  <div
-                    className="absolute top-0 left-full ml-2 w-64 rounded-xl border border-white/10
-                     bg-[var(--bg-card)]/95 backdrop-blur shadow-xl p-2"
-                    onMouseEnter={cancelClose}
-                    onMouseLeave={scheduleClose}
-                  >
-                    <ul className="space-y-1">
-                      <li>
-                        <Link
-                          to="/prayers/"
-                          onClick={() => (setGpOpen(false), setFlyout(null))}
-                          className="block rounded-lg px-3 py-2 hover:bg-white/5"
-                        >
-                          See All Litanies
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/prayers/litany-sacred-heart"
-                          onClick={() => (setGpOpen(false), setFlyout(null))}
-                          className="block rounded-lg px-3 py-2 hover:bg-white/5"
-                        >
-                          The Sacred Heart
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/prayers/litany-precious-blood"
-                          onClick={() => (setGpOpen(false), setFlyout(null))}
-                          className="block rounded-lg px-3 py-2 hover:bg-white/5"
-                        >
-                          The Most Precious Blood
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/prayers/litany-immaculate-heart"
-                          onClick={() => (setGpOpen(false), setFlyout(null))}
-                          className="block rounded-lg px-3 py-2 hover:bg-white/5"
-                        >
-                          Immaculate Heart of Mary
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/prayers/litany-of-humility"
-                          onClick={() => (setGpOpen(false), setFlyout(null))}
-                          className="block rounded-lg px-3 py-2 hover:bg-white/5"
-                        >
-                          Of Humility
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-
-          <Link to="/my-notes" className="hover:text-[var(--brand-primary-dark)]">
-            My Notes
-          </Link>
-
-          {user ? (
-            <div className="flex items-center space-x-4">
-              <span className="text-[var(--gray-100)]">Welcome, {user.username}</span>
-              <button onClick={handleLogout} className="text-[var(--gray-100)] border border-white/30 rounded px-3 py-1 hover:bg-white/10">
-                Logout
-              </button>
-            </div>
-          ) : (
-            <div className="flex space-x-4">
-              <Link to="/auth/login" className="hover:text-white">
-                Login
-              </Link>
-              <Link to="/auth/register" className="hover:text-white">
-                Register
-              </Link>
-            </div>
-          )}
-        </div>
       </div>
 
-      {/* Mobile dropdown */}
+      {/* Mobile panel (collapsible sections mirroring desktop lists) */}
       {isOpen && (
-        <div className="sm:hidden flex flex-col space-y-4 mt-4">
-          <Link to="/" onClick={() => setIsOpen(false)}>
+        <div className="sm:hidden border-t border-white/10 bg-[var(--bg-light)]/95 px-6 pb-4 pt-2">
+          <Link
+            to="/"
+            onClick={() => setIsOpen(false)}
+            className="block rounded-md px-3 py-2 text-[var(--gray-100)] hover:bg-white/10 hover:text-white"
+          >
             Home
           </Link>
-          <Link to="/explore" onClick={() => setIsOpen(false)}>
-            Explore
-          </Link>
-          <Link to="/my-journey" onClick={() => setIsOpen(false)}>
-            My Journey
-          </Link>
 
-          {/* ▼ Mobile collapsible sub-menu */}
-          <div className="border-t border-white/10 pt-3 mt-3">
-            <button
-              onClick={() => setMGpOpen((v) => !v)}
-              aria-expanded={mGpOpen}
-              className="flex w-full items-center justify-between text-left"
-            >
-              <span>Guides & Prayers</span>
-              <span className={`transition ${mGpOpen ? "rotate-180" : ""}`}>▾</span>
-            </button>
+          <details className="mt-1 rounded-md">
+            <summary className="cursor-pointer list-none rounded-md px-3 py-2 text-[var(--gray-100)] hover:bg-white/10 hover:text-white">
+              Journey
+            </summary>
+            <div className="mt-1 space-y-1 pl-3">
+              <Link to="/explore" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 hover:bg-white/10">
+                Explore
+              </Link>
+              <Link to="/my-journey" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 hover:bg-white/10">
+                My Journey
+              </Link>
+              <Link to="/my-notes" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 hover:bg-white/10">
+                My Notes
+              </Link>
+            </div>
+          </details>
 
-            {mGpOpen && (
-              <div className="mt-2 pl-3 space-y-2">
-                {/* Guides */}
-                <button
-                  onClick={() => setMGuidesOpen((v) => !v)}
-                  aria-expanded={mGuidesOpen}
-                  className="flex w-full items-center justify-between text-left text-white/90"
+          <details className="mt-1 rounded-md">
+            <summary className="cursor-pointer list-none rounded-md px-3 py-2 text-[var(--gray-100)] hover:bg-white/10 hover:text-white">
+              Guides & Prayers
+            </summary>
+            <div className="mt-1 space-y-2 pl-3">
+              {/* Guides */}
+              <div>
+                <div className="px-3 py-1 text-xs uppercase tracking-wider text-[var(--text-subtle-heading)]">Guides</div>
+                <Link to="/how-to-pray" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 hover:bg-white/10">
+                  Ignatian Mental Prayer
+                </Link>
+                <Link to="/how-to-pray/guide" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 hover:bg-white/10">
+                  In-Depth How to Pray
+                </Link>
+                <Link to="/prayers/rosary" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 hover:bg-white/10">
+                  How to Pray the Rosary
+                </Link>
+                <Link
+                  to="/prayers/divine-mercy-chaplet"
+                  onClick={() => setIsOpen(false)}
+                  className="block rounded-md px-3 py-2 hover:bg-white/10"
                 >
-                  <span>Guides</span>
-                  <span className={`transition ${mGuidesOpen ? "rotate-180" : ""}`}>▾</span>
-                </button>
-                {mGuidesOpen && (
-                  <ul className="pl-3 space-y-1">
-                    <li>
-                      <Link to="/how-to-pray" onClick={() => setIsOpen(false)} className="block py-1">
-                        Ignatian Mental Prayer
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/prayers/rosary" onClick={() => setIsOpen(false)} className="block py-1">
-                        The Holy Rosary
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/prayers/divine-mercy-chaplet" onClick={() => setIsOpen(false)} className="block py-1">
-                        Divine Mercy Chaplet
-                      </Link>
-                    </li>
-                  </ul>
-                )}
-
-                {/* Prayers */}
-                <button
-                  onClick={() => setMPrayersOpen((v) => !v)}
-                  aria-expanded={mPrayersOpen}
-                  className="mt-2 flex w-full items-center justify-between text-left text-white/90"
-                >
-                  <span>Prayers</span>
-                  <span className={`transition ${mPrayersOpen ? "rotate-180" : ""}`}>▾</span>
-                </button>
-                {mPrayersOpen && (
-                  <ul className="pl-3 space-y-1">
-                    <li>
-                      <Link to="/prayers/" onClick={() => setIsOpen(false)} className="block py-1">
-                        See All prayers
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/prayers/apostles-creed" onClick={() => setIsOpen(false)} className="block py-1">
-                        Apostles’ Creed
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/prayers/our-father" onClick={() => setIsOpen(false)} className="block py-1">
-                        Our Father
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/prayers/hail-mary" onClick={() => setIsOpen(false)} className="block py-1">
-                        Hail Mary
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/prayers/glory-be" onClick={() => setIsOpen(false)} className="block py-1">
-                        Glory Be
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/prayers/hail-holy-queen" onClick={() => setIsOpen(false)} className="block py-1">
-                        Hail, Holy Queen
-                      </Link>
-                    </li>
-                  </ul>
-                )}
-                {/* Litanies */}
-                <button
-                  onClick={() => setMLitaniesOpen((v) => !v)}
-                  aria-expanded={mLitaniesOpen}
-                  className="mt-2 flex w-full items-center justify-between text-left text-white/90"
-                >
-                  <span>Litanies</span>
-                  <span className={`transition ${mLitaniesOpen ? "rotate-180" : ""}`}>▾</span>
-                </button>
-                {mLitaniesOpen && (
-                  <ul className="pl-3 space-y-1">
-                    <li>
-                      <Link to="/prayers/" onClick={() => setIsOpen(false)} className="block py-1">
-                        See All litanies
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/prayers/litany-sacred-heart" onClick={() => setIsOpen(false)} className="block py-1">
-                        The Sacred Heart
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/prayers/litany-precious-blood" onClick={() => setIsOpen(false)} className="block py-1">
-                        The Most Precious Blood
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/prayers/litany-immaculate-heart" onClick={() => setIsOpen(false)} className="block py-1">
-                        Immaculate Heart of Mary
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/prayers/litany-of-humility" onClick={() => setIsOpen(false)} className="block py-1">
-                        Of Humility
-                      </Link>
-                    </li>
-                  </ul>
-                )}
+                  Divine Mercy Chaplet
+                </Link>
               </div>
-            )}
-          </div>
 
-          <Link to="/my-notes" onClick={() => setIsOpen(false)}>
-            My Notes
-          </Link>
+              {/* Prayers */}
+              <div>
+                <div className="px-3 py-1 text-xs uppercase tracking-wider text-[var(--text-subtle-heading)]">Prayers</div>
+                <Link to="/prayers" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 hover:bg-white/10">
+                  See all prayers
+                </Link>
+                <Link
+                  to="/prayers/apostles-creed"
+                  onClick={() => setIsOpen(false)}
+                  className="block rounded-md px-3 py-2 hover:bg-white/10"
+                >
+                  Apostles’ Creed
+                </Link>
+                <Link to="/prayers/our-father" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 hover:bg-white/10">
+                  Our Father
+                </Link>
+                <Link to="/prayers/hail-mary" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 hover:bg-white/10">
+                  Hail Mary
+                </Link>
+                <Link to="/prayers/glory-be" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 hover:bg-white/10">
+                  Glory Be
+                </Link>
+                <Link
+                  to="/prayers/hail-holy-queen"
+                  onClick={() => setIsOpen(false)}
+                  className="block rounded-md px-3 py-2 hover:bg-white/10"
+                >
+                  Hail, Holy Queen
+                </Link>
+              </div>
 
-          {user ? (
-            <>
-              <span className="text-white/70">Welcome, {user.username}</span>
-              <button
-                onClick={handleLogout}
-                className="text-white border border-white/30 rounded px-3 py-1 hover:bg-white/10"
-                aria-label="Logout"
-              >
-                Logout
-              </button>
-            </>
-          ) : (
-            <>
-              <Link to="/auth/login" onClick={() => setIsOpen(false)}>
-                Login
-              </Link>
-              <Link to="/auth/register" onClick={() => setIsOpen(false)}>
-                Register
-              </Link>
-            </>
-          )}
+              {/* Litanies */}
+              <div>
+                <div className="px-3 py-1 text-xs uppercase tracking-wider text-[var(--text-subtle-heading)]">Litanies</div>
+                <Link to="/prayers" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 hover:bg-white/10">
+                  See all litanies
+                </Link>
+                <Link
+                  to="/prayers/litany-sacred-heart"
+                  onClick={() => setIsOpen(false)}
+                  className="block rounded-md px-3 py-2 hover:bg-white/10"
+                >
+                  Sacred Heart
+                </Link>
+                <Link
+                  to="/prayers/litany-precious-blood"
+                  onClick={() => setIsOpen(false)}
+                  className="block rounded-md px-3 py-2 hover:bg-white/10"
+                >
+                  Most Precious Blood
+                </Link>
+                <Link
+                  to="/prayers/litany-immaculate-heart"
+                  onClick={() => setIsOpen(false)}
+                  className="block rounded-md px-3 py-2 hover:bg-white/10"
+                >
+                  Immaculate Heart
+                </Link>
+                <Link
+                  to="/prayers/litany-of-humility"
+                  onClick={() => setIsOpen(false)}
+                  className="block rounded-md px-3 py-2 hover:bg-white/10"
+                >
+                  Litany of Humility
+                </Link>
+              </div>
+            </div>
+          </details>
+
+          <details className="mt-1 rounded-md">
+            <summary className="cursor-pointer list-none rounded-md px-3 py-2 text-[var(--gray-100)] hover:bg-white/10 hover:text-white">
+              Account
+            </summary>
+            <div className="mt-1 space-y-1 pl-3">
+              {user ? (
+                <>
+                  <div className="px-3 py-1 text-xs text-[var(--text-muted)]">Signed in as {user.username}</div>
+                  <button
+                    onClick={() => {
+                      setIsOpen(false);
+                      handleLogout();
+                    }}
+                    className="block w-full rounded-md px-3 py-2 text-left text-[var(--text-main)] hover:bg-white/10 hover:text-white"
+                  >
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link to="/auth/login" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 hover:bg-white/10">
+                    Login
+                  </Link>
+                  <Link to="/auth/register" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 hover:bg-white/10">
+                    Register
+                  </Link>
+                </>
+              )}
+            </div>
+          </details>
         </div>
       )}
     </nav>
