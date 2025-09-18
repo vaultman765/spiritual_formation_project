@@ -50,7 +50,7 @@ export default function PrayersIndexPage() {
         description="Find the Apostles’ Creed, Hail Mary, Hail, Holy Queen, Anima Christi, the Angelus, litanies, and more - beautifully formatted and printable."
         canonicalUrl={canonical}
         type="article"
-        imageUrl="https://www.catholicmentalprayer.com/images/how_to_pray/prayers/prayers_og_default.jpg"
+        imageUrl="https://www.catholicmentalprayer.com/images/how_to_pray/chaplets/rosary_og.jpg"
         jsonLd={[itemListJsonLd]}
         breadcrumbsJsonLd={breadcrumbsJsonLd}
       />
