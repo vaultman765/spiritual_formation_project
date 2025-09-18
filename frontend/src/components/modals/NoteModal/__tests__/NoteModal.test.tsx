@@ -1,8 +1,5 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import {
-  EditNoteModal,
-  ViewerNoteModal,
-} from "@/components/modals/NoteModal/NoteModal";
+import { render, screen, fireEvent } from "@/test-utils/testing-library-exports";
+import { EditNoteModal, ViewerNoteModal } from "@/components/modals/NoteModal/NoteModal";
 import { useModal } from "@/hooks/useModal";
 
 jest.mock("@/hooks/useModal", () => ({
@@ -58,11 +55,7 @@ describe("NoteModal", () => {
       );
 
       expect(screen.getByText("Edit Note")).toBeInTheDocument();
-      expect(
-        screen.getByPlaceholderText(
-          "Write your thoughts, inspirations, or resolutions here..."
-        )
-      ).toHaveValue("Test content");
+      expect(screen.getByPlaceholderText("Write your thoughts, inspirations, or resolutions here...")).toHaveValue("Test content");
     });
 
     it("calls closeModal when the close button is clicked", () => {

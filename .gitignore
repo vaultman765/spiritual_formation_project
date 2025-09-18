@@ -210,6 +210,16 @@ frontend/coverage
 # production
 frontend/build
 
+# images
+frontend/public/images/site_images/*
+frontend/public/images/social/*
+
+# Image cache for build optimization
+.image-cache.json
+
+# stats
+stats.html
+
 # misc
 .DS_Store
 .env.local
@@ -223,3 +233,4 @@ yarn-error.log*
 
 scratch*.txt
 PROJECT_HANDBOOK.md
+

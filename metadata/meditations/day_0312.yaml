@@ -1,0 +1,41 @@
+# Last imported into DB: 2025-09-10 23:07:11
+master_day_number: 312
+arc_day_number: 4
+arc_id: arc_virtue_of_patience
+arc_title: The Virtue of Patience
+arc_number: 40
+day_title: Patient in Prayer and Suffering
+anchor_image: You see Christ in Gethsemane, prostrate on the ground, praying with tears and sweat like blood.
+  His Heart accepts the Father’s will with patient surrender.
+primary_reading:
+  title: Hebrews 5:7–9
+  reference:
+  url:
+secondary_reading:
+  - title: Pope Benedict XVI, Spe Salvi
+    reference: §39
+    url: /docs/readings/Pope_Benedict_XVI_Spe_Salvi.pdf
+meditative_points:
+  - Hear Christ’s strong cries and tears, offered in patient obedience.
+  - See His suffering transfigured into trust in the Father’s will.
+  - Learn to pray with the same persevering patience in trials.
+ejaculatory_prayer: Lord, teach me to suffer and pray with patience.
+colloquy: O Jesus, Your prayer in suffering shows me the way. May I turn to the Father with patience instead of despair.
+resolution: I will dedicate ten minutes today to persevering prayer, even if distracted, uniting with Christ’s patience in Gethsemane.
+tags:
+  thematic:
+    - prayer
+    - suffering
+  doctrinal:
+    - redemption
+  virtue:
+    - obedience
+    - patience
+    - perseverance
+  mystical:
+    - union with christ
+  liturgical:
+    - lent
+    - holy week
+  typological: []
+  structural: []

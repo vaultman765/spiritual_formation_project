@@ -1,0 +1,42 @@
+# Last imported into DB: 2025-09-09 23:07:21
+master_day_number: 299
+arc_day_number: 8
+arc_id: arc_eucharistic_heart_of_jesus
+arc_title: The Eucharistic Heart of Jesus
+arc_number: 38
+day_title: The Eucharist Builds the Church
+anchor_image: You kneel before Christ in the Eucharist. From the Host shines His Sacred Heart,
+  radiant with light, offering Himself as food for the life of the world.
+primary_reading:
+  title: CCC §§1396–1397
+  reference:
+  url: https://www.vatican.va/archive/ENG0015/__P42.HTM
+secondary_reading:
+  - title: St. John Paul II, Ecclesia de Eucharistia
+    reference: §23
+    url: /docs/readings/St_Pope_JP2_Ecclesia_de_Eucharista.pdf
+meditative_points:
+  - Recognize that those who partake of the one Bread become one Body.
+  - See Christ’s Heart in the Host binding His members in love.
+  - Believe that the Eucharist forms and sustains the Church’s unity.
+ejaculatory_prayer: O Lord, make us one in Your Body.
+colloquy: Jesus, thank You for drawing Your Church into unity through Your Body and Blood. Heal all divisions and strengthen our communion.
+resolution: I will pray today for unity among Christians, asking Christ to make us one flock under one Shepherd.
+tags:
+  thematic:
+    - unity
+  doctrinal:
+    - ecclesiology
+    - eucharist
+    - communion
+  virtue:
+    - charity
+    - fidelity
+  mystical:
+    - body of christ
+    - divine love
+  liturgical:
+    - corpus christi
+  typological:
+    - vine and branches
+  structural: []

@@ -1,9 +1,5 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import {
-  NoteActionButton,
-  EditNoteModalButtons,
-  ViewNoteModalButtons,
-} from "@/components/modals/NoteModal/NoteModalButtons";
+import { render, screen, fireEvent } from "@/test-utils/testing-library-exports";
+import { NoteActionButton, EditNoteModalButtons, ViewNoteModalButtons } from "@/components/modals/NoteModal/NoteModalButtons";
 import { useModal } from "@/hooks/useModal";
 import type { MeditationNote } from "@/utils/types";
 import { saveNote, deleteNote } from "@/hooks/useNotes";
@@ -69,14 +65,7 @@ describe("NoteModalButtons", () => {
 
       window.confirm = jest.fn(() => true); // Mock confirmation dialog
 
-      render(
-        <NoteActionButton
-          modalId="testModal"
-          actionType="delete"
-          master_day_number={1}
-          onUpdate={onUpdate}
-        />
-      );
+      render(<NoteActionButton modalId="testModal" actionType="delete" master_day_number={1} onUpdate={onUpdate} />);
 
       fireEvent.click(screen.getByText("Delete Note"));
 
@@ -112,13 +101,7 @@ describe("NoteModalButtons", () => {
       const setNoteId = jest.fn();
 
       render(
-        <EditNoteModalButtons
-          modalId="testModal"
-          master_day_number={1}
-          content="Test content"
-          setNoteId={setNoteId}
-          onUpdate={onUpdate}
-        />
+        <EditNoteModalButtons modalId="testModal" master_day_number={1} content="Test content" setNoteId={setNoteId} onUpdate={onUpdate} />
       );
 
       expect(screen.getByText("Save Note")).toBeInTheDocument();

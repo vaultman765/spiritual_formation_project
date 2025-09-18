@@ -1,0 +1,58 @@
+arc_id: arc_into_christs_wounds
+arc_title: Into Christ’s Wounds
+arc_number: 34
+day_count: 7
+master_day_range:
+  start: 264
+  end: 270
+tags:
+  thematic:
+    - blood of christ
+    - contrition
+    - discipleship
+    - humiliation
+    - mercy
+    - passion of christ
+    - reparation
+    - sacraments
+    - salvation
+    - suffering
+  doctrinal:
+    - atonement
+    - christology
+    - ecclesiology
+    - kingship of christ
+    - paschal mystery
+    - redemption
+    - suffering servant
+  virtue:
+    - charity
+    - faith
+    - fidelity
+    - humility
+    - obedience
+    - patience
+    - perseverance
+    - trust
+  mystical:
+    - divine condescension
+    - divine love
+    - divine mercy
+    - healing
+    - pierced heart
+    - purification
+    - union
+    - wounds of christ
+  liturgical:
+    - good friday
+    - holy week
+    - lent
+    - stations of the cross
+  typological:
+    - blood and water from christ's side
+    - high priest
+    - paschal lamb
+    - rejected cornerstone
+    - sacrifice
+    - temple veil torn
+  structural: []

@@ -1,0 +1,60 @@
+arc_id: arc_sacred_humanity_of_christ
+arc_title: The Sacred Humanity of Christ
+arc_number: 35
+day_count: 7
+master_day_range:
+  start: 271
+  end: 277
+tags:
+  thematic:
+    - discipleship
+    - interior agony
+    - joy
+    - love of god
+    - mercy
+    - prayer
+    - resurrection
+    - suffering
+    - trust
+  doctrinal:
+    - atonement
+    - christology
+    - divine providence
+    - incarnation
+    - joy in suffering
+    - new commandment
+    - redemption
+    - resurrection of body
+    - resurrection of christ
+    - suffering servant
+    - trinity
+  virtue:
+    - charity
+    - compassion
+    - faith
+    - fidelity
+    - fortitude
+    - hope
+    - humility
+    - joy
+    - obedience
+    - patience
+    - perseverance
+  mystical:
+    - divine condescension
+    - divine love
+    - divine presence
+    - divine sonship
+    - risen lord
+    - union with christ
+  liturgical:
+    - easter
+    - holy thursday
+    - holy week
+    - lent
+    - ordinary time
+  typological:
+    - foot washing
+    - high priest
+    - new creation
+  structural: []

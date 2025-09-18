@@ -30,13 +30,16 @@ thematic:
   - hell
   - hidden life
   - holy name
+  - holy spirit
   - humiliation
   - identity
   - interior agony
   - interior battle
+  - interior life
   - joy
   - judgment
   - kingdom of god
+  - knowledge
   - lamb of god
   - last things
   - light and darkness
@@ -52,9 +55,11 @@ thematic:
   - mortal sin
   - passion of christ
   - peace
+  - piety
   - prayer
   - redemptive suffering
   - reparation
+  - resurrection
   - return to the father
   - righteousness
   - rosary
@@ -64,10 +69,13 @@ thematic:
   - salvation
   - silence
   - simplicity
+  - spiritual warfare
   - submission
   - suffering
+  - temptation
   - transformation
   - trust
+  - understanding
   - unity
   - vanity
   - victory
@@ -81,6 +89,7 @@ doctrinal:
   - atonement
   - baptism
   - confession
+  - confirmation
   - christian perfection
   - christology
   - commandments
@@ -210,6 +219,7 @@ mystical:
   - heavenly liturgy
   - heavenly mediation
   - holy of holies
+  - inebriation
   - inheritance
   - inner watchfulness
   - intercession
@@ -234,6 +244,7 @@ mystical:
   - union
   - union with christ
   - union with mary
+  - wounds of christ
 liturgical:
   - advent
   - all saints
@@ -244,10 +255,13 @@ liturgical:
   - christ the king
   - christmas
   - corporal works of mercy
+  - divine mercy sunday
   - easter
+  - eastertide
   - epiphany
   - feast of the assumption
   - feast of the immaculate conception
+  - feast of the holy family
   - feast of the nativity
   - feast of the immaculate heart of mary
   - feast of the most precious blood
@@ -263,6 +277,7 @@ liturgical:
   - holy week
   - june
   - lent
+  - mass
   - marian feast
   - november
   - ordinary time
@@ -274,6 +289,7 @@ liturgical:
 typological:
   - ark of noah
   - ark of the covenant
+  - armor of god
   - bread and wine
   - blood and water
   - blood and water from christ's side
@@ -281,6 +297,8 @@ typological:
   - bronze serpent lifted up
   - covenant
   - daniel 7
+  - emmaus
+  - feast of the holy name
   - foot washing
   - gehenna
   - good samaritan
@@ -288,6 +306,7 @@ typological:
   - high priest
   - holy family
   - isaac carrying the wood
+  - israel in desert
   - job
   - jonah
   - jordan river
@@ -300,13 +319,15 @@ typological:
   - light from above
   - lost sheep
   - manna
-  - marriage feast of the Lamb
+  - marriage feast of the lamb
   - melchizedek
   - moses
   - new adam
   - new creation
+  - new eve
   - paschal lamb
   - passover
+  - piety
   - prodigal son
   - promised land
   - psalm 45
@@ -324,6 +345,7 @@ typological:
   - temple
   - temple in heaven
   - temple veil torn
+  - tree of life
   - tower of babel
   - the face of the crucified
   - the father running to meet the prodigal
@@ -334,6 +356,7 @@ typological:
   - vine and branches
   - woman clothed with sun
 structural:
+  - anima christi
   - beatitudes
   - consecration
   - glorious mysteries

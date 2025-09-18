@@ -1,0 +1,41 @@
+# Last imported into DB: 2025-09-10 23:07:11
+master_day_number: 311
+arc_day_number: 3
+arc_id: arc_virtue_of_patience
+arc_title: The Virtue of Patience
+arc_number: 40
+day_title: Mocked and Reviled
+anchor_image: "You stand at Calvary as the crowd jeers: “Save yourself, if you are the Son of God!”
+  Christ listens in silence, His Heart unshaken in patience."
+primary_reading:
+  title: Mark 15:29–32
+  reference:
+  url:
+secondary_reading:
+  - title: St. Augustine, On Patience
+    reference: §§3–4
+    url: https://www.newadvent.org/fathers/1315.htm
+meditative_points:
+  - Hear the insults hurled at Christ as He hangs upon the Cross.
+  - See His silence, His patience stronger than anger or despair.
+  - Learn to bear revilement without retaliation, in union with Him.
+ejaculatory_prayer: Jesus, patient in mockery, strengthen my heart.
+colloquy: Lord, when I am mocked or misunderstood, help me not to lash out but to bear it with Your peace.
+resolution: Today I will hold back one sharp reply, offering the silence as an act of patience with Christ.
+tags:
+  thematic:
+    - suffering
+  doctrinal:
+    - christology
+    - suffering servant
+    - virtues
+  virtue:
+    - patience
+    - humility
+  mystical:
+    - imitation of christ
+    - union with christ
+  liturgical:
+    - good friday
+  typological: []
+  structural: []

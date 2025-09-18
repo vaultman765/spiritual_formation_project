@@ -1,5 +1,5 @@
 import { fetchDayByArc } from "@/api/days";
-import SecondaryReadings from "@/components/SecondaryReadings";
+import { SecondaryReadings, PrimaryReading } from "@/components/SecondaryReadings";
 import { EditNoteModal } from "@/components/modals/NoteModal/NoteModal";
 import { useAuth } from "@/context/authContext";
 import { useJourney } from "@/context/journeyContext";
@@ -7,7 +7,10 @@ import { useModal } from "@/hooks/useModal";
 import { getNote } from "@/hooks/useNotes";
 import type { MeditationData, MeditationNote } from "@/utils/types";
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
+import SeoMeta from "@/components/seo/SeoMeta";
+import { CardImage } from "@/components/cards/BaseCard";
+import { Helmet } from "react-helmet-async";
 
 export default function MeditationDayPage() {
   const { user } = useAuth();
@@ -25,13 +28,14 @@ export default function MeditationDayPage() {
   const [loadingNote, setLoadingNote] = useState(true);
   const { isOpen, openModal, closeModal } = useModal("editNoteModal");
 
-  const currentArc = activeJourney?.arc_progress?.find(
-    (a) => a.status === "in_progress"
-  );
+  const currentArc = activeJourney?.arc_progress?.find((a) => a.status === "in_progress");
   const isCurrentArc = currentArc?.arc_id === arcID;
   const currentDay = currentArc?.current_day;
   const isCurrentDay = currentDay === parseInt(arcDayNumber || "0");
   const [note, setNote] = useState<MeditationNote | null>(null);
+  const location = useLocation();
+  const canonicalUrl = `https://www.catholicmentalprayer.com${location.pathname}`;
+  const base = `/images/site_images/arc_days/${day?.arc_id}_day_${String(day?.arc_day_number).padStart(2, "0")}`;
 
   const refreshNote = async () => {
     if (!day?.master_day_number) return;
@@ -73,14 +77,11 @@ export default function MeditationDayPage() {
 
   useEffect(() => {
     if (arcID && arcDayNumber) {
-      fetchDayByArc(arcID, parseInt(arcDayNumber))
-        .then(setDay)
-        .catch(console.error);
+      fetchDayByArc(arcID, parseInt(arcDayNumber)).then(setDay).catch(console.error);
     }
   }, [arcID, arcDayNumber]);
 
-  if (!day || loadingNote)
-    return <p className="text-center text-white mt-10">Loading...</p>;
+  if (!day || loadingNote) return <p className="text-center text-white mt-10">Loading...</p>;
 
   // Used to clear the selected note when closing the modal.
   function setSelectedNote(_: null) {
@@ -93,20 +94,94 @@ export default function MeditationDayPage() {
     await refreshNote();
   }
 
+  const meditationStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: day?.day_title,
+    url: `https://www.catholicmentalprayer.com/days/${day?.arc_id}/${day?.arc_day_number}`,
+    image: `https://www.catholicmentalprayer.com/images/arc_days/${day?.arc_id}_day_${String(day?.arc_day_number).padStart(2, "0")}.jpg`,
+    articleBody: day?.anchor_image,
+    datePublished: new Date().toISOString(),
+    author: {
+      "@type": "Organization",
+      name: "Spiritual Formation Project",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Spiritual Formation Project",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.catholicmentalprayer.com/images/logo.png",
+      },
+    },
+    description: day?.ejaculatory_prayer || day?.colloquy,
+    isPartOf: {
+      "@type": "Book",
+      name: day?.arc_title,
+    },
+  };
+
+  const meditationBreadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.catholicmentalprayer.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: day?.arc_title,
+        item: `https://www.catholicmentalprayer.com/arcs/${day?.arc_id}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: day?.day_title,
+        item: `https://www.catholicmentalprayer.com/days/${day?.arc_id}/${day?.arc_day_number}`,
+      },
+    ],
+  };
+
   return (
     <main>
+      <SeoMeta
+        title={`Day: ${day?.day_title} from Arc: ${day?.arc_title} | Spiritual Formation Project`}
+        description={`Meditation on "${day?.day_title}" — Day ${day?.arc_day_number} in the ${day?.arc_title} series of Ignatian meditations.`}
+        canonicalUrl={canonicalUrl}
+        imageUrl={`https://www.catholicmentalprayer.com/images/arc_days/${day?.arc_id}_day_${String(day?.arc_day_number).padStart(
+          2,
+          "0"
+        )}.jpg`}
+        type="article"
+        jsonLd={meditationStructuredData}
+        breadcrumbsJsonLd={meditationBreadcrumbData}
+      />
+
+      <Helmet>
+        <link
+          rel="preload"
+          as="image"
+          href={`${base}-800.avif`}
+          type="image/avif"
+          imageSrcSet={`
+            ${base}-400.avif 400w,
+            ${base}-800.avif 800w,
+            ${base}-1200.avif 1200w
+          `}
+          imageSizes="100vw"
+        />
+      </Helmet>
+
       {/* Header */}
       <section className="text-center mb-6 relative">
-        <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-main)] mb-4 leading-snug">
-          {day.day_title}
-        </h1>
+        <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-main)] mb-4 leading-snug">{day.day_title}</h1>
         <p className="text-sm italic text-[var(--text-muted)] mb-4">
-          Arc: {day.arc_title} (Day {day.arc_day_number} of {day.arc_total_days}
-          ) •{" "}
-          <Link
-            to={`/arcs/${day.arc_id}`}
-            className="underline hover:text-[var(--brand-primary)]"
-          >
+          Arc: {day.arc_title} (Day {day.arc_day_number} of {day.arc_total_days}) •{" "}
+          <Link to={`/arcs/${day.arc_id}`} className="underline hover:text-[var(--brand-primary)]">
             View Arc
           </Link>
         </p>
@@ -116,9 +191,7 @@ export default function MeditationDayPage() {
           {day.arc_day_number > 1 ? (
             <button
               className="text-sm text-[var(--text-light)] hover:text-white underline"
-              onClick={() =>
-                navigate(`/days/${day.arc_id}/${day.arc_day_number - 1}`)
-              }
+              onClick={() => navigate(`/days/${day.arc_id}/${day.arc_day_number - 1}`)}
             >
               ← Previous Day
             </button>
@@ -146,9 +219,7 @@ export default function MeditationDayPage() {
           {day.arc_day_number < day.arc_total_days ? (
             <button
               className="text-sm text-[var(--text-light)] hover:text-white underline"
-              onClick={() =>
-                navigate(`/days/${day.arc_id}/${day.arc_day_number + 1}`)
-              }
+              onClick={() => navigate(`/days/${day.arc_id}/${day.arc_day_number + 1}`)}
             >
               Next Day →
             </button>
@@ -163,12 +234,11 @@ export default function MeditationDayPage() {
         <div className="flex flex-col md:flex-row gap-x-12 gap-y-6 items-center">
           {/* Image */}
           <div className="flex-shrink-0">
-            <img
-              src={`/images/arc_days/${day.arc_id}_day_${String(
-                day.arc_day_number
-              ).padStart(2, "0")}.jpg`}
-              alt={day.day_title}
-              className="rounded-xl border-2 border-yellow-500 max-w-sm w-full object-contain shadow-lg shadow-black/20"
+            <CardImage
+              imageSrc={`/images/arc_days/${day.arc_id}_day_${String(day.arc_day_number).padStart(2, "0")}.jpg`}
+              altText={day.day_title}
+              divClassName="flex justify-center w-full"
+              imgClassName="rounded-lg shadow-md max-h-[600px] object-contain"
             />
           </div>
 
@@ -176,30 +246,20 @@ export default function MeditationDayPage() {
           <div className="flex flex-col space-y-12 max-w-xl text-center md:text-left items-center md:items-start mt-6 md:mt-0">
             {/* Primary Reading */}
             <div>
-              <h2 className="text-sm uppercase tracking-widest text-[var(--text-subtle-heading)] mb-1">
-                Primary Reading
-              </h2>
-              <p className="text-lg font-semibold text-[var(--text-light)]">
-                {day.primary_reading.title}
-              </p>
+              <h2 className="text-sm uppercase tracking-widest text-[var(--text-subtle-heading)] mb-1">Primary Reading</h2>
+              <PrimaryReading title={day.primary_reading.title} reference={day.primary_reading.reference} url={day.primary_reading.url} />
             </div>
 
             {/* Secondary Readings */}
             <div>
-              <h2 className="text-sm uppercase tracking-widest text-[var(--text-subtle-heading)] mb-1">
-                Secondary Readings
-              </h2>
+              <h2 className="text-sm uppercase tracking-widest text-[var(--text-subtle-heading)] mb-1">Secondary Readings</h2>
               <SecondaryReadings readings={day.secondary_readings} />
             </div>
 
             {/* Prelude Image */}
             <div>
-              <h2 className="text-sm uppercase tracking-widest text-[var(--text-subtle-heading)] mb-1">
-                Prelude Image
-              </h2>
-              <p className="text-[var(--text-main)] bg-white/5 p-3 rounded-md shadow-inner max-w-md">
-                {day.anchor_image}
-              </p>
+              <h2 className="text-sm uppercase tracking-widest text-[var(--text-subtle-heading)] mb-1">Prelude Image</h2>
+              <p className="text-[var(--text-main)] bg-white/5 p-3 rounded-md shadow-inner max-w-md">{day.anchor_image}</p>
             </div>
           </div>
         </div>
@@ -207,9 +267,7 @@ export default function MeditationDayPage() {
 
       {/* Meditative Points */}
       <section className="mb-3 max-w-4xl text-center mx-auto">
-        <h2 className="text-sm tracking-[.15em] font-semibold text-[var(--text-subtle-heading)] uppercase mb-3">
-          Meditative Points
-        </h2>
+        <h2 className="text-sm tracking-[.15em] font-semibold text-[var(--text-subtle-heading)] uppercase mb-3">Meditative Points</h2>
         <ol className="pl-5 space-y-2 text-[var(--text-main)] text-sm max-w-3xl mx-auto">
           {day.meditative_points.map((pt, i) => (
             <li key={i} className="mb-2">
@@ -223,33 +281,21 @@ export default function MeditationDayPage() {
 
       {/* Ejaculatory Prayer */}
       <section className="text-center mb-4">
-        <h2 className="text-sm tracking-[.15em] font-semibold text-[var(--text-subtle-heading)] uppercase mb-3">
-          Ejaculatory Prayer
-        </h2>
-        <p className="text-[var(--text-main)] max-w-4xl mx-auto">
-          {day.ejaculatory_prayer}
-        </p>
+        <h2 className="text-sm tracking-[.15em] font-semibold text-[var(--text-subtle-heading)] uppercase mb-3">Ejaculatory Prayer</h2>
+        <p className="text-[var(--text-main)] max-w-4xl mx-auto">{day.ejaculatory_prayer}</p>
       </section>
 
       {/* Colloquy */}
       <section className="text-center">
-        <h2 className="text-sm tracking-[.15em] font-semibold text-[var(--text-subtle-heading)] uppercase mb-2">
-          Colloquy
-        </h2>
-        <p className="text-[var(--text-main)] italic max-w-4xl mx-auto">
-          {day.colloquy}
-        </p>
+        <h2 className="text-sm tracking-[.15em] font-semibold text-[var(--text-subtle-heading)] uppercase mb-2">Colloquy</h2>
+        <p className="text-[var(--text-main)] italic max-w-4xl mx-auto">{day.colloquy}</p>
       </section>
 
       {/* Optional Resolution */}
       {showResolution && day.resolution && (
         <section className="text-center mt-8">
-          <h2 className="text-sm tracking-[.15em] font-semibold text-[var(--text-subtle-heading)] uppercase mb-2">
-            Resolution
-          </h2>
-          <p className="text-[var(--text-main)] italic max-w-3xl mx-auto">
-            {day.resolution}
-          </p>
+          <h2 className="text-sm tracking-[.15em] font-semibold text-[var(--text-subtle-heading)] uppercase mb-2">Resolution</h2>
+          <p className="text-[var(--text-main)] italic max-w-3xl mx-auto">{day.resolution}</p>
         </section>
       )}
 
@@ -260,9 +306,7 @@ export default function MeditationDayPage() {
         {day.arc_day_number > 1 ? (
           <button
             className="text-sm text-[var(--text-light)] hover:text-white underline"
-            onClick={() =>
-              navigate(`/days/${day.arc_id}/${day.arc_day_number - 1}`)
-            }
+            onClick={() => navigate(`/days/${day.arc_id}/${day.arc_day_number - 1}`)}
           >
             ← Previous Day
           </button>
@@ -282,9 +326,7 @@ export default function MeditationDayPage() {
         {day.arc_day_number < day.arc_total_days ? (
           <button
             className="text-sm text-[var(--text-light)] hover:text-white underline"
-            onClick={() =>
-              navigate(`/days/${day.arc_id}/${day.arc_day_number + 1}`)
-            }
+            onClick={() => navigate(`/days/${day.arc_id}/${day.arc_day_number + 1}`)}
           >
             Next Day →
           </button>

@@ -1,0 +1,42 @@
+# Last imported into DB: 2025-09-09 10:33:37
+master_day_number: 280
+arc_day_number: 3
+arc_id: arc_cross_and_resurrection
+arc_title: The Cross and the Resurrection
+arc_number: 36
+day_title: The Empty Tomb
+anchor_image: You stand before the empty tomb, the Cross still visible in the background. The sorrow of Good Friday
+  and the glory of Easter are held together in one vision.
+primary_reading:
+  title: Luke 24:1–8
+  reference:
+  url:
+secondary_reading:
+  - title: St. John Chrysostom, Homilies on the Gospel of Matthew
+    reference: Homily 89
+    url: https://www.newadvent.org/fathers/200189.htm
+meditative_points:
+  - See the stone rolled away and the tomb empty.
+  - "Hear the angel’s words to you: “Why do you seek the living among the dead?”"
+  - Believe that Christ is risen, and hope floods the heart.
+ejaculatory_prayer: Alleluia! Christ is risen!
+colloquy: O Risen Lord, let me never seek life among dead things. May I live always in the power of Your Resurrection.
+resolution: I will proclaim joyfully today — even in a small way — that Christ is risen.
+tags:
+  thematic:
+    - resurrection
+    - joy
+  doctrinal:
+    - resurrection of christ
+    - redemption
+  virtue:
+    - hope
+    - joy
+  mystical:
+    - risen lord
+    - divine presence
+  liturgical:
+    - easter
+  typological:
+    - new creation
+  structural: []

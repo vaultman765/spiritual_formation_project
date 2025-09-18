@@ -11,19 +11,10 @@ interface JourneyEditorPageProps {
   initialJourney?: { title: string; arcs: ArcData[] };
 }
 
-export default function JourneyEditorPage({
-  mode,
-  initialJourney,
-}: JourneyEditorPageProps) {
-  const {
-    availableArcs,
-    selectedArcs,
-    title,
-    setTitle,
-    setSelectedArcs,
-    handleReorder,
-    refreshJourneys,
-  } = useJourneyEditor(mode === "edit" ? { initialJourney } : {});
+export default function JourneyEditorPage({ mode, initialJourney }: JourneyEditorPageProps) {
+  const { availableArcs, selectedArcs, title, setTitle, setSelectedArcs, handleReorder, refreshJourneys } = useJourneyEditor(
+    mode === "edit" ? { initialJourney } : {}
+  );
 
   const { createJourney, updateJourney, activeJourney } = useJourney();
   const [searchTerm, setSearchTerm] = useState("");
@@ -33,9 +24,7 @@ export default function JourneyEditorPage({
     (arc) =>
       !selectedArcs.some((selected) => selected.arc_id === arc.arc_id) &&
       (arc.arc_title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        arc.card_tags.some((tag) =>
-          tag.toLowerCase().includes(searchTerm.toLowerCase())
-        ))
+        arc.card_tags.some((tag) => tag.toLowerCase().includes(searchTerm.toLowerCase())))
   );
 
   const handleSave = async () => {
@@ -72,11 +61,9 @@ export default function JourneyEditorPage({
     <main>
       <div className="text-center mb-4 text-[var(--text-main)]">
         <h1 className="text-5xl font-display font-semibold mb-2">
-          {mode === "create"
-            ? "Create a Custom Journey"
-            : "Edit Custom Journey"}
+          {mode === "create" ? "Create a Custom Journey" : "Edit Custom Journey"}
         </h1>
-        <p className="text-lg text-white/70 max-w-2xl mx-auto">
+        <p className="text-lg text-[var(--text-muted)] max-w-2xl mx-auto">
           {mode === "create"
             ? "Select and reorder arcs to build a mental prayer journey tailored to your needs."
             : "Add, remove, or reorder arcs in your journey."}
@@ -89,60 +76,51 @@ export default function JourneyEditorPage({
           placeholder="Journey Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="input-style placeholder-white/70"
+          className="input-style !sm:w-auto"
         />
       </div>
 
       <hr className="mt-4 mb-4 border-white/20" />
 
-      <div className="grid grid-cols-2 max-w-7xl mx-auto">
-        {/* Search and Available Arcs Title */}
-        <div className="text-center">
-          <h2 className="text-2xl text-[var(--brand-primary)] font-semibold mb-2 relative inline-block after:content-[''] after:block after:h-[2px] after:w-8 after:bg-[var(--brand-primary)] after:mt-1 after:mx-auto">
+      <div className="mb-4 col-span-2 justify-self-center">
+        <input
+          type="text"
+          placeholder="Search Available Arcs..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="input-style !sm:w-auto"
+        />
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-7xl mx-auto">
+        {/* Available Arcs column */}
+        <div>
+          <h2 className="text-center text-2xl text-[var(--brand-primary)] font-semibold mb-4 relative after:content-[''] after:block after:h-[2px] after:w-8 after:bg-[var(--brand-primary)] after:mt-1 after:mx-auto">
             Available Arcs
           </h2>
+
+          <div className="flex flex-col max-h-[65vh] overflow-y-auto p-4 rounded-xl bg-[var(--bg-card)] border border-white/10 shadow-inner mx-4">
+            <ArcList arcs={displayAvailableArcs} onSelect={(arc) => setSelectedArcs([...selectedArcs, arc])} />
+          </div>
         </div>
 
-        {/* Selected Arcs Title */}
-        <div className="text-center">
-          <h2 className="text-2xl text-[var(--brand-primary)] font-semibold mb-2 relative inline-block after:content-[''] after:block after:h-[2px] after:w-8 after:bg-[var(--brand-primary)] after:mt-1 after:mx-auto">
+        {/* Selected Arcs column */}
+        <div>
+          <h2 className="text-center text-2xl text-[var(--brand-primary)] font-semibold mb-4 relative after:content-[''] after:block after:h-[2px] after:w-8 after:bg-[var(--brand-primary)] after:mt-1 after:mx-auto">
             Selected Arcs
           </h2>
-        </div>
 
-        <div className="mb-4 col-span-2 justify-self-center">
-          <input
-            type="text"
-            placeholder="Search Available Arcs..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="input-style placeholder-white/70"
-          />
-        </div>
-
-        {/* Available Arcs List */}
-        <div className="flex flex-col max-h-[65vh] overflow-y-auto p-4 rounded-xl bg-[var(--bg-card)] border border-white/10 shadow-inner mx-4">
-          <ArcList
-            arcs={displayAvailableArcs}
-            onSelect={(arc) => setSelectedArcs([...selectedArcs, arc])}
-          />
-        </div>
-
-        {/* Selected Arcs List */}
-        <div className="flex flex-col gap-4 max-h-[65vh] overflow-y-auto p-4 rounded-xl bg-[var(--bg-card)] border border-white/10 shadow-inner mx-4">
-          <ArcList
-            arcs={selectedArcs}
-            onReorder={handleReorder}
-            onRemove={(arcId) =>
-              setSelectedArcs(
-                selectedArcs.filter((arc) => arc.arc_id !== arcId)
-              )
-            }
-          />
+          <div className="flex flex-col gap-4 max-h-[65vh] overflow-y-auto p-4 rounded-xl bg-[var(--bg-card)] border border-white/10 shadow-inner mx-4">
+            <ArcList
+              arcs={selectedArcs}
+              onReorder={handleReorder}
+              onRemove={(arcId) => setSelectedArcs(selectedArcs.filter((arc) => arc.arc_id !== arcId))}
+            />
+          </div>
         </div>
       </div>
 
-      <div className="flex flex-row gap-6 justify-center mt-6">
+      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6">
         <div className="flex justify-center mb-4">
           <button
             onClick={handleSave}

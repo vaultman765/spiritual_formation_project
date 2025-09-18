@@ -1,0 +1,48 @@
+arc_id: arc_silence_hidden_life
+arc_title: Silence and the Hidden Life
+arc_number: 42
+day_count: 6
+master_day_range:
+  start: 319
+  end: 324
+tags:
+  thematic:
+    - hidden life
+    - mary
+    - prayer
+    - silence
+  doctrinal:
+    - christology
+    - grace
+    - incarnation
+    - marian dogma
+    - sanctification
+    - virtues
+    - wisdom
+  virtue:
+    - charity
+    - faith
+    - humility
+    - obedience
+    - prudence
+    - vigilance
+  mystical:
+    - contemplation
+    - divine image
+    - divine presence
+    - divine silence
+    - divine will
+    - inner watchfulness
+    - marian companionship
+  liturgical:
+    - advent
+    - marian feast
+    - ordinary time
+  typological:
+    - holy family
+    - levitical priesthood
+    - queen mother
+    - st joseph
+    - tabernacle
+    - temple
+  structural: []

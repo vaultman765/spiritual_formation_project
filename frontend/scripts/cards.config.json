@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "/how-to-pray",
+    "type": "article",
+    "canonicalUrl": "https://www.catholicmentalprayer.com/how-to-pray",
+    "title": "How to Pray – Ignatian Mental Prayer (Beginner’s Guide)",
+    "description": "A gentle, step-by-step guide to Ignatian mental prayer—clear, non-intimidating, practical.",
+    "image": "https://www.catholicmentalprayer.com/images/how_to_pray/how_to_pray.jpg",
+    "imageWidth": "1200",
+    "imageHeight": "630",
+    "imageAlt": "Hands in prayer with a rosary over Scripture"
+  },
+  {
+    "slug": "/how-to-pray/guide",
+    "type": "article",
+    "canonicalUrl": "https://www.catholicmentalprayer.com/how-to-pray/guide",
+    "title": "Ignatian Mental Prayer — In-Depth Guide (Printable PDF)",
+    "description": "A printable PDF article that expands the beginner steps with detail, tips, and examples.",
+    "image": "https://www.catholicmentalprayer.com/images/how_to_pray/how_to_pray.jpg",
+    "imageWidth": "1200",
+    "imageHeight": "630",
+    "imageAlt": "Hands in prayer with a rosary over Scripture"
+  },
+  {
+    "slug": "/explore",
+    "type": "website",
+    "canonicalUrl": "https://www.catholicmentalprayer.com/explore",
+    "title": "Explore All Meditations & Journeys",
+    "description": "Browse arcs and daily meditations to build a simple, faithful prayer rhythm.",
+    "image": "https://www.catholicmentalprayer.com/images/og-journey.jpg",
+    "imageWidth": "1280",
+    "imageHeight": "838",
+    "imageAlt": "Road to Emmaus - Jesus and two desciples walking along a path"
+  }
+]

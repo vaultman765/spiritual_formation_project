@@ -156,13 +156,46 @@ if ENV in ("prod", "staging"):
     AWS_S3_SIGNATURE_VERSION = "s3v4"
     AWS_S3_OBJECT_PARAMETERS = {"CacheControl": "max-age=86400"}
 
-    STATICFILES_STORAGE = "website.storage_backends.StaticRootS3Boto3Storage"
-    DEFAULT_FILE_STORAGE = "website.storage_backends.MediaRootS3Boto3Storage"
+    AWS_LOCATION_STATIC = "django/static"
+    AWS_LOCATION_MEDIA = "django/media"
 
-    STATIC_URL = f"https://{STATIC_CDN_DOMAIN}/django/static/" if STATIC_CDN_DOMAIN \
-        else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/static/"
-    MEDIA_URL = f"https://{MEDIA_CDN_DOMAIN}/django/media/" if MEDIA_CDN_DOMAIN \
-        else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/django/media/"
+    # NEW in Django 5 – use STORAGES
+    STORAGES = {
+        "default": {
+            "BACKEND": "website.storage_backends.MediaRootS3Boto3Storage",
+            "OPTIONS": {
+                "bucket_name": AWS_STORAGE_BUCKET_NAME,
+                "region_name": AWS_S3_REGION_NAME,
+                "location": AWS_LOCATION_MEDIA,
+                "file_overwrite": False,
+            },
+        },
+        "staticfiles": {
+            "BACKEND": "website.storage_backends.StaticRootS3Boto3Storage",
+            "OPTIONS": {
+                "bucket_name": AWS_STORAGE_BUCKET_NAME,
+                "region_name": AWS_S3_REGION_NAME,
+                "location": AWS_LOCATION_STATIC,
+                # S3StaticStorage sets file_overwrite=True by default (fine for static)
+            },
+        },
+    }
+
+    # Public URLs used by templates (prefer CloudFront if provided)
+    STATIC_URL = (
+        f"https://{STATIC_CDN_DOMAIN}/django/static/"
+        if STATIC_CDN_DOMAIN
+        else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{AWS_LOCATION_STATIC}/"
+    )
+    MEDIA_URL = (
+        f"https://{MEDIA_CDN_DOMAIN}/django/media/"
+        if MEDIA_CDN_DOMAIN
+        else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{AWS_LOCATION_MEDIA}/"
+    )
+
+    # These are harmless here; not used by S3 storages but kept for manage.py checks
+    STATIC_ROOT = "/app/staticfiles"
+    MEDIA_ROOT = "/app/mediafiles"
 
 else:
     # Local dev: keep using filesystem

@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { fetchTodayMeditation, fetchTomorrowMeditation, fetchJourneyMeditation } from "@/api/homepage";
 import { useAuth } from "@/context/authContext";
 import MeditationCard from "@/components/cards/MeditationCard";
 import { CustomLinkCard, CardTitle } from "@/components/cards/BaseCard";
 import type { MeditationData } from "@/utils/types";
+import SeoMeta from "@/components/seo/SeoMeta";
+import { Helmet } from "react-helmet-async";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -15,6 +17,8 @@ export default function HomePage() {
   const [noJourney, setNoJourney] = useState(false);
   const [journeyComplete, setJourneyComplete] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const canonicalUrl = `https://www.catholicmentalprayer.com${location.pathname}`;
 
   useEffect(() => {
     if (user) {
@@ -74,7 +78,6 @@ export default function HomePage() {
         });
     } else {
       fetchTodayMeditation().then(setToday).catch(console.error);
-
       fetchTomorrowMeditation().then(setTomorrow).catch(console.error);
     }
   }, [user]);
@@ -93,8 +96,79 @@ export default function HomePage() {
     }
   }, [user, noJourney, today, tomorrow]);
 
+  const ogImageUrl = "https://www.catholicmentalprayer.com/images/logo.png";
+
+  const homepageStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    url: "https://www.catholicmentalprayer.com/",
+    name: "Spiritual Formation Project",
+    alternateName: "Catholic Mental Prayer",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://www.catholicmentalprayer.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Spiritual Formation Project",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.catholicmentalprayer.com/images/logo.png",
+      },
+    },
+  };
+
+  const homepageBreadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.catholicmentalprayer.com",
+      },
+    ],
+  };
+
+  // helper to build preload links
+  const renderPreload = (med: MeditationData) => {
+    const base = `/images/site_images/arc_days/${med.arc_id}_day_${String(med.arc_day_number).padStart(2, "0")}`;
+    return (
+      <Helmet>
+        <link
+          rel="preload"
+          as="image"
+          href={`${base}-800.avif`}
+          type="image/avif"
+          imageSrcSet={`
+            ${base}-400.avif 400w,
+            ${base}-800.avif 800w,
+            ${base}-1200.avif 1200w
+          `}
+          imageSizes="100vw"
+        />
+      </Helmet>
+    );
+  };
+
   return (
     <main>
+      <SeoMeta
+        title="Ignatian Mental Prayer | Spiritual Formation Project"
+        description="Begin your journey into Ignatian Mental Prayer. Encounter God daily through guided meditations rooted in Catholic tradition."
+        canonicalUrl={canonicalUrl}
+        imageUrl={ogImageUrl}
+        type="website"
+        jsonLd={homepageStructuredData}
+        breadcrumbsJsonLd={homepageBreadcrumbData}
+      />
+
+      {/* preload today's and tomorrow's hero images */}
+      {today && renderPreload(today)}
+      {tomorrow && renderPreload(tomorrow)}
+
       <header className="header">
         <h1 className="text-5xl md:text-6xl font-display font-semibold text-[var(--text-main)]">
           Encounter God through Ignatian Mental Prayer
@@ -129,7 +203,7 @@ export default function HomePage() {
             </button>
           </div>
         )}
-        <div className="grid grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {today && (
             <MeditationCard
               dayTitle={today.day_title}

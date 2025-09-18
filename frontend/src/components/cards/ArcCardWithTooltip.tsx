@@ -8,18 +8,11 @@ interface ArcCardWithTooltipProps {
   onRemove?: (arcId: string) => void;
 }
 
-export default function ArcCardWithTooltip({
-  arc,
-  onSelect,
-  onRemove,
-}: ArcCardWithTooltipProps) {
+export default function ArcCardWithTooltip({ arc, onSelect, onRemove }: ArcCardWithTooltipProps) {
   return (
     <div className="relative mb-2">
       {onRemove && (
-        <button
-          onClick={() => onRemove(arc.arc_id)}
-          className="absolute top-1 right-1 text-sm text-red-400 hover:text-red-600 z-10"
-        >
+        <button onClick={() => onRemove(arc.arc_id)} className="absolute top-1 right-1 text-sm text-red-400 hover:text-red-600 z-10">
           ✕
         </button>
       )}
@@ -27,12 +20,10 @@ export default function ArcCardWithTooltip({
         content={
           <>
             <p className="font-bold mb-1">{arc.arc_title}</p>
-            <p className="italic text-sm mb-1 text-gray-300">
+            <p className="italic text-sm mb-1 text-[var(--text-subtle-heading)]">
               {arc.primary_reading?.join(", ") || "No readings available"}
             </p>
-            <p className="text-sm text-white">
-              {arc.arc_summary || "No summary available"}
-            </p>
+            <p className="text-sm text-[var(--text-main)]">{arc.arc_summary || "No summary available"}</p>
           </>
         }
       >

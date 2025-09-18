@@ -1,0 +1,35 @@
+arc_id: arc_obedience_in_obscurity
+arc_title: Obedience in Obscurity
+arc_number: 43
+day_count: 7
+master_day_range:
+  start: 325
+  end: 331
+tags:
+  thematic:
+    - hidden life
+    - joy
+  doctrinal:
+    - atonement
+    - christology
+    - imitation of christ
+    - kenosis
+    - sanctification
+    - suffering servant
+  virtue:
+    - fidelity
+    - humility
+    - joy
+    - obedience
+    - perseverance
+  mystical:
+    - divine sonship
+    - divine will
+    - docility
+    - union with christ
+  liturgical:
+    - ordinary time
+  typological:
+    - new adam
+    - st joseph
+  structural: []

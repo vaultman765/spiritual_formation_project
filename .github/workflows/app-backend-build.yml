@@ -18,8 +18,6 @@ permissions:
 jobs:
   staging:
 
-
-
     name: Build & Deploy Staging
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release')) && vars.STAGING_ENABLED == 'true'
@@ -29,7 +27,7 @@ jobs:
       ROLE_ARN:   ${{ vars.ROLE_ARN_BACKEND_STAGING }}
       ECR_REPO:   ${{ vars.ECR_REPO }}
       APPRUNNER_SERVICE_NAME: ${{ vars.APPRUNNER_SERVICE_NAME_STAGING }}
-      IMAGE_TAG:  sha-${{ github.sha }}
+      IMAGE_TAG:  sha-${{ github.sha }} 
 
     steps:
       - uses: actions/checkout@v4
@@ -54,7 +52,7 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}" -t "${{ steps.repo.outputs.uri }}:staging-latest" .
+          docker build --no-cache -t "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}" -t "${{ steps.repo.outputs.uri }}:staging-latest" .
 
       - name: Push image
         run: |
@@ -75,14 +73,6 @@ jobs:
       - name: Resume service if paused
         if: steps.svc.outputs.status == 'PAUSED'
         run: aws apprunner resume-service --service-arn "${{ steps.svc.outputs.arn }}"
-
-      # Have auto-deploy on
-      # - name: Update service to new image
-      #   run: |
-      #     aws apprunner update-service \
-      #       --service-arn "${{ steps.svc.outputs.arn }}" \
-      #       --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:staging-latest,ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"
-
 
   prod:
     name: Build & Deploy Prod
@@ -119,7 +109,7 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}" -t "${{ steps.repo.outputs.uri }}:prod-latest" .
+          docker build --no-cache -t "${{ steps.repo.outputs.uri }}:${IMAGE_TAG}" -t "${{ steps.repo.outputs.uri }}:prod-latest" .
 
       - name: Push image
         run: |
@@ -140,10 +130,3 @@ jobs:
       - name: Resume service if paused
         if: steps.svc.outputs.status == 'PAUSED'
         run: aws apprunner resume-service --service-arn "${{ steps.svc.outputs.arn }}"
-
-      # Have auto-deploy on
-      # - name: Update service to new image
-      #   run: |
-      #     aws apprunner update-service \
-      #       --service-arn "${{ steps.svc.outputs.arn }}" \
-      #       --source-configuration "ImageRepository={ImageIdentifier=${{ steps.repo.outputs.uri }}:prod-latest,ImageRepositoryType=ECR,ImageConfiguration={Port=8000}}"

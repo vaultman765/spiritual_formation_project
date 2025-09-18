@@ -1,0 +1,88 @@
+arc_id: arc_the_narrow_way
+arc_title: The Narrow Way
+arc_number: 28
+day_count: 8
+master_day_range:
+  start: 220
+  end: 227
+tags:
+  thematic:
+    - detachment
+    - discipleship
+    - eternal reward
+    - glory and heaven
+    - identity
+    - judgment
+    - sacrifice
+    - salvation
+    - suffering
+    - unity
+    - vanity
+  doctrinal:
+    - christian perfection
+    - christology
+    - commandments
+    - communion of saints
+    - divine providence
+    - ecclesiology
+    - eschatology
+    - eternal life
+    - imitation of christ
+    - judgment
+    - poverty of spirit
+    - redemption
+    - repentance
+    - resurrection of body
+    - sanctification
+    - sin
+    - suffering servant
+    - trinity
+  virtue:
+    - charity
+    - courage
+    - detachment
+    - faith
+    - fidelity
+    - fortitude
+    - hope
+    - humility
+    - joy
+    - obedience
+    - patience
+    - perseverance
+    - prudence
+    - temperance
+    - trust
+    - vigilance
+  mystical:
+    - body of christ
+    - divine adoption
+    - heavenly liturgy
+    - inner watchfulness
+    - interior cleansing
+    - mortification
+    - purification
+    - spiritual ascent
+    - union with christ
+  liturgical:
+    - advent
+    - all saints
+    - easter
+    - holy week
+    - lent
+    - mass
+    - november
+    - ordinary time
+  typological:
+    - covenant
+    - isaac carrying the wood
+    - job
+    - judgment seat
+    - new adam
+    - paschal lamb
+    - promised land
+    - rejected cornerstone
+    - sheep and goats
+    - tower of babel
+    - vine and branches
+  structural: []

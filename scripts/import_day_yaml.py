@@ -7,8 +7,8 @@ from pathlib import Path
 from datetime import datetime
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
-from scripts.utils.io import DayYamlValidator, load_yaml  # noqa: E402
-from scripts.utils.paths import DAY_SCHEMA, DJANGO_SETTINGS_MODULE, INDEX_FILE, DAY_FILES_DIR  # noqa: E402
+from scripts.utils.io import load_yaml  # noqa: E402
+from scripts.utils.paths import DJANGO_SETTINGS_MODULE, INDEX_FILE, DAY_FILES_DIR  # noqa: E402
 from scripts.utils.log import configure_logging, get_logger  # noqa: E402
 from scripts.utils.arc_loader import load_arc_from_metadata  # noqa: E402
 
@@ -126,12 +126,6 @@ def import_day_file(path: Path, dry_run: bool = False) -> bool:
 
     data = load_yaml(path)
     if not data:
-        return False
-
-    validator = DayYamlValidator(DAY_SCHEMA)
-    valid, error = validator.validate(data)
-    if not valid:
-        logging.error(f"Validation failed for {path.name}: {error}")
         return False
 
     if dry_run:

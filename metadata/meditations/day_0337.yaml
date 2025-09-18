@@ -1,0 +1,46 @@
+# Last imported into DB: 2025-09-12 22:49:51
+master_day_number: 337
+arc_day_number: 6
+arc_id: arc_desert_temptation
+arc_title: The Desert and Temptation of Christ
+arc_number: 44
+day_title: Christ the New Adam, Christ the New Israel
+anchor_image: You are in the desert with Christ after His forty-day fast.
+  The sun burns, the wilderness is barren, and the devil approaches.
+primary_reading:
+  title: Matthew 4:1–11
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§539–540
+    url: https://www.vatican.va/archive/ENG0015/__P1L.HTM
+  - title: St. Augustine, On the Trinity
+    reference: Book 4, Chapter 13
+    url: https://www.newadvent.org/fathers/130104.htm
+meditative_points:
+  - "Contemplate Christ as the New Adam: where Adam fell in a garden, Christ stands firm in the desert."
+  - "Contemplate Christ as the New Israel: where Israel tested God in the wilderness, Christ obeys perfectly."
+  - Know this victory is yours — His obedience heals your disobedience, His triumph over temptation is your hope.
+ejaculatory_prayer: Christ my Victor, conquer in me.
+colloquy: Lord, I am weak like Adam, like Israel. But You are strong.
+  Let Your victory be mine. Let me walk with You through temptation into fidelity.
+resolution: In a moment of temptation today, I will explicitly call on Christ as my strength and recall His victory in the desert.
+tags:
+  thematic:
+    - temptation
+  doctrinal:
+    - christology
+    - sin
+    - redemption
+  virtue:
+    - fortitude
+    - obedience
+    - perseverance
+  mystical: []
+  liturgical:
+    - lent
+  typological:
+    - new adam
+    - israel in desert
+  structural: []

@@ -1,19 +1,18 @@
-# Last imported into DB: 2025-08-09 11:39:29
+# Last imported into DB: 2025-09-04 14:05:30
 master_day_number: 126
 arc_day_number: 2
 arc_id: arc_hidden_life_of_jesus
 arc_title: The Hidden Life of Jesus
 arc_number: 17
 day_title: "Nazareth: The Hidden Years"
-anchor_image:
-  You are outside the home of the Holy Family in Nazareth. You see the
+anchor_image: You are outside the home of the Holy Family in Nazareth. You see the
   modest home, the stillness, the quiet daily rhythm — Jesus, unseen by the world.
 primary_reading:
   title: Mystical City of God – Vol. III The Transfixion
   reference: Book I, Chapter 1
   url: /docs/readings/Venerable_Mary_of_Agreda_The_Mystical_City_of_God_Vol_III_The_Transfixion.pdf
 secondary_reading:
-  - title: CCC
+  - title: Catechism of the Catholic Church
     reference: §§531–534
     url: https://www.vatican.va/archive/ENG0015/__P1L.HTM
 meditative_points:
@@ -21,12 +20,10 @@ meditative_points:
   - He sanctifies time by remaining in silence and patience.
   - Nazareth is the furnace of humility, where glory is veiled in dust.
 ejaculatory_prayer: Jesus, hidden in Nazareth, hide me in the Father's will.
-colloquy:
-  Lord, You chose to remain unknown, poor, and quiet. Teach me the value of
+colloquy: Lord, You chose to remain unknown, poor, and quiet. Teach me the value of
   what the world despises. Teach me to love hiddenness. I want to be with You in the
   silence of Nazareth.
-resolution:
-  I will choose a hidden task today and do it with reverence, as Christ
+resolution: I will choose a hidden task today and do it with reverence, as Christ
   did.
 tags:
   thematic:

@@ -1,0 +1,37 @@
+arc_id: arc_virtue_of_patience
+arc_title: The Virtue of Patience
+arc_number: 40
+day_count: 5
+master_day_range:
+  start: 309
+  end: 313
+tags:
+  thematic:
+    - discipleship
+    - prayer
+    - suffering
+  doctrinal:
+    - christology
+    - imitation of christ
+    - redemption
+    - suffering servant
+    - virtues
+  virtue:
+    - faith
+    - fortitude
+    - humility
+    - meekness
+    - obedience
+    - patience
+    - perseverance
+  mystical:
+    - sorrow
+    - union with christ
+  liturgical:
+    - good friday
+    - holy week
+    - lent
+    - ordinary time
+    - stations of the cross
+  typological: []
+  structural: []

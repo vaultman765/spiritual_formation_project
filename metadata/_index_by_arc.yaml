@@ -94,3 +94,103 @@ arc_beatitudes:
   arc_number: 24
   start_day: 183
   end_day: 192
+arc_anima_christi:
+  arc_number: 25
+  start_day: 193
+  end_day: 203
+arc_mary_at_the_cross:
+  arc_number: 26
+  start_day: 204
+  end_day: 210
+arc_eucharistic_life:
+  arc_number: 27
+  start_day: 211
+  end_day: 219
+arc_the_narrow_way:
+  arc_number: 28
+  start_day: 220
+  end_day: 227
+arc_end_of_the_journey:
+  arc_number: 29
+  start_day: 228
+  end_day: 228
+arc_high_priestly_prayer:
+  arc_number: 30
+  start_day: 229
+  end_day: 235
+arc_descent_of_the_holy_spirit:
+  arc_number: 31
+  start_day: 236
+  end_day: 240
+arc_seven_gifts_of_the_spirit:
+  arc_number: 32
+  start_day: 241
+  end_day: 254
+arc_interior_castle:
+  arc_number: 33
+  start_day: 255
+  end_day: 263
+arc_into_christs_wounds:
+  arc_number: 34
+  start_day: 264
+  end_day: 270
+arc_sacred_humanity_of_christ:
+  arc_number: 35
+  start_day: 271
+  end_day: 277
+arc_cross_and_resurrection:
+  arc_number: 36
+  start_day: 278
+  end_day: 284
+arc_church_bride_and_mother:
+  arc_number: 37
+  start_day: 285
+  end_day: 291
+arc_eucharistic_heart_of_jesus:
+  arc_number: 38
+  start_day: 292
+  end_day: 301
+arc_seven_sorrows_of_mary:
+  arc_number: 39
+  start_day: 302
+  end_day: 308
+arc_virtue_of_patience:
+  arc_number: 40
+  start_day: 309
+  end_day: 313
+arc_vigilance_and_watchfulness:
+  arc_number: 41
+  start_day: 314
+  end_day: 318
+arc_silence_hidden_life:
+  arc_number: 42
+  start_day: 319
+  end_day: 324
+arc_obedience_in_obscurity:
+  arc_number: 43
+  start_day: 325
+  end_day: 331
+arc_desert_temptation:
+  arc_number: 44
+  start_day: 332
+  end_day: 337
+arc_armor_of_god:
+  arc_number: 45
+  start_day: 338
+  end_day: 342
+arc_litany_of_trust:
+  arc_number: 46
+  start_day: 343
+  end_day: 351
+arc_name_of_jesus:
+  arc_number: 47
+  start_day: 352
+  end_day: 356
+arc_simplicity_poverty_of_spirit:
+  arc_number: 48
+  start_day: 357
+  end_day: 361
+arc_coming_of_the_kingdom:
+  arc_number: 49
+  start_day: 362
+  end_day: 366

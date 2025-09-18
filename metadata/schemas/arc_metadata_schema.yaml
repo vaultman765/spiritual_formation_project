@@ -15,8 +15,7 @@ additionalProperties: false
 properties:
   arc_id:
     type: string
-    description:
-      Unique ID for the arc, must match arc_id in corresponding day_wxyx.yaml and arc_tags/*.yaml files.
+    description: Unique ID for the arc, must match arc_id in corresponding day_wxyx.yaml and arc_tags/*.yaml files.
       Generally in snake_case format with form arc_<arc_name>. For example, arc_love_of_neighbor.
   arc_title:
     type: string
@@ -43,29 +42,25 @@ properties:
         description: Ending day number of the arc.
   anchor_image:
     type: array
-    description:
-      A vivid image (mental composition) tied directly to the primary reading
+    description: A vivid image (mental composition) tied directly to the primary reading
       Generally a single image across the whole arc, but not always. Use list format to allow for multiple images.
     items:
       type: string
     minItems: 1
   arc_summary:
     type: string
-    description:
-      A brief summary of the arc, used for display in the ArcPage and other contexts.
+    description: A brief summary of the arc, used for display in the ArcPage and other contexts.
       This is not required but is highly recommended to provide context for the arc.
   primary_reading:
     type: array
-    description:
-      Primary source for the meditation. Generally a single reading across the whole arc, but not always.
+    description: Primary source for the meditation. Generally a single reading across the whole arc, but not always.
       Use list format to allow for multiple readings.
     items:
       type: string
     minItems: 1
   tags:
     type: array
-    description:
-      List of tags that describe the arc. These are the combination of all the tags used in the meditation days of the arc, in
+    description: List of tags that describe the arc. These are the combination of all the tags used in the meditation days of the arc, in
       alphabetical order, lowercase, and without duplicates. The will match tags in metadata/tag_bank.yaml. Generally, there will be many.
     items:
       type: string
@@ -75,5 +70,5 @@ properties:
     description: List of tags that describe the arc overall. These will be used as an overview of the arc on the website and other contexts.
     items:
       type: string
-    minItems: 2
-    maxItems: 4
+    minItems: 3
+    maxItems: 3

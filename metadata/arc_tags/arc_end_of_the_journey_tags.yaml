@@ -1,0 +1,30 @@
+arc_id: arc_end_of_the_journey
+arc_title: The End of the Journey
+arc_number: 29
+day_count: 1
+master_day_range:
+  start: 228
+  end: 228
+tags:
+  thematic:
+    - eternal reward
+    - glory and heaven
+    - salvation
+  doctrinal:
+    - eschatology
+    - eternal life
+  virtue:
+    - charity
+    - hope
+    - perseverance
+  mystical:
+    - divine adoption
+    - heavenly liturgy
+    - union with christ
+  liturgical:
+    - all saints
+    - all souls
+    - november
+  typological:
+    - marriage feast of the lamb
+  structural: []

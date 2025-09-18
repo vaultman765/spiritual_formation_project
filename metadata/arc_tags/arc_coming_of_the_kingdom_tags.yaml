@@ -1,0 +1,63 @@
+arc_id: arc_coming_of_the_kingdom
+arc_title: The Coming of the Kingdom
+arc_number: 49
+day_count: 5
+master_day_range:
+  start: 362
+  end: 366
+tags:
+  thematic:
+    - contrition
+    - conversion
+    - desire for god
+    - detachment
+    - discipleship
+    - joy
+    - kingdom of god
+    - mercy
+    - passion of christ
+    - simplicity
+    - transformation
+    - trust
+  doctrinal:
+    - christian perfection
+    - christology
+    - divine providence
+    - eschatology
+    - grace
+    - kingship of christ
+    - redemption
+    - salvation
+    - sanctification
+    - truth
+  virtue:
+    - courage
+    - detachment
+    - fidelity
+    - hope
+    - humility
+    - obedience
+    - patience
+    - perseverance
+    - poverty
+    - prudence
+    - temperance
+    - trust
+  mystical:
+    - divine indwelling
+    - divine mercy
+    - divine presence
+    - divine will
+    - inner watchfulness
+    - light
+    - purification
+    - spiritual ascent
+    - spiritual homecoming
+    - union
+    - union with christ
+  liturgical:
+    - good friday
+    - ordinary time
+  typological:
+    - paschal lamb
+  structural: []

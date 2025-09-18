@@ -1,0 +1,61 @@
+arc_id: arc_high_priestly_prayer
+arc_title: The High Priestly Prayer
+arc_number: 30
+day_count: 7
+master_day_range:
+  start: 229
+  end: 235
+tags:
+  thematic:
+    - discipleship
+    - eternal reward
+    - glory and heaven
+    - joy
+    - mission
+    - prayer
+    - salvation
+    - unity
+  doctrinal:
+    - christology
+    - communion of saints
+    - divine providence
+    - ecclesiology
+    - eschatology
+    - eternal life
+    - paschal mystery
+    - salvation
+    - sanctification
+    - suffering servant
+    - trinity
+  virtue:
+    - charity
+    - courage
+    - faith
+    - fidelity
+    - hope
+    - humility
+    - joy
+    - obedience
+    - perseverance
+    - zeal
+  mystical:
+    - body of christ
+    - divine adoption
+    - divine love
+    - divine will
+    - heavenly liturgy
+    - purification
+    - union with christ
+  liturgical:
+    - all saints
+    - eastertide
+    - holy thursday
+    - ordinary time
+    - solemnities
+  typological:
+    - covenant
+    - high priest
+    - new creation
+    - passover
+    - vine and branches
+  structural: []
