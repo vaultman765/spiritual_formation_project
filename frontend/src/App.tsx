@@ -19,6 +19,10 @@ const NotesPage = lazy(() => import("@/pages/notes/NotesPage"));
 const JourneyEditorPage = lazy(() => import("@/pages/journey/JourneyEditorPage"));
 const HowToPrayPage = lazy(() => import("@/pages/how_to_pray/HowToPrayPage"));
 const InDepthHowToPrayPage = lazy(() => import("@/pages/how_to_pray/InDepthHowToPrayPage"));
+const RosaryPage = lazy(() => import("@/pages/how_to_pray/chaplets/RosaryPage"));
+const DivineMercyChapletPage = lazy(() => import("@/pages/how_to_pray/chaplets/DivineMercyChapletPage"));
+const PrayersIndexPage = lazy(() => import("@/pages/how_to_pray/prayers/PrayersIndexPage"));
+const PrayerPage = lazy(() => import("@/pages/how_to_pray/prayers/PrayerPage"));
 
 // ✅ Lazy load Toastify container (so it’s not in the main bundle)
 const ToastContainer = lazy(() => import("react-toastify").then((mod) => ({ default: mod.ToastContainer })));
@@ -64,6 +68,10 @@ function AppRoutes() {
           <Route path="/days/:arcID/:arcDayNumber" element={<MeditationDayPage />} />
           <Route path="/how-to-pray" element={<HowToPrayPage />} />
           <Route path="/how-to-pray/guide" element={<InDepthHowToPrayPage />} />
+          <Route path="/prayers/rosary" element={<RosaryPage />} />
+          <Route path="/prayers/divine-mercy-chaplet" element={<DivineMercyChapletPage />} />
+          <Route path="/prayers" element={<PrayersIndexPage />} />
+          <Route path="/prayers/:slug" element={<PrayerPage />} />
           <Route path="/explore" element={<ExplorePage />} />
           <Route path="/arcs/:arcId" element={<ArcPage />} />
           <Route path="/my-journey" element={<JourneyPage />} />

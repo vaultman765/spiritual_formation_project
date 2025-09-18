@@ -17,6 +17,7 @@ const STATIC_ROUTES = [
   { url: '/',                     changefreq: 'daily',   priority: 1.0 },
   { url: '/home',                 changefreq: 'daily',   priority: 0.9 },
   { url: '/explore',              changefreq: 'daily',   priority: 0.8 },
+  { url: '/prayers',              changefreq: 'weekly',  priority: 0.7 },
   { url: '/how-to-pray',          changefreq: 'monthly', priority: 0.7 },
   { url: '/how-to-pray/guide',    changefreq: 'monthly', priority: 0.7 },
   { url: '/start-journey',        changefreq: 'monthly', priority: 0.6 },
@@ -86,6 +87,26 @@ async function getPublicAssetRoutes() {
   return [...pdfs, ...arcImages, ...dayImages];
 }
 
+async function getPrayerRoutesFromModule() {
+  try {
+    const prayersUrl = new URL('../src/data/prayers.ts', import.meta.url).href;
+    const mod = await import(prayersUrl);
+    const slugs =
+      (Array.isArray(mod.ALL_PRAYER_SLUGS) && mod.ALL_PRAYER_SLUGS) ||
+      (Array.isArray(mod.PRAYERS) && mod.PRAYERS.map(p => p.slug)) ||
+      [];
+    return slugs.map(slug => ({
+      url: `/prayers/${slug}`,
+      changefreq: 'monthly',
+      priority: 0.6,
+    }));
+  } catch (e) {
+    console.error('[sitemap] could not import prayers.ts:', e?.message || e);
+    return [];
+  }
+}
+
+
 async function run() {
   const outPath = path.resolve(__dirname, '../dist/sitemap.xml');
   const smStream = new SitemapStream({ hostname: SITE_URL });
@@ -109,10 +130,14 @@ async function run() {
     smStream.write(route);
   }
 
+  // Add /prayers/{slug} routes from the TS data module
+  const prayerRoutes = await getPrayerRoutesFromModule();
+  for (const route of prayerRoutes) smStream.write(route);
+
   smStream.end();
   await streamToPromise(smStream);
 
-  console.log(`[sitemap] wrote ${outPath} with ${STATIC_ROUTES.length + dynamicRoutes.length + assetRoutes.length} URLs`);
+  console.log(`[sitemap] wrote ${outPath} with ${STATIC_ROUTES.length + dynamicRoutes.length + assetRoutes.length + prayerRoutes.length} URLs`);
 }
 
 run().catch(e => {

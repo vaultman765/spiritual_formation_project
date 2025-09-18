@@ -31,5 +31,38 @@
     "imageWidth": "1280",
     "imageHeight": "838",
     "imageAlt": "Road to Emmaus - Jesus and two desciples walking along a path"
+  },
+  {
+    "slug": "/prayers/divine-mercy-chaplet",
+    "type": "article",
+    "canonicalUrl": "https://www.catholicmentalprayer.com/prayers/divine-mercy-chaplet",
+    "title": "How to Pray the Divine Mercy Chaplet (Step-by-Step Guide)",
+    "description": "A step-by-step guide to the Divine Mercy Chaplet (using Rosary beads): opening, decade prayers, and closing.",
+    "image": "https://www.catholicmentalprayer.com/images/how_to_pray/chaplets/divine_mercy_chaplet_og.jpg",
+    "imageWidth": "1200",
+    "imageHeight": "630",
+    "imageAlt": "Divine Mercy image of Jesus with rays of light coming from his heart"
+  },
+  {
+    "slug": "/prayers/rosary",
+    "type": "article",
+    "canonicalUrl": "https://www.catholicmentalprayer.com/prayers/rosary",
+    "title": "How to Pray the Rosary (Step-by-Step Guide)",
+    "description": "A step-by-step guide to praying the Rosary using Rosary beads: opening, decade prayers, and closing.",
+    "image": "https://www.catholicmentalprayer.com/images/how_to_pray/chaplets/rosary_og.jpg",
+    "imageWidth": "1200",
+    "imageHeight": "662",
+    "imageAlt": "Hands holding a rosary with a crucifix"
+  },
+  {
+    "slug": "/prayers",
+    "type": "article",
+    "canonicalUrl": "https://www.catholicmentalprayer.com/prayers/",
+    "title": "Catholic Prayers & Devotional Texts",
+    "description": "A collection of Catholic prayers and devotional texts to enrich your spiritual life.",
+    "image": "https://www.catholicmentalprayer.com/images/how_to_pray/chaplets/rosary_og.jpg",
+    "imageWidth": "1200",
+    "imageHeight": "662",
+    "imageAlt": "Hands holding a rosary with a crucifix"
   }
 ]
