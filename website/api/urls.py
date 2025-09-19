@@ -9,7 +9,7 @@ from website.api.views.meditation_note_view import MeditationNoteView
 from website.api.views.auth_views import (
     current_user_view, register_view, login_view, logout_view,
     update_profile, change_password
-) 
+)
 from website.api.views.health_check import health_check
 from website.api.views.user_analytics_view import track
 

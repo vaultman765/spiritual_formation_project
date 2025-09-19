@@ -6,7 +6,6 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
 from django.contrib.auth import update_session_auth_hash
-from django.contrib.auth.forms import PasswordChangeForm
 
 
 @ensure_csrf_cookie
@@ -95,12 +94,12 @@ def update_profile(request):
     """Update user profile information."""
     user = request.user
     data = request.data
-    
+
     if 'username' in data:
         user.username = data['username']
     if 'email' in data:
         user.email = data['email']
-    
+
     try:
         user.save()
         return Response({
@@ -116,18 +115,18 @@ def update_profile(request):
 def change_password(request):
     """Change user password."""
     if 'current_password' not in request.data or 'new_password' not in request.data:
-        return Response({'error': 'Both current and new password required'}, 
+        return Response({'error': 'Both current and new password required'},
                         status=status.HTTP_400_BAD_REQUEST)
-    
+
     user = request.user
     if not user.check_password(request.data['current_password']):
-        return Response({'error': 'Current password is incorrect'}, 
+        return Response({'error': 'Current password is incorrect'},
                         status=status.HTTP_400_BAD_REQUEST)
-    
+
     user.set_password(request.data['new_password'])
     user.save()
-    
+
     # Update session to prevent logout
     update_session_auth_hash(request, user)
-    
+
     return Response({'detail': 'Password updated successfully'})
