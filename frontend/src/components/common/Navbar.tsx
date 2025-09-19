@@ -7,8 +7,6 @@ import AccountMenu from "@/components/nav/AccountMenu";
 function Dropdown({ label, children }: { label: string | React.ReactNode; children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
-  const inTimer = useRef<number | null>(null);
-  const outTimer = useRef<number | null>(null);
 
   // close on outside click + Esc
   useEffect(() => {
@@ -25,18 +23,8 @@ function Dropdown({ label, children }: { label: string | React.ReactNode; childr
     };
   }, []);
 
-  // hover intent (desktop)
-  const onEnter = () => {
-    if (outTimer.current) clearTimeout(outTimer.current);
-    inTimer.current = window.setTimeout(() => setOpen(true), 100);
-  };
-  const onLeave = () => {
-    if (inTimer.current) clearTimeout(inTimer.current);
-    outTimer.current = window.setTimeout(() => setOpen(false), 180);
-  };
-
   return (
-    <div ref={rootRef} className="relative" onMouseEnter={onEnter} onMouseLeave={onLeave}>
+    <div ref={rootRef} className="relative">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
