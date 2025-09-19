@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, useRef } from "react";
 import { useJourneyEditor } from "@/hooks/useJourneyEditor";
 import { saveOrUpdateJourney } from "@/utils/journeyUtils";
 import type { ArcData } from "@/utils/types";
@@ -6,6 +6,7 @@ import { useJourney } from "@/context/journeyContext";
 import { useNavigate } from "react-router-dom";
 import SelectableArcCard from "@/components/cards/SelectableArcCard";
 import DraggableSelectedGrid from "@/components/dnd/DraggableSelectedGrid";
+import { toast } from "react-toastify";
 
 interface JourneyEditorPageProps {
   mode: "create" | "edit";
@@ -13,17 +14,12 @@ interface JourneyEditorPageProps {
 }
 
 const PAGE_SIZES = [12, 20, 28, 40, 60];
+const DRAFT_KEY = "journeyDraft:v1";
 
 export default function JourneyEditorPage({ mode, initialJourney }: JourneyEditorPageProps) {
-  const {
-    availableArcs,
-    selectedArcs,
-    title,
-    setTitle,
-    setSelectedArcs,
-    handleReorder, // still available if you later re-add drag-drop
-    refreshJourneys,
-  } = useJourneyEditor(mode === "edit" ? { initialJourney } : {});
+  const { availableArcs, selectedArcs, title, setTitle, setSelectedArcs, handleReorder, refreshJourneys } = useJourneyEditor(
+    mode === "edit" ? { initialJourney } : {}
+  );
 
   const { createJourney, updateJourney, activeJourney } = useJourney();
   const [search, setSearch] = useState("");
@@ -33,23 +29,23 @@ export default function JourneyEditorPage({ mode, initialJourney }: JourneyEdito
   const [size, setSize] = useState(20);
   const navigate = useNavigate();
 
-  // preload edit mode selection
+  // ---------- prefill in edit mode ----------
   useEffect(() => {
     if (mode === "edit" && activeJourney && availableArcs.length) {
       setTitle(activeJourney.title);
       const selected = activeJourney.arc_progress.map((p) => availableArcs.find((a) => a.arc_id === p.arc_id)).filter(Boolean) as ArcData[];
       setSelectedArcs(selected);
     }
-  }, [mode, activeJourney, availableArcs]);
+  }, [mode, activeJourney, availableArcs, setSelectedArcs, setTitle]);
 
-  // tags list
+  // ---------- tags list ----------
   const allTags = useMemo(() => {
     const t = new Set<string>();
     availableArcs.forEach((a) => a.card_tags?.forEach((x) => t.add(x)));
     return ["All", ...Array.from(t).sort((a, b) => a.localeCompare(b))];
   }, [availableArcs]);
 
-  // filter available list
+  // ---------- filtering (Available) ----------
   const filteredAvailable = useMemo(() => {
     const s = search.trim().toLowerCase();
     return availableArcs
@@ -58,38 +54,143 @@ export default function JourneyEditorPage({ mode, initialJourney }: JourneyEdito
       .filter((a) => (tag === "All" ? true : a.card_tags?.includes(tag)));
   }, [availableArcs, selectedArcs, search, tag]);
 
-  // simple client-side pagination (mirrors Explore experience)
+  // ---------- pagination (Available) ----------
   const pageCount = Math.max(1, Math.ceil(filteredAvailable.length / size));
   const pagedAvailable = useMemo(() => {
     const start = (page - 1) * size;
     return filteredAvailable.slice(start, start + size);
   }, [filteredAvailable, page, size]);
 
-  // moves
+  // ---------- moves ----------
   const addArc = (arc: ArcData) => {
     if (!selectedArcs.some((x) => x.arc_id === arc.arc_id)) setSelectedArcs([...selectedArcs, arc]);
   };
   const removeArc = (arcId: string) => setSelectedArcs(selectedArcs.filter((x) => x.arc_id !== arcId));
 
+  // bulk add from current filter/page (we add **all filtered**, not just current page)
+  const addAllFiltered = () => {
+    const toAdd = filteredAvailable.filter((a) => !selectedArcs.some((s) => s.arc_id === a.arc_id));
+    if (!toAdd.length) return;
+    setSelectedArcs([...selectedArcs, ...toAdd]);
+    toast.success(`Added ${toAdd.length} arc${toAdd.length === 1 ? "" : "s"}`);
+    setTab("selected");
+  };
+
+  // bulk clear + undo
+  const clearAllSelected = () => {
+    if (!selectedArcs.length) return;
+    const snapshot = selectedArcs;
+    setSelectedArcs([]);
+    toast(
+      <span>
+        Removed all selected arcs.{" "}
+        <button className="underline" onClick={() => setSelectedArcs(snapshot)}>
+          Undo
+        </button>
+      </span>,
+      { autoClose: 4000 }
+    );
+  };
+
+  // ---------- validation + save ----------
+  const isValid = title.trim().length >= 3 && selectedArcs.length > 0;
+
   const handleSave = async () => {
-    if (selectedArcs.length === 0) return;
+    if (!isValid) return;
     try {
       await saveOrUpdateJourney({
         journeyId: mode === "edit" ? activeJourney?.id : undefined,
-        title,
+        title: title.trim(),
         arcs: selectedArcs,
         createJourney: mode === "create" ? createJourney : undefined,
         updateJourney: mode === "edit" ? updateJourney : undefined,
       });
       await refreshJourneys();
+      // clear draft on success
+      if (mode === "create") localStorage.removeItem(DRAFT_KEY);
       navigate("/my-journey");
     } catch (e) {
       console.error("Failed to save journey:", e);
+      toast.error("Could not save. Please try again.");
     }
   };
 
+  // ---------- autosave draft (create mode) ----------
+  useEffect(() => {
+    if (mode !== "create") return;
+    // load once
+    const raw = localStorage.getItem(DRAFT_KEY);
+    if (raw) {
+      try {
+        const draft = JSON.parse(raw) as { title?: string; arcIds?: string[] };
+        if (draft.title) setTitle(draft.title);
+        if (draft.arcIds?.length) {
+          const arcs = draft.arcIds.map((id) => availableArcs.find((a) => a.arc_id === id)).filter(Boolean) as ArcData[];
+          if (arcs.length) setSelectedArcs(arcs);
+        }
+      } catch {}
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mode, availableArcs.length]);
+
+  useEffect(() => {
+    if (mode !== "create") return;
+    const payload = { title, arcIds: selectedArcs.map((a) => a.arc_id) };
+    localStorage.setItem(DRAFT_KEY, JSON.stringify(payload));
+  }, [mode, title, selectedArcs]);
+
+  // ---------- unsaved changes guard (tab close/back/refresh) ----------
+  const initialSnapshot = useRef<string>("");
+  // snapshot after first render/prefill
+  useEffect(() => {
+    initialSnapshot.current = JSON.stringify({ title, ids: selectedArcs.map((a) => a.arc_id) });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // once
+
+  const isDirty = useMemo(() => {
+    const now = JSON.stringify({ title, ids: selectedArcs.map((a) => a.arc_id) });
+    return now !== initialSnapshot.current;
+  }, [title, selectedArcs]);
+
+  useEffect(() => {
+    const handler = (e: BeforeUnloadEvent) => {
+      if (!isDirty) return;
+      e.preventDefault();
+      e.returnValue = "";
+    };
+    window.addEventListener("beforeunload", handler);
+    return () => window.removeEventListener("beforeunload", handler);
+  }, [isDirty]);
+
   return (
     <main>
+      {/* Sticky action bar (keeps your page layout intact) */}
+      <div className="fixed inset-x-0 bottom-0 z-40 bg-[var(--bg-dark)]/80 backdrop-blur border-t border-white/10">
+        <div className="mx-auto max-w-6xl px-3 py-2 flex items-center justify-between gap-3">
+          <div className="text-xs text-[var(--text-muted)]">
+            {selectedArcs.length} arc{selectedArcs.length === 1 ? "" : "s"} selected
+            {isDirty ? " • Unsaved changes" : ""}
+          </div>
+          <div className="flex gap-2">
+            <button
+              onClick={() => navigate("/my-journey")}
+              className="rounded-lg border border-white/20 px-4 py-2 text-[var(--text-muted)] hover:text-white"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleSave}
+              disabled={!isValid}
+              className={`rounded-lg px-5 py-2 font-semibold ${
+                isValid ? "bg-yellow-500 hover:bg-yellow-600 text-black" : "bg-white/10 text-[var(--text-muted)] cursor-not-allowed"
+              }`}
+            >
+              {mode === "create" ? "Create Journey" : "Save Changes"}
+            </button>
+          </div>
+        </div>
+      </div>
+
       {/* Header */}
       <header className="text-center mb-6">
         <h1 className="text-4xl md:text-5xl font-display font-semibold text-[var(--text-light)]">
@@ -102,7 +203,7 @@ export default function JourneyEditorPage({ mode, initialJourney }: JourneyEdito
         </p>
       </header>
 
-      {/* Title + controls */}
+      {/* Title + tabs */}
       <section className="mx-auto mb-4 flex max-w-5xl flex-col items-stretch gap-3 px-4 sm:flex-row sm:items-center sm:justify-center">
         <input
           type="text"
@@ -112,7 +213,6 @@ export default function JourneyEditorPage({ mode, initialJourney }: JourneyEdito
           className="input-style w-full sm:w-[320px]"
         />
 
-        {/* Tabs */}
         <div className="rounded-full p-1 text-sm">
           <button
             className={`rounded-full border border-white/15 px-4 py-2 mb-2 ${
@@ -133,7 +233,7 @@ export default function JourneyEditorPage({ mode, initialJourney }: JourneyEdito
         </div>
       </section>
 
-      {/* Filters for AVAILABLE tab */}
+      {/* AVAILABLE controls */}
       {tab === "available" && (
         <section className="mx-auto mb-4 flex max-w-5xl flex-wrap items-center gap-3 px-4">
           <input
@@ -161,8 +261,15 @@ export default function JourneyEditorPage({ mode, initialJourney }: JourneyEdito
             ))}
           </select>
 
-          {/* per-page */}
           <div className="ml-auto flex items-center gap-2">
+            <button
+              className="rounded border border-white/20 px-3 py-2 text-sm text-[var(--text-muted)] hover:bg-white/5"
+              onClick={addAllFiltered}
+              disabled={filteredAvailable.length === 0}
+            >
+              Add all filtered
+            </button>
+
             <span className="text-sm text-[var(--text-muted)]">Show</span>
             <select
               className="input-style !w-auto !px-2 !py-2"
@@ -183,11 +290,11 @@ export default function JourneyEditorPage({ mode, initialJourney }: JourneyEdito
         </section>
       )}
 
-      {/* Grid */}
-      <section className="mx-auto max-w-7xl px-4">
+      {/* GRID */}
+      <section className="mx-auto max-w-7xl px-4 pb-28">
+        {/* pb so content isn’t hidden by sticky bar */}
         {tab === "available" ? (
           <>
-            {/* count */}
             <p className="mb-2 text-center text-sm text-[var(--text-muted)]">
               Showing {filteredAvailable.length ? (page - 1) * size + 1 : 0}–{Math.min(page * size, filteredAvailable.length)} of{" "}
               {filteredAvailable.length} arcs
@@ -199,7 +306,6 @@ export default function JourneyEditorPage({ mode, initialJourney }: JourneyEdito
               ))}
             </div>
 
-            {/* pagination */}
             {pageCount > 1 && (
               <div className="mt-6 flex items-center justify-center gap-3">
                 <button
@@ -222,30 +328,22 @@ export default function JourneyEditorPage({ mode, initialJourney }: JourneyEdito
               </div>
             )}
           </>
+        ) : selectedArcs.length === 0 ? (
+          <p className="text-center text-[var(--text-muted)]">No arcs selected yet. Add from the “Available” tab.</p>
         ) : (
-          // SELECTED tab
           <>
-            {selectedArcs.length === 0 ? (
-              <p className="text-center text-[var(--text-muted)]">No arcs selected yet. Add from the “Available” tab.</p>
-            ) : (
-              <DraggableSelectedGrid items={selectedArcs} onRemove={removeArc} onReorder={handleReorder} />
-            )}
+            <div className="mb-3 flex justify-end">
+              <button
+                className="rounded border border-white/20 px-3 py-2 text-sm text-[var(--text-muted)] hover:bg-white/5"
+                onClick={clearAllSelected}
+              >
+                Clear all
+              </button>
+            </div>
+            <DraggableSelectedGrid items={selectedArcs} onRemove={removeArc} onReorder={handleReorder} />
           </>
         )}
       </section>
-
-      {/* Actions */}
-      <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <button onClick={handleSave} className="rounded-xl bg-yellow-500 px-8 py-3 font-semibold text-black shadow-md hover:bg-yellow-600">
-          {mode === "create" ? "Create Journey" : "Save Changes"}
-        </button>
-        <button
-          onClick={() => navigate("/my-journey")}
-          className="rounded-xl border border-white/20 px-6 py-3 font-semibold text-white hover:bg-white/10"
-        >
-          Cancel
-        </button>
-      </div>
     </main>
   );
 }

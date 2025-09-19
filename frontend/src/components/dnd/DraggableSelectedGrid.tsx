@@ -14,13 +14,12 @@ export default function DraggableSelectedGrid({ items, onRemove, onReorder }: Pr
 
   const handleDragStart = (idx: number, e: React.DragEvent) => {
     dragFrom.current = idx;
-    // needed for some browsers to start DnD
     e.dataTransfer.setData("text/plain", String(idx));
     e.dataTransfer.effectAllowed = "move";
   };
 
   const handleDragOver = (idx: number, e: React.DragEvent) => {
-    e.preventDefault(); // allow drop
+    e.preventDefault();
     setOverIndex(idx);
     e.dataTransfer.dropEffect = "move";
   };
@@ -58,11 +57,16 @@ export default function DraggableSelectedGrid({ items, onRemove, onReorder }: Pr
             onDragOver={(e) => handleDragOver(idx, e)}
             onDrop={(e) => handleDrop(idx, e)}
             onDragEnd={handleDragEnd}
-            className={`relative rounded-xl transition 
-                        ${dragging ? "opacity-70 ring-2 ring-yellow-400" : ""} 
-                        ${showTarget ? "ring-2 ring-white/30" : ""}`}
+            className={`relative rounded-xl transition ${dragging ? "opacity-70 ring-2 ring-yellow-400" : ""} ${
+              showTarget ? "ring-2 ring-white/30" : ""
+            }`}
           >
-            {/* grab handle hint */}
+            {/* order badge */}
+            <div className="absolute -left-2 -top-2 z-10 h-6 w-6 select-none rounded-full bg-yellow-400 text-black grid place-items-center text-xs font-bold shadow">
+              {idx + 1}
+            </div>
+
+            {/* grab hint */}
             <div className="absolute right-2 top-2 z-10 select-none rounded bg-black/30 px-2 py-1 text-[10px] text-white">⇅ drag</div>
 
             <SelectableArcCard arc={arc} selected onRemove={onRemove} />
