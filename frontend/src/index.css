@@ -448,4 +448,7 @@ button {
        url('../fonts/eb-garamond-v31-latin-700.svg#EBGaramond') format('svg'); /* Legacy iOS */
 }
 
+[draggable="true"] { cursor: grab; }
+[draggable="true"]:active { cursor: grabbing; }
+
 @tailwind utilities;

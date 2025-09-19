@@ -23,6 +23,7 @@ const RosaryPage = lazy(() => import("@/pages/how_to_pray/chaplets/RosaryPage"))
 const DivineMercyChapletPage = lazy(() => import("@/pages/how_to_pray/chaplets/DivineMercyChapletPage"));
 const PrayersIndexPage = lazy(() => import("@/pages/how_to_pray/prayers/PrayersIndexPage"));
 const PrayerPage = lazy(() => import("@/pages/how_to_pray/prayers/PrayerPage"));
+const AccountPage = lazy(() => import("@/pages/account/AccountPage"));
 
 // ✅ Lazy load Toastify container (so it’s not in the main bundle)
 const ToastContainer = lazy(() => import("react-toastify").then((mod) => ({ default: mod.ToastContainer })));
@@ -77,6 +78,7 @@ function AppRoutes() {
           <Route path="/my-journey" element={<JourneyPage />} />
           <Route path="/auth/login" element={<LoginPage />} />
           <Route path="/auth/register" element={<RegisterPage />} />
+          <Route path="/account" element={<AccountPage />} />
           <Route path="/start-journey" element={<StartJourneyPage />} />
           <Route path="/my-notes" element={<NotesPage />} />
           <Route path="/create-custom-journey" element={<JourneyEditorPage mode="create" />} />
