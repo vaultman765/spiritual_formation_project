@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useAuth } from "@/context/authContext";
 import { Link, useLocation } from "react-router-dom";
+import AccountMenu from "@/components/nav/AccountMenu";
 
 /** Small helpers for the dropdown UI */
 function Dropdown({ label, children }: { label: string | React.ReactNode; children: React.ReactNode }) {
@@ -150,24 +151,7 @@ export default function Navbar() {
           </Dropdown>
 
           {/* Account */}
-          <Dropdown label="Account">
-            {user ? (
-              <>
-                <div className="px-3 py-1 text-xs text-[var(--text-muted)]">Signed in as {user.username}</div>
-                <button
-                  onClick={handleLogout}
-                  className="mt-1 w-full rounded-md px-3 py-2 text-left text-[var(--text-main)] hover:bg-white/10 hover:text-white"
-                >
-                  Logout
-                </button>
-              </>
-            ) : (
-              <>
-                <Item to="/auth/login">Login</Item>
-                <Item to="/auth/register">Register</Item>
-              </>
-            )}
-          </Dropdown>
+          <AccountMenu />
         </div>
 
         {/* Mobile hamburger */}
@@ -311,6 +295,12 @@ export default function Navbar() {
               {user ? (
                 <>
                   <div className="px-3 py-1 text-xs text-[var(--text-muted)]">Signed in as {user.username}</div>
+                  <Link to="/account" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 hover:bg-white/10">
+                    Edit account
+                  </Link>
+                  <Link to="/my-notes" onClick={() => setIsOpen(false)} className="block rounded-md px-3 py-2 hover:bg-white/10">
+                    My Notes
+                  </Link>
                   <button
                     onClick={() => {
                       setIsOpen(false);

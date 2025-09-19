@@ -6,7 +6,10 @@ from website.api.views.tag_views import TagViewSet
 from website.api.views.homepage_day_views import HomepageDayViewSet
 from website.api.views.user_journey_views import UserJourneyViewSet, UserJourneyListAllView
 from website.api.views.meditation_note_view import MeditationNoteView
-from website.api.views.auth_views import current_user_view, register_view, login_view, logout_view
+from website.api.views.auth_views import (
+    current_user_view, register_view, login_view, logout_view,
+    update_profile, change_password
+) 
 from website.api.views.health_check import health_check
 from website.api.views.user_analytics_view import track
 
@@ -24,6 +27,8 @@ urlpatterns = [
     path("api/user/current/", current_user_view, name="user-current"),
     path("api/user/login/", login_view, name="user-login"),
     path("api/user/logout/", logout_view, name="user-logout"),
+    path("api/user/profile/", update_profile, name="user-profile-update"),
+    path("api/user/change-password/", change_password, name="user-password-change"),
     path('api/user/journeys/', UserJourneyListAllView.as_view(), name='user-journey-list'),
     path('api-auth/', include('rest_framework.urls')),
     path('health/', health_check, name='health-check'),
