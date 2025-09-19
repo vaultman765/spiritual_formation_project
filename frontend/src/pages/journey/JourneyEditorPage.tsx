@@ -16,7 +16,7 @@ interface JourneyEditorPageProps {
 const PAGE_SIZES = [12, 20, 28, 40, 60];
 const DRAFT_KEY = "journeyDraft:v1";
 
-export default function JourneyEditorPage({ mode, initialJourney }: JourneyEditorPageProps) {
+export default function JourneyEditorPage({ mode, initialJourney }: Readonly<JourneyEditorPageProps>) {
   const { availableArcs, selectedArcs, title, setTitle, setSelectedArcs, handleReorder, refreshJourneys } = useJourneyEditor(
     mode === "edit" ? { initialJourney } : {}
   );
@@ -156,7 +156,6 @@ export default function JourneyEditorPage({ mode, initialJourney }: JourneyEdito
     const handler = (e: BeforeUnloadEvent) => {
       if (!isDirty) return;
       e.preventDefault();
-      e.returnValue = "";
     };
     window.addEventListener("beforeunload", handler);
     return () => window.removeEventListener("beforeunload", handler);
@@ -293,56 +292,64 @@ export default function JourneyEditorPage({ mode, initialJourney }: JourneyEdito
       {/* GRID */}
       <section className="mx-auto max-w-7xl px-4 pb-28">
         {/* pb so content isn’t hidden by sticky bar */}
-        {tab === "available" ? (
-          <>
-            <p className="mb-2 text-center text-sm text-[var(--text-muted)]">
-              Showing {filteredAvailable.length ? (page - 1) * size + 1 : 0}–{Math.min(page * size, filteredAvailable.length)} of{" "}
-              {filteredAvailable.length} arcs
-            </p>
+        {(() => {
+          let content;
+          if (tab === "available") {
+            content = (
+              <>
+                <p className="mb-2 text-center text-sm text-[var(--text-muted)]">
+                  Showing {filteredAvailable.length ? (page - 1) * size + 1 : 0}–{Math.min(page * size, filteredAvailable.length)} of{" "}
+                  {filteredAvailable.length} arcs
+                </p>
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {pagedAvailable.map((arc) => (
-                <SelectableArcCard key={arc.arc_id} arc={arc} onAdd={addArc} />
-              ))}
-            </div>
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                  {pagedAvailable.map((arc) => (
+                    <SelectableArcCard key={arc.arc_id} arc={arc} onAdd={addArc} />
+                  ))}
+                </div>
 
-            {pageCount > 1 && (
-              <div className="mt-6 flex items-center justify-center gap-3">
-                <button
-                  className="rounded border border-white/20 px-3 py-1 text-sm text-[var(--text-muted)] hover:bg-white/5"
-                  disabled={page === 1}
-                  onClick={() => setPage((p) => Math.max(1, p - 1))}
-                >
-                  ← Prev
-                </button>
-                <span className="text-sm text-[var(--text-muted)]">
-                  Page {page} of {pageCount}
-                </span>
-                <button
-                  className="rounded border border-white/20 px-3 py-1 text-sm text-[var(--text-muted)] hover:bg-white/5"
-                  disabled={page === pageCount}
-                  onClick={() => setPage((p) => Math.min(pageCount, p + 1))}
-                >
-                  Next →
-                </button>
-              </div>
-            )}
-          </>
-        ) : selectedArcs.length === 0 ? (
-          <p className="text-center text-[var(--text-muted)]">No arcs selected yet. Add from the “Available” tab.</p>
-        ) : (
-          <>
-            <div className="mb-3 flex justify-end">
-              <button
-                className="rounded border border-white/20 px-3 py-2 text-sm text-[var(--text-muted)] hover:bg-white/5"
-                onClick={clearAllSelected}
-              >
-                Clear all
-              </button>
-            </div>
-            <DraggableSelectedGrid items={selectedArcs} onRemove={removeArc} onReorder={handleReorder} />
-          </>
-        )}
+                {pageCount > 1 && (
+                  <div className="mt-6 flex items-center justify-center gap-3">
+                    <button
+                      className="rounded border border-white/20 px-3 py-1 text-sm text-[var(--text-muted)] hover:bg-white/5"
+                      disabled={page === 1}
+                      onClick={() => setPage((p) => Math.max(1, p - 1))}
+                    >
+                      ← Prev
+                    </button>
+                    <span className="text-sm text-[var(--text-muted)]">
+                      Page {page} of {pageCount}
+                    </span>
+                    <button
+                      className="rounded border border-white/20 px-3 py-1 text-sm text-[var(--text-muted)] hover:bg-white/5"
+                      disabled={page === pageCount}
+                      onClick={() => setPage((p) => Math.min(pageCount, p + 1))}
+                    >
+                      Next →
+                    </button>
+                  </div>
+                )}
+              </>
+            );
+          } else if (selectedArcs.length === 0) {
+            content = <p className="text-center text-[var(--text-muted)]">No arcs selected yet. Add from the “Available” tab.</p>;
+          } else {
+            content = (
+              <>
+                <div className="mb-3 flex justify-end">
+                  <button
+                    className="rounded border border-white/20 px-3 py-2 text-sm text-[var(--text-muted)] hover:bg-white/5"
+                    onClick={clearAllSelected}
+                  >
+                    Clear all
+                  </button>
+                </div>
+                <DraggableSelectedGrid items={selectedArcs} onRemove={removeArc} onReorder={handleReorder} />
+              </>
+            );
+          }
+          return content;
+        })()}
       </section>
     </main>
   );

@@ -1,11 +1,11 @@
 import type { ArcData } from "@/utils/types";
 
-type Props = {
+type Props = Readonly<{
   arc: ArcData;
   selected?: boolean;
   onAdd?: (arc: ArcData) => void;
   onRemove?: (arcId: string) => void;
-};
+}>;
 
 export default function SelectableArcCard({ arc, selected, onAdd, onRemove }: Props) {
   return (
@@ -65,7 +65,7 @@ export default function SelectableArcCard({ arc, selected, onAdd, onRemove }: Pr
       </div>
 
       {/* Hover tooltip with summary + primary reading(s) */}
-      {(arc.arc_summary || arc.primary_reading?.length) && (
+      {!!(arc.arc_summary || arc.primary_reading?.length) && (
         <div
           role="tooltip"
           className="pointer-events-none absolute left-3 top-3 z-20 hidden max-w-[280px] rounded-lg border border-white/15
@@ -76,8 +76,8 @@ export default function SelectableArcCard({ arc, selected, onAdd, onRemove }: Pr
           {Array.isArray(arc.primary_reading) && arc.primary_reading.length > 0 && (
             <div className="space-y-1">
               <p className="text-[var(--text-subtle-heading)] uppercase tracking-widest">Primary Reading</p>
-              {arc.primary_reading.slice(0, 3).map((r, i) => (
-                <p key={i} className="leading-snug">
+              {arc.primary_reading.slice(0, 3).map((r) => (
+                <p key={r} className="leading-snug">
                   {r}
                 </p>
               ))}

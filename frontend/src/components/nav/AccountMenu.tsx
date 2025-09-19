@@ -2,6 +2,25 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "@/context/authContext";
 
+type ItemProps = Readonly<{
+  to: string;
+  children: React.ReactNode;
+  onClick?: () => void;
+}>;
+
+function Item({ to, children, onClick }: ItemProps) {
+  return (
+    <Link
+      to={to}
+      onClick={onClick}
+      role="menuitem"
+      className="block rounded-md px-3 py-2 text-[var(--text-main)] hover:bg-white/10 hover:text-white"
+    >
+      {children}
+    </Link>
+  );
+}
+
 export default function AccountMenu() {
   const { user, logout } = useAuth();
   const [open, setOpen] = useState(false);
@@ -22,19 +41,6 @@ export default function AccountMenu() {
       document.removeEventListener("keydown", onKey);
     };
   }, []);
-
-  function Item({ to, children, onClick }: { to: string; children: React.ReactNode; onClick?: () => void }) {
-    return (
-      <Link
-        to={to}
-        onClick={onClick}
-        role="menuitem"
-        className="block rounded-md px-3 py-2 text-[var(--text-main)] hover:bg-white/10 hover:text-white"
-      >
-        {children}
-      </Link>
-    );
-  }
 
   return (
     <div className="relative">

@@ -106,7 +106,7 @@ def update_profile(request):
             'username': user.username,
             'email': user.email
         })
-    except Exception as e:
+    except Exception:
         return Response({'error': 'Failed to update.'}, status=status.HTTP_400_BAD_REQUEST)
 
 

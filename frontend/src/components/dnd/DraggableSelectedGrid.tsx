@@ -3,9 +3,9 @@ import SelectableArcCard from "@/components/cards/SelectableArcCard";
 import type { ArcData } from "@/utils/types";
 
 type Props = {
-  items: ArcData[];
-  onRemove: (arcId: string) => void;
-  onReorder: (sourceIndex: number, destinationIndex: number) => void;
+  readonly items: readonly ArcData[];
+  readonly onRemove: (arcId: string) => void;
+  readonly onReorder: (sourceIndex: number, destinationIndex: number) => void;
 };
 
 export default function DraggableSelectedGrid({ items, onRemove, onReorder }: Props) {
@@ -39,19 +39,14 @@ export default function DraggableSelectedGrid({ items, onRemove, onReorder }: Pr
   };
 
   return (
-    <div
-      className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-      role="list"
-      aria-label="Selected arcs (drag to reorder)"
-    >
+    <ol className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" aria-label="Selected arcs (drag to reorder)">
       {items.map((arc, idx) => {
         const dragging = dragFrom.current === idx;
         const showTarget = overIndex === idx && !dragging;
 
         return (
-          <div
+          <li
             key={arc.arc_id}
-            role="listitem"
             draggable
             onDragStart={(e) => handleDragStart(idx, e)}
             onDragOver={(e) => handleDragOver(idx, e)}
@@ -88,9 +83,9 @@ export default function DraggableSelectedGrid({ items, onRemove, onReorder }: Pr
                 ↓ Move down
               </button>
             </div>
-          </div>
+          </li>
         );
       })}
-    </div>
+    </ol>
   );
 }
