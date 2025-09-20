@@ -2036,7 +2036,7 @@ export const prayers: PrayerMeta[] = [
         { call: "Jesus, our way and our life" },
         { call: "Jesus, joy of angels" },
         { call: "Jesus, king of patriarchs" },
-        { call: "Jesus, teachers of apostles" },
+        { call: "Jesus, teacher of apostles" },
         { call: "Jesus, master of evangelists" },
         { call: "Jesus, courage of martyrs" },
         { call: "Jesus, light of confessors" },
