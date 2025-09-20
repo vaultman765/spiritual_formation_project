@@ -44,7 +44,7 @@ ${url}
 
 #CatholicMeditation #MentalPrayer #CatholicFaith #DailyPrayer #CatholicTwitter
 `;
-  return text;
+  return text.trim();
 }
 
 async function fetchJson(url) {
