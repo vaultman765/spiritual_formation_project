@@ -1,4 +1,6 @@
 name: X autopost (tomorrow’s meditation)
+permissions:
+  contents: read
 
 on:
   schedule:
@@ -21,9 +23,11 @@ jobs:
           cache-dependency-path: frontend/package-lock.json
 
       - name: Install deps
+        working-directory: frontend
         run: npm ci --legacy-peer-deps
 
       - name: Post to X
+        working-directory: frontend
         env:
           SITE_URL: https://www.catholicmentalprayer.com
           API_URL: https://api.catholicmentalprayer.com
