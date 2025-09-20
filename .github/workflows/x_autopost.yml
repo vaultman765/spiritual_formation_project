@@ -20,6 +20,7 @@ jobs:
 
       - name: Install deps
         run: npm ci
+        working-directory: frontend
 
       - name: Post to X
         env:
