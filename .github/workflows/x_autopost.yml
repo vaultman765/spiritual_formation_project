@@ -1,4 +1,6 @@
 name: X autopost (tomorrow’s meditation)
+permissions:
+  contents: read
 
 on:
   schedule:
