@@ -13,21 +13,19 @@ primary_reading:
 secondary_reading:
   - title: St. Thomas Aquinas, Adoro Te Devote
     reference:
-    url: https://www.preces-latinae.org/thesaurus/Hymni/AdoroTe.html
+    url: /prayers/adoro-te-devote
   - title: Pope Benedict XVI, Sacramentum Caritatis
     reference: §§6–10
     url: /docs/readings/Pope_Benedict_XVI_Sacramentum_Caritatis.pdf
 meditative_points:
-  - 'Whoever eats my flesh and drinks my blood has eternal life.'
+  - "Whoever eats my flesh and drinks my blood has eternal life."
   - The Eucharist is not a symbol—it is Christ Himself, veiled in sacrament.
   - The soul is invited to gaze in adoration at Love incarnate in the Host.
 ejaculatory_prayer: Jesus in the Host, I adore You hidden and humble.
-colloquy:
-  Lord, let me never grow cold before the mystery of Your Body and Blood.
+colloquy: Lord, let me never grow cold before the mystery of Your Body and Blood.
   May my heart burn with reverence, and my life proclaim the truth of Your sacramental
   presence.
-resolution:
-  I will spend a moment today in silent adoration, meditating on the humility
+resolution: I will spend a moment today in silent adoration, meditating on the humility
   of Christ in the Eucharist.
 tags:
   thematic:

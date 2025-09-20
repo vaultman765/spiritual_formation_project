@@ -5,18 +5,17 @@ arc_id: arc_love_of_god
 arc_title: Love of God – Foundation of All
 arc_number: 1
 day_title: While We Were Still Sinners
-anchor_image:
-  The Crucified Christ (Face) — You gaze upon the face of Christ crucified.
+anchor_image: The Crucified Christ (Face) — You gaze upon the face of Christ crucified.
   His eyes are closed, His head bowed beneath the crown of thorns. From this suffering Face shines infinite love.
   Every wound speaks the truth of God’s heart.
 primary_reading:
   title: 1 John 4:7–21
-  reference: ''
-  url: ''
+  reference:
+  url:
 secondary_reading:
   - title: Romans 5:6–11
-    reference: ''
-    url: ''
+    reference:
+    url:
   - title: St. Catherine of Siena, The Dialogue
     reference: Mad Lover Excerpt
     url: /docs/readings/st_catherine_mad_lover_excerpt.pdf
@@ -25,13 +24,11 @@ meditative_points:
   - The Blood was poured before we repented.
   - “You are a mad lover.” – St. Catherine of Siena
 ejaculatory_prayer: Jesus, You loved me first.
-colloquy:
-  Jesus, You died for me while I was still far away. You didn’t wait. You
+colloquy: Jesus, You died for me while I was still far away. You didn’t wait. You
   didn’t hesitate. I don’t deserve this — and that is why it is love. Help me receive
   it with awe.
-resolution:
-  'I will meditate before a crucifix or tabernacle today and say: “You died
-  for me — and I accept Your love.”'
+resolution: "I will meditate before a crucifix or tabernacle today and say: “You died
+  for me — and I accept Your love.”"
 tags:
   thematic:
     - desire for god

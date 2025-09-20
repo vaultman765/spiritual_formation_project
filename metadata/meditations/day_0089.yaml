@@ -5,8 +5,7 @@ arc_id: arc_rosary_sorrowful_mysteries
 arc_number: 11
 arc_title: The Rosary - Sorrowful Mysteries
 day_title: The Crucifixion and Death of Our Lord
-anchor_image:
-  Christ crucified between two thieves, darkness covering the sky, His
+anchor_image: Christ crucified between two thieves, darkness covering the sky, His
   head bowed in death
 primary_reading:
   title: Luke 23:33–46
@@ -16,7 +15,7 @@ secondary_reading:
   - title: Catechism of the Catholic Church
     reference: §619
     url: https://www.vatican.va/archive/ENG0015/__P1O.HTM
-  - title: St. Thomas Aquinas, *Summa Theologiae III*
+  - title: St. Thomas Aquinas, Summa Theologiae III
     reference: Question 49
     url: https://www.newadvent.org/summa/4049.htm
 meditative_points:
@@ -24,11 +23,9 @@ meditative_points:
   - He cried out, 'Father, into Your hands I commend My spirit.'
   - By His wounds we are healed — the price of our redemption is paid.
 ejaculatory_prayer: Jesus, dying on the Cross, save me by Your Blood.
-colloquy:
-  Remain beneath the Cross. Speak to your Savior as He dies for love of you.
+colloquy: Remain beneath the Cross. Speak to your Savior as He dies for love of you.
   Offer your life back to Him.
-resolution:
-  Today, I will make a sincere act of contrition and unite it to Christ’s
+resolution: Today, I will make a sincere act of contrition and unite it to Christ’s
   death.
 tags:
   thematic:

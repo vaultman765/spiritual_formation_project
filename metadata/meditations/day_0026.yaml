@@ -5,20 +5,20 @@ arc_id: arc_sin_mercy_conversion
 arc_title: Sin, Mercy, and Conversion
 arc_number: 4
 day_title: Mercy in the Confessional
-anchor_image: "**The Kneeling Soul** — You kneel in a dimly lit confessional.
+anchor_image: "The Kneeling Soul — You kneel in a dimly lit confessional.
   A curtain veils the priest, but through it speaks the mercy of Christ.
   You whisper your sins into the silence, and from beyond the veil comes a voice: 'Go in peace.'"
 primary_reading:
   title: John 20:19–23
-  reference: ""
-  url: ""
+  reference:
+  url:
 secondary_reading:
   - title: Catechism of the Catholic Church
     reference: §§1441–1445
     url: https://www.vatican.va/archive/ENG0015/__P4Y.HTM
-  - title: Pope Pius XII, *Mystici Corporis Christi*
-    reference: §88 – On Christ acting through the priest
-    url: https://www.vatican.va/content/pius-xii/en/encyclicals/documents/hf_p-xii_enc_29061943_mystici-corporis-christi.html
+  - title: Pope Pius XII, Mystici Corporis Christi
+    reference: §88
+    url: /docs/readings/Pope_Pius_XII_Mystici_Corporis_Christi.pdf
 meditative_points:
   - "'Receive the Holy Spirit. If you forgive the sins of any, they are forgiven…' (v. 22–23) — Christ Himself established this sacrament.
     His mercy is not abstract — it is spoken aloud."

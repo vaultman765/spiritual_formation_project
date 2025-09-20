@@ -10,15 +10,15 @@ anchor_image: The Crucified Christ (Face) — You gaze upon the face of Christ c
   Every wound speaks the truth of God’s heart.
 primary_reading:
   title: 1 John 4:7–21
-  reference: ""
-  url: ""
+  reference:
+  url:
 secondary_reading:
   - title: Catechism of the Catholic Church
     reference: §§219–221
     url: https://www.vatican.va/archive/ENG0015/__P16.HTM
   - title: St. John Paul II, Novo Millennio Ineunte
     reference: §33
-    url: https://www.vatican.va/content/john-paul-ii/en/apost_letters/2001/documents/hf_jp-ii_apl_20010106_novo-millennio-ineunte.html
+    url: /docs/readings/St_Pope_JP2_Novo_Millennio_Ineunte.pdf
 meditative_points:
   - "“God is love: His very being is love.”"
   - “Whoever loves has been born of God and knows God.”

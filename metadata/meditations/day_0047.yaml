@@ -14,7 +14,7 @@ anchor_image: "**Christ Revealing His Sacred Heart in Glory** — You kneel befo
 primary_reading:
   title: Litany of the Sacred Heart of Jesus
   reference:
-  url:
+  url: /prayers/litany-sacred-heart
 secondary_reading:
   - title: Matthew 27:27–31
     reference:
@@ -28,8 +28,8 @@ secondary_reading:
   - title: Catechism of the Catholic Church
     reference: §601
     url: https://www.vatican.va/archive/ENG0015/__P1O.HTM
-  - title: St. John Henry Newman, *Litany of the Passion*
-    reference: ""
+  - title: St. John Henry Newman, Litany of the Passion
+    reference:
     url: /docs/readings/St_John_Henry_Newman_Litany_of_the_Passion.pdf
 meditative_points:
   - The King wears a crown of insult

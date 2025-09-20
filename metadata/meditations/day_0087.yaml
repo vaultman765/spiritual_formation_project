@@ -3,10 +3,9 @@ master_day_number: 87
 arc_day_number: 3
 arc_id: arc_rosary_sorrowful_mysteries
 arc_number: 11
-arc_title: 'The Rosary - Sorrowful Mysteries'
+arc_title: "The Rosary - Sorrowful Mysteries"
 day_title: The Crowning with Thorns
-anchor_image:
-  Christ seated and crowned with thorns by Roman soldiers, mocked and
+anchor_image: Christ seated and crowned with thorns by Roman soldiers, mocked and
   robed in purple
 primary_reading:
   title: Matthew 27:27-31
@@ -16,7 +15,7 @@ secondary_reading:
   - title: Catechism of the Catholic Church
     reference: §440
     url: https://www.vatican.va/archive/ENG0015/__P1F.HTM
-  - title: St. Bernard of Clairvaux, *On the Song of Songs*
+  - title: St. Bernard of Clairvaux, On the Song of Songs
     reference: Sermon 43
     url: /docs/readings/St_Bernard_On_The_Song_Of_Songs.pdf
 meditative_points:
@@ -24,11 +23,9 @@ meditative_points:
   - Behold the King of Suffering, clothed in purple, scorned by men.
   - Love accepts humiliation — Christ redeems even our pride through pain.
 ejaculatory_prayer: O Crowned King of Love, reign in my heart.
-colloquy:
-  Speak to Christ the King. Kneel before Him who is mocked for your sake.
+colloquy: Speak to Christ the King. Kneel before Him who is mocked for your sake.
   Offer Him your pride and self-love.
-resolution:
-  Today, I will quietly accept a correction or embarrassment for love of
+resolution: Today, I will quietly accept a correction or embarrassment for love of
   Christ.
 tags:
   thematic:

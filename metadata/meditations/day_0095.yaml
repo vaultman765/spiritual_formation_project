@@ -5,8 +5,7 @@ arc_id: arc_rosary_glorious_mysteries
 arc_number: 12
 arc_title: The Rosary - Glorious Mysteries
 day_title: The Assumption of Mary
-anchor_image:
-  Mary is lifted into heaven by angels, radiant and serene, her eyes fixed
+anchor_image: Mary is lifted into heaven by angels, radiant and serene, her eyes fixed
   on the glory of the Trinity
 primary_reading:
   title: Revelation 12:1–6
@@ -16,7 +15,7 @@ secondary_reading:
   - title: Catechism of the Catholic Church
     reference: §966
     url: https://www.vatican.va/archive/ENG0015/__P2C.HTM
-  - title: Pope Pius XII, *Munificentissimus Deus*
+  - title: Pope Pius XII, Munificentissimus Deus
     reference: §§44–47
     url: /docs/readings/Pope_Pius_XII_Munificentissimus_Deus.pdf
 meditative_points:
@@ -24,11 +23,9 @@ meditative_points:
   - Mary, full of grace, shares now in the fullness of her Son’s victory.
   - She is assumed body and soul — where she intercedes for us in glory.
 ejaculatory_prayer: Queen Assumed into Heaven, pray for us.
-colloquy:
-  Look upward with the Church. Speak to Mary in her glory. Ask her to lift
+colloquy: Look upward with the Church. Speak to Mary in her glory. Ask her to lift
   your heart heavenward.
-resolution:
-  Today, I will invoke Mary’s help in one area where I long to rise above
+resolution: Today, I will invoke Mary’s help in one area where I long to rise above
   earthly attachments.
 tags:
   thematic:

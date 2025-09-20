@@ -5,13 +5,13 @@ arc_id: arc_passion_of_christ
 arc_title: The Passion of Christ
 arc_number: 5
 day_title: The Final Surrender – Into Your Hands
-anchor_image: '**The Final Surrender** Jesus breathes His last. "Father, into Your hands I commend My spirit."
+anchor_image: 'The Final Surrender - Jesus breathes His last. "Father, into Your hands I commend My spirit."
   The veil of the Temple is torn. The earth trembles. Those who stood near beat their breasts.
   The centurion says, "Truly this man was the Son of God."'
 primary_reading:
   title: Luke 23:44–46
-  reference: ""
-  url: ""
+  reference:
+  url:
 secondary_reading:
   - title: Catechism of the Catholic Church
     reference: §614
