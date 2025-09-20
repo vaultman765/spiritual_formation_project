@@ -14,7 +14,8 @@
     "test": "jest --coverage",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write .",
-    "postbuild": "tsx scripts/generate-sitemap.mjs"
+    "postbuild": "tsx scripts/generate-sitemap.mjs",
+    "post:x:tomorrow": "node scripts/socials/post_tomorrow_to_x.mjs"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
@@ -22,10 +23,12 @@
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/vite": "^4.1.11",
     "axios": "^1.12.1",
+    "dotenv": "^17.2.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-helmet-async": "^2.0.5",
-    "react-toastify": "^11.0.5"
+    "react-toastify": "^11.0.5",
+    "twitter-api-v2": "^1.27.0"
   },
   "devDependencies": {
     "@babel/core": "^7.28.0",

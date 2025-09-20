@@ -1,0 +1,36 @@
+name: X autopost (tomorrow’s meditation)
+permissions:
+  contents: read
+
+on:
+  schedule:
+    # 16:05 UTC daily ≈ 11:05 EST / 12:05 EDT
+    - cron: "5 16 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install deps
+        run: npm ci
+        working-directory: frontend
+
+      - name: Post to X
+        env:
+          SITE_URL: https://www.catholicmentalprayer.com
+          API_URL: https://api.catholicmentalprayer.com
+          POST_TIMEZONE: America/New_York
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: npm run post:x:tomorrow
