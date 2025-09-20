@@ -5,17 +5,25 @@ import { TwitterApi } from "twitter-api-v2";
 // ----- Config (kept simple & environment-driven) -----
 const SITE_URL = process.env.SITE_URL || "https://www.catholicmentalprayer.com";
 // --- SSRF Safe: Only allow these API endpoints
-const ALLOWED_API_URLS = [
+// Use origins rather than URLs for safer host/protocol-based allowlist
+const ALLOWED_API_ORIGINS = [
   "https://api.catholicmentalprayer.com",
   "https://staging-api.catholicmentalprayer.com",
   "https://test-api.catholicmentalprayer.com"
 ];
 let userApiUrl = process.env.API_URL || "https://api.catholicmentalprayer.com";
-if (!ALLOWED_API_URLS.includes(userApiUrl)) {
-  console.error("[autopost] Invalid/untrusted API_URL:", userApiUrl);
+let parsedUserApiUrl;
+try {
+  parsedUserApiUrl = new URL(userApiUrl);
+} catch (e) {
+  console.error("[autopost] Invalid API_URL format:", userApiUrl);
   process.exit(1);
 }
-const API_URL = userApiUrl;
+if (!ALLOWED_API_ORIGINS.includes(parsedUserApiUrl.origin)) {
+  console.error("[autopost] Invalid/untrusted API_URL origin:", parsedUserApiUrl.origin);
+  process.exit(1);
+}
+const API_URL = parsedUserApiUrl.origin;
 const UTM = "utm_source=x&utm_medium=social&utm_campaign=tomorrow_meditation";
 const TZ = process.env.POST_TIMEZONE || "America/New_York";
 
