@@ -4,7 +4,18 @@ import { TwitterApi } from "twitter-api-v2";
 
 // ----- Config (kept simple & environment-driven) -----
 const SITE_URL = process.env.SITE_URL || "https://www.catholicmentalprayer.com";
-const API_URL = process.env.API_URL || "https://api.catholicmentalprayer.com";
+// --- SSRF Safe: Only allow these API endpoints
+const ALLOWED_API_URLS = [
+  "https://api.catholicmentalprayer.com",
+  "https://staging-api.catholicmentalprayer.com",
+  "https://test-api.catholicmentalprayer.com"
+];
+let userApiUrl = process.env.API_URL || "https://api.catholicmentalprayer.com";
+if (!ALLOWED_API_URLS.includes(userApiUrl)) {
+  console.error("[autopost] Invalid/untrusted API_URL:", userApiUrl);
+  process.exit(1);
+}
+const API_URL = userApiUrl;
 const UTM = "utm_source=x&utm_medium=social&utm_campaign=tomorrow_meditation";
 const TZ = process.env.POST_TIMEZONE || "America/New_York";
 
