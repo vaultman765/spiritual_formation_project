@@ -15,8 +15,8 @@ primary_reading:
 secondary_reading:
   - title: St. Thomas Aquinas, Adoro Te Devote
     reference:
-    url: https://www.preces-latinae.org/thesaurus/Hymni/AdoroTe.html
-  - title: Council of Trent, Session XXII, Chapter II
+    url: /prayers/adoro-te-devote
+  - title: Council of Trent, Session XXII
     reference: Chapter II
     url: https://www.ewtn.com/catholicism/library/council-of-trent-twentysecond-session-1466
 meditative_points:

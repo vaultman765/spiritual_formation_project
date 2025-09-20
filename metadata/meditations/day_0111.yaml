@@ -5,13 +5,12 @@ arc_id: arc_the_angelus
 arc_title: The Angelus
 arc_number: 14
 day_title: And Dwelt Among Us
-anchor_image:
-  The Christ Child in the arms of Mary, light surrounding them, God made
+anchor_image: The Christ Child in the arms of Mary, light surrounding them, God made
   visible in human form.
 primary_reading:
   title: The Angelus
   reference:
-  url: /docs/readings/Prayers_to_the_Blessed_Virgin_Mary.pdf
+  url: /prayers/angelus
 secondary_reading:
   - title: John 1:14
     reference:
@@ -24,12 +23,10 @@ meditative_points:
     among His people.
   - The God who could not be seen now walks among us, veiled in humility.
 ejaculatory_prayer: O Word Incarnate, remain in me as You remained among us.
-colloquy:
-  Lord Jesus, You did not remain distant — You came to dwell among sinners.
+colloquy: Lord Jesus, You did not remain distant — You came to dwell among sinners.
   Make my heart a worthy dwelling place for You. May I never forget Your nearness,
   Your humanity, and Your desire to be with me.
-resolution:
-  I will spend 5 minutes today in silent awareness of Christ's real presence
+resolution: I will spend 5 minutes today in silent awareness of Christ's real presence
   with me.
 tags:
   thematic: []

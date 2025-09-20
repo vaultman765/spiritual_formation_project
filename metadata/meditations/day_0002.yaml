@@ -5,18 +5,17 @@ arc_id: arc_love_of_god
 arc_title: Love of God – Foundation of All
 arc_number: 1
 day_title: Thirsting for God – Love as Desire
-anchor_image:
-  The Crucified Christ (Face) — You gaze upon the face of Christ crucified.
+anchor_image: The Crucified Christ (Face) — You gaze upon the face of Christ crucified.
   His eyes are closed, His head bowed beneath the crown of thorns. From this suffering Face shines infinite love.
   Every wound speaks the truth of God’s heart.
 primary_reading:
   title: 1 John 4:7–21
   reference:
-  url: ''
+  url:
 secondary_reading:
   - title: Psalm 63:1–8
     reference:
-    url: ''
+    url:
   - title: St. Bernard of Clairvaux, On Loving God
     reference: Chapter 1
     url: /docs/readings/St_Bernard_of_Clairvaux_On_Loving_God.pdf
@@ -25,11 +24,9 @@ meditative_points:
   - “The measure of our love for God is to love Him without measure.” – St. Bernard
   - Love is not mere duty — it is longing, hunger, ache for God.
 ejaculatory_prayer: O God, my soul thirsts for You alone.
-colloquy:
-  Lord, stir in me a holy longing. Let my thirst for You grow deeper than
+colloquy: Lord, stir in me a holy longing. Let my thirst for You grow deeper than
   my thirst for approval, comfort, or control.
-resolution:
-  Today, I will offer every moment of restlessness as a prayer — letting
+resolution: Today, I will offer every moment of restlessness as a prayer — letting
   it become desire for God, not distraction.
 tags:
   thematic:

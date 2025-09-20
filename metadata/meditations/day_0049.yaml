@@ -5,7 +5,7 @@ arc_id: arc_litany_sacred_heart
 arc_title: Litany of the Sacred Heart
 arc_number: 6
 day_title: In Whom the Father is Well Pleased
-anchor_image: "**Christ Revealing His Sacred Heart in Glory** — You kneel before the risen Christ. His eyes are like fire and mercy.
+anchor_image: "Christ Revealing His Sacred Heart in Glory - You kneel before the risen Christ. His eyes are like fire and mercy.
   His hands are extended in blessing, and His robe gleams like light.
   But what draws your soul is His Heart — visible, radiant, pierced, encircled with thorns, and burning with love.
   It is not a wound of shame, but a throne of glory. He says nothing.
@@ -13,15 +13,15 @@ anchor_image: "**Christ Revealing His Sacred Heart in Glory** — You kneel befo
   You gaze at the Heart… and see eternity."
 primary_reading:
   title: Litany of the Sacred Heart of Jesus
-  reference: ""
-  url: ""
+  reference:
+  url: /prayers/litany-sacred-heart
 secondary_reading:
   - title: Matthew 3:13-17
-    reference: ""
-    url: ""
+    reference:
+    url:
   - title: Matthew 17:1-38
-    reference: ""
-    url: ""
+    reference:
+    url:
   - title: Catechism of the Catholic Church
     reference: §536
     url: https://www.vatican.va/archive/ENG0015/__P1L.HTM

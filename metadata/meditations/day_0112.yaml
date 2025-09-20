@@ -5,13 +5,12 @@ arc_id: arc_the_angelus
 arc_title: The Angelus
 arc_number: 14
 day_title: Pray for Us Sinners, Now and at the Hour of Our Death
-anchor_image:
-  The Blessed Virgin interceding before the throne of God, holding the
+anchor_image: The Blessed Virgin interceding before the throne of God, holding the
   world in her mantle.
 primary_reading:
   title: The Angelus
   reference:
-  url: /docs/readings/Prayers_to_the_Blessed_Virgin_Mary.pdf
+  url: /prayers/angelus
 secondary_reading:
   - title: Catechism of the Catholic Church
     reference: §§2677–2679
@@ -24,12 +23,10 @@ meditative_points:
     from it.
   - She is Advocate, not by power of her own, but because her Son wills her to intercede.
 ejaculatory_prayer: O Mary, my Mother and Advocate, be with me in the hour of my death.
-colloquy:
-  Blessed Mother, who held God in your arms and holds sinners in your heart,
+colloquy: Blessed Mother, who held God in your arms and holds sinners in your heart,
   pray for me today and at the moment of my dying. Do not leave me in that final hour.
   Let me breathe your name with my last breath.
-resolution:
-  I will entrust one soul to Mary's intercession today, especially someone
+resolution: I will entrust one soul to Mary's intercession today, especially someone
   near death or in grave need.
 tags:
   thematic:

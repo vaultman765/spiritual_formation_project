@@ -5,13 +5,12 @@ arc_id: arc_the_angelus
 arc_title: The Angelus
 arc_number: 14
 day_title: Behold the Handmaid of the Lord
-anchor_image:
-  Mary, head bowed in peace, hands crossed over her chest in humble assent
+anchor_image: Mary, head bowed in peace, hands crossed over her chest in humble assent
   before the angel.
 primary_reading:
   title: The Angelus
   reference:
-  url: /docs/readings/Prayers_to_the_Blessed_Virgin_Mary.pdf
+  url: /prayers/angelus
 secondary_reading:
   - title: Luke 1:38
     reference:
@@ -25,15 +24,12 @@ meditative_points:
   - "Mary identifies herself entirely as belonging to the Lord: no identity outside
     of service to Him."
   - The one chosen to bear the Son is the one who calls herself servant.
-ejaculatory_prayer:
-  O Mary, teach me to call myself the servant of the Lord in truth
+ejaculatory_prayer: O Mary, teach me to call myself the servant of the Lord in truth
   and joy.
-colloquy:
-  Mother of humility, you did not grasp or claim anything for yourself, but
+colloquy: Mother of humility, you did not grasp or claim anything for yourself, but
   declared yourself handmaid of the Lord. In your silence and peace, teach me to rejoice
   in the will of God above all else. Let me be content to be His servant.
-resolution:
-  "Today I will quietly repeat: “Behold the servant of the Lord” during
+resolution: "Today I will quietly repeat: “Behold the servant of the Lord” during
   moments of pride or resistance."
 tags:
   thematic:

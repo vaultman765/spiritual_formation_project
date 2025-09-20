@@ -5,17 +5,17 @@ arc_id: arc_sin_mercy_conversion
 arc_title: Sin, Mercy, and Conversion
 arc_number: 4
 day_title: The Joy of Forgiveness
-anchor_image: "**The Embrace of Peace** — You are held in the Father’s arms. There is no accusation, no shame, only stillness.
+anchor_image: "The Embrace of Peace — You are held in the Father’s arms. There is no accusation, no shame, only stillness.
   His breath is gentle against your shoulder. You do not speak. You simply rest, forgiven and beloved."
 primary_reading:
   title: Psalm 32:1–7
-  reference: ""
-  url: ""
+  reference:
+  url:
 secondary_reading:
   - title: Catechism of the Catholic Church
     reference: §§1468–1470
     url: https://www.vatican.va/archive/ENG0015/__P4F.HTM
-  - title: St. Faustina Kowalska, *Divine Mercy in My Soul*
+  - title: St. Faustina Kowalska, Divine Mercy in My Soul
     reference: Notebook VI, §1602
     url: /docs/readings/st-faustina-divine-mercy-in-my-soul.pdf
 meditative_points:

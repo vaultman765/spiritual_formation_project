@@ -5,12 +5,12 @@ arc_id: arc_passion_of_christ
 arc_title: The Passion of Christ
 arc_number: 5
 day_title: Christ Bound and Tried – The Silent Lamb
-anchor_image: "**Christ Bound and Tried** Judas kisses Him in the garden. Guards seize Him. He is dragged before the high priest.
+anchor_image: "Christ Bound and Tried - Judas kisses Him in the garden. Guards seize Him. He is dragged before the high priest.
   You see false witnesses, spittle, blows. Peter warms himself by the fire outside. A rooster crows. Jesus remains silent."
 primary_reading:
   title: Matthew 26:47–68
-  reference: ""
-  url: ""
+  reference:
+  url:
 secondary_reading:
   - title: St. Augustine on the Gospel of John
     reference: Tractate 112

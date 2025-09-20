@@ -5,19 +5,19 @@ arc_id: arc_sin_mercy_conversion
 arc_title: Sin, Mercy, and Conversion
 arc_number: 4
 day_title: Remaining Vigilant After Mercy
-anchor_image: "**The Path Beyond the Gate** — You walk through a field where the confessional once stood.
+anchor_image: "The Path Beyond the Gate — You walk through a field where the confessional once stood.
   The breeze is gentle, the sky clear. Yet behind you lies shadow, and ahead the road bends sharply.
   You know now what must be guarded."
 primary_reading:
   title: John 5:14
-  reference: ""
-  url: ""
+  reference:
+  url:
 secondary_reading:
   - title: Catechism of the Catholic Church
     reference: §§1496–1497
     url: https://www.vatican.va/archive/ENG0015/__P4I.HTM
-  - title: St. Teresa of Ávila, *The Interior Castle*, Castle I, Chapter 2
-    reference: §§18-22 (Manuscript pages 55-58)
+  - title: St. Teresa of Ávila, The Interior Castle
+    reference: Castle I, Chapter 2 §18-22 (Manuscript pages 55-58)
     url: /docs/readings/St_Teresa_d'Avila_The_Interior_Castle_of_The_Mansions.pdf
 meditative_points:
   - "'See, you are well again. Sin no more, that nothing worse may happen to you.' —

@@ -3,10 +3,9 @@ master_day_number: 85
 arc_day_number: 1
 arc_id: arc_rosary_sorrowful_mysteries
 arc_number: 11
-arc_title: 'The Rosary - Sorrowful Mysteries'
+arc_title: "The Rosary - Sorrowful Mysteries"
 day_title: The Agony in the Garden
-anchor_image:
-  Christ in agony beneath the olive trees, sweating blood under a dark
+anchor_image: Christ in agony beneath the olive trees, sweating blood under a dark
   sky, angel beside Him
 primary_reading:
   title: Luke 22:39-46
@@ -16,11 +15,11 @@ secondary_reading:
   - title: Catechism of the Catholic Church
     reference: §612
     url: https://www.vatican.va/archive/ENG0015/__P1O.HTM
-  - title: St. Pope John Paul II, *Salvifici Doloris*
+  - title: St. Pope John Paul II, Salvifici Doloris
     reference: Introduction
     url: /docs/readings/St_Pope_JP2_Salvifici_Doloris.pdf
-  - title: St. Alphonsus Liguori, *The Passion and Death of Jesus Christ*
-    reference: Simple Exposition of the Circumstances of the Passion - Ch. 5 (pg 174-177)
+  - title: St. Alphonsus Liguori, The Passion and Death of Jesus Christ
+    reference: Ch. 5 (pg 174-177)
     url: /docs/readings/St_Alphonsus_Maria_de_Liguori_The_Passion_and_the_Death_of_Jesus_Christ.pdf
 meditative_points:
   - He fell on His knees beneath the olive trees and began to sweat blood.
@@ -28,8 +27,7 @@ meditative_points:
     be done.'"
   - An angel appeared to Him and strengthened Him.
 ejaculatory_prayer: O Jesus, abandoned and sorrowful, let me watch with You one hour.
-colloquy:
-  "Remain before Christ in the Garden. Speak to Him in His sorrow. Offer your
+colloquy: "Remain before Christ in the Garden. Speak to Him in His sorrow. Offer your
   desire to console Him. Ask for the grace to submit your will entirely to the Father's."
 resolution: "Today, I will offer one act of interior submission to God's will — even if it is hard or painful."
 tags:
