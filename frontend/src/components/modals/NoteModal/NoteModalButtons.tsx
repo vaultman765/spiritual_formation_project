@@ -25,7 +25,7 @@ export function NoteActionButton({
   setNoteId,
   onUpdate,
   onEdit,
-}: NoteActionButtonProps) {
+}: Readonly<NoteActionButtonProps>) {
   const { closeModal } = useModal(modalId);
 
   const handleAction = async () => {
@@ -39,9 +39,7 @@ export function NoteActionButton({
         setNoteId?.(saved.id);
         toast.success("Note saved successfully!");
       } else if (actionType === "delete") {
-        const confirmUpdate = window.confirm(
-          "This will delete your note.\n\nDo you want to continue?"
-        );
+        const confirmUpdate = window.confirm("This will delete your note.\n\nDo you want to continue?");
         if (confirmUpdate) {
           await deleteNote(master_day_number);
           toast.success("Note deleted successfully!");
@@ -53,32 +51,30 @@ export function NoteActionButton({
       }
       onUpdate();
     } catch (error) {
+      console.error('Note operation failed:', actionType, error);
       toast.error(`Failed to ${actionType} note.`);
     } finally {
       closeModal();
     }
   };
 
-  const buttonText =
-    actionType === "save"
-      ? "Save Note"
-      : actionType === "delete"
-      ? "Delete Note"
-      : "Edit Note";
-  const buttonVariant =
-    actionType === "save" || actionType === "edit"
-      ? "primary"
-      : actionType === "delete"
-      ? "danger"
-      : "secondary";
+  let buttonText = "";
+  if (actionType === "save") {
+    buttonText = "Save Note";
+  } else if (actionType === "delete") {
+    buttonText = "Delete Note";
+  } else {
+    buttonText = "Edit Note";
+  }
 
-  return (
-    <modal.ModalButton
-      text={buttonText}
-      onClick={handleAction}
-      variant={buttonVariant}
-    />
-  );
+  let buttonVariant: "primary" | "secondary" | "danger" = "secondary";
+  if (actionType === "save" || actionType === "edit") {
+    buttonVariant = "primary";
+  } else if (actionType === "delete") {
+    buttonVariant = "danger";
+  }
+
+  return <modal.ModalButton text={buttonText} onClick={handleAction} variant={buttonVariant} />;
 }
 
 export function EditNoteModalButtons({
@@ -89,7 +85,7 @@ export function EditNoteModalButtons({
   setNoteId,
   onUpdate,
   onClose,
-}: {
+}: Readonly<{
   id?: number;
   modalId: string;
   master_day_number: number;
@@ -97,7 +93,7 @@ export function EditNoteModalButtons({
   setNoteId: (id: number | null) => void;
   onUpdate: () => void;
   onClose?: () => void;
-}) {
+}>) {
   return (
     <div className="mt-6 flex justify-between items-center">
       <CancelButton
@@ -136,16 +132,15 @@ export function ViewNoteModalButtons({
   onUpdate,
   onEdit,
   onClose,
-}: {
+}: Readonly<{
   modalId: string;
   note: MeditationNote;
   master_day_number: number;
-  setNoteContent: (content: string) => void;
   setNoteId: (id: number | null) => void;
   onUpdate: () => void;
   onEdit: () => void;
   onClose?: () => void;
-}) {
+}>) {
   return (
     <div className="mt-6 flex justify-between items-center">
       <CancelButton

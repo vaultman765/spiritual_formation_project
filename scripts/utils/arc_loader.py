@@ -20,7 +20,7 @@ def load_arc_from_metadata(arc_id: str, arc_model) -> object:
         arc_data["master_day_start"] = range_data.get("start")
         arc_data["master_day_end"] = range_data.get("end")
 
-    arc_obj, created = arc_model.objects.update_or_create(
+    arc_obj, _ = arc_model.objects.update_or_create(
         arc_id=arc_id,
         defaults={
             "arc_title": arc_data["arc_title"],

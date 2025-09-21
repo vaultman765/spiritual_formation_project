@@ -3,8 +3,8 @@ import { formatDate } from "@/utils/dates";
 import type { MeditationNote } from "@/utils/types";
 
 interface NoteCardProps {
-  note: MeditationNote;
-  onClick: () => void;
+  readonly note: MeditationNote;
+  readonly onClick: () => void;
 }
 
 export default function NoteCard({ note, onClick }: NoteCardProps) {

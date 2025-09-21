@@ -165,7 +165,7 @@ class ArcTagGenerator:
                     "start": first_day.get("master_day_number"),
                     "end": arc_days[-1].get("master_day_number"),
                 },
-                "tags": {k: sorted(list(tag_dict[k])) for k in TAG_CATEGORIES},
+                "tags": {k: sorted(tag_dict[k]) for k in TAG_CATEGORIES},
             }
             write_yaml(tag_file, tag_yaml)
 

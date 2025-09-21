@@ -23,6 +23,7 @@ export default function LoginPage() {
       await login(form.username, form.password);
       navigate("/my-journey");
     } catch (err: any) {
+      console.log(err);
       setError("Invalid credentials. Please try again.");
     }
   };

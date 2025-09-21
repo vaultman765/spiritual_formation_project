@@ -2,8 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 import axios from "@/utils/axios";
 import { useAuth } from "@/context/authContext";
 import { getCSRFToken } from "@/utils/auth/tokens";
-import type { Journey } from "@/utils/types";
-import type { JourneyContextType } from "@/utils/types";
+import type { Journey, JourneyContextType } from "@/utils/types";
 const JourneyContext = createContext<JourneyContextType | undefined>(undefined);
 
 export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -70,28 +69,22 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
   };
 
   const fetchJourneys = async (): Promise<void> => {
-    return new Promise<void>(async (resolve) => {
-      setJourneyLoading(true);
-      try {
-        const res = await axios.get<Journey[]>(`${API_URL}/api/user/journeys/`);
-        const allJourneys = res.data;
-        setJourneys(allJourneys);
+    setJourneyLoading(true);
+    try {
+      const res = await axios.get<Journey[]>(`${API_URL}/api/user/journeys/`);
+      const allJourneys = res.data;
+      setJourneys(allJourneys);
 
-        const active = allJourneys.find((j) => j.is_active);
-        const past = allJourneys.filter((j) => !j.is_active);
-        setActiveJourney(null); // Force re-render by resetting first
-        setActiveJourney(active || null); // Then set the actual active journey
-        setPastJourneys(past);
-
-        resolve();
-      } catch (err) {
-        console.error("Failed to fetch user journeys:", err);
-        resolve();
-      } finally {
-        setJourneyLoading(false);
-        resolve();
-      }
-    });
+      const active = allJourneys.find((j) => j.is_active);
+      const past = allJourneys.filter((j) => !j.is_active);
+      setActiveJourney(null); // Force re-render by resetting first
+      setActiveJourney(active || null); // Then set the actual active journey
+      setPastJourneys(past);
+    } catch (err) {
+      console.error("Failed to fetch user journeys:", err);
+    } finally {
+      setJourneyLoading(false);
+    }
   };
 
   const createJourney = async (data: { title: string; arc_progress: Journey["arc_progress"] }) => {
@@ -222,30 +215,46 @@ export const JourneyProvider: React.FC<{ children: React.ReactNode }> = ({ child
     if (user) fetchPastJourneys();
   }, [user]);
 
-  return (
-    <JourneyContext.Provider
-      value={{
-        journeys,
-        activeJourney,
-        pastJourneys,
-        journeyLoading,
-        archivedJourneys,
-        refreshJourneys: fetchJourneys,
-        fetchPastJourneys,
-        createJourney,
-        restoreJourney,
-        restartJourney,
-        completeJourney,
-        skipArc,
-        skipDay,
-        updateJourney,
-        markDayComplete,
-        deleteJourney,
-      }}
-    >
-      {children}
-    </JourneyContext.Provider>
+  const contextValue = React.useMemo(
+    () => ({
+      journeys,
+      activeJourney,
+      pastJourneys,
+      journeyLoading,
+      archivedJourneys,
+      refreshJourneys: fetchJourneys,
+      fetchPastJourneys,
+      createJourney,
+      restoreJourney,
+      restartJourney,
+      completeJourney,
+      skipArc,
+      skipDay,
+      updateJourney,
+      markDayComplete,
+      deleteJourney,
+    }),
+    [
+      journeys,
+      activeJourney,
+      pastJourneys,
+      journeyLoading,
+      archivedJourneys,
+      fetchJourneys,
+      fetchPastJourneys,
+      createJourney,
+      restoreJourney,
+      restartJourney,
+      completeJourney,
+      skipArc,
+      skipDay,
+      updateJourney,
+      markDayComplete,
+      deleteJourney,
+    ]
   );
+
+  return <JourneyContext.Provider value={contextValue}>{children}</JourneyContext.Provider>;
 };
 
 export const useJourney = () => {

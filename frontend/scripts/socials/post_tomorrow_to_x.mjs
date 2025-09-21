@@ -16,7 +16,8 @@ let parsedUserApiUrl;
 try {
   parsedUserApiUrl = new URL(userApiUrl);
 } catch (e) {
-  console.error("[autopost] Invalid API_URL format:", userApiUrl);
+  console.error(`[autopost] Invalid API_URL format: ${userApiUrl}\nError: ${e.message}`);
+  // Exit gracefully with a non-zero status code
   process.exit(1);
 }
 if (!ALLOWED_API_ORIGINS.includes(parsedUserApiUrl.origin)) {
@@ -100,12 +101,12 @@ async function run() {
 
   // Your API shape (from screenshot): arc_id, arc_day_number, arc_title, day_title, primary_reading (object or array)
   const url = buildDayUrl(data.arc_id, data.arc_day_number);
-  const primaryTitle =
-    Array.isArray(data.primary_reading) && data.primary_reading.length
-      ? data.primary_reading[0]?.title || ""
-      : typeof data.primary_reading === "object"
-      ? data.primary_reading?.title || ""
-      : "";
+  let primaryTitle = "";
+  if (Array.isArray(data.primary_reading) && data.primary_reading.length) {
+    primaryTitle = data.primary_reading[0]?.title || "";
+  } else if (typeof data.primary_reading === "object" && data.primary_reading !== null) {
+    primaryTitle = data.primary_reading?.title || "";
+  }
 
   const status = composeStatus({
     day_title: data.day_title,

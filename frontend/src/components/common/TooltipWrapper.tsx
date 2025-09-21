@@ -6,10 +6,7 @@ interface TooltipWrapperProps {
   children: ReactNode;
 }
 
-export default function TooltipWrapper({
-  content,
-  children,
-}: TooltipWrapperProps) {
+export default function TooltipWrapper({ content, children }: Readonly<TooltipWrapperProps>) {
   const [visible, setVisible] = useState(false);
   const [position, setPosition] = useState("bottom");
   const tooltipRef = useRef<HTMLDivElement>(null);
@@ -47,6 +44,18 @@ export default function TooltipWrapper({
     };
   }, [visible]);
 
+  // Extract tooltip position classes into a variable
+  let positionClass = "";
+  if (position === "top") {
+    positionClass = "bottom-full mb-2";
+  } else if (position === "bottom") {
+    positionClass = "top-full mt-2";
+  } else if (position === "left") {
+    positionClass = "right-full mr-2";
+  } else {
+    positionClass = "left-full ml-2";
+  }
+
   return (
     <div
       ref={wrapperRef}
@@ -58,15 +67,7 @@ export default function TooltipWrapper({
       {visible && (
         <div
           ref={tooltipRef}
-          className={`absolute z-[99999] overflow-visible ${
-            position === "top"
-              ? "bottom-full mb-2"
-              : position === "bottom"
-              ? "top-full mt-2"
-              : position === "left"
-              ? "right-full mr-2"
-              : "left-full ml-2"
-          } left-1/2 transform -translate-x-1/2 bg-black text-white text-sm p-2 rounded shadow-lg`}
+          className={`absolute z-[99999] overflow-visible ${positionClass} left-1/2 transform -translate-x-1/2 bg-black text-white text-sm p-2 rounded shadow-lg`}
         >
           {content}
         </div>

@@ -33,10 +33,9 @@ export async function saveOrUpdateJourney({
     }
   } else {
     // Create new journey
-    if (createJourney) {
-      await createJourney({ title, arc_progress: arcProgress });
-    } else {
+    if (!createJourney) {
       throw new Error("createJourney function is not provided.");
     }
+    await createJourney({ title, arc_progress: arcProgress });
   }
 }

@@ -5,7 +5,6 @@ import type { ArcData } from "@/utils/types";
 
 interface ArcCardProps {
   arc: ArcData;
-  onClick?: () => void;
 }
 
 interface ArcTagProps {
@@ -22,7 +21,7 @@ interface ArcProgressSingleItem {
   status: "completed" | "in_progress" | "upcoming" | "skipped";
 }
 
-export function ArcCardTags({ cardTags, divClassName = "tag-div-arc-card", spanClassName = "tag-pill-arc-card" }: ArcTagProps) {
+export function ArcCardTags({ cardTags, divClassName = "tag-div-arc-card", spanClassName = "tag-pill-arc-card" }: Readonly<ArcTagProps>) {
   return (
     <div className={divClassName}>
       {cardTags.map((tag) => (
@@ -34,7 +33,7 @@ export function ArcCardTags({ cardTags, divClassName = "tag-div-arc-card", spanC
   );
 }
 
-export function DetailArcCard({ arc }: ArcCardProps) {
+export function DetailArcCard({ arc }: Readonly<ArcCardProps>) {
   return (
     <CustomLinkCard key={arc.arc_id} link={`/arcs/${arc.arc_id}`}>
       <ArcJsonLd arc={arc} />
@@ -51,28 +50,7 @@ export function DetailArcCard({ arc }: ArcCardProps) {
   );
 }
 
-export function CustomJourneyArcCard({ arc, onClick }: ArcCardProps) {
-  const { arc_title, day_count, card_tags } = arc;
-
-  return (
-    <div
-      onClick={onClick}
-      className="cursor-pointer rounded-lg bg-purple-800 hover:bg-purple-700 border border-yellow-400/70 p-4 shadow transition-colors transition-transform duration-150 hover:scale-[1.02]"
-    >
-      <h3 className="text-white font-display text-lg">{arc_title}</h3>
-      <p className="text-sm text-violet-300 italic mb-2">{day_count}-day arc</p>
-      <div className="flex flex-wrap gap-2">
-        {card_tags?.map((tag) => (
-          <span key={tag} className="bg-[var(--brand-primary-dark)] text-[var(--bg-dark)] px-2 py-1 text-xs rounded-full">
-            {tag}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-export function JourneyArcCard({ arc_id, arc_title, day_count, current_day, status }: ArcProgressSingleItem) {
+export function JourneyArcCard({ arc_id, arc_title, day_count, current_day, status }: Readonly<ArcProgressSingleItem>) {
   let cardStyle = "";
   let statusLabel = "";
 

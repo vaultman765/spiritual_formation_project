@@ -12,7 +12,7 @@ interface OnClickCardProps {
   className?: string; // Optional className for the Link
 }
 
-export function CustomLinkCard({ link, children, className = "card-link" }: LinkCardProps) {
+export function CustomLinkCard({ link, children, className = "card-link" }: Readonly<LinkCardProps>) {
   return (
     <Link to={link} className={className}>
       {children}
@@ -20,7 +20,7 @@ export function CustomLinkCard({ link, children, className = "card-link" }: Link
   );
 }
 
-export function CustomOnClickCard({ onClick, children, className = "card-onclick" }: OnClickCardProps) {
+export function CustomOnClickCard({ onClick, children, className = "card-onclick" }: Readonly<OnClickCardProps>) {
   return (
     <div onClick={onClick} className={className}>
       {children}
@@ -33,12 +33,12 @@ export function CardImage({
   altText,
   divClassName = "card-image-container",
   imgClassName = "card-image",
-}: {
+}: Readonly<{
   imageSrc: string;
   altText?: string;
   divClassName?: string;
   imgClassName?: string;
-}) {
+}>) {
   // remove leading `/images/` and the extension
   const relativePath = imageSrc
     .replace(/^\/?images\//, "") // strip "images/"
@@ -89,6 +89,6 @@ export function CardImage({
   );
 }
 
-export function CardTitle({ title, className = "card-title" }: { title: string; className?: string }) {
+export function CardTitle({ title, className = "card-title" }: Readonly<{ title: string; className?: string }>) {
   return <h2 className={className}>{title}</h2>;
 }

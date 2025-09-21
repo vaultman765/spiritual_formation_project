@@ -1,17 +1,14 @@
 // /src/components/ui/AccordionSection.tsx
 import React from "react";
 
-export default function AccordionSection({
-  id,
-  title,
-  children,
-  defaultOpen = false,
-}: {
-  id?: string;
-  title: string;
-  children: React.ReactNode;
-  defaultOpen?: boolean;
-}) {
+interface AccordionSectionProps {
+  readonly id?: string;
+  readonly title: string;
+  readonly children: React.ReactNode;
+  readonly defaultOpen?: boolean;
+}
+
+export default function AccordionSection({ id, title, children, defaultOpen = false }: AccordionSectionProps) {
   return (
     <details
       id={id}

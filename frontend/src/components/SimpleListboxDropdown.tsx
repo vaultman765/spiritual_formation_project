@@ -1,28 +1,23 @@
-import {
-  Listbox,
-  ListboxButton,
-  ListboxOptions,
-  ListboxOption
-} from '@headlessui/react';
-import { CheckIcon } from '@heroicons/react/20/solid';
+import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from "@headlessui/react";
+import { CheckIcon } from "@heroicons/react/20/solid";
 
 interface SimpleListboxDropdownProps {
-  options: string[];
-  selected: string;
-  onChange: (val: string) => void;
-  placeholder?: string;
-  labelFormatter?: (val: string) => string;
+  readonly options: readonly string[];
+  readonly selected: string;
+  readonly onChange: (val: string) => void;
+  readonly placeholder?: string;
+  readonly labelFormatter?: (val: string) => string;
 }
 
 export default function SimpleListboxDropdown({
   options = [],
   selected,
   onChange,
-  placeholder = 'Select an option',
+  placeholder = "Select an option",
   labelFormatter = (val) => val,
 }: SimpleListboxDropdownProps) {
   if (!Array.isArray(options)) {
-    console.error('Dropdown options must be an array. Received:', options);
+    console.error("Dropdown options must be an array. Received:", options);
     return null;
   }
 
@@ -34,14 +29,12 @@ export default function SimpleListboxDropdown({
         </ListboxButton>
 
         <ListboxOptions className="absolute mt-1 w-full rounded bg-white shadow-lg ring-1 ring-black/5 z-10 max-h-60 overflow-auto">
-          {options.map((opt, idx) => (
+          {options.map((opt) => (
             <ListboxOption
-              key={idx}
+              key={opt}
               value={opt}
               className={({ selected }) =>
-                `cursor-pointer select-none px-4 py-2 text-sm text-black ${
-                  selected ? 'bg-yellow-100 font-semibold' : ''
-                }`
+                `cursor-pointer select-none px-4 py-2 text-sm text-black ${selected ? "bg-yellow-100 font-semibold" : ""}`
               }
             >
               {({ selected }) => (

@@ -2,12 +2,12 @@ import { CustomLinkCard, CardImage, CardTitle } from "@/components/cards/BaseCar
 import MeditationJsonLd from "@/components/seo/MeditationJsonLd";
 
 interface MeditationCardProps {
-  dayTitle: string;
-  subtitle: string;
-  imageSrc: string;
-  altText: string;
-  link: string;
-  tag: string;
+  readonly dayTitle: string;
+  readonly subtitle: string;
+  readonly imageSrc: string;
+  readonly altText: string;
+  readonly link: string;
+  readonly tag: string;
 }
 
 export default function MeditationCard({ dayTitle, subtitle, imageSrc, altText, link, tag }: MeditationCardProps) {

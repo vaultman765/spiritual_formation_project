@@ -12,13 +12,13 @@ function normalize(block?: PrayerBlock): string[][] {
   }
   if (Array.isArray(block) && block.every((x) => typeof x === "string")) {
     const out: string[][] = [[]];
-    for (const line of block as string[]) {
+    for (const line of block) {
       if (line.trim() === "") out.push([]);
       else out[out.length - 1].push(line);
     }
     return out.filter((p) => p.length);
   }
-  return block as string[][];
+  return block;
 }
 
 function flattenForRows(paras: string[][]): string[] {
@@ -30,19 +30,23 @@ function flattenForRows(paras: string[][]): string[] {
   return rows;
 }
 
-function Paragraphs({ paras }: { paras: string[][] }) {
+function Paragraphs({ paras }: { readonly paras: readonly string[][] }) {
   return (
     <div className="space-y-3">
-      {paras.map((lines, i) => (
-        <p key={i} className="text-[var(--text-main)] leading-relaxed">
-          {lines.map((ln, j) => (
-            <span key={j}>
-              {ln}
-              {j < lines.length - 1 ? <br /> : null}
-            </span>
-          ))}
-        </p>
-      ))}
+      {paras.map((lines, i) => {
+        // Create a unique key by joining the lines with a separator
+        const paraKey = lines.join("||") || `empty-${i}`;
+        return (
+          <p key={paraKey} className="text-[var(--text-main)] leading-relaxed">
+            {lines.map((ln, j) => (
+              <span key={`${ln}-${j}`}>
+                {ln}
+                {j < lines.length - 1 ? <br /> : null}
+              </span>
+            ))}
+          </p>
+        );
+      })}
     </div>
   );
 }
@@ -51,7 +55,7 @@ function LitanyTable({
   litany,
   lang = "English",
   className = "",
-}: {
+}: Readonly<{
   litany: {
     defaultResponse?: string;
     rows: Array<{
@@ -66,16 +70,24 @@ function LitanyTable({
   };
   lang?: string;
   className?: string;
-}) {
+}>) {
   const br = (text: string) =>
-    text.split(/\n+/).map((ln, i, arr) => (
-      <span key={i}>
-        {ln}
-        {i < arr.length - 1 ? <br /> : null}
-      </span>
-    ));
+    text.split(/\n+/).map((ln, i, arr) => {
+      // Use a unique key based on the line content and position
+      const key = `${ln}-${i}`;
+      return (
+        <span key={key}>
+          {ln}
+          {i < arr.length - 1 ? <br /> : null}
+        </span>
+      );
+    });
 
-  const spaceClass = (size?: "sm" | "md" | "lg") => (size === "lg" ? "h-8" : size === "sm" ? "h-3" : "h-5");
+  const spaceClass = (size?: "sm" | "md" | "lg") => {
+    if (size === "lg") return "h-8";
+    if (size === "sm") return "h-3";
+    return "h-5";
+  };
 
   // DESKTOP (two columns)
   return (
@@ -96,6 +108,12 @@ function LitanyTable({
             </thead>
             <tbody className="align-top">
               {litany.rows.map((row, i) => {
+                // Generate a stable key based on row content
+                const rowKey =
+                  [row.call, row.response, row.solo, row.rubric, row.heading, row.spacer ? "spacer" : "", row.size]
+                    .filter(Boolean)
+                    .join("|") || `row-${i}`;
+
                 // Spacer row (explicit or legacy empty pair)
                 const isLegacyEmpty =
                   (row.call ?? "").trim() === "" &&
@@ -106,8 +124,8 @@ function LitanyTable({
                   !row.spacer;
                 if (row.spacer || isLegacyEmpty) {
                   return (
-                    <tr key={i}>
-                      <td colSpan={2} className={spaceClass(row.size)} aria-hidden="true" />
+                    <tr key={rowKey}>
+                      <td colSpan={2} className={spaceClass(row.size)} />
                     </tr>
                   );
                 }
@@ -115,13 +133,14 @@ function LitanyTable({
                 // Full-width kinds
                 if (row.solo || row.rubric || row.heading) {
                   const text = row.solo ?? row.rubric ?? row.heading ?? "";
-                  const cls = row.rubric
-                    ? "italic text-[var(--text-muted)]"
-                    : row.heading
-                    ? "text-xs uppercase tracking-widest text-[var(--text-subtle-heading)]"
-                    : "text-[var(--text-main)]";
+                  let cls = "text-[var(--text-main)]";
+                  if (row.rubric) {
+                    cls = "italic text-[var(--text-muted)]";
+                  } else if (row.heading) {
+                    cls = "text-xs uppercase tracking-widest text-[var(--text-subtle-heading)]";
+                  }
                   return (
-                    <tr key={i}>
+                    <tr key={rowKey}>
                       <td colSpan={2} className={`py-2 leading-7 ${cls}`}>
                         {br(text)}
                       </td>
@@ -133,7 +152,7 @@ function LitanyTable({
                 const call = row.call ?? "";
                 const resp = (row.response ?? litany.defaultResponse ?? "").trim();
                 return (
-                  <tr key={i}>
+                  <tr key={rowKey}>
                     <td className="pr-6 py-1 leading-7">{br(call)}</td>
                     <td className="pl-6 py-1 leading-7">{br(resp)}</td>
                   </tr>
@@ -150,20 +169,29 @@ function LitanyTable({
           // Spacer (explicit or legacy empty)
           const isLegacyEmpty =
             (row.call ?? "").trim() === "" && (row.response ?? "").trim() === "" && !row.solo && !row.rubric && !row.heading && !row.spacer;
+          // Generate a stable key based on row content
+          const rowKey =
+            [row.call, row.response, row.solo, row.rubric, row.heading, row.spacer ? "spacer" : "", row.size].filter(Boolean).join("|") ||
+            `row-${i}`;
           if (row.spacer || isLegacyEmpty) {
-            return <div key={i} className={spaceClass(row.size)} aria-hidden="true" />;
+            return <div key={rowKey} className={spaceClass(row.size)} aria-hidden="true" />;
           }
 
           // Full-width blocks
           if (row.solo || row.rubric || row.heading) {
             const text = row.solo ?? row.rubric ?? row.heading ?? "";
-            const cls = row.rubric
-              ? "italic text-[var(--text-muted)]"
-              : row.heading
-              ? "text-xs uppercase tracking-widest text-[var(--text-subtle-heading)]"
-              : "text-[var(--text-main)]";
+            let cls = "text-[var(--text-main)]";
+            if (row.rubric) {
+              cls = "italic text-[var(--text-muted)]";
+            } else if (row.heading) {
+              cls = "text-xs uppercase tracking-widest text-[var(--text-subtle-heading)]";
+            }
+            // Generate a stable key based on row content
+            const rowKey =
+              [row.call, row.response, row.solo, row.rubric, row.heading, row.spacer ? "spacer" : "", row.size].filter(Boolean).join("|") ||
+              `row-${i}`;
             return (
-              <div key={i} className={`rounded-xl border border-white/10 bg-white/5 p-3 ${cls}`}>
+              <div key={rowKey} className={`rounded-xl border border-white/10 bg-white/5 p-3 ${cls}`}>
                 {br(text)}
               </div>
             );
@@ -172,8 +200,12 @@ function LitanyTable({
           // Pair card
           const call = row.call ?? "";
           const resp = (row.response ?? litany.defaultResponse ?? "").trim();
+          // Generate a stable key based on row content
+          const pairKey =
+            [row.call, row.response, row.solo, row.rubric, row.heading, row.spacer ? "spacer" : "", row.size].filter(Boolean).join("|") ||
+            `row-${i}`;
           return (
-            <div key={i} className="rounded-xl border border-white/10 bg-white/5 p-3 text-[var(--text-main)]">
+            <div key={pairKey} className="rounded-xl border border-white/10 bg-white/5 p-3 text-[var(--text-main)]">
               <div className="text-xs uppercase tracking-widest text-[var(--text-subtle-heading)]">Leader</div>
               <div className="leading-7">{br(call)}</div>
               <div className="mt-2 text-xs uppercase tracking-widest text-[var(--text-subtle-heading)]">Response</div>
@@ -267,66 +299,78 @@ export default function PrayerPage() {
         </header>
 
         {/* BILINGUAL (EN + LATIN) */}
-        {isLitany ? (
-          <>
-            <LitanyTable litany={prayer.litany!} />
-            {prayer.litanyLatin && <LitanyTable className="mt-8" litany={prayer.litanyLatin} lang="Latin" />}
-          </>
-        ) : hasLatin ? (
-          <>
-            {/* DESKTOP: paired, never-wrap, with faint center divider */}
-            <section className="hidden md:block">
-              <div className="relative mx-auto max-w-5xl overflow-x-auto rounded-2xl border border-white/10 bg-white/5 p-3 shadow-sm">
-                {/* center divider for visual balance */}
-                <div aria-hidden className="pointer-events-none absolute inset-y-1 left-1/2 w-px bg-white/10" />
+        {(() => {
+          let bilingualContent;
+          if (isLitany) {
+            bilingualContent = (
+              <>
+                <LitanyTable litany={prayer.litany!} />
+                {prayer.litanyLatin && <LitanyTable className="mt-8" litany={prayer.litanyLatin} lang="Latin" />}
+              </>
+            );
+          } else if (hasLatin) {
+            bilingualContent = (
+              <>
+                {/* DESKTOP: paired, never-wrap, with faint center divider */}
+                <section className="hidden md:block">
+                  <div className="relative mx-auto max-w-5xl overflow-x-auto rounded-2xl border border-white/10 bg-white/5 p-3 shadow-sm">
+                    {/* center divider for visual balance */}
+                    <div aria-hidden className="pointer-events-none absolute inset-y-1 left-1/2 w-px bg-white/10" />
 
-                <table className="table-fixed w-full text-[var(--text-main)]" aria-label={`${prayer.title} (English and Latin)`}>
-                  <colgroup>
-                    <col className="w-1/2" />
-                    <col className="w-1/2" />
-                  </colgroup>
-                  <thead>
-                    <tr className="text-[var(--text-subtle-heading)] text-xs uppercase tracking-widest">
-                      <th className="text-left py-2 pr-6">English</th>
-                      <th className="text-left py-2 pl-6">Latin</th>
-                    </tr>
-                  </thead>
-                  <tbody className="align-top">
-                    {pairedRows.map(([en, la], i) => {
-                      const isBlank = en.trim() === "" && la.trim() === "";
-                      return (
-                        <tr key={i} className={isBlank ? "h-3" : ""}>
-                          {/* nowrap keeps lines paired; overflow handled by the container */}
-                          <td className="pr-6 align-top md:whitespace-nowrap leading-7 md:text-[clamp(14px,0.95vw,16px)]">{en}</td>
-                          <td className="pl-6 align-top md:whitespace-nowrap leading-7 md:text-[clamp(14px,0.95vw,16px)]">{la}</td>
+                    <table className="table-fixed w-full text-[var(--text-main)]" aria-label={`${prayer.title} (English and Latin)`}>
+                      <colgroup>
+                        <col className="w-1/2" />
+                        <col className="w-1/2" />
+                      </colgroup>
+                      <thead>
+                        <tr className="text-[var(--text-subtle-heading)] text-xs uppercase tracking-widest">
+                          <th className="text-left py-2 pr-6">English</th>
+                          <th className="text-left py-2 pl-6">Latin</th>
                         </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
-            </section>
+                      </thead>
+                      <tbody className="align-top">
+                        {pairedRows.map(([en, la]) => {
+                          const isBlank = en.trim() === "" && la.trim() === "";
+                          // Generate a stable key based on content
+                          const rowKey = `${en}||${la}`;
+                          return (
+                            <tr key={rowKey} className={isBlank ? "h-3" : ""}>
+                              {/* nowrap keeps lines paired; overflow handled by the container */}
+                              <td className="pr-6 align-top md:whitespace-nowrap leading-7 md:text-[clamp(14px,0.95vw,16px)]">{en}</td>
+                              <td className="pl-6 align-top md:whitespace-nowrap leading-7 md:text-[clamp(14px,0.95vw,16px)]">{la}</td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
 
-            {/* MOBILE + PRINT: stacked blocks (readable & printer-friendly) */}
-            <section className="grid gap-8 md:hidden print:block">
-              <div>
-                <h2 className="mb-2 text-sm uppercase tracking-widest text-[var(--text-subtle-heading)]">English</h2>
-                <Paragraphs paras={parasEn} />
-              </div>
-              <div>
-                <h2 className="mb-2 text-sm uppercase tracking-widest text-[var(--text-subtle-heading)]">Latin</h2>
-                <Paragraphs paras={parasLa} />
-              </div>
-            </section>
-          </>
-        ) : (
-          // SINGLE LANGUAGE: centered column with comfortable measure
-          <section className="mx-auto max-w-prose">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-sm">
-              <Paragraphs paras={parasEn} />
-            </div>
-          </section>
-        )}
+                {/* MOBILE + PRINT: stacked blocks (readable & printer-friendly) */}
+                <section className="grid gap-8 md:hidden print:block">
+                  <div>
+                    <h2 className="mb-2 text-sm uppercase tracking-widest text-[var(--text-subtle-heading)]">English</h2>
+                    <Paragraphs paras={parasEn} />
+                  </div>
+                  <div>
+                    <h2 className="mb-2 text-sm uppercase tracking-widest text-[var(--text-subtle-heading)]">Latin</h2>
+                    <Paragraphs paras={parasLa} />
+                  </div>
+                </section>
+              </>
+            );
+          } else {
+            // SINGLE LANGUAGE: centered column with comfortable measure
+            bilingualContent = (
+              <section className="mx-auto max-w-prose">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-sm">
+                  <Paragraphs paras={parasEn} />
+                </div>
+              </section>
+            );
+          }
+          return bilingualContent;
+        })()}
 
         {/* Collapsible notes/history */}
         {prayer.about && (
@@ -352,8 +396,8 @@ export default function PrayerPage() {
 
         {prayer.sourceUrl && (
           <p className="mt-6 text-center text-xs text-[var(--text-muted)]">
-            Source / reference:&nbsp;
-            <a className="underline" href={prayer.sourceUrl} target="_blank" rel="noopener noreferrer">
+            Source / reference:{" "}
+            <a className="underline ml-1" href={prayer.sourceUrl} target="_blank" rel="noopener noreferrer">
               {prayer.sourceUrl}
             </a>
           </p>

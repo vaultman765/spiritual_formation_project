@@ -2,17 +2,17 @@
 import { Helmet } from "react-helmet-async";
 
 type SeoMetaProps = {
-  title: string;
-  description: string;
-  canonicalUrl: string;
-  imageUrl?: string;
-  type?: "website" | "article" | "book";
-  locale?: string;
-  siteName?: string;
-  twitterHandle?: string;
-  jsonLd?: object;
-  breadcrumbsJsonLd?: object;
-  keywords?: string;
+  readonly title: string;
+  readonly description: string;
+  readonly canonicalUrl: string;
+  readonly imageUrl?: string;
+  readonly type?: "website" | "article" | "book";
+  readonly locale?: string;
+  readonly siteName?: string;
+  readonly twitterHandle?: string;
+  readonly jsonLd?: object;
+  readonly breadcrumbsJsonLd?: object;
+  readonly keywords?: string;
 };
 
 export default function SeoMeta({

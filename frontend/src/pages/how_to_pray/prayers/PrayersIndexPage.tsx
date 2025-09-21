@@ -26,9 +26,11 @@ const breadcrumbsJsonLd = {
   ],
 };
 
+type PrayerCategory = (typeof PRAYER_CATEGORIES)[number] | "All";
+
 export default function PrayersIndexPage() {
   const [q, setQ] = useState("");
-  const [cat, setCat] = useState<string | "All">("All");
+  const [cat, setCat] = useState<PrayerCategory>("All");
 
   const results = useMemo(() => {
     const term = q.trim().toLowerCase();
@@ -71,7 +73,9 @@ export default function PrayersIndexPage() {
           />
           <div className="flex flex-wrap gap-2">
             <button
-              className={`rounded-full px-3 py-1 text-sm border ${cat === "All" ? "bg-white/10" : "border-white/15 bg-white/0"}`}
+              className={`rounded-full px-3 py-1 text-sm text-[var(--text-muted)]/90 border ${
+                cat === "All" ? "bg-white/10" : "border-white/15 bg-white/0"
+              }`}
               onClick={() => setCat("All")}
             >
               All
@@ -79,7 +83,9 @@ export default function PrayersIndexPage() {
             {PRAYER_CATEGORIES.map((c) => (
               <button
                 key={c}
-                className={`rounded-full px-3 py-1 text-sm border ${cat === c ? "bg-white/10" : "border-white/15 bg-white/0"}`}
+                className={`rounded-full px-3 py-1 text-sm text-[var(--text-muted)]/90 border ${
+                  cat === c ? "bg-white/10" : "border-white/15 bg-white/0"
+                }`}
                 onClick={() => setCat(c)}
               >
                 {c}
@@ -97,23 +103,27 @@ export default function PrayersIndexPage() {
               <section key={category}>
                 <h2 className="mb-3 text-sm uppercase tracking-widest text-[var(--text-subtle-heading)]">{category}</h2>
                 <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {items.map((p) => (
-                    <li key={p.slug}>
-                      <Link
-                        to={`/prayers/${p.slug}`}
-                        className="!no-underline block rounded-xl border border-white/10 bg-[var(--bg-card)]/70 p-4 hover:border-white/20"
-                      >
-                        <h3 className="no-underline font-semibold text-[var(--text-light)]">{p.title}</h3>
-                        {p.summary ? (
-                          <p className="no-underline mt-1 line-clamp-2 text-sm text-[var(--text-muted)]">{p.summary}</p>
-                        ) : p.style === "litany" ? (
-                          <p className="no-underline mt-1 text-sm text-[var(--text-muted)]">Open litany</p>
-                        ) : (
-                          <p className="no-underline mt-1 text-sm text-[var(--text-muted)]">Open prayer</p>
-                        )}
-                      </Link>
-                    </li>
-                  ))}
+                  {items.map((p) => {
+                    let summaryContent;
+                    if (p.summary) {
+                      summaryContent = <p className="no-underline mt-1 line-clamp-2 text-sm text-[var(--text-muted)]">{p.summary}</p>;
+                    } else if (p.style === "litany") {
+                      summaryContent = <p className="no-underline mt-1 text-sm text-[var(--text-muted)]">Open litany</p>;
+                    } else {
+                      summaryContent = <p className="no-underline mt-1 text-sm text-[var(--text-muted)]">Open prayer</p>;
+                    }
+                    return (
+                      <li key={p.slug}>
+                        <Link
+                          to={`/prayers/${p.slug}`}
+                          className="!no-underline block rounded-xl border border-white/10 bg-[var(--bg-card)]/70 p-4 hover:border-white/20"
+                        >
+                          <h3 className="no-underline font-semibold text-[var(--text-light)]">{p.title}</h3>
+                          {summaryContent}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </section>
             );

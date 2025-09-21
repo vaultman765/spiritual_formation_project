@@ -44,7 +44,7 @@ export default function HomePage() {
           }
 
           const currentArc = arcs.find((a: any) => a.status === "in_progress");
-          if (!currentArc || !currentArc.arc_id || !currentArc.current_day) {
+          if (!(currentArc?.arc_id && currentArc?.current_day)) {
             console.warn("Current arc or required fields missing:", currentArc);
             return null; // or show a fallback UI
           }
