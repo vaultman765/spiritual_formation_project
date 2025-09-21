@@ -51,7 +51,7 @@ export function NoteActionButton({
       }
       onUpdate();
     } catch (error) {
-      console.error(error);
+      console.error('Note operation failed:', actionType, error);
       toast.error(`Failed to ${actionType} note.`);
     } finally {
       closeModal();
