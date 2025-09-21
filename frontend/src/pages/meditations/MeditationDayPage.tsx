@@ -52,7 +52,7 @@ export default function MeditationDayPage() {
         setNote(null);
       }
     } catch (err) {
-      console.warn("No note found for day", day.master_day_number);
+      console.warn("No note found for day", day?.master_day_number, err);
       setNoteContent(""); // Clear the content if the note is deleted
       setNoteId(null); // Reset the note ID
       setNote(null);
@@ -269,8 +269,8 @@ export default function MeditationDayPage() {
       <section className="mb-3 max-w-4xl text-center mx-auto">
         <h2 className="text-sm tracking-[.15em] font-semibold text-[var(--text-subtle-heading)] uppercase mb-3">Meditative Points</h2>
         <ol className="pl-5 space-y-2 text-[var(--text-main)] text-sm max-w-3xl mx-auto">
-          {day.meditative_points.map((pt, i) => (
-            <li key={i} className="mb-2">
+          {day.meditative_points.map((pt) => (
+            <li key={typeof pt === "string" ? pt : JSON.stringify(pt)} className="mb-2">
               {pt}
             </li>
           ))}

@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import type { ArcData } from "@/utils/types";
 
-export default function ArcJsonLd({ arc }: { arc: ArcData }) {
+export default function ArcJsonLd({ arc }: { readonly arc: ArcData }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Course",

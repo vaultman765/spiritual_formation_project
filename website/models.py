@@ -48,8 +48,8 @@ class MeditationDay(models.Model):
 
     # 1–3 meditative points
     meditative_point_1 = models.TextField()
-    meditative_point_2 = models.TextField(null=True, blank=True)
-    meditative_point_3 = models.TextField(null=True, blank=True)
+    meditative_point_2 = models.TextField(blank=True)
+    meditative_point_3 = models.TextField(blank=True)
 
     ejaculatory_prayer = models.TextField()
     colloquy = models.TextField()
@@ -68,8 +68,8 @@ class SecondaryReading(models.Model):
     meditation_day = models.ForeignKey("MeditationDay", on_delete=models.CASCADE, related_name="secondary_readings")
 
     title = models.TextField()  # Required
-    reference = models.TextField(blank=True, null=True)  # Optional
-    url = models.URLField(blank=True, null=True)  # Optional – PDF or web
+    reference = models.TextField(blank=True)  # Optional
+    url = models.URLField(blank=True)  # Optional – PDF or web
 
     def __str__(self):
         return f"{self.title} ({self.reference or 'no reference'})"

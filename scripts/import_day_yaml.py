@@ -34,11 +34,11 @@ class DayImporter:
     """
     def __init__(self, arc_model: Arc, day_model: MeditationDay, tag_model: Tag,
                  daytag_model: DayTag, secondary_model: SecondaryReading, logger: logging.Logger) -> None:
-        self.Arc = arc_model
-        self.MeditationDay = day_model
-        self.Tag = tag_model
-        self.DayTag = daytag_model
-        self.SecondaryReading = secondary_model
+        self.arc = arc_model
+        self.meditation_day = day_model
+        self.tag = tag_model
+        self.day_tag = daytag_model
+        self.secondary_reading = secondary_model
         self.logger = logger
 
     def import_day(self, data: dict) -> bool:
@@ -57,7 +57,7 @@ class DayImporter:
             self.logger.error(f"Missing required fields: {missing}")
             return False
 
-        arc = load_arc_from_metadata(data["arc_id"], self.Arc)
+        arc = load_arc_from_metadata(data["arc_id"], self.arc)
         try:
             day = self._create_or_update_day(data["master_day_number"], arc, data["arc_day_number"], data)
         except Exception as e:
@@ -89,7 +89,7 @@ class DayImporter:
             "colloquy": data["colloquy"],
             "resolution": data.get("resolution", "")
         }
-        day, created = self.MeditationDay.objects.update_or_create(
+        day, created = self.meditation_day.objects.update_or_create(
             master_day_number=day_num, defaults=defaults
         )
         self.logger.info(f"{'Created' if created else 'Updated'} Day {day_num} (Arc: {arc.arc_id})")
@@ -99,7 +99,7 @@ class DayImporter:
         meditation_day.secondary_readings.all().delete()
         for sr in readings:
             try:
-                self.SecondaryReading.objects.create(
+                self.secondary_reading.objects.create(
                     meditation_day=meditation_day,
                     title=sr["title"],
                     reference=sr.get("reference", ""),
@@ -109,11 +109,11 @@ class DayImporter:
                 self.logger.warning(f"Skipping malformed secondary reading: {e}")
 
     def _replace_tags(self, meditation_day: MeditationDay, tags: dict) -> None:
-        self.DayTag.objects.filter(meditation_day=meditation_day).delete()
+        self.day_tag.objects.filter(meditation_day=meditation_day).delete()
         for category, tag_list in tags.items():
             for tag_name in tag_list:
-                tag, _ = self.Tag.objects.get_or_create(name=tag_name, defaults={"category": category})
-                self.DayTag.objects.get_or_create(meditation_day=meditation_day, tag=tag)
+                tag, _ = self.tag.objects.get_or_create(name=tag_name, defaults={"category": category})
+                self.day_tag.objects.get_or_create(meditation_day=meditation_day, tag=tag)
 
 
 def import_day_file(path: Path, dry_run: bool = False) -> bool:

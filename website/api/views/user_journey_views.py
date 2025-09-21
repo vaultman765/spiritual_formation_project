@@ -7,6 +7,8 @@ from django.utils import timezone
 from website.models import UserJourney, UserJourneyArcProgress
 from website.api.serializers.user_journey_serializer import UserJourneySerializer
 
+NO_ACTIVE_JOURNEY_ERROR = 'No active journey found.'
+
 
 class UserJourneyViewSet(viewsets.ViewSet):
     permission_classes = [IsAuthenticated]
@@ -37,9 +39,9 @@ class UserJourneyViewSet(viewsets.ViewSet):
             journey.is_active = False
             journey.completed_on = timezone.now()
             journey.save()
-            return Response({'detail': 'Journey archived successfully.'})
+            return Response({'error': NO_ACTIVE_JOURNEY_ERROR}, status=404)
         except UserJourney.DoesNotExist:
-            return Response({'error': 'No active journey found.'}, status=404)
+            return Response({'error': NO_ACTIVE_JOURNEY_ERROR}, status=404)
 
     @action(detail=True, methods=["post"], url_path="restore")
     def restore(self, request, pk=None):
@@ -67,7 +69,7 @@ class UserJourneyViewSet(viewsets.ViewSet):
         try:
             journey = UserJourney.objects.get(user=request.user, is_active=True)
         except UserJourney.DoesNotExist:
-            return Response({'error': 'No active journey found.'}, status=404)
+            return Response({'error': NO_ACTIVE_JOURNEY_ERROR}, status=404)
 
         arc_items = journey.arc_progress_items.all().order_by('order')
         for index, arc in enumerate(arc_items):
@@ -111,7 +113,7 @@ class UserJourneyViewSet(viewsets.ViewSet):
                                  "Already at final day and final arc. Consider skipping the arc instead."}, status=400)
 
         except UserJourney.DoesNotExist:
-            return Response({'error': 'No active journey found.'}, status=404)
+            return Response({'error': NO_ACTIVE_JOURNEY_ERROR}, status=404)
 
     @action(detail=False, methods=["post"], url_path="skip-arc")
     def skip_arc(self, request):
@@ -137,14 +139,14 @@ class UserJourneyViewSet(viewsets.ViewSet):
             return Response({'error': 'No arc currently in progress.'}, status=400)
 
         except UserJourney.DoesNotExist:
-            return Response({'error': 'No active journey found.'}, status=404)
+            return Response({'error': NO_ACTIVE_JOURNEY_ERROR}, status=404)
 
     @action(detail=False, methods=["post"], url_path="complete")
     def complete_journey(self, request):
         try:
             journey = UserJourney.objects.get(user=request.user, is_active=True)
         except UserJourney.DoesNotExist:
-            return Response({'error': 'No active journey found.'}, status=404)
+            return Response({'error': NO_ACTIVE_JOURNEY_ERROR}, status=404)
 
         arcs = journey.arc_progress_items.all()
         for arc in arcs:

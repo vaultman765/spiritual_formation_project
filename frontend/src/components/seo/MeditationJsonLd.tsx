@@ -1,12 +1,12 @@
 import { Helmet } from "react-helmet-async";
 
 interface MeditationJsonLdProps {
-  dayTitle: string;
-  subtitle: string;
-  imageSrc: string;
-  altText: string;
-  link: string;
-  tag: string;
+  readonly dayTitle: string;
+  readonly subtitle: string;
+  readonly imageSrc: string;
+  readonly altText: string;
+  readonly link: string;
+  readonly tag: string;
 }
 
 export default function MeditationJsonLd({ dayTitle, subtitle, imageSrc, altText, link, tag }: MeditationJsonLdProps) {

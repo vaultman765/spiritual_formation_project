@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import AccountMenu from "@/components/nav/AccountMenu";
 
 /** Small helpers for the dropdown UI */
-function Dropdown({ label, children }: { label: string | React.ReactNode; children: React.ReactNode }) {
+function Dropdown({ label, children }: Readonly<{ label: string | React.ReactNode; children: React.ReactNode }>) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
 
@@ -50,7 +50,7 @@ function Dropdown({ label, children }: { label: string | React.ReactNode; childr
   );
 }
 
-function Item({ to, children, onClick }: { to: string; children: React.ReactNode; onClick?: () => void }) {
+function Item({ to, children, onClick }: Readonly<{ to: string; children: React.ReactNode; onClick?: () => void }>) {
   return (
     <Link
       to={to}
@@ -63,7 +63,7 @@ function Item({ to, children, onClick }: { to: string; children: React.ReactNode
   );
 }
 
-function SectionTitle({ children }: { children: React.ReactNode }) {
+function SectionTitle({ children }: Readonly<{ children: React.ReactNode }>) {
   return <div className="px-3 pb-1 pt-2 text-xs font-semibold uppercase tracking-wider text-[var(--text-subtle-heading)]">{children}</div>;
 }
 

@@ -26,8 +26,8 @@ class MeditationNoteView(viewsets.ModelViewSet):
         if day is not None:
             note = MeditationNote.objects.filter(user=self.request.user, meditation_day=day).first()
             if note:
-                serializer = self.get_serializer(note)
-                return Response(serializer.data)
+                note_serializer = self.get_serializer(note)
+                return Response(note_serializer.data)
             return Response({"detail": "No note found for this day."}, status=status.HTTP_404_NOT_FOUND)
 
         raise ValidationError("Meditation day ID is required.")

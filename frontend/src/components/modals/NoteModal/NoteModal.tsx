@@ -16,7 +16,15 @@ interface NoteModalProps {
   onEdit?: () => void;
 }
 
-export function EditNoteModal({ modalId = "editNoteModal", day, title, content, master_day_number, onUpdate, onClose }: NoteModalProps) {
+export function EditNoteModal({
+  modalId = "editNoteModal",
+  day,
+  title,
+  content,
+  master_day_number,
+  onUpdate,
+  onClose,
+}: Readonly<NoteModalProps>) {
   const { isOpen } = useModal(modalId);
   const [noteContent, setNoteContent] = useState(content);
 
@@ -59,12 +67,12 @@ export function EditNoteModal({ modalId = "editNoteModal", day, title, content, 
   );
 }
 
-export function ViewerNoteModal({ modalId = "viewerNoteModal", day, onUpdate, onEdit, onClose }: NoteModalProps) {
+export function ViewerNoteModal({ modalId = "viewerNoteModal", day, onUpdate, onEdit, onClose }: Readonly<NoteModalProps>) {
   const { isOpen } = useModal(modalId);
 
   if (!isOpen || !day) return null;
 
-  const { meditation_day_full, content } = day as MeditationNote;
+  const { meditation_day_full, content } = day;
 
   if (!meditation_day_full?.master_day_number) {
     return (
@@ -90,9 +98,8 @@ export function ViewerNoteModal({ modalId = "viewerNoteModal", day, onUpdate, on
       </div>
       <ViewNoteModalButtons
         modalId={modalId}
-        note={day as MeditationNote}
+        note={day}
         master_day_number={meditation_day_full?.master_day_number}
-        setNoteContent={() => {}}
         setNoteId={() => {}}
         onUpdate={onUpdate}
         onEdit={onEdit ?? (() => {})}

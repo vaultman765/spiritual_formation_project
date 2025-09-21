@@ -109,10 +109,15 @@ class CrossValidator:
         """Check arc_title and arc_number consistency across metadata, tag files, and day files."""
         errors = []
         metadata_arcs = {arc["arc_id"]: arc for arc in self.arc_metadata}
+        errors.extend(self._check_arc_tags_consistency(metadata_arcs))
+        errors.extend(self._check_day_files_consistency(metadata_arcs))
+        return errors
+
+    def _check_arc_tags_consistency(self, metadata_arcs: Dict[str, Dict[str, Any]]) -> List[str]:
+        errors = []
         for arc_id, arc_meta in metadata_arcs.items():
             meta_title = arc_meta["arc_title"]
             meta_number = arc_meta["arc_number"]
-            # Check arc_tags
             tag_data = self.arc_tag_data.get(arc_id)
             if tag_data:
                 if tag_data.get("arc_title") != meta_title:
@@ -123,17 +128,23 @@ class CrossValidator:
                     errors.append(
                         f"❌ arc_number mismatch for {arc_id} in arc_tags/*.yaml"
                     )
-            # Check day files
-            for fname, data in self.day_data.items():
-                if data.get("arc_id") == arc_id:
-                    if data.get("arc_title") != meta_title:
-                        errors.append(
-                            f"❌ arc_title mismatch in {fname} (expected: {meta_title})"
-                        )
-                    if data.get("arc_number") != meta_number:
-                        errors.append(
-                            f"❌ arc_number mismatch in {fname} (expected: {meta_number})"
-                        )
+        return errors
+
+    def _check_day_files_consistency(self, metadata_arcs: Dict[str, Dict[str, Any]]) -> List[str]:
+        errors = []
+        for fname, data in self.day_data.items():
+            arc_id = data.get("arc_id")
+            if arc_id in metadata_arcs:
+                meta_title = metadata_arcs[arc_id]["arc_title"]
+                meta_number = metadata_arcs[arc_id]["arc_number"]
+                if data.get("arc_title") != meta_title:
+                    errors.append(
+                        f"❌ arc_title mismatch in {fname} (expected: {meta_title})"
+                    )
+                if data.get("arc_number") != meta_number:
+                    errors.append(
+                        f"❌ arc_number mismatch in {fname} (expected: {meta_number})"
+                    )
         return errors
 
 
@@ -153,6 +164,74 @@ class IntegrityValidator:
         self.day_data = {int(f.name[4:8]): load_yaml(f) for f in day_files}
 
     def validate(self) -> List[str]:
+        errors = []
+        errors.extend(self._check_day_integrity())
+
+        for arc in self.arc_metadata:
+            arc_id = arc["arc_id"]
+            arc_days = [d for d in self.day_data.values() if d.get("arc_id") == arc_id]
+            expected = arc["day_count"]
+            range_check = (
+                arc["master_day_range"]["end"] - arc["master_day_range"]["start"] + 1
+            )
+            count_check = len(arc_days)
+
+            errors.extend(self._check_day_count(arc_id, expected, range_check, count_check))
+            errors.extend(self._check_anchor_image_consistency(arc, arc_days))
+            errors.extend(self._check_primary_reading_consistency(arc, arc_days))
+
+        return errors
+
+    def _check_day_count(self, arc_id, expected, range_check, count_check) -> List[str]:
+        errors = []
+        if expected != range_check:
+            errors.append(
+                f"❌ day_count mismatch in {arc_id}: {expected} ≠ master_day_range length {range_check}"
+            )
+        if expected != count_check:
+            errors.append(
+                f"❌ day_count mismatch in {arc_id}: {expected} ≠ actual files found {count_check}"
+            )
+        return errors
+
+    def _check_anchor_image_consistency(self, arc, arc_days) -> List[str]:
+        errors = []
+        anchor_images = {
+            d.get("anchor_image")[0]
+            if isinstance(d.get("anchor_image"), list) and d.get("anchor_image")
+            else d.get("anchor_image")
+            for d in arc_days
+        }
+        if (
+            len(anchor_images) == 1
+            and list(anchor_images)[0] != arc["anchor_image"][0]
+        ):
+            errors.append(f"❌ anchor_image mismatch in {arc['arc_id']}")
+        return errors
+
+    def _check_primary_reading_consistency(self, arc, arc_days) -> List[str]:
+        errors = []
+
+        def extract_primary_reading(val):
+            if isinstance(val, list) and val:
+                item = val[0]
+                if isinstance(item, dict):
+                    return item.get("title")
+                return item
+            if isinstance(val, dict):
+                return val.get("title")
+            return val
+
+        primary_readings = {extract_primary_reading(d.get("primary_reading")) for d in arc_days}
+        expected_primary = extract_primary_reading(arc["primary_reading"])
+        if (
+            len(primary_readings) == 1
+            and list(primary_readings)[0] != expected_primary
+        ):
+            errors.append(f"❌ primary_reading mismatch in {arc['arc_id']}")
+        return errors
+
+    def _check_day_integrity(self) -> List[str]:  # New method for day-specific checks
         errors = []
         seen_master = set()
         arc_day_seen = defaultdict(set)
@@ -174,60 +253,6 @@ class IntegrityValidator:
                 )
             arc_day_seen[arc_id].add(arc_day)
 
-        for arc in self.arc_metadata:
-            arc_id = arc["arc_id"]
-            arc_days = [d for d in self.day_data.values() if d.get("arc_id") == arc_id]
-            count_check = len(arc_days)
-            expected = arc["day_count"]
-            range_check = (
-                arc["master_day_range"]["end"] - arc["master_day_range"]["start"] + 1
-            )
-
-            if expected != range_check:
-                errors.append(
-                    f"❌ day_count mismatch in {arc_id}: {expected} ≠ master_day_range length {range_check}"
-                )
-            if expected != count_check:
-                errors.append(
-                    f"❌ day_count mismatch in {arc_id}: {expected} ≠ actual files found {count_check}"
-                )
-
-            # Optional: check anchor_image and primary_reading consistency if only one expected
-            anchor_images = set(
-                (
-                    d.get("anchor_image")[0]
-                    if isinstance(d.get("anchor_image"), list) and d.get("anchor_image")
-                    else d.get("anchor_image")
-                )
-                for d in arc_days
-            )
-            if (
-                len(anchor_images) == 1
-                and list(anchor_images)[0] != arc["anchor_image"][0]
-            ):
-                errors.append(f"❌ anchor_image mismatch in {arc_id}")
-
-            # Fix: extract a string for primary_reading
-            def extract_primary_reading(val):
-                if isinstance(val, list) and val:
-                    item = val[0]
-                    if isinstance(item, dict):
-                        return item.get("title")
-                    return item
-                if isinstance(val, dict):
-                    return val.get("title")
-                return val
-
-            primary_readings = set(
-                extract_primary_reading(d.get("primary_reading")) for d in arc_days
-            )
-            expected_primary = extract_primary_reading(arc["primary_reading"])
-            if (
-                len(primary_readings) == 1
-                and list(primary_readings)[0] != expected_primary
-            ):
-                errors.append(f"❌ primary_reading mismatch in {arc_id}")
-
         return errors
 
 
@@ -237,12 +262,24 @@ class MetadataValidator:
         self.tag_validator = TagValidator()
 
     def run(self) -> None:
-        errors = []
-
         arc_metadata = load_yaml(ARC_METADATA_FILE)
         arc_tag_files = list(ARC_TAGS_DIR.glob("*.yaml"))
         day_files = list(DAY_FILES_DIR.glob("day_*.yaml"))
 
+        errors = []
+        errors.extend(self._validate_schemas(arc_metadata, arc_tag_files, day_files))
+        errors.extend(self._validate_tags(arc_metadata, arc_tag_files, day_files))
+        errors.extend(self._validate_cross_and_integrity(arc_metadata, arc_tag_files, day_files))
+
+        if errors:
+            logger.error("\n".join(errors))
+            logger.error(f"Metadata validation failed with {len(errors)} error(s).")
+            sys.exit(1)
+        else:
+            logger.info("All metadata passed schema, tag, and integrity validation.")
+
+    def _validate_schemas(self, arc_metadata, arc_tag_files, day_files) -> list:
+        errors = []
         for i, arc in enumerate(arc_metadata):
             errors.extend(
                 self.schema_validator.validate(
@@ -267,7 +304,10 @@ class MetadataValidator:
                         data, self.schema_validator.day_schema, day_file.name
                     )
                 )
+        return errors
 
+    def _validate_tags(self, arc_metadata, arc_tag_files, day_files) -> list:
+        errors = []
         for arc in arc_metadata:
             errors.extend(
                 self.tag_validator.validate_tags(
@@ -292,19 +332,15 @@ class MetadataValidator:
                             data.get("tags", {}).get(category) or [], day_file.name
                         )
                     )
+        return errors
 
+    def _validate_cross_and_integrity(self, arc_metadata, arc_tag_files, day_files) -> list:
+        errors = []
         cross = CrossValidator(arc_metadata, arc_tag_files, day_files)
         errors.extend(cross.validate())
-
         integrity = IntegrityValidator(arc_metadata, arc_tag_files, day_files)
         errors.extend(integrity.validate())
-
-        if errors:
-            logger.error("\n".join(errors))
-            logger.error(f"Metadata validation failed with {len(errors)} error(s).")
-            sys.exit(1)
-        else:
-            logger.info("All metadata passed schema, tag, and integrity validation.")
+        return errors
 
 
 if __name__ == "__main__":

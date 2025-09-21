@@ -1,22 +1,11 @@
-import SimpleListboxDropdown from '@/components/SimpleListboxDropdown';
+import SimpleListboxDropdown from "@/components/SimpleListboxDropdown";
 
 interface TagFilterDropdownProps {
-  options: string[];
-  selected: string;
-  onChange: (val: string) => void;
+  readonly options: readonly string[];
+  readonly selected: string;
+  readonly onChange: (val: string) => void;
 }
 
-export default function TagFilterDropdown({
-  options,
-  selected,
-  onChange
-}: TagFilterDropdownProps) {
-  return (
-    <SimpleListboxDropdown
-      options={options}
-      selected={selected}
-      onChange={onChange}
-      placeholder="Filter by Tag"
-    />
-  );
+export default function TagFilterDropdown({ options, selected, onChange }: TagFilterDropdownProps) {
+  return <SimpleListboxDropdown options={options} selected={selected} onChange={onChange} placeholder="Filter by Tag" />;
 }

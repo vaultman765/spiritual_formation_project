@@ -5,11 +5,11 @@ interface SecondaryReadingsProps {
   readings: Reading[];
 }
 
-export function SecondaryReadings({ readings }: SecondaryReadingsProps) {
+export function SecondaryReadings({ readings }: Readonly<SecondaryReadingsProps>) {
   return (
     <ul className="space-y-2">
-      {readings.map((reading, idx) => (
-        <li key={idx}>
+      {readings.map((reading) => (
+        <li key={reading.url ?? reading.title}>
           {reading.url ? (
             <Link to={reading.url} target="_blank" rel="noopener noreferrer" className="text-[var(--text-main)] hover:underline">
               <span className="text-[var(--text-muted)]">
