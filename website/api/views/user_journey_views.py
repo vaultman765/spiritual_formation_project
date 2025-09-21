@@ -39,7 +39,7 @@ class UserJourneyViewSet(viewsets.ViewSet):
             journey.is_active = False
             journey.completed_on = timezone.now()
             journey.save()
-            return Response({'error': NO_ACTIVE_JOURNEY_ERROR}, status=404)
+            return Response({'detail': 'Journey archived successfully.'})
         except UserJourney.DoesNotExist:
             return Response({'error': NO_ACTIVE_JOURNEY_ERROR}, status=404)
 
