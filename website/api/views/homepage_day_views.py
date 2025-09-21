@@ -1,44 +1,33 @@
-import json
+# website/api/views/homepage_day_views.py
 from datetime import date
-from pathlib import Path
+from django.utils.timezone import localdate
 from rest_framework.viewsets import ViewSet
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework import status
 from website.models import MeditationDay
-from django.conf import settings
 
-HOMEPAGE_JSON_PATH = Path(settings.BASE_DIR).joinpath("website", "data", "homepage_day.json")
+# Pick an anchor you’re happy with (when your rotation “started”)
+HOMEPAGE_ANCHOR_DATE = date(2025, 9, 21)   # <-- set once
+HOMEPAGE_ANCHOR_DAY  = 13                  # <-- master_day_number on that date
 
+def compute_today_tomorrow():
+    """Return (today_master_day_number, tomorrow_master_day_number)."""
+    max_day = (
+        MeditationDay.objects.order_by("-master_day_number")
+        .values_list("master_day_number", flat=True)
+        .first()
+    )
+    if not max_day:
+        return (None, None)
 
-def load_homepage_data():
-    if not HOMEPAGE_JSON_PATH.exists():
-        return {"today": 1, "tomorrow": 2, "last_updated": "2000-01-01"}
-    with open(HOMEPAGE_JSON_PATH, "r", encoding="utf-8") as f:
-        return json.load(f)
+    days_elapsed = (localdate() - HOMEPAGE_ANCHOR_DATE).days
+    # Normalize in case someone sets anchor in the future
+    days_elapsed = int(days_elapsed)
 
-
-def save_homepage_data(data):
-    with open(HOMEPAGE_JSON_PATH, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
-
-
-def update_homepage_days_if_needed():
-    data = load_homepage_data()
-    today_str = date.today().isoformat()
-
-    if data["last_updated"] < today_str:
-        current_today = data["tomorrow"]
-        max_day = MeditationDay.objects.order_by("-master_day_number").first()
-        next_day = current_today + 1 if current_today < max_day.master_day_number else 1
-        data = {
-            "today": current_today,
-            "tomorrow": next_day,
-            "last_updated": today_str
-        }
-        save_homepage_data(data)
-    return data
-
+    today_num = ((HOMEPAGE_ANCHOR_DAY - 1 + days_elapsed) % max_day) + 1
+    tomorrow_num = (today_num % max_day) + 1
+    return (today_num, tomorrow_num)
 
 def build_day_payload(day_number):
     try:
@@ -59,16 +48,13 @@ def build_day_payload(day_number):
             "url": day.primary_reading_url,
         },
         "secondary_readings": [
-            {
-                "title": sr.title,
-                "reference": sr.reference,
-                "url": sr.url,
-            } for sr in day.secondary_readings.all()
+            {"title": sr.title, "reference": sr.reference, "url": sr.url}
+            for sr in day.secondary_readings.all()
         ],
         "meditative_points": list(filter(None, [
             day.meditative_point_1,
             day.meditative_point_2,
-            day.meditative_point_3
+            day.meditative_point_3,
         ])),
         "ejaculatory_prayer": day.ejaculatory_prayer,
         "colloquy": day.colloquy,
@@ -76,29 +62,24 @@ def build_day_payload(day_number):
         "tags": {
             dt.tag.category: dt.tag.name
             for dt in day.daytag_set.select_related("tag").all()
-        }
+        },
     }
 
-
 class HomepageDayViewSet(ViewSet):
-    """
-    Returns the site-wide "Today" and "Tomorrow" meditations for non-signed-in users.
-    - Values rotate daily
-    - Loops after last day
-    """
+    """Stateless rotation based on an anchor date/day."""
 
     @action(detail=False, url_path="today")
     def today(self, request):
-        data = update_homepage_days_if_needed()
-        day = build_day_payload(data["today"])
-        if not day:
-            return Response({"error": "Today not found"}, status=status.HTTP_404_NOT_FOUND)
-        return Response(day)
+        today_num, _ = compute_today_tomorrow()
+        if not today_num:
+            return Response({"error": "No days available"}, status=status.HTTP_404_NOT_FOUND)
+        payload = build_day_payload(today_num)
+        return Response(payload) if payload else Response({"error": "Not found"}, status=404)
 
     @action(detail=False, url_path="tomorrow")
     def tomorrow(self, request):
-        data = update_homepage_days_if_needed()
-        day = build_day_payload(data["tomorrow"])
-        if not day:
-            return Response({"error": "Tomorrow not found"}, status=status.HTTP_404_NOT_FOUND)
-        return Response(day)
+        _, tomorrow_num = compute_today_tomorrow()
+        if not tomorrow_num:
+            return Response({"error": "No days available"}, status=status.HTTP_404_NOT_FOUND)
+        payload = build_day_payload(tomorrow_num)
+        return Response(payload) if payload else Response({"error": "Not found"}, status=404)
