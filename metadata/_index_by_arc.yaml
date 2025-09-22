@@ -198,3 +198,7 @@ arc_church_and_the_cross:
   arc_number: 50
   start_day: 367
   end_day: 373
+arc_fire_of_the_holy_spirit:
+  arc_number: 51
+  start_day: 374
+  end_day: 378
