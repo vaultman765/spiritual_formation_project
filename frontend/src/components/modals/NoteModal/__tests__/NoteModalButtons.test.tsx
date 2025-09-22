@@ -121,7 +121,6 @@ describe("NoteModalButtons", () => {
           modalId="testModal"
           note={{ content: "Test content" } as MeditationNote}
           master_day_number={1}
-          setNoteContent={jest.fn()} // Add this line
           setNoteId={setNoteId}
           onUpdate={onUpdate}
           onEdit={onEdit}

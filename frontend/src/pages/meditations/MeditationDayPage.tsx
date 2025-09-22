@@ -52,7 +52,7 @@ export default function MeditationDayPage() {
         setNote(null);
       }
     } catch (err) {
-      console.warn("No note found for day", day?.master_day_number, ":", err?.message || err);
+      console.warn("No note found for day", day?.master_day_number, ":", err instanceof Error ? err.message : String(err));
       setNoteContent(""); // Clear the content if the note is deleted
       setNoteId(null); // Reset the note ID
       setNote(null);
