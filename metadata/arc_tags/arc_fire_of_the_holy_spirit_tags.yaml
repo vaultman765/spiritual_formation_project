@@ -1,0 +1,51 @@
+arc_id: arc_fire_of_the_holy_spirit
+arc_title: The Fire of the Holy Spirit
+arc_number: 51
+day_count: 5
+master_day_range:
+  start: 374
+  end: 378
+tags:
+  thematic:
+    - detachment
+    - fear of the lord
+    - holy spirit
+    - interior life
+    - love of god
+    - mission
+    - transformation
+  doctrinal:
+    - apostolic authority
+    - christology
+    - divine mysteries
+    - grace
+    - kingship of christ
+    - mystical body
+    - reverence
+    - sanctification
+  virtue:
+    - charity
+    - courage
+    - humility
+    - perseverance
+    - purity
+    - temperance
+    - zeal
+  mystical:
+    - awe
+    - divine indwelling
+    - divine love
+    - divine presence
+    - divine will
+    - purification
+    - union with christ
+  liturgical:
+    - ordinary time
+    - pentecost
+  typological:
+    - burning bush
+    - sacrifice
+    - sinai
+    - temple
+    - vine and branches
+  structural: []
