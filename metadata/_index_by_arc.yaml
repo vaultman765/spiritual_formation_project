@@ -202,3 +202,7 @@ arc_fire_of_the_holy_spirit:
   arc_number: 51
   start_day: 374
   end_day: 378
+arc_spiritual_childhood:
+  arc_number: 52
+  start_day: 379
+  end_day: 383
