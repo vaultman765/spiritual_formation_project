@@ -1,0 +1,42 @@
+# Last imported into DB: 2025-09-21 21:42:55
+master_day_number: 373
+arc_day_number: 7
+arc_id: arc_church_and_the_cross
+arc_title: The Church and the Cross
+arc_number: 50
+day_title: The New Jerusalem
+anchor_image: The Church silhouetted against the Cross on Calvary. From the pierced side of Christ, the Church is born.
+primary_reading:
+  title: Revelation 21:1–4; 22:1–5
+  reference:
+  url:
+secondary_reading:
+  - title: Lumen Gentium
+    reference: §9
+    url: /docs/readings/Vatican_II_Lumen_Gentium.pdf
+meditative_points:
+  - See the holy city descending - God with His people.
+  - The river of life flows from the Lamb, healing and light for the nations.
+  - “Behold, I make all things new” - the Church brought to her fulfillment.
+ejaculatory_prayer: Come, Lord Jesus; make all things new in Your Church.
+colloquy: Lamb of God, lead us to the city You promise. Keep me faithful until You wipe every tear and we dwell with You forever.
+resolution: I will pray for the dying and for all who suffer in the Church, entrusting them to the hope of the heavenly Jerusalem.
+tags:
+  thematic:
+    - final union
+    - eternal reward
+  doctrinal:
+    - eschatology
+    - eternal life
+  virtue:
+    - hope
+    - perseverance
+  mystical:
+    - glory and heaven
+    - union with christ
+  liturgical:
+    - all saints
+  typological:
+    - temple in heaven
+    - tree of life
+  structural: []

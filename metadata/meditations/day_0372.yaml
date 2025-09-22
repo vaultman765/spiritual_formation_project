@@ -1,0 +1,42 @@
+# Last imported into DB: 2025-09-21 21:42:55
+master_day_number: 372
+arc_day_number: 6
+arc_id: arc_church_and_the_cross
+arc_title: The Church and the Cross
+arc_number: 50
+day_title: The Wedding of the Lamb
+anchor_image: The Church silhouetted against the Cross on Calvary. From the pierced side of Christ, the Church is born.
+primary_reading:
+  title: Revelation 19:1-10
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §1329
+    url: https://www.vatican.va/archive/ENG0015/__P3Y.HTM
+meditative_points:
+  - “The marriage of the Lamb has come” - the Cross crowned in nuptial joy.
+  - The Bride made ready—garments granted through His sacrifice.
+  - “Blessed are those invited to the marriage supper of the Lamb.”
+ejaculatory_prayer: O Christ, Bridegroom, prepare Your Church for Your feast.
+colloquy: Lord Jesus, let my fidelity adorn Your Bride. Purify my love and fix my hope on the supper You promise.
+resolution: I will fast from one small comfort today, offering it for the Church’s holiness.
+tags:
+  thematic:
+    - glory and heaven
+    - sacrifice
+  doctrinal:
+    - eschatology
+    - marriage
+    - salvation
+  virtue:
+    - hope
+    - fidelity
+  mystical:
+    - union
+    - heavenly liturgy
+  liturgical:
+    - solemnities
+  typological:
+    - marriage feast of the lamb
+  structural: []

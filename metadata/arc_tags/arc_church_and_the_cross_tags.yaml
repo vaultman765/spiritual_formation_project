@@ -1,0 +1,61 @@
+arc_id: arc_church_and_the_cross
+arc_title: The Church and the Cross
+arc_number: 50
+day_count: 7
+master_day_range:
+  start: 367
+  end: 373
+tags:
+  thematic:
+    - birth of the church
+    - blood of christ
+    - bread of life
+    - discipleship
+    - eternal reward
+    - final union
+    - glory and heaven
+    - love of god
+    - love of neighbor
+    - redemptive suffering
+    - sacraments
+    - sacrifice
+  doctrinal:
+    - apostolic authority
+    - communion
+    - ecclesiology
+    - eschatology
+    - eternal life
+    - eucharist
+    - marriage
+    - mystical body
+    - paschal mystery
+    - redemption
+    - salvation
+  virtue:
+    - charity
+    - faith
+    - fidelity
+    - fortitude
+    - hope
+    - perseverance
+  mystical:
+    - body of christ
+    - glory and heaven
+    - heavenly liturgy
+    - mystery
+    - pierced heart
+    - union
+    - union with christ
+  liturgical:
+    - all saints
+    - good friday
+    - ordinary time
+    - solemnities
+  typological:
+    - blood and water from christ's side
+    - bread and wine
+    - manna
+    - marriage feast of the lamb
+    - temple in heaven
+    - tree of life
+  structural: []
