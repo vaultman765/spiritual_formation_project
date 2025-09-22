@@ -1,0 +1,40 @@
+arc_id: arc_spiritual_childhood
+arc_title: Spiritual Childhood
+arc_number: 52
+day_count: 5
+master_day_range:
+  start: 379
+  end: 383
+tags:
+  thematic:
+    - abandonment
+    - kingdom of god
+    - love of god
+    - mary
+    - suffering
+    - trust
+  doctrinal:
+    - christology
+    - divine providence
+    - grace
+    - mary
+    - sanctification
+    - virtues
+    - vocation
+  virtue:
+    - charity
+    - humility
+    - perseverance
+    - surrender
+    - trust
+  mystical:
+    - divine mercy
+    - spiritual childhood
+  liturgical:
+    - marian feast
+    - ordinary time
+  typological:
+    - israel in desert
+    - new adam
+    - new eve
+  structural: []
