@@ -1,0 +1,44 @@
+# Last imported into DB: 2025-09-21 21:42:53
+master_day_number: 370
+arc_day_number: 4
+arc_id: arc_church_and_the_cross
+arc_title: The Church and the Cross
+arc_number: 50
+day_title: One Bread, One Body
+anchor_image: The Church silhouetted against the Cross on Calvary. From the pierced side of Christ, the Church is born.
+primary_reading:
+  title: 1 Corinthians 10:14-22
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§1396–1397
+    url: https://www.vatican.va/archive/ENG0015/__P42.HTM
+meditative_points:
+  - “The bread that we break, is it not a participation in the Body of Christ?”
+  - One bread makes one body—gathered at the altar beneath the Cross.
+  - “The cup of blessing… a participation in the Blood of Christ.”
+ejaculatory_prayer: Jesus, make us one Body in Your Blood.
+colloquy: Lord, let communion with Your Body and Blood bind me to Your Church.
+  Heal division in me and around me; draw us into the unity You willed from the Cross.
+resolution: I will make an act of spiritual communion today, praying for deeper unity in the Church.
+tags:
+  thematic:
+    - bread of life
+    - sacraments
+  doctrinal:
+    - eucharist
+    - communion
+    - mystical body
+  virtue:
+    - charity
+    - faith
+  mystical:
+    - body of christ
+    - union with christ
+  liturgical:
+    - corpus christi
+  typological:
+    - bread and wine
+    - manna
+  structural: []

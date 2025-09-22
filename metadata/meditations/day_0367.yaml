@@ -1,0 +1,41 @@
+# Last imported into DB: 2025-09-21 21:42:50
+master_day_number: 367
+arc_day_number: 1
+arc_id: arc_church_and_the_cross
+arc_title: The Church and the Cross
+arc_number: 50
+day_title: Suffering for the Sake of the Body
+anchor_image: The Church silhouetted against the Cross on Calvary. From the pierced side of Christ, the Church is born.
+primary_reading:
+  title: Colossians 1:24–29
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §618
+    url: https://www.vatican.va/archive/ENG0015/__P1O.HTM
+meditative_points:
+  - "Hear St. Paul: “I rejoice in my sufferings for your sake.” Let the words stand before you at the foot of the Cross."
+  - "Fix on the mystery: suffering joined to Christ becomes life for His Body, the Church."
+  - See the Church beneath the Cross, receiving fruit from sacrifice."
+ejaculatory_prayer: Jesus, unite my sufferings to Yours for the sake of the Church.
+colloquy: Lord, I shrink from suffering, yet You have made it redemptive.
+  Teach me to offer trials with You for Your Body, the Church. Let my pain become prayer for others.
+resolution: Today I will offer one concrete difficulty in silence for the good of the Church.
+tags:
+  thematic:
+    - redemptive suffering
+  doctrinal:
+    - ecclesiology
+    - mystical body
+    - redemption
+  virtue:
+    - fortitude
+    - charity
+  mystical:
+    - body of christ
+    - union with christ
+  liturgical:
+    - ordinary time
+  typological: []
+  structural: []

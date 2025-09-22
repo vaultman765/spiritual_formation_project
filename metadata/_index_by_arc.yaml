@@ -194,3 +194,7 @@ arc_coming_of_the_kingdom:
   arc_number: 49
   start_day: 362
   end_day: 366
+arc_church_and_the_cross:
+  arc_number: 50
+  start_day: 367
+  end_day: 373
