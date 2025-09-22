@@ -1,5 +1,6 @@
 # website/api/views/homepage_day_views.py
-from datetime import date
+from datetime import date, datetime, timedelta
+from zoneinfo import ZoneInfo
 from django.utils.timezone import localdate
 from rest_framework.viewsets import ViewSet
 from rest_framework.decorators import action
@@ -11,8 +12,26 @@ from website.models import MeditationDay
 HOMEPAGE_ANCHOR_DATE = date(2025, 9, 21)   # <-- set once
 HOMEPAGE_ANCHOR_DAY  = 13                  # <-- master_day_number on that date
 
-def compute_today_tomorrow():
-    """Return (today_master_day_number, tomorrow_master_day_number)."""
+DEFAULT_TZ = "America/New_York"
+SWITCH_HOUR = 1  # 1 AM local time
+
+def service_date(tz_name: str | None, switch_hour: int) -> date:
+    """
+    Returns the 'service day' (calendar date) in the given timezone,
+    shifted back by `switch_hour` hours to roll the day at that time.
+    """
+    try:
+        tz = ZoneInfo(tz_name) if tz_name else ZoneInfo(DEFAULT_TZ)
+    except Exception:
+        tz = ZoneInfo(DEFAULT_TZ)
+    now = datetime.now(tz)
+    shifted = now - timedelta(hours=switch_hour)
+    return shifted.date()
+
+def compute_today_tomorrow(tz_name: str | None) -> tuple[int | None, int | None]:
+    """
+    Compute (today, tomorrow) master_day_numbers using a timezone-aware 'service day'.
+    """
     max_day = (
         MeditationDay.objects.order_by("-master_day_number")
         .values_list("master_day_number", flat=True)
@@ -21,15 +40,14 @@ def compute_today_tomorrow():
     if not max_day:
         return (None, None)
 
-    days_elapsed = (localdate() - HOMEPAGE_ANCHOR_DATE).days
-    # Normalize in case someone sets anchor in the future
-    days_elapsed = int(days_elapsed)
+    d = service_date(tz_name, SWITCH_HOUR)
+    days_elapsed = (d - HOMEPAGE_ANCHOR_DATE).days
 
     today_num = ((HOMEPAGE_ANCHOR_DAY - 1 + days_elapsed) % max_day) + 1
     tomorrow_num = (today_num % max_day) + 1
     return (today_num, tomorrow_num)
 
-def build_day_payload(day_number):
+def build_day_payload(day_number: int) -> dict | None:
     try:
         day = MeditationDay.objects.get(master_day_number=day_number)
     except MeditationDay.DoesNotExist:
@@ -66,11 +84,15 @@ def build_day_payload(day_number):
     }
 
 class HomepageDayViewSet(ViewSet):
-    """Stateless rotation based on an anchor date/day."""
+    """
+    Stateless rotation, defaulting to America/New_York with a 3AM rollover.
+    Optionally accept ?tz=Area/City to compute per-viewer.
+    """
 
     @action(detail=False, url_path="today")
     def today(self, request):
-        today_num, _ = compute_today_tomorrow()
+        tz_name = request.query_params.get("tz")  # optional
+        today_num, _ = compute_today_tomorrow(tz_name)
         if not today_num:
             return Response({"error": "No days available"}, status=status.HTTP_404_NOT_FOUND)
         payload = build_day_payload(today_num)
@@ -78,7 +100,8 @@ class HomepageDayViewSet(ViewSet):
 
     @action(detail=False, url_path="tomorrow")
     def tomorrow(self, request):
-        _, tomorrow_num = compute_today_tomorrow()
+        tz_name = request.query_params.get("tz")  # optional
+        _, tomorrow_num = compute_today_tomorrow(tz_name)
         if not tomorrow_num:
             return Response({"error": "No days available"}, status=status.HTTP_404_NOT_FOUND)
         payload = build_day_payload(tomorrow_num)
