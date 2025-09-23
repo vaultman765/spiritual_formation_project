@@ -57,12 +57,12 @@
 | 51        | 374–378   | The Fire of the Holy Spirit                 | 5         | ✅    | The soul as a candle lit by the Spirit’s fire                                 | Various                         | Pentecost / OT         | ✅ Complete |
 | 52        | 379–383   | Spiritual Childhood                         | 5         | ✅    | A child resting in the Heart of Christ, smiling in trust                      | Matthew 18:1–4; Therese selections             | Ordinary Time          | ✅ Complete |
 | 53        | 384–389   | The Indwelling of the Trinity - Capstone              | 6         | ✅    | Mystical capstone of the interior journey, echoing Divine Union          | Various                   | Ordinary Time          | ✅ Complete |
-| 54        | 390–401   | Parables of the Kingdom of Heaven              | 12  | ⏳ | Christ teaching in parables to the crowd              | Matthew 13, etc.         | Ordinary Time | 🔜 Planned |
-| 55        | 402–408   | The Seven Deadly Sins                          | 7   | ⏳ | A soul examining itself under Christ’s gaze            | Various Scriptures        | Lent          | 🔜 Planned |
-| 56        | 409–415   | The Seven Contrary Virtues                     | 7   | ⏳ | Christ radiating virtues on the Mount                 | Various Scriptures        | OT / Lent     | 🔜 Planned |
-| 57        | 416–420   | The Canticle of Daniel                         | 5   | ⏳ | The Three Men praising God in the fiery furnace       | Daniel 3:52–90 (Greek)    | Eastertide    | 🔜 Planned |
-| 58        | 421–434   | The Book of Job                                | 14  | ⏳ | Job sitting on ashes under the heavens                | Job 1–42 (full book)      | Ordinary Time | 🔜 Planned |
-| 59        | 435–441   | Psalms of Contrition                           | 7   | ⏳ | David bowed low before the Ark                        | Psalms 6, 32, 38, 51, 102, 130, 143 | Lent | 🔜 Planned |
+| 54        | 390–402   | Parables of the Kingdom of Heaven              | 12  | ⏳ | Christ teaching in parables to the crowd              | Matthew 13, etc.         | Ordinary Time | 🔜 Planned |
+| 55        | 403–409   | The Seven Deadly Sins                          | 7   | ⏳ | A soul examining itself under Christ’s gaze            | Various Scriptures        | Lent          | 🔜 Planned |
+| 56        | 410–416   | The Seven Contrary Virtues                     | 7   | ⏳ | Christ radiating virtues on the Mount                 | Various Scriptures        | OT / Lent     | 🔜 Planned |
+| 57        | 417–421   | The Canticle of Daniel                         | 5   | ⏳ | The Three Men praising God in the fiery furnace       | Daniel 3:52–90 (Greek)    | Eastertide    | 🔜 Planned |
+| 58        | 422–435   | The Book of Job                                | 14  | ⏳ | Job sitting on ashes under the heavens                | Job 1–42 (full book)      | Ordinary Time | 🔜 Planned |
+| 59        | 436–442   | Psalms of Contrition                           | 7   | ⏳ | David bowed low before the Ark                        | Psalms 6, 32, 38, 51, 102, 130, 143 | Lent | 🔜 Planned |
 
 ## 📚 Section 2: Roadmap – Thematic Arc Library (Expanded)
 
@@ -173,7 +173,7 @@ placement within the spiritual stages (Purification, Illumination, Union), and d
 ### The Psalms
 
 | Arc # | Title                                    | Est. Days | Liturgical Fit                | Flow/Placement  |
-| Notes                                                                |
+| Notes  |
 | ----- | ---------------------------------------- | --------- | ----------------------------- | --------- | ---- |
 | Arc 59 | **The Psalms – Praise and Thanksgiving**   | ~25–30 days | Ordinary Time / Feasts | Union  
 | Psalms of joy, blessing, creation praise. Part of 150-day Psalter journey. |
@@ -194,26 +194,17 @@ placement within the spiritual stages (Purification, Illumination, Union), and d
 
 ### Christ's Parables
 
-| Arc # | Title                                    | Est. Days | Liturgical Fit                | Flow/Placement  |
-| Notes                                                                |
-| Arc 54| **Parables of the Kingdom of Heaven**    | 10–12 days | Ordinary Time        | Illumination | Parables on
-God’s reign and hidden growth. Includes the Sower, Mustard Seed, Leaven, Hidden Treasure, Pearl of Great Price, Net. |
-| Arc TBD | **Parables of Forgiveness and Redemption** | 8–10 days | Ordinary Time / Lent | Purification → Illumination
-| Parables of mercy and return. Includes Prodigal Son, Lost Sheep, Lost Coin, Unforgiving Servant, Pharisee & Tax
-Collector. |
-| Arc TBD | **Parables of Love and Neighborliness**  | 6–8 days   | Ordinary Time        | Illumination | Parables on
-charity and compassion. Includes Good Samaritan, Rich Man & Lazarus, Sheep & Goats, Great Banquet. |
-| Arc TBD | **Parables of Vigilance and Readiness**  | 8–10 days  | Advent / OT / Eschatological | Purification → Union
-| Parables about watchfulness and judgment. Includes Wise & Foolish Virgins, Tenants, Talents, Fig Tree, Wedding Feast. |
-| Arc TBD | **Parables of Stewardship and Wealth**   | 6–8 days   | Ordinary Time        | Purification | Parables
-warning about riches and trust in God. Includes Rich Fool, Dishonest Steward, Rich Man & Lazarus, Workers in the Vineyard.|
-| Arc TBD | **Parables of Nature and Everyday Life** | 8–10 days  | Ordinary Time        | Illumination | Parables drawn
-from ordinary life and creation. Includes Growing Seed, Yeast, Dragnet, Lamp under a Bushel, Children in the Marketplace.|
-| Arc TBD | **Parables of Exemplary Stories**        | 5–7 days   | Ordinary Time        | Illumination | Parables that
-give models to imitate. Includes Persistent Widow, Friend at Midnight, Good Samaritan (also fits Love arc), Persistent
-Neighbor. |
-| Arc TBD | **The Complete Parables of Christ (Prebuilt Journey)** | 40–60 days | Any | Illumination → Union | Full
-continuous journey covering every parable across the Gospels. Integrates all categories into one prebuilt sequence. |
+| Arc | Arc Title                                              | Est. Length | Liturgical Season            | Journey Stage               | Notes                                                                                                                                     |
+| --- | ------------------------------------------------------ | ----------- | ---------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Arc 54 | **Parables of the Kingdom of Heaven**                  | 10–12 days  | Ordinary Time                | Illumination                | Already Arc 54 in Section 1. Covers Sower, Mustard Seed, Leaven, Hidden Treasure, Pearl, Net, Wheat & Tares, Growing Seed, etc.           |
+| Arc TBD | **Parables of Forgiveness and Redemption**             | 8–10 days   | Lent / Ordinary Time         | Purification → Illumination | Prodigal Son, Lost Sheep, Lost Coin, Unforgiving Servant, Two Debtors, Pharisee & Tax Collector.                                          |
+| Arc TBD | **Parables of Love and Neighborliness**                | 6–8 days    | Ordinary Time                | Illumination                | Good Samaritan, Rich Man & Lazarus, Sheep & Goats, Great Banquet, Rich Fool.                                                              |
+| Arc TBD | **Parables of Vigilance and Readiness**                | 8–10 days   | Advent / OT / Eschatological | Purification → Union        | Ten Virgins, Thief in the Night, Watchful Servants, Faithful vs. Wicked Servants, Wedding Garment, Tower Builder, Warring King, Fig Tree. |
+| Arc TBD | **Parables of Stewardship and Wealth**                 | 6–8 days    | Ordinary Time                | Purification                | Talents, Workers in the Vineyard, Dishonest Steward, Rich Fool, Householder’s Treasure.                                                   |
+| Arc TBD | **Parables of Nature and Everyday Life**               | 8–10 days   | Ordinary Time                | Illumination                | Lamp on Stand, Salt, Patch & Wineskins, Weather Signs, Children in the Marketplace, Birds/Flowers, Tree and Its Fruits.                   |
+| Arc TBD | **Parables of Exemplary Stories**                      | 5–7 days    | Ordinary Time                | Illumination                | Persistent Widow, Friend at Midnight, Importunate Neighbor, Persistent Neighbor.                                                          |
+| Arc TBD | **Parables of Conflict and Authority**                 | 5–7 days    | Lent / Holy Week             | Purification                | Wicked Tenants, Strong Man Bound, Divided House, Demon’s Invasion, Defendant before Judge.                                                |
+| Arc TBD | **The Complete Parables of Christ (Prebuilt Journey)** | 40–60 days  | Any                          | Illumination → Union        | Sequential prebuilt journey pulling all parable arcs together.                                                                            |
 
 ## 📜 Section 4 - Symphonic Template for Section Planning
 
