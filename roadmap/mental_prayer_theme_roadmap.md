@@ -57,6 +57,12 @@
 | 51        | 374–378   | The Fire of the Holy Spirit                 | 5         | ✅    | The soul as a candle lit by the Spirit’s fire                                 | Various                         | Pentecost / OT         | ✅ Complete |
 | 52        | 379–383   | Spiritual Childhood                         | 5         | ✅    | A child resting in the Heart of Christ, smiling in trust                      | Matthew 18:1–4; Therese selections             | Ordinary Time          | ✅ Complete |
 | 53        | 384–389   | The Indwelling of the Trinity - Capstone              | 6         | ✅    | Mystical capstone of the interior journey, echoing Divine Union          | Various                   | Ordinary Time          | ✅ Complete |
+| 54        | 390–401   | Parables of the Kingdom of Heaven              | 12  | ⏳ | Christ teaching in parables to the crowd              | Matthew 13, etc.         | Ordinary Time | 🔜 Planned |
+| 55        | 402–408   | The Seven Deadly Sins                          | 7   | ⏳ | A soul examining itself under Christ’s gaze            | Various Scriptures        | Lent          | 🔜 Planned |
+| 56        | 409–415   | The Seven Contrary Virtues                     | 7   | ⏳ | Christ radiating virtues on the Mount                 | Various Scriptures        | OT / Lent     | 🔜 Planned |
+| 57        | 416–420   | The Canticle of Daniel                         | 5   | ⏳ | The Three Men praising God in the fiery furnace       | Daniel 3:52–90 (Greek)    | Eastertide    | 🔜 Planned |
+| 58        | 421–434   | The Book of Job                                | 14  | ⏳ | Job sitting on ashes under the heavens                | Job 1–42 (full book)      | Ordinary Time | 🔜 Planned |
+| 59        | 435–441   | Psalms of Contrition                           | 7   | ⏳ | David bowed low before the Ark                        | Psalms 6, 32, 38, 51, 102, 130, 143 | Lent | 🔜 Planned |
 
 ## 📚 Section 2: Roadmap – Thematic Arc Library (Expanded)
 
@@ -147,13 +153,10 @@ placement within the spiritual stages (Purification, Illumination, Union), and d
 | **The Breastplate of St. Patrick**        | 3–5 days    | March 17 / Spiritual Warfare         | Purification → Illumination       | Daily lines of the prayer become meditation points. Armor of faith arc — trust, protection, Christ at every side.                                           |
 | **The Te Deum and Gloria**                | 3–5 days    | Christmastide / Easter / Solemnities | Union                             | Focused on praise, awe, and glory. Explores themes of heaven, worship, and liturgy. Ends Section 2 with joyful praise.                                      |
 
-## 📜 Section 3 Planning Table
+## 📜 Section 3a Planning Table
 
 | Arc # | Title                                    | Est. Days | Liturgical Fit                | Flow/Placement Rationale                                                | Notes                                                                |
 | ----- | ---------------------------------------- | --------- | ----------------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| 56    | The Parables of Christ                   | 12        | Ordinary Time                 | Begins the section with Christ’s voice and interior challenge           | May cluster parables by mercy, Kingdom, readiness                    |
-| 57    | The Seven Deadly Sins                    | 7         | Lent                          | Introduces purification through personal self-knowledge                 | Good pairing with “Contrary Virtues” or Examination arc              |
-| 58    | The Seven Contrary Virtues               | 7         | Ordinary Time / Lent          | Offers a direct response to sin — virtue building arc                   | Complements Deadly Sins. Strong lead into deeper interior reform     |
 | 59    | The Examination of Conscience            | 3         | Lent / Retreat                | Interior self-review for daily conversion                               | Practical and method-based; good interlude before deeper arcs        |
 | 60    | Discerning Spirits (Ignatian Principles) | 6         | Retreat / Lent                | Equips soul with discernment for interior growth                        | Transitions well into deeper mystical arcs                           |
 | 61    | NEED ONE FOR HERE                       |
@@ -163,8 +166,54 @@ placement within the spiritual stages (Purification, Illumination, Union), and d
 | 65    | The Dark Night of the Soul               | 6         | Lent / Desolation             | Key passive purification arc; bridges into union and divine abandonment | Needs proper framing for encouragement — not despair                 |
 | 66    | Union with the Divine Will               | 4         | Ordinary Time / Marian Feasts | Capstone of detachment and trust                                        | Anchored in “Thy will be done.” Pairs beautifully with interior arcs |
 | 67    | NEED ONE FOR HERE              | 6         |
-| 68    | The Psalms of Contrition                 | 7         | Lent / Confession Preparation | Scriptural purification through sorrow and hope                         | Anchors soul in affective psalmody; pairs well with Deadly Sins arc  |
 | 69    | The Regina Caeli                         | 3         | Easter Season                 | Joyful conclusion; post-purification rejoicing in resurrection          | Marian finale of praise, beauty, and exaltation                      |
+
+## 📜 Section 3b Planning Table for prebuilt journeys
+
+### The Psalms
+
+| Arc # | Title                                    | Est. Days | Liturgical Fit                | Flow/Placement  |
+| Notes                                                                |
+| ----- | ---------------------------------------- | --------- | ----------------------------- | --------- | ---- |
+| Arc 59 | **The Psalms – Praise and Thanksgiving**   | ~25–30 days | Ordinary Time / Feasts | Union  
+| Psalms of joy, blessing, creation praise. Part of 150-day Psalter journey. |
+| Arc TBD | **The Psalms – Lament and Petition**       | ~25–30 days | Lent / Trials          | Purification    |
+| Psalms of complaint, sorrow, exile. Part of 150-day Psalter journey. |
+| Arc TBD | **The Psalms – Trust and Confidence**      | ~20 days    | OT / Marian Feasts     | Illumination    |
+| Psalms of abandonment to God. Part of 150-day Psalter journey. |
+| Arc TBD | **The Psalms – Royal and Messianic**       | ~15 days    | Advent / Easter        | Illumination → Union |
+| Messianic psalms about the King. Part of 150-day Psalter journey. |
+| Arc TBD | **The Psalms – Wisdom and Torah**          | ~10 days    | Ordinary Time          | Illumination    |
+| Psalms like 1, 19, 119. Part of 150-day Psalter journey. |
+| Arc TBD | **The Psalms – Pilgrimage and Ascent**     | ~15 days    | Lent / OT              | Purification → Union |
+| Ascent psalms (120–134) and pilgrimage psalms. Part of 150-day Psalter journey. |
+| Arc TBD | **The Parables of Christ – Complete Journey** | 40–60 days | Ordinary Time          | Illumination    |
+| Master prebuilt journey combining all parable arcs (Kingdom, Forgiveness, Loss, Nature, Exemplary). |
+| Arc TBD | **The Complete Psalter Journey**           | 150 days    | Any                    | All stages      |
+| Combines all the psalm arcs into a continuous 150-day journey through the entire Psalter. |
+
+### Christ's Parables
+
+| Arc # | Title                                    | Est. Days | Liturgical Fit                | Flow/Placement  |
+| Notes                                                                |
+| Arc 54| **Parables of the Kingdom of Heaven**    | 10–12 days | Ordinary Time        | Illumination | Parables on
+God’s reign and hidden growth. Includes the Sower, Mustard Seed, Leaven, Hidden Treasure, Pearl of Great Price, Net. |
+| Arc TBD | **Parables of Forgiveness and Redemption** | 8–10 days | Ordinary Time / Lent | Purification → Illumination
+| Parables of mercy and return. Includes Prodigal Son, Lost Sheep, Lost Coin, Unforgiving Servant, Pharisee & Tax
+Collector. |
+| Arc TBD | **Parables of Love and Neighborliness**  | 6–8 days   | Ordinary Time        | Illumination | Parables on
+charity and compassion. Includes Good Samaritan, Rich Man & Lazarus, Sheep & Goats, Great Banquet. |
+| Arc TBD | **Parables of Vigilance and Readiness**  | 8–10 days  | Advent / OT / Eschatological | Purification → Union
+| Parables about watchfulness and judgment. Includes Wise & Foolish Virgins, Tenants, Talents, Fig Tree, Wedding Feast. |
+| Arc TBD | **Parables of Stewardship and Wealth**   | 6–8 days   | Ordinary Time        | Purification | Parables
+warning about riches and trust in God. Includes Rich Fool, Dishonest Steward, Rich Man & Lazarus, Workers in the Vineyard.|
+| Arc TBD | **Parables of Nature and Everyday Life** | 8–10 days  | Ordinary Time        | Illumination | Parables drawn
+from ordinary life and creation. Includes Growing Seed, Yeast, Dragnet, Lamp under a Bushel, Children in the Marketplace.|
+| Arc TBD | **Parables of Exemplary Stories**        | 5–7 days   | Ordinary Time        | Illumination | Parables that
+give models to imitate. Includes Persistent Widow, Friend at Midnight, Good Samaritan (also fits Love arc), Persistent
+Neighbor. |
+| Arc TBD | **The Complete Parables of Christ (Prebuilt Journey)** | 40–60 days | Any | Illumination → Union | Full
+continuous journey covering every parable across the Gospels. Integrates all categories into one prebuilt sequence. |
 
 ## 📜 Section 4 - Symphonic Template for Section Planning
 
