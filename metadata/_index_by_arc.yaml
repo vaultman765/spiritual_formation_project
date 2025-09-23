@@ -210,3 +210,7 @@ arc_indwelling_trinity:
   arc_number: 53
   start_day: 384
   end_day: 389
+arc_parables_kingdom_of_heaven:
+  arc_number: 54
+  start_day: 390
+  end_day: 402

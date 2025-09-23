@@ -234,3 +234,4 @@ yarn-error.log*
 scratch*.txt
 PROJECT_HANDBOOK.md
 
+.trunk/*
