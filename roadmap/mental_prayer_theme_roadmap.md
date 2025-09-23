@@ -55,8 +55,8 @@
 | 49        | 362–366   | The Coming of the Kingdom                   | 5         | ✅    | Christ preaching, “The Kingdom of God is at hand”                             | Mark 1:14–15; Luke 17:20–21                    | Advent-compatible      | ✅ Complete |
 | 50        | 367–373   | The Church and the Cross                    | 7         | ✅    | The Church silhouetted against the Cross on Calvary                           | Colossians 1:24; CCC 677                       | Holy Week              | ✅ Complete |
 | 51        | 374–378   | The Fire of the Holy Spirit                 | 5         | ✅    | The soul as a candle lit by the Spirit’s fire                                 | Various                         | Pentecost / OT         | ✅ Complete |
-| 52        | 379–383   | Spiritual Childhood                         | 5         | ⏳    | A child resting in the Heart of Christ, smiling in trust                      | Matthew 18:1–4; Therese selections             | Ordinary Time          | 🔜 Planned |
-| 53        | 384–389   | The Sacred Humanity of Christ – Final Union **** ALREADY DONE????**** | 6         | ⏳    | The Infant Christ and Crucified Christ side-by-side in mystical light         | John 1:14; Hebrews 10:5–10                     | Christmas / Nativity   | 🔜 Planned |
+| 52        | 379–383   | Spiritual Childhood                         | 5         | ✅    | A child resting in the Heart of Christ, smiling in trust                      | Matthew 18:1–4; Therese selections             | Ordinary Time          | ✅ Complete |
+| 53        | 384–389   | The Indwelling of the Trinity - Capstone              | 6         | ✅    | Mystical capstone of the interior journey, echoing Divine Union          | Various                   | Ordinary Time          | ✅ Complete |
 
 ## 📚 Section 2: Roadmap – Thematic Arc Library (Expanded)
 
@@ -162,7 +162,7 @@ placement within the spiritual stages (Purification, Illumination, Union), and d
 | 64    | The Desert Fathers – Sayings & Themes    | 6         | Lent / Retreat                | Complements interior battle with humility, radical simplicity           | Pithy, aphoristic, and challenging. Great affective-mystical blend   |
 | 65    | The Dark Night of the Soul               | 6         | Lent / Desolation             | Key passive purification arc; bridges into union and divine abandonment | Needs proper framing for encouragement — not despair                 |
 | 66    | Union with the Divine Will               | 4         | Ordinary Time / Marian Feasts | Capstone of detachment and trust                                        | Anchored in “Thy will be done.” Pairs beautifully with interior arcs |
-| 67    | The Indwelling of the Trinity            | 6         | Ordinary Time                 | Mystical capstone of the interior journey, echoing Divine Union         | Draws on John 14, CCC 260, and mystical theology                     |
+| 67    | NEED ONE FOR HERE              | 6         |
 | 68    | The Psalms of Contrition                 | 7         | Lent / Confession Preparation | Scriptural purification through sorrow and hope                         | Anchors soul in affective psalmody; pairs well with Deadly Sins arc  |
 | 69    | The Regina Caeli                         | 3         | Easter Season                 | Joyful conclusion; post-purification rejoicing in resurrection          | Marian finale of praise, beauty, and exaltation                      |
 

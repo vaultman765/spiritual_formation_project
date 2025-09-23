@@ -1,0 +1,42 @@
+# Last imported into DB: 2025-09-22 22:43:18
+master_day_number: 384
+arc_day_number: 1
+arc_id: arc_indwelling_trinity
+arc_title: The Indwelling of the Trinity
+arc_number: 53
+day_title: Promise of Indwelling
+anchor_image: You are in the Upper Room with the disciples. Christ speaks of love and obedience,
+  promising that the Father and the Son will come and make their home within the believer.
+primary_reading:
+  title: John 14:15–30
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §260
+    url: https://www.vatican.va/archive/ENG0015/__P17.HTM
+meditative_points:
+  - "Hear Christ: “We will come to him and make our home with him.” The Trinity promises not only presence but indwelling."
+  - The love of God is not distant but interior, a dwelling place prepared in the soul.
+  - This indwelling begins where love and obedience meet.
+ejaculatory_prayer: O Holy Trinity, dwell within me.
+colloquy: Father, Son, and Holy Spirit, I adore Your presence within.
+  Teach me to love You by keeping Your word, and make my soul Your temple.
+resolution: Today I will recall the presence of God within me at least three times, renewing an act of adoration.
+tags:
+  thematic:
+    - love of god
+  doctrinal:
+    - trinity
+    - grace
+  virtue:
+    - faith
+    - obedience
+  mystical:
+    - divine indwelling
+    - divine presence
+  liturgical:
+    - ordinary time
+  typological:
+    - temple
+  structural: []
