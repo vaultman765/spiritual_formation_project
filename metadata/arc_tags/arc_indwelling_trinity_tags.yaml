@@ -1,0 +1,48 @@
+arc_id: arc_indwelling_trinity
+arc_title: The Indwelling of the Trinity
+arc_number: 53
+day_count: 6
+master_day_range:
+  start: 384
+  end: 389
+tags:
+  thematic:
+    - glory and heaven
+    - love of god
+    - prayer
+    - transformation
+    - trust
+    - unity
+  doctrinal:
+    - divine mysteries
+    - eternal life
+    - grace
+    - mystical body
+    - sanctifying grace
+    - sonship of christ
+    - trinity
+  virtue:
+    - charity
+    - faith
+    - fidelity
+    - hope
+    - obedience
+    - perseverance
+    - purity
+    - surrender
+  mystical:
+    - divine adoption
+    - divine indwelling
+    - divine love
+    - divine presence
+    - divine sonship
+    - spiritual ascent
+    - union
+    - union with christ
+  liturgical:
+    - ordinary time
+  typological:
+    - new creation
+    - temple
+    - vine and branches
+  structural: []
