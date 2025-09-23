@@ -1,0 +1,67 @@
+arc_id: arc_parables_kingdom_of_heaven
+arc_title: Parables of the Kingdom of Heaven
+arc_number: 54
+day_count: 13
+master_day_range:
+  start: 390
+  end: 402
+tags:
+  thematic:
+    - desire for god
+    - detachment
+    - discipleship
+    - judgment
+    - kingdom of god
+    - knowledge
+    - mercy
+    - mission
+    - righteousness
+    - salvation
+    - trust
+    - watchfulness
+  doctrinal:
+    - commandments
+    - communion
+    - divine mysteries
+    - divine providence
+    - eschatology
+    - grace
+    - judgment
+    - reconciliation
+    - salvation
+    - sanctification
+    - sanctifying grace
+    - second coming
+    - truth
+    - vocation
+  virtue:
+    - detachment
+    - faith
+    - fidelity
+    - forgiveness
+    - humility
+    - obedience
+    - patience
+    - perseverance
+    - poverty
+    - prudence
+    - purity
+    - trust
+    - vigilance
+    - zeal
+  mystical:
+    - divine love
+    - divine will
+    - heavenly liturgy
+    - inner watchfulness
+    - interior cleansing
+    - light
+    - union with christ
+  liturgical:
+    - advent
+    - ordinary time
+  typological:
+    - covenant
+    - tree of life
+  structural:
+    - parable
