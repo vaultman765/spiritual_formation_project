@@ -58,7 +58,7 @@
 | 52        | 379–383   | Spiritual Childhood                         | 5         | ✅    | A child resting in the Heart of Christ, smiling in trust                      | Matthew 18:1–4; Therese selections             | Ordinary Time          | ✅ Complete |
 | 53        | 384–389   | The Indwelling of the Trinity - Capstone              | 6         | ✅    | Mystical capstone of the interior journey, echoing Divine Union          | Various                   | Ordinary Time          | ✅ Complete |
 | 54        | 390–402   | Parables of the Kingdom of Heaven              | 13        | ✅    | Christ teaching in parables to the crowd              | Matthew 13, etc.         | Ordinary Time | ✅ Complete |
-| 55        | 403–409   | The Seven Deadly Sins                          | 7   | ⏳ | A soul examining itself under Christ’s gaze            | Various Scriptures        | Lent          | 🔜 Planned |
+| 55        | 403–409   | The Seven Deadly Sins                          | 7   | ✅ | Various per each reading/sin            | Various Scriptures        | Lent          | ✅ Complete |
 | 56        | 410–416   | The Seven Contrary Virtues                     | 7   | ⏳ | Christ radiating virtues on the Mount                 | Various Scriptures        | OT / Lent     | 🔜 Planned |
 | 57        | 417–421   | The Canticle of Daniel                         | 5   | ⏳ | The Three Men praising God in the fiery furnace       | Daniel 3:52–90 (Greek)    | Eastertide    | 🔜 Planned |
 | 58        | 422–435   | The Book of Job                                | 14  | ⏳ | Job sitting on ashes under the heavens                | Job 1–42 (full book)      | Ordinary Time | 🔜 Planned |

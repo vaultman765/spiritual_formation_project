@@ -214,3 +214,7 @@ arc_parables_kingdom_of_heaven:
   arc_number: 54
   start_day: 390
   end_day: 402
+arc_seven_deadly_sins:
+  arc_number: 55
+  start_day: 403
+  end_day: 409

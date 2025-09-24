@@ -1,0 +1,42 @@
+# Last imported into DB: 2025-09-24 16:11:10
+master_day_number: 405
+arc_day_number: 3
+arc_id: arc_seven_deadly_sins
+arc_title: The Seven Deadly Sins
+arc_number: 55
+day_title: Sin of Wrath
+anchor_image: You are on the hillside as Jesus teaches. The crowd is quiet; His words cut to the heart.
+primary_reading:
+  title: Matthew 5:21–26
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§2302–2303
+    url: https://www.vatican.va/archive/ENG0015/__P81.HTM
+  - title: St. John Chrysostom, Homilies on Matthew
+    reference: Homily 16, §§7-8
+    url: https://www.newadvent.org/fathers/200116.htm
+meditative_points:
+  - Jesus speaks directly to you - The world calls us to hate but He calls you to love.
+  - Consider the brother before you; your word can kill or reconcile.
+  - The altar awaits—first be reconciled.
+ejaculatory_prayer: Jesus, make my heart meek and at peace.
+colloquy: Lord, I place my resentment before You. Speak Your word into my anger and make it gentle.
+resolution: I will take one concrete step toward reconciliation today - a call, an apology, or a blessing in prayer.
+tags:
+  thematic:
+    - reconciliation
+    - interior life
+  doctrinal:
+    - commandments
+    - sin
+  virtue:
+    - meekness
+    - patience
+  mystical:
+    - purification
+  liturgical:
+    - ordinary time
+  typological: []
+  structural: []

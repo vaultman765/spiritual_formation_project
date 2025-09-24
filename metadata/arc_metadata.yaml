@@ -3928,3 +3928,82 @@
     - Parables
     - Kingdom of God
     - Jesus' Teachings
+- arc_id: arc_seven_deadly_sins
+  arc_title: The Seven Deadly Sins
+  arc_number: 55
+  day_count: 7
+  master_day_range:
+    start: 403
+    end: 409
+  anchor_image:
+    - A crowd presses around Jesus. A man calls out, “Teacher, tell my brother to
+      divide the inheritance with me.” You stand within earshot as Jesus refuses and
+      begins the parable of the rich man planning bigger barns.
+    - Night in Gethsemane. Jesus is a short distance away in anguished prayer; the
+      olive trees are still. You sit with Peter, James, and John as drowsiness presses
+      in and He says, “Watch and pray.”
+    - 'The church at Philippi gathers as a deacon unfolds Paul’s letter. You stand
+      among the faithful and hear read aloud: “Many live as enemies of the cross…
+      their god is the belly… but our citizenship is in heaven.”'
+    - You are in the Temple courts. Two men pray - one standing apart boasting of
+      himself in his prayers, the other at a distance with head bowed in humble prayer.
+    - You are near the royal court after victory. Songs for David rise in the streets;
+      Saul’s face tightens as he listens.
+    - You are on the hillside as Jesus teaches. The crowd is quiet; His words cut
+      to the heart.
+    - 'You are on the hillside with the crowds as Jesus teaches. The wind carries
+      His voice clearly: “You have heard… but I say to you…” He looks directly toward
+      you as He speaks of the heart’s purity.'
+  arc_summary: 'This arc confronts the seven deadly sins through Gospel scenes that
+    reveal their nature and Christ’s remedy. Each day places the soul within a different
+    narrative: the parable of the rich fool (greed), Gethsemane (sloth), Paul’s letter
+    to the Philippians (gluttony), the Pharisee and tax collector (pride), David and
+    Saul (envy), the Sermon on the Mount (anger), and the teaching on adultery (lust).
+    In each, Christ exposes the sin’s root in the heart and offers the path to virtue:
+    detachment, vigilance, heavenly-mindedness, humility, gratitude, meekness, and
+    purity. The arc leads the soul to repentance, interior cleansing, and sanctification.'
+  primary_reading:
+    - 1 Samuel 18:6–16
+    - Luke 12:13–21
+    - Luke 18:9–14
+    - Matthew 26:36–46
+    - Matthew 5:21–26
+    - Matthew 5:27–30
+    - Philippians 3:18–21
+  tags:
+    - charity
+    - chastity
+    - commandments
+    - conversion
+    - detachment
+    - fortitude
+    - grace
+    - humility
+    - interior battle
+    - interior cleansing
+    - interior life
+    - judgment
+    - lent
+    - love of neighbor
+    - meekness
+    - ordinary time
+    - patience
+    - perseverance
+    - poverty
+    - prudence
+    - purification
+    - purity
+    - reconciliation
+    - repentance
+    - righteousness
+    - sanctification
+    - sin
+    - temperance
+    - temptation
+    - vigilance
+    - virtues
+    - zeal
+  card_tags:
+    - Purification
+    - Repentance
+    - Conversion

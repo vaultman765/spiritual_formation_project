@@ -1,0 +1,45 @@
+# Last imported into DB: 2025-09-24 16:11:08
+master_day_number: 403
+arc_day_number: 1
+arc_id: arc_seven_deadly_sins
+arc_title: The Seven Deadly Sins
+arc_number: 55
+day_title: Sin of Pride
+anchor_image: You are in the Temple courts. Two men pray -
+  one standing apart boasting of himself in his prayers, the other at a distance with head bowed in humble prayer.
+primary_reading:
+  title: Luke 18:9–14
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§1865-1869
+    url: https://www.vatican.va/archive/ENG0015/__P6D.HTM
+  - title: St. Benedict, Rule of St. Benedict
+    reference: Chapter VII
+    url: /docs/readings/St_Benedict_The_Rule_of_Saint_Benedict.pdf
+meditative_points:
+  - “God, be merciful to me, a sinner.” Let this be your place before the Lord.
+  - See the Pharisee’s self-praise and the publican’s self-accusation—two postures, two outcomes.
+  - Hear Jesus declare who went home justified.
+ejaculatory_prayer: Jesus, give me the humility that justifies.
+colloquy: Lord, I renounce comparison and self-exaltation. Set me in truth, beneath Your gaze, and give me the heart of the publican.
+resolution: I will make a brief act of contrition today, owning one concrete fault without excuse.
+tags:
+  thematic:
+    - conversion
+    - judgment
+    - righteousness
+  doctrinal:
+    - sin
+    - repentance
+    - grace
+  virtue:
+    - humility
+  mystical:
+    - interior cleansing
+    - purification
+  liturgical:
+    - ordinary time
+  typological: []
+  structural: []
