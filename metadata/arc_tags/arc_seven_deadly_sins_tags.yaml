@@ -1,0 +1,45 @@
+arc_id: arc_seven_deadly_sins
+arc_title: The Seven Deadly Sins
+arc_number: 55
+day_count: 7
+master_day_range:
+  start: 403
+  end: 409
+tags:
+  thematic:
+    - conversion
+    - detachment
+    - interior battle
+    - interior life
+    - judgment
+    - love of neighbor
+    - righteousness
+    - temptation
+  doctrinal:
+    - commandments
+    - grace
+    - repentance
+    - sanctification
+    - sin
+    - virtues
+  virtue:
+    - charity
+    - chastity
+    - fortitude
+    - humility
+    - meekness
+    - patience
+    - perseverance
+    - poverty
+    - prudence
+    - purity
+    - temperance
+    - zeal
+  mystical:
+    - interior cleansing
+    - purification
+  liturgical:
+    - lent
+    - ordinary time
+  typological: []
+  structural: []
