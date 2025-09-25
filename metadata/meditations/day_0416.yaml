@@ -1,0 +1,41 @@
+# Last imported into DB: 2025-09-25 15:50:52
+master_day_number: 416
+arc_day_number: 7
+arc_id: arc_seven_capital_virtues
+arc_title: The Seven Capital Virtues
+arc_number: 56
+day_title: Virtue of Chastity / Purity (Against Lust)
+anchor_image: You are on the hillside as Jesus teaches. The lake is behind Him,
+  the crowd gathered close. You stand among the disciples, attentive to His words.
+primary_reading:
+  title: Matthew 5:27–30
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§2337–2350
+    url: https://www.vatican.va/archive/ENG0015/__P85.HTM
+  - title: St. Thomas Aquinas, Summa Theologiae
+    reference: II–II, q.151, a.1–2
+    url: https://www.newadvent.org/summa/3151.htm
+meditative_points:
+  - "Hear the Lord say to you: “Everyone who looks at a woman with lust has already committed adultery in his heart.”"
+  - Stand before Him and ask for a clean heart and disciplined eyes.
+ejaculatory_prayer: Create in me a clean heart, O God.
+colloquy: Jesus, guard my senses and desires. Let my body and heart belong wholly to You.
+resolution: I will set one concrete custody-of-the-eyes practice today.
+tags:
+  thematic:
+    - interior battle
+  doctrinal:
+    - virtues
+    - sanctification
+  virtue:
+    - purity
+    - chastity
+  mystical:
+    - purification
+  liturgical:
+    - ordinary time
+  typological: []
+  structural: []
