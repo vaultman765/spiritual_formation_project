@@ -218,3 +218,7 @@ arc_seven_deadly_sins:
   arc_number: 55
   start_day: 403
   end_day: 409
+arc_seven_capital_virtues:
+  arc_number: 56
+  start_day: 410
+  end_day: 416

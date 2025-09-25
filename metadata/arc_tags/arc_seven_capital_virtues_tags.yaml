@@ -1,0 +1,42 @@
+arc_id: arc_seven_capital_virtues
+arc_title: The Seven Capital Virtues
+arc_number: 56
+day_count: 7
+master_day_range:
+  start: 410
+  end: 416
+tags:
+  thematic:
+    - detachment
+    - interior battle
+    - interior life
+    - love of neighbor
+    - mission
+    - peace
+    - righteousness
+    - transformation
+  doctrinal:
+    - poverty of spirit
+    - sanctification
+    - virtues
+  virtue:
+    - charity
+    - chastity
+    - humility
+    - meekness
+    - patience
+    - perseverance
+    - poverty
+    - prudence
+    - purity
+    - temperance
+    - zeal
+  mystical:
+    - divine will
+    - docility
+    - inner watchfulness
+    - purification
+  liturgical:
+    - ordinary time
+  typological: []
+  structural: []

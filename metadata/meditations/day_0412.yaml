@@ -1,0 +1,42 @@
+# Last imported into DB: 2025-09-25 16:01:01
+master_day_number: 412
+arc_day_number: 3
+arc_id: arc_seven_capital_virtues
+arc_title: The Seven Capital Virtues
+arc_number: 56
+day_title: Virtue of Meekness / Patience (Against Wrath)
+anchor_image: You are on the hillside as Jesus teaches. The lake is behind Him,
+  the crowd gathered close. You stand among the disciples, attentive to His words.
+primary_reading:
+  title: Matthew 5:38–45
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §1832
+    url: https://www.vatican.va/archive/ENG0015/__P67.HTM
+  - title: St. Thomas Aquinas, Summa Theologiae
+    reference: II–II, q.157, a.1–2
+    url: https://www.newadvent.org/summa/3157.htm
+meditative_points:
+  - "Hear the Lord say to you: “Do not resist an evildoer… love your enemies.”"
+  - "Consider how Christ, who is meek and humble of heart, bore the insults, injuries, and sufferings of His Passion."
+ejaculatory_prayer: Lord, set my anger under Your rule.
+colloquy: Father, make me a peacemaker after Your Son’s Heart—slow to anger, ready to bless.
+resolution: I will hold my tongue once today when provoked, and instead offer a brief prayer for that person.
+tags:
+  thematic:
+    - interior battle
+    - peace
+  doctrinal:
+    - virtues
+    - sanctification
+  virtue:
+    - patience
+    - meekness
+  mystical:
+    - purification
+  liturgical:
+    - ordinary time
+  typological: []
+  structural: []

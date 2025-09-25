@@ -1,0 +1,41 @@
+# Last imported into DB: 2025-09-25 15:59:18
+master_day_number: 411
+arc_day_number: 2
+arc_id: arc_seven_capital_virtues
+arc_title: The Seven Capital Virtues
+arc_number: 56
+day_title: Virtue of Charity (Against Envy)
+anchor_image: You are on the hillside as Jesus teaches. The lake is behind Him,
+  the crowd gathered close. You stand among the disciples, attentive to His words.
+primary_reading:
+  title: 1 Corinthians 13:1–13
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§1822–1829
+    url: https://www.scborromeo.org/ccc/p3s1c1a7.htm#1822
+  - title: St. Thomas Aquinas, Summa Theologiae
+    reference: II–II, q.36, a.1–2 (on envy and its opposition to charity)
+    url: https://www.newadvent.org/summa/3036.htm
+meditative_points:
+  - "Love named plainly: “Love is patient and kind… it is not jealous.”"
+  - Place before Christ the face you’re tempted to envy, and ask for His charity toward that person.
+ejaculatory_prayer: Lord Jesus, kindle true charity in me.
+colloquy: Jesus, purge envy from my heart. Let me rejoice in others’ good as if it were my own.
+resolution: I will speak one sincere word of praise or thanks to someone I’m tempted to envy.
+tags:
+  thematic:
+    - love of neighbor
+    - transformation
+  doctrinal:
+    - virtues
+    - charity
+  virtue:
+    - charity
+  mystical:
+    - inner watchfulness
+  liturgical:
+    - ordinary time
+  typological: []
+  structural: []
