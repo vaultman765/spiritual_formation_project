@@ -1,0 +1,50 @@
+# Last imported into DB: 2025-09-26 14:53:36
+master_day_number: 422
+arc_day_number: 6
+arc_id: arc_canticle_of_daniel
+arc_title: The Canticle of Daniel
+arc_number: 57
+day_title: Priests, Servants, Holy and Humble of Heart
+anchor_image: You are with the three youths in the fiery furnace, unharmed,
+  watching them lift their hands in praise as they summon all creation to bless the Lord.
+primary_reading:
+  title: Daniel 3:46–90
+  reference:
+  url:
+secondary_reading:
+  - title: 1 Peter 2:9
+    reference:
+    url:
+  - title: Lumen Gentium
+    reference: §10–12
+    url: /docs/readings/Vatican_II_Lumen_Gentium.pdf
+  - title: St. Augustine, Sermon on Humility
+    reference: Sermon 351 §1
+    url: /docs/readings/St_Augustine_Sermons_341-400.pdf
+meditative_points:
+  - "Hear your own name hidden in the call: chosen race, royal priesthood, a people for His own, made to proclaim His marvels."
+  - Feel humility open a space within you where God’s glory can rest without resistance.
+ejaculatory_prayer: Make my heart holy and humble, O Lord.
+colloquy: Father, choose me again today for Your praise. Let priestly
+  praise rise from a humble heart, for Your glory and the world’s salvation.
+resolution: I will make a brief act of humility before a task or conversation, offering it as priestly praise for someone in need.
+tags:
+  thematic:
+    - unity
+    - eternal worship
+    - prayer
+  doctrinal:
+    - ecclesiology
+    - worship
+    - virtues
+  virtue:
+    - humility
+    - piety
+    - charity
+  mystical:
+    - royal priesthood
+    - union
+  liturgical: []
+  typological: []
+  structural:
+    - canticle

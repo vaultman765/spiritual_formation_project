@@ -1,0 +1,44 @@
+arc_id: arc_canticle_of_daniel
+arc_title: The Canticle of Daniel
+arc_number: 57
+day_count: 7
+master_day_range:
+  start: 417
+  end: 423
+tags:
+  thematic:
+    - eternal worship
+    - glory and heaven
+    - piety
+    - praise
+    - prayer
+    - redemptive suffering
+    - trust
+    - unity
+  doctrinal:
+    - divine mysteries
+    - divine providence
+    - ecclesiology
+    - holy spirit
+    - sanctification
+    - virtues
+    - worship
+  virtue:
+    - charity
+    - hope
+    - humility
+    - patience
+    - perseverance
+  mystical:
+    - contemplation
+    - divine presence
+    - heavenly liturgy
+    - purification
+    - royal priesthood
+    - union
+    - union with christ
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - canticle
