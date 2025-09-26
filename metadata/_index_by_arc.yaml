@@ -222,3 +222,7 @@ arc_seven_capital_virtues:
   arc_number: 56
   start_day: 410
   end_day: 416
+arc_canticle_of_daniel:
+  arc_number: 57
+  start_day: 417
+  end_day: 423

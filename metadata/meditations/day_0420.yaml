@@ -1,0 +1,51 @@
+# Last imported into DB: 2025-09-26 14:54:15
+master_day_number: 420
+arc_day_number: 4
+arc_id: arc_canticle_of_daniel
+arc_title: The Canticle of Daniel
+arc_number: 57
+day_title: Bless the Lord, All You Works
+anchor_image: You are with the three youths in the fiery furnace, unharmed,
+  watching them lift their hands in praise as they summon all creation to bless the Lord.
+primary_reading:
+  title: Daniel 3:46–90
+  reference:
+  url:
+secondary_reading:
+  - title: Psalm 148
+    reference:
+    url:
+  - title: Catechism of the Catholic Church
+    reference: 337–341
+    url: https://www.vatican.va/archive/ENG0015/__P1A.HTM
+  - title: Pope Francis, Laudato Si’
+    reference: §§72–77
+    url: /docs/readings/Pope_Francis_Laudato_Si.pdf
+meditative_points:
+  - "Hear the furnace roar—and then the soft “dew” that tames it.
+    Creation is not mute: mountains, rivers, beasts, and birds seem to answer the hymn, “Bless the Lord.”"
+  - "Watch the three youths turn every element into praise: fire that should destroy becomes a choir loft;
+    earth and sea are invited to bless God."
+  - Let your own breath join the cosmic chorus—one small voice within the great liturgy of all things.
+ejaculatory_prayer: Blessed are You, Lord, in all Your works.
+colloquy: Creator God, let my heart never be silent when Your creation sings.
+  Teach me to bless You in sun and shadow, in plenty and want.
+resolution: I will step outside and speak a short “Bless the Lord” over what I see—sky,
+  tree, or stone—consciously joining creation’s praise.
+tags:
+  thematic:
+    - eternal worship
+    - piety
+    - prayer
+    - glory and heaven
+  doctrinal:
+    - worship
+    - divine providence
+  virtue: []
+  mystical:
+    - heavenly liturgy
+    - divine presence
+  liturgical: []
+  typological: []
+  structural:
+    - canticle
