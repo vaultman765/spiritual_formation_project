@@ -1,0 +1,51 @@
+# Last imported into DB: 2025-09-28 21:36:59
+master_day_number: 438
+arc_day_number: 15
+arc_id: arc_book_of_job
+arc_title: The Book of Job
+arc_number: 58
+day_title: “If Only I Knew Where to Find Him”
+anchor_image: You walk with Job along a wind-scoured path outside the city.
+  He stretches his hands toward the horizon—east, west, north, south—longing to find God
+  and lay out his case, confident that God knows the way he takes.
+primary_reading:
+  title: Job 23
+  reference:
+  url:
+secondary_reading:
+  - title: Psalm 139
+    reference:
+    url:
+  - title: St. Augustine, Confessions
+    reference: Book X, ch. 1–3
+    url: /docs/readings/St_Augustine_Confessions.pdf
+meditative_points:
+  - "The ache of seeking: footsteps in dust, the sense of absence thick as heat."
+  - “He knows the way that I take”—trust glows like an ember under the ash of desolation.
+  - The desire to speak face-to-face becomes prayer itself, drawing the soul into honest presence.
+ejaculatory_prayer: “O God, you search me and you know me.”
+colloquy: Lord, when I cannot find you, find me. Turn my restless searching into steadfast communion;
+  let my steps follow the path your eyes already trace.
+resolution: Set ten quiet minutes today to pray with Job 23:10—repeat it slowly until one word rests in the heart.
+tags:
+  thematic:
+    - desire for god
+    - trust
+    - prayer
+  doctrinal:
+    - divine providence
+    - sanctification
+    - truth
+  virtue:
+    - perseverance
+    - faith
+    - hope
+  mystical:
+    - contemplation
+    - divine presence
+    - spiritual darkness
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - book of job

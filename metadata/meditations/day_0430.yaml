@@ -1,0 +1,47 @@
+# Last imported into DB: 2025-09-28 21:36:51
+master_day_number: 430
+arc_day_number: 7
+arc_id: arc_book_of_job
+arc_title: The Book of Job
+arc_number: 58
+day_title: Zophar’s Rebuke — Condemnation without Knowledge
+anchor_image: Under the white blaze of noon, Zophar leans forward on the edge of the ash heap, finger raised as he lectures;
+  Job sits motionless, eyes lowered, the wind lifting a veil of dust between them.
+primary_reading:
+  title: Job 11
+  reference:
+  url:
+secondary_reading:
+  - title: Matthew 7:1–5
+    reference:
+    url:
+  - title: Catechism of the Catholic Church
+    reference: §§2477–2478
+    url: https://www.vatican.va/archive/ENG0015/__P8K.HTM
+meditative_points:
+  - Hear Zophar’s sharp certainty strike the wounded air; feel how “answers” can harden into stones.
+  - Watch Job bear the weight of accusation, silence stretched between justice and mercy.
+  - Let the unseen God remain present in the dust—greater than our verdicts, nearer than our proofs.
+ejaculatory_prayer: Lord, deliver me from rash judgment.
+colloquy: Jesus, meek and humble of heart, quiet the impulse to condemn. Teach me to see as You see and to wait upon Your truth.
+resolution: Today refrain from any judgmental comment; replace it with one sincere prayer for the person instead.
+tags:
+  thematic:
+    - judgment
+    - suffering
+    - righteousness
+  doctrinal:
+    - divine providence
+    - truth
+  virtue:
+    - humility
+    - prudence
+    - mercy
+  mystical:
+    - silence
+    - interior cleansing
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - book of job

@@ -1,0 +1,48 @@
+# Last imported into DB: 2025-09-28 21:36:56
+master_day_number: 435
+arc_day_number: 12
+arc_id: arc_book_of_job
+arc_title: The Book of Job
+arc_number: 58
+day_title: Zophar’s Second Speech — Swift Retribution
+anchor_image: Night gathers as Zophar speaks with certainty about the swift downfall of the wicked.
+  You watch Job’s face in the firelight—tired, unconvinced—while Zophar’s words crackle like dry sticks.
+primary_reading:
+  title: Job 20
+  reference:
+  url:
+secondary_reading:
+  - title: Proverbs 11
+    reference:
+    url:
+  - title: Pope Benedict XVI, Spe Salvi
+    reference: §44
+    url: /docs/readings/Pope_Benedict_XVI_Spe_Salvi.pdf
+meditative_points:
+  - Human timing presses for quick justice; divine wisdom moves with a longer horizon.
+  - The heart wavers between craving instant vindication and trusting God’s patient judgments.
+ejaculatory_prayer: God of justice and mercy, teach me your timings.
+colloquy: Lord, save me from simplifying your ways to fit my fears.
+  Grant me a reverent patience before your judgments and a steadfast hope that does not demand signs.
+resolution: Practice patience today. Offer the waiting as an act of trust rather than complaint.
+tags:
+  thematic:
+    - judgment
+    - trust
+    - interior battle
+  doctrinal:
+    - divine providence
+    - truth
+    - justice of god
+  virtue:
+    - patience
+    - prudence
+    - trust
+  mystical:
+    - divine will
+    - inner watchfulness
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - book of job

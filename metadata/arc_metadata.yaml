@@ -595,7 +595,7 @@
     - joy
     - judgment
     - justice
-    - justice of God
+    - justice of god
     - lake of fire
     - last things
     - lent
@@ -1369,7 +1369,7 @@
     - judgment
     - judgment seat
     - justice
-    - justice of God
+    - justice of god
     - lazarus
     - light
     - love
@@ -4119,3 +4119,179 @@
     - Worship
     - Creation
     - Doxology
+- arc_id: arc_book_of_job
+  arc_title: The Book of Job
+  arc_number: 58
+  day_count: 21
+  master_day_range:
+    start: 424
+    end: 444
+  anchor_image:
+    - A quarry’s mouth opens into darkness. You and Job stand at the threshold as
+      miners’ lamps flicker below; veins of ore glint, but the deeper chambers vanish
+      into mystery.
+    - A storm gathers on the horizon. The younger Elihu steps forward—eyes bright,
+      voice urgent. Thunder murmurs as he speaks of God’s pedagogy in suffering and
+      the breath that gives understanding.
+    - 'At dawn you walk with Job past fields where prosperous households stir to life.
+      He gestures toward their ease and asks the hard question: why do the wicked
+      often thrive?'
+    - Dawn cools the ash heap as Job lifts his cracked voice toward the sky; his friends
+      sit rigid around him, the city’s gate far behind, a thin breeze carrying dust
+      over his shoulders.
+    - Dawn on the ash heap. The three friends sit facing Job. One rises - Eliphaz
+      - his cloak gathered, voice steady, ready to offer wisdom to the suffering just.
+    - Evening shadows lengthen; Job turns from his friends and looks past the walls
+      toward the horizon, his hands half-raised as though reaching for an unseen Advocate.
+    - From a ridge you and Job watch caravans move undisturbed, estates humming with
+      life below. His voice is steady but sorrowful as he names the violence the poor
+      endure and the untroubled sleep of oppressors.
+    - In the dim light of late afternoon, you lean toward Job as he rises from the
+      ash heap. His eyes, wet with grief, look beyond the horizon as he speaks of
+      a Redeemer who lives and whom he shall see with his own eyes.
+    - Late afternoon light slants across the ruins; Job’s gaze ranges beyond the city
+      walls as if measuring the brevity of days against the breadth of heaven.
+    - Midday glare on the ash heap. Bildad stands, hands clasped behind his back,
+      reciting proverbs with measured certainty as Job stares at the ground, dust
+      drifting from his hair.
+    - Morning light slants across the ash heap as Eliphaz approaches for a third time.
+      His words are polished and severe—naming hidden sins, promising gold if Job
+      will only repent. You feel the tension in the air as Job listens without protesting.
+    - Night gathers as Zophar speaks with certainty about the swift downfall of the
+      wicked. You watch Job’s face in the firelight—tired, unconvinced—while Zophar’s
+      words crackle like dry sticks.
+    - Night gathers; Job lifts his face to the first stars, as though searching the
+      heights for a Friend who knows.
+    - Night sky deepens. Bildad speaks briefly of human smallness; then Job lifts
+      his eyes and names thunder, sea, constellations—glimpses of a power that veils
+      itself. The stars seem nearer as his voice softens into awe.
+    - The ash heap at dusk. Job stands, hand raised toward heaven, swearing before
+      God. The friends fall silent as his words ring with gravity; the wind carries
+      the oath across the empty plain.
+    - The whirlwind descends. Dust and light coil as the Voice fills the air—sea’s
+      boundary, dawn’s cords, mountain goats, Orion. Job kneels, hand over mouth;
+      the world becomes temple.
+    - Under the white blaze of noon, Zophar leans forward on the edge of the ash heap,
+      finger raised as he lectures; Job sits motionless, eyes lowered, the wind lifting
+      a veil of dust between them.
+    - You remain by the ash heap as night falls. The stars are sharp and cold. After
+      long silence, Job opens his mouth and pours out his bitter cry into the dark.
+    - You sit on the ash heap beside Job as Bildad steps forward again. The wind lifts
+      the dust; his voice is sharp, describing the downfall of the wicked as if pointing
+      at Job. You feel the sting of words spoken without knowing a man’s heart.
+    - You sit on the ash heap outside the city with Job; the wind is still, the city
+      walls in the distance. Job’s torn cloak clings to him; his friends have come
+      and fall silent in grief beside him.
+    - You walk with Job along a wind-scoured path outside the city. He stretches his
+      hands toward the horizon—east, west, north, south—longing to find God and lay
+      out his case, confident that God knows the way he takes.
+  arc_summary: 'The Book of Job leads the soul into the mystery of suffering and divine
+    justice. Each day places the soul within a different scene: Job’s initial loss,
+    his friends’ speeches, his own laments and questions, Elihu’s intervention, and
+    finally God’s revelation from the whirlwind. The arc moves from bewilderment to
+    honest lament, from searching for answers to silent awe before the divine mystery.
+    Job’s journey models the path of faith in trial: steadfast integrity, courageous
+    questioning, patient endurance, and ultimately reverent worship. The arc invites
+    the soul to trust in God’s wisdom and justice, even when they remain hidden.'
+  primary_reading:
+    - Job 11
+    - Job 12–14
+    - Job 15–17
+    - Job 18
+    - Job 19
+    - Job 1–2
+    - Job 20
+    - Job 21
+    - Job 22
+    - Job 23
+    - Job 24
+    - Job 25–26
+    - Job 27
+    - Job 28
+    - Job 3
+    - Job 32–37
+    - Job 38–42
+    - Job 4–5
+    - Job 6–7
+    - Job 8
+    - Job 9–10
+  tags:
+    - awe
+    - book of job
+    - charity
+    - christology
+    - communion of saints
+    - compassion
+    - contemplation
+    - conversion
+    - courage
+    - darkness
+    - death
+    - desire for god
+    - detachment
+    - divine adoption
+    - divine hiddenness
+    - divine mysteries
+    - divine presence
+    - divine providence
+    - divine silence
+    - divine will
+    - docility
+    - eastertide
+    - eschatology
+    - faith
+    - fear of the lord
+    - glory and heaven
+    - grace
+    - high priest
+    - honesty
+    - hope
+    - humility
+    - inner watchfulness
+    - intercession
+    - interior agony
+    - interior battle
+    - interior cleansing
+    - interior life
+    - judgment
+    - justice
+    - justice of god
+    - knowledge
+    - lent
+    - light
+    - light and darkness
+    - mediation
+    - mercy
+    - mystery
+    - ordinary time
+    - patience
+    - perseverance
+    - praise
+    - prayer
+    - prudence
+    - purification
+    - repentance
+    - resurrection
+    - resurrection of body
+    - reverence
+    - righteousness
+    - salvation
+    - sanctification
+    - silence
+    - sin
+    - spiritual darkness
+    - suffering
+    - surrender
+    - transformation
+    - trinity
+    - trust
+    - truth
+    - union
+    - union with christ
+    - wisdom
+    - works of mercy
+    - worship
+  card_tags:
+    - Suffering
+    - Divine Justice
+    - Faith

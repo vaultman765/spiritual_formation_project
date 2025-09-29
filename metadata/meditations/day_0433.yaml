@@ -1,0 +1,50 @@
+# Last imported into DB: 2025-09-28 21:36:54
+master_day_number: 433
+arc_day_number: 10
+arc_id: arc_book_of_job
+arc_title: The Book of Job
+arc_number: 58
+day_title: Bildad’s Verdict — The Fate of the Wicked
+anchor_image: You sit on the ash heap beside Job as Bildad steps forward again.
+  The wind lifts the dust; his voice is sharp, describing the downfall of the wicked as if pointing at Job.
+  You feel the sting of words spoken without knowing a man’s heart.
+primary_reading:
+  title: Job 18
+  reference:
+  url:
+secondary_reading:
+  - title: Psalm 37
+    reference:
+    url:
+  - title: Catechism of the Catholic Church
+    reference: §§1033–1038
+    url: https://www.vatican.va/archive/ENG0015/_P2O.HTM
+meditative_points:
+  - Bildad’s images of darkness closing in, the lamp of the wicked snuffed out, echo through the ruin where you sit with Job.
+  - The distance between human verdicts and God’s hidden knowledge presses on the heart.
+  - Job’s silent endurance speaks more truly than the many words that condemn him.
+ejaculatory_prayer: “Lord, you alone know the heart; shelter me in your justice.”
+colloquy: Lord, I feel the weight of judgments—others’ and my own. You see what men cannot.
+  Teach me to bear misunderstanding without bitterness, and to wait for your light.
+resolution: Refrain today from speaking a negative judgment about anyone; instead, pray a brief blessing for the person in silence.
+tags:
+  thematic:
+    - judgment
+    - suffering
+    - interior battle
+  doctrinal:
+    - divine providence
+    - justice of god
+    - eschatology
+  virtue:
+    - humility
+    - prudence
+    - patience
+  mystical:
+    - divine hiddenness
+    - interior cleansing
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - book of job

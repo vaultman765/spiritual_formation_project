@@ -1,0 +1,47 @@
+# Last imported into DB: 2025-09-28 21:44:20
+master_day_number: 424
+arc_day_number: 1
+arc_id: arc_book_of_job
+arc_title: The Book of Job
+arc_number: 58
+day_title: The Just Man Tested
+anchor_image: You sit on the ash heap outside the city with Job; the wind is still, the city walls in the distance.
+  Job’s torn cloak clings to him; his friends have come and fall silent in grief beside him.
+primary_reading:
+  title: Job 1–2
+  reference:
+  url:
+secondary_reading:
+  - title: St. Gregory the Great, Morals on the Book of Job (Preface)
+    reference: Part I - The Preface §§1–3
+    url: /docs/readings/St_Gregory_the_Great_Morals_on_the_Book_of_Job.pdf
+  - title: St. John Paul II, Salvifici Doloris
+    reference: §§8–14
+    url: /docs/readings/St_Pope_JP2_Salvifici_Doloris.pdf
+  - title: James 5:10–11
+    reference:
+    url:
+meditative_points:
+  - See Job fall to the ground, tear his mantle, and bless the Name - sorrow and adoration held together in one breath.
+  - Sit within the seven days of silence; hear only the dust, the breathing of friends, and the unspoken question before God.
+ejaculatory_prayer: Blessed be the Name of the Lord, now and forever.
+colloquy: Lord, You give and You take away. Hold my heart within Your will when I cannot understand Your ways.
+  Teach me to worship in the dust.
+resolution: Accept today’s first contradiction without complaint; make a quiet act of praise in the moment it stings.
+tags:
+  thematic:
+    - suffering
+  doctrinal:
+    - divine providence
+  virtue:
+    - patience
+    - trust
+    - perseverance
+  mystical:
+    - purification
+  liturgical:
+    - lent
+    - ordinary time
+  typological: []
+  structural:
+    - book of job
