@@ -4295,3 +4295,69 @@
     - Suffering
     - Divine Justice
     - Faith
+- arc_id: arc_psalms_of_contrition
+  arc_title: Psalms of Contrition
+  arc_number: 59
+  day_count: 7
+  master_day_range:
+    start: 445
+    end: 451
+  anchor_image:
+    - You are kneeling with David, contrite and brokenhearted, pouring out the psalms
+      of repentance before God.
+  arc_summary: This arc draws the soul into the penitential psalms, placing us alongside
+    David in his cries of repentance and trust. Each day, the psalmist’s voice becomes
+    our own as we beg mercy, confess sin, and cling to God’s steadfast love. The meditations
+    trace the full path of contrition — from guilt and lament, to cleansing and restoration,
+    to confidence in God’s forgiveness. The soul is purified, humbled, and renewed
+    in grace, learning to wait on the Lord as watchmen for the dawn.
+  primary_reading:
+    - Psalm 102
+    - Psalm 130
+    - Psalm 143
+    - Psalm 32
+    - Psalm 38
+    - Psalm 51
+    - Psalm 6
+  tags:
+    - abandonment
+    - compassion
+    - confession
+    - contrition
+    - conversion
+    - divine mercy
+    - divine providence
+    - divine will
+    - forgiveness
+    - grace
+    - honesty
+    - hope
+    - humility
+    - interior cleansing
+    - israel in desert
+    - lent
+    - mercy
+    - obedience
+    - ordinary time
+    - paschal lamb
+    - perseverance
+    - prayer
+    - psalm
+    - purification
+    - reconciliation
+    - repentance
+    - salvation
+    - sanctification
+    - sin
+    - sorrow
+    - spiritual captivity
+    - submission
+    - suffering
+    - temple
+    - trust
+    - union
+    - wound of sin
+  card_tags:
+    - Contrition
+    - Repentance
+    - Mercy

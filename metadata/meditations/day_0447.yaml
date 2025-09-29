@@ -1,0 +1,45 @@
+# Last imported into DB: 2025-09-29 09:59:31
+master_day_number: 447
+arc_day_number: 3
+arc_id: arc_psalms_of_contrition
+arc_title: Psalms of Contrition
+arc_number: 59
+day_title: "Psalm 38: My Guilt Overwhelms Me"
+anchor_image: You are kneeling with David, contrite and brokenhearted,
+  pouring out the psalms of repentance before God.
+primary_reading:
+  title: Psalm 38
+  reference:
+  url:
+secondary_reading:
+  - title: St. Augustine, Expositions on the Psalms
+    reference: Psalm 38
+    url: https://www.newadvent.org/fathers/1801038.htm
+meditative_points:
+  - You feel the heaviness of David’s guilt, “a burden too heavy to bear,” pressing into your soul.
+  - You witness friends withdrawing and enemies plotting, isolation deepening the pain of sin.
+  - "You turn with David to God alone: “Do not forsake me, O Lord, my God.”"
+ejaculatory_prayer: “Do not forsake me, O Lord, my God.”
+colloquy: Lord, when sin isolates me, do not let me despair. Draw near, lift my burden, and be my salvation.
+resolution: I will pray “Do not forsake me, O Lord” whenever I feel weighed down today.
+tags:
+  thematic:
+    - contrition
+    - suffering
+    - abandonment
+  doctrinal:
+    - repentance
+    - divine mercy
+    - sin
+  virtue:
+    - humility
+    - perseverance
+    - hope
+  mystical:
+    - sorrow
+    - purification
+  liturgical:
+    - lent
+  typological: []
+  structural:
+    - psalm
