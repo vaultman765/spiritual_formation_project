@@ -32,7 +32,7 @@ const tagDescriptions: Record<string, Record<string, string>> = {
     "incarnation": "The mystery of God the Son becoming man in the womb of the Virgin Mary.",
     "joy in suffering": "The paradoxical grace of rejoicing in trials because of union with Christ’s Cross.",
     "judgment": "God’s definitive evaluation of each soul’s life and response to grace.",
-    "justice of God": "The perfect moral order and holiness by which God gives each their due.",
+    "justice of god": "The perfect moral order and holiness by which God gives each their due.",
     "kingship of christ": "Christ’s authority over all creation as divine Lord and Savior.",
     "love of god": "The central commandment and highest vocation of man: to love God with all one’s heart.",
     "mary": "The Mother of God, sinless and full of grace, model of discipleship and Queen of Heaven.",

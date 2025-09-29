@@ -1,0 +1,39 @@
+# Last imported into DB: 2025-09-28 21:36:46
+master_day_number: 425
+arc_day_number: 2
+arc_id: arc_book_of_job
+arc_title: The Book of Job
+arc_number: 58
+day_title: The Cry of Lament
+anchor_image: You remain by the ash heap as night falls. The stars are sharp and cold.
+  After long silence, Job opens his mouth and pours out his bitter cry into the dark.
+primary_reading:
+  title: Job 3
+  reference:
+  url:
+secondary_reading:
+  - title: Psalm 22:1–11
+    reference:
+    url:
+  - title: St. John of the Cross, Dark Night of the Soul
+    reference: Book I, ch. IX
+    url: /docs/readings/St_John_of_the_Cross_Dark_Night_of_the_Soul.pdf
+meditative_points:
+  - Hear Job curse the day of his birth; feel the weight of words that do not deny God but bring anguish before Him.
+  - Taste the edge of night where light seems like darkness; notice how lament still presumes that God hears.
+  - Let the rawness of the cry strip pious masks; remain with Job in truth before the living God.
+ejaculatory_prayer: O God, hear my cry in the night.
+colloquy: Father, I bring You my unvarnished sorrow. Receive it as prayer; do not let my grief close my heart to Your mercy.
+resolution: Pray one psalm of lament slowly today, allowing one line to become your prayer.
+tags:
+  thematic: []
+  doctrinal: []
+  virtue:
+    - perseverance
+  mystical:
+    - divine silence
+  liturgical:
+    - lent
+  typological: []
+  structural:
+    - book of job

@@ -1,0 +1,52 @@
+# Last imported into DB: 2025-09-28 21:42:25
+master_day_number: 443
+arc_day_number: 20
+arc_id: arc_book_of_job
+arc_title: The Book of Job
+arc_number: 58
+day_title: Elihu’s Zeal — Listening for the Breath in the Storm
+anchor_image: A storm gathers on the horizon. The younger Elihu steps forward—eyes bright, voice urgent.
+  Thunder murmurs as he speaks of God’s pedagogy in suffering and the breath that gives understanding.
+primary_reading:
+  title: Job 32–37
+  reference:
+  url:
+secondary_reading:
+  - title: 1 Kings 19:11–13
+    reference:
+    url:
+  - title: Catechism of the Catholic Church
+    reference: §§1783–1785
+    url: https://www.vatican.va/archive/ENG0015/__P60.HTM
+  - title: St. John Cassian, Conferences
+    reference: II.2–4
+    url: https://www.newadvent.org/fathers/350802.htm
+meditative_points:
+  - Youthful zeal meets ancient sorrow—the air prickles with expectancy.
+  - “The breath of the Almighty gives understanding”—wisdom descends, it is not seized.
+  - "Lightning sketches the clouds: correction that is mercy prepares the ear for God’s voice."
+ejaculatory_prayer: “Breathe in me, O Holy Spirit.”
+colloquy: Lord, purify my zeal; make it patient, teachable, and kind. Form my conscience to listen more than to speak.
+resolution: Practice one deliberate moment of silence before each important decision today;
+  whisper “Speak, Lord, your servant is listening.”
+tags:
+  thematic:
+    - suffering
+    - prayer
+    - transformation
+  doctrinal:
+    - grace
+    - divine providence
+  virtue:
+    - prudence
+    - docility
+    - patience
+  mystical:
+    - divine presence
+    - purification
+    - inner watchfulness
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - book of job

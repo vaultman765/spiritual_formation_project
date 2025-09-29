@@ -60,9 +60,9 @@
 | 54        | 390–402   | Parables of the Kingdom of Heaven              | 13        | ✅    | Christ teaching in parables to the crowd              | Matthew 13, etc.         | Ordinary Time | ✅ Complete |
 | 55        | 403–409   | The Seven Deadly Sins                          | 7   | ✅ | Various per each reading/sin            | Various Scriptures        | Lent          | ✅ Complete |
 | 56        | 410–416   | The Seven Capital Virtues                     | 7   | ✅ | Various per each reading/virtue                | Various Scriptures        | OT / Lent     | ✅ Complete |
-| 57        | 417–421   | The Canticle of Daniel                         | 5   | ✅ | The Three Men praising God in the fiery furnace       | Daniel 3:52–90 (Greek)    | Eastertide    | ✅ Complete |
-| 58        | 422–435   | The Book of Job                                | 14  | ⏳ | Job sitting on ashes under the heavens                | Job 1–42 (full book)      | Ordinary Time | 🔜 Planned |
-| 59        | 436–442   | Psalms of Contrition                           | 7   | ⏳ | David bowed low before the Ark                        | Psalms 6, 32, 38, 51, 102, 130, 143 | Lent | 🔜 Planned |
+| 57        | 417–423   | The Canticle of Daniel                         | 7   | ✅ | The Three Men praising God in the fiery furnace       | Daniel 3:52–90 (Greek)    | Eastertide    | ✅ Complete |
+| 58        | 424–444   | The Book of Job                                | 21  | ✅ | Job sitting on ashes under the heavens                | Job 1–42 (full book)      | Ordinary Time | ✅ Complete |
+| 59        | 445–451   | Psalms of Contrition                           | 7   | ⏳ | David bowed low before the Ark                        | Psalms 6, 32, 38, 51, 102, 130, 143 | Lent | 🔜 Planned |
 
 ## 📚 Section 2: Roadmap – Thematic Arc Library (Expanded)
 

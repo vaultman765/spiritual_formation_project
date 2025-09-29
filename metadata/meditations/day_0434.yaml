@@ -1,0 +1,50 @@
+# Last imported into DB: 2025-09-28 21:36:55
+master_day_number: 434
+arc_day_number: 11
+arc_id: arc_book_of_job
+arc_title: The Book of Job
+arc_number: 58
+day_title: My Redeemer Lives
+anchor_image: In the dim light of late afternoon, you lean toward Job as he rises from the ash heap.
+  His eyes, wet with grief, look beyond the horizon as he speaks of a Redeemer who lives and whom he shall see with his own eyes.
+primary_reading:
+  title: Job 19
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§988–1004
+    url: https://www.vatican.va/archive/ENG0015/__P2G.HTM
+  - title: St. Augustine, The City of God
+    reference: Book 22, Chapter 29
+    url: https://www.newadvent.org/fathers/120122.htm
+meditative_points:
+  - "The words rise from dust and sores into hope: a living Redeemer beyond the present ruin."
+  - “With my own eyes” - the body, so wounded now, becomes the place of future beholding.
+  - Job’s cry parts the veil of accusation and sets the heart toward a face-to-face encounter.
+ejaculatory_prayer: “Living Redeemer, fix my eyes on you.”
+colloquy: Jesus, you are the Redeemer Job longed for. In my wounds and losses, anchor me in the promise that I shall see you.
+  Let this hope correct my fears and sweeten my endurance.
+resolution: Memorize Job 19:25–27 and pray with it three times today - morning, midday, and evening.
+tags:
+  thematic:
+    - resurrection
+    - trust
+  doctrinal:
+    - resurrection of body
+    - salvation
+    - sanctification
+  virtue:
+    - faith
+    - hope
+    - perseverance
+  mystical:
+    - divine adoption
+    - union with christ
+    - light
+  liturgical:
+    - eastertide
+    - ordinary time
+  typological: []
+  structural:
+    - book of job

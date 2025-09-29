@@ -1,0 +1,91 @@
+arc_id: arc_book_of_job
+arc_title: The Book of Job
+arc_number: 58
+day_count: 21
+master_day_range:
+  start: 424
+  end: 444
+tags:
+  thematic:
+    - conversion
+    - death
+    - desire for god
+    - fear of the lord
+    - glory and heaven
+    - interior agony
+    - interior battle
+    - interior life
+    - judgment
+    - knowledge
+    - light and darkness
+    - mercy
+    - praise
+    - prayer
+    - resurrection
+    - righteousness
+    - salvation
+    - suffering
+    - transformation
+    - trust
+  doctrinal:
+    - christology
+    - communion of saints
+    - divine mysteries
+    - divine providence
+    - eschatology
+    - grace
+    - justice of god
+    - mediation
+    - repentance
+    - resurrection of body
+    - salvation
+    - sanctification
+    - sin
+    - trinity
+    - truth
+    - wisdom
+    - works of mercy
+    - worship
+  virtue:
+    - charity
+    - compassion
+    - courage
+    - detachment
+    - faith
+    - honesty
+    - hope
+    - humility
+    - justice
+    - mercy
+    - patience
+    - perseverance
+    - prudence
+    - surrender
+    - trust
+  mystical:
+    - awe
+    - contemplation
+    - darkness
+    - divine adoption
+    - divine hiddenness
+    - divine presence
+    - divine silence
+    - divine will
+    - inner watchfulness
+    - intercession
+    - interior cleansing
+    - light
+    - mystery
+    - purification
+    - silence
+    - spiritual darkness
+    - union
+    - union with christ
+  liturgical:
+    - eastertide
+    - lent
+    - ordinary time
+  typological:
+    - high priest
+  structural:
+    - book of job

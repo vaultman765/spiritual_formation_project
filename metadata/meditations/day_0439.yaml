@@ -1,0 +1,50 @@
+# Last imported into DB: 2025-09-28 21:42:23
+master_day_number: 439
+arc_day_number: 16
+arc_id: arc_book_of_job
+arc_title: The Book of Job
+arc_number: 58
+day_title: Why Do the Wicked Seem Secure?
+anchor_image: From a ridge you and Job watch caravans move undisturbed, estates humming with life below.
+  His voice is steady but sorrowful as he names the violence the poor endure and the
+  untroubled sleep of oppressors.
+primary_reading:
+  title: Job 24
+  reference:
+  url:
+secondary_reading:
+  - title: Habakkuk 1:2–4; 2:3–4
+    reference:
+    url:
+  - title: Catechism of the Catholic Church
+    reference: §314
+    url: https://www.vatican.va/archive/ENG0015/__P19.HTM
+meditative_points:
+  - "The contrast pierces: hidden crimes below; a sky that says nothing—for now."
+  - Naming injustice before God becomes intercession, not bitterness.
+  - "Faith leans into the promise: the vision hastens to fulfillment—wait for it."
+ejaculatory_prayer: “God of the poor, let your justice dawn.”
+colloquy: Father, keep my heart from envy and my hands from violence.
+  Teach me to suffer evil with patience and to do good with courage until your justice is revealed.
+resolution: Perform one concrete work of mercy today (alms, listening to someone burdened, or helping an overlooked person).
+tags:
+  thematic:
+    - suffering
+    - righteousness
+    - justice
+  doctrinal:
+    - divine providence
+    - works of mercy
+    - eschatology
+  virtue:
+    - justice
+    - compassion
+    - courage
+  mystical:
+    - intercession
+    - inner watchfulness
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - book of job

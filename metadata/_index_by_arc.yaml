@@ -226,3 +226,7 @@ arc_canticle_of_daniel:
   arc_number: 57
   start_day: 417
   end_day: 423
+arc_book_of_job:
+  arc_number: 58
+  start_day: 424
+  end_day: 444

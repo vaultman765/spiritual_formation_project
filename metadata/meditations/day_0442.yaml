@@ -1,0 +1,49 @@
+# Last imported into DB: 2025-09-28 21:37:04
+master_day_number: 442
+arc_day_number: 19
+arc_id: arc_book_of_job
+arc_title: The Book of Job
+arc_number: 58
+day_title: The Hidden Path of Wisdom
+anchor_image: A quarry’s mouth opens into darkness. You and Job stand at the
+  threshold as miners’ lamps flicker below; veins of ore glint, but the deeper
+  chambers vanish into mystery.
+primary_reading:
+  title: Job 28
+  reference:
+  url:
+secondary_reading:
+  - title: Wisdom 7:24–30
+    reference:
+    url:
+  - title: Catechism of the Catholic Church
+    reference: §299
+    url: https://www.vatican.va/archive/ENG0015/__P19.HTM
+meditative_points:
+  - Human craft plumbs the earth; yet the fear of the Lord alone opens wisdom’s door.
+  - The Name spoken in reverence becomes light where no lamp can reach.
+  - The soul tastes silence where wisdom dwells—“God understands the way to it.”
+ejaculatory_prayer: “Lord, teach me holy fear—the beginning of wisdom.”
+colloquy: Father, I seek answers and miss You. Draw me past curiosity into worship; let your gaze become my understanding.
+resolution: Read Job 28:28 slowly three times today; bow your head each time you utter “fear of the Lord.”
+tags:
+  thematic:
+    - fear of the lord
+    - knowledge
+    - light and darkness
+  doctrinal:
+    - wisdom
+    - divine mysteries
+  virtue:
+    - humility
+    - prudence
+    - reverence
+  mystical:
+    - contemplation
+    - mystery
+    - light
+  liturgical:
+    - ordinary time
+  typological: []
+  structural:
+    - book of job
