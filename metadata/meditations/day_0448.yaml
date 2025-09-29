@@ -1,0 +1,48 @@
+# Last imported into DB: 2025-09-29 10:02:29
+master_day_number: 448
+arc_day_number: 4
+arc_id: arc_psalms_of_contrition
+arc_title: Psalms of Contrition
+arc_number: 59
+day_title: "Psalm 51: A Broken Spirit You Will Not Despise"
+anchor_image: You are kneeling with David, contrite and brokenhearted,
+  pouring out the psalms of repentance before God.
+primary_reading:
+  title: Psalm 51
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§1422–1424
+    url: https://www.vatican.va/archive/ENG0015/__P46.HTM
+  - title: St. Augustine, Expositions on the Psalms
+    reference: Psalm 51
+    url: https://www.newadvent.org/fathers/1801051.htm
+meditative_points:
+  - "Listen to David’s cry: “Create in me a clean heart, O God.”"
+  - You watch the sinner broken in spirit, yet confident that God will not despise his contrite heart.
+  - You join David in promising to teach transgressors God’s ways after being restored.
+ejaculatory_prayer: “Create in me a clean heart, O God.”
+colloquy: Lord, only Your mercy can cleanse my deepest stains. Renew me, so my lips may sing Your praise again.
+resolution: I will recite Psalm 51 slowly in prayer tonight, letting its words become my own.
+tags:
+  thematic:
+    - contrition
+    - mercy
+    - conversion
+  doctrinal:
+    - confession
+    - repentance
+    - grace
+  virtue:
+    - humility
+    - trust
+  mystical:
+    - purification
+    - divine mercy
+  liturgical:
+    - lent
+  typological:
+    - paschal lamb
+  structural:
+    - psalm

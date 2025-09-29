@@ -1,0 +1,53 @@
+arc_id: arc_psalms_of_contrition
+arc_title: Psalms of Contrition
+arc_number: 59
+day_count: 7
+master_day_range:
+  start: 445
+  end: 451
+tags:
+  thematic:
+    - abandonment
+    - contrition
+    - conversion
+    - mercy
+    - prayer
+    - salvation
+    - submission
+    - suffering
+    - trust
+    - wound of sin
+  doctrinal:
+    - confession
+    - divine providence
+    - grace
+    - reconciliation
+    - repentance
+    - salvation
+    - sanctification
+    - sin
+  virtue:
+    - compassion
+    - forgiveness
+    - honesty
+    - hope
+    - humility
+    - obedience
+    - perseverance
+    - trust
+  mystical:
+    - divine mercy
+    - interior cleansing
+    - purification
+    - sorrow
+    - union
+  liturgical:
+    - lent
+    - ordinary time
+  typological:
+    - israel in desert
+    - paschal lamb
+    - spiritual captivity
+    - temple
+  structural:
+    - psalm

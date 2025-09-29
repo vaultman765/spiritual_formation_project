@@ -1,0 +1,46 @@
+# Last imported into DB: 2025-09-29 09:59:33
+master_day_number: 450
+arc_day_number: 6
+arc_id: arc_psalms_of_contrition
+arc_title: Psalms of Contrition
+arc_number: 59
+day_title: "Psalm 130: Out of the Depths I Cry"
+anchor_image: You are kneeling with David, contrite and brokenhearted,
+  pouring out the psalms of repentance before God.
+primary_reading:
+  title: Psalm 130
+  reference:
+  url:
+secondary_reading:
+  - title: Pope Benedict XVI, General Audience on Psalm 130
+    reference: 19 October 2005
+    url: /docs/readings/Pope_Benedict_XVI_General_Audience_Psalm_130_20051019.pdf
+meditative_points:
+  - "You descend into the depths of guilt with David’s cry: “Out of the depths I cry to You, O Lord.”"
+  - You wait with the watchman for dawn, trusting in God’s word of forgiveness.
+  - You glimpse redemption promised to Israel, overflowing with mercy.
+ejaculatory_prayer: “Out of the depths I cry to You, O Lord.”
+colloquy: Lord, I wait for You more than watchmen for the morning. Let Your mercy dawn on my soul.
+resolution: I will repeat this ejaculatory prayer whenever I feel darkness or despair today.
+tags:
+  thematic:
+    - contrition
+    - mercy
+    - hope
+  doctrinal:
+    - repentance
+    - grace
+    - salvation
+  virtue:
+    - humility
+    - hope
+    - trust
+  mystical:
+    - purification
+    - divine mercy
+  liturgical:
+    - lent
+  typological:
+    - israel in desert
+  structural:
+    - psalm

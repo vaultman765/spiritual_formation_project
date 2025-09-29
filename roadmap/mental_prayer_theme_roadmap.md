@@ -62,7 +62,7 @@
 | 56        | 410–416   | The Seven Capital Virtues                     | 7   | ✅ | Various per each reading/virtue                | Various Scriptures        | OT / Lent     | ✅ Complete |
 | 57        | 417–423   | The Canticle of Daniel                         | 7   | ✅ | The Three Men praising God in the fiery furnace       | Daniel 3:52–90 (Greek)    | Eastertide    | ✅ Complete |
 | 58        | 424–444   | The Book of Job                                | 21  | ✅ | Job sitting on ashes under the heavens                | Job 1–42 (full book)      | Ordinary Time | ✅ Complete |
-| 59        | 445–451   | Psalms of Contrition                           | 7   | ⏳ | David bowed low before the Ark                        | Psalms 6, 32, 38, 51, 102, 130, 143 | Lent | 🔜 Planned |
+| 59        | 445–451   | Psalms of Contrition                           | 7   | ✅ | David bowed low before the Ark                        | Psalms 6, 32, 38, 51, 102, 130, 143 | Lent | ✅ Complete |
 
 ## 📚 Section 2: Roadmap – Thematic Arc Library (Expanded)
 
@@ -142,7 +142,7 @@ placement within the spiritual stages (Purification, Illumination, Union), and d
 
 | Arc Title                                 | Est. Length | Liturgical Season                    | Journey Stage                     | Notes                                                                                                                                                       |
 | ----------------------------------------- | ----------- | ------------------------------------ | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **The Stations of the Cross**             | 14 days     | Lent / Fridays                       | Purification                      | One station per day. Ideal for Lent or Fridays year-round. Affective, bodily, and richly meditative. Can also be adapted to 7 key stations for shorter arc. |
+| **The Stations of the Cross**             | 14 days     | Lent / Fridays                       | Purification                      | One station per day. Ideal for Lent or Fridays year-round. Affective, bodily, and richly meditative. |
 | **The Seven Last Words**                  | 7 days      | Good Friday                          | Transition (Purification → Union) | Each word of Christ on the Cross becomes a day of reflection. Profoundly personal and theological. Great for Holy Week.                                     |
 | **The Chaplet of Divine Mercy**           | 3–5 days    | Easter Octave / Divine Mercy Sunday  | Illumination → Union              | Could break into segments: mercy, trust, reparation. Anchored in Christ’s revelations to St. Faustina.                                                      |
 | **The Memorare**                          | 1–3 days    | Any                                  | Illumination                      | A short and beautiful Marian arc — rich in trust, intercession, and motherly closeness.                                                                     |
@@ -157,15 +157,15 @@ placement within the spiritual stages (Purification, Illumination, Union), and d
 
 | Arc # | Title                                    | Est. Days | Liturgical Fit                | Flow/Placement Rationale                                                | Notes                                                                |
 | ----- | ---------------------------------------- | --------- | ----------------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| 59    | The Examination of Conscience            | 3         | Lent / Retreat                | Interior self-review for daily conversion                               | Practical and method-based; good interlude before deeper arcs        |
-| 60    | Discerning Spirits (Ignatian Principles) | 6         | Retreat / Lent                | Equips soul with discernment for interior growth                        | Transitions well into deeper mystical arcs                           |
-| 61    | NEED ONE FOR HERE                       |
-| 62    | The Fire of Divine Love                  | 4         | Pentecost / Any               | Culmination of purification and interior surrender                      | Could close the section with affective union and flame of mission    |
-| 63    | Mortification and the Interior Cross     | 5         | Lent / Ember Days             | Deepens detachment after discernment; prepares for mystical light       | Can include John of the Cross and desert themes                      |
-| 64    | The Desert Fathers – Sayings & Themes    | 6         | Lent / Retreat                | Complements interior battle with humility, radical simplicity           | Pithy, aphoristic, and challenging. Great affective-mystical blend   |
-| 65    | The Dark Night of the Soul               | 6         | Lent / Desolation             | Key passive purification arc; bridges into union and divine abandonment | Needs proper framing for encouragement — not despair                 |
-| 66    | Union with the Divine Will               | 4         | Ordinary Time / Marian Feasts | Capstone of detachment and trust                                        | Anchored in “Thy will be done.” Pairs beautifully with interior arcs |
-| 67    | NEED ONE FOR HERE              | 6         |
+| 60    | The Examination of Conscience            | 3         | Lent / Retreat                | Interior self-review for daily conversion                               | Practical and method-based; good interlude before deeper arcs        |
+| 61    | Discerning Spirits (Ignatian Principles) | 6         | Retreat / Lent                | Equips soul with discernment for interior growth                        | Transitions well into deeper mystical arcs                           |
+| 62    | NEED ONE FOR HERE                       |
+| 63    | The Fire of Divine Love                  | 4         | Pentecost / Any               | Culmination of purification and interior surrender                      | Could close the section with affective union and flame of mission    |
+| 64    | Mortification and the Interior Cross     | 5         | Lent / Ember Days             | Deepens detachment after discernment; prepares for mystical light       | Can include John of the Cross and desert themes                      |
+| 65    | The Desert Fathers – Sayings & Themes    | 6         | Lent / Retreat                | Complements interior battle with humility, radical simplicity           | Pithy, aphoristic, and challenging. Great affective-mystical blend   |
+| 66    | The Dark Night of the Soul               | 6         | Lent / Desolation             | Key passive purification arc; bridges into union and divine abandonment | Needs proper framing for encouragement — not despair                 |
+| 67    | Union with the Divine Will               | 4         | Ordinary Time / Marian Feasts | Capstone of detachment and trust                                        | Anchored in “Thy will be done.” Pairs beautifully with interior arcs |
+| 68    | NEED ONE FOR HERE              | 6         |
 | 69    | The Regina Caeli                         | 3         | Easter Season                 | Joyful conclusion; post-purification rejoicing in resurrection          | Marian finale of praise, beauty, and exaltation                      |
 
 ## 📜 Section 3b Planning Table for prebuilt journeys
@@ -175,7 +175,8 @@ placement within the spiritual stages (Purification, Illumination, Union), and d
 | Arc # | Title                                    | Est. Days | Liturgical Fit                | Flow/Placement  |
 | Notes  |
 | ----- | ---------------------------------------- | --------- | ----------------------------- | --------- | ---- |
-| Arc 59 | **The Psalms – Praise and Thanksgiving**   | ~25–30 days | Ordinary Time / Feasts | Union  
+| Arc 59 | **The Psalms - Contrition**                 | 7 days | OT | Contrition
+| Arc TBD | **The Psalms – Praise and Thanksgiving**   | ~25–30 days | Ordinary Time / Feasts | Union  
 | Psalms of joy, blessing, creation praise. Part of 150-day Psalter journey. |
 | Arc TBD | **The Psalms – Lament and Petition**       | ~25–30 days | Lent / Trials          | Purification    |
 | Psalms of complaint, sorrow, exile. Part of 150-day Psalter journey. |
@@ -187,9 +188,7 @@ placement within the spiritual stages (Purification, Illumination, Union), and d
 | Psalms like 1, 19, 119. Part of 150-day Psalter journey. |
 | Arc TBD | **The Psalms – Pilgrimage and Ascent**     | ~15 days    | Lent / OT              | Purification → Union |
 | Ascent psalms (120–134) and pilgrimage psalms. Part of 150-day Psalter journey. |
-| Arc TBD | **The Parables of Christ – Complete Journey** | 40–60 days | Ordinary Time          | Illumination    |
-| Master prebuilt journey combining all parable arcs (Kingdom, Forgiveness, Loss, Nature, Exemplary). |
-| Arc TBD | **The Complete Psalter Journey**           | 150 days    | Any                    | All stages      |
+| Arc TBD | **The Complete Psalter Journey (Prebuilt Journey)**           | 150 days    | Any                    | All stages      |
 | Combines all the psalm arcs into a continuous 150-day journey through the entire Psalter. |
 
 ### Christ's Parables

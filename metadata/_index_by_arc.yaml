@@ -230,3 +230,7 @@ arc_book_of_job:
   arc_number: 58
   start_day: 424
   end_day: 444
+arc_psalms_of_contrition:
+  arc_number: 59
+  start_day: 445
+  end_day: 451
