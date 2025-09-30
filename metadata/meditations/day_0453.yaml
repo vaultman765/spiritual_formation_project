@@ -1,0 +1,48 @@
+# Last imported into DB: 2025-09-29 22:42:30
+master_day_number: 453
+arc_day_number: 2
+arc_id: arc_examination_of_conscience
+arc_title: The Examination of Conscience
+arc_number: 60
+day_title: Sins of Commission
+anchor_image: You are kneeling in silence before the crucifix.The light of Christ’s gaze searches your soul.
+  His wounds are open, His eyes fixed on you in love, inviting you to honesty and return.
+primary_reading:
+  title: Hebrews 4:1–13
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§1454–1456
+    url: https://www.vatican.va/archive/ENG0015/__P4D.HTM
+meditative_points:
+  - The Word pierces “to the division of soul and spirit”
+  - Each sin of word, thought, and deed flashes before His light, demanding acknowledgment.
+  - Nothing is hidden; every careless word and every selfish act is laid bare before His love.
+ejaculatory_prayer: “Jesus, have mercy on my sins of thought, word, and deed.”
+colloquy: Jesus, I cannot hide from Your truth. Show me the places where I failed to love You and my neighbor,
+  and let my sorrow bring me closer to Your mercy.
+resolution: I will make a concrete confession to You in prayer today,
+  preparing my heart for and attending sacramental confession if needed.
+tags:
+  thematic:
+    - contrition
+    - judgment
+  doctrinal:
+    - commandments
+    - confession
+    - sin
+  virtue:
+    - humility
+    - repentance
+    - honesty
+  mystical:
+    - interior battle
+    - purification
+    - divine presence
+  liturgical:
+    - lent
+  typological:
+    - israel in desert
+    - covenant
+  structural: []

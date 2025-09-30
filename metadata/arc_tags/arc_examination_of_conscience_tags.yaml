@@ -1,0 +1,53 @@
+arc_id: arc_examination_of_conscience
+arc_title: The Examination of Conscience
+arc_number: 60
+day_count: 5
+master_day_range:
+  start: 452
+  end: 456
+tags:
+  thematic:
+    - contrition
+    - fear of the lord
+    - judgment
+    - love of god
+    - love of neighbor
+    - mercy
+    - prayer
+  doctrinal:
+    - absolution
+    - commandments
+    - confession
+    - divine providence
+    - reconciliation
+    - repentance
+    - sin
+    - works of mercy
+  virtue:
+    - charity
+    - courage
+    - honesty
+    - humility
+    - obedience
+    - vigilance
+  mystical:
+    - divine mercy
+    - divine presence
+    - divine will
+    - interior cleansing
+    - light
+    - purification
+    - silence
+    - union with christ
+  liturgical:
+    - lent
+  typological:
+    - covenant
+    - good samaritan
+    - high priest
+    - israel in desert
+    - judgment seat
+    - prodigal son
+    - sinai
+    - tabernacle
+  structural: []

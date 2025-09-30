@@ -1,0 +1,51 @@
+# Last imported into DB: 2025-09-29 22:42:32
+master_day_number: 455
+arc_day_number: 4
+arc_id: arc_examination_of_conscience
+arc_title: The Examination of Conscience
+arc_number: 60
+day_title: Examination by the Commandments
+anchor_image: You are kneeling in silence before the crucifix.The light of Christ’s gaze searches your soul.
+  His wounds are open, His eyes fixed on you in love, inviting you to honesty and return.
+primary_reading:
+  title: Matthew 22:34–40
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§2083–2087
+    url: https://www.vatican.va/archive/ENG0015/__P7A.HTM
+  - title: St. Ignatius of Loyola, Spiritual Exercises
+    reference: First Week, General Examination of Conscience
+    url: /documents/readings/St_Ignatius_of_Loyola_Spiritual_Exercises.pdf
+meditative_points:
+  - "Christ summarizes the law: to love God with all your heart and your neighbor as yourself — the whole moral life hangs here."
+  - You see how each commandment is not a restriction but a mirror of love — where you are faithful, where you have failed.
+  - Before the crucifix, you hear the law spoken anew in Christ’s voice, not as cold stone but as fire of love.
+ejaculatory_prayer: “Lord, teach me to love in every commandment.”
+colloquy: O Jesus, I have failed in many ways, yet You fulfilled the law perfectly in love.
+  Write this law upon my heart that I may walk in freedom.
+resolution: I will reread the Ten Commandments prayerfully tonight and confess one concrete way I have not kept them.
+tags:
+  thematic:
+    - commandments
+    - love of god
+    - love of neighbor
+  doctrinal:
+    - commandments
+    - sin
+    - reconciliation
+  virtue:
+    - humility
+    - obedience
+    - repentance
+  mystical:
+    - divine will
+    - interior cleansing
+    - light
+  liturgical:
+    - lent
+  typological:
+    - sinai
+    - covenant
+  structural: []

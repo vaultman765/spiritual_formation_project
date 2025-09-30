@@ -1,0 +1,45 @@
+# Last imported into DB: 2025-09-29 22:42:31
+master_day_number: 454
+arc_day_number: 3
+arc_id: arc_examination_of_conscience
+arc_title: The Examination of Conscience
+arc_number: 60
+day_title: Sins of Omission
+anchor_image: You are kneeling in silence before the crucifix.The light of Christ’s gaze searches your soul.
+  His wounds are open, His eyes fixed on you in love, inviting you to honesty and return.
+primary_reading:
+  title: James 4:13-17
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §1853
+    url: https://www.vatican.va/archive/ENG0015/__P6B.HTM
+meditative_points:
+  - “Whoever knows the right thing to do and fails to do it, for him it is sin”
+  - The crucified Lord’s outstretched arms show you the love that never withholds.
+ejaculatory_prayer: “Jesus, forgive me for the love I failed to give.”
+colloquy: Lord, I see now that my silence and neglect wound Your Heart.
+  Teach me to act in love, not to remain idle when charity calls.
+resolution: I will intentionally perform one hidden act of charity today to begin healing my sins of omission.
+tags:
+  thematic:
+    - sin
+    - contrition
+    - love of neighbor
+  doctrinal:
+    - commandments
+    - sin
+    - works of mercy
+  virtue:
+    - charity
+  mystical:
+    - interior battle
+    - purification
+    - divine presence
+  liturgical:
+    - lent
+  typological:
+    - good samaritan
+    - judgment seat
+  structural: []

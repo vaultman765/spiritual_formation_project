@@ -234,3 +234,7 @@ arc_psalms_of_contrition:
   arc_number: 59
   start_day: 445
   end_day: 451
+arc_examination_of_conscience:
+  arc_number: 60
+  start_day: 452
+  end_day: 456
