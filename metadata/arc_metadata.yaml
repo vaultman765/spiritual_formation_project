@@ -4361,3 +4361,73 @@
     - Contrition
     - Repentance
     - Mercy
+- arc_id: arc_examination_of_conscience
+  arc_title: The Examination of Conscience
+  arc_number: 60
+  day_count: 5
+  master_day_range:
+    start: 452
+    end: 456
+  anchor_image:
+    - You are kneeling in silence before the crucifix. The light of Christ’s gaze searches
+      your soul. His wounds are open, His eyes fixed on you in love, inviting you
+      to honesty and return.
+  arc_summary: This arc trains the soul in the discipline of honest self-examination
+    before God. Each day places the pray-er beneath the crucifix, where the light
+    of Christ searches the heart. The journey begins with sins of thought and word,
+    moves through deeds and omissions, and then broadens into a prayerful walk through
+    the Commandments. It concludes by preparing the heart for sacramental confession.
+    With Scripture, the Catechism, and voices of the saints, the arc leads the soul
+    from awareness of sin to contrition, hope, and readiness to meet the merciful
+    Christ in the sacrament of reconciliation.
+  primary_reading:
+    - 1 John 1:5-10
+    - Hebrews 4:1–13
+    - James 4:13-17
+    - Matthew 22:34–40
+    - Psalm 139:1–24
+  tags:
+    - absolution
+    - charity
+    - commandments
+    - confession
+    - contrition
+    - courage
+    - covenant
+    - divine mercy
+    - divine presence
+    - divine providence
+    - divine will
+    - fear of the lord
+    - forgiveness
+    - good samaritan
+    - high priest
+    - honesty
+    - humility
+    - interior battle
+    - interior cleansing
+    - israel in desert
+    - judgment
+    - judgment seat
+    - lent
+    - light
+    - love of god
+    - love of neighbor
+    - mercy
+    - obedience
+    - prayer
+    - prodigal son
+    - purification
+    - reconciliation
+    - repentance
+    - silence
+    - sin
+    - sinai
+    - tabernacle
+    - union with christ
+    - vigilance
+    - works of mercy
+  card_tags:
+    - Contrition
+    - Confession
+    - Reconciliation

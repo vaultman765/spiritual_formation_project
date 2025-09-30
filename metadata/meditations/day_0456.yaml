@@ -1,0 +1,49 @@
+# Last imported into DB: 2025-09-29 22:42:33
+master_day_number: 456
+arc_day_number: 5
+arc_id: arc_examination_of_conscience
+arc_title: The Examination of Conscience
+arc_number: 60
+day_title: Preparing for Confession
+anchor_image: You are kneeling in silence before the crucifix. The light of Christ’s gaze searches your soul.
+  His wounds are open, His eyes fixed on you in love, inviting you to honesty and return.
+primary_reading:
+  title: 1 John 1:5-10
+  reference:
+  url:
+secondary_reading:
+  - title: Catechism of the Catholic Church
+    reference: §§1457–1460
+    url: https://www.vatican.va/archive/ENG0015/__P4D.HTM
+  - title: St. John Vianney, Sermon on Confession
+    reference:
+    url: https://acatholiclife.blogspot.com/2006/08/catechism-on-confession-by-st-john.html
+meditative_points:
+  - “If we confess our sins, He is faithful and just”
+  - The saints beckon you to the confessional as the place where mercy overflows and chains are broken.
+ejaculatory_prayer: “Jesus, wash me in the blood and water from Your side.”
+colloquy: Lord, give me courage and humility to bring my sins to Your priest, trusting not in myself but in Your mercy.
+resolution: I will prepare a sincere examination tonight and make a firm plan for sacramental confession this week.
+tags:
+  thematic:
+    - mercy
+    - contrition
+    - forgiveness
+  doctrinal:
+    - confession
+    - reconciliation
+    - absolution
+    - repentance
+  virtue:
+    - humility
+    - courage
+  mystical:
+    - divine mercy
+    - purification
+    - union with christ
+  liturgical:
+    - lent
+  typological:
+    - prodigal son
+    - high priest
+  structural: []
