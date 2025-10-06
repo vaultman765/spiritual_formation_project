@@ -29,8 +29,13 @@ USE_X_FORWARDED_HOST = True
 SECURE_SSL_REDIRECT = env.bool("SECURE_SSL_REDIRECT", default=False)
 SECURE_REDIRECT_EXEMPT = [r"^/health/?$"]
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', '192.168.1.209'])
-ALLOWED_HOSTS += [gethostname(),] + list(set(gethostbyname_ex(gethostname())[2]))
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1'])
+
+# Only add hostname and IPs in development mode
+if DEBUG:
+    ALLOWED_HOSTS += [gethostname(),] + list(set(gethostbyname_ex(gethostname())[2]))
+
+# For production, rely on explicit ALLOWED_HOSTS environment variable
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -76,6 +81,7 @@ if ENV in ('prod', 'staging'):
     CSRF_COOKIE_SECURE = True
     SESSION_COOKIE_SAMESITE = "None"
     CSRF_COOKIE_SAMESITE = "None"
+    CSRF_COOKIE_HTTPONLY = False  # Must be False for cross-origin CSRF token access
     CORS_ALLOW_HEADERS = list(default_headers) + [
         "authorization",
         "x-csrftoken",
@@ -94,7 +100,31 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "config.urls"
 
-CSRF_COOKIE_HTTPONLY = False
+CSRF_COOKIE_HTTPONLY = True
+CSRF_COOKIE_SECURE = env.bool("CSRF_COOKIE_SECURE", default=not DEBUG)
+CSRF_COOKIE_SAMESITE = "Lax"
+
+# Security Headers
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+X_FRAME_OPTIONS = 'DENY'
+
+# Additional security settings for production
+if ENV in ('prod', 'staging'):
+    SECURE_HSTS_SECONDS = 31536000  # 1 year
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+
+    # Content Security Policy
+    # Allow self, inline styles, and trusted external domains
+    CSP_DEFAULT_SRC = ("'self'",)
+    CSP_STYLE_SRC = ("'self'", "'unsafe-inline'", "fonts.googleapis.com")
+    CSP_FONT_SRC = ("'self'", "fonts.gstatic.com")
+    CSP_IMG_SRC = ("'self'", "data:", "*.amazonaws.com")
+    CSP_SCRIPT_SRC = ("'self'", "'unsafe-inline'")  # Note: Consider removing unsafe-inline in future
+
+    # Disable potentially dangerous features
+    SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
 
 TEMPLATES = [
     {
@@ -103,13 +133,18 @@ TEMPLATES = [
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
-                "django.template.context_processors.debug",
+                "django.template.context_processors.debug" if DEBUG else None,
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
             ],
         },
     },
+]
+
+# Remove None entries from context processors
+TEMPLATES[0]["OPTIONS"]["context_processors"] = [
+    cp for cp in TEMPLATES[0]["OPTIONS"]["context_processors"] if cp is not None
 ]
 
 WSGI_APPLICATION = "config.wsgi.application"
@@ -149,53 +184,62 @@ USE_TZ = True
 # === S3 STATIC & MEDIA STORAGE ===
 if ENV in ("prod", "staging"):
     INSTALLED_APPS += ["storages"]
-    AWS_STORAGE_BUCKET_NAME = env("S3_BUCKET_NAME")
-    AWS_S3_REGION_NAME = env("AWS_REGION", default="us-east-1")
-    AWS_DEFAULT_ACL = None
-    AWS_QUERYSTRING_AUTH = True
-    AWS_S3_SIGNATURE_VERSION = "s3v4"
-    AWS_S3_OBJECT_PARAMETERS = {"CacheControl": "max-age=86400"}
+    AWS_STORAGE_BUCKET_NAME = env("S3_BUCKET_NAME", default=None)
 
-    AWS_LOCATION_STATIC = "django/static"
-    AWS_LOCATION_MEDIA = "django/media"
+    # Only configure S3 if bucket name is provided
+    if AWS_STORAGE_BUCKET_NAME:
+        AWS_S3_REGION_NAME = env("AWS_REGION", default="us-east-1")
+        AWS_DEFAULT_ACL = None
+        AWS_QUERYSTRING_AUTH = True
+        AWS_S3_SIGNATURE_VERSION = "s3v4"
+        AWS_S3_OBJECT_PARAMETERS = {"CacheControl": "max-age=86400"}
 
-    # NEW in Django 5 – use STORAGES
-    STORAGES = {
-        "default": {
-            "BACKEND": "website.storage_backends.MediaRootS3Boto3Storage",
-            "OPTIONS": {
-                "bucket_name": AWS_STORAGE_BUCKET_NAME,
-                "region_name": AWS_S3_REGION_NAME,
-                "location": AWS_LOCATION_MEDIA,
-                "file_overwrite": False,
+        AWS_LOCATION_STATIC = "django/static"
+        AWS_LOCATION_MEDIA = "django/media"
+
+        # NEW in Django 5 – use STORAGES
+        STORAGES = {
+            "default": {
+                "BACKEND": "website.storage_backends.MediaRootS3Boto3Storage",
+                "OPTIONS": {
+                    "bucket_name": AWS_STORAGE_BUCKET_NAME,
+                    "region_name": AWS_S3_REGION_NAME,
+                    "location": AWS_LOCATION_MEDIA,
+                    "file_overwrite": False,
+                },
             },
-        },
-        "staticfiles": {
-            "BACKEND": "website.storage_backends.StaticRootS3Boto3Storage",
-            "OPTIONS": {
-                "bucket_name": AWS_STORAGE_BUCKET_NAME,
-                "region_name": AWS_S3_REGION_NAME,
-                "location": AWS_LOCATION_STATIC,
-                # S3StaticStorage sets file_overwrite=True by default (fine for static)
+            "staticfiles": {
+                "BACKEND": "website.storage_backends.StaticRootS3Boto3Storage",
+                "OPTIONS": {
+                    "bucket_name": AWS_STORAGE_BUCKET_NAME,
+                    "region_name": AWS_S3_REGION_NAME,
+                    "location": AWS_LOCATION_STATIC,
+                    # S3StaticStorage sets file_overwrite=True by default (fine for static)
+                },
             },
-        },
-    }
+        }
 
-    # Public URLs used by templates (prefer CloudFront if provided)
-    STATIC_URL = (
-        f"https://{STATIC_CDN_DOMAIN}/django/static/"
-        if STATIC_CDN_DOMAIN
-        else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{AWS_LOCATION_STATIC}/"
-    )
-    MEDIA_URL = (
-        f"https://{MEDIA_CDN_DOMAIN}/django/media/"
-        if MEDIA_CDN_DOMAIN
-        else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{AWS_LOCATION_MEDIA}/"
-    )
+        # Public URLs used by templates (prefer CloudFront if provided)
+        STATIC_URL = (
+            f"https://{STATIC_CDN_DOMAIN}/django/static/"
+            if STATIC_CDN_DOMAIN
+            else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{AWS_LOCATION_STATIC}/"
+        )
+        MEDIA_URL = (
+            f"https://{MEDIA_CDN_DOMAIN}/django/media/"
+            if MEDIA_CDN_DOMAIN
+            else f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{AWS_LOCATION_MEDIA}/"
+        )
 
-    # These are harmless here; not used by S3 storages but kept for manage.py checks
-    STATIC_ROOT = "/app/staticfiles"
-    MEDIA_ROOT = "/app/mediafiles"
+        # These are harmless here; not used by S3 storages but kept for manage.py checks
+        STATIC_ROOT = "/app/staticfiles"
+        MEDIA_ROOT = "/app/mediafiles"
+    else:
+        # Fallback to filesystem if S3 is not configured
+        STATIC_URL = "static/"
+        MEDIA_URL = "/media/"
+        STATIC_ROOT = BASE_DIR / "staticfiles"
+        MEDIA_ROOT = BASE_DIR / "media"
 
 else:
     # Local dev: keep using filesystem
