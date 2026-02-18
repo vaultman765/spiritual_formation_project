@@ -1,0 +1,43 @@
+# Last imported into DB: 2026-02-18 14:23:17
+master_day_number: 462
+arc_day_number: 6
+arc_id: arc_discerning_spirits
+arc_title: Discerning Spirits (Ignatian Principles)
+arc_number: 61
+day_title: A Lifelong Path
+anchor_image: You walk with Christ along a winding path. At times it is bright, at times dark, but His hand is steady,
+  guiding you through every season of life.
+primary_reading:
+  title: Philippians 1:9–11
+  reference:
+  url:
+secondary_reading:
+  - title: St. Ignatius of Loyola, Spiritual Exercises
+    reference: Rules for Ongoing Discernment, pp. 72–73
+    url: /docs/readings/St_Ignatius_of_Loyola_Spiritual_Exercises.pdf
+  - title: Catechism of the Catholic Church
+    reference: §2847
+    url: https://www.vatican.va/archive/ENG0015/__PAC.HTM
+meditative_points:
+  - See discernment not as a skill to finish, but a lifelong companionship with Christ.
+  - Recognize how the Spirit continually shapes the heart’s freedom and choices.
+  - Trust that God’s fidelity remains constant, even when clarity fades.
+ejaculatory_prayer: Jesus, guide me all my days.
+colloquy: Lord, You are the Shepherd of my soul. Keep me discerning, watchful, and faithful until the end of my journey.
+resolution: I will ask the Holy Spirit daily to guide my thoughts, desires, and decisions in small matters as well as great.
+tags:
+  thematic:
+    - vigilance
+    - perseverance
+  doctrinal:
+    - divine providence
+    - christian perfection
+  virtue:
+    - perseverance
+    - prudence
+  mystical:
+    - union with christ
+  liturgical:
+    - ordinary time
+  typological: []
+  structural: []
