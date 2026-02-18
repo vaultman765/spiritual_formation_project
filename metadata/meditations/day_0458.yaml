@@ -1,0 +1,39 @@
+# Last imported into DB: 2026-02-18 14:18:32
+master_day_number: 458
+arc_day_number: 2
+arc_id: arc_discerning_spirits
+arc_title: Discerning Spirits (Ignatian Principles)
+arc_number: 61
+day_title: Consolation and Desolation Defined
+anchor_image: You sit with Christ in prayer, noticing the shifts of your soul —
+  at one moment uplifted, at another weighed down.
+primary_reading:
+  title: Psalm 42
+  reference:
+  url:
+secondary_reading:
+  - title: St. Ignatius of Loyola, Spiritual Exercises
+    reference: Rules (First Week), pp. 68–69
+    url: /docs/readings/St_Ignatius_of_Loyola_Spiritual_Exercises.pdf
+meditative_points:
+  - "Feel the sweetness of consolation: peace, faith, hope, and love stirred by God."
+  - "Sense the heaviness of desolation: darkness, agitation, distance from God."
+  - "Recognize these inner movements not as random but as signs for discernment."
+ejaculatory_prayer: "Jesus, be my light in consolation and my strength in desolation."
+colloquy: "Lord, I confess I often mistake my feelings for Your will. Teach me to see truly:
+  to cling to You in darkness and rejoice in You in light."
+resolution: Journal tonight one moment of consolation and one of desolation, naming what each stirred in your heart.
+tags:
+  thematic: []
+  doctrinal:
+    - grace
+    - divine providence
+  virtue:
+    - hope
+    - perseverance
+  mystical:
+    - divine presence
+    - interior cleansing
+  liturgical: []
+  typological: []
+  structural: []

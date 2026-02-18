@@ -1,0 +1,40 @@
+arc_id: arc_discerning_spirits
+arc_title: Discerning Spirits (Ignatian Principles)
+arc_number: 61
+day_count: 6
+master_day_range:
+  start: 457
+  end: 462
+tags:
+  thematic:
+    - interior battle
+    - prayer
+    - temptation
+  doctrinal:
+    - christian perfection
+    - divine providence
+    - grace
+    - holy spirit
+    - repentance
+    - sin
+    - trinity
+  virtue:
+    - faith
+    - fortitude
+    - honesty
+    - hope
+    - humility
+    - perseverance
+    - prudence
+    - vigilance
+  mystical:
+    - divine indwelling
+    - divine presence
+    - inner watchfulness
+    - interior cleansing
+    - spiritual ascent
+    - union with christ
+  liturgical:
+    - ordinary time
+  typological: []
+  structural: []

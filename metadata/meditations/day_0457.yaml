@@ -1,0 +1,38 @@
+# Last imported into DB: 2026-02-18 14:18:32
+master_day_number: 457
+arc_day_number: 1
+arc_id: arc_discerning_spirits
+arc_title: Discerning Spirits (Ignatian Principles)
+arc_number: 61
+day_title: The Call to Discernment
+anchor_image: You are seated in quiet prayer before Christ crucified,
+  asking for light to see His will clearly in your life.
+primary_reading:
+  title: 1 Thessalonians 5:12-28
+  url:
+secondary_reading:
+  - title: St. Ignatius of Loyola, Spiritual Exercises
+    reference: Annotations (esp. First Annotation)
+    url: /docs/readings/St_Ignatius_of_Loyola_Spiritual_Exercises.pdf
+meditative_points:
+  - "Christ’s command: “Do not quench the Spirit”"
+  - "The testing of spirits: what draws you toward God, what pulls you away?"
+  - The desire for holiness itself is the beginning of discernment.
+ejaculatory_prayer: "Lord, grant me light to see Your will and the courage to follow it."
+colloquy: Jesus, I open my heart to You. Do not let me be deceived by false lights. Lead me only to what pleases the Father.
+resolution: "Before making any decision today, pause briefly and ask: “Does this lead me closer to Christ?”"
+tags:
+  thematic:
+    - prayer
+  doctrinal:
+    - grace
+    - trinity
+  virtue:
+    - prudence
+    - faith
+  mystical:
+    - interior battle
+    - spiritual ascent
+  liturgical: []
+  typological: []
+  structural: []

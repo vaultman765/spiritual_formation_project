@@ -4369,7 +4369,10 @@
     start: 452
     end: 456
   anchor_image:
-    - You are kneeling in silence before the crucifix. The light of Christ’s gaze searches
+    - You are kneeling in silence before the crucifix. The light of Christ’s gaze
+      searches your soul. His wounds are open, His eyes fixed on you in love, inviting
+      you to honesty and return.
+    - You are kneeling in silence before the crucifix.The light of Christ’s gaze searches
       your soul. His wounds are open, His eyes fixed on you in love, inviting you
       to honesty and return.
   arc_summary: This arc trains the soul in the discipline of honest self-examination
@@ -4431,3 +4434,72 @@
     - Contrition
     - Confession
     - Reconciliation
+- arc_id: arc_discerning_spirits
+  arc_title: Discerning Spirits (Ignatian Principles)
+  arc_number: 61
+  day_count: 6
+  master_day_range:
+    start: 457
+    end: 462
+  anchor_image:
+    - You are at the threshold of the journey, kneeling before Christ who beckons
+      you to learn the first rules of discernment.
+    - You are seated in quiet prayer before Christ crucified, asking for light to
+      see His will clearly in your life.
+    - You remain in prayer, aware of movements within. Christ’s light illumines the
+      soul, and you perceive both the gentleness of His call and the subtle disguises
+      of the enemy.
+    - You sit quietly at the end of the day, with a candle lit. Christ stands beside
+      you, pointing gently to the moments of grace and the moments of failure.
+    - You sit with Christ in prayer, noticing the shifts of your soul — at one moment
+      uplifted, at another weighed down.
+    - You walk with Christ along a winding path. At times it is bright, at times dark,
+      but His hand is steady, guiding you through every season of life.
+  arc_summary: This arc introduces the soul to the art of spiritual discernment according
+    to the principles of St. Ignatius of Loyola. Beginning with the fundamental distinction
+    between consolation and desolation, it trains the heart to recognize how God leads,
+    how the enemy deceives, and how interior movements reveal their source. The arc
+    progresses from basic discernment to the more subtle rules for those advancing
+    in the spiritual life, culminating in the daily Examen and the lifelong habit
+    of vigilance. The soul learns to test spirits, resist discouragement, recognize
+    false peace, and remain steady in times of clarity and darkness alike. Discernment
+    becomes not merely a technique, but a way of walking with Christ under the guidance
+    of the Holy Spirit.
+  primary_reading:
+    - 1 John 4:1–6
+    - 1 Thessalonians 5:12-28
+    - Galatians 5:16–25
+    - Philippians 1:9–11
+    - Psalm 139:23–24
+    - Psalm 42
+  tags:
+    - christian perfection
+    - divine indwelling
+    - divine presence
+    - divine providence
+    - faith
+    - fortitude
+    - grace
+    - holy spirit
+    - honesty
+    - hope
+    - humility
+    - inner watchfulness
+    - interior battle
+    - interior cleansing
+    - ordinary time
+    - perseverance
+    - prayer
+    - prudence
+    - repentance
+    - sin
+    - spiritual ascent
+    - spiritual warfare
+    - temptation
+    - trinity
+    - union with christ
+    - vigilance
+  card_tags:
+    - Discernment
+    - Spiritual Warfare
+    - Ignatian Principles
