@@ -1,0 +1,29 @@
+arc_id: arc_mortification_interior_cross
+arc_title: Mortification and the Interior Cross
+arc_number: 62
+day_count: 5
+master_day_range:
+  start: 463
+  end: 467
+tags:
+  thematic:
+    - conversion
+    - transformation
+  doctrinal:
+    - concupiscence
+    - divine providence
+    - sanctification
+  virtue:
+    - charity
+    - fortitude
+    - humility
+    - obedience
+    - patience
+    - surrender
+  mystical:
+    - mortification
+    - purification
+  liturgical:
+    - lent
+  typological: []
+  structural: []
